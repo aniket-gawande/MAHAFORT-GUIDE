@@ -1,6 +1,7 @@
 import axios from 'axios';
+import { STATIC_FORTS_DATA, FORTS_LIST } from '../data/staticForts';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
 
 const api = axios.create({
   baseURL: API_URL,
@@ -9,24 +10,29 @@ const api = axios.create({
   },
 });
 
-// Fort APIs
+// Fort APIs with static fallback
 export const getAllForts = async (params = {}) => {
   try {
     const response = await api.get('/forts', { params });
-    return response; // Return full response object
+    return response;
   } catch (error) {
-    console.error('Error fetching forts:', error);
-    throw error;
+    console.warn('Backend unavailable, using static data');
+    // Return static data in same format as API
+    return { data: FORTS_LIST };
   }
 };
 
 export const getFortById = async (id) => {
   try {
     const response = await api.get(`/forts/${id}`);
-    return response; // Return full response object
+    return response;
   } catch (error) {
-    console.error('Error fetching fort details:', error);
-    throw error;
+    console.warn('Backend unavailable, using static data');
+    // Return Sinhagad data
+    if (STATIC_FORTS_DATA[id]) {
+      return { data: STATIC_FORTS_DATA[id] };
+    }
+    throw new Error('Fort not found');
   }
 };
 
@@ -35,8 +41,8 @@ export const getFeaturedForts = async () => {
     const response = await api.get('/forts/featured/list');
     return response.data;
   } catch (error) {
-    console.error('Error fetching featured forts:', error);
-    throw error;
+    console.warn('Backend unavailable, using static data');
+    return FORTS_LIST;
   }
 };
 
