@@ -13,7 +13,7 @@ const api = axios.create({
 export const getAllForts = async (params = {}) => {
   try {
     const response = await api.get('/forts', { params });
-    return response.data;
+    return response; // Return full response object
   } catch (error) {
     console.error('Error fetching forts:', error);
     throw error;
@@ -23,7 +23,7 @@ export const getAllForts = async (params = {}) => {
 export const getFortById = async (id) => {
   try {
     const response = await api.get(`/forts/${id}`);
-    return response.data;
+    return response; // Return full response object
   } catch (error) {
     console.error('Error fetching fort details:', error);
     throw error;

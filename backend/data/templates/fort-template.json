@@ -1,0 +1,172 @@
+{
+    "name": "",
+    "location": {
+        "district": "",
+        "taluka": "",
+        "baseVillage": "",
+        "coordinates": {
+            "lat": 0.0,
+            "lng": 0.0
+        },
+        "nearestCity": ""
+    },
+    "googleMaps": {
+        "placeId": "",
+        "rating": 0.0,
+        "totalReviews": 0,
+        "url": ""
+    },
+    "trek": {
+        "routes": [
+            {
+                "name": "",
+                "startPoint": "",
+                "distance": "",
+                "duration": "",
+                "difficulty": "Easy|Moderate|Difficult",
+                "elevation": "",
+                "description": "",
+                "facilities": []
+            }
+        ],
+        "bestTime": [],
+        "avoidTime": []
+    },
+    "landmarks": [
+        {
+            "name": "",
+            "type": "Temple|Gate|Memorial|Ruins|Palace|Tank",
+            "description": "",
+            "historicalSignificance": "",
+            "timeToExplore": "",
+            "mustSee": false
+        }
+    ],
+    "food": {
+        "onFort": [
+            {
+                "name": "",
+                "type": "Veg|Non-Veg|Snack|Beverage",
+                "price": "",
+                "description": "",
+                "mustTry": false,
+                "vendor": ""
+            }
+        ],
+        "nearbyRestaurants": [
+            {
+                "name": "",
+                "distance": "",
+                "type": "Veg|Non-Veg|Both",
+                "priceRange": "",
+                "speciality": ""
+            }
+        ]
+    },
+    "facilities": {
+        "parking": {
+            "available": false,
+            "cost": "",
+            "capacity": ""
+        },
+        "washrooms": {
+            "available": false,
+            "condition": "Good|Average|Basic"
+        },
+        "drinkingWater": {
+            "available": false,
+            "points": []
+        },
+        "mobileNetwork": {
+            "quality": "Good|Average|Poor",
+            "providers": []
+        },
+        "firstAid": {
+            "available": false,
+            "location": ""
+        },
+        "ropeway": {
+            "available": false,
+            "cost": ""
+        },
+        "guides": {
+            "available": false,
+            "cost": "",
+            "contact": ""
+        }
+    },
+    "safety": {
+        "alerts": [
+            {
+                "type": "Warning|Info|Critical",
+                "message": "",
+                "season": "All year|Monsoon|Summer|Winter"
+            }
+        ],
+        "emergencyContacts": [
+            {
+                "type": "Police|Medical|Rescue|Guide",
+                "name": "",
+                "phone": "",
+                "availability": ""
+            }
+        ]
+    },
+    "accessibility": {
+        "wheelchairFriendly": false,
+        "elderlyFriendly": false,
+        "kidsAppropriate": false,
+        "stepsCount": 0,
+        "restPoints": 0,
+        "alternativeAccess": ""
+    },
+    "visitInfo": {
+        "entryFee": {
+            "indian": 0,
+            "foreigner": 0
+        },
+        "timings": "",
+        "timeRequired": "",
+        "bestTimeOfDay": "",
+        "crowdLevel": {
+            "weekday": "Low|Medium|High",
+            "weekend": "Low|Medium|High"
+        },
+        "photography": {
+            "allowed": true,
+            "restrictions": ""
+        }
+    },
+    "accommodation": [
+        {
+            "name": "",
+            "type": "Hotel|Resort|Homestay|Guesthouse",
+            "distance": "",
+            "priceRange": "",
+            "contact": "",
+            "amenities": []
+        }
+    ],
+    "reviewsSummary": {
+        "topPositives": [],
+        "topComplaints": [],
+        "bestQuote": "",
+        "tips": []
+    },
+    "budget": {
+        "transport": "",
+        "food": "",
+        "entry": "",
+        "misc": "",
+        "totalPerPerson": ""
+    },
+    "images": [],
+    "history": {
+        "brief": "",
+        "significance": "",
+        "famousBattles": [],
+        "rulers": []
+    },
+    "featured": false,
+    "crowdStatus": "Low"
+}

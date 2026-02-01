@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Shivaji Maharaj Silhouette -->
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Crown/Pagdi -->
+  <path d="M100 20 L80 40 L70 35 L75 50 L60 55 L70 70 L60 75 L80 85 L90 80 L100 90 L110 80 L120 85 L140 75 L130 70 L140 55 L125 50 L130 35 L120 40 Z" 
+        fill="url(#goldGradient)" stroke="#8B4513" stroke-width="1.5"/>
+  
+  <!-- Feather on Crown -->
+  <path d="M100 15 Q95 5 90 10 Q92 15 95 18 L100 20" fill="#FF6B35" stroke="#8B4513" stroke-width="0.5"/>
+  
+  <!-- Face outline -->
+  <ellipse cx="100" cy="110" rx="35" ry="45" fill="#D2691E" stroke="#8B4513" stroke-width="1"/>
+  
+  <!-- Beard -->
+  <path d="M75 130 Q75 155 100 160 Q125 155 125 130" fill="#654321" stroke="#4A2511" stroke-width="1"/>
+  
+  <!-- Shoulders/Armor -->
+  <path d="M65 150 L50 180 L70 185 L80 160 L100 165 L120 160 L130 185 L150 180 L135 150 Q118 155 100 155 Q82 155 65 150" 
+        fill="#FF9933" stroke="#8B4513" stroke-width="1.5"/>
+  
+  <!-- Decorative elements on armor -->
+  <circle cx="75" cy="170" r="3" fill="url(#goldGradient)"/>
+  <circle cx="125" cy="170" r="3" fill="url(#goldGradient)"/>
+</svg>

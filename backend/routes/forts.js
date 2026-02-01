@@ -1,83 +1,49 @@
 const express = require('express');
 const router = express.Router();
-const Fort = require('../models/Fort');
+const fs = require('fs');
+const path = require('path');
 
-// GET featured forts
-router.get('/featured/list', async (req, res) => {
-  try {
-    const forts = await Fort.find({ featured: true }).limit(6);
-    res.json({
-      success: true,
-      count: forts.length,
-      data: forts
-    });
-  } catch (error) {
-    res.status(500).json({
-      success: false,
-      message: 'Error fetching featured forts',
-      error: error.message
-    });
-  }
-});
+// Load fort data from JSON files
+const loadFortData = () => {
+  const fortsDir = path.join(__dirname, '../data/forts');
+  const fortFiles = fs.readdirSync(fortsDir).filter(file => file.endsWith('.json'));
+
+  const forts = fortFiles.map(file => {
+    const fortData = JSON.parse(fs.readFileSync(path.join(fortsDir, file), 'utf8'));
+    // Add _id for compatibility
+    fortData._id = file.replace('.json', '');
+    return fortData;
+  });
+
+  return forts;
+};
 
 // GET all forts
-router.get('/', async (req, res) => {
+router.get('/', (req, res) => {
   try {
-    const { search, district, difficulty } = req.query;
-    let query = {};
-
-    // Search filter
-    if (search) {
-      query.$text = { $search: search };
-    }
-
-    // District filter
-    if (district) {
-      query['location.district'] = district;
-    }
-
-    // Difficulty filter
-    if (difficulty) {
-      query['visitInfo.difficulty'] = difficulty;
-    }
-
-    const forts = await Fort.find(query).sort({ createdAt: -1 });
-    res.json({
-      success: true,
-      count: forts.length,
-      data: forts
-    });
+    const forts = loadFortData();
+    res.json(forts);
   } catch (error) {
-    res.status(500).json({
-      success: false,
-      message: 'Error fetching forts',
-      error: error.message
-    });
+    res.status(500).json({ message: 'Error loading forts', error: error.message });
   }
 });
 
 // GET single fort by ID
-router.get('/:id', async (req, res) => {
+router.get('/:id', (req, res) => {
   try {
-    const fort = await Fort.findById(req.params.id);
-    
-    if (!fort) {
-      return res.status(404).json({
-        success: false,
-        message: 'Fort not found'
-      });
+    const fortId = req.params.id;
+    const fortPath = path.join(__dirname, '../data/forts', `${fortId}.json`);
+
+    if (!fs.existsSync(fortPath)) {
+      return res.status(404).json({ message: 'Fort not found' });
     }
 
-    res.json({
-      success: true,
-      data: fort
-    });
+    const fortData = JSON.parse(fs.readFileSync(fortPath, 'utf8'));
+    fortData._id = fortId;
+
+    res.json(fortData);
   } catch (error) {
-    res.status(500).json({
-      success: false,
-      message: 'Error fetching fort details',
-      error: error.message
-    });
+    res.status(500).json({ message: 'Error loading fort', error: error.message });
   }
 });
 

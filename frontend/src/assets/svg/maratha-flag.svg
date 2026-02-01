@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" fill="none">
+  <!-- Bhagwa Zenda (Maratha Flag) -->
+  <defs>
+    <linearGradient id="saffronGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF9933;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FF8800;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF6600;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Flag pole -->
+  <rect x="20" y="10" width="6" height="180" fill="#654321" stroke="#4A2511" stroke-width="1"/>
+  <circle cx="23" cy="10" r="8" fill="url(#goldGradient)"/>
+  
+  <!-- Flag cloth -->
+  <path d="M26 20 L280 20 L280 180 L26 180 Q35 150 26 120 Q35 90 26 60 Q35 40 26 20" 
+        fill="url(#saffronGradient)" stroke="#CC5500" stroke-width="2"/>
+  
+  <!-- Wave effect -->
+  <path d="M280 20 Q285 40 280 60 Q275 80 280 100 Q285 120 280 140 Q275 160 280 180" 
+        fill="none" stroke="#FF9933" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Decorative border -->
+  <rect x="26" y="20" width="254" height="160" fill="none" stroke="#FFD700" stroke-width="3" opacity="0.6"/>
+  
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>

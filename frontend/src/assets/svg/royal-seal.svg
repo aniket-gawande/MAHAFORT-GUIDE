@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Royal Seal (Rajmudra) -->
+  <defs>
+    <linearGradient id="sealGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFA500;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="sealCenter">
+      <stop offset="0%" style="stop-color:#FFF;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Outer circle -->
+  <circle cx="100" cy="100" r="95" fill="url(#sealGold)" stroke="#8B4513" stroke-width="3"/>
+  
+  <!-- Decorative outer ring -->
+  <circle cx="100" cy="100" r="85" fill="none" stroke="#654321" stroke-width="2" stroke-dasharray="5,3"/>
+  
+  <!-- Inner circle -->
+  <circle cx="100" cy="100" r="70" fill="url(#sealCenter)" stroke="#8B4513" stroke-width="2"/>
+  
+  <!-- Central emblem - Simplified fort/crown -->
+  <path d="M100 40 L85 60 L90 60 L90 80 L75 80 L75 100 L125 100 L125 80 L110 80 L110 60 L115 60 Z" 
+        fill="#8B0000" stroke="#654321" stroke-width="1.5"/>
+  
+  <!-- Decorative dots around -->
+  <circle cx="100" cy="25" r="4" fill="#8B0000"/>
+  <circle cx="140" cy="40" r="4" fill="#8B0000"/>
+  <circle cx="165" cy="75" r="4" fill="#8B0000"/>
+  <circle cx="175" cy="100" r="4" fill="#8B0000"/>
+  <circle cx="165" cy="125" r="4" fill="#8B0000"/>
+  <circle cx="140" cy="160" r="4" fill="#8B0000"/>
+  <circle cx="100" cy="175" r="4" fill="#8B0000"/>
+  <circle cx="60" cy="160" r="4" fill="#8B0000"/>
+  <circle cx="35" cy="125" r="4" fill="#8B0000"/>
+  <circle cx="25" cy="100" r="4" fill="#8B0000"/>
+  <circle cx="35" cy="75" r="4" fill="#8B0000"/>
+  <circle cx="60" cy="40" r="4" fill="#8B0000"/>
+  
+  <!-- Text placeholder (decorative lines) -->
+  <path d="M60 115 L140 115" stroke="#654321" stroke-width="2"/>
+  <path d="M70 125 L130 125" stroke="#654321" stroke-width="1.5"/>
+  <path d="M75 133 L125 133" stroke="#654321" stroke-width="1.5"/>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Fort Gateway Icon -->
+  <defs>
+    <linearGradient id="stoneGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B7355;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#654321;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fort walls -->
+  <rect x="20" y="80" width="160" height="100" fill="url(#stoneGradient)" stroke="#4A2511" stroke-width="2"/>
+  
+  <!-- Battlements -->
+  <rect x="20" y="60" width="25" height="20" fill="url(#stoneGradient)" stroke="#4A2511" stroke-width="1.5"/>
+  <rect x="55" y="60" width="25" height="20" fill="url(#stoneGradient)" stroke="#4A2511" stroke-width="1.5"/>
+  <rect x="90" y="60" width="25" height="20" fill="url(#stoneGradient)" stroke="#4A2511" stroke-width="1.5"/>
+  <rect x="125" y="60" width="25" height="20" fill="url(#stoneGradient)" stroke="#4A2511" stroke-width="1.5"/>
+  <rect x="155" y="60" width="25" height="20" fill="url(#stoneGradient)" stroke="#4A2511" stroke-width="1.5"/>
+  
+  <!-- Gateway arch -->
+  <path d="M60 180 L60 120 Q60 100 100 100 Q140 100 140 120 L140 180" 
+        fill="#2C1810" stroke="#4A2511" stroke-width="2"/>
+  
+  <!-- Gateway door -->
+  <rect x="70" y="130" width="60" height="50" fill="#654321" stroke="#4A2511" stroke-width="2"/>
+  
+  <!-- Door panels -->
+  <line x1="100" y1="130" x2="100" y2="180" stroke="#4A2511" stroke-width="2"/>
+  <line x1="70" y1="155" x2="130" y2="155" stroke="#4A2511" stroke-width="1.5"/>
+  
+  <!-- Door handles -->
+  <circle cx="85" cy="155" r="3" fill="#FFD700"/>
+  <circle cx="115" cy="155" r="3" fill="#FFD700"/>
+  
+  <!-- Stone texture -->
+  <line x1="20" y1="110" x2="60" y2="110" stroke="#4A2511" stroke-width="0.5" opacity="0.5"/>
+  <line x1="140" y1="110" x2="180" y2="110" stroke="#4A2511" stroke-width="0.5" opacity="0.5"/>
+  <line x1="20" y1="140" x2="60" y2="140" stroke="#4A2511" stroke-width="0.5" opacity="0.5"/>
+  <line x1="140" y1="140" x2="180" y2="140" stroke="#4A2511" stroke-width="0.5" opacity="0.5"/>
+  <line x1="20" y1="160" x2="60" y2="160" stroke="#4A2511" stroke-width="0.5" opacity="0.5"/>
+  <line x1="140" y1="160" x2="180" y2="160" stroke="#4A2511" stroke-width="0.5" opacity="0.5"/>
+  
+  <!-- Flag on top -->
+  <line x1="100" y1="30" x2="100" y2="60" stroke="#654321" stroke-width="2"/>
+  <path d="M100 30 L130 35 L130 45 L100 50 Z" fill="#FF9933" stroke="#CC5500" stroke-width="1"/>
+</svg>
