@@ -55,7 +55,7 @@ const fortSchema = new mongoose.Schema({
   
   nearbyFood: [{
     name: String,
-    type: String,
+    type: { type: String },
     distance: String,
     avgCost: String,
     contact: String
@@ -63,7 +63,7 @@ const fortSchema = new mongoose.Schema({
   
   nearbyStays: [{
     name: String,
-    type: String,
+    type: { type: String },
     distance: String,
     priceRange: String,
     contact: String

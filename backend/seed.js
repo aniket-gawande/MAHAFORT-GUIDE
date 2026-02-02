@@ -2,17 +2,7 @@ const mongoose = require('mongoose');
 const Fort = require('./models/Fort');
 require('dotenv').config();
 
-const seedDatabase = async () => {
-  try {
-    // Connect to MongoDB
-    await mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/mahafort');
-    console.log('✅ Connected to MongoDB');
-
-    // Clear existing data
-    await Fort.deleteMany({});
-    console.log('🗑️  Cleared existing forts');
-
-    const sampleForts = [
+const sampleForts = [
   {
     name: "Sinhagad Fort",
     location: {
@@ -199,15 +189,156 @@ const seedDatabase = async () => {
       "https://images.unsplash.com/photo-1588442738374-8c0c3c5a0e6f?w=800"
     ],
     featured: true
+  },
+  {
+    name: "Rajgad Fort",
+    location: {
+      district: "Pune",
+      baseVillage: "Gunjavane",
+      coordinates: {
+        lat: 18.2435,
+        lng: 73.6796
+      }
+    },
+    description: "Rajgad was the capital of the Maratha Empire under Chhatrapati Shivaji Maharaj for almost 26 years. The fort is located around 60 km southwest of Pune.",
+    history: "Shivaji Maharaj seized the fort in 1647 and renamed it from Murumdev to Rajgad. His first wife Saibai, son Sambhaji, and mother Jijabai died at this fort.",
+    visitInfo: {
+      entryFee: 0,
+      timings: "All day (overnight stay allowed)",
+      bestSeason: ["October", "November", "December", "January", "February"],
+      timeRequired: "6-8 hours",
+      difficulty: "Moderate"
+    },
+    trekDetails: {
+      routes: [
+        {
+          name: "Gunjavane Route",
+          distance: "5 km",
+          duration: "2.5 hours",
+          difficulty: "Moderate",
+          description: "Most popular route with well-defined trail. Steep climb with steps in some sections."
+        },
+        {
+          name: "Pali Darwaja Route",
+          distance: "6 km",
+          duration: "3 hours",
+          difficulty: "Hard",
+          description: "Challenging route with rock patches. Recommended for experienced trekkers only."
+        }
+      ]
+    },
+    facilities: {
+      parking: true,
+      ropeway: false,
+      washroom: true,
+      mobileNetwork: "Poor",
+      drinkingWater: false
+    },
+    nearbyFood: [
+      {
+        name: "Base Village Shops",
+        type: "Local Snacks",
+        distance: "At base village",
+        avgCost: "50-100",
+        contact: "N/A"
+      }
+    ],
+    nearbyStays: [
+      {
+        name: "Camping on Fort",
+        type: "Camping",
+        distance: "On fort top",
+        priceRange: "Free",
+        contact: "Carry your own tent"
+      }
+    ],
+    images: [
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800"
+    ],
+    featured: true
+  },
+  {
+    name: "Lohagad Fort",
+    location: {
+      district: "Pune",
+      baseVillage: "Lohagadwadi",
+      coordinates: {
+        lat: 18.7079,
+        lng: 73.4849
+      }
+    },
+    description: "Lohagad is one of the most visited forts near Pune and Mumbai. The fort divides the basins of Indrayani and Pavana and is situated at an elevation of 1,033m above sea level.",
+    history: "The fort was under the Maratha empire for the majority of time, with a short period of 5 years under the Mughal empire. The fort was used to keep the treasury.",
+    visitInfo: {
+      entryFee: 0,
+      timings: "6:00 AM - 6:00 PM",
+      bestSeason: ["June", "July", "August", "September"],
+      timeRequired: "3-4 hours",
+      difficulty: "Easy"
+    },
+    trekDetails: {
+      routes: [
+        {
+          name: "Lohagadwadi Steps",
+          distance: "3 km",
+          duration: "1 hour",
+          difficulty: "Easy",
+          description: "Well-maintained stone steps throughout. Perfect for beginners and families."
+        }
+      ]
+    },
+    facilities: {
+      parking: true,
+      ropeway: false,
+      washroom: true,
+      mobileNetwork: "Good",
+      drinkingWater: true
+    },
+    nearbyFood: [
+      {
+        name: "Lohagadwadi Stalls",
+        type: "Veg Snacks",
+        distance: "Base village",
+        avgCost: "100-150",
+        contact: "N/A"
+      }
+    ],
+    nearbyStays: [
+      {
+        name: "Lonavala Hotels",
+        type: "Hotels",
+        distance: "10 km",
+        priceRange: "800-3000",
+        contact: "Lonavala city"
+      }
+    ],
+    images: [
+      "https://images.unsplash.com/photo-1571069283170-ff2cfed5bdf3?w=800"
+    ],
+    featured: false
   }
 ];
+
+// Main function to seed database
+const seedDatabase = async () => {
+  try {
+    // Connect to MongoDB
+    await mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/mahafort');
+    console.log('✅ Connected to MongoDB');
+
+    // Clear existing data
+    await Fort.deleteMany({});
+    console.log('🗑️  Cleared existing forts');
+
     // Insert sample data
     await Fort.insertMany(sampleForts);
-    console.log('✅ Sample data inserted successfully');
+    console.log(`✅ Successfully added ${sampleForts.length} forts to database!`);
     
     // Close connection
     await mongoose.connection.close();
     console.log('🔌 Database connection closed');
+    
+    process.exit(0);
   } catch (error) {
     console.error('❌ Error seeding database:', error.message);
     process.exit(1);
@@ -216,21 +347,3 @@ const seedDatabase = async () => {
 
 // Run the seed function
 seedDatabase();
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/mahafort')
-  .then(async () => {
-    console.log('✅ MongoDB Connected');
-    
-    // Clear existing data
-    await Fort.deleteMany({});
-    console.log('🗑️  Cleared existing forts');
-    
-    // Insert sample data
-    await Fort.insertMany(sampleForts);
-    console.log('✅ Sample forts added successfully!');
-    
-    process.exit(0);
-  })
-  .catch((err) => {
-    console.error('❌ Error:', err);
-    process.exit(1);
-  });
