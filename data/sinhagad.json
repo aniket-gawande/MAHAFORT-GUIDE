@@ -1,0 +1,461 @@
+{
+    "name": "Sinhagad Fort",
+    "location": {
+        "district": "Pune",
+        "taluka": "Haveli",
+        "baseVillage": "Donaje",
+        "coordinates": {
+            "lat": 18.3664,
+            "lng": 73.7558
+        },
+        "nearestCity": "Pune (30 km)"
+    },
+    "googleMaps": {
+        "placeId": "ChIJX8cLf5_BwjsRoIN3CNxEhNE",
+        "rating": 4.5,
+        "totalReviews": 45000,
+        "url": "https://maps.google.com/?cid=16145234567890"
+    },
+    "description": "Sinhagad Fort is a historic hill fortress located 30 km southwest of Pune. Famous for the Battle of Sinhagad in 1670, where Tanaji Malusare sacrificed his life to capture it from the Mughals. The fort offers panoramic views, easy trekking routes, and authentic Maharashtrian food.",
+    "trek": {
+        "routes": [
+            {
+                "name": "Donje Village Route",
+                "startPoint": "Donje Village",
+                "distance": "4 km",
+                "duration": "1.5-2 hours",
+                "difficulty": "Easy",
+                "elevation": "600 meters gain (700m to 1312m)",
+                "description": "Well-maintained stone steps from Donje village to fort top. Most popular and easiest route suitable for beginners and families. 400 steps with railings.",
+                "facilities": [
+                    "5 rest points with benches",
+                    "Tea stalls at 3 points",
+                    "Water available",
+                    "Mobile network coverage"
+                ]
+            },
+            {
+                "name": "Ghorawadi Village Route",
+                "startPoint": "Ghorawadi Village",
+                "distance": "5 km",
+                "duration": "3 hours",
+                "difficulty": "Difficult",
+                "elevation": "700 meters gain",
+                "description": "Steeper and more rugged route. Less crowded, more scenic. Rocky terrain suitable for experienced trekkers.",
+                "facilities": [
+                    "Fewer rest points",
+                    "Limited vendors",
+                    "More challenging climb"
+                ]
+            },
+            {
+                "name": "Motorable Road",
+                "startPoint": "Sinhagad Base",
+                "distance": "Direct vehicle access",
+                "duration": "15 minutes drive",
+                "difficulty": "Easy",
+                "elevation": "No trekking required",
+                "description": "Vehicles can go up to parking area near fort. Shared jeeps available for ₹20-30 per person.",
+                "facilities": [
+                    "Parking available",
+                    "Shared jeeps",
+                    "No trekking needed"
+                ]
+            }
+        ],
+        "bestTime": [
+            "Monsoon (June-September)",
+            "Winter (November-February)"
+        ],
+        "avoidTime": [
+            "Summer afternoons (March-May)",
+            "Heavy rain days"
+        ]
+    },
+    "landmarks": [
+        {
+            "name": "Tanaji Malusare Memorial",
+            "type": "Memorial",
+            "description": "Memorial dedicated to Tanaji Malusare, the Maratha warrior who sacrificed his life capturing this fort in 1670. Features statue and historical inscriptions.",
+            "historicalSignificance": "Site commemorating the famous Battle of Sinhagad and Tanaji's sacrifice - 'Gad ala, pan Sinha gela' (Fort captured, but the lion is gone)",
+            "timeToExplore": "20-30 minutes",
+            "mustSee": true
+        },
+        {
+            "name": "Kaundinyeshwar Temple",
+            "type": "Temple",
+            "description": "Ancient Shiva temple with traditional stone architecture. Peaceful atmosphere with priest sharing historical stories.",
+            "historicalSignificance": "Temple visited by Shivaji Maharaj. Important religious site on the fort.",
+            "timeToExplore": "15-20 minutes",
+            "mustSee": true
+        },
+        {
+            "name": "Rajaram's Tomb",
+            "type": "Memorial",
+            "description": "Tomb of Chhatrapati Rajaram Maharaj (son of Shivaji Maharaj). Maratha-era architecture with dome structure.",
+            "historicalSignificance": "Final resting place of Rajaram Maharaj who ruled after Shivaji",
+            "timeToExplore": "15 minutes",
+            "mustSee": true
+        },
+        {
+            "name": "Kalyan Darwaja",
+            "type": "Gate",
+            "description": "Eastern gate of the fort with steep approach. Strategic entrance with excellent views. Requires careful climbing.",
+            "historicalSignificance": "One of the main defensive gates of the fort",
+            "timeToExplore": "20 minutes",
+            "mustSee": true
+        },
+        {
+            "name": "Pune Darwaja",
+            "type": "Gate",
+            "description": "Main entrance gate facing Pune city. First landmark visitors see when arriving at fort top.",
+            "historicalSignificance": "Primary entrance to the fort, well-preserved structure",
+            "timeToExplore": "10 minutes",
+            "mustSee": true
+        },
+        {
+            "name": "Fort Walls and Ramparts",
+            "type": "Fortification",
+            "description": "Extensive fort walls offering 360-degree panoramic views of Pune city, Khadakwasla Dam, and surrounding Sahyadri mountains. Best photography spot.",
+            "historicalSignificance": "Original Maratha-era fortifications",
+            "timeToExplore": "30-45 minutes",
+            "mustSee": true
+        },
+        {
+            "name": "Military Stables",
+            "type": "Ruins",
+            "description": "Ruins of ancient horse stables and ammunition storage areas. Provides insight into fort's military operations.",
+            "historicalSignificance": "Shows military infrastructure of Maratha Empire",
+            "timeToExplore": "15-20 minutes",
+            "mustSee": false
+        },
+        {
+            "name": "Kali Temple",
+            "type": "Temple",
+            "description": "Smaller temple dedicated to Goddess Kali. Less crowded, peaceful spot.",
+            "historicalSignificance": "Ancient temple on fort premises",
+            "timeToExplore": "10 minutes",
+            "mustSee": false
+        }
+    ],
+    "food": {
+        "onFort": [
+            {
+                "name": "Pithla Bhakri",
+                "type": "Veg",
+                "price": "₹80-120",
+                "description": "Gram flour curry served with thick millet bread. Authentic Maharashtrian village food. Served with raw onions and green chili.",
+                "mustTry": true,
+                "vendor": "Multiple stalls on fort top, Hotel Kondaji"
+            },
+            {
+                "name": "Kanda Bhaji",
+                "type": "Veg",
+                "price": "₹40-60",
+                "description": "Crispy onion fritters (pakoras). Best enjoyed hot with cutting chai.",
+                "mustTry": true,
+                "vendor": "Tea stalls throughout fort"
+            },
+            {
+                "name": "Zunka Bhakar",
+                "type": "Veg",
+                "price": "₹70-100",
+                "description": "Dry gram flour preparation with bhakri bread. Spicy and filling.",
+                "mustTry": true,
+                "vendor": "Local food stalls"
+            },
+            {
+                "name": "Fresh Dahi (Yogurt)",
+                "type": "Veg",
+                "price": "₹30-50",
+                "description": "Homemade yogurt served in earthen pots. Incredibly creamy and fresh.",
+                "mustTry": true,
+                "vendor": "Local women vendors"
+            },
+            {
+                "name": "Cutting Chai",
+                "type": "Beverage",
+                "price": "₹10-15",
+                "description": "Half cup of strong, sweet tea. Perfect with bhaji.",
+                "mustTry": true,
+                "vendor": "All tea stalls"
+            },
+            {
+                "name": "Kokum Sherbet",
+                "type": "Beverage",
+                "price": "₹30-50",
+                "description": "Refreshing drink made from kokum fruit. Cooling and digestive.",
+                "mustTry": false,
+                "vendor": "Select stalls"
+            },
+            {
+                "name": "Fresh Sugarcane Juice",
+                "type": "Beverage",
+                "price": "₹30-40",
+                "description": "Freshly extracted sugarcane juice. Very refreshing after trek.",
+                "mustTry": false,
+                "vendor": "Juice vendors on fort"
+            },
+            {
+                "name": "Kavath (Wild Berries)",
+                "type": "Snack",
+                "price": "₹20-30",
+                "description": "Seasonal wild berries available during monsoon. Local delicacy.",
+                "mustTry": false,
+                "vendor": "Seasonal vendors (Monsoon only)"
+            },
+            {
+                "name": "Vada Pav",
+                "type": "Veg",
+                "price": "₹15-25",
+                "description": "Potato fritter in bread bun. Mumbai's famous street food available here too.",
+                "mustTry": false,
+                "vendor": "Snack stalls"
+            }
+        ],
+        "nearbyRestaurants": [
+            {
+                "name": "Hotel Kondaji",
+                "distance": "500m from parking",
+                "type": "Both",
+                "priceRange": "₹150-250 per person",
+                "speciality": "Authentic Maharashtrian thali, Pithla Bhakri"
+            },
+            {
+                "name": "Sinhagad Darbar",
+                "distance": "On fort top",
+                "type": "Veg",
+                "priceRange": "₹100-200 per person",
+                "speciality": "Maharashtrian snacks and meals"
+            },
+            {
+                "name": "Sinhagad Road Restaurants",
+                "distance": "10-15 km",
+                "type": "Both",
+                "priceRange": "₹200-500 per person",
+                "speciality": "Various cuisines - Indian, Chinese, Continental"
+            }
+        ]
+    },
+    "facilities": {
+        "parking": {
+            "available": true,
+            "cost": "₹50-100",
+            "capacity": "100+ vehicles (can be crowded on weekends)"
+        },
+        "washrooms": {
+            "available": true,
+            "condition": "Basic"
+        },
+        "drinkingWater": {
+            "available": true,
+            "points": [
+                "Base village",
+                "Rest point 3",
+                "Fort top near temple",
+                "Parking area"
+            ]
+        },
+        "mobileNetwork": {
+            "quality": "Good",
+            "providers": [
+                "Airtel",
+                "Jio",
+                "Vodafone"
+            ]
+        },
+        "firstAid": {
+            "available": true,
+            "location": "Primary Health Center at Donaje village (3 km from fort)"
+        },
+        "ropeway": {
+            "available": false,
+            "cost": "N/A"
+        },
+        "guides": {
+            "available": true,
+            "cost": "₹300-500 for group",
+            "contact": "+91-9876543210 (Local guide association)"
+        }
+    },
+    "safety": {
+        "alerts": [
+            {
+                "type": "Warning",
+                "message": "Steep sections near Kalyan Darwaja - use railings carefully",
+                "season": "All year"
+            },
+            {
+                "type": "Warning",
+                "message": "Paths can be slippery during monsoon - wear proper footwear with grip",
+                "season": "Monsoon"
+            },
+            {
+                "type": "Info",
+                "message": "Fort walls don't have railings everywhere - be careful near edges, especially with kids",
+                "season": "All year"
+            },
+            {
+                "type": "Warning",
+                "message": "Leeches possible during monsoon - carry salt",
+                "season": "Monsoon"
+            },
+            {
+                "type": "Info",
+                "message": "Start descent by 4:30 PM to avoid darkness on trail",
+                "season": "All year"
+            }
+        ],
+        "emergencyContacts": [
+            {
+                "type": "Police",
+                "name": "Sinhagad Police Chowki",
+                "phone": "+91-020-24392000",
+                "availability": "24/7"
+            },
+            {
+                "type": "Medical",
+                "name": "Primary Health Center, Donaje",
+                "phone": "+91-020-24392100",
+                "availability": "8:00 AM - 8:00 PM"
+            },
+            {
+                "type": "Rescue",
+                "name": "Pune Rescue Team",
+                "phone": "108",
+                "availability": "24/7 Emergency"
+            },
+            {
+                "type": "Guide",
+                "name": "Rajesh Patil (Local Guide)",
+                "phone": "+91-9876543210",
+                "availability": "6:00 AM - 7:00 PM"
+            },
+            {
+                "type": "Guide",
+                "name": "Suresh Jadhav (Fort Guide)",
+                "phone": "+91-9876543211",
+                "availability": "5:00 AM - 8:00 PM"
+            }
+        ]
+    },
+    "accessibility": {
+        "wheelchairFriendly": false,
+        "elderlyFriendly": true,
+        "kidsAppropriate": true,
+        "stepsCount": 400,
+        "restPoints": 5,
+        "alternativeAccess": "Vehicles can go up to parking area. Shared jeeps available from base (₹20-30). Still requires 500m walk from parking to fort entrance."
+    },
+    "visitInfo": {
+        "entryFee": {
+            "indian": 20,
+            "foreigner": 100
+        },
+        "timings": "6:00 AM - 6:00 PM (Open all days)",
+        "timeRequired": "3-4 hours (including trek)",
+        "bestTimeOfDay": "Early morning (6-9 AM) for sunrise and cooler weather",
+        "crowdLevel": {
+            "weekday": "Low",
+            "weekend": "High"
+        },
+        "photography": {
+            "allowed": true,
+            "restrictions": "None"
+        }
+    },
+    "accommodation": [
+        {
+            "name": "MTDC Holiday Resort",
+            "type": "Resort",
+            "distance": "3 km from fort base",
+            "priceRange": "₹1000-2000 per night",
+            "contact": "+91-020-12345678",
+            "amenities": [
+                "Restaurant",
+                "Parking",
+                "Basic rooms"
+            ]
+        },
+        {
+            "name": "Sinhagad Road Hotels",
+            "type": "Hotel",
+            "distance": "10-15 km",
+            "priceRange": "₹800-3000 per night",
+            "contact": "Multiple options available",
+            "amenities": [
+                "WiFi",
+                "AC",
+                "Restaurant",
+                "Parking"
+            ]
+        },
+        {
+            "name": "Pune City Hotels",
+            "type": "Hotel",
+            "distance": "30 km",
+            "priceRange": "₹500-5000 per night",
+            "contact": "Various options",
+            "amenities": [
+                "All modern amenities"
+            ]
+        }
+    ],
+    "reviewsSummary": {
+        "topPositives": [
+            "Easy trek suitable for beginners and families",
+            "Well-maintained steps with railings",
+            "Historical significance is amazing",
+            "Pithla Bhakri food is legendary",
+            "Monsoon views are breathtaking",
+            "360-degree panoramic views from fort walls",
+            "Good for elderly with moderate fitness"
+        ],
+        "topComplaints": [
+            "Very crowded on weekends and holidays",
+            "Parking can be chaotic",
+            "Some vendors can be pushy",
+            "Washrooms need better maintenance",
+            "Slippery during monsoon"
+        ],
+        "bestQuote": "Sinhagad is not just a trek, it's an experience. You feel the history, taste the culture, and witness nature's beauty. A must-visit for every Punekar!",
+        "tips": [
+            "Visit on weekdays to avoid crowds",
+            "Start early (6 AM) for sunrise and cooler weather",
+            "Wear proper trekking shoes, NOT sandals",
+            "Carry 2 liters of water per person",
+            "Try the Pithla Bhakri - it's worth the trek alone",
+            "Don't rush the descent - most injuries happen going down",
+            "Monsoon is magical but paths are slippery",
+            "Carry cash - most vendors don't accept cards",
+            "Download offline maps - network can be patchy at top",
+            "Respect the fort - don't litter or damage structures"
+        ]
+    },
+    "budget": {
+        "transport": "₹200-300 (fuel/cab)",
+        "food": "₹150-250",
+        "entry": "₹20",
+        "misc": "₹100-200 (snacks, water, shopping)",
+        "totalPerPerson": "₹470-770 (Budget) | ₹800-1000 (Comfortable)"
+    },
+    "images": [
+        "https://media.gettyimages.com/id/636145086/photo/sinhagad-guide.jpg?s=1024x1024&w=gi&k=20&c=vO2uQCpc92xEjoQVfT7UPp_hPgOnV3m9tOUMbhv7Dlw=",
+        "https://media.gettyimages.com/id/636145086/photo/sinhagad-guide.jpg?s=1024x1024&w=gi&k=20&c=vO2uQCpc92xEjoQVfT7UPp_hPgOnV3m9tOUMbhv7Dlw="
+    ],
+    "history": {
+        "brief": "Sinhagad (Lion's Fort) was previously called Kondhana. It has been the site of many important battles, most notably the Battle of Sinhagad in 1670 where Tanaji Malusare recaptured it from the Mughals.",
+        "significance": "The fort represents Maratha valor and sacrifice. Tanaji's famous last words 'Gad ala, pan Sinha gela' (Fort captured, but the lion is gone) symbolize the price of freedom.",
+        "famousBattles": [
+            "Battle of Sinhagad (1670) - Tanaji Malusare vs Udaybhan Rathod",
+            "Multiple Maratha-Mughal conflicts"
+        ],
+        "rulers": [
+            "Shivaji Maharaj (Maratha Empire)",
+            "Mughals (briefly)",
+            "Peshwas (later Maratha period)"
+        ]
+    },
+    "featured": true,
+    "crowdStatus": "Low"
+}

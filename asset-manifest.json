@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/MAHAFORT-GUIDE/static/css/main.31f0cec3.css",
+    "main.js": "/MAHAFORT-GUIDE/static/js/main.2fd75bb9.js",
+    "static/js/239.ca7d759d.chunk.js": "/MAHAFORT-GUIDE/static/js/239.ca7d759d.chunk.js",
+    "static/js/977.9077e392.chunk.js": "/MAHAFORT-GUIDE/static/js/977.9077e392.chunk.js",
+    "static/js/455.48f0511f.chunk.js": "/MAHAFORT-GUIDE/static/js/455.48f0511f.chunk.js",
+    "static/js/453.05f85a6d.chunk.js": "/MAHAFORT-GUIDE/static/js/453.05f85a6d.chunk.js",
+    "static/media/royal-seal.svg": "/MAHAFORT-GUIDE/static/media/royal-seal.d529a19c93566f2c2067e74bf7e97f74.svg",
+    "static/media/talwar.svg": "/MAHAFORT-GUIDE/static/media/talwar.7d011adb999178c8aa740f0f55b397ac.svg",
+    "static/media/maratha-flag.svg": "/MAHAFORT-GUIDE/static/media/maratha-flag.7b41056006dceb5d6232d714174689fa.svg",
+    "index.html": "/MAHAFORT-GUIDE/index.html",
+    "main.31f0cec3.css.map": "/MAHAFORT-GUIDE/static/css/main.31f0cec3.css.map",
+    "main.2fd75bb9.js.map": "/MAHAFORT-GUIDE/static/js/main.2fd75bb9.js.map",
+    "239.ca7d759d.chunk.js.map": "/MAHAFORT-GUIDE/static/js/239.ca7d759d.chunk.js.map",
+    "977.9077e392.chunk.js.map": "/MAHAFORT-GUIDE/static/js/977.9077e392.chunk.js.map",
+    "455.48f0511f.chunk.js.map": "/MAHAFORT-GUIDE/static/js/455.48f0511f.chunk.js.map",
+    "453.05f85a6d.chunk.js.map": "/MAHAFORT-GUIDE/static/js/453.05f85a6d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31f0cec3.css",
+    "static/js/main.2fd75bb9.js"
+  ]
+}

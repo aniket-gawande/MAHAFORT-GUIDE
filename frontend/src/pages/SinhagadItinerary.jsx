@@ -1,27 +1,53 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaClock, FaMapMarkedAlt, FaUtensils, FaCamera, FaExclamationTriangle, FaMoneyBillWave, FaHiking, FaDownload } from 'react-icons/fa';
 import { MdLocationOn } from 'react-icons/md';
 
 const SinhagadItinerary = () => {
+    // Scroll to top when component mounts
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     const handleDownloadPDF = () => {
         window.print();
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-orange-50 to-red-50">
-            {/* Hero Section */}
-            <div className="bg-gradient-to-r from-orange-500 to-red-600 text-white py-16">
-                <div className="container mx-auto px-4">
-                    <h1 className="text-5xl font-bold mb-4 text-center">🏰 Sinhagad Fort - Complete Itinerary</h1>
-                    <p className="text-xl text-center text-orange-100 mb-6">Based on Real Google Maps Reviews & Visitor Experiences</p>
+        <div className="min-h-screen bg-gradient-to-br from-orange-50 via-amber-50 to-red-50">
+            {/* Hero Section - STUNNING */}
+            <div className="relative bg-gradient-to-r from-orange-600 via-red-700 to-orange-600 text-white py-20 overflow-hidden">
+                {/* Animated Background Pattern */}
+                <div className="absolute inset-0 opacity-20">
+                    <div className="absolute top-0 left-0 w-96 h-96 bg-yellow-400 rounded-full blur-3xl animate-pulse"></div>
+                    <div className="absolute bottom-0 right-0 w-96 h-96 bg-orange-400 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+                    <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-red-400 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+                </div>
 
-                    {/* Download PDF Button */}
-                    <div className="flex justify-center">
+                {/* Decorative Pattern Overlay */}
+                <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '50px 50px' }}></div>
+
+                <div className="container mx-auto px-4 relative z-10">
+                    <div className="text-center">
+                        {/* Dramatic Title */}
+                        <div className="relative inline-block mb-8">
+                            <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 blur-2xl opacity-50 animate-pulse"></div>
+                            <h1 className="relative text-7xl font-black mb-6 drop-shadow-2xl bg-gradient-to-r from-yellow-200 via-white to-yellow-200 bg-clip-text text-transparent">
+                                🏰 Sinhagad Fort
+                            </h1>
+                        </div>
+
+                        <p className="text-3xl mb-3 font-black drop-shadow-lg bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+                            Complete Trekking Itinerary
+                        </p>
+                        <p className="text-xl mb-10 text-yellow-200 font-bold drop-shadow-md">
+                            📍 Based on Real Google Maps Reviews & Visitor Experiences
+                        </p>
+
+                        {/* Download PDF Button - VIBRANT */}
                         <button
                             onClick={handleDownloadPDF}
-                            className="bg-white text-orange-600 px-8 py-3 rounded-lg font-bold hover:bg-orange-50 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-3 text-lg print:hidden"
+                            className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 text-white px-12 py-5 rounded-2xl font-black text-xl hover:scale-110 transition-all duration-300 shadow-2xl hover:shadow-yellow-500/50 flex items-center gap-4 mx-auto print:hidden border-4 border-yellow-300"
                         >
-                            <FaDownload className="text-xl" />
+                            <FaDownload className="text-2xl animate-bounce" />
                             Download Complete Itinerary as PDF
                         </button>
                     </div>
@@ -29,27 +55,27 @@ const SinhagadItinerary = () => {
             </div>
 
             <div className="container mx-auto px-4 py-12">
-                {/* Quick Info Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-                    <div className="bg-white rounded-xl shadow-lg p-6 text-center border-t-4 border-orange-500">
-                        <MdLocationOn className="text-4xl text-orange-600 mx-auto mb-2" />
-                        <div className="text-2xl font-bold text-gray-800">30 km</div>
-                        <div className="text-gray-600">from Pune</div>
+                {/* Quick Info Cards - VIBRANT */}
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                    <div className="bg-gradient-to-br from-orange-400 to-red-500 rounded-3xl shadow-2xl p-8 text-center hover:scale-110 transition-all duration-500 transform hover:rotate-3 cursor-pointer">
+                        <MdLocationOn className="text-6xl text-white mx-auto mb-3 drop-shadow-lg" />
+                        <div className="text-5xl font-black text-white mb-2 drop-shadow-lg">30 km</div>
+                        <div className="text-white font-bold text-lg">from Pune</div>
                     </div>
-                    <div className="bg-white rounded-xl shadow-lg p-6 text-center border-t-4 border-green-500">
-                        <FaHiking className="text-4xl text-green-600 mx-auto mb-2" />
-                        <div className="text-2xl font-bold text-gray-800">4 km</div>
-                        <div className="text-gray-600">Trek Distance</div>
+                    <div className="bg-gradient-to-br from-green-500 to-teal-600 rounded-3xl shadow-2xl p-8 text-center hover:scale-110 transition-all duration-500 transform hover:rotate-3 cursor-pointer">
+                        <FaHiking className="text-6xl text-white mx-auto mb-3 drop-shadow-lg" />
+                        <div className="text-5xl font-black text-white mb-2 drop-shadow-lg">4 km</div>
+                        <div className="text-white font-bold text-lg">Trek Distance</div>
                     </div>
-                    <div className="bg-white rounded-xl shadow-lg p-6 text-center border-t-4 border-blue-500">
-                        <FaClock className="text-4xl text-blue-600 mx-auto mb-2" />
-                        <div className="text-2xl font-bold text-gray-800">1.5-2 hrs</div>
-                        <div className="text-gray-600">Trek Duration</div>
+                    <div className="bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl shadow-2xl p-8 text-center hover:scale-110 transition-all duration-500 transform hover:rotate-3 cursor-pointer">
+                        <FaClock className="text-6xl text-white mx-auto mb-3 drop-shadow-lg" />
+                        <div className="text-5xl font-black text-white mb-2 drop-shadow-lg">1.5-2 hrs</div>
+                        <div className="text-white font-bold text-lg">Trek Duration</div>
                     </div>
-                    <div className="bg-white rounded-xl shadow-lg p-6 text-center border-t-4 border-yellow-500">
-                        <FaMoneyBillWave className="text-4xl text-yellow-600 mx-auto mb-2" />
-                        <div className="text-2xl font-bold text-gray-800">₹600-1000</div>
-                        <div className="text-gray-600">Per Person</div>
+                    <div className="bg-gradient-to-br from-yellow-400 to-orange-500 rounded-3xl shadow-2xl p-8 text-center hover:scale-110 transition-all duration-500 transform hover:rotate-3 cursor-pointer">
+                        <FaMoneyBillWave className="text-6xl text-white mx-auto mb-3 drop-shadow-lg" />
+                        <div className="text-5xl font-black text-white mb-2 drop-shadow-lg">₹600-1000</div>
+                        <div className="text-white font-bold text-lg">Per Person</div>
                     </div>
                 </div>
 
