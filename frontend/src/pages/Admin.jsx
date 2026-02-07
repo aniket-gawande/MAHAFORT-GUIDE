@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import { FaLock, FaUsers, FaExclamationTriangle, FaCheckCircle } from 'react-icons/fa';
 import { MdDashboard, MdEmergency } from 'react-icons/md';

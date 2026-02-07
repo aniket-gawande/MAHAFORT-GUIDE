@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { FaRobot, FaTimes, FaPaperPlane } from 'react-icons/fa';
+import { FaTimes, FaPaperPlane } from 'react-icons/fa';
 import bahirjiImage from '../assets/bahirji.jpg';
 
 const BahirjiChatbot = () => {
@@ -86,7 +86,7 @@ const BahirjiChatbot = () => {
         }
 
         // Check for specific fort queries
-        for (const [fort, data] of Object.entries(fortKnowledge)) {
+        for (const [, data] of Object.entries(fortKnowledge)) {
             if (data.keywords.some(keyword => message.includes(keyword))) {
                 // Check what aspect they're asking about
                 if (message.includes('history') || message.includes('story') || message.includes('battle')) {

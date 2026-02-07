@@ -37,13 +37,14 @@ const Home = () => {
   };
 
   const filteredForts = forts.filter(fort => {
+    if (!fort || !fort.name || !fort.location) return false;
     const matchesSearch = fort.name.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesDistrict = districtFilter === 'all' || fort.location.district === districtFilter;
-    const matchesDifficulty = difficultyFilter === 'all' || (fort.trek?.routes?.[0]?.difficulty === difficultyFilter);
+    const matchesDistrict = districtFilter === 'all' || fort.location?.district === districtFilter;
+    const matchesDifficulty = difficultyFilter === 'all' || fort.difficulty === difficultyFilter || (fort.trek?.routes?.[0]?.difficulty === difficultyFilter);
     return matchesSearch && matchesDistrict && matchesDifficulty;
   });
 
-  const districts = ['all', ...new Set(forts.map(fort => fort.location.district))].sort();
+  const districts = ['all', ...new Set(forts.filter(f => f?.location?.district).map(fort => fort.location.district))].sort();
 
   return (
     <div className="min-h-screen bg-royal-black text-white font-body selection:bg-saffron selection:text-black">
