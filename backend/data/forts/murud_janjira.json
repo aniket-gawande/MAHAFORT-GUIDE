@@ -1,0 +1,490 @@
+{
+    "name": "Murud Janjira Fort",
+    "location": {
+        "district": "Raigad",
+        "taluka": "Murud",
+        "baseVillage": "Rajapuri",
+        "coordinates": {
+            "lat": 18.2978,
+            "lng": 72.9581
+        },
+        "nearestCity": "Mumbai (165 km)"
+    },
+    "googleMaps": {
+        "placeId": "ChIJX8cLf5_BwjsRoIN3CNxEhNE",
+        "rating": 4.6,
+        "totalReviews": 12500,
+        "url": "https://maps.google.com/?cid=16145234567891"
+    },
+    "description": "Murud Janjira is a magnificent sea fortress located on an island off the Arabian Sea coast near Murud, Maharashtra. Built by the Siddis in 1567 AD, this fort holds the unique distinction of being unconquered for over 330 years, resisting attacks from the Marathas, Mughals, Portuguese, Dutch, and British. The fort is accessible only by boat and features massive bastions, giant cannons, and freshwater lakes despite being surrounded by saltwater.",
+    "trek": {
+        "routes": [
+            {
+                "name": "Boat from Rajapuri Jetty",
+                "startPoint": "Rajapuri Jetty",
+                "distance": "2 km (boat ride)",
+                "duration": "15-20 minutes",
+                "difficulty": "Easy",
+                "elevation": "Sea level",
+                "description": "The only way to reach the fort is by boat from Rajapuri Jetty. Boats operate throughout the day based on tide conditions. The boat ride offers stunning views of the fort rising from the Arabian Sea.",
+                "facilities": [
+                    "Life jackets provided",
+                    "Multiple boat operators",
+                    "Covered and open boats available",
+                    "Parking at jetty"
+                ]
+            }
+        ],
+        "bestTime": [
+            "Winter (October-February) - Pleasant weather, calm seas",
+            "Post-monsoon (September-October) - Lush greenery"
+        ],
+        "avoidTime": [
+            "Heavy monsoon (July-August) - Rough seas, boat services suspended",
+            "Summer afternoons (April-May) - Very hot and humid"
+        ]
+    },
+    "landmarks": [
+        {
+            "name": "Kalalbangdi Cannon",
+            "type": "Artillery",
+            "description": "One of the three legendary giant cannons of Janjira. Kalalbangdi is the third largest cannon in India, weighing over 22 tons. It has a range of several kilometers and was used to defend against naval attacks.",
+            "historicalSignificance": "This massive cannon symbolizes the fort's formidable defense system that kept it unconquered",
+            "timeToExplore": "15-20 minutes",
+            "mustSee": true
+        },
+        {
+            "name": "Chavri and Landa Kasam Cannons",
+            "type": "Artillery",
+            "description": "Two other giant cannons alongside Kalalbangdi. The fort once housed 572 cannons in total, making it one of the most heavily armed fortresses in India.",
+            "historicalSignificance": "These cannons were instrumental in repelling enemy ships from the sea",
+            "timeToExplore": "15 minutes",
+            "mustSee": true
+        },
+        {
+            "name": "26 Artillery Bastions",
+            "type": "Fortification",
+            "description": "The fort features 26 rounded bastions (some sources mention 19 intact ones) strategically positioned around the fort walls. These bastions once held cannons of both native and European origin.",
+            "historicalSignificance": "The bastions provided 360-degree defense coverage, making the fort impregnable",
+            "timeToExplore": "45-60 minutes (walking around)",
+            "mustSee": true
+        },
+        {
+            "name": "Sher Darwaza (Tiger Gate)",
+            "type": "Gate",
+            "description": "The main entrance gate adorned with a striking sculpture depicting a tiger-like beast clutching elephants. The entrance is ingeniously concealed and becomes visible only when within 40 feet - a strategic design to deter invaders.",
+            "historicalSignificance": "Primary entrance showcasing Siddi architectural prowess and military strategy",
+            "timeToExplore": "20 minutes",
+            "mustSee": true
+        },
+        {
+            "name": "Darya Darwaza (Sea Gate)",
+            "type": "Gate",
+            "description": "A sea-facing postern gate that served as an escape route during emergencies. Directly faces the Arabian Sea.",
+            "historicalSignificance": "Strategic escape route for the fort's defenders",
+            "timeToExplore": "15 minutes",
+            "mustSee": true
+        },
+        {
+            "name": "Shahi Lake and Kirkhani Lake",
+            "type": "Water Source",
+            "description": "Two remarkable freshwater lakes inside the fort, despite being surrounded by the Arabian Sea. These lakes never dried up and provided fresh drinking water to the fort's inhabitants. The freshwater is attributed to a natural 'freshwater lens' phenomenon.",
+            "historicalSignificance": "Engineering marvel that enabled the fort to withstand long sieges",
+            "timeToExplore": "20-25 minutes",
+            "mustSee": true
+        },
+        {
+            "name": "Siddi Nawab's Palace",
+            "type": "Palace",
+            "description": "Remnants of the palace that served as the residence of the Siddi Nawab. The palace ruins still showcase intricate architecture and provide insight into royal life.",
+            "historicalSignificance": "Administrative and residential center of the Siddi rulers",
+            "timeToExplore": "25-30 minutes",
+            "mustSee": true
+        },
+        {
+            "name": "Palace on Outer Wall",
+            "type": "Palace",
+            "description": "A luxurious mansion located on the fort's outer wall, offering panoramic views of the Arabian Sea. Reportedly still in good condition.",
+            "historicalSignificance": "Showcases the architectural grandeur of Siddi construction",
+            "timeToExplore": "20 minutes",
+            "mustSee": false
+        },
+        {
+            "name": "Ancient Mosque",
+            "type": "Religious",
+            "description": "Remnants of a mosque within the fort complex, providing insight into the religious practices of the Siddi rulers and inhabitants.",
+            "historicalSignificance": "Reflects the Islamic heritage of the Siddi dynasty",
+            "timeToExplore": "15 minutes",
+            "mustSee": true
+        },
+        {
+            "name": "Koli Temple (Goddess Bhavani)",
+            "type": "Temple",
+            "description": "An ancient temple dedicated to Goddess Bhavani inside the fort, showing the religious diversity of the fort's inhabitants.",
+            "historicalSignificance": "Represents the coexistence of different faiths within the fort",
+            "timeToExplore": "15 minutes",
+            "mustSee": false
+        },
+        {
+            "name": "Granaries and Stables",
+            "type": "Ruins",
+            "description": "Ruins of ancient granaries for food storage and stables for horses. The fort was designed as a self-sufficient miniature city.",
+            "historicalSignificance": "Shows the fort's self-sustaining infrastructure",
+            "timeToExplore": "20 minutes",
+            "mustSee": false
+        },
+        {
+            "name": "Fort Walls (40 feet high)",
+            "type": "Fortification",
+            "description": "Massive fort walls rising 40 feet high, built with large stone blocks. The walls have withstood centuries of attacks and harsh sea conditions.",
+            "historicalSignificance": "Primary defense structure that made the fort unconquerable",
+            "timeToExplore": "30 minutes (walking along)",
+            "mustSee": true
+        }
+    ],
+    "food": {
+        "onFort": [
+            {
+                "name": "Basic Snacks",
+                "type": "Veg",
+                "price": "₹20-50",
+                "description": "Limited snack vendors on the fort sell chips, biscuits, and cold drinks. Not much food available on the island itself.",
+                "mustTry": false,
+                "vendor": "Small vendors on fort"
+            }
+        ],
+        "nearbyRestaurants": [
+            {
+                "name": "Patil Khanaval",
+                "distance": "Murud Beach (3 km from jetty)",
+                "type": "Non-Veg",
+                "priceRange": "₹200-400 per person",
+                "speciality": "Authentic Konkani seafood thali, Surmai curry, Pomfret fry, Solkadi. Famous for home-cooked taste."
+            },
+            {
+                "name": "Hotel Vinayak",
+                "distance": "Near Murud Beach",
+                "type": "Both",
+                "priceRange": "₹150-350 per person",
+                "speciality": "Traditional Konkani thalis, fresh seafood, vegetarian options"
+            },
+            {
+                "name": "New Sea Rock Restaurant",
+                "distance": "Rajapuri, Murud",
+                "type": "Both",
+                "priceRange": "₹200-400 per person",
+                "speciality": "Indian and Konkani curries, seafood specialties"
+            },
+            {
+                "name": "Nandaai Khanaval",
+                "distance": "Murud village",
+                "type": "Non-Veg",
+                "priceRange": "₹180-350 per person",
+                "speciality": "Authentic homemade Konkani food, excellent non-veg options"
+            },
+            {
+                "name": "Mr Spice Cafe",
+                "distance": "Murud area",
+                "type": "Both",
+                "priceRange": "₹200-450 per person",
+                "speciality": "Seafood delicacies, coastal cuisine"
+            }
+        ],
+        "mustTryDishes": [
+            {
+                "name": "Bombil Fry (Bombay Duck)",
+                "type": "Non-Veg",
+                "price": "₹150-250",
+                "description": "Crispy and spicy Maharashtrian fish fry. Bombil is marinated with spices, coated in rice flour and semolina, then deep-fried until golden and crispy. A coastal delicacy.",
+                "mustTry": true,
+                "vendor": "All seafood restaurants"
+            },
+            {
+                "name": "Surmai Rava Fry",
+                "type": "Non-Veg",
+                "price": "₹200-350",
+                "description": "King Mackerel slices marinated with ginger-garlic, turmeric, chili powder, coated with semolina and shallow-fried. Crispy outside, moist inside. Premium fish.",
+                "mustTry": true,
+                "vendor": "Patil Khanaval, Hotel Vinayak"
+            },
+            {
+                "name": "Konkani Seafood Thali",
+                "type": "Non-Veg",
+                "price": "₹250-400",
+                "description": "Complete meal with fish curry, fish fry, prawns, rice, bhakri, dal, papad, and Solkadi. Authentic coastal flavors.",
+                "mustTry": true,
+                "vendor": "Patil Khanaval, Nandaai Khanaval"
+            },
+            {
+                "name": "Solkadi",
+                "type": "Beverage",
+                "price": "₹30-50",
+                "description": "Refreshing traditional Konkani drink made from coconut milk and kokum. Cooling and digestive, perfect with seafood.",
+                "mustTry": true,
+                "vendor": "All Konkani restaurants"
+            },
+            {
+                "name": "Pomfret Fry",
+                "type": "Non-Veg",
+                "price": "₹180-300",
+                "description": "Fresh pomfret marinated and fried to perfection. Another coastal favorite.",
+                "mustTry": true,
+                "vendor": "All seafood restaurants"
+            },
+            {
+                "name": "Prawns Curry",
+                "type": "Non-Veg",
+                "price": "₹200-350",
+                "description": "Fresh coastal prawns cooked in spicy Konkani coconut curry. Rich and flavorful.",
+                "mustTry": false,
+                "vendor": "Most seafood restaurants"
+            }
+        ]
+    },
+    "facilities": {
+        "parking": {
+            "available": true,
+            "cost": "₹30-50",
+            "capacity": "50+ vehicles at Rajapuri Jetty"
+        },
+        "washrooms": {
+            "available": true,
+            "condition": "Basic (at jetty and on fort)"
+        },
+        "drinkingWater": {
+            "available": true,
+            "points": [
+                "Rajapuri Jetty",
+                "Limited on fort island",
+                "Carry your own water recommended"
+            ]
+        },
+        "mobileNetwork": {
+            "quality": "Moderate at jetty, Limited on island",
+            "providers": [
+                "Airtel",
+                "Jio",
+                "Vodafone (patchy on island)"
+            ]
+        },
+        "firstAid": {
+            "available": true,
+            "location": "Primary Health Center at Murud village (3 km from jetty)"
+        },
+        "ropeway": {
+            "available": false,
+            "cost": "N/A"
+        },
+        "guides": {
+            "available": true,
+            "cost": "₹200-400 for group",
+            "contact": "+91-9876543220 (Local guide association)"
+        },
+        "boatService": {
+            "available": true,
+            "cost": "₹20-50 per person (return trip)",
+            "timings": "7:00 AM - 4:30 PM (subject to tide and weather)",
+            "duration": "15-20 minutes each way"
+        }
+    },
+    "safety": {
+        "alerts": [
+            {
+                "type": "Warning",
+                "message": "Boat services depend on tide and weather conditions - check before planning your visit",
+                "season": "All year"
+            },
+            {
+                "type": "Warning",
+                "message": "Wear life jackets during boat ride - mandatory for safety",
+                "season": "All year"
+            },
+            {
+                "type": "Warning",
+                "message": "Fort surfaces can be slippery, especially near water - wear proper footwear",
+                "season": "All year"
+            },
+            {
+                "type": "Info",
+                "message": "Limited facilities on the island - carry water, snacks, and essentials",
+                "season": "All year"
+            },
+            {
+                "type": "Warning",
+                "message": "Rough seas during monsoon - boat services may be suspended",
+                "season": "Monsoon"
+            },
+            {
+                "type": "Info",
+                "message": "Last boat back is around 4:30 PM - plan your return accordingly",
+                "season": "All year"
+            },
+            {
+                "type": "Warning",
+                "message": "No railings on some fort walls - be careful near edges, especially with children",
+                "season": "All year"
+            }
+        ],
+        "emergencyContacts": [
+            {
+                "type": "Police",
+                "name": "Murud Police Station",
+                "phone": "+91-02144-274200",
+                "availability": "24/7"
+            },
+            {
+                "type": "Medical",
+                "name": "Primary Health Center, Murud",
+                "phone": "+91-02144-274100",
+                "availability": "8:00 AM - 8:00 PM"
+            },
+            {
+                "type": "Rescue",
+                "name": "Coastal Rescue Team",
+                "phone": "108",
+                "availability": "24/7 Emergency"
+            },
+            {
+                "type": "Guide",
+                "name": "Rajesh Koli (Local Guide)",
+                "phone": "+91-9876543220",
+                "availability": "7:00 AM - 6:00 PM"
+            },
+            {
+                "type": "Boat",
+                "name": "Boat Operators Association",
+                "phone": "+91-9876543221",
+                "availability": "7:00 AM - 5:00 PM"
+            }
+        ]
+    },
+    "accessibility": {
+        "wheelchairFriendly": false,
+        "elderlyFriendly": false,
+        "kidsAppropriate": true,
+        "stepsCount": 0,
+        "restPoints": 3,
+        "alternativeAccess": "Only accessible by boat. The fort has uneven surfaces and stairs, making it challenging for elderly and wheelchair users. Requires moderate fitness to explore."
+    },
+    "visitInfo": {
+        "entryFee": {
+            "indian": 0,
+            "foreigner": 0,
+            "note": "No entry fee for fort, but boat charges apply (₹20-50 per person return)"
+        },
+        "timings": "7:00 AM - 6:30 PM (Boat services: 7:00 AM - 4:30 PM)",
+        "timeRequired": "2-3 hours (including boat ride and fort exploration)",
+        "bestTimeOfDay": "Early morning (7-9 AM) or late afternoon (3-5 PM) to avoid harsh sun",
+        "crowdLevel": {
+            "weekday": "Low to Moderate",
+            "weekend": "Moderate to High"
+        },
+        "photography": {
+            "allowed": true,
+            "restrictions": "None"
+        }
+    },
+    "accommodation": [
+        {
+            "name": "Beach Resorts in Murud",
+            "type": "Resort",
+            "distance": "3-5 km from jetty",
+            "priceRange": "₹1500-4000 per night",
+            "contact": "Multiple options available",
+            "amenities": [
+                "Sea view",
+                "Restaurant",
+                "Parking",
+                "AC rooms"
+            ]
+        },
+        {
+            "name": "Hotels in Murud Village",
+            "type": "Hotel",
+            "distance": "2-4 km",
+            "priceRange": "₹800-2500 per night",
+            "contact": "Various options",
+            "amenities": [
+                "Basic rooms",
+                "WiFi",
+                "Restaurant",
+                "Parking"
+            ]
+        },
+        {
+            "name": "Alibaug Hotels",
+            "type": "Hotel",
+            "distance": "50 km",
+            "priceRange": "₹1000-5000 per night",
+            "contact": "Multiple luxury and budget options",
+            "amenities": [
+                "All modern amenities",
+                "Beach access",
+                "Restaurants"
+            ]
+        }
+    ],
+    "reviewsSummary": {
+        "topPositives": [
+            "Unconquered fort - unique historical significance",
+            "Stunning sea fort architecture rising from the Arabian Sea",
+            "Boat ride is scenic and enjoyable",
+            "Massive cannons and bastions are impressive",
+            "Freshwater lakes in the middle of the sea - engineering marvel",
+            "Less crowded than other forts",
+            "Great for photography and history enthusiasts"
+        ],
+        "topComplaints": [
+            "Limited food and facilities on the fort island",
+            "Boat services depend on weather and tides",
+            "Can be very hot and humid during summer",
+            "Some structures are in ruins and need maintenance",
+            "Limited mobile network on the island"
+        ],
+        "bestQuote": "Murud Janjira is a testament to unconquerable spirit! Standing on this sea fort, surrounded by the Arabian Sea, you feel the power of history. The fact that no one could ever capture it makes it even more special.",
+        "tips": [
+            "Check tide and weather conditions before visiting",
+            "Start early to avoid afternoon heat",
+            "Wear comfortable shoes with good grip - surfaces can be slippery",
+            "Carry sufficient water and snacks - limited availability on fort",
+            "Don't miss the giant cannons and freshwater lakes",
+            "Wear life jacket during boat ride - safety first",
+            "Plan to catch the last boat back (around 4:30 PM)",
+            "Combine with Murud beach visit for a full day trip",
+            "Try the local seafood at Patil Khanaval - it's amazing",
+            "Carry cash - card facilities are limited",
+            "Respect the fort - don't litter or damage structures",
+            "Hire a local guide to learn fascinating stories"
+        ]
+    },
+    "budget": {
+        "transport": "₹300-500 (from Mumbai/Pune)",
+        "boatFare": "₹40-100 (return)",
+        "food": "₹250-400",
+        "entry": "₹0",
+        "misc": "₹100-200 (guide, water, snacks)",
+        "totalPerPerson": "₹690-1200 (Budget) | ₹1000-1500 (Comfortable)"
+    },
+    "images": [
+        "/assets/janjira.jpg",
+        "/assets/janjira.jpg"
+    ],
+    "history": {
+        "brief": "Murud Janjira Fort was initially a wooden structure built by local fishermen in the 15th century to defend against pirates. In 1567 AD, Malik Ambar, an Abyssinian regent of the Ahmadnagar Sultanate, transformed it into a formidable stone fortress. The fort came under the control of the Siddi dynasty and remained unconquered for over 330 years.",
+        "significance": "Janjira holds the unique distinction of being the only fort on the Indian coast that remained unconquered despite numerous attempts by powerful forces including the Marathas under Shivaji Maharaj, the Mughals, Portuguese, Dutch, and British. This makes it a symbol of invincibility and strategic brilliance.",
+        "famousBattles": [
+            "Multiple failed Maratha attempts to capture the fort (1660s-1680s)",
+            "Portuguese naval attacks (17th century)",
+            "Mughal sieges (various periods)",
+            "British attempts during colonial period"
+        ],
+        "rulers": [
+            "Siddi Dynasty (1567 AD onwards - primary rulers)",
+            "Malik Ambar (Builder of stone fort, 1567 AD)",
+            "Ahmadnagar Sultanate (briefly)",
+            "Independent Siddi state (longest period)"
+        ]
+    },
+    "featured": true,
+    "crowdStatus": "Moderate"
+}

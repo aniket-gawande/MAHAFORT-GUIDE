@@ -6,6 +6,7 @@ const Home = lazy(() => import('./pages/Home'));
 const FortDetails = lazy(() => import('./pages/FortDetails'));
 const Admin = lazy(() => import('./pages/Admin'));
 const SinhagadItinerary = lazy(() => import('./pages/SinhagadItinerary'));
+const MurudJanjiraDetail = lazy(() => import('./pages/MurudJanjiraDetail'));
 
 // Loading fallback component
 const PageLoader = () => (
@@ -44,6 +45,8 @@ function App() {
             />
             <Route path="/admin" element={<Admin />} />
             <Route path="/sinhagad-itinerary" element={<SinhagadItinerary />} />
+            <Route path="/fort/murud-janjira" element={<MurudJanjiraDetail />} />
+            <Route path="/fort/murud_janjira" element={<MurudJanjiraDetail />} />
             {/* Catch all route - redirect to home */}
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>

@@ -305,16 +305,16 @@ export const staticForts = [
         name: 'Murud-Janjira Fort',
         location: { district: 'Raigad' },
         difficulty: 'Easy',
-        description: 'Unconquered sea fort. Only accessible by boat. Unique naval architecture.',
-        images: ['https://images.unsplash.com/photo-1609920658906-8223bd289001?w=800'],
+        description: 'Unconquered sea fortress accessible only by boat. Built by Siddis in 1567 AD, never captured by Marathas, Mughals, Portuguese, or British. Features 26 bastions, giant cannons, and freshwater lakes.',
+        images: ['/assets/janjira.jpg'],
         rating: 4.8,
         visitors: 8000,
         crowdStatus: 'moderate',
         bestTimeToVisit: 'October to March',
-        entryFee: '₹100 (Boat charges)',
-        timings: '8:00 AM - 5:00 PM',
+        entryFee: 'Boat: ₹20-50',
+        timings: '7:00 AM - 6:30 PM',
         altitude: '0 m (Sea level)',
-        historicalSignificance: 'Unconquered sea fort, Never captured by enemies'
+        historicalSignificance: 'Unconquered sea fort, Never captured by any enemy'
     },
 
     {
