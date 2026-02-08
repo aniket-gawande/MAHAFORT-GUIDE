@@ -1,5 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { FaMapMarkerAlt, FaRoute, FaClock, FaRoad } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaRoute, FaClock, FaRoad, FaLocationArrow } from 'react-icons/fa';
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
+import 'leaflet-routing-machine';
+import 'leaflet-routing-machine/dist/leaflet-routing-machine.css';
+
+// Fix for default markers in Leaflet
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
+  iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+});
 
 const SinhagadMap = () => {
   const [userLocation, setUserLocation] = useState(null);
@@ -8,272 +20,246 @@ const SinhagadMap = () => {
   const [directions, setDirections] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [mapLoaded, setMapLoaded] = useState(false);
+  const [locationError, setLocationError] = useState(false);
   
   const mapRef = useRef(null);
-  const googleMapRef = useRef(null);
-  const directionsRendererRef = useRef(null);
-  const userMarkerRef = useRef(null);
-  const fortMarkerRef = useRef(null);
+  const mapInstanceRef = useRef(null);
+  const routingControlRef = useRef(null);
 
-  // Sinhagad Fort coordinates (fixed destination)
-  const SINHAGAD_FORT = {
-    lat: 18.3664,
-    lng: 73.7558
-  };
+  // Sinhagad Fort coordinates
+  const SINHAGAD_FORT = { lat: 18.3664, lng: 73.7558 };
+  
+  // Donje Village (waypoint for preferred route)
+  const DONJE_WAYPOINT = { lat: 18.3540, lng: 73.7430 };
 
-  // Donje Village base (preferred route waypoint)
-  const DONJE_WAYPOINT = {
-    lat: 18.3540,
-    lng: 73.7430
-  };
+  // Default location (Pune) if geolocation fails
+  const DEFAULT_LOCATION = { lat: 18.5204, lng: 73.8567 };
 
-  // Load Google Maps Script
+  // Get user's location
   useEffect(() => {
-    const loadGoogleMapsScript = () => {
-      // Check if script already loaded
-      if (window.google && window.google.maps) {
-        setMapLoaded(true);
-        return;
-      }
-
-      // Get API key from environment variable
-      const apiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
-      
-      if (!apiKey || apiKey === 'your_google_maps_api_key_here') {
-        setError('Google Maps API key is not configured. Please add REACT_APP_GOOGLE_MAPS_API_KEY to your .env file.');
-        setLoading(false);
-        return;
-      }
-
-      const script = document.createElement('script');
-      // Maps JavaScript API with Directions service
-      script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}`;
-      script.async = true;
-      script.defer = true;
-      script.onload = () => setMapLoaded(true);
-      script.onerror = () => {
-        setError('Failed to load Google Maps. Please check your API key and ensure Maps JavaScript API is enabled in Google Cloud Console.');
-        setLoading(false);
-      };
-      document.head.appendChild(script);
-    };
-
-    loadGoogleMapsScript();
-  }, []);
-
-  // Get user's current location
-  useEffect(() => {
-    if (!mapLoaded) return;
-
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
-          const userPos = {
+          setUserLocation({
             lat: position.coords.latitude,
             lng: position.coords.longitude
-          };
-          setUserLocation(userPos);
+          });
           setLoading(false);
         },
         (err) => {
-          console.error('Geolocation error:', err);
-          setError('Unable to get your location. Please enable location services.');
+          console.warn('Geolocation error:', err);
+          setLocationError(true);
+          setUserLocation(DEFAULT_LOCATION);
           setLoading(false);
-          // Use Pune as default location if geolocation fails
-          setUserLocation({ lat: 18.5204, lng: 73.8567 });
         },
-        {
-          enableHighAccuracy: true,
-          timeout: 10000,
-          maximumAge: 0
-        }
+        { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
       );
     } else {
-      setError('Geolocation is not supported by your browser');
+      setLocationError(true);
+      setUserLocation(DEFAULT_LOCATION);
       setLoading(false);
-      // Use Pune as default
-      setUserLocation({ lat: 18.5204, lng: 73.8567 });
     }
-  }, [mapLoaded]);
+  }, []);
 
-  // Initialize map and get directions
+  // Initialize map when user location is available
   useEffect(() => {
-    if (!mapLoaded || !userLocation || !mapRef.current) return;
+    if (!userLocation || !mapRef.current || mapInstanceRef.current) return;
 
-    const initializeMap = () => {
-      try {
-        // Create map
-        const map = new window.google.maps.Map(mapRef.current, {
-          zoom: 12,
-          center: userLocation,
-          mapTypeId: 'roadmap',
-          mapTypeControl: true,
-          streetViewControl: false,
-          fullscreenControl: true,
-          zoomControl: true,
-        });
+    try {
+      // Create map
+      const map = L.map(mapRef.current, {
+        center: [userLocation.lat, userLocation.lng],
+        zoom: 12,
+        zoomControl: true,
+      });
 
-        googleMapRef.current = map;
+      mapInstanceRef.current = map;
 
-        // Create custom icons
-        const userIcon = {
-          path: window.google.maps.SymbolPath.CIRCLE,
-          scale: 10,
-          fillColor: '#4285F4',
-          fillOpacity: 1,
-          strokeColor: '#ffffff',
-          strokeWeight: 3,
-        };
+      // Add OpenStreetMap tiles (FREE!)
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 19,
+      }).addTo(map);
 
-        const fortIcon = {
-          url: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(`
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
-              <path fill="#FF6600" d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-              <path fill="#FFD700" d="M12 4l8 4.5v8c0 4.5-3.2 8.7-8 10-4.8-1.3-8-5.5-8-10v-8l8-4.5z"/>
-              <text x="12" y="16" text-anchor="middle" font-size="10" font-weight="bold" fill="#8B0000">🏰</text>
-            </svg>
-          `),
-          scaledSize: new window.google.maps.Size(48, 48),
-        };
+      // Custom icons
+      const userIcon = L.divIcon({
+        className: 'custom-user-marker',
+        html: `<div style="
+          width: 24px; 
+          height: 24px; 
+          background: linear-gradient(135deg, #4285F4, #34A853); 
+          border: 3px solid white; 
+          border-radius: 50%; 
+          box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        ">
+          <div style="width: 8px; height: 8px; background: white; border-radius: 50%;"></div>
+        </div>`,
+        iconSize: [24, 24],
+        iconAnchor: [12, 12],
+      });
 
-        // Add user location marker
-        userMarkerRef.current = new window.google.maps.Marker({
-          position: userLocation,
-          map: map,
-          icon: userIcon,
-          title: 'Your Location',
-          animation: window.google.maps.Animation.DROP,
-        });
+      const fortIcon = L.divIcon({
+        className: 'custom-fort-marker',
+        html: `<div style="
+          width: 40px;
+          height: 40px;
+          background: linear-gradient(135deg, #FF6600, #FF9933);
+          border: 3px solid #FFD700;
+          border-radius: 50%;
+          box-shadow: 0 4px 15px rgba(255,102,0,0.5);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 20px;
+        ">🏰</div>`,
+        iconSize: [40, 40],
+        iconAnchor: [20, 20],
+      });
 
-        // Add fort marker
-        fortMarkerRef.current = new window.google.maps.Marker({
-          position: SINHAGAD_FORT,
-          map: map,
-          icon: fortIcon,
-          title: 'Sinhagad Fort',
-          animation: window.google.maps.Animation.DROP,
-        });
+      // Add markers
+      const userMarker = L.marker([userLocation.lat, userLocation.lng], { icon: userIcon })
+        .addTo(map)
+        .bindPopup(`<strong>📍 Your Location</strong><br/>${locationError ? 'Using Pune city center' : 'Current Position'}`);
 
-        // Info windows
-        const userInfoWindow = new window.google.maps.InfoWindow({
-          content: '<div style="padding: 8px;"><strong>Your Location</strong><br/>Current Position</div>'
-        });
+      const fortMarker = L.marker([SINHAGAD_FORT.lat, SINHAGAD_FORT.lng], { icon: fortIcon })
+        .addTo(map)
+        .bindPopup(`<strong>🏰 Sinhagad Fort</strong><br/>Historic Maratha Fort<br/>Altitude: 1312m<br/><em>"सिंहगड" - The Lion's Fort</em>`);
 
-        const fortInfoWindow = new window.google.maps.InfoWindow({
-          content: '<div style="padding: 8px;"><strong>Sinhagad Fort</strong><br/>Historic Maratha Fort<br/>Altitude: 1312m</div>'
-        });
-
-        userMarkerRef.current.addListener('click', () => {
-          userInfoWindow.open(map, userMarkerRef.current);
-        });
-
-        fortMarkerRef.current.addListener('click', () => {
-          fortInfoWindow.open(map, fortMarkerRef.current);
-        });
-
-        // Initialize Directions Service and Renderer
-        const directionsService = new window.google.maps.DirectionsService();
-        directionsRendererRef.current = new window.google.maps.DirectionsRenderer({
-          map: map,
-          suppressMarkers: true, // We're using custom markers
-          polylineOptions: {
-            strokeColor: '#FF6600',
-            strokeWeight: 6,
-            strokeOpacity: 0.8,
-          }
-        });
-
-        // Request directions via Donje route
-        const request = {
-          origin: userLocation,
-          destination: SINHAGAD_FORT,
-          waypoints: [
-            {
-              location: DONJE_WAYPOINT,
-              stopover: true
-            }
+      // Add routing with OSRM (FREE!)
+      const routingControl = L.Routing.control({
+        waypoints: [
+          L.latLng(userLocation.lat, userLocation.lng),
+          L.latLng(DONJE_WAYPOINT.lat, DONJE_WAYPOINT.lng),
+          L.latLng(SINHAGAD_FORT.lat, SINHAGAD_FORT.lng)
+        ],
+        routeWhileDragging: false,
+        addWaypoints: false,
+        draggableWaypoints: false,
+        fitSelectedRoutes: true,
+        showAlternatives: false,
+        lineOptions: {
+          styles: [
+            { color: '#FF6600', opacity: 0.8, weight: 6 },
+            { color: '#FFD700', opacity: 0.3, weight: 10 }
           ],
-          travelMode: window.google.maps.TravelMode.DRIVING,
-          optimizeWaypoints: false, // Keep our preferred route
-          provideRouteAlternatives: false,
-        };
+          extendToWaypoints: true,
+          missingRouteTolerance: 0
+        },
+        createMarker: function() { return null; }, // We use custom markers
+        router: L.Routing.osrmv1({
+          serviceUrl: 'https://router.project-osrm.org/route/v1',
+          profile: 'car'
+        })
+      }).addTo(map);
 
-        directionsService.route(request, (result, status) => {
-          if (status === 'OK') {
-            directionsRendererRef.current.setDirections(result);
-            
-            const route = result.routes[0];
-            const leg = route.legs[0];
+      routingControlRef.current = routingControl;
 
-            // Set distance and duration
-            setDistance(leg.distance.text);
-            setDuration(leg.duration.text);
+      // Hide the default routing control panel
+      const container = routingControl.getContainer();
+      if (container) {
+        container.style.display = 'none';
+      }
 
-            // Extract turn-by-turn directions
-            const steps = leg.steps.map((step, index) => ({
-              instruction: step.instructions.replace(/<[^>]*>/g, ''), // Remove HTML tags
-              distance: step.distance.text,
-              duration: step.duration.text,
-              maneuver: step.maneuver || 'straight',
-            }));
+      // Listen for route found event
+      routingControl.on('routesfound', function(e) {
+        const route = e.routes[0];
+        
+        // Calculate total distance and time
+        const totalDistance = route.summary.totalDistance;
+        const totalTime = route.summary.totalTime;
+        
+        // Format distance
+        const distanceKm = (totalDistance / 1000).toFixed(1);
+        setDistance(`${distanceKm} km`);
+        
+        // Format duration
+        const hours = Math.floor(totalTime / 3600);
+        const minutes = Math.floor((totalTime % 3600) / 60);
+        if (hours > 0) {
+          setDuration(`${hours} hr ${minutes} min`);
+        } else {
+          setDuration(`${minutes} min`);
+        }
 
-            setDirections(steps);
+        // Extract turn-by-turn directions
+        const steps = route.instructions.map((instruction, index) => ({
+          instruction: instruction.text,
+          distance: instruction.distance > 1000 
+            ? `${(instruction.distance / 1000).toFixed(1)} km` 
+            : `${Math.round(instruction.distance)} m`,
+          duration: instruction.time > 60 
+            ? `${Math.round(instruction.time / 60)} min` 
+            : `${instruction.time} sec`,
+          type: instruction.type || 'straight',
+        }));
 
-            // Fit map to show entire route
-            const bounds = new window.google.maps.LatLngBounds();
-            bounds.extend(userLocation);
-            bounds.extend(SINHAGAD_FORT);
-            bounds.extend(DONJE_WAYPOINT);
-            map.fitBounds(bounds);
+        setDirections(steps.filter(s => s.instruction && s.distance !== '0 m'));
+      });
 
-          } else {
-            console.error('Directions request failed:', status);
-            setError('Unable to calculate route. Please try again.');
-          }
-        });
+      routingControl.on('routingerror', function(e) {
+        console.error('Routing error:', e);
+        setError('Unable to calculate route. Please try again.');
+      });
 
-      } catch (err) {
-        console.error('Map initialization error:', err);
-        setError('Failed to initialize map');
+      // Fit bounds to show all markers
+      const bounds = L.latLngBounds([
+        [userLocation.lat, userLocation.lng],
+        [SINHAGAD_FORT.lat, SINHAGAD_FORT.lng],
+        [DONJE_WAYPOINT.lat, DONJE_WAYPOINT.lng]
+      ]);
+      map.fitBounds(bounds, { padding: [50, 50] });
+
+    } catch (err) {
+      console.error('Map initialization error:', err);
+      setError('Failed to initialize map');
+    }
+
+    // Cleanup
+    return () => {
+      if (mapInstanceRef.current) {
+        mapInstanceRef.current.remove();
+        mapInstanceRef.current = null;
       }
     };
+  }, [userLocation, locationError]);
 
-    initializeMap();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [mapLoaded, userLocation]);
-
-  // Get maneuver icon
-  const getManeuverIcon = (maneuver) => {
+  // Get direction icon based on turn type
+  const getDirectionIcon = (type) => {
     const icons = {
-      'turn-left': '↰',
-      'turn-right': '↱',
-      'turn-slight-left': '↖',
-      'turn-slight-right': '↗',
-      'turn-sharp-left': '↰',
-      'turn-sharp-right': '↱',
-      'straight': '↑',
-      'roundabout-left': '⭯',
-      'roundabout-right': '⭮',
-      'uturn-left': '↶',
-      'uturn-right': '↷',
-      'merge': '⇝',
-      'fork-left': '⑂',
-      'fork-right': '⑂',
+      'Left': '↰',
+      'Right': '↱',
+      'SlightLeft': '↖',
+      'SlightRight': '↗',
+      'SharpLeft': '⮪',
+      'SharpRight': '⮫',
+      'Straight': '↑',
+      'Roundabout': '⭮',
+      'UTurn': '↩',
+      'DestinationReached': '🏁',
+      'Head': '🚗',
+      'Continue': '→',
+      'Fork': '⑂',
+      'Merge': '⇢',
+      'EndOfRoad': '⊥',
+      'WaypointReached': '📍',
     };
-    return icons[maneuver] || '→';
+    return icons[type] || '→';
   };
 
   if (loading) {
     return (
       <div className="bg-white rounded-xl shadow-lg p-8 text-center">
         <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-orange-500 mx-auto mb-4"></div>
-        <p className="text-gray-600">Loading map and getting your location...</p>
+        <p className="text-gray-600">Getting your location...</p>
+        <p className="text-sm text-gray-400 mt-2">Please allow location access when prompted</p>
       </div>
     );
   }
 
-  if (error) {
+  if (error && !userLocation) {
     return (
       <div className="bg-red-50 border-l-4 border-red-500 rounded-lg p-6">
         <div className="flex items-center mb-2">
@@ -287,10 +273,22 @@ const SinhagadMap = () => {
 
   return (
     <div className="space-y-6">
+      {/* Location Notice */}
+      {locationError && (
+        <div className="bg-yellow-50 border-l-4 border-yellow-500 rounded-lg p-4">
+          <div className="flex items-center">
+            <FaLocationArrow className="text-yellow-600 mr-3" />
+            <p className="text-yellow-800 text-sm">
+              <strong>Note:</strong> Using Pune city center as default. Enable location services for accurate directions from your position.
+            </p>
+          </div>
+        </div>
+      )}
+
       {/* Map Stats Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-4 border-l-4 border-blue-500">
-          <div className="flex items-center mb-2">
+        <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-4 border-l-4 border-blue-500 shadow-md">
+          <div className="flex items-center">
             <FaMapMarkerAlt className="text-blue-600 text-2xl mr-3" />
             <div>
               <p className="text-sm text-blue-600 font-medium">Your Location</p>
@@ -301,8 +299,8 @@ const SinhagadMap = () => {
           </div>
         </div>
 
-        <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-4 border-l-4 border-orange-500">
-          <div className="flex items-center mb-2">
+        <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-4 border-l-4 border-orange-500 shadow-md">
+          <div className="flex items-center">
             <FaRoad className="text-orange-600 text-2xl mr-3" />
             <div>
               <p className="text-sm text-orange-600 font-medium">Total Distance</p>
@@ -311,8 +309,8 @@ const SinhagadMap = () => {
           </div>
         </div>
 
-        <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-4 border-l-4 border-green-500">
-          <div className="flex items-center mb-2">
+        <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-4 border-l-4 border-green-500 shadow-md">
+          <div className="flex items-center">
             <FaClock className="text-green-600 text-2xl mr-3" />
             <div>
               <p className="text-sm text-green-600 font-medium">Travel Time</p>
@@ -324,19 +322,24 @@ const SinhagadMap = () => {
 
       {/* Map Container */}
       <div className="bg-white rounded-xl shadow-xl overflow-hidden border-4 border-orange-200">
-        <div className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-6 py-3">
-          <div className="flex items-center">
-            <FaRoute className="text-2xl mr-3" />
-            <div>
-              <h3 className="text-xl font-bold">Route to Sinhagad Fort</h3>
-              <p className="text-sm text-orange-100">via Donje Village (Preferred Route)</p>
+        <div className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-6 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center">
+              <FaRoute className="text-2xl mr-3" />
+              <div>
+                <h3 className="text-xl font-bold">Route to Sinhagad Fort</h3>
+                <p className="text-sm text-orange-100">via Donje Village (Recommended Route)</p>
+              </div>
+            </div>
+            <div className="text-xs bg-white/20 px-3 py-1 rounded-full">
+              🆓 FREE Map by OpenStreetMap
             </div>
           </div>
         </div>
         <div 
           ref={mapRef} 
-          className="w-full h-96"
-          style={{ minHeight: '500px' }}
+          className="w-full"
+          style={{ height: '500px', zIndex: 1 }}
         />
       </div>
 
@@ -357,7 +360,7 @@ const SinhagadMap = () => {
               >
                 <div className="flex items-start">
                   <div className="flex-shrink-0 w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mr-4">
-                    <span className="text-2xl">{getManeuverIcon(step.maneuver)}</span>
+                    <span className="text-2xl">{getDirectionIcon(step.type)}</span>
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-1">

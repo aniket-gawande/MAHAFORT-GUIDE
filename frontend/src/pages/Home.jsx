@@ -111,9 +111,14 @@ const Home = () => {
 
                 {/* Bio Text */}
                 <div className="space-y-8">
-                    <h2 className="text-4xl md:text-5xl font-cinematic font-bold text-white">
-                        Founder of the <span className="text-saffron">Maratha Empire</span>
-                    </h2>
+                    <div className="space-y-4">
+                        <h1 className="text-5xl md:text-7xl font-cinematic font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-saffron to-white drop-shadow-2xl tracking-wider">
+                            Chhatrapati Shivaji Maharaj
+                        </h1>
+                        <h2 className="text-3xl md:text-4xl font-cinematic font-bold text-white">
+                            Founder of the <span className="text-saffron">Maratha Empire</span>
+                        </h2>
+                    </div>
                     <p className="text-gray-400 text-lg leading-relaxed">
                         The great warrior king who established <strong className="text-white">Hindavi Swarajya</strong>. 
                         Known for his military genius and progressive administration, he built an impregnable defense 
