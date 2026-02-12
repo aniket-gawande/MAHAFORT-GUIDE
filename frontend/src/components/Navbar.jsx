@@ -4,12 +4,24 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import { AuthContext } from '../context/AuthContext';
 import mahaLogo from '../assets/mahalogo.jpeg';
 
+// Format username: remove underscores, random suffixes, and capitalize nicely
+const formatDisplayName = (name) => {
+  if (!name) return 'Warrior';
+  // Remove trailing random codes like _RHZB, _a3x, etc. (underscore + 2-6 alphanumeric at end)
+  let clean = name.replace(/_[A-Za-z0-9]{2,6}$/, '');
+  // Replace remaining underscores/hyphens with spaces
+  clean = clean.replace(/[_-]+/g, ' ');
+  // Title case
+  return clean.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ').trim() || 'Warrior';
+};
+
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { user, isAuthenticated, logout } = useContext(AuthContext);
   const navigate = useNavigate();
+  const displayName = formatDisplayName(user?.username);
   const location = useLocation();
 
   useEffect(() => {
@@ -74,10 +86,10 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8 font-body text-sm font-bold tracking-widest uppercase">
-          {['Home', 'Forts', 'About'].map((item) => (
+          {['Home', 'Forts', 'Trip Planner', 'About'].map((item) => (
             <Link 
               key={item}
-              to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
+              to={item === 'Home' ? '/' : item === 'Trip Planner' ? '/trip-planner' : `/${item.toLowerCase()}`}
               className="relative text-mist hover:text-saffron transition-colors after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-0.5 after:bg-saffron after:transition-all hover:after:w-full"
             >
               {item}
@@ -88,50 +100,53 @@ const Navbar = () => {
             <div className="relative user-dropdown">
               <button
                 onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="flex items-center gap-2 px-4 py-2 border border-saffron/50 rounded-full hover:border-saffron hover:shadow-[0_0_15px_rgba(255,153,51,0.3)] transition-all group"
+                className="flex items-center gap-2.5 pl-1.5 pr-4 py-1.5 bg-gradient-to-r from-saffron/10 to-orange-600/5 border border-saffron/30 rounded-full hover:border-saffron hover:shadow-[0_0_20px_rgba(255,153,51,0.25)] transition-all duration-300 group"
               >
                 {user?.avatar ? (
-                  <img src={user.avatar} alt={user.username} className="h-8 w-8 rounded-full border-2 border-saffron/70 object-cover shadow-[0_0_10px_rgba(255,153,51,0.3)]" />
+                  <img src={user.avatar} alt={displayName} className="h-8 w-8 rounded-full border-2 border-saffron object-cover shadow-[0_0_10px_rgba(255,153,51,0.4)]" />
                 ) : (
-                  <div className="h-8 w-8 rounded-full bg-gradient-to-br from-saffron/30 to-orange-600/30 border-2 border-saffron/50 flex items-center justify-center text-saffron text-sm font-bold">
-                    {user?.username?.charAt(0).toUpperCase() || 'W'}
+                  <div className="h-8 w-8 rounded-full bg-gradient-to-br from-saffron to-orange-600 flex items-center justify-center text-white text-sm font-black shadow-[0_0_12px_rgba(255,153,51,0.4)]">
+                    {displayName.charAt(0)}
                   </div>
                 )}
-                <span className="text-white group-hover:text-saffron transition-colors text-xs tracking-wider font-bold">
-                  {user?.username?.toUpperCase() || 'WARRIOR'}
+                <span className="text-white group-hover:text-saffron transition-colors text-xs font-bold max-w-[120px] truncate">
+                  {displayName}
                 </span>
-                <svg className={`w-3 h-3 text-saffron transition-transform ${dropdownOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className={`w-3 h-3 text-saffron/70 transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
 
               {dropdownOpen && (
-                <div className="absolute right-0 top-full mt-2 w-64 bg-royal-black/95 backdrop-blur-xl border border-saffron/20 rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.5)] py-2 overflow-hidden">
+                <div className="absolute right-0 top-full mt-3 w-72 bg-royal-black/95 backdrop-blur-xl border border-saffron/15 rounded-2xl shadow-[0_15px_50px_rgba(0,0,0,0.6)] overflow-hidden">
                   {/* Profile Header */}
-                  <div className="px-4 py-4 border-b border-white/10 flex items-center gap-3">
-                    {user?.avatar ? (
-                      <img src={user.avatar} alt={user.username} className="h-12 w-12 rounded-full border-2 border-saffron object-cover shadow-[0_0_15px_rgba(255,153,51,0.3)]" />
-                    ) : (
-                      <div className="h-12 w-12 rounded-full bg-gradient-to-br from-saffron/30 to-orange-600/30 border-2 border-saffron flex items-center justify-center text-saffron text-lg font-bold">
-                        {user?.username?.charAt(0).toUpperCase() || 'W'}
+                  <div className="relative px-5 py-5 border-b border-white/5">
+                    <div className="absolute inset-0 bg-gradient-to-br from-saffron/5 via-transparent to-orange-600/5"></div>
+                    <div className="relative flex items-center gap-4">
+                      {user?.avatar ? (
+                        <img src={user.avatar} alt={displayName} className="h-14 w-14 rounded-2xl border-2 border-saffron/50 object-cover shadow-[0_0_20px_rgba(255,153,51,0.2)]" />
+                      ) : (
+                        <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-saffron to-orange-600 flex items-center justify-center text-white text-xl font-black shadow-[0_0_20px_rgba(255,153,51,0.3)]">
+                          {displayName.charAt(0)}
+                        </div>
+                      )}
+                      <div className="flex-1 min-w-0">
+                        <p className="text-white font-cinematic font-bold text-base truncate">{displayName}</p>
+                        <p className="text-gray-500 text-xs truncate mt-0.5">{user?.email}</p>
+                        <span className="inline-flex items-center gap-1 mt-1.5 px-2.5 py-0.5 bg-saffron/10 border border-saffron/20 rounded-full text-[10px] text-saffron font-bold uppercase tracking-wider">
+                          ⚔️ {user?.role || 'warrior'}
+                        </span>
                       </div>
-                    )}
-                    <div className="flex-1 min-w-0">
-                      <p className="text-saffron font-bold text-sm truncate">{user?.username}</p>
-                      <p className="text-gray-500 text-xs truncate">{user?.email}</p>
-                      <span className="inline-block mt-1 px-2 py-0.5 bg-saffron/10 border border-saffron/30 rounded-full text-[10px] text-saffron uppercase tracking-wider">
-                        ⚔️ {user?.role || 'warrior'}
-                      </span>
                     </div>
                   </div>
-                  <div className="py-1">
+                  <div className="py-2 px-2">
                     {user?.role === 'admin' && (
-                      <Link to="/admin" onClick={() => setDropdownOpen(false)} className="flex items-center gap-3 px-4 py-2.5 text-gray-300 hover:text-white hover:bg-saffron/10 transition-all text-sm">
-                        <span>🛡️</span> Admin Dashboard
+                      <Link to="/admin" onClick={() => setDropdownOpen(false)} className="flex items-center gap-3 px-4 py-3 text-gray-300 hover:text-white hover:bg-saffron/10 rounded-xl transition-all text-sm font-bold">
+                        <span className="text-base">🛡️</span> Admin Dashboard
                       </Link>
                     )}
-                    <button onClick={handleLogout} className="w-full flex items-center gap-3 px-4 py-2.5 text-red-400 hover:text-red-300 hover:bg-red-500/10 transition-all text-sm">
-                      <span>🚪</span> Leave Stronghold
+                    <button onClick={handleLogout} className="w-full flex items-center gap-3 px-4 py-3 text-red-400 hover:text-red-300 hover:bg-red-500/10 rounded-xl transition-all text-sm font-bold">
+                      <span className="text-base">🚪</span> Leave Stronghold
                     </button>
                   </div>
                 </div>
@@ -167,10 +182,10 @@ const Navbar = () => {
         <div className={`absolute right-0 top-0 h-full w-72 bg-royal-black/95 backdrop-blur-xl border-l border-saffron/20 transform transition-transform duration-300 ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
           <div className="pt-20 px-6 space-y-6">
             {/* Nav Links */}
-            {['Home', 'Forts', 'About'].map((item) => (
+            {['Home', 'Forts', 'Trip Planner', 'About'].map((item) => (
               <Link
                 key={item}
-                to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
+                to={item === 'Home' ? '/' : item === 'Trip Planner' ? '/trip-planner' : `/${item.toLowerCase()}`}
                 onClick={() => setMobileMenuOpen(false)}
                 className="block text-lg font-body font-bold text-white tracking-widest uppercase hover:text-saffron transition-colors py-2 border-b border-white/5"
               >
@@ -182,16 +197,16 @@ const Navbar = () => {
               <div className="space-y-4 pt-4 border-t border-saffron/20">
                 <div className="flex items-center gap-3">
                   {user?.avatar ? (
-                    <img src={user.avatar} alt={user.username} className="h-12 w-12 rounded-full border-2 border-saffron object-cover shadow-[0_0_10px_rgba(255,153,51,0.3)]" />
+                    <img src={user.avatar} alt={displayName} className="h-14 w-14 rounded-2xl border-2 border-saffron/50 object-cover shadow-[0_0_15px_rgba(255,153,51,0.2)]" />
                   ) : (
-                    <div className="h-12 w-12 rounded-full bg-gradient-to-br from-saffron/30 to-orange-600/30 border-2 border-saffron flex items-center justify-center text-saffron font-bold text-lg">
-                      {user?.username?.charAt(0).toUpperCase() || 'W'}
+                    <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-saffron to-orange-600 flex items-center justify-center text-white font-black text-xl shadow-[0_0_15px_rgba(255,153,51,0.3)]">
+                      {displayName.charAt(0)}
                     </div>
                   )}
                   <div>
-                    <p className="text-saffron font-bold text-sm">{user?.username}</p>
+                    <p className="text-white font-cinematic font-bold text-base">{displayName}</p>
                     <p className="text-gray-500 text-xs truncate">{user?.email}</p>
-                    <span className="inline-block mt-1 px-2 py-0.5 bg-saffron/10 border border-saffron/30 rounded-full text-[10px] text-saffron uppercase tracking-wider">
+                    <span className="inline-flex items-center gap-1 mt-1 px-2.5 py-0.5 bg-saffron/10 border border-saffron/20 rounded-full text-[10px] text-saffron font-bold uppercase tracking-wider">
                       ⚔️ {user?.role || 'warrior'}
                     </span>
                   </div>

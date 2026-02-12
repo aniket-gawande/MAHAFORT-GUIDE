@@ -15,6 +15,8 @@ const MurudJanjiraDetail = lazy(() => import('./pages/MurudJanjiraDetail'));
 const VishalgadDetail = lazy(() => import('./pages/VishalgadDetail'));
 const SindhudurgDetail = lazy(() => import('./pages/SindhudurgDetail'));
 const Admin = lazy(() => import('./pages/Admin'));
+const TripPlanner = lazy(() => import('./pages/TripPlanner'));
+const Forts = lazy(() => import('./pages/Forts'));
 
 // Loading fallback component
 const PageLoader = () => (
@@ -40,7 +42,7 @@ function AppRoutes() {
       <Routes>
         {/* Main Pages - accessible to all */}
         <Route path="/" element={<Home />} />
-        <Route path="/forts" element={<Home />} />
+        <Route path="/forts" element={<Forts />} />
         <Route path="/about" element={<About />} />
 
         {/* Auth Pages - redirect to home if already logged in */}
@@ -75,15 +77,8 @@ function AppRoutes() {
           <ProtectedRoute><Admin /></ProtectedRoute>
         } />
 
-        {/* Coming Soon */}
-        <Route
-          path="/trip-planner"
-          element={
-            <div className="min-h-screen flex items-center justify-center bg-gray-900">
-              <p className="text-2xl text-gray-300">Trip Planner - Coming Soon!</p>
-            </div>
-          }
-        />
+        {/* Trip Planner */}
+        <Route path="/trip-planner" element={<TripPlanner />} />
 
         {/* Catch all route - redirect to home */}
         <Route path="*" element={<Navigate to="/" replace />} />

@@ -5,7 +5,7 @@ import FortCard from '../components/FortCard';
 import Navbar from '../components/Navbar';
 import BahirjiChatbot from '../components/BahirjiChatbot';
 import { staticForts } from '../data/staticForts';
-import { FaSearch, FaFilter } from 'react-icons/fa';
+import { FaChevronRight } from 'react-icons/fa';
 
 // Assets
 import shivaji from '../assets/shivaji.jpg';
@@ -15,9 +15,6 @@ import heroBg from '../assets/hero-fort.jpg';
 const Home = () => {
   const [forts, setForts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [districtFilter, setDistrictFilter] = useState('all');
-  const [difficultyFilter, setDifficultyFilter] = useState('all');
 
   useEffect(() => {
     fetchForts();
@@ -60,15 +57,13 @@ const Home = () => {
     }
   };
 
-  const filteredForts = forts.filter(fort => {
-    if (!fort || !fort.name || !fort.location) return false;
-    const matchesSearch = fort.name.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesDistrict = districtFilter === 'all' || fort.location?.district === districtFilter;
-    const matchesDifficulty = difficultyFilter === 'all' || fort.difficulty === difficultyFilter || (fort.trek?.routes?.[0]?.difficulty === difficultyFilter);
-    return matchesSearch && matchesDistrict && matchesDifficulty;
-  });
-
   const districts = ['all', ...new Set(forts.filter(f => f?.location?.district).map(fort => fort.location.district))].sort();
+
+  // Featured forts - top rated for homepage preview
+  const featuredForts = forts
+    .filter(f => f?.name && f?.location)
+    .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+    .slice(0, 6);
 
   return (
     <div className="min-h-screen bg-royal-black text-white font-body selection:bg-saffron selection:text-black">
@@ -158,68 +153,41 @@ const Home = () => {
         </div>
       </section>
 
-      {/* --- FORTS SEARCH & GRID --- */}
+      {/* --- FEATURED FORTS PREVIEW --- */}
       <section className="py-20 bg-royal-gray border-t border-white/5" id="explore">
         <div className="container mx-auto px-4 sm:px-6">
-            
-            {/* Filter Bar (Glassmorphism) */}
-            <div className="bg-black/40 backdrop-blur-lg border border-white/10 rounded-2xl p-4 sm:p-6 mb-12 flex flex-col md:flex-row gap-4 items-center shadow-2xl">
-                <div className="flex-1 w-full relative">
-                    <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500" />
-                    <input 
-                        type="text" 
-                        placeholder="Search forts..." 
-                        value={searchTerm}
-                        onChange={(e) => setSearchTerm(e.target.value)}
-                        className="w-full bg-royal-black/50 border border-white/10 rounded-xl py-3 pl-12 pr-4 text-white focus:border-saffron focus:outline-none focus:ring-1 focus:ring-saffron transition-all"
-                    />
-                </div>
-                
-                <div className="flex gap-4 w-full md:w-auto">
-                    <div className="relative w-full md:w-48">
-                        <FaFilter className="absolute left-4 top-1/2 -translate-y-1/2 text-saffron" />
-                        <select 
-                            value={districtFilter}
-                            onChange={(e) => setDistrictFilter(e.target.value)}
-                            className="w-full bg-royal-black/50 border border-white/10 rounded-xl py-3 pl-10 pr-8 text-white appearance-none cursor-pointer hover:border-saffron/50 focus:border-saffron focus:outline-none"
-                        >
-                            <option value="all" className="bg-royal-black text-gray-400">All Districts</option>
-                            {districts.filter(d => d !== 'all').map(d => <option key={d} value={d} className="bg-royal-black">{d}</option>)}
-                        </select>
-                    </div>
-
-                    <div className="relative w-full md:w-48">
-                         <select 
-                            value={difficultyFilter}
-                            onChange={(e) => setDifficultyFilter(e.target.value)}
-                            className="w-full bg-royal-black/50 border border-white/10 rounded-xl py-3 px-4 text-white appearance-none cursor-pointer hover:border-saffron/50 focus:border-saffron focus:outline-none"
-                        >
-                            <option value="all" className="bg-royal-black">All Levels</option>
-                            <option value="Easy" className="bg-royal-black">Easy</option>
-                            <option value="Moderate" className="bg-royal-black">Moderate</option>
-                            <option value="Hard" className="bg-royal-black">Hard</option>
-                        </select>
-                    </div>
-                </div>
+            {/* Section Header */}
+            <div className="text-center mb-12">
+                <p className="text-saffron font-cinematic text-xs sm:text-sm tracking-[0.3em] uppercase mb-3">Top Rated</p>
+                <h2 className="text-2xl sm:text-4xl md:text-5xl font-cinematic font-bold text-white mb-4">
+                    Featured <span className="text-saffron">Forts</span>
+                </h2>
+                <div className="h-1 w-16 bg-saffron rounded-full mx-auto mb-4"></div>
+                <p className="text-gray-400 text-sm sm:text-base max-w-xl mx-auto">
+                    The most majestic fortifications of the Maratha Empire. Explore all {forts.length}+ forts in our directory.
+                </p>
             </div>
 
-            {/* Loading / Grid State */}
+            {/* Featured Grid */}
             {loading ? (
                 <div className="text-center py-20">
                     <div className="inline-block w-16 h-16 border-4 border-saffron border-t-transparent rounded-full animate-spin"></div>
                     <p className="mt-4 text-saffron font-cinematic animate-pulse">Summoning History...</p>
                 </div>
-            ) : filteredForts.length > 0 ? (
+            ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {filteredForts.map((fort) => (
+                    {featuredForts.map((fort) => (
                         <FortCard key={fort._id} fort={fort} />
                     ))}
                 </div>
-            ) : (
-                <div className="text-center py-20 border border-dashed border-white/20 rounded-2xl">
-                    <p className="text-2xl text-gray-500 font-cinematic">No Forts Found in this Region.</p>
-                </div>
             )}
+
+            {/* View All CTA */}
+            <div className="text-center mt-12">
+                <Link to="/forts" className="group inline-flex items-center gap-3 px-8 py-4 bg-white/5 border border-saffron/30 rounded-full text-saffron font-bold font-cinematic tracking-wider uppercase hover:bg-saffron hover:text-black hover:border-saffron transition-all duration-300 shadow-[0_0_15px_rgba(255,153,51,0.1)] hover:shadow-[0_0_25px_rgba(255,153,51,0.4)]">
+                    VIEW ALL {forts.length}+ FORTS <FaChevronRight className="group-hover:translate-x-1 transition-transform" />
+                </Link>
+            </div>
         </div>
       </section>
 

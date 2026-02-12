@@ -12,14 +12,15 @@ import {
 // Background image for the hero
 import heroBg from '../assets/hero-fort.jpg';
 import shivajiImg from '../assets/shivaji.jpg';
-
+import chart1 from '../assets/Aniket.png';
+import chart2 from '../assets/Athrav.png'
 const About = () => {
   const teamMembers = [
     {
       name: "Aniket Gawande",
       role: "Project Lead & Full Stack Developer",
-      image: "https://randomuser.me/api/portraits/men/32.jpg",
-      linkedin: "www.linkedin.com/in/aniket-gawande25",
+      image:chart1,
+      linkedin: "https://www.linkedin.com/in/aniket-gawande25?utm_source=share_via&utm_content=profile&utm_medium=member_android",
       github: "https://github.com/aniket-gawande"
     },
     {
@@ -32,9 +33,9 @@ const About = () => {
     {
       name: "Athrav Shinde",
       role: "Backend Developer & Database Architect",
-      image: "https://randomuser.me/api/portraits/men/85.jpg",
-      linkedin: "#",
-      github: "#"
+      image: chart2,
+      linkedin: "https://www.linkedin.com/in/atharv-shinde-2baa39226?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      github: "https://github.com/atharv2196"
     },
     {
       name: "Nishtha Parve",
@@ -409,7 +410,7 @@ const TeamCard = ({ member }) => (
       <img
         src={member.image}
         alt={member.name}
-        className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+        className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-royal-black via-royal-black/30 to-transparent opacity-90"></div>
     </div>
