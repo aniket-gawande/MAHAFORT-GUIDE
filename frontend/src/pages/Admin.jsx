@@ -121,10 +121,10 @@ const Admin = () => {
             {/* Header */}
             <div className="bg-gradient-to-r from-orange-500 to-red-600 text-white py-8 shadow-lg">
                 <div className="container mx-auto px-4">
-                    <div className="flex justify-between items-center">
+                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                         <div>
-                            <h1 className="text-4xl font-bold mb-2 flex items-center gap-3">
-                                <MdDashboard className="text-5xl" />
+                            <h1 className="text-2xl sm:text-4xl font-bold mb-2 flex items-center gap-3">
+                                <MdDashboard className="text-3xl sm:text-5xl" />
                                 Admin Dashboard
                             </h1>
                             <p className="text-orange-100">Municipal Authority Control Panel</p>
@@ -142,10 +142,10 @@ const Admin = () => {
             {/* Tabs */}
             <div className="bg-white shadow-md border-b-2 border-orange-300">
                 <div className="container mx-auto px-4">
-                    <div className="flex gap-4">
+                    <div className="flex gap-2 sm:gap-4 overflow-x-auto">
                         <button
                             onClick={() => setActiveTab('forts')}
-                            className={`px-6 py-4 font-semibold transition-all ${activeTab === 'forts'
+                            className={`px-3 py-3 sm:px-6 sm:py-4 font-semibold transition-all whitespace-nowrap text-sm sm:text-base ${activeTab === 'forts'
                                     ? 'text-orange-600 border-b-4 border-orange-600'
                                     : 'text-gray-600 hover:text-orange-600'
                                 }`}
@@ -155,7 +155,7 @@ const Admin = () => {
                         </button>
                         <button
                             onClick={() => setActiveTab('emergency')}
-                            className={`px-6 py-4 font-semibold transition-all ${activeTab === 'emergency'
+                            className={`px-3 py-3 sm:px-6 sm:py-4 font-semibold transition-all whitespace-nowrap text-sm sm:text-base ${activeTab === 'emergency'
                                     ? 'text-orange-600 border-b-4 border-orange-600'
                                     : 'text-gray-600 hover:text-orange-600'
                                 }`}
@@ -171,7 +171,7 @@ const Admin = () => {
             <div className="container mx-auto px-4 py-8">
                 {activeTab === 'forts' ? (
                     <div>
-                        <h2 className="text-3xl font-bold text-gray-800 mb-6">Fort Crowd Status Management</h2>
+                        <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6">Fort Crowd Status Management</h2>
 
                         <div className="grid gap-6">
                             {forts.map((fort) => (

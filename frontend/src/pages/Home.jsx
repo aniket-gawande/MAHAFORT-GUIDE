@@ -61,7 +61,7 @@ const Home = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="container mx-auto px-6 relative z-10 pt-20">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10 pt-20">
           <div className="max-w-4xl space-y-6">
             <div className="flex items-center gap-4 animate-fade-in-up">
               <img src={marathaFlag} alt="Flag" className="h-10 w-auto drop-shadow-[0_0_10px_rgba(255,153,51,0.8)]" />
@@ -70,7 +70,7 @@ const Home = () => {
               </span>
             </div>
             
-            <h1 className="text-5xl md:text-8xl font-cinematic font-black leading-tight text-white drop-shadow-2xl animate-fade-in-up delay-100">
+            <h1 className="text-3xl sm:text-5xl md:text-8xl font-cinematic font-black leading-tight text-white drop-shadow-2xl animate-fade-in-up delay-100">
               GUARDING THE <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-saffron to-yellow-100">
                 SAHYADRIS
@@ -83,7 +83,7 @@ const Home = () => {
             </p>
 
             {/* Quick Stats in Hero */}
-            <div className="flex gap-8 pt-8 animate-fade-in-up delay-300">
+            <div className="flex flex-wrap gap-4 sm:gap-8 pt-8 animate-fade-in-up delay-300">
                 <HeroStat number={forts.length + "+"} label="Forts" />
                 <HeroStat number={districts.length - 1} label="Districts" />
                 <HeroStat number="100%" label="Glory" />
@@ -96,8 +96,8 @@ const Home = () => {
       <section className="py-24 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-saffron-glow opacity-20 pointer-events-none"></div>
         
-        <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="container mx-auto px-4 sm:px-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
                 {/* Image Card */}
                 <div className="relative group">
                     <div className="absolute -inset-4 bg-saffron/20 rounded-3xl blur-2xl group-hover:bg-saffron/30 transition-all duration-700"></div>
@@ -112,10 +112,10 @@ const Home = () => {
                 {/* Bio Text */}
                 <div className="space-y-8">
                     <div className="space-y-4">
-                        <h1 className="text-5xl md:text-7xl font-cinematic font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-saffron to-white drop-shadow-2xl tracking-wider">
+                        <h1 className="text-3xl sm:text-5xl md:text-7xl font-cinematic font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-saffron to-white drop-shadow-2xl tracking-wider">
                             Chhatrapati Shivaji Maharaj
                         </h1>
-                        <h2 className="text-3xl md:text-4xl font-cinematic font-bold text-white">
+                        <h2 className="text-xl sm:text-3xl md:text-4xl font-cinematic font-bold text-white">
                             Founder of the <span className="text-saffron">Maratha Empire</span>
                         </h2>
                     </div>
@@ -136,10 +136,10 @@ const Home = () => {
 
       {/* --- FORTS SEARCH & GRID --- */}
       <section className="py-20 bg-royal-gray border-t border-white/5" id="explore">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
             
             {/* Filter Bar (Glassmorphism) */}
-            <div className="bg-black/40 backdrop-blur-lg border border-white/10 rounded-2xl p-6 mb-12 flex flex-col md:flex-row gap-4 items-center shadow-2xl">
+            <div className="bg-black/40 backdrop-blur-lg border border-white/10 rounded-2xl p-4 sm:p-6 mb-12 flex flex-col md:flex-row gap-4 items-center shadow-2xl">
                 <div className="flex-1 w-full relative">
                     <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500" />
                     <input 
@@ -203,7 +203,7 @@ const Home = () => {
       <section className="py-20 bg-royal-black relative overflow-hidden flex items-center justify-center">
          <div className="absolute inset-0 bg-saffron/5"></div>
          <div className="relative z-10 text-center space-y-6">
-            <h2 className="text-4xl md:text-5xl font-cinematic font-bold text-white">Ready for the Expedition?</h2>
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-cinematic font-bold text-white">Ready for the Expedition?</h2>
             <Link to="/trip-planner" className="inline-block px-8 py-4 bg-saffron text-black font-bold rounded-full hover:bg-white hover:scale-105 transition-all shadow-[0_0_20px_rgba(255,153,51,0.5)]">
                 PLAN YOUR TREK
             </Link>
@@ -217,8 +217,8 @@ const Home = () => {
 // Mini Components
 const HeroStat = ({ number, label }) => (
     <div>
-        <h4 className="text-4xl font-black text-white">{number}</h4>
-        <p className="text-saffron text-sm font-bold uppercase tracking-wider">{label}</p>
+        <h4 className="text-2xl sm:text-4xl font-black text-white">{number}</h4>
+        <p className="text-saffron text-xs sm:text-sm font-bold uppercase tracking-wider">{label}</p>
     </div>
 );
 

@@ -33,11 +33,12 @@ const EmergencyButton = ({ fort }) => {
             {/* Floating Emergency Button */}
             <button
                 onClick={() => setShowModal(true)}
-                className="fixed bottom-8 right-8 bg-red-600 hover:bg-red-700 text-white px-6 py-4 rounded-full shadow-2xl flex items-center gap-3 z-50 animate-pulse transition-all duration-300 hover:scale-110"
+                className="fixed bottom-4 left-4 sm:bottom-8 sm:left-8 bg-red-600 hover:bg-red-700 text-white px-4 py-3 sm:px-6 sm:py-4 rounded-full shadow-2xl flex items-center gap-2 sm:gap-3 z-50 animate-pulse transition-all duration-300 hover:scale-110"
                 aria-label="Emergency Help"
             >
-                <MdEmergency className="text-2xl" />
-                <span className="font-bold text-lg">Emergency Help</span>
+                <MdEmergency className="text-xl sm:text-2xl" />
+                <span className="font-bold text-sm sm:text-lg hidden sm:inline">Emergency Help</span>
+                <span className="font-bold text-sm sm:hidden">SOS</span>
             </button>
 
             {/* Emergency Modal */}

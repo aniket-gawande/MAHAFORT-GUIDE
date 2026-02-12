@@ -23,18 +23,18 @@ const SinhagadDetail = () => {
 
         {/* Hero Text */}
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
-          <h1 className="text-5xl md:text-7xl font-cinematic font-black text-white drop-shadow-2xl mb-4">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-cinematic font-black text-white drop-shadow-2xl mb-4">
             SINHAGAD FORT
           </h1>
           <div className="h-1 w-24 bg-saffron rounded-full mb-6"></div>
-          <p className="text-xl md:text-2xl text-saffron font-bold tracking-wider uppercase drop-shadow-lg">
+          <p className="text-base sm:text-xl md:text-2xl text-saffron font-bold tracking-wider uppercase drop-shadow-lg">
             The Lion's Fort
           </p>
         </div>
       </div>
 
       {/* --- MAIN CONTENT CONTAINER --- */}
-      <div className="container mx-auto px-6 py-16">
+      <div className="container mx-auto px-4 sm:px-6 py-10 sm:py-16">
         <div className="flex flex-col lg:flex-row gap-12">
 
           {/* LEFT COLUMN: Content */}
@@ -50,7 +50,7 @@ const SinhagadDetail = () => {
 
             {/* History Section */}
             <section className="relative border-l-2 border-saffron/30 pl-6">
-              <h2 className="flex items-center gap-3 text-3xl font-cinematic font-bold text-white mb-6">
+              <h2 className="flex items-center gap-3 text-2xl sm:text-3xl font-cinematic font-bold text-white mb-6">
                 <FaHistory className="text-saffron" />
                 Historical Significance
               </h2>
@@ -82,7 +82,7 @@ const SinhagadDetail = () => {
 
             {/* Key Attractions Grid */}
             <section>
-              <h2 className="flex items-center gap-3 text-3xl font-cinematic font-bold text-white mb-8 pb-2 border-b border-white/10">
+              <h2 className="flex items-center gap-3 text-2xl sm:text-3xl font-cinematic font-bold text-white mb-8 pb-2 border-b border-white/10">
                 <FaMonument className="text-saffron" />
                 Key Attractions
               </h2>
@@ -99,8 +99,8 @@ const SinhagadDetail = () => {
 
           {/* RIGHT COLUMN: Sticky Sidebar (Glassmorphism) */}
           <div className="lg:w-1/3">
-            <div className="sticky top-28">
-              <div className="bg-royal-gray/60 backdrop-blur-xl border border-white/10 shadow-[0_0_30px_rgba(255,153,51,0.15)] rounded-2xl p-8 relative overflow-hidden">
+            <div className="sticky top-20 sm:top-28">
+              <div className="bg-royal-gray/60 backdrop-blur-xl border border-white/10 shadow-[0_0_30px_rgba(255,153,51,0.15)] rounded-2xl p-5 sm:p-8 relative overflow-hidden">
                 {/* Saffron Glow Effect */}
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-saffron to-transparent opacity-70"></div>
                 

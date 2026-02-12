@@ -151,23 +151,23 @@ User's question: ${userMessage}`;
             {/* Floating Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="fixed bottom-8 right-8 bg-gradient-to-r from-orange-600 to-red-700 text-white p-5 rounded-full shadow-2xl z-50 hover:scale-110 transition-all duration-300 border-4 border-yellow-400 animate-pulse"
+                className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 bg-gradient-to-r from-orange-600 to-red-700 text-white p-3 sm:p-5 rounded-full shadow-2xl z-50 hover:scale-110 transition-all duration-300 border-2 sm:border-4 border-yellow-400 animate-pulse"
             >
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-1 sm:gap-2">
                     <img
                         src={bahirjiImage}
                         alt="Bahirji Naik"
-                        className="w-12 h-12 rounded-full border-2 border-white"
+                        className="w-8 h-8 sm:w-12 sm:h-12 rounded-full border-2 border-white"
                     />
-                    <span className="text-2xl font-black">💬</span>
+                    <span className="text-lg sm:text-2xl font-black">💬</span>
                 </div>
             </button>
 
             {/* Chat Window */}
             {isOpen && (
-                <div className="fixed bottom-8 right-8 w-96 h-[600px] bg-white rounded-3xl shadow-2xl z-50 flex flex-col overflow-hidden border-4 border-orange-400">
+                <div className="fixed bottom-0 right-0 sm:bottom-8 sm:right-8 w-full sm:w-96 h-[100dvh] sm:h-[600px] bg-white sm:rounded-3xl shadow-2xl z-50 flex flex-col overflow-hidden border-0 sm:border-4 border-orange-400">
                     {/* Header */}
-                    <div className="bg-gradient-to-r from-orange-600 via-red-700 to-orange-600 text-white p-6 flex items-center justify-between relative overflow-hidden">
+                    <div className="bg-gradient-to-r from-orange-600 via-red-700 to-orange-600 text-white p-4 sm:p-6 flex items-center justify-between relative overflow-hidden">
                         {/* Animated Background */}
                         <div className="absolute inset-0 opacity-20">
                             <div className="absolute top-0 left-0 w-32 h-32 bg-yellow-400 rounded-full blur-2xl animate-pulse"></div>
@@ -175,16 +175,16 @@ User's question: ${userMessage}`;
                         </div>
 
                         <div className="flex items-center gap-4 relative z-10">
-                            <div className="bg-white p-1 rounded-full border-4 border-yellow-400 shadow-xl">
+                            <div className="bg-white p-1 rounded-full border-2 sm:border-4 border-yellow-400 shadow-xl">
                                 <img
                                     src={bahirjiImage}
                                     alt="Bahirji Naik"
-                                    className="w-16 h-16 rounded-full object-cover"
+                                    className="w-10 h-10 sm:w-16 sm:h-16 rounded-full object-cover"
                                 />
                             </div>
                             <div>
-                                <h3 className="text-3xl font-black drop-shadow-lg">बहिर्जी नाईक</h3>
-                                <p className="text-lg text-yellow-200 font-bold">Bahirji Naik - AI Fort Guide 🏰</p>
+                                <h3 className="text-xl sm:text-3xl font-black drop-shadow-lg">बहिर्जी नाईक</h3>
+                                <p className="text-xs sm:text-lg text-yellow-200 font-bold">Bahirji Naik - AI Fort Guide 🏰</p>
                             </div>
                         </div>
                         <button

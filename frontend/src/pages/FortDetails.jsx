@@ -84,10 +84,10 @@ const FortDetails = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
         <div className="relative container mx-auto px-4 h-full flex items-end pb-12">
           <div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
               {fort.name}
             </h1>
-            <div className="flex items-center space-x-4 text-white">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-white text-sm sm:text-base">
               <span className="flex items-center">
                 <FaMapMarkerAlt className="mr-2" />
                 {fort.location.district}
@@ -120,7 +120,7 @@ const FortDetails = () => {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center px-6 py-4 font-semibold transition-colors whitespace-nowrap ${
+                className={`flex items-center px-3 py-3 sm:px-6 sm:py-4 font-semibold transition-colors whitespace-nowrap text-xs sm:text-base ${
                   activeTab === tab.id
                     ? 'border-b-4 border-orange-500 text-orange-600'
                     : 'text-gray-600 hover:text-orange-500'
@@ -134,12 +134,12 @@ const FortDetails = () => {
         </div>
 
         {/* Tab Content */}
-        <div className="bg-white rounded-b-xl shadow-lg p-8">
+        <div className="bg-white rounded-b-xl shadow-lg p-4 sm:p-8">
           {/* Overview Tab */}
           {activeTab === 'overview' && (
             <div className="space-y-6">
               <div>
-                <h2 className="text-3xl font-bold text-gray-800 mb-4">About {fort.name}</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">About {fort.name}</h2>
                 <p className="text-gray-700 text-lg leading-relaxed">{fort.description}</p>
               </div>
 
@@ -193,7 +193,7 @@ const FortDetails = () => {
           {activeTab === 'directions' && (
             <div className="space-y-6">
               <div>
-                <h2 className="text-3xl font-bold text-gray-800 mb-4 flex items-center">
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 flex items-center">
                   <FaRoute className="text-orange-500 mr-3" />
                   Get Directions to Sinhagad Fort
                 </h2>
@@ -221,7 +221,7 @@ const FortDetails = () => {
           {/* Trek Routes Tab */}
           {activeTab === 'trek' && (
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">Trek Routes</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">Trek Routes</h2>
               {fort.trek.routes.map((route, index) => (
                 <div key={index} className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 border-l-4 border-green-500">
                   <h3 className="text-xl font-bold text-green-800 mb-3">{route.name}</h3>
@@ -267,7 +267,7 @@ const FortDetails = () => {
           {activeTab === 'food' && (
             <div className="space-y-6">
               <div>
-                <h2 className="text-3xl font-bold text-gray-800 mb-4">Food on Fort</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">Food on Fort</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {fort.food.onFort.filter(item => item.mustTry).map((item, index) => (
                     <div key={index} className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-lg p-4 border-l-4 border-orange-500">
@@ -308,7 +308,7 @@ const FortDetails = () => {
           {activeTab === 'history' && fort.history && (
             <div className="space-y-6">
               <div>
-                <h2 className="text-3xl font-bold text-gray-800 mb-4">Historical Significance</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">Historical Significance</h2>
                 <p className="text-gray-700 text-lg leading-relaxed mb-4">{fort.history.brief}</p>
                 <p className="text-gray-700 leading-relaxed">{fort.history.significance}</p>
               </div>

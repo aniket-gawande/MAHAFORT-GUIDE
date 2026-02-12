@@ -90,7 +90,7 @@ const SinhagadItinerary = () => {
 
         // Fort Overview
         doc.setTextColor(0, 0, 0);
-        addText('📍 ' + fortData.name, 16, 'bold');
+        addText('ðŸ“ ' + fortData.name, 16, 'bold');
         addText(fortData.location.district + ', Maharashtra • ' + fortData.location.nearestCity);
         addText(fortData.description, 11);
         yPos += 5;
@@ -114,7 +114,7 @@ const SinhagadItinerary = () => {
         yPos += 40;
 
         // Trek Routes
-        addText('🚶 TREKKING ROUTES', 14, 'bold', [255, 153, 51]);
+        addText('ðŸš¶ TREKKING ROUTES', 14, 'bold', [255, 153, 51]);
         
         if (fortData.trek && fortData.trek.routes) {
             fortData.trek.routes.forEach((route, index) => {
@@ -134,7 +134,7 @@ const SinhagadItinerary = () => {
 
         // Landmarks
         checkNewPage(20);
-        addText('🏰 MUST-SEE LANDMARKS', 14, 'bold', [255, 153, 51]);
+        addText('ðŸ° MUST-SEE LANDMARKS', 14, 'bold', [255, 153, 51]);
         
         if (fortData.landmarks) {
             const mustSeeLandmarks = fortData.landmarks.filter(l => l.mustSee);
@@ -153,7 +153,7 @@ const SinhagadItinerary = () => {
 
         // Food Section
         checkNewPage(20);
-        addText('🍴 MUST-TRY FOOD', 14, 'bold', [255, 153, 51]);
+        addText('ðŸ´ MUST-TRY FOOD', 14, 'bold', [255, 153, 51]);
         
         if (fortData.food && fortData.food.onFort) {
             const mustTryFood = fortData.food.onFort.filter(f => f.mustTry);
@@ -169,7 +169,7 @@ const SinhagadItinerary = () => {
 
         // Best Time to Visit
         checkNewPage(30);
-        addText('📅 BEST TIME TO VISIT', 14, 'bold', [255, 153, 51]);
+        addText('ðŸ“… BEST TIME TO VISIT', 14, 'bold', [255, 153, 51]);
         if (fortData.trek && fortData.trek.bestTime) {
             addText('Recommended: ' + fortData.trek.bestTime.join(', '), 11, 'bold', [0, 128, 0]);
         }
@@ -191,7 +191,7 @@ const SinhagadItinerary = () => {
 
         // Budget Estimate
         checkNewPage(35);
-        addText('💰 BUDGET ESTIMATE (Per Person)', 14, 'bold', [255, 153, 51]);
+        addText('ðŸ’° BUDGET ESTIMATE (Per Person)', 14, 'bold', [255, 153, 51]);
         addText('• Transport from Pune: ₹200-300');
         addText('• Food on fort: ₹150-250');
         addText('• Miscellaneous: ₹100-150');
@@ -241,7 +241,7 @@ const SinhagadItinerary = () => {
                 </div>
 
                 {/* Hero Content */}
-                <div className="container mx-auto px-6 relative z-10 pt-20">
+                <div className="container mx-auto px-4 sm:px-6 relative z-10 pt-20">
                     <div className="max-w-4xl space-y-6">
                         {/* Badge */}
                         <div className="flex items-center gap-4 animate-fade-in-up">
@@ -252,7 +252,7 @@ const SinhagadItinerary = () => {
                         </div>
 
                         {/* Title */}
-                        <h1 className="text-5xl md:text-8xl font-cinematic font-black leading-tight text-white drop-shadow-2xl animate-fade-in-up delay-100">
+                        <h1 className="text-3xl sm:text-5xl md:text-8xl font-cinematic font-black leading-tight text-white drop-shadow-2xl animate-fade-in-up delay-100">
                             SINHAGAD <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-saffron to-yellow-100">
                                 FORT
@@ -260,7 +260,7 @@ const SinhagadItinerary = () => {
                         </h1>
 
                         {/* Subtitle */}
-                        <p className="text-2xl text-saffron font-bold drop-shadow-lg animate-fade-in-up delay-150">
+                        <p className="text-lg sm:text-2xl text-saffron font-bold drop-shadow-lg animate-fade-in-up delay-150">
                             Complete Trekking Itinerary
                         </p>
                         <p className="text-lg text-gray-300 max-w-xl leading-relaxed border-l-4 border-saffron pl-6 animate-fade-in-up delay-200">
@@ -272,7 +272,7 @@ const SinhagadItinerary = () => {
                             <button
                                 onClick={handleDownloadPDF}
                                 disabled={isLoadingData}
-                                className={`bg-gradient-to-r from-saffron to-orange-600 text-white px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-2xl flex items-center gap-3 print:hidden border-2 border-saffron/50 ${
+                                className={`bg-gradient-to-r from-saffron to-orange-600 text-white px-6 py-3 sm:px-10 sm:py-4 rounded-xl font-bold text-sm sm:text-lg transition-all duration-300 shadow-2xl flex items-center gap-2 sm:gap-3 print:hidden border-2 border-saffron/50 ${
                                     isLoadingData 
                                         ? 'opacity-60 cursor-not-allowed' 
                                         : 'hover:scale-105 hover:shadow-saffron/40'
@@ -285,8 +285,9 @@ const SinhagadItinerary = () => {
                                     </>
                                 ) : (
                                     <>
-                                        <FaDownload className="text-xl" />
-                                        Download Complete Itinerary as PDF
+                                        <FaDownload className="text-lg sm:text-xl" />
+                                        <span className="hidden sm:inline">Download Complete Itinerary as PDF</span>
+                                        <span className="sm:hidden">Download PDF</span>
                                     </>
                                 )}
                             </button>
@@ -309,35 +310,35 @@ const SinhagadItinerary = () => {
                     <img src={heroBg} alt="" className="w-full h-full object-cover fixed" />
                 </div>
 
-                <div className="container mx-auto px-6 py-16 relative z-10">
+                <div className="container mx-auto px-4 sm:px-6 py-10 sm:py-16 relative z-10">
                     {/* Quick Info Cards */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-16">
-                        <div className="bg-gradient-to-br from-saffron/20 to-orange-900/30 backdrop-blur-sm rounded-2xl border border-saffron/30 p-6 text-center hover:scale-105 transition-all duration-300 hover:border-saffron/60">
-                            <MdLocationOn className="text-4xl md:text-5xl text-saffron mx-auto mb-3" />
-                            <div className="text-3xl md:text-4xl font-black text-white mb-1">30 km</div>
-                            <div className="text-gray-400 font-medium text-sm">from Pune</div>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-10 sm:mb-16">
+                        <div className="bg-gradient-to-br from-saffron/20 to-orange-900/30 backdrop-blur-sm rounded-2xl border border-saffron/30 p-4 sm:p-6 text-center hover:scale-105 transition-all duration-300 hover:border-saffron/60">
+                            <MdLocationOn className="text-3xl sm:text-4xl md:text-5xl text-saffron mx-auto mb-2 sm:mb-3" />
+                            <div className="text-xl sm:text-3xl md:text-4xl font-black text-white mb-1">30 km</div>
+                            <div className="text-gray-400 font-medium text-xs sm:text-sm">from Pune</div>
                         </div>
-                        <div className="bg-gradient-to-br from-green-900/30 to-teal-900/30 backdrop-blur-sm rounded-2xl border border-green-500/30 p-6 text-center hover:scale-105 transition-all duration-300 hover:border-green-500/60">
-                            <FaHiking className="text-4xl md:text-5xl text-green-400 mx-auto mb-3" />
-                            <div className="text-3xl md:text-4xl font-black text-white mb-1">4 km</div>
-                            <div className="text-gray-400 font-medium text-sm">Trek Distance</div>
+                        <div className="bg-gradient-to-br from-green-900/30 to-teal-900/30 backdrop-blur-sm rounded-2xl border border-green-500/30 p-4 sm:p-6 text-center hover:scale-105 transition-all duration-300 hover:border-green-500/60">
+                            <FaHiking className="text-3xl sm:text-4xl md:text-5xl text-green-400 mx-auto mb-2 sm:mb-3" />
+                            <div className="text-xl sm:text-3xl md:text-4xl font-black text-white mb-1">4 km</div>
+                            <div className="text-gray-400 font-medium text-xs sm:text-sm">Trek Distance</div>
                         </div>
-                        <div className="bg-gradient-to-br from-blue-900/30 to-indigo-900/30 backdrop-blur-sm rounded-2xl border border-blue-500/30 p-6 text-center hover:scale-105 transition-all duration-300 hover:border-blue-500/60">
-                            <FaClock className="text-4xl md:text-5xl text-blue-400 mx-auto mb-3" />
-                            <div className="text-3xl md:text-4xl font-black text-white mb-1">1.5-2 hrs</div>
-                            <div className="text-gray-400 font-medium text-sm">Trek Duration</div>
+                        <div className="bg-gradient-to-br from-blue-900/30 to-indigo-900/30 backdrop-blur-sm rounded-2xl border border-blue-500/30 p-4 sm:p-6 text-center hover:scale-105 transition-all duration-300 hover:border-blue-500/60">
+                            <FaClock className="text-3xl sm:text-4xl md:text-5xl text-blue-400 mx-auto mb-2 sm:mb-3" />
+                            <div className="text-xl sm:text-3xl md:text-4xl font-black text-white mb-1">1.5-2 hrs</div>
+                            <div className="text-gray-400 font-medium text-xs sm:text-sm">Trek Duration</div>
                         </div>
-                        <div className="bg-gradient-to-br from-yellow-900/30 to-amber-900/30 backdrop-blur-sm rounded-2xl border border-yellow-500/30 p-6 text-center hover:scale-105 transition-all duration-300 hover:border-yellow-500/60">
-                            <FaMoneyBillWave className="text-4xl md:text-5xl text-yellow-400 mx-auto mb-3" />
-                            <div className="text-3xl md:text-4xl font-black text-white mb-1">₹600-1000</div>
-                            <div className="text-gray-400 font-medium text-sm">Per Person</div>
+                        <div className="bg-gradient-to-br from-yellow-900/30 to-amber-900/30 backdrop-blur-sm rounded-2xl border border-yellow-500/30 p-4 sm:p-6 text-center hover:scale-105 transition-all duration-300 hover:border-yellow-500/60">
+                            <FaMoneyBillWave className="text-3xl sm:text-4xl md:text-5xl text-yellow-400 mx-auto mb-2 sm:mb-3" />
+                            <div className="text-xl sm:text-3xl md:text-4xl font-black text-white mb-1">₹600-1000</div>
+                            <div className="text-gray-400 font-medium text-xs sm:text-sm">Per Person</div>
                         </div>
                     </div>
 
 
                     {/* Trek Routes - Dark Theme */}
-                    <div className="bg-royal-black/80 backdrop-blur-sm rounded-2xl border border-gray-800 p-8 mb-12">
-                        <h2 className="text-3xl font-cinematic font-bold text-white mb-6 flex items-center gap-3">
+                    <div className="bg-royal-black/80 backdrop-blur-sm rounded-2xl border border-gray-800 p-4 sm:p-8 mb-12">
+                        <h2 className="text-xl sm:text-3xl font-cinematic font-bold text-white mb-6 flex items-center gap-3">
                             <FaMapMarkedAlt className="text-saffron" />
                             Trekking Routes
                         </h2>
@@ -396,8 +397,8 @@ const SinhagadItinerary = () => {
                     </div>
 
                     {/* LEAFLET MAP - GET DIRECTIONS SECTION - Dark Theme */}
-                    <div className="bg-royal-black/80 backdrop-blur-sm rounded-2xl border border-gray-800 p-8 mb-12 print:hidden">
-                        <h2 className="text-3xl font-cinematic font-bold text-white mb-6 flex items-center gap-3">
+                    <div className="bg-royal-black/80 backdrop-blur-sm rounded-2xl border border-gray-800 p-4 sm:p-8 mb-12 print:hidden">
+                        <h2 className="text-xl sm:text-3xl font-cinematic font-bold text-white mb-6 flex items-center gap-3">
                             <FaRoute className="text-saffron" />
                             Get Directions to Sinhagad Fort
                         </h2>
@@ -410,8 +411,8 @@ const SinhagadItinerary = () => {
                     </div>
 
                     {/* Detailed Timeline - Dark Theme */}
-                    <div className="bg-royal-black/80 backdrop-blur-sm rounded-2xl border border-gray-800 p-8 mb-12">
-                        <h2 className="text-3xl font-cinematic font-bold text-white mb-8 flex items-center gap-3">
+                    <div className="bg-royal-black/80 backdrop-blur-sm rounded-2xl border border-gray-800 p-4 sm:p-8 mb-12">
+                        <h2 className="text-xl sm:text-3xl font-cinematic font-bold text-white mb-8 flex items-center gap-3">
                             <FaClock className="text-saffron" />
                             One-Day Timeline
                         </h2>
@@ -420,7 +421,7 @@ const SinhagadItinerary = () => {
                         <div className="space-y-6">
                             {/* 5:30 AM */}
                             <div className="flex gap-4 md:gap-6">
-                                <div className="flex-shrink-0 w-24 md:w-32 text-right">
+                                <div className="flex-shrink-0 w-20 sm:w-24 md:w-32 text-right">
                                     <div className="bg-gradient-to-r from-saffron to-orange-600 text-white px-3 py-2 rounded-lg font-bold text-sm md:text-base">
                                         5:30 AM
                                     </div>
@@ -436,7 +437,7 @@ const SinhagadItinerary = () => {
 
                             {/* 6:30 AM */}
                             <div className="flex gap-4 md:gap-6">
-                                <div className="flex-shrink-0 w-24 md:w-32 text-right">
+                                <div className="flex-shrink-0 w-20 sm:w-24 md:w-32 text-right">
                                     <div className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-2 rounded-lg font-bold text-sm md:text-base">
                                         6:30 AM
                                     </div>
@@ -455,7 +456,7 @@ const SinhagadItinerary = () => {
 
                             {/* 8:30 AM */}
                             <div className="flex gap-4 md:gap-6">
-                                <div className="flex-shrink-0 w-24 md:w-32 text-right">
+                                <div className="flex-shrink-0 w-20 sm:w-24 md:w-32 text-right">
                                     <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-3 py-2 rounded-lg font-bold text-sm md:text-base">
                                         8:30 AM
                                     </div>
@@ -471,7 +472,7 @@ const SinhagadItinerary = () => {
 
                             {/* 9:00 AM */}
                             <div className="flex gap-4 md:gap-6">
-                                <div className="flex-shrink-0 w-24 md:w-32 text-right">
+                                <div className="flex-shrink-0 w-20 sm:w-24 md:w-32 text-right">
                                     <div className="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-3 py-2 rounded-lg font-bold text-sm md:text-base">
                                         9:00 AM
                                     </div>
@@ -491,16 +492,16 @@ const SinhagadItinerary = () => {
 
                             {/* 12:00 PM */}
                             <div className="flex gap-4 md:gap-6">
-                                <div className="flex-shrink-0 w-24 md:w-32 text-right">
+                                <div className="flex-shrink-0 w-20 sm:w-24 md:w-32 text-right">
                                     <div className="bg-gradient-to-r from-red-600 to-red-700 text-white px-3 py-2 rounded-lg font-bold text-sm md:text-base">
                                         12:00 PM
                                     </div>
                                 </div>
                                 <div className="flex-1 bg-gradient-to-br from-red-900/30 to-red-900/10 backdrop-blur-sm p-5 rounded-xl border-l-4 border-red-500">
-                                    <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                                    <h3 className="text-lg sm:text-xl font-bold text-white mb-2 flex items-center gap-2">
                                         <FaUtensils className="text-red-400" /> Lunch - Authentic Maharashtrian Food
                                     </h3>
-                                    <div className="grid grid-cols-2 gap-3 mt-3">
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
                                         <div className="bg-black/30 p-3 rounded-lg">
                                             <div className="font-bold text-saffron">Pithla Bhakri</div>
                                             <div className="text-sm text-gray-400">₹80-120 • Must-try!</div>
@@ -526,7 +527,7 @@ const SinhagadItinerary = () => {
 
                             {/* 1:30 PM */}
                             <div className="flex gap-4 md:gap-6">
-                                <div className="flex-shrink-0 w-24 md:w-32 text-right">
+                                <div className="flex-shrink-0 w-20 sm:w-24 md:w-32 text-right">
                                     <div className="bg-gradient-to-r from-yellow-600 to-yellow-700 text-white px-3 py-2 rounded-lg font-bold text-sm md:text-base">
                                         1:30 PM
                                     </div>
@@ -547,7 +548,7 @@ const SinhagadItinerary = () => {
 
                             {/* 3:00 PM */}
                             <div className="flex gap-4 md:gap-6">
-                                <div className="flex-shrink-0 w-24 md:w-32 text-right">
+                                <div className="flex-shrink-0 w-20 sm:w-24 md:w-32 text-right">
                                     <div className="bg-gradient-to-r from-saffron to-orange-600 text-white px-3 py-2 rounded-lg font-bold text-sm md:text-base">
                                         3:00 PM
                                     </div>
@@ -563,7 +564,7 @@ const SinhagadItinerary = () => {
 
                             {/* 5:00 PM */}
                             <div className="flex gap-4 md:gap-6">
-                                <div className="flex-shrink-0 w-24 md:w-32 text-right">
+                                <div className="flex-shrink-0 w-20 sm:w-24 md:w-32 text-right">
                                     <div className="bg-gradient-to-r from-gray-600 to-gray-700 text-white px-3 py-2 rounded-lg font-bold text-sm md:text-base">
                                         5:00 PM
                                     </div>
@@ -578,8 +579,8 @@ const SinhagadItinerary = () => {
 
 
                     {/* Fort Landmarks - Dark Theme */}
-                    <div className="bg-royal-black/80 backdrop-blur-sm rounded-2xl border border-gray-800 p-8 mb-12">
-                        <h2 className="text-3xl font-cinematic font-bold text-white mb-6">Key Landmarks to Visit</h2>
+                    <div className="bg-royal-black/80 backdrop-blur-sm rounded-2xl border border-gray-800 p-4 sm:p-8 mb-12">
+                        <h2 className="text-xl sm:text-3xl font-cinematic font-bold text-white mb-6">Key Landmarks to Visit</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {/* Landmark 1 */}
                             <div className="rounded-xl overflow-hidden border border-gray-700 hover:border-saffron/50 transition-all duration-300 group">
@@ -653,8 +654,8 @@ const SinhagadItinerary = () => {
                     </div>
 
                     {/* Safety Tips - Dark Theme */}
-                    <div className="bg-royal-black/80 backdrop-blur-sm rounded-2xl border border-gray-800 p-8 mb-12">
-                        <h2 className="text-3xl font-cinematic font-bold text-white mb-6 flex items-center gap-3">
+                    <div className="bg-royal-black/80 backdrop-blur-sm rounded-2xl border border-gray-800 p-4 sm:p-8 mb-12">
+                        <h2 className="text-xl sm:text-3xl font-cinematic font-bold text-white mb-6 flex items-center gap-3">
                             <FaExclamationTriangle className="text-yellow-500" />
                             Safety Tips from Visitors
                         </h2>
@@ -719,8 +720,8 @@ const SinhagadItinerary = () => {
                     </div>
 
                     {/* Best Time to Visit - Dark Theme */}
-                    <div className="bg-royal-black/80 backdrop-blur-sm rounded-2xl border border-gray-800 p-8 mb-12">
-                        <h2 className="text-3xl font-cinematic font-bold text-white mb-6">Best Time to Visit</h2>
+                    <div className="bg-royal-black/80 backdrop-blur-sm rounded-2xl border border-gray-800 p-4 sm:p-8 mb-12">
+                        <h2 className="text-xl sm:text-3xl font-cinematic font-bold text-white mb-6">Best Time to Visit</h2>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div className="bg-gradient-to-br from-green-900/40 to-green-900/20 p-6 rounded-xl border-t-4 border-green-500 hover:border-green-400 transition">
@@ -768,8 +769,8 @@ const SinhagadItinerary = () => {
                     </div>
 
                     {/* Budget Breakdown - Dark Theme */}
-                    <div className="bg-royal-black/80 backdrop-blur-sm rounded-2xl border border-gray-800 p-8 mb-12">
-                        <h2 className="text-3xl font-cinematic font-bold text-white mb-6 flex items-center gap-3">
+                    <div className="bg-royal-black/80 backdrop-blur-sm rounded-2xl border border-gray-800 p-4 sm:p-8 mb-12">
+                        <h2 className="text-xl sm:text-3xl font-cinematic font-bold text-white mb-6 flex items-center gap-3">
                             <FaMoneyBillWave className="text-green-400" />
                             Budget Breakdown
                         </h2>
