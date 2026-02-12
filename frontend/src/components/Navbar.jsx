@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { AuthContext } from '../context/AuthContext';
 import mahaLogo from '../assets/mahalogo.jpeg';
@@ -10,6 +10,7 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { user, isAuthenticated, logout } = useContext(AuthContext);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -31,7 +32,8 @@ const Navbar = () => {
   // Close mobile menu on route change
   useEffect(() => {
     setMobileMenuOpen(false);
-  }, [navigate]);
+    setDropdownOpen(false);
+  }, [location.pathname]);
 
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
@@ -72,7 +74,7 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8 font-body text-sm font-bold tracking-widest uppercase">
-          {['Home', 'About'].map((item) => (
+          {['Home', 'Forts', 'About'].map((item) => (
             <Link 
               key={item}
               to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
@@ -86,16 +88,16 @@ const Navbar = () => {
             <div className="relative user-dropdown">
               <button
                 onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="flex items-center gap-2 px-4 py-2 border border-saffron/50 rounded-full hover:border-saffron transition-all group"
+                className="flex items-center gap-2 px-4 py-2 border border-saffron/50 rounded-full hover:border-saffron hover:shadow-[0_0_15px_rgba(255,153,51,0.3)] transition-all group"
               >
                 {user?.avatar ? (
-                  <img src={user.avatar} alt={user.username} className="h-7 w-7 rounded-full border border-saffron/50 object-cover" />
+                  <img src={user.avatar} alt={user.username} className="h-8 w-8 rounded-full border-2 border-saffron/70 object-cover shadow-[0_0_10px_rgba(255,153,51,0.3)]" />
                 ) : (
-                  <div className="h-7 w-7 rounded-full bg-saffron/20 border border-saffron/50 flex items-center justify-center text-saffron text-xs font-bold">
+                  <div className="h-8 w-8 rounded-full bg-gradient-to-br from-saffron/30 to-orange-600/30 border-2 border-saffron/50 flex items-center justify-center text-saffron text-sm font-bold">
                     {user?.username?.charAt(0).toUpperCase() || 'W'}
                   </div>
                 )}
-                <span className="text-white group-hover:text-saffron transition-colors text-xs tracking-wider">
+                <span className="text-white group-hover:text-saffron transition-colors text-xs tracking-wider font-bold">
                   {user?.username?.toUpperCase() || 'WARRIOR'}
                 </span>
                 <svg className={`w-3 h-3 text-saffron transition-transform ${dropdownOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -104,13 +106,23 @@ const Navbar = () => {
               </button>
 
               {dropdownOpen && (
-                <div className="absolute right-0 top-full mt-2 w-56 bg-royal-black/95 backdrop-blur-xl border border-saffron/20 rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.5)] py-2 overflow-hidden">
-                  <div className="px-4 py-3 border-b border-white/10">
-                    <p className="text-saffron font-bold text-sm">{user?.username}</p>
-                    <p className="text-gray-500 text-xs truncate">{user?.email}</p>
-                    <span className="inline-block mt-1 px-2 py-0.5 bg-saffron/10 border border-saffron/30 rounded-full text-[10px] text-saffron uppercase tracking-wider">
-                      {user?.role || 'warrior'}
-                    </span>
+                <div className="absolute right-0 top-full mt-2 w-64 bg-royal-black/95 backdrop-blur-xl border border-saffron/20 rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.5)] py-2 overflow-hidden">
+                  {/* Profile Header */}
+                  <div className="px-4 py-4 border-b border-white/10 flex items-center gap-3">
+                    {user?.avatar ? (
+                      <img src={user.avatar} alt={user.username} className="h-12 w-12 rounded-full border-2 border-saffron object-cover shadow-[0_0_15px_rgba(255,153,51,0.3)]" />
+                    ) : (
+                      <div className="h-12 w-12 rounded-full bg-gradient-to-br from-saffron/30 to-orange-600/30 border-2 border-saffron flex items-center justify-center text-saffron text-lg font-bold">
+                        {user?.username?.charAt(0).toUpperCase() || 'W'}
+                      </div>
+                    )}
+                    <div className="flex-1 min-w-0">
+                      <p className="text-saffron font-bold text-sm truncate">{user?.username}</p>
+                      <p className="text-gray-500 text-xs truncate">{user?.email}</p>
+                      <span className="inline-block mt-1 px-2 py-0.5 bg-saffron/10 border border-saffron/30 rounded-full text-[10px] text-saffron uppercase tracking-wider">
+                        ⚔️ {user?.role || 'warrior'}
+                      </span>
+                    </div>
                   </div>
                   <div className="py-1">
                     {user?.role === 'admin' && (
@@ -126,8 +138,9 @@ const Navbar = () => {
               )}
             </div>
           ) : (
-            <Link to="/login" className="px-6 py-2 border border-saffron text-saffron rounded-full hover:bg-saffron hover:text-black transition-all shadow-[0_0_10px_rgba(255,153,51,0.2)]">
-              JOIN FORCE
+            <Link to="/login" className="group relative px-7 py-2.5 border-2 border-saffron text-saffron rounded-full hover:bg-saffron hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(255,153,51,0.2)] hover:shadow-[0_0_25px_rgba(255,153,51,0.5)] font-cinematic font-bold tracking-widest text-sm flex items-center gap-2">
+              <span className="text-base">⚔️</span> JOIN FORCE
+              <span className="absolute inset-0 rounded-full bg-saffron/10 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             </Link>
           )}
         </div>
@@ -154,7 +167,7 @@ const Navbar = () => {
         <div className={`absolute right-0 top-0 h-full w-72 bg-royal-black/95 backdrop-blur-xl border-l border-saffron/20 transform transition-transform duration-300 ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
           <div className="pt-20 px-6 space-y-6">
             {/* Nav Links */}
-            {['Home', 'About'].map((item) => (
+            {['Home', 'Forts', 'About'].map((item) => (
               <Link
                 key={item}
                 to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
@@ -169,15 +182,18 @@ const Navbar = () => {
               <div className="space-y-4 pt-4 border-t border-saffron/20">
                 <div className="flex items-center gap-3">
                   {user?.avatar ? (
-                    <img src={user.avatar} alt={user.username} className="h-10 w-10 rounded-full border-2 border-saffron object-cover" />
+                    <img src={user.avatar} alt={user.username} className="h-12 w-12 rounded-full border-2 border-saffron object-cover shadow-[0_0_10px_rgba(255,153,51,0.3)]" />
                   ) : (
-                    <div className="h-10 w-10 rounded-full bg-saffron/20 border-2 border-saffron flex items-center justify-center text-saffron font-bold">
+                    <div className="h-12 w-12 rounded-full bg-gradient-to-br from-saffron/30 to-orange-600/30 border-2 border-saffron flex items-center justify-center text-saffron font-bold text-lg">
                       {user?.username?.charAt(0).toUpperCase() || 'W'}
                     </div>
                   )}
                   <div>
                     <p className="text-saffron font-bold text-sm">{user?.username}</p>
-                    <p className="text-gray-500 text-xs">{user?.role || 'warrior'}</p>
+                    <p className="text-gray-500 text-xs truncate">{user?.email}</p>
+                    <span className="inline-block mt-1 px-2 py-0.5 bg-saffron/10 border border-saffron/30 rounded-full text-[10px] text-saffron uppercase tracking-wider">
+                      ⚔️ {user?.role || 'warrior'}
+                    </span>
                   </div>
                 </div>
                 {user?.role === 'admin' && (
@@ -191,11 +207,11 @@ const Navbar = () => {
               </div>
             ) : (
               <div className="pt-4 space-y-3">
-                <Link to="/login" onClick={() => setMobileMenuOpen(false)} className="block w-full py-3 text-center border border-saffron text-saffron rounded-lg hover:bg-saffron hover:text-black transition-all font-bold">
-                  JOIN FORCE
+                <Link to="/login" onClick={() => setMobileMenuOpen(false)} className="flex items-center justify-center gap-2 w-full py-3 border-2 border-saffron text-saffron rounded-lg hover:bg-saffron hover:text-black transition-all font-cinematic font-bold tracking-widest shadow-[0_0_10px_rgba(255,153,51,0.2)]">
+                  <span>⚔️</span> JOIN FORCE
                 </Link>
-                <Link to="/register" onClick={() => setMobileMenuOpen(false)} className="block w-full py-3 text-center bg-saffron text-black rounded-lg hover:bg-orange-400 transition-all font-bold">
-                  ENLIST NOW
+                <Link to="/register" onClick={() => setMobileMenuOpen(false)} className="block w-full py-3 text-center bg-gradient-to-r from-saffron to-orange-600 text-white rounded-lg hover:from-orange-600 hover:to-saffron transition-all font-cinematic font-bold tracking-widest shadow-[0_0_10px_rgba(255,153,51,0.3)]">
+                  🛡️ ENLIST NOW
                 </Link>
               </div>
             )}

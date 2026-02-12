@@ -27,7 +27,31 @@ const Home = () => {
     try {
       const response = await getAllForts();
       const fortsData = Array.isArray(response.data) ? response.data : [];
-      setForts(fortsData.length > 0 ? fortsData : staticForts);
+      
+      if (fortsData.length > 0) {
+        // Build a name-based lookup from static forts for image overrides
+        const staticByName = {};
+        staticForts.forEach(sf => {
+          staticByName[sf.name.toLowerCase()] = sf;
+        });
+
+        // Merge API forts with static fort images where API images are broken paths
+        const mergedForts = fortsData.map(fort => {
+          const staticMatch = staticByName[fort.name?.toLowerCase()];
+          if (staticMatch && staticMatch.images && staticMatch.images.length > 0) {
+            // Use static fort images (webpack imports) over API string paths
+            return { ...fort, images: staticMatch.images };
+          }
+          return fort;
+        });
+
+        // Also add any static forts not present in API (by name)
+        const apiNames = new Set(mergedForts.map(f => f.name?.toLowerCase()));
+        const missingForts = staticForts.filter(sf => !apiNames.has(sf.name?.toLowerCase()));
+        setForts([...mergedForts, ...missingForts]);
+      } else {
+        setForts(staticForts);
+      }
     } catch (error) {
       console.error('Error fetching forts:', error);
       setForts(staticForts);

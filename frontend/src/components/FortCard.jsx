@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import CrowdStatusBadge from './CrowdStatusBadge';
-import { FaMapMarkerAlt, FaHiking } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaHiking, FaLock } from 'react-icons/fa';
+import { AuthContext } from '../context/AuthContext';
 
 const FortCard = ({ fort }) => {
   const defaultImage = 'https://images.unsplash.com/photo-1587474260584-136574528ed5?w=500';
+  const { isAuthenticated } = useContext(AuthContext);
 
   return (
     <div className="group relative h-[450px] w-full overflow-hidden rounded-2xl bg-royal-gray border border-white/5 hover:border-saffron/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(255,153,51,0.15)]">
@@ -47,19 +49,33 @@ const FortCard = ({ fort }) => {
           <span>{fort.history?.builtBy || 'Maratha Empire'}</span>
         </div>
 
-        <Link
-          to={
-            (fort.name === "Sinhagad Fort" || fort._id === "sinhagad")
-              ? "/sinhagad-itinerary"
-              : (fort.name === "Murud-Janjira Fort" || fort._id === "janjira")
-                ? "/fort/murud-janjira"
-                : `/fort/${fort._id}`
-          }
-          onClick={() => window.scrollTo(0, 0)}
-          className="block w-full py-3 text-center rounded-lg bg-white/5 border border-white/10 text-white font-bold text-sm uppercase tracking-widest hover:bg-saffron hover:text-black hover:border-saffron transition-all"
-        >
-          Explore Details
-        </Link>
+        {isAuthenticated ? (
+          <Link
+            to={
+              (fort.name === "Sinhagad Fort" || fort._id === "sinhagad")
+                ? "/sinhagad-itinerary"
+                : (fort.name === "Murud-Janjira Fort" || fort._id === "janjira")
+                  ? "/fort/murud-janjira"
+                  : (fort.name === "Vishalgad Fort" || fort._id === "vishalgad")
+                    ? "/fort/vishalgad"
+                    : (fort.name === "Sindhudurg Fort" || fort._id === "sindhudurg")
+                      ? "/fort/sindhudurg"
+                      : `/fort/${fort._id}`
+            }
+            onClick={() => window.scrollTo(0, 0)}
+            className="block w-full py-3 text-center rounded-lg bg-white/5 border border-white/10 text-white font-bold text-sm uppercase tracking-widest hover:bg-saffron hover:text-black hover:border-saffron transition-all"
+          >
+            Explore Details
+          </Link>
+        ) : (
+          <Link
+            to="/login"
+            onClick={() => window.scrollTo(0, 0)}
+            className="flex items-center justify-center gap-2 w-full py-3 text-center rounded-lg bg-saffron/10 border border-saffron/30 text-saffron font-bold text-sm uppercase tracking-widest hover:bg-saffron hover:text-black hover:border-saffron transition-all"
+          >
+            <FaLock className="text-xs" /> Login to Explore
+          </Link>
+        )}
       </div>
     </div>
   );

@@ -1,0 +1,48 @@
+{
+    "name": "Sindhudurg Fort",
+    "location": {
+        "district": "Sindhudurg",
+        "taluka": "Malvan",
+        "baseVillage": "Malvan",
+        "coordinates": { "lat": 16.0369, "lng": 73.4657 },
+        "nearestCity": "Malvan (2 km)"
+    },
+    "googleMaps": {
+        "placeId": "ChIJf1K8q7O8wjsR8mKZJ0Q9K2E",
+        "rating": 4.7,
+        "totalReviews": 18000
+    },
+    "description": "Sindhudurg Fort is a massive sea fortress built by Chhatrapati Shivaji Maharaj between 1664 and 1667 AD on an island off the Malvan coast. Known for its hidden entrance, strong ramparts, and the only temple dedicated to Shivaji Maharaj.",
+    "trek": {
+        "routes": [{
+            "name": "Boat from Malvan Jetty",
+            "startPoint": "Malvan Jetty",
+            "distance": "1.5 km (boat ride)",
+            "duration": "10-15 minutes",
+            "difficulty": "Easy",
+            "elevation": "Sea level"
+        }],
+        "bestTime": ["Winter (October-February)", "Post-monsoon (September-October)"]
+    },
+    "landmarks": [
+        { "name": "Hidden Main Entrance", "type": "Gate", "mustSee": true },
+        { "name": "Shivaji Maharaj Temple", "type": "Temple", "mustSee": true },
+        { "name": "Fort Walls and Bastions", "type": "Fortification", "mustSee": true },
+        { "name": "Cannons and Watchtowers", "type": "Artillery", "mustSee": true },
+        { "name": "Freshwater Wells", "type": "Water Source", "mustSee": false }
+    ],
+    "visitInfo": {
+        "entryFee": { "indian": 0, "foreigner": 0, "note": "No entry fee, only boat charges" },
+        "timings": "8:00 AM - 6:00 PM",
+        "timeRequired": "2-3 hours",
+        "bestTimeOfDay": "Morning or evening"
+    },
+    "history": {
+        "brief": "Built between 1664-1667 AD by Chhatrapati Shivaji Maharaj to establish Maratha naval power and counter foreign invasions along the Konkan coast.",
+        "significance": "Birthplace of Indian naval power. Houses the only temple of Shivaji Maharaj.",
+        "famousBattles": ["Naval defense against Portuguese, Dutch, and British forces", "Strategic resistance against Siddis of Janjira"],
+        "rulers": ["Chhatrapati Shivaji Maharaj", "Maratha Empire", "British administration"]
+    },
+    "featured": true,
+    "crowdStatus": "Moderate"
+}

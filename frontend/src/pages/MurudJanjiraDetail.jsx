@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
+import JanjiraMap from '../components/JanjiraMap';
 import { FaClock, FaRupeeSign, FaCalendarAlt, FaMapMarkerAlt, FaHistory, FaMonument, FaShip } from 'react-icons/fa';
 import janjiraImage from '../assets/janjira.jpg';
 
 const MurudJanjiraDetail = () => {
+    const [showMap, setShowMap] = useState(false);
     return (
         <div className="min-h-screen bg-royal-black text-gray-300 font-body">
             <Navbar />
@@ -154,14 +156,24 @@ const MurudJanjiraDetail = () => {
                                     />
                                 </ul>
 
-                                <button className="w-full mt-8 py-4 bg-saffron text-royal-black font-bold rounded-xl hover:bg-white transition-all duration-300 shadow-lg shadow-saffron/20">
-                                    GET DIRECTIONS
+                                <button 
+                                    onClick={() => setShowMap(!showMap)}
+                                    className="w-full mt-8 py-4 bg-saffron text-royal-black font-bold rounded-xl hover:bg-white transition-all duration-300 shadow-lg shadow-saffron/20"
+                                >
+                                    {showMap ? 'HIDE MAP' : 'GET DIRECTIONS'}
                                 </button>
                             </div>
                         </div>
                     </div>
 
                 </div>
+
+                {/* Map Section - toggles on GET DIRECTIONS click */}
+                {showMap && (
+                    <div className="mt-12">
+                        <JanjiraMap />
+                    </div>
+                )}
             </div>
         </div>
     );

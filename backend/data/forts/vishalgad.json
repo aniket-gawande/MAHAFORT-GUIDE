@@ -1,0 +1,74 @@
+{
+    "name": "Vishalgad Fort",
+    "location": {
+        "district": "Kolhapur",
+        "taluka": "Shahuwadi",
+        "baseVillage": "Gajapur",
+        "coordinates": {
+            "lat": 16.9583,
+            "lng": 73.7486
+        },
+        "nearestCity": "Kolhapur (76 km)"
+    },
+    "googleMaps": {
+        "placeId": "ChIJm4Zq3Z1UwjsR0p3D8V7XQfE",
+        "rating": 4.5,
+        "totalReviews": 9500,
+        "url": "https://maps.google.com/?cid=112233445566778899"
+    },
+    "description": "Vishalgad Fort, also known as Khelna Fort, is a historic hill fort located in the Kolhapur district of Maharashtra. The fort is famously associated with Chhatrapati Shivaji Maharaj and the heroic Battle of Pavan Khind. Strategically positioned in the Western Ghats, Vishalgad played a crucial role as a refuge fort during Maratha campaigns.",
+    "trek": {
+        "routes": [
+            {
+                "name": "Road Access from Gajapur",
+                "startPoint": "Gajapur Village",
+                "distance": "1 km (motorable road)",
+                "duration": "10-15 minutes",
+                "difficulty": "Easy",
+                "elevation": "900 meters above sea level",
+                "description": "Vishalgad is accessible by a motorable road up to the fort entrance, followed by a short walk."
+            }
+        ],
+        "bestTime": [
+            "Monsoon (July-September) - Lush greenery and waterfalls",
+            "Winter (October-February) - Pleasant climate"
+        ]
+    },
+    "landmarks": [
+        {
+            "name": "Teen Darwaza",
+            "type": "Gate",
+            "description": "The main entrance gate of Vishalgad Fort.",
+            "historicalSignificance": "Primary access point used during Maratha rule",
+            "mustSee": true
+        },
+        {
+            "name": "Amruteshwar Temple",
+            "type": "Temple",
+            "description": "Ancient Shiva temple located inside the fort.",
+            "historicalSignificance": "Important religious center for fort inhabitants",
+            "mustSee": true
+        },
+        {
+            "name": "Viewpoint over Pavan Khind",
+            "type": "Viewpoint",
+            "description": "Scenic viewpoint overlooking the historic Pavan Khind pass.",
+            "historicalSignificance": "Associated with Baji Prabhu Deshpande's sacrifice",
+            "mustSee": true
+        }
+    ],
+    "visitInfo": {
+        "entryFee": { "indian": 0, "foreigner": 0 },
+        "timings": "6:00 AM - 6:00 PM",
+        "timeRequired": "2-3 hours",
+        "bestTimeOfDay": "Morning or evening"
+    },
+    "history": {
+        "brief": "Vishalgad Fort, historically known as Khelna Fort, occupies a special place in Maratha history. It achieved immortal fame during the Battle of Pavan Khind (1660), when Baji Prabhu Deshpande made his legendary last stand to ensure Shivaji Maharaj's safe passage.",
+        "significance": "One of the most powerful symbols of bravery, loyalty, and self-sacrifice in Indian history.",
+        "famousBattles": ["Battle of Pavan Khind (1660)"],
+        "rulers": ["Maratha Empire", "Chhatrapati Shivaji Maharaj"]
+    },
+    "featured": true,
+    "crowdStatus": "Moderate"
+}

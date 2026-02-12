@@ -1,5 +1,47 @@
+import janjiraImg from '../assets/janjira.jpg';
+
 // Comprehensive database of 40+ Maharashtra forts
 export const staticForts = [
+    // 0. Sindhudurg Fort - Ocean Fortress of Shivaji Maharaj
+    {
+        _id: 'sindhudurg',
+        name: 'Sindhudurg Fort',
+        location: { district: 'Sindhudurg' },
+        difficulty: 'Easy',
+        description: 'Massive sea fortress built by Chhatrapati Shivaji Maharaj (1664-1667) on an island off Malvan coast. Houses the only temple dedicated to Shivaji Maharaj.',
+        images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Sindhudurg_Fort_from_sea.jpg/1280px-Sindhudurg_Fort_from_sea.jpg'],
+        rating: 4.7,
+        visitors: 18000,
+        crowdStatus: 'moderate',
+        bestTimeToVisit: 'October to February',
+        entryFee: 'Free (Boat: ₹50-80)',
+        timings: '8:00 AM - 6:00 PM',
+        altitude: 'Sea level',
+        historicalSignificance: 'Maratha Naval Headquarters, built personally by Shivaji Maharaj',
+        trek: { routes: [{ difficulty: 'Easy' }] },
+        history: { builtBy: 'Chhatrapati Shivaji Maharaj' }
+    },
+
+    // 0b. Vishalgad Fort - Battle of Pavan Khind
+    {
+        _id: 'vishalgad',
+        name: 'Vishalgad Fort',
+        location: { district: 'Kolhapur' },
+        difficulty: 'Easy',
+        description: 'Legendary fort associated with Chhatrapati Shivaji Maharaj\'s escape and the heroic Battle of Pavan Khind (1660). Baji Prabhu Deshpande sacrificed his life here.',
+        images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vishalgad_Fort_Entrance.jpg/1280px-Vishalgad_Fort_Entrance.jpg'],
+        rating: 4.5,
+        visitors: 9500,
+        crowdStatus: 'moderate',
+        bestTimeToVisit: 'October to February',
+        entryFee: 'Free',
+        timings: '6:00 AM - 6:00 PM',
+        altitude: '900 m',
+        historicalSignificance: 'Battle of Pavan Khind (1660), Shivaji Maharaj\'s refuge fort',
+        trek: { routes: [{ difficulty: 'Easy' }] },
+        history: { builtBy: 'Maratha Empire' }
+    },
+
     // 1. Sinhagad Fort - Complete with itinerary
     {
         _id: 'sinhagad',
@@ -306,7 +348,7 @@ export const staticForts = [
         location: { district: 'Raigad' },
         difficulty: 'Easy',
         description: 'Unconquered sea fortress accessible only by boat. Built by Siddis in 1567 AD, never captured by Marathas, Mughals, Portuguese, or British. Features 26 bastions, giant cannons, and freshwater lakes.',
-        images: ['/assets/janjira.jpg'],
+        images: [janjiraImg],
         rating: 4.8,
         visitors: 8000,
         crowdStatus: 'moderate',
