@@ -132,22 +132,44 @@ export const staticForts = [
         historicalSignificance: 'First fort captured by Shivaji Maharaj (1646)'
     },
 
-    // 6. Lohagad Fort
+    // 6. Lohagad Fort - Iron Fort of Sahyadri
     {
         _id: 'lohagad',
         name: 'Lohagad Fort',
         location: { district: 'Pune' },
         difficulty: 'Easy',
-        description: 'Iron fort with scenic monsoon views. Connected to Visapur Fort. Popular trekking destination.',
-        images: ['https://images.unsplash.com/photo-1609920658906-8223bd289001?w=800'],
-        rating: 4.5,
-        visitors: 18000,
+        description: 'Famous hill fort in the Sahyadri range near Malavli. Known for its easy trek, massive fortifications, and the iconic Vinchu Kata. Captured by Shivaji Maharaj in 1648.',
+        images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Lohagad_Fort_Pune.jpg/1280px-Lohagad_Fort_Pune.jpg'],
+        rating: 4.6,
+        visitors: 23000,
         crowdStatus: 'high',
-        bestTimeToVisit: 'June to September (Monsoon)',
+        bestTimeToVisit: 'June to September (Monsoon) & October to February',
         entryFee: 'Free',
         timings: '6:00 AM - 6:00 PM',
         altitude: '1033 m',
-        historicalSignificance: 'Treasury of Maratha Empire, Monsoon retreat'
+        historicalSignificance: 'Captured by Shivaji Maharaj (1648), Peshwa Treasury Fort',
+        trek: { routes: [{ difficulty: 'Easy' }] },
+        history: { builtBy: 'Maratha Empire' }
+    },
+
+    // 6b. Tung Fort - Sentinel of Pawna Lake
+    {
+        _id: 'tung',
+        name: 'Tung Fort',
+        location: { district: 'Pune' },
+        difficulty: 'Moderate',
+        description: 'Small but strategic watch fort near Pawna Lake (Kathingad). Offers panoramic views of Tikona, Lohagad, and Visapur forts. Steep rock-cut steps lead to the summit.',
+        images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Tung_Fort_Pune.jpg/1280px-Tung_Fort_Pune.jpg'],
+        rating: 4.4,
+        visitors: 3200,
+        crowdStatus: 'moderate',
+        bestTimeToVisit: 'October to February',
+        entryFee: 'Free',
+        timings: '6:00 AM - 6:00 PM',
+        altitude: '1075 m',
+        historicalSignificance: 'Maratha watch fort, Adil Shahi origins, Pawna-Maval surveillance',
+        trek: { routes: [{ difficulty: 'Moderate' }] },
+        history: { builtBy: 'Adil Shahi dynasty / Maratha Empire' }
     },
 
     // 7. Visapur Fort
