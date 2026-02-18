@@ -60,7 +60,11 @@ const FortCard = ({ fort }) => {
                     ? "/fort/vishalgad"
                     : (fort.name === "Sindhudurg Fort" || fort._id === "sindhudurg")
                       ? "/fort/sindhudurg"
-                      : `/fort/${fort._id}`
+                      : (fort.name === "Lohagad Fort" || fort._id === "lohagad")
+                        ? "/fort/lohagad"
+                        : (fort.name === "Tung Fort" || fort._id === "tung")
+                          ? "/fort/tung"
+                          : `/fort/${fort._id}`
             }
             onClick={() => window.scrollTo(0, 0)}
             className="block w-full py-3 text-center rounded-lg bg-white/5 border border-white/10 text-white font-bold text-sm uppercase tracking-widest hover:bg-saffron hover:text-black hover:border-saffron transition-all"

@@ -1,0 +1,81 @@
+{
+    "name": "Lohagad Fort",
+    "location": {
+      "district": "Pune",
+      "taluka": "Maval",
+      "baseVillage": "Malavli",
+      "coordinates": {
+        "lat": 18.7100,
+        "lng": 73.4880
+      },
+      "nearestCity": "Lonavala (≈11 km)"
+    },
+    "googleMaps": {
+      "placeId": "",
+      "rating": 4.6,
+      "totalReviews": 23000,
+      "url": "https://maps.app.goo.gl/5T4uiFvUgk4y3VE8A"
+    },
+    "description": "Lohagad Fort is a well-known hill fort in the Sahyadri range near Malavli (Maval region) of Pune district, Maharashtra. It is famous for its easy trek, massive fortifications and the unique fortified spur called Vinchu Kata. Lohagad was captured by Chhatrapati Shivaji Maharaj in 1648 and later used as a strategic and administrative fort during the Maratha period.",
+    "trek": {
+      "routes": [
+        {
+          "name": "Trail from Malavli Village / Station side",
+          "startPoint": "Malavli Village",
+          "distance": "≈4 km one way",
+          "duration": "1.5–2 hours ascent",
+          "difficulty": "Easy",
+          "elevation": "1,033 meters above sea level",
+          "description": "The most commonly used route starts from Malavli village near Malavli railway station. The trail is wide and well-marked, passing through Lohagadwadi and reaching the main entrance gates. The route is suitable for beginners and family groups."
+        }
+      ],
+      "bestTime": [
+        "Monsoon (June–September) – green surroundings and misty views",
+        "Post-monsoon & Winter (October–February) – clear weather and safer trails"
+      ]
+    },
+    "landmarks": [
+      {
+        "name": "Vinchu Kata",
+        "type": "Fortified spur",
+        "description": "A long and narrow fortified extension of the fort resembling a scorpion's tail.",
+        "historicalSignificance": "Used as a defensive extension and watch point over the surrounding valleys and trade routes.",
+        "mustSee": true
+      },
+      {
+        "name": "Narayan Darwaja",
+        "type": "Gate",
+        "description": "One of the main and well-preserved entrance gates of Lohagad Fort.",
+        "historicalSignificance": "Important access point used during Maratha administration and military movement.",
+        "mustSee": true
+      },
+      {
+        "name": "Ganesh Darwaja",
+        "type": "Gate",
+        "description": "A prominent fortified gate located on the main approach to the fort.",
+        "historicalSignificance": "Part of the layered gate defense system typical of Maratha forts.",
+        "mustSee": true
+      },
+      {
+        "name": "Lohagadwadi",
+        "type": "Settlement",
+        "description": "Small village located on the fort plateau with basic facilities for trekkers.",
+        "historicalSignificance": "Supported the fort population and served as a base settlement during Maratha times.",
+        "mustSee": true
+      }
+    ],
+    "visitInfo": {
+      "entryFee": { "indian": 0, "foreigner": 0 },
+      "timings": "Open throughout the day; trekking is recommended between 6:00 AM and 6:00 PM.",
+      "timeRequired": "2–3 hours",
+      "bestTimeOfDay": "Early morning or late afternoon"
+    },
+    "history": {
+      "brief": "Lohagad Fort was captured by Chhatrapati Shivaji Maharaj in 1648 and became one of his important early strongholds in the Maval region. The fort later came under Mughal control and was finally taken back by the Marathas during the later campaigns. During the Peshwa period, Lohagad was also used for keeping treasury and administrative material.",
+      "significance": "A strategically important and easily accessible fort that represents the early expansion of Maratha power in the Pune and Konkan corridor.",
+      "famousBattles": ["Capture of Lohagad by Chhatrapati Shivaji Maharaj (1648)"],
+      "rulers": ["Maratha Empire", "Mughal Empire", "Peshwa administration"]
+    },
+    "featured": true,
+    "crowdStatus": "High"
+  }

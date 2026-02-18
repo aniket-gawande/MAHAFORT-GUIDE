@@ -14,6 +14,8 @@ const SinhagadItinerary = lazy(() => import('./pages/SinhagadItinerary'));
 const MurudJanjiraDetail = lazy(() => import('./pages/MurudJanjiraDetail'));
 const VishalgadDetail = lazy(() => import('./pages/VishalgadDetail'));
 const SindhudurgDetail = lazy(() => import('./pages/SindhudurgDetail'));
+const LohagadDetail = lazy(() => import('./pages/LohagadDetail'));
+const TungDetail = lazy(() => import('./pages/TungDetail'));
 const Admin = lazy(() => import('./pages/Admin'));
 const TripPlanner = lazy(() => import('./pages/TripPlanner'));
 const Forts = lazy(() => import('./pages/Forts'));
@@ -70,6 +72,12 @@ function AppRoutes() {
         } />
         <Route path="/fort/sindhudurg" element={
           <ProtectedRoute><SindhudurgDetail /></ProtectedRoute>
+        } />
+        <Route path="/fort/lohagad" element={
+          <ProtectedRoute><LohagadDetail /></ProtectedRoute>
+        } />
+        <Route path="/fort/tung" element={
+          <ProtectedRoute><TungDetail /></ProtectedRoute>
         } />
 
         {/* Admin - Protected */}

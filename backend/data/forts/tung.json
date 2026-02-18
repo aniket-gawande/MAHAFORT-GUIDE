@@ -1,0 +1,84 @@
+{
+    "name": "Tung Fort",
+    "location": {
+      "district": "Pune",
+      "taluka": "Maval",
+      "baseVillage": "Tungwadi",
+      "coordinates": {
+        "lat": 18.6929,
+        "lng": 73.4743
+      },
+      "nearestCity": "Lonavala (≈12 km)"
+    },
+    "googleMaps": {
+      "placeId": "",
+      "rating": 4.4,
+      "totalReviews": 3200,
+      "url": "https://maps.app.goo.gl/Kb93fpZiegFu5Wqm6"
+    },
+    "description": "Tung Fort, also known as Kathingad, is a small but strategically significant hill fort located near Pawna Lake in the Maval region of Pune district, Maharashtra. The fort stands on a narrow and steep hill overlooking the Pawna–Maval region and was mainly used as a watch and control fort. Surrounded by water on three sides after the construction of the Pawna Dam, Tung Fort offers commanding views of nearby forts such as Tikona, Lohagad and Visapur.",
+    "trek": {
+      "routes": [
+        {
+          "name": "Trail from Tungwadi Village",
+          "startPoint": "Tungwadi Village",
+          "distance": "≈2.5 km one way",
+          "duration": "1.5–2 hours ascent",
+          "difficulty": "Moderate",
+          "elevation": "1,075 meters above sea level",
+          "description": "The standard approach begins from Tungwadi village near Pawna Lake. The route is short but steep and involves climbing rock-cut steps and narrow paths close to the summit. The final section is exposed and requires careful footing, especially during monsoon season."
+        }
+      ],
+      "bestTime": [
+        "Post-monsoon & Winter (October–February) – clear visibility and safer trail",
+        "Monsoon (June–September) – scenic surroundings but slippery steps"
+      ]
+    },
+    "landmarks": [
+      {
+        "name": "Hanuman Temple",
+        "type": "Temple",
+        "description": "Small temple dedicated to Lord Hanuman located near the summit of the fort.",
+        "historicalSignificance": "Used by soldiers and visitors as a place of worship while stationed on the fort.",
+        "mustSee": true
+      },
+      {
+        "name": "Rock-cut Steps",
+        "type": "Access path",
+        "description": "Steep rock-cut staircase leading to the upper fort area.",
+        "historicalSignificance": "The only controlled access route to the fort, designed to slow down attackers.",
+        "mustSee": true
+      },
+      {
+        "name": "Water Cisterns",
+        "type": "Water storage",
+        "description": "Rock-cut water tanks located on the fort plateau.",
+        "historicalSignificance": "Provided essential water supply for the small garrison stationed on the fort.",
+        "mustSee": true
+      },
+      {
+        "name": "Fortification Walls",
+        "type": "Fortification",
+        "description": "Remains of defensive stone walls along the narrow ridge of the fort.",
+        "historicalSignificance": "Protected the summit and secured the only approach to the fort.",
+        "mustSee": true
+      }
+    ],
+    "visitInfo": {
+      "entryFee": { "indian": 0, "foreigner": 0 },
+      "timings": "Open throughout the day; trekking is recommended between 6:00 AM and 6:00 PM.",
+      "timeRequired": "2–3 hours",
+      "bestTimeOfDay": "Early morning for clear views of Pawna Lake and surrounding forts"
+    },
+    "history": {
+      "brief": "Tung Fort, historically known as Kathingad, was originally constructed during the period of the Adil Shahi dynasty of Bijapur. Because of its narrow summit and steep natural defenses, the fort was not designed as a large residential or administrative center but as a strategically placed watch fort. During the expansion of Maratha power in the Maval region, Tung Fort came under the control of Chhatrapati Shivaji Maharaj in the mid-17th century. The fort was mainly used for surveillance and protection of the important trade and movement routes passing through the Pawna and Maval valleys. Its elevated position enabled effective monitoring of surrounding forts and troop movement in the region.",
+      "significance": "Tung Fort is important as a military observation post rather than a major battlefield fort. It formed part of the Maratha defensive network in the Maval region and supported nearby strategic forts such as Lohagad, Visapur and Tikona by providing early warning and regional control.",
+      "famousBattles": [],
+      "rulers": [
+        "Adil Shahi dynasty of Bijapur",
+        "Maratha Empire"
+      ]
+    },
+    "featured": true,
+    "crowdStatus": "Moderate"
+  }
