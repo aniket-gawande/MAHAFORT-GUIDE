@@ -13,7 +13,8 @@ import {
 import heroBg from '../assets/hero-fort.jpg';
 import shivajiImg from '../assets/shivaji.jpg';
 import chart1 from '../assets/Aniket.png';
-import chart2 from '../assets/Athrav.png'
+import chart2 from '../assets/Athrav.png';
+import chart3 from "D:/MAHAFORT-GUIDE/frontend/src/assets/Nishtha.png";
 const About = () => {
   const teamMembers = [
     {
@@ -40,9 +41,9 @@ const About = () => {
     {
       name: "Nishtha Parve",
       role: "Content Strategist & Researcher",
-      image: "https://randomuser.me/api/portraits/women/44.jpg",
-      linkedin: "#",
-      github: "#"
+      image: chart3,
+      linkedin: "https://www.linkedin.com/in/nishtha-parve-0a9a0632a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      github: "https://github.com/Nishthaparve"
     },
   ];
 
