@@ -1,6 +1,5 @@
 const express = require('express');
 const cors = require('cors');
-const mongoose = require('mongoose');
 require('dotenv').config();
 
 const app = express();
@@ -9,44 +8,45 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// MongoDB Connection (optional - falls back to file-based storage)
-const MONGODB_URI = process.env.MONGODB_URI;
-mongoose.set('strictQuery', false);
-
 // Track MongoDB connection state globally
 global.mongoConnected = false;
-let mongoReady = null; // Promise that resolves when connection attempt finishes
+
+// Try to connect to MongoDB only if URI is set
+const MONGODB_URI = process.env.MONGODB_URI;
+let mongoReady = Promise.resolve();
 
 if (MONGODB_URI) {
-  mongoReady = mongoose.connect(MONGODB_URI, { 
-    serverSelectionTimeoutMS: 5000,
-    connectTimeoutMS: 5000
-  })
-    .then(() => {
-      console.log('✅ MongoDB connected successfully');
-      global.mongoConnected = true;
+  try {
+    const mongoose = require('mongoose');
+    mongoose.set('strictQuery', false);
+    mongoose.set('bufferCommands', false);
+
+    mongoReady = mongoose.connect(MONGODB_URI, {
+      serverSelectionTimeoutMS: 5000,
+      connectTimeoutMS: 5000
     })
-    .catch(err => {
-      console.warn('⚠️  MongoDB connection failed:', err.message);
-      console.warn('⚠️  Using JSON file-based storage for users instead');
+      .then(() => {
+        console.log('✅ MongoDB connected successfully');
+        global.mongoConnected = true;
+      })
+      .catch(async (err) => {
+        console.warn('⚠️  MongoDB connection failed:', err.message);
+        console.warn('⚠️  Using JSON file-based storage for users instead');
+        global.mongoConnected = false;
+        try {
+          mongoose.connection.removeAllListeners();
+          await mongoose.disconnect();
+        } catch (e) { }
+      });
+
+    mongoose.connection.on('error', (err) => {
+      console.warn('⚠️  MongoDB error:', err.message);
       global.mongoConnected = false;
     });
-
-  mongoose.connection.on('error', (err) => {
-    console.warn('⚠️  MongoDB error:', err.message);
-    global.mongoConnected = false;
-  });
-
-  mongoose.connection.on('disconnected', () => {
-    global.mongoConnected = false;
-  });
-
-  mongoose.connection.on('reconnected', () => {
-    console.log('✅ MongoDB reconnected');
-    global.mongoConnected = true;
-  });
+  } catch (e) {
+    console.warn('⚠️  MongoDB setup failed:', e.message);
+  }
 } else {
-  mongoReady = Promise.resolve();
   console.warn('⚠️  MONGODB_URI not set - using JSON file-based storage for users');
 }
 
@@ -58,7 +58,7 @@ const authRoutes = require('./routes/authRoutes');
 
 // Wait for MongoDB connection attempt before handling auth requests
 app.use('/api/auth', async (req, res, next) => {
-  if (mongoReady) await mongoReady;
+  try { await mongoReady; } catch (e) { }
   next();
 });
 
@@ -70,7 +70,7 @@ app.use('/api/auth', authRoutes);
 
 // Basic route
 app.get('/', (req, res) => {
-  res.json({ message: 'MahaFort API - Running with JSON file storage' });
+  res.json({ message: 'MahaFort API - Running', mongoConnected: global.mongoConnected });
 });
 
 // Start server

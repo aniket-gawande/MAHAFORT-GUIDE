@@ -137,7 +137,7 @@ const Forts = () => {
               </span>
             </h1>
             <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed animate-fade-in-up delay-200">
-              Browse {stats.total}+ forts across {stats.districts} districts — from easy hill walks to 
+              Browse {stats.total} forts across {stats.districts} districts — from easy hill walks to
               extreme pinnacle climbs. Search, filter, and find your next adventure.
             </p>
           </div>

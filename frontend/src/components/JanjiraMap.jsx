@@ -342,10 +342,10 @@ const JanjiraMap = () => {
           ⛵ Boat Information
         </h4>
         <ul className="space-y-2 text-gray-300">
-          <li className="flex items-start"><span className="text-cyan-400 mr-2">•</span>Boats depart from <strong className="text-white">Rajapuri Jetty</strong> every 15-20 minutes</li>
-          <li className="flex items-start"><span className="text-cyan-400 mr-2">•</span>Boat ride takes approximately <strong className="text-white">15-20 minutes</strong></li>
-          <li className="flex items-start"><span className="text-cyan-400 mr-2">•</span>Ticket price: <strong className="text-saffron">₹20-50 per person</strong> (return)</li>
-          <li className="flex items-start"><span className="text-cyan-400 mr-2">•</span>Last boat to fort: <strong className="text-white">4:30 PM</strong></li>
+          <li className="flex items-start"><span className="text-cyan-400 mr-2">•</span><span>Boats depart from <strong className="text-white">Rajapuri Jetty</strong> every 15-20 minutes</span></li>
+          <li className="flex items-start"><span className="text-cyan-400 mr-2">•</span><span>Boat ride takes approximately <strong className="text-white">15-20 minutes</strong></span></li>
+          <li className="flex items-start"><span className="text-cyan-400 mr-2">•</span><span>Ticket price: <strong className="text-saffron">₹20-50 per person</strong> (return)</span></li>
+          <li className="flex items-start"><span className="text-cyan-400 mr-2">•</span><span>Last boat to fort: <strong className="text-white">4:30 PM</strong></span></li>
           <li className="flex items-start"><span className="text-cyan-400 mr-2">•</span>Avoid during heavy monsoon (June-Aug) due to rough seas</li>
         </ul>
       </div>
@@ -394,9 +394,9 @@ const JanjiraMap = () => {
           Route Information
         </h4>
         <ul className="space-y-2 text-gray-300">
-          <li className="flex items-start"><span className="text-saffron mr-2">•</span>Drive to <strong className="text-white">Rajapuri Jetty</strong> near Murud town</li>
+          <li className="flex items-start"><span className="text-saffron mr-2">•</span><span>Drive to <strong className="text-white">Rajapuri Jetty</strong> near Murud town</span></li>
           <li className="flex items-start"><span className="text-saffron mr-2">•</span>Parking available near the jetty (₹30-50)</li>
-          <li className="flex items-start"><span className="text-saffron mr-2">•</span>The fort is accessible <strong className="text-white">only by boat</strong> from the jetty</li>
+          <li className="flex items-start"><span className="text-saffron mr-2">•</span><span>The fort is accessible <strong className="text-white">only by boat</strong> from the jetty</span></li>
           <li className="flex items-start"><span className="text-saffron mr-2">•</span>Carry water and snacks — limited facilities on the fort</li>
           <li className="flex items-start"><span className="text-saffron mr-2">•</span>Best to visit early morning for the best experience</li>
         </ul>

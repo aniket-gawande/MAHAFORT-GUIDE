@@ -19,7 +19,7 @@ const About = () => {
     {
       name: "Aniket Gawande",
       role: "Project Lead & Full Stack Developer",
-      image:chart1,
+      image: chart1,
       linkedin: "https://www.linkedin.com/in/aniket-gawande25?utm_source=share_via&utm_content=profile&utm_medium=member_android",
       github: "https://github.com/aniket-gawande"
     },
@@ -47,7 +47,7 @@ const About = () => {
   ];
 
   const features = [
-    { icon: FaMountain, title: "40+ Forts Documented", desc: "Comprehensive database covering hill forts, sea forts, and land forts across Maharashtra's Sahyadri range." },
+    { icon: FaMountain, title: "4 Forts Documented", desc: "In-depth coverage of Sinhagad, Murud-Janjira, Sindhudurg, and Vishalgad — hill forts and sea forts of the Maratha Empire." },
     { icon: FaRoute, title: "Trek Routes & Itineraries", desc: "Detailed step-by-step trekking guides with difficulty ratings, timelines, and route maps for every fort." },
     { icon: FaRobot, title: "AI Guide - Bahirji Naik", desc: "Chat with our AI assistant inspired by Shivaji Maharaj's legendary spy chief for instant fort information." },
     { icon: FaMapMarkedAlt, title: "Interactive Maps", desc: "Live maps with GPS coordinates, nearby attractions, food stalls, parking locations and trail markers." },
@@ -56,8 +56,8 @@ const About = () => {
   ];
 
   const stats = [
-    { value: "40+", label: "Forts Catalogued", icon: FaFortAwesome },
-    { value: "300+", label: "Trek Routes", icon: FaHiking },
+    { value: "4", label: "Forts Catalogued", icon: FaFortAwesome },
+    { value: "10+", label: "Trek Routes", icon: FaHiking },
     { value: "1674", label: "Legacy Since", icon: FaStar },
     { value: "100%", label: "Free & Open", icon: FaGlobeAsia },
   ];
@@ -168,14 +168,15 @@ const About = () => {
             <div className="relative group order-2 lg:order-1">
               <div className="absolute -inset-1 bg-gradient-to-br from-saffron/30 via-saffron/10 to-transparent rounded-3xl blur-sm group-hover:blur-md transition-all duration-500"></div>
               <div className="relative bg-royal-gray border-2 border-saffron/20 rounded-3xl overflow-hidden shadow-2xl">
-                <img
-                  src={shivajiImg}
-                  alt="Chhatrapati Shivaji Maharaj"
-                  className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-royal-black/80 via-transparent to-transparent"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
-                  <p className="text-saffron font-cinematic text-base sm:text-lg font-bold">Chhatrapati Shivaji Maharaj</p>
+                <div className="bg-gradient-to-b from-[#1a1208] via-[#0d0a06] to-royal-black p-4 sm:p-6">
+                  <img
+                    src={shivajiImg}
+                    alt="Chhatrapati Shivaji Maharaj"
+                    className="w-full h-auto max-h-[500px] object-contain rounded-2xl group-hover:scale-[1.02] transition-transform duration-700"
+                  />
+                </div>
+                <div className="p-4 sm:p-6 text-center border-t border-saffron/20 bg-royal-black/60">
+                  <p className="text-saffron font-cinematic text-base sm:text-lg font-bold">छत्रपती शिवाजी महाराज</p>
                   <p className="text-gray-300 text-xs sm:text-sm">Founder of the Maratha Empire</p>
                 </div>
               </div>
@@ -191,9 +192,9 @@ const About = () => {
                   <div>
                     <h3 className="text-lg sm:text-xl font-cinematic font-bold text-white mb-1 sm:mb-2">A Digital Tribute</h3>
                     <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
-                      MahaFort Guide is more than a travel platform — it's a digital monument to the architectural 
-                      genius and military brilliance of the Maratha Empire. We are building a comprehensive 
-                      encyclopedia of Maharashtra's 350+ forts.
+                      MahaFort Guide is more than a travel platform — it's a digital monument to the architectural
+                      genius and military brilliance of the Maratha Empire. Currently documenting
+                      4 key forts of Maharashtra with detailed trek guides and historical context.
                     </p>
                   </div>
                 </div>
@@ -205,8 +206,8 @@ const About = () => {
                   <div>
                     <h3 className="text-lg sm:text-xl font-cinematic font-bold text-white mb-1 sm:mb-2">Preserve Heritage</h3>
                     <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
-                      Every fort has a story of valor, strategy, and sacrifice. We document detailed histories, 
-                      architectural layouts, battle accounts, and the warriors who made these fortifications legendary. 
+                      Every fort has a story of valor, strategy, and sacrifice. We document detailed histories,
+                      architectural layouts, battle accounts, and the warriors who made these fortifications legendary.
                       History deserves to be remembered.
                     </p>
                   </div>
@@ -219,8 +220,8 @@ const About = () => {
                   <div>
                     <h3 className="text-lg sm:text-xl font-cinematic font-bold text-white mb-1 sm:mb-2">Empower Explorers</h3>
                     <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
-                      From first-time trekkers to seasoned mountaineers — we provide accurate route data, 
-                      difficulty ratings, safety info, food guides, best photo spots, and downloadable 
+                      From first-time trekkers to seasoned mountaineers — we provide accurate route data,
+                      difficulty ratings, safety info, food guides, best photo spots, and downloadable
                       itineraries for every fort.
                     </p>
                   </div>
@@ -233,8 +234,8 @@ const About = () => {
                   <div>
                     <h3 className="text-lg sm:text-xl font-cinematic font-bold text-white mb-1 sm:mb-2">AI-Powered Innovation</h3>
                     <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
-                      Meet <strong className="text-saffron">Bahirji Naik</strong> — our AI chatbot named after 
-                      Shivaji Maharaj's legendary spy chief. Ask him anything about forts, routes, history, 
+                      Meet <strong className="text-saffron">Bahirji Naik</strong> — our AI chatbot named after
+                      Shivaji Maharaj's legendary spy chief. Ask him anything about forts, routes, history,
                       or plan your entire trek in seconds.
                     </p>
                   </div>

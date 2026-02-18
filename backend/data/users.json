@@ -1,0 +1,14 @@
+[
+  {
+    "_id": "mll72i3qldu85n8z",
+    "username": "atharv",
+    "email": "atharv@gmail.com",
+    "password": "$2b$12$R6BAYJW9sKmaeJBXPj5I/Obh2jqgPTJ7upqCgdmA9LjhYFoMhvjUC",
+    "avatar": "",
+    "role": "warrior",
+    "googleId": null,
+    "authProvider": "local",
+    "fortsVisited": [],
+    "createdAt": "2026-02-13T18:01:42.950Z"
+  }
+]

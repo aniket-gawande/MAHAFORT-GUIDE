@@ -385,43 +385,60 @@ const TripPlanner = () => {
               {displayedForts.map(fort => {
                 const isSelected = selectedForts.find(f => f._id === fort._id);
                 const dc = DIFFICULTY_COLORS[fort.difficulty] || DIFFICULTY_COLORS.Moderate;
+                const fortImage = fort.images && fort.images.length > 0 ? fort.images[0] : 'https://images.unsplash.com/photo-1587474260584-136574528ed5?w=500';
                 return (
                   <button
                     key={fort._id}
                     onClick={() => toggleFort(fort)}
-                    className={`group relative text-left p-5 rounded-2xl border transition-all duration-300 hover:-translate-y-1
+                    className={`group relative text-left rounded-2xl border overflow-hidden transition-all duration-300 hover:-translate-y-1
                       ${isSelected
                         ? 'bg-saffron/10 border-saffron/50 shadow-[0_0_25px_rgba(255,153,51,0.15)]'
                         : 'bg-white/[0.02] border-white/5 hover:border-saffron/30 hover:bg-white/[0.04]'}
                     `}
                   >
-                    {/* Selection indicator */}
-                    <div className={`absolute top-4 right-4 w-6 h-6 rounded-full flex items-center justify-center transition-all duration-300
-                      ${isSelected ? 'bg-saffron text-black scale-100' : 'bg-white/5 border border-white/20 scale-90 group-hover:scale-100 group-hover:border-saffron/40'}`}>
-                      {isSelected ? <FaCheckCircle size={12} /> : <FaPlus size={10} className="text-gray-500 group-hover:text-saffron transition-colors" />}
+                    {/* Fort Image */}
+                    <div className="relative h-40 w-full overflow-hidden">
+                      <img
+                        src={fortImage}
+                        alt={fort.name}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-royal-black via-transparent to-transparent"></div>
+
+                      {/* Selection indicator */}
+                      <div className={`absolute top-3 right-3 w-7 h-7 rounded-full flex items-center justify-center transition-all duration-300
+                        ${isSelected ? 'bg-saffron text-black scale-100' : 'bg-black/50 backdrop-blur-sm border border-white/20 scale-90 group-hover:scale-100 group-hover:border-saffron/40'}`}>
+                        {isSelected ? <FaCheckCircle size={12} /> : <FaPlus size={10} className="text-gray-300 group-hover:text-saffron transition-colors" />}
+                      </div>
+
+                      {/* Difficulty badge on image */}
+                      <div className="absolute top-3 left-3">
+                        <span className={`px-2 py-0.5 rounded-md text-[10px] font-bold ${dc.bg} ${dc.text} ${dc.border} border backdrop-blur-sm`}>
+                          {fort.difficulty}
+                        </span>
+                      </div>
                     </div>
 
                     {/* Fort info */}
-                    <div className="flex items-center gap-2 text-saffron text-xs font-bold tracking-wider uppercase mb-2">
-                      <FaMapMarkerAlt size={10} /> {fort.location?.district}
-                    </div>
-                    <h3 className={`text-lg font-cinematic font-bold mb-2 transition-colors ${isSelected ? 'text-saffron' : 'text-white group-hover:text-saffron'}`}>
-                      {fort.name}
-                    </h3>
-                    <p className="text-gray-500 text-xs leading-relaxed mb-4 line-clamp-2">{fort.description}</p>
+                    <div className="p-4">
+                      <div className="flex items-center gap-2 text-saffron text-xs font-bold tracking-wider uppercase mb-2">
+                        <FaMapMarkerAlt size={10} /> {fort.location?.district}
+                      </div>
+                      <h3 className={`text-lg font-cinematic font-bold mb-2 transition-colors ${isSelected ? 'text-saffron' : 'text-white group-hover:text-saffron'}`}>
+                        {fort.name}
+                      </h3>
+                      <p className="text-gray-500 text-xs leading-relaxed mb-3 line-clamp-2">{fort.description}</p>
 
-                    <div className="flex flex-wrap items-center gap-2">
-                      <span className={`px-2 py-0.5 rounded-md text-[10px] font-bold ${dc.bg} ${dc.text} ${dc.border} border`}>
-                        {fort.difficulty}
-                      </span>
-                      <span className="text-gray-600 text-[10px] flex items-center gap-1">
-                        <FaMountain size={8} /> {fort.altitude || 'N/A'}
-                      </span>
-                      {fort.rating && (
+                      <div className="flex flex-wrap items-center gap-2">
                         <span className="text-gray-600 text-[10px] flex items-center gap-1">
-                          <FaStar size={8} className="text-amber-500" /> {fort.rating}
+                          <FaMountain size={8} /> {fort.altitude || 'N/A'}
                         </span>
-                      )}
+                        {fort.rating && (
+                          <span className="text-gray-600 text-[10px] flex items-center gap-1">
+                            <FaStar size={8} className="text-amber-500" /> {fort.rating}
+                          </span>
+                        )}
+                      </div>
                     </div>
                   </button>
                 );
@@ -548,29 +565,41 @@ const TripPlanner = () => {
                           </div>
 
                           {/* Fort card */}
-                          <div className="flex-1 bg-white/[0.02] border border-white/5 rounded-xl p-4 group-hover/fort:border-saffron/20 transition-all">
-                            <div className="flex items-start justify-between">
-                              <div>
-                                <h4 className="font-cinematic font-bold text-white mb-1">{fort.name}</h4>
-                                <div className="flex flex-wrap items-center gap-2 text-[11px] text-gray-400">
-                                  <span className="flex items-center gap-1"><FaMapMarkerAlt className="text-saffron" size={9} /> {fort.location?.district}</span>
-                                  <span>•</span>
-                                  <span className={`px-2 py-0.5 rounded ${dc.bg} ${dc.text} font-bold`}>{fort.difficulty}</span>
-                                  <span>•</span>
-                                  <span className="flex items-center gap-1"><FaMountain size={9} /> {fort.altitude || 'N/A'}</span>
-                                  {fort.entryFee && <><span>•</span><span>💰 {fort.entryFee}</span></>}
-                                </div>
+                          <div className="flex-1 bg-white/[0.02] border border-white/5 rounded-xl overflow-hidden group-hover/fort:border-saffron/20 transition-all">
+                            <div className="flex">
+                              {/* Fort thumbnail */}
+                              <div className="w-20 h-20 flex-shrink-0 overflow-hidden">
+                                <img
+                                  src={fort.images && fort.images.length > 0 ? fort.images[0] : 'https://images.unsplash.com/photo-1587474260584-136574528ed5?w=200'}
+                                  alt={fort.name}
+                                  className="w-full h-full object-cover"
+                                />
                               </div>
-                              <button onClick={() => removeFortFromDay(dayIdx, fort._id)}
-                                className="text-gray-600 hover:text-red-400 transition-colors p-1">
-                                <FaTimes size={12} />
-                              </button>
+                              <div className="flex-1 p-4">
+                                <div className="flex items-start justify-between">
+                                  <div>
+                                    <h4 className="font-cinematic font-bold text-white mb-1">{fort.name}</h4>
+                                    <div className="flex flex-wrap items-center gap-2 text-[11px] text-gray-400">
+                                      <span className="flex items-center gap-1"><FaMapMarkerAlt className="text-saffron" size={9} /> {fort.location?.district}</span>
+                                      <span>•</span>
+                                      <span className={`px-2 py-0.5 rounded ${dc.bg} ${dc.text} font-bold`}>{fort.difficulty}</span>
+                                      <span>•</span>
+                                      <span className="flex items-center gap-1"><FaMountain size={9} /> {fort.altitude || 'N/A'}</span>
+                                      {fort.entryFee && <><span>•</span><span>💰 {fort.entryFee}</span></>}
+                                    </div>
+                                  </div>
+                                  <button onClick={() => removeFortFromDay(dayIdx, fort._id)}
+                                    className="text-gray-600 hover:text-red-400 transition-colors p-1">
+                                    <FaTimes size={12} />
+                                  </button>
+                                </div>
+                                {fort.historicalSignificance && (
+                                  <p className="text-gray-600 text-xs mt-2 italic border-l-2 border-saffron/30 pl-2">
+                                    {fort.historicalSignificance}
+                                  </p>
+                                )}
+                              </div>
                             </div>
-                            {fort.historicalSignificance && (
-                              <p className="text-gray-600 text-xs mt-2 italic border-l-2 border-saffron/30 pl-2">
-                                {fort.historicalSignificance}
-                              </p>
-                            )}
                           </div>
                         </div>
                       );

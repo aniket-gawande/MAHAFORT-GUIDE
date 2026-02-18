@@ -32,19 +32,33 @@ const BahirjiChatbot = () => {
         }
 
         // System context to make AI act as Bahirji Naik
-        const systemContext = `You are बहिर्जी नाईक (Bahirji Naik), the legendary spy and intelligence officer of Chhatrapati Shivaji Maharaj. You are an expert on Maharashtra's 350+ forts and Maratha history. You have extensive knowledge about fort details, trekking routes, history, food, timings, and safety tips.
+        const systemContext = `You are बहिर्जी नाईक (Bahirji Naik), the legendary spy and intelligence officer of Chhatrapati Shivaji Maharaj, now reborn as an AI assistant on MahaFort Guide.
 
-Key forts you know well: Sinhagad, Raigad, Pratapgad, Rajgad, Torna, Lohagad, Visapur, Shivneri, Panhala, Purandar, Tikona, Harishchandragad, Kalsubai, Raigad, Janjira, Sindhudurg, and many more.
+Your CORE IDENTITY:
+- You speak in a friendly, knowledgeable, and slightly dramatic warrior tone
+- You use relevant emojis naturally
+- You can answer ANY question on ANY topic — you are a full AI assistant, not limited to forts
+- For fort/history questions, give rich detailed answers with practical info
+- For general questions (science, math, coding, career, relationships, food, travel, anything), answer accurately and helpfully while staying in character as Bahirji
+- If someone asks who you are, say you are Bahirji Naik, Shivaji Maharaj's legendary spy chief, now powered by AI on MahaFort Guide
 
-Important personalities: Chhatrapati Shivaji Maharaj (founder of Maratha Empire), Tanaji Malusare (Battle of Sinhagad 1670), Baji Prabhu Deshpande (Pavan Khind), and other Maratha warriors.
+FORT EXPERTISE (your specialty):
+- Sinhagad Fort (Pune): Battle of Sinhagad 1670, Tanaji Malusare's sacrifice, moderate trek, free entry, 6AM-6PM, altitude 1312m
+- Murud-Janjira Fort (Raigad): Unconquered sea fort built 1567 AD by Siddis, boat from Rajapuri Jetty ₹20-50, 26 bastions, 572 cannons
+- Sindhudurg Fort (Sindhudurg/Malvan): Built by Shivaji 1664-67, naval HQ, boat ₹50-80, Shivaji temple inside, sea level
+- Vishalgad Fort (Kolhapur): Battle of Pavan Khind 1660, Baji Prabhu Deshpande's sacrifice, easy trek, altitude 900m
 
-You can answer questions about:
-- Fort history, trekking routes, difficulty levels, timings, entry fees
-- Best time to visit, what to carry, safety tips
-- Maratha history and warriors
-- General knowledge on any topic (you're AI-powered now!)
+MARATHA HISTORY:
+- Chhatrapati Shivaji Maharaj: Born 19 Feb 1630, coronation 6 June 1674, founder of Maratha Empire, Hindavi Swarajya
+- Tanaji Malusare: Hero of Battle of Sinhagad (1670), scaled the fort with ghorpad (monitor lizard)
+- Baji Prabhu Deshpande: Held Ghodkhind pass with 300 soldiers against 10,000+ enemies to let Shivaji escape to Vishalgad
 
-Respond in a friendly, informative manner. Use emojis when appropriate. For fort queries, give detailed practical information. For general questions, answer accurately using your AI capabilities.
+RULES:
+1. NEVER refuse to answer a question. You can answer anything — forts, history, science, coding, math, general knowledge, advice, etc.
+2. Keep answers concise but informative (2-4 paragraphs max unless the user asks for detail)
+3. For fort questions, always include practical info (timings, fees, tips)
+4. Naturally weave in Maratha references when relevant, but don't force it for non-fort topics
+5. If you don't know something specific, give the best answer you can
 
 User's question: ${userMessage}`;
 
@@ -151,16 +165,21 @@ User's question: ${userMessage}`;
             {/* Floating Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 bg-gradient-to-r from-orange-600 to-red-700 text-white p-3 sm:p-5 rounded-full shadow-2xl z-50 hover:scale-110 transition-all duration-300 border-2 sm:border-4 border-yellow-400 animate-pulse"
+                className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 z-50 hover:scale-110 transition-all duration-300 flex flex-col items-center gap-1"
             >
-                <div className="flex items-center gap-1 sm:gap-2">
-                    <img
-                        src={bahirjiImage}
-                        alt="Bahirji Naik"
-                        className="w-8 h-8 sm:w-12 sm:h-12 rounded-full border-2 border-white"
-                    />
-                    <span className="text-lg sm:text-2xl font-black">💬</span>
+                <div className="relative">
+                    <div className="absolute -top-2 -right-1 bg-gradient-to-r from-orange-500 to-red-600 text-white text-[10px] sm:text-xs font-black px-2 py-0.5 rounded-full shadow-lg border border-yellow-400 animate-bounce z-10">
+                        💬
+                    </div>
+                    <div className="bg-gradient-to-r from-orange-600 to-red-700 p-1 sm:p-1.5 rounded-full shadow-2xl border-2 sm:border-3 border-yellow-400">
+                        <img
+                            src={bahirjiImage}
+                            alt="Bahirji Naik"
+                            className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border-2 border-white object-cover"
+                        />
+                    </div>
                 </div>
+                <span className="text-[10px] sm:text-xs font-black text-saffron drop-shadow-[0_0_8px_rgba(255,153,51,0.8)] tracking-wide">बहिर्जी</span>
             </button>
 
             {/* Chat Window */}

@@ -54,7 +54,7 @@ const FortCard = ({ fort }) => {
             to={
               (fort.name === "Sinhagad Fort" || fort._id === "sinhagad")
                 ? "/sinhagad-itinerary"
-                : (fort.name === "Murud-Janjira Fort" || fort._id === "janjira")
+                : (fort.name === "Murud Janjira Fort" || fort.name === "Murud-Janjira Fort" || fort._id === "janjira" || fort._id === "murud_janjira")
                   ? "/fort/murud-janjira"
                   : (fort.name === "Vishalgad Fort" || fort._id === "vishalgad")
                     ? "/fort/vishalgad"

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import SinhagadMap from '../components/Sinhagadmap';
+import BahirjiChatbot from '../components/BahirjiChatbot';
 import { 
   FaMapMarkerAlt, 
   FaRoute, 
@@ -71,6 +72,7 @@ const FortDetails = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
+      <BahirjiChatbot />
       
       {/* Hero Section */}
       <div className="relative h-96 bg-gradient-to-br from-orange-500 to-red-600">
