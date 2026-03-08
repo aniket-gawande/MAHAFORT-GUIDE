@@ -4,6 +4,22 @@ import CrowdStatusBadge from './CrowdStatusBadge';
 import { FaMapMarkerAlt, FaHiking, FaLock } from 'react-icons/fa';
 import { AuthContext } from '../context/AuthContext';
 
+// Route mapping for forts with dedicated detail pages
+const DETAIL_PAGE_ROUTES = {
+  sinhagad: '/sinhagad-itinerary',
+  janjira: '/fort/murud-janjira',
+  murud_janjira: '/fort/murud-janjira',
+  vishalgad: '/fort/vishalgad',
+  sindhudurg: '/fort/sindhudurg',
+  lohagad: '/fort/lohagad',
+  tung: '/fort/tung',
+};
+
+const getFortRoute = (fort) => {
+  const id = fort._id || fort.name?.toLowerCase().replace(/\s+/g, '-');
+  return DETAIL_PAGE_ROUTES[id] || `/fort/${id}`;
+};
+
 const FortCard = ({ fort }) => {
   const defaultImage = 'https://images.unsplash.com/photo-1587474260584-136574528ed5?w=500';
   const { isAuthenticated } = useContext(AuthContext);
@@ -51,21 +67,7 @@ const FortCard = ({ fort }) => {
 
         {isAuthenticated ? (
           <Link
-            to={
-              (fort.name === "Sinhagad Fort" || fort._id === "sinhagad")
-                ? "/sinhagad-itinerary"
-                : (fort.name === "Murud Janjira Fort" || fort.name === "Murud-Janjira Fort" || fort._id === "janjira" || fort._id === "murud_janjira")
-                  ? "/fort/murud-janjira"
-                  : (fort.name === "Vishalgad Fort" || fort._id === "vishalgad")
-                    ? "/fort/vishalgad"
-                    : (fort.name === "Sindhudurg Fort" || fort._id === "sindhudurg")
-                      ? "/fort/sindhudurg"
-                      : (fort.name === "Lohagad Fort" || fort._id === "lohagad")
-                        ? "/fort/lohagad"
-                        : (fort.name === "Tung Fort" || fort._id === "tung")
-                          ? "/fort/tung"
-                          : `/fort/${fort._id}`
-            }
+            to={getFortRoute(fort)}
             onClick={() => window.scrollTo(0, 0)}
             className="block w-full py-3 text-center rounded-lg bg-white/5 border border-white/10 text-white font-bold text-sm uppercase tracking-widest hover:bg-saffron hover:text-black hover:border-saffron transition-all"
           >

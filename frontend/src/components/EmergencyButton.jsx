@@ -11,8 +11,8 @@ const EmergencyButton = ({ fort }) => {
         try {
             // Log emergency alert to backend
             await axios.post('http://localhost:5000/api/emergency/alert', {
-                fortId: fort._id,
-                fortName: fort.name,
+                fortId: fort?._id,
+                fortName: fort?.name,
                 contactType,
                 timestamp: new Date()
             });
@@ -24,7 +24,7 @@ const EmergencyButton = ({ fort }) => {
         }
     };
 
-    if (!fort.emergencyContacts || fort.emergencyContacts.length === 0) {
+    if (!fort || !fort.emergencyContacts || fort.emergencyContacts.length === 0) {
         return null;
     }
 

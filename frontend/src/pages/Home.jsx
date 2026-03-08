@@ -59,11 +59,10 @@ const Home = () => {
 
   const districts = ['all', ...new Set(forts.filter(f => f?.location?.district).map(fort => fort.location.district))].sort();
 
-  // Featured forts - top rated for homepage preview
+  // All forts sorted by rating for homepage display
   const featuredForts = forts
     .filter(f => f?.name && f?.location)
-    .sort((a, b) => (b.rating || 0) - (a.rating || 0))
-    .slice(0, 4);
+    .sort((a, b) => (b.rating || 0) - (a.rating || 0));
 
   return (
     <div className="min-h-screen bg-royal-black text-white font-body selection:bg-saffron selection:text-black">
@@ -158,13 +157,13 @@ const Home = () => {
         <div className="container mx-auto px-4 sm:px-6">
           {/* Section Header */}
           <div className="text-center mb-12">
-            <p className="text-saffron font-cinematic text-xs sm:text-sm tracking-[0.3em] uppercase mb-3">Top Rated</p>
+            <p className="text-saffron font-cinematic text-xs sm:text-sm tracking-[0.3em] uppercase mb-3">Our Collection</p>
             <h2 className="text-2xl sm:text-4xl md:text-5xl font-cinematic font-bold text-white mb-4">
-              Featured <span className="text-saffron">Forts</span>
+              Explore All <span className="text-saffron">{forts.length} Forts</span>
             </h2>
             <div className="h-1 w-16 bg-saffron rounded-full mx-auto mb-4"></div>
             <p className="text-gray-400 text-sm sm:text-base max-w-xl mx-auto">
-              The most majestic fortifications of the Maratha Empire. Explore all {forts.length} forts in our directory.
+              The most majestic fortifications of the Maratha Empire — each with rich history, trek guides & itineraries.
             </p>
           </div>
 
@@ -175,7 +174,7 @@ const Home = () => {
               <p className="mt-4 text-saffron font-cinematic animate-pulse">Summoning History...</p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {featuredForts.map((fort) => (
                 <FortCard key={fort._id} fort={fort} />
               ))}
@@ -185,7 +184,7 @@ const Home = () => {
           {/* View All CTA */}
           <div className="text-center mt-12">
             <Link to="/forts" className="group inline-flex items-center gap-3 px-8 py-4 bg-white/5 border border-saffron/30 rounded-full text-saffron font-bold font-cinematic tracking-wider uppercase hover:bg-saffron hover:text-black hover:border-saffron transition-all duration-300 shadow-[0_0_15px_rgba(255,153,51,0.1)] hover:shadow-[0_0_25px_rgba(255,153,51,0.4)]">
-              VIEW ALL {forts.length} FORTS <FaChevronRight className="group-hover:translate-x-1 transition-transform" />
+              SEARCH & FILTER FORTS <FaChevronRight className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </div>

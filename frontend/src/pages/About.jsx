@@ -14,7 +14,7 @@ import heroBg from '../assets/hero-fort.jpg';
 import shivajiImg from '../assets/shivaji.jpg';
 import chart1 from '../assets/Aniket.png';
 import chart2 from '../assets/Athrav.png';
-import chart3 from "D:/MAHAFORT-GUIDE/frontend/src/assets/Nishtha.png";
+import chart3 from '../assets/Nishtha.png';
 const About = () => {
   const teamMembers = [
     {

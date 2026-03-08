@@ -10,5 +10,29 @@
     "authProvider": "local",
     "fortsVisited": [],
     "createdAt": "2026-02-13T18:01:42.950Z"
+  },
+  {
+    "_id": "mlzb03eh1cr68sna",
+    "username": "atharv678",
+    "email": "atharv678@gmail.com",
+    "password": "$2b$12$jQqxrY2d9c5ECwIY/V6kwOx6sxnSIGDehkPC8kDUe40MCCj9KlrgC",
+    "avatar": "",
+    "role": "warrior",
+    "googleId": null,
+    "authProvider": "local",
+    "fortsVisited": [],
+    "createdAt": "2026-02-23T15:00:35.513Z"
+  },
+  {
+    "_id": "mmg1r3tasd6omv16",
+    "username": "hehe",
+    "email": "invictusi7171@gmaul.com",
+    "password": "$2b$12$k6W6gKF/Rmy.y6plCX25mOoBRVigpAl8gC7HFmf0onvtiBJ4TNgae",
+    "avatar": "",
+    "role": "warrior",
+    "googleId": null,
+    "authProvider": "local",
+    "fortsVisited": [],
+    "createdAt": "2026-03-07T08:13:44.590Z"
   }
 ]

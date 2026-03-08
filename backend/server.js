@@ -55,6 +55,7 @@ const fortRoutes = require('./routes/forts');
 const emergencyRoutes = require('./routes/emergencyRoutes');
 const adminRoutes = require('./routes/adminRoutes');
 const authRoutes = require('./routes/authRoutes');
+const agentRoutes = require('./routes/agentRoutes');
 
 // Wait for MongoDB connection attempt before handling auth requests
 app.use('/api/auth', async (req, res, next) => {
@@ -67,6 +68,7 @@ app.use('/api/forts', fortRoutes);
 app.use('/api/emergency', emergencyRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api/agent', agentRoutes);
 
 // Basic route
 app.get('/', (req, res) => {

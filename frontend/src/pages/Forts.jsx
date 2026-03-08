@@ -69,7 +69,7 @@ const Forts = () => {
         fort.description?.toLowerCase().includes(searchTerm.toLowerCase()) ||
         fort.location?.district?.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesDistrict = districtFilter === 'all' || fort.location?.district === districtFilter;
-      const matchesDifficulty = difficultyFilter === 'all' || fort.difficulty === difficultyFilter || (fort.trek?.routes?.[0]?.difficulty === difficultyFilter);
+      const matchesDifficulty = difficultyFilter === 'all' || fort.difficulty === difficultyFilter || (fort.trek?.routes?.[0]?.difficulty === difficultyFilter) || (difficultyFilter === 'Difficult' && fort.difficulty === 'Hard');
       return matchesSearch && matchesDistrict && matchesDifficulty;
     });
 
@@ -103,7 +103,7 @@ const Forts = () => {
   const stats = useMemo(() => {
     const easy = forts.filter(f => f.difficulty === 'Easy').length;
     const moderate = forts.filter(f => f.difficulty === 'Moderate').length;
-    const hard = forts.filter(f => f.difficulty === 'Hard').length;
+    const hard = forts.filter(f => f.difficulty === 'Hard' || f.difficulty === 'Difficult').length;
     return { total: forts.length, easy, moderate, hard, districts: districts.length - 1 };
   }, [forts, districts]);
 
@@ -195,7 +195,7 @@ const Forts = () => {
                 <option value="all" className="bg-royal-black">All Levels</option>
                 <option value="Easy" className="bg-royal-black">🟢 Easy</option>
                 <option value="Moderate" className="bg-royal-black">🟡 Moderate</option>
-                <option value="Hard" className="bg-royal-black">🔴 Hard</option>
+                <option value="Difficult" className="bg-royal-black">🔴 Difficult</option>
               </select>
 
               {/* Sort */}
@@ -319,6 +319,7 @@ const CompactFortRow = ({ fort }) => {
     Easy: 'bg-emerald-500/15 text-emerald-400 border-emerald-500/20',
     Moderate: 'bg-amber-500/15 text-amber-400 border-amber-500/20',
     Hard: 'bg-red-500/15 text-red-400 border-red-500/20',
+    Difficult: 'bg-red-500/15 text-red-400 border-red-500/20',
   };
   const dc = diffColors[fort.difficulty] || diffColors.Moderate;
 

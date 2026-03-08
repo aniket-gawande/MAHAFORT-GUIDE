@@ -19,6 +19,7 @@ const TungDetail = lazy(() => import('./pages/TungDetail'));
 const Admin = lazy(() => import('./pages/Admin'));
 const TripPlanner = lazy(() => import('./pages/TripPlanner'));
 const Forts = lazy(() => import('./pages/Forts'));
+const FortAgent = lazy(() => import('./pages/FortAgent'));
 
 // Loading fallback component
 const PageLoader = () => (
@@ -87,6 +88,9 @@ function AppRoutes() {
 
         {/* Trip Planner */}
         <Route path="/trip-planner" element={<TripPlanner />} />
+
+        {/* Fort Data Agent */}
+        <Route path="/fort-agent" element={<FortAgent />} />
 
         {/* Catch all route - redirect to home */}
         <Route path="*" element={<Navigate to="/" replace />} />
