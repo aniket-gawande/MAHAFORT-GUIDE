@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
-import BahirjiChatbot from '../components/BahirjiChatbot';
 import CrowdStatusBadge from '../components/CrowdStatusBadge';
 import EmergencyButton from '../components/EmergencyButton';
 import { staticForts } from '../data/staticForts';
@@ -9,8 +8,8 @@ import { fortDetailedData } from '../data/fortDetailedData';
 import {
     FaMapMarkerAlt, FaClock, FaRupeeSign, FaHistory,
     FaStar, FaHiking, FaMountain, FaArrowLeft, FaExternalLinkAlt,
-    FaCalendarAlt, FaTicketAlt, FaChevronRight, FaRobot, FaUsers,
-    FaWikipediaW, FaMonument, FaUtensils, FaExclamationTriangle,
+    FaCalendarAlt, FaTicketAlt, FaChevronRight, FaUsers,
+    FaMonument, FaUtensils, FaExclamationTriangle,
     FaDownload
 } from 'react-icons/fa';
 import { GiCastle } from 'react-icons/gi';
@@ -120,10 +119,7 @@ const FortDetails = () => {
     const { id } = useParams();
     const navigate = useNavigate();
     const [fort, setFort] = useState(null);
-    const [agentData, setAgentData] = useState(null);
     const [loading, setLoading] = useState(true);
-    const [agentLoading, setAgentLoading] = useState(false);
-    const [agentLogs, setAgentLogs] = useState([]);
     const [activeTab, setActiveTab] = useState('history');
     const [showMap, setShowMap] = useState(false);
 
@@ -142,23 +138,6 @@ const FortDetails = () => {
             .catch(() => { })
             .finally(() => setLoading(false));
     }, [id]);
-
-    // Fort Agent SSE
-    const runAgent = useCallback(() => {
-        if (!fort?.name || agentLoading) return;
-        setAgentLoading(true);
-        setAgentLogs([]);
-        const es = new EventSource(`${API_BASE}/agent/search?query=${encodeURIComponent(fort.name)}`);
-        es.onmessage = (event) => {
-            try {
-                const data = JSON.parse(event.data);
-                if (data.type === 'log') setAgentLogs(prev => [...prev, data.message]);
-                else if (data.type === 'result') { setAgentData(data.data); setAgentLoading(false); es.close(); }
-                else if (data.type === 'error') { setAgentLoading(false); es.close(); }
-            } catch (e) { /* ignore */ }
-        };
-        es.onerror = () => { setAgentLoading(false); es.close(); };
-    }, [fort, agentLoading]);
 
     // Download text itinerary
     const downloadTextItinerary = () => {
@@ -223,12 +202,9 @@ const FortDetails = () => {
     };
     const dc = diffColors[fort.difficulty] || diffColors.Moderate;
 
-    const coordinates = agentData?.coordinates;
-    const googleMapsUrl = coordinates
-        ? `https://www.google.com/maps/search/?api=1&query=${coordinates.lat},${coordinates.lon}`
-        : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(fort.name + ' Maharashtra')}`;
+    const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(fort.name + ' Maharashtra')}`;
 
-    const desc = agentData?.description || detail?.introduction || fort.description;
+    const desc = detail?.introduction || fort.description;
     const tabs = hasDetail
         ? [
             { key: 'history', label: 'History', icon: '📜' },
@@ -241,7 +217,6 @@ const FortDetails = () => {
     return (
         <div className="min-h-screen bg-royal-black text-white font-body selection:bg-saffron selection:text-black">
             <Navbar />
-            <BahirjiChatbot />
 
             {/* ═══ CINEMATIC HERO ═══ */}
             <div className="relative h-[55vh] sm:h-[65vh] overflow-hidden">
@@ -390,13 +365,6 @@ const FortDetails = () => {
                                         {detail.timeline.map((t, i) => (
                                             <TimelineItem key={i} year={t.year} title={t.title} desc={t.desc} />
                                         ))}
-                                    </div>
-                                )}
-
-                                {agentData?.history && (
-                                    <div className="bg-white/[0.03] border border-white/10 rounded-xl p-6">
-                                        <h3 className="text-saffron font-cinematic font-bold mb-2">🤖 Agent-Retrieved History</h3>
-                                        <p className="text-gray-400 leading-relaxed text-sm">{agentData.history}</p>
                                     </div>
                                 )}
                             </section>
@@ -565,62 +533,6 @@ const FortDetails = () => {
                                 </div>
                             </section>
                         )}
-
-                        {/* Agent Data — enriched sections */}
-                        {agentData?.highlights && agentData.highlights.length > 0 && (
-                            <section className="bg-white/[0.02] border border-white/5 rounded-2xl p-6 sm:p-8">
-                                <h2 className="flex items-center gap-3 text-2xl font-cinematic font-bold mb-4">
-                                    <FaStar className="text-amber-500" /> Agent Highlights
-                                </h2>
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                    {agentData.highlights.map((h, i) => (
-                                        <div key={i} className="flex items-start gap-2 p-3 bg-amber-500/5 border border-amber-500/10 rounded-xl">
-                                            <span className="text-amber-500 mt-0.5">✦</span>
-                                            <span className="text-gray-300 text-sm">{h}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                            </section>
-                        )}
-
-                        {/* Fort Agent CTA — only if no detail AND no agent data */}
-                        {!hasDetail && !agentData && (
-                            <section className="relative overflow-hidden bg-gradient-to-br from-saffron/5 via-white/[0.02] to-blue-500/5 border border-saffron/20 rounded-2xl p-6 sm:p-8">
-                                <div className="absolute top-0 right-0 w-40 h-40 bg-saffron/5 rounded-full blur-3xl"></div>
-                                <div className="relative">
-                                    <div className="flex items-center gap-3 mb-3">
-                                        <div className="w-10 h-10 rounded-xl bg-saffron/20 flex items-center justify-center">
-                                            <FaRobot className="text-saffron" />
-                                        </div>
-                                        <div>
-                                            <h3 className="font-cinematic font-bold text-lg">Fort Data Agent</h3>
-                                            <p className="text-gray-500 text-xs">AI-powered enrichment from Wikipedia, Maps &amp; more</p>
-                                        </div>
-                                    </div>
-                                    <p className="text-gray-400 text-sm mb-4">
-                                        Get enriched data about this fort — detailed history, coordinates, reviews, highlights — all collected in real-time.
-                                    </p>
-                                    {agentLoading ? (
-                                        <div className="space-y-2">
-                                            <div className="flex items-center gap-2 text-saffron text-sm font-bold">
-                                                <div className="w-4 h-4 border-2 border-saffron border-t-transparent rounded-full animate-spin"></div>
-                                                Agent collecting data...
-                                            </div>
-                                            <div className="bg-black/30 rounded-lg p-3 max-h-32 overflow-y-auto font-mono text-xs space-y-1">
-                                                {agentLogs.map((log, i) => (
-                                                    <div key={i} className="text-green-400/80">→ {log}</div>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    ) : (
-                                        <button onClick={runAgent}
-                                            className="inline-flex items-center gap-2 px-5 py-2.5 bg-saffron/10 border border-saffron/30 rounded-xl text-saffron font-bold text-sm hover:bg-saffron/20 transition-all">
-                                            <FaRobot /> Run Fort Agent (~15s)
-                                        </button>
-                                    )}
-                                </div>
-                            </section>
-                        )}
                     </div>
 
                     {/* ═══ RIGHT COLUMN: STICKY SIDEBAR ═══ */}
@@ -706,18 +618,6 @@ const FortDetails = () => {
                                     <span className="flex items-center gap-2"><FaMapMarkerAlt /> Open in Google Maps</span>
                                     <FaExternalLinkAlt size={12} />
                                 </a>
-                                {agentData?.wikipedia?.url && (
-                                    <a href={agentData.wikipedia.url} target="_blank" rel="noopener noreferrer"
-                                        className="flex items-center justify-between w-full px-5 py-3.5 bg-white/[0.03] border border-white/10 rounded-xl text-gray-300 font-bold text-sm hover:text-white hover:border-white/20 transition-all">
-                                        <span className="flex items-center gap-2"><FaWikipediaW /> Wikipedia Article</span>
-                                        <FaExternalLinkAlt size={12} />
-                                    </a>
-                                )}
-                                <Link to="/fort-agent"
-                                    className="flex items-center justify-between w-full px-5 py-3.5 bg-saffron/10 border border-saffron/20 rounded-xl text-saffron font-bold text-sm hover:bg-saffron/20 transition-all">
-                                    <span className="flex items-center gap-2"><FaRobot /> Explore with Fort Agent</span>
-                                    <FaChevronRight size={12} />
-                                </Link>
                             </div>
 
                             {/* Nearby Forts */}

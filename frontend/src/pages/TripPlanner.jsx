@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
-import BahirjiChatbot from '../components/BahirjiChatbot';
 import { staticForts } from '../data/staticForts';
 import {
   FaMapMarkerAlt, FaMountain, FaCalendarAlt, FaClock, FaRupeeSign,
@@ -246,7 +245,6 @@ const TripPlanner = () => {
   return (
     <div className="min-h-screen bg-royal-black text-white font-body selection:bg-saffron selection:text-black" ref={topRef}>
       <Navbar />
-      <BahirjiChatbot />
 
       {/* ───── HERO BANNER ───── */}
       <div className="relative pt-20 pb-16 overflow-hidden">

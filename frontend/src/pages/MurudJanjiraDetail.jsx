@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import JanjiraMap from '../components/JanjiraMap';
-import BahirjiChatbot from '../components/BahirjiChatbot';
 import { FaClock, FaRupeeSign, FaCalendarAlt, FaMapMarkerAlt, FaHistory, FaMonument, FaShip } from 'react-icons/fa';
 import janjiraImage from '../assets/janjira.jpg';
 
@@ -10,7 +9,6 @@ const MurudJanjiraDetail = () => {
     return (
         <div className="min-h-screen bg-royal-black text-gray-300 font-body">
             <Navbar />
-            <BahirjiChatbot />
 
             {/* --- CINEMATIC HERO SECTION --- */}
             <div className="relative h-[60vh] lg:h-[70vh] w-full">

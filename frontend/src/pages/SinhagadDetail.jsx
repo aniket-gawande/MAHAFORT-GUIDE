@@ -4,7 +4,6 @@ import SinhagadMap from '../components/Sinhagadmap';
 import CrowdStatusBadge from '../components/CrowdStatusBadge';
 import DownloadButton from '../components/DownloadButton';
 import EmergencyButton from '../components/EmergencyButton';
-import BahirjiChatbot from '../components/BahirjiChatbot';
 import sinhagad_hero from '../assets/sinhagad-hero.jpg';
 import { FaClock, FaRupeeSign, FaCalendarAlt, FaMapMarkerAlt, FaHistory, FaMonument, FaMountain, FaShieldAlt, FaUtensils, FaExclamationTriangle, FaStar, FaHiking, FaBus, FaInfoCircle } from 'react-icons/fa';
 
@@ -15,7 +14,6 @@ const SinhagadDetail = () => {
     return (
         <div className="min-h-screen bg-royal-black text-gray-300 font-body">
             <Navbar />
-            <BahirjiChatbot />
 
             {/* --- CINEMATIC HERO SECTION --- */}
             <div className="relative h-[60vh] lg:h-[75vh] w-full overflow-hidden">
@@ -44,7 +42,7 @@ const SinhagadDetail = () => {
                         ?? ?? ?? ?? ??
                     </p>
                     <p className="text-sm text-gray-400 mt-3 max-w-lg">
-                        "The Fort was won, but the Lion was lost" — The immortal words of Chhatrapati Shivaji Maharaj
+                        "The Fort was won, but the Lion was lost" ï¿½ The immortal words of Chhatrapati Shivaji Maharaj
                         upon hearing of Tanaji Malusare's supreme sacrifice
                     </p>
                 </div>
@@ -123,7 +121,7 @@ const SinhagadDetail = () => {
                                         Originally named <strong className="text-white">Kondhana</strong>, this ancient hill fort
                                         has witnessed centuries of war, conquest, and resilience. Perched strategically above the
                                         <strong className="text-saffron"> Bhor Ghat</strong> trade route, it was a prize coveted by
-                                        every power that ruled the Deccan — from the Koli chiefs who first fortified it, to the
+                                        every power that ruled the Deccan ï¿½ from the Koli chiefs who first fortified it, to the
                                         Bahmani Sultanate, the Adil Shahi dynasty, the Marathas, and the Mughals.
                                     </p>
                                     <p>
@@ -136,14 +134,14 @@ const SinhagadDetail = () => {
                                     {/* Timeline */}
                                     <div className="mt-8 space-y-6">
                                         <TimelineItem year="~1340" title="Early Fortification" desc="Koli chieftain Nag Naik built the first fortifications on Kondhana, establishing it as a strategic hilltop outpost in the Sahyadri mountains." />
-                                        <TimelineItem year="1647" title="Shivaji's Conquest" desc="A young Shivaji Maharaj captured Kondhana from the Adil Shahi dynasty — one of his earliest military victories that shaped the future of the Maratha Empire." />
+                                        <TimelineItem year="1647" title="Shivaji's Conquest" desc="A young Shivaji Maharaj captured Kondhana from the Adil Shahi dynasty ï¿½ one of his earliest military victories that shaped the future of the Maratha Empire." />
                                         <TimelineItem year="1649" title="Lost to Mughals" desc="Under the Treaty of Purandar, Kondhana was surrendered to the Mughals along with other strategic forts." />
-                                        <TimelineItem year="1670" title="Battle of Sinhagad" desc="The legendary night assault by Tanaji Malusare recaptured the fort. Shivaji renamed it 'Sinhagad' — The Lion's Fort — in Tanaji's honour." />
+                                        <TimelineItem year="1670" title="Battle of Sinhagad" desc="The legendary night assault by Tanaji Malusare recaptured the fort. Shivaji renamed it 'Sinhagad' ï¿½ The Lion's Fort ï¿½ in Tanaji's honour." />
                                         <TimelineItem year="1818" title="British Era" desc="The fort fell to the British East India Company during the Third Anglo-Maratha War, ending centuries of Maratha control." />
                                     </div>
 
                                     <p className="bg-white/5 p-6 rounded-xl border border-white/10 italic text-gray-200 mt-6">
-                                        "Sinhagad is not merely a hill fort — it is the very embodiment of Maratha courage, sacrifice,
+                                        "Sinhagad is not merely a hill fort ï¿½ it is the very embodiment of Maratha courage, sacrifice,
                                         and undying determination. Every stone on this fort whispers the story of Tanaji Malusare,
                                         the <strong className="text-saffron">Lion who gave his life so that Swarajya could live</strong>."
                                     </p>
@@ -156,7 +154,7 @@ const SinhagadDetail = () => {
                             <section className="relative border-l-2 border-red-500/30 pl-6 animate-fade-in">
                                 <h2 className="flex items-center gap-3 text-3xl font-cinematic font-bold text-white mb-6">
                                     <FaShieldAlt className="text-saffron" />
-                                    The Battle of Sinhagad — 1670 AD
+                                    The Battle of Sinhagad ï¿½ 1670 AD
                                 </h2>
                                 <div className="space-y-4 leading-relaxed">
                                     <p>
@@ -171,17 +169,17 @@ const SinhagadDetail = () => {
                                         <BattleCard
                                             icon=""
                                             title="The Ghorpad Strategy"
-                                            desc="Tanaji used a monitor lizard (ghorpad) named Yashwanti to scale the steep cliff face at night. The lizard gripped the rock, and ropes were tied to it — enabling the Maratha soldiers to climb the 'unclimbable' wall."
+                                            desc="Tanaji used a monitor lizard (ghorpad) named Yashwanti to scale the steep cliff face at night. The lizard gripped the rock, and ropes were tied to it ï¿½ enabling the Maratha soldiers to climb the 'unclimbable' wall."
                                         />
                                         <BattleCard
                                             icon=""
                                             title="Night Assault"
-                                            desc="Under the cover of a moonless night, Tanaji led 300 Mawla soldiers up the sheer cliff from the western side — a route deemed impossible, which is exactly why no Mughal guards were posted there."
+                                            desc="Under the cover of a moonless night, Tanaji led 300 Mawla soldiers up the sheer cliff from the western side ï¿½ a route deemed impossible, which is exactly why no Mughal guards were posted there."
                                         />
                                         <BattleCard
                                             icon=""
                                             title="The Final Duel"
-                                            desc="Tanaji confronted Udaybhan in fierce hand-to-hand combat. When his shield broke, Tanaji wrapped his turban around his arm and fought on — ultimately sacrificing his life to buy time for victory."
+                                            desc="Tanaji confronted Udaybhan in fierce hand-to-hand combat. When his shield broke, Tanaji wrapped his turban around his arm and fought on ï¿½ ultimately sacrificing his life to buy time for victory."
                                         />
                                         <BattleCard
                                             icon=""
@@ -197,17 +195,17 @@ const SinhagadDetail = () => {
                                             "?? ?? ?? ?? ??"
                                         </span>
                                         <span className="block text-lg text-white mt-3 font-medium">"The Fort was won, but the Lion was lost"</span>
-                                        <span className="block text-sm opacity-50 mt-2">— Chhatrapati Shivaji Maharaj</span>
+                                        <span className="block text-sm opacity-50 mt-2">ï¿½ Chhatrapati Shivaji Maharaj</span>
                                         <p className="mt-4 text-gray-300 text-sm italic max-w-lg mx-auto">
                                             Overwhelmed with grief, Shivaji Maharaj renamed the fort from Kondhana to
-                                            <strong className="text-saffron"> Sinhagad</strong> — "The Lion's Fort" —
+                                            <strong className="text-saffron"> Sinhagad</strong> ï¿½ "The Lion's Fort" ï¿½
                                             immortalizing Tanaji's sacrifice forever.
                                         </p>
                                     </div>
 
                                     {/* Tanaji Profile */}
                                     <div className="bg-white/5 border border-white/10 rounded-xl p-6 mt-6">
-                                        <h3 className="text-xl font-cinematic font-bold text-saffron mb-3"> Tanaji Malusare — The Lion of Sinhagad</h3>
+                                        <h3 className="text-xl font-cinematic font-bold text-saffron mb-3"> Tanaji Malusare ï¿½ The Lion of Sinhagad</h3>
                                         <div className="space-y-2 text-gray-300">
                                             <p>
                                                 A childhood friend and loyal Subhedar of Shivaji Maharaj, Tanaji volunteered
@@ -217,7 +215,7 @@ const SinhagadDetail = () => {
                                             <p>
                                                 When reminded of the wedding, Tanaji is said to have declared:
                                                 <span className="italic text-saffron"> "?? ??? ????? ?? ????"</span>
-                                                — <span className="italic text-white">"First the wedding of Kondhana, then Rayba's"</span>.
+                                                ï¿½ <span className="italic text-white">"First the wedding of Kondhana, then Rayba's"</span>.
                                             </p>
                                             <p>
                                                 His ultimate sacrifice remains one of the greatest acts of valor in Maratha history.
@@ -243,7 +241,7 @@ const SinhagadDetail = () => {
                                     />
                                     <AttractionCard
                                         title="Kalyan Darwaza"
-                                        desc="The south-facing gate towards Kalyan village — the very route used by Tanaji Malusare's forces during the legendary night assault of 1670."
+                                        desc="The south-facing gate towards Kalyan village ï¿½ the very route used by Tanaji Malusare's forces during the legendary night assault of 1670."
                                         mustSee={true}
                                     />
                                     <AttractionCard
@@ -253,7 +251,7 @@ const SinhagadDetail = () => {
                                     />
                                     <AttractionCard
                                         title="Kade Lot Point"
-                                        desc="A dramatic steep cliff offering breathtaking, vertigo-inducing views of the valley below. Historically used for executing prisoners — now a popular viewpoint."
+                                        desc="A dramatic steep cliff offering breathtaking, vertigo-inducing views of the valley below. Historically used for executing prisoners ï¿½ now a popular viewpoint."
                                         mustSee={true}
                                     />
                                     <AttractionCard
@@ -291,7 +289,7 @@ const SinhagadDetail = () => {
                                     <div>
                                         <h3 className="text-xl font-cinematic font-bold text-saffron mb-4">Must-Try Dishes at the Top</h3>
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                            <FoodCard name="Pithla Bhakri" type="Veg" price="?60-100" desc="The iconic Sinhagad dish — spiced besan curry with thick jowar/bajri bhakri. No visit is complete without this." />
+                                            <FoodCard name="Pithla Bhakri" type="Veg" price="?60-100" desc="The iconic Sinhagad dish ï¿½ spiced besan curry with thick jowar/bajri bhakri. No visit is complete without this." />
                                             <FoodCard name="Kanda Bhaji" type="Veg" price="?40-60" desc="Crispy onion fritters served piping hot with chutney. The mountain air makes them taste even better!" />
                                             <FoodCard name="Matka Dahi" type="Veg" price="?30-50" desc="Thick, creamy curd set in an earthen pot (matka). The perfect cooling treat after the trek." />
                                         </div>
@@ -300,9 +298,9 @@ const SinhagadDetail = () => {
                                     <div>
                                         <h3 className="text-xl font-cinematic font-bold text-saffron mb-4">Other Local Delights</h3>
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                            <FoodCard name="Zunka Bhakri" type="Veg" price="?50-80" desc="Dry besan preparation with garlic and green chillies, served with bhakri — a staple Maratha warrior meal." />
+                                            <FoodCard name="Zunka Bhakri" type="Veg" price="?50-80" desc="Dry besan preparation with garlic and green chillies, served with bhakri ï¿½ a staple Maratha warrior meal." />
                                             <FoodCard name="Corn (Bhutta)" type="Veg" price="?20-30" desc="Roasted over charcoal with lemon and spices. A monsoon-trek must-have." />
-                                            <FoodCard name="Chai" type="Beverage" price="?10-20" desc="Hot ginger-cardamom chai at the top — nothing beats this after a steep climb." />
+                                            <FoodCard name="Chai" type="Beverage" price="?10-20" desc="Hot ginger-cardamom chai at the top ï¿½ nothing beats this after a steep climb." />
                                         </div>
                                     </div>
 
@@ -345,7 +343,7 @@ const SinhagadDetail = () => {
                                                 difficulty="Hard"
                                                 distance="3.5 km"
                                                 time="90-120 min"
-                                                desc="The historic route from the south side — the very path Tanaji's forces climbed. Steeper, more challenging, but deeply rewarding."
+                                                desc="The historic route from the south side ï¿½ the very path Tanaji's forces climbed. Steeper, more challenging, but deeply rewarding."
                                             />
                                         </div>
                                     </div>
@@ -397,7 +395,7 @@ const SinhagadDetail = () => {
                                                 "Carry 1-2 litres of water",
                                                 "Light raincoat during monsoon (June-Sept)",
                                                 "Sunscreen and cap for summer treks",
-                                                "Cash — limited network for UPI at top",
+                                                "Cash ï¿½ limited network for UPI at top",
                                                 "Start early morning to avoid afternoon heat",
                                                 "Torch/headlamp if trekking for sunrise",
                                                 "Carry a small first-aid kit"
@@ -412,17 +410,17 @@ const SinhagadDetail = () => {
                             </section>
                         )}
 
-                        {/* Safety Alerts — always visible */}
+                        {/* Safety Alerts ï¿½ always visible */}
                         <section className="bg-red-500/5 border border-red-500/20 rounded-2xl p-6">
                             <h3 className="flex items-center gap-3 text-xl font-cinematic font-bold text-red-400 mb-4">
                                 <FaExclamationTriangle /> Safety Alerts
                             </h3>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 {[
-                                    { msg: 'Avoid Kade Lot cliff edge — no railings, extremely dangerous', season: 'All year' },
-                                    { msg: 'Ghat road can be slippery in monsoon — drive carefully', season: 'June-Sept' },
+                                    { msg: 'Avoid Kade Lot cliff edge ï¿½ no railings, extremely dangerous', season: 'All year' },
+                                    { msg: 'Ghat road can be slippery in monsoon ï¿½ drive carefully', season: 'June-Sept' },
                                     { msg: 'Private vehicles may be restricted on weekends', season: 'Weekends/Holidays' },
-                                    { msg: 'Carry water — limited availability during hot summer', season: 'March-May' }
+                                    { msg: 'Carry water ï¿½ limited availability during hot summer', season: 'March-May' }
                                 ].map((alert, i) => (
                                     <div key={i} className="flex items-start gap-3">
                                         <span className="text-red-400 mt-1"></span>
@@ -434,8 +432,8 @@ const SinhagadDetail = () => {
                                 ))}
                             </div>
                             <div className="mt-4 pt-4 border-t border-red-500/20 flex flex-wrap gap-6 text-sm">
-                                <span className="text-gray-300"><strong className="text-white">Police:</strong> Haveli PS — 020-26932100</span>
-                                <span className="text-gray-300"><strong className="text-white">Medical:</strong> Pune Ambulance — 108</span>
+                                <span className="text-gray-300"><strong className="text-white">Police:</strong> Haveli PS ï¿½ 020-26932100</span>
+                                <span className="text-gray-300"><strong className="text-white">Medical:</strong> Pune Ambulance ï¿½ 108</span>
                                 <span className="text-gray-300"><strong className="text-white">Emergency:</strong> 112</span>
                             </div>
                         </section>
@@ -447,7 +445,7 @@ const SinhagadDetail = () => {
                             </h2>
                             <div className="bg-white/5 border border-white/10 rounded-xl p-6">
                                 <p className="italic text-xl text-gray-200 text-center mb-6">
-                                    "Sinhagad is where history comes alive — every step on this fort makes you feel the courage of Tanaji Malusare."
+                                    "Sinhagad is where history comes alive ï¿½ every step on this fort makes you feel the courage of Tanaji Malusare."
                                 </p>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div>
@@ -463,7 +461,7 @@ const SinhagadDetail = () => {
                                     <div>
                                         <h4 className="text-saffron font-bold text-sm uppercase tracking-wider mb-3">Pro Tips</h4>
                                         <ul className="space-y-2">
-                                            {['Visit on weekdays to avoid crowd', 'Start early for sunrise views', 'Carry cash — poor network at top', 'Try the Matka Dahi after your trek', 'Hire a local guide for full history'].map((item, i) => (
+                                            {['Visit on weekdays to avoid crowd', 'Start early for sunrise views', 'Carry cash ï¿½ poor network at top', 'Try the Matka Dahi after your trek', 'Hire a local guide for full history'].map((item, i) => (
                                                 <li key={i} className="flex items-center gap-2 text-gray-300">
                                                     <span className="text-saffron"></span> {item}
                                                 </li>
@@ -491,7 +489,7 @@ const SinhagadDetail = () => {
                                     <FaMapMarkerAlt className="text-saffron" /> Visiting Information
                                 </h3>
                                 <ul className="space-y-6">
-                                    <InfoItem icon={FaClock} label="Timings" value="Open 24 hours. Best to visit 6 AM – 6 PM." />
+                                    <InfoItem icon={FaClock} label="Timings" value="Open 24 hours. Best to visit 6 AM ï¿½ 6 PM." />
                                     <InfoItem icon={FaRupeeSign} label="Entry Fee" value="Free. Parking: ?20-50." />
                                     <InfoItem icon={FaCalendarAlt} label="Best Time" value="Monsoon (Jun-Sep) for greenery. Winter (Oct-Feb) for clear views." />
                                     <InfoItem icon={FaMountain} label="Trek" value="2.7 km from base. 60-90 min. Medium difficulty." />

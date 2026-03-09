@@ -20,9 +20,14 @@ import ajinkyataraImg from '../assets/ajinkyatara.webp';
 import suvarnadurgImg from '../assets/suvarnadurg.webp';
 import tikonaImg from '../assets/tikona.webp';
 import vasotaImg from '../assets/vasota.webp';
+import salherImg from '../assets/salher.webp';
+import korigadImg from '../assets/korigad.webp';
+import mahuliImg from '../assets/mahuli.webp';
+import ghangadImg from '../assets/ghangad.webp';
+import kulabaImg from '../assets/kulaba.webp';
 
 /**
- * 🏰 Maharashtra Forts Database — 21 forts
+ * 🏰 Maharashtra Forts Database — 26 forts
  * 
  * 6 forts have dedicated detail pages (hasDetailPage: true).
  * 10 forts have rich detailed data in fortDetailedData.js.
@@ -482,6 +487,113 @@ export const staticForts = [
         historicalSignificance: 'Shivaji Maharaj captured it from Bijapur in 1656, remote jungle stronghold',
         trek: { routes: [{ difficulty: 'Difficult' }] },
         history: { builtBy: 'Shilahara dynasty', year: '12th century' }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ 5 MORE FORTS (Batch 4) ━━━━━━━━━━━━━━━━━━
+
+    // 22. Salher Fort
+    {
+        _id: 'salher',
+        name: 'Salher Fort',
+        location: { district: 'Nashik', state: 'Maharashtra' },
+        difficulty: 'Difficult',
+        type: 'Hill Fort',
+        description: 'The tallest fort in Maharashtra at 1,567 m. Site of the legendary Battle of Salher (1672) — the first large-scale open-field victory of the Marathas against the Mughals. Its twin, Mulher, stands nearby creating a formidable pair.',
+        images: [salherImg],
+        rating: 4.6,
+        visitors: 5000,
+        crowdStatus: 'low',
+        bestTimeToVisit: 'October to February',
+        entryFee: 'Free',
+        timings: '24 hours (open fort)',
+        altitude: '1,567 m',
+        historicalSignificance: 'Tallest fort in Maharashtra, Battle of Salher (1672) — first Maratha open-field victory',
+        trek: { routes: [{ difficulty: 'Difficult' }] },
+        history: { builtBy: 'Yadava dynasty', year: '12th century' }
+    },
+
+    // 23. Korigad Fort
+    {
+        _id: 'korigad',
+        name: 'Korigad Fort',
+        location: { district: 'Pune', state: 'Maharashtra' },
+        difficulty: 'Easy',
+        type: 'Hill Fort',
+        description: 'A beginner-friendly fort near Lonavala with panoramic views of Pawna Lake and the surrounding Sahyadri forts. Known for its well-preserved entrance gate, ancient Koraidevi temple, and two beautiful lakes on the summit plateau.',
+        images: [korigadImg],
+        rating: 4.3,
+        visitors: 10000,
+        crowdStatus: 'moderate',
+        bestTimeToVisit: 'September to February',
+        entryFee: 'Free',
+        timings: '24 hours (open fort)',
+        altitude: '929 m',
+        historicalSignificance: 'Captured by Shivaji Maharaj in 1657, controlled the Bor Ghat approaches',
+        trek: { routes: [{ difficulty: 'Easy' }] },
+        history: { builtBy: 'Pre-Shivaji era (fortified by Marathas)', year: 'Pre-17th century' }
+    },
+
+    // 24. Mahuli Fort
+    {
+        _id: 'mahuli',
+        name: 'Mahuli Fort',
+        location: { district: 'Thane', state: 'Maharashtra' },
+        difficulty: 'Difficult',
+        type: 'Hill Fort',
+        description: 'The tallest fort in Thane district at 2,815 ft and the closest serious trekking challenge to Mumbai. A triple-peaked fort (Mahuli, Bhandargad, Palasgad) surrounded by dense jungle with rock-climbing sections near the summit.',
+        images: [mahuliImg],
+        rating: 4.5,
+        visitors: 6000,
+        crowdStatus: 'low',
+        bestTimeToVisit: 'October to February',
+        entryFee: 'Free',
+        timings: '24 hours (open fort)',
+        altitude: '858 m (2,815 ft)',
+        historicalSignificance: 'Maratha frontier fort guarding the Thane-Nashik corridor, captured 1658',
+        trek: { routes: [{ difficulty: 'Difficult' }] },
+        history: { builtBy: 'Bahmani dynasty (captured by Marathas)', year: '15th century' }
+    },
+
+    // 25. Ghangad Fort
+    {
+        _id: 'ghangad',
+        name: 'Ghangad Fort',
+        location: { district: 'Pune', state: 'Maharashtra' },
+        difficulty: 'Moderate',
+        type: 'Hill Fort',
+        description: 'A scenic fort near Tamhini Ghat famous for its spectacular monsoon views and proximity to Tailbaila pinnacle. The trek through Tamhini\'s lush green ghats is among the most beautiful monsoon trails in the Sahyadris.',
+        images: [ghangadImg],
+        rating: 4.3,
+        visitors: 7000,
+        crowdStatus: 'moderate',
+        bestTimeToVisit: 'July to February',
+        entryFee: 'Free',
+        timings: '24 hours (open fort)',
+        altitude: '945 m',
+        historicalSignificance: 'Maratha outpost fort guarding the Tamhini Ghat approach to Pune',
+        trek: { routes: [{ difficulty: 'Moderate' }] },
+        history: { builtBy: 'Pre-Maratha era (used by Shivaji Maharaj)', year: 'Pre-17th century' }
+    },
+
+    // 26. Kulaba Fort (Kolaba)
+    {
+        _id: 'kulaba',
+        name: 'Kulaba Fort',
+        location: { district: 'Raigad', state: 'Maharashtra' },
+        difficulty: 'Easy',
+        type: 'Sea Fort',
+        description: 'A unique sea fort at Alibaug that you can walk to during low tide! Built by Shivaji Maharaj in 1680, Kulaba was the headquarters of the legendary Maratha admiral Kanhoji Angre. Its iconic gateway rises dramatically from the Arabian Sea.',
+        images: [kulabaImg],
+        rating: 4.4,
+        visitors: 12000,
+        crowdStatus: 'moderate',
+        bestTimeToVisit: 'October to May',
+        entryFee: 'Free',
+        timings: 'Low tide access only (check tide tables)',
+        altitude: 'Sea level',
+        historicalSignificance: 'Built by Shivaji Maharaj (1680), Kanhoji Angre\'s naval headquarters',
+        trek: { routes: [{ difficulty: 'Easy' }] },
+        history: { builtBy: 'Chhatrapati Shivaji Maharaj', year: '1680' }
     },
 
 

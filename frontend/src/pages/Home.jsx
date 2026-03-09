@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { getAllForts } from '../services/api'; // Ensure this path is correct
 import FortCard from '../components/FortCard';
 import Navbar from '../components/Navbar';
-import BahirjiChatbot from '../components/BahirjiChatbot';
 import { staticForts } from '../data/staticForts';
 import { FaChevronRight } from 'react-icons/fa';
 
@@ -67,7 +66,6 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-royal-black text-white font-body selection:bg-saffron selection:text-black">
       <Navbar />
-      <BahirjiChatbot />
 
       {/* --- HERO SECTION --- */}
       <div className="relative h-screen w-full overflow-hidden flex items-center">

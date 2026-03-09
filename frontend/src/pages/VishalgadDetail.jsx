@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import VishalgadMap from '../components/VishalgadMap';
-import BahirjiChatbot from '../components/BahirjiChatbot';
 import { FaClock, FaRupeeSign, FaCalendarAlt, FaMapMarkerAlt, FaHistory, FaMonument, FaMountain, FaShieldAlt, FaUtensils, FaExclamationTriangle, FaStar } from 'react-icons/fa';
 import vishalgadImage from '../assets/vishalgad-hero.jpg';
 
@@ -12,7 +11,6 @@ const VishalgadDetail = () => {
     return (
         <div className="min-h-screen bg-royal-black text-gray-300 font-body">
             <Navbar />
-            <BahirjiChatbot />
 
             {/* --- CINEMATIC HERO SECTION --- */}
             <div className="relative h-[60vh] lg:h-[70vh] w-full">

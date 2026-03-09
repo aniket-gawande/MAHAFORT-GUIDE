@@ -1,11 +1,10 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import BahirjiChatbot from '../components/BahirjiChatbot';
 import { Link } from 'react-router-dom';
 import {
   FaShieldAlt, FaUsers, FaLinkedin, FaGithub,
   FaMountain, FaMapMarkedAlt, FaRoute, FaBookOpen,
-  FaRobot, FaChevronRight, FaFortAwesome, FaStar,
+  FaChevronRight, FaFortAwesome, FaStar,
   FaHiking, FaCamera, FaHistory, FaGlobeAsia
 } from 'react-icons/fa';
 
@@ -50,7 +49,7 @@ const About = () => {
   const features = [
     { icon: FaMountain, title: "4 Forts Documented", desc: "In-depth coverage of Sinhagad, Murud-Janjira, Sindhudurg, and Vishalgad — hill forts and sea forts of the Maratha Empire." },
     { icon: FaRoute, title: "Trek Routes & Itineraries", desc: "Detailed step-by-step trekking guides with difficulty ratings, timelines, and route maps for every fort." },
-    { icon: FaRobot, title: "AI Guide - Bahirji Naik", desc: "Chat with our AI assistant inspired by Shivaji Maharaj's legendary spy chief for instant fort information." },
+    { icon: FaBookOpen, title: "Smart Trip Planner", desc: "Plan your multi-fort trek with our intelligent trip planner — auto-calculates budgets, timelines, and difficulty levels." },
     { icon: FaMapMarkedAlt, title: "Interactive Maps", desc: "Live maps with GPS coordinates, nearby attractions, food stalls, parking locations and trail markers." },
     { icon: FaCamera, title: "Photo Spots & Tips", desc: "Best photography locations, golden hour timings, and composition tips for each fort." },
     { icon: FaHistory, title: "Rich Historical Context", desc: "Battle histories, architectural details, and stories of the Maratha warriors who defended these forts." },
@@ -66,7 +65,6 @@ const About = () => {
   return (
     <div className="min-h-screen bg-royal-black text-gray-300 font-body selection:bg-saffron selection:text-black">
       <Navbar />
-      <BahirjiChatbot />
 
       {/* ═══════════════════════════════════════════
           HERO SECTION - CINEMATIC MISSION STATEMENT
@@ -230,14 +228,13 @@ const About = () => {
 
                 <div className="flex items-start gap-3 sm:gap-4">
                   <div className="bg-saffron/10 p-2 sm:p-3 rounded-xl text-saffron mt-1 flex-shrink-0">
-                    <FaRobot className="text-lg sm:text-xl" />
+                    <FaBookOpen className="text-lg sm:text-xl" />
                   </div>
                   <div>
-                    <h3 className="text-lg sm:text-xl font-cinematic font-bold text-white mb-1 sm:mb-2">AI-Powered Innovation</h3>
+                    <h3 className="text-lg sm:text-xl font-cinematic font-bold text-white mb-1 sm:mb-2">Comprehensive Fort Data</h3>
                     <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
-                      Meet <strong className="text-saffron">Bahirji Naik</strong> — our AI chatbot named after
-                      Shivaji Maharaj's legendary spy chief. Ask him anything about forts, routes, history,
-                      or plan your entire trek in seconds.
+                      Every fort features detailed <strong className="text-saffron">trek routes, food guides, safety alerts,
+                      budget breakdowns</strong>, and historical timelines — everything you need for a perfect fort trek.
                     </p>
                   </div>
                 </div>

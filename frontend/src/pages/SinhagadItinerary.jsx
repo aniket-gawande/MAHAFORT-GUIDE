@@ -4,7 +4,6 @@ import { MdLocationOn } from 'react-icons/md';
 import { jsPDF } from 'jspdf';
 import SinhagadMap from '../components/Sinhagadmap';
 import Navbar from '../components/Navbar';
-import BahirjiChatbot from '../components/BahirjiChatbot';
 import marathaFlag from '../assets/svg/maratha-flag.svg';
 import heroBg from '../assets/hero-fort.jpg';
 import sinhagadData from '../data/sinhagad.json';
@@ -225,7 +224,6 @@ const SinhagadItinerary = () => {
     return (
         <div className="min-h-screen bg-royal-black text-white font-body">
             <Navbar />
-            <BahirjiChatbot />
 
             {/* === HERO SECTION WITH FORT IMAGE IN DARK SHADOWS === */}
             <div className="relative h-screen w-full overflow-hidden flex items-center">

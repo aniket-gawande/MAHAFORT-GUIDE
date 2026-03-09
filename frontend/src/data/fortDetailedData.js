@@ -1814,6 +1814,605 @@ const fortDetailedData = {
             rating: 4.7,
             reviewCount: '5,000+'
         }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ 16. SALHER FORT ━━━━━━━━━━━━━━━━━━
+    salher: {
+        introduction: `Salher is the tallest fort in Maharashtra at a staggering 1,567 metres — a mountain 
+            fortress that literally touches the clouds. But height is not even its greatest claim to fame. 
+            In February 1672, the Battle of Salher saw Maratha generals Moropant Pingle and Prataprao Gujar 
+            achieve what was considered impossible — they defeated a massive Mughal army in an open-field 
+            pitched battle, the first such victory for the Marathas. This was not a guerrilla raid or an 
+            ambush — it was a head-on clash of armies, and the Marathas won decisively, capturing over 
+            6,000 horses and vast treasure. Together with its twin Mulher, Salher dominates the Baglan 
+            region of northern Maharashtra.`,
+
+        quote: {
+            text: "साल्हेर — महाराष्ट्रातील सर्वात उंच किल्ला, मराठ्यांच्या पहिल्या रणांगण विजयाचा साक्षीदार",
+            attribution: "On Salher's twin distinction — height and historic victory"
+        },
+
+        timeline: [
+            { year: '12th Century', title: 'Yadava Construction', desc: 'The Yadava dynasty of Devagiri built Salher as a frontier fort protecting their northern territories. The massive fortification walls and water systems date to this period.' },
+            { year: '1636', title: 'Mughal Control', desc: 'Salher came under Mughal control as part of the Deccan campaigns. The fort served as a garrison controlling the Baglan region and trade routes.' },
+            { year: '1671', title: 'Captured by Marathas', desc: 'Maratha forces captured Salher from the Mughals, asserting Maratha dominance in the northern Sahyadri region.' },
+            { year: 'Feb 1672', title: '⚔️ Battle of Salher', desc: 'The legendary battle! Moropant Pingle and Prataprao Gujar defeated a 25,000-strong Mughal army under Ikhlas Khan and Bahlol Khan in open combat. 6,000+ horses captured. A turning point in Maratha military history.' },
+            { year: '1818', title: 'British Takeover', desc: 'Salher was ceded to the British after the fall of the Maratha Empire. Its extreme altitude and remoteness meant the British quickly abandoned it.' },
+            { year: 'Present', title: 'Adventure Trekking', desc: 'Salher is now one of Maharashtra\'s most challenging and rewarding treks, attracting serious trekkers seeking the highest fort in the state.' }
+        ],
+
+        landmarks: [
+            { title: 'Summit Plateau (1,567 m)', desc: 'The highest fort point in Maharashtra. On clear days, the views extend across the entire northern Sahyadri range — Mulher, Hargad, Salota, and hills stretching to Gujarat. Cloud-level experience.', mustSee: true },
+            { title: 'Massive Fortification Walls', desc: 'Enormous stone walls with bastions ring the fort at multiple levels. The scale of construction at this altitude is awe-inspiring — some walls are 15+ feet thick.', mustSee: true },
+            { title: 'Parashuram Temple', desc: 'An ancient temple dedicated to Lord Parashuram at the summit. Pilgrims visit during Mahashivratri. The temple is remarkably well-preserved for its age and altitude.', mustSee: true },
+            { title: 'Mulher Twin Fort', desc: 'Salher\'s twin fort visible across the valley. Together they controlled the entire Baglan region. Mulher can be trekked separately or combined with Salher for a 2-day adventure.', mustSee: true },
+            { title: 'Rock-Cut Water Cisterns', desc: 'Dozens of water tanks carved into rock — essential for sustaining the large garrison. Some are massive, holding thousands of litres even in dry season.', mustSee: false },
+            { title: 'Battle of Salher Viewpoint', desc: 'The plateau below the fort where the 1672 battle took place is visible from the ramparts. Standing here, you can visualize the two armies clashing.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Carry Your Own', type: 'All', price: '₹0', desc: 'Salher is remote — no food stalls on the fort or trail. Carry all meals: thepla, trail mix, energy bars, fruits, and plenty of water.' },
+            { name: 'Salher Wadi Village Meals', type: 'Veg', price: '₹80-150', desc: 'Simple home-cooked meals at Salher Wadi or Waghamba base village. Dal-rice, bhakri-pithla. Call ahead to arrange — not always available.' },
+            { name: 'Satana Town', type: 'Veg / Non-Veg', price: '₹60-150', desc: 'The nearest proper town (30 km). Basic restaurants and dhabas for a pre/post-trek meal. Stock up on supplies here.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Via Waghamba Village (Standard)', difficulty: 'Hard', distance: '6 km', time: '4-5 hours', desc: 'The most common route. Steep ascent through forest and exposed rock sections. The final stretch has some rock scrambling. Well-used trail but demanding.' },
+            { icon: '⛰️', title: 'Via Salher Wadi', difficulty: 'Hard', distance: '5 km', time: '3-4 hours', desc: 'Slightly shorter approach from the eastern side through Salher Wadi village. Steeper gradient but more direct. Local villagers can guide.' },
+            { icon: '🏔️', title: 'Salher + Mulher Combined', difficulty: 'Expert', distance: '15+ km', time: '2 days', desc: 'The ultimate Baglan adventure — trek Salher on day one, descend to the saddle, and climb Mulher on day two. Requires camping in the valley between.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Car', icon: '🚗', desc: 'Drive to Waghamba/Salher Wadi village. From Nashik: ~130 km (3.5 hrs) via Satana. From Mumbai: ~300 km (7 hrs). Last 10 km is rough village road.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'ST bus from Nashik to Satana town. From Satana, shared autos or local transport to Waghamba village. Very infrequent — private vehicle recommended.' },
+            { mode: 'By Train', icon: '🚂', desc: 'Nearest station: Manmad (100 km) on Mumbai-Delhi line. Or Nashik Road station. Then road transport to Satana and onwards to base village.' }
+        ],
+
+        trekEssentials: [
+            'Strong trekking shoes with ankle support — rocky, steep terrain',
+            'Carry ALL food and 3+ litres water per person',
+            'Camping gear if doing Salher-Mulher combined trek',
+            'Headlamp — start early for comfortable climbing',
+            'Warm layers — temperature drops significantly at 1,567 m',
+            'No mobile network — carry offline maps',
+            'Go with experienced group — trail not always clear',
+            'First aid kit — nearest medical help is 30+ km away',
+            'Allow full day — the trek is long and demanding'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Rock scrambling section near summit — use three-point contact', season: 'All year' },
+            { msg: 'Altitude makes weather unpredictable — clouds can roll in fast', season: 'All year' },
+            { msg: 'Extremely slippery in monsoon — rock patches become waterfalls', season: 'June-Sept' },
+            { msg: 'No mobile network — carry offline maps and inform someone of your plan', season: 'All year' },
+            { msg: 'Temperature can drop to 5°C at summit — carry warm clothes', season: 'Nov-Feb' }
+        ],
+
+        budget: [
+            { label: 'Transport (from Nashik)', value: '₹300-600' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Village Meal', value: '₹80-150' },
+            { label: 'Total', value: '₹380-750', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Food', available: false, detail: 'Carry everything' },
+            { label: 'Water', available: false, detail: 'Carry 3+ litres' },
+            { label: 'Toilets', available: false, detail: 'None on trail/fort' },
+            { label: 'Mobile Network', available: false, detail: 'Zero connectivity' },
+            { label: 'Camping', available: true, detail: 'Summit plateau' },
+            { label: 'Vehicle Access', available: false, detail: 'Trek only' }
+        ],
+
+        quickFacts: [
+            { label: 'Original Name', value: 'Salher (Salyagiri)' },
+            { label: 'District', value: 'Nashik (Baglan taluka)' },
+            { label: 'Altitude', value: '1,567 m (5,141 ft) — HIGHEST' },
+            { label: 'Fort Type', value: 'Hill Fort (Giri Durg)' },
+            { label: 'Built By', value: 'Yadava dynasty' },
+            { label: 'Famous For', value: 'Battle of Salher (1672)' },
+            { label: 'Twin Fort', value: 'Mulher' },
+            { label: 'Battle Result', value: '6,000+ horses captured' },
+            { label: 'Kids Appropriate', value: 'No — expert trek only' },
+            { label: 'Best Combined', value: 'Mulher + Salota + Hargad' }
+        ],
+
+        reviews: {
+            quote: "Standing at 1,567 metres on Salher — the highest fort in Maharashtra — with clouds at your feet and knowing this is where the Marathas proved they could defeat the Mughals in open battle... it's transcendent.",
+            positives: [
+                'Highest fort in Maharashtra — literally above the clouds',
+                'Battle of Salher history is spine-tingling',
+                'Remote and uncrowded — true wilderness',
+                'Massive fortification scale is jaw-dropping',
+                'Mulher twin fort adds to the adventure'
+            ],
+            proTips: [
+                'Camp at summit for sunrise above the clouds',
+                'Combine with Mulher for a legendary 2-day trek',
+                'Visit in Oct-Nov for clearest skies and views',
+                'Start trek by 5 AM for comfortable climbing',
+                'Carry warm clothes — it gets cold at the top'
+            ],
+            rating: 4.6,
+            reviewCount: '4,000+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ 17. KORIGAD FORT ━━━━━━━━━━━━━━━━━━
+    korigad: {
+        introduction: `Korigad (also called Koraigad) is the perfect "first fort" for any Sahyadri 
+            beginner. Just 20 km from Lonavala, this compact hill fort at 929 metres delivers an outsized 
+            experience — a quick 45-minute trek rewards you with sweeping views of Pawna Lake, the distant 
+            shapes of Tikona, Tung, and Lohagad forts, and a beautiful summit plateau with an ancient 
+            Koraidevi temple and two rock-cut lakes. Shivaji Maharaj captured Korigad in 1657 during his 
+            northern Sahyadri campaign, and the well-preserved entrance gate still shows Maratha-era 
+            fortification engineering. If you want to introduce someone to fort trekking, Korigad is 
+            the answer.`,
+
+        quote: {
+            text: "कोरीगड — सह्याद्रीतला पहिला किल्ला ट्रेक, पवनाच्या काठावरचं रत्न",
+            attribution: "On Korigad being the ideal beginner fort trek"
+        },
+
+        timeline: [
+            { year: 'Pre-1600s', title: 'Ancient Origins', desc: 'The Koraidevi temple at the summit suggests the hill was a sacred site long before fortification. The original fort builders are unknown.' },
+            { year: '1657', title: 'Captured by Shivaji Maharaj', desc: 'Shivaji Maharaj captured Korigad during his sweep of the northern Sahyadri forts, alongside Lohagad, Tikona, and Tung — securing the Maval region.' },
+            { year: '1660s', title: 'Maratha Outpost', desc: 'Korigad served as an outpost controlling the Bor Ghat approaches. The fortified gate and bastions were strengthened during Maratha rule.' },
+            { year: '1818', title: 'British Annexation', desc: 'The fort was ceded to the British. A battle fought here during the Anglo-Maratha wars left damage visible on the main gate.' },
+            { year: 'Present', title: 'Popular Trek', desc: 'Korigad is now one of the most popular beginner treks near Mumbai and Pune, especially combined with Pawna Lake camping.' }
+        ],
+
+        landmarks: [
+            { title: 'Koraidevi Temple', desc: 'Ancient hilltop temple dedicated to Goddess Korai at the summit. Small but beautifully maintained with fresh flowers and tilak. Peaceful atmosphere with fort views from the temple steps.', mustSee: true },
+            { title: 'Pawna Lake Viewpoint', desc: 'The southern rampart offers stunning views of Pawna Lake below, with Tikona and Tung forts visible across the water. Sunrise here paints the lake gold.', mustSee: true },
+            { title: 'Main Entrance Gate', desc: 'Well-preserved Maratha-era fortified gate with carved brackets and stone lintel. Battle damage from the 1818 Anglo-Maratha conflict is still visible.', mustSee: true },
+            { title: 'Twin Summit Lakes', desc: 'Two beautiful rock-cut water tanks on the summit plateau. During monsoon they fill up and reflect the cloudy sky — perfect photo spots.', mustSee: true },
+            { title: 'Bastions & Ramparts', desc: 'Intact stone ramparts with views in all directions. The cannon platforms give a sense of the fort\'s strategic importance.', mustSee: false },
+            { title: 'Cave Shelters', desc: 'Rock-cut caves near the base used as shelters. Simple but functional — some trekkers still use them for overnight stays.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Pawna Lake Camp Food', type: 'Veg / Non-Veg', price: 'Included in camp', desc: 'Most visitors combine Korigad with Pawna camping. Camp operators serve BBQ dinner, starters, and breakfast. Book ahead for weekends.' },
+            { name: 'Maggi & Chai', type: 'Veg', price: '₹30-60', desc: 'Available at the base village during weekends. The classic trekker post-trek reward.' },
+            { name: 'Peth Village Meals', type: 'Veg', price: '₹60-100', desc: 'Simple home-cooked meals at the base village. Pithla-bhakri and dal-rice — hearty trek fuel.' },
+            { name: 'Lonavala Chikki', type: 'Sweet', price: '₹50-100/pack', desc: 'Buy Lonavala\'s famous jaggery-nut brittle on the way back. Maganlal or Cooper\'s are the best brands.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Via Peth Shahpur Village', difficulty: 'Easy', distance: '1.5 km', time: '30-45 min', desc: 'The standard route. A gentle climb through light forest leading to the main gate. Even beginners can do this comfortably. Well-marked path.' },
+            { icon: '⛰️', title: 'Via Ambavne Side', difficulty: 'Easy-Medium', distance: '2 km', time: '45-60 min', desc: 'Slightly longer approach from the eastern side. Less crowded and more scenic. Passes through farm fields before the forested ascent.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Car', icon: '🚗', desc: 'Drive to Peth Shahpur village via Lonavala-Pawna road. From Pune: ~65 km (1.5 hrs). From Mumbai: ~120 km (2.5 hrs). Parking at the village.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'ST bus to Lonavala from Mumbai/Pune. From Lonavala, shared auto or taxi to Peth Shahpur (20 km). Not very frequent — car/bike preferred.' },
+            { mode: 'By Bike', icon: '🏍️', desc: 'Very popular weekend ride from Pune. Scenic route via Paud Ghat or Lonavala. Park at Peth Shahpur and trek. Often combined with Pawna Lake ride.' }
+        ],
+
+        trekEssentials: [
+            'Basic shoes are fine — trail is well-maintained',
+            'Carry 1 litre water — short trek',
+            'Sunscreen and hat in summer — summit is exposed',
+            'Camera — Pawna views are stunning',
+            'Budget 1-1.5 hours for the entire fort',
+            'Combine with Pawna Lake camping for a full weekend',
+            'Monsoon: light rain jacket — the fort is beautiful in rain',
+            'Cash for base village food — no UPI'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Steps near the main gate can be slippery in rain', season: 'June-Sept' },
+            { msg: 'Summit edges have no railings at some points', season: 'All year' },
+            { msg: 'Carry water — no reliable source on the fort', season: 'All year' }
+        ],
+
+        budget: [
+            { label: 'Transport (from Pune)', value: '₹100-300' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Food', value: '₹60-100' },
+            { label: 'Pawna Camping (opt.)', value: '₹800-1500' },
+            { label: 'Total (trek only)', value: '₹160-400', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Food Stalls', available: true, detail: 'Base village (weekends)' },
+            { label: 'Drinking Water', available: true, detail: 'Base village' },
+            { label: 'Toilets', available: false, detail: 'None on fort' },
+            { label: 'Parking', available: true, detail: 'Peth Shahpur village' },
+            { label: 'Mobile Network', available: true, detail: 'Okay at base, weak on top' },
+            { label: 'Camping', available: true, detail: 'Pawna Lake nearby' }
+        ],
+
+        quickFacts: [
+            { label: 'Also Known As', value: 'Koraigad' },
+            { label: 'District', value: 'Pune (Maval taluka)' },
+            { label: 'Altitude', value: '929 m (3,048 ft)' },
+            { label: 'Fort Type', value: 'Hill Fort (Giri Durg)' },
+            { label: 'Captured By', value: 'Shivaji Maharaj (1657)' },
+            { label: 'Summit Temple', value: 'Koraidevi Temple' },
+            { label: 'Summit Lakes', value: 'Two rock-cut tanks' },
+            { label: 'Difficulty', value: 'Easy — perfect for beginners' },
+            { label: 'Kids Appropriate', value: 'Yes (age 6+)' },
+            { label: 'Best Combined', value: 'Pawna Lake + Tikona + Lohagad' }
+        ],
+
+        reviews: {
+            quote: "Korigad is the gateway to fort trekking. A short, sweet trek with a gorgeous Pawna Lake panorama, an ancient temple, and two summit lakes — all in under an hour. Perfect first fort!",
+            positives: [
+                'Perfect beginner fort — short, easy, and rewarding',
+                'Pawna Lake views are spectacular',
+                'Well-preserved gate and temple add historical depth',
+                'Twin summit lakes are unique',
+                'Close to both Mumbai and Pune'
+            ],
+            proTips: [
+                'Trek at sunrise for golden Pawna Lake views',
+                'Combine with Pawna Lake camping for a weekend trip',
+                'Korigad + Tikona make a great fort-hopping day',
+                'Visit in Sept-Oct for green monsoon beauty',
+                'Bring a kite — the summit plateau is perfect for flying kites'
+            ],
+            rating: 4.3,
+            reviewCount: '11,000+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ 18. MAHULI FORT ━━━━━━━━━━━━━━━━━━
+    mahuli: {
+        introduction: `Mahuli is the tallest fort in Thane district and the closest serious mountain trek 
+            to Mumbai — a vertical thrill ride rising to 858 metres (2,815 ft) through dense jungle, rock 
+            patches, and a final summit scramble. The fort is actually a triple-peaked complex — Mahuli, 
+            Bhandargad, and Palasgad — offering multiple summit experiences in one trek. Surrounded by 
+            the Mahuli Wildlife Sanctuary, the trail passes through habitat for leopards, barking deer, 
+            and Malabar giant squirrels. For Mumbaikars seeking an adrenaline-pumping day trek without 
+            traveling far, Mahuli is the undisputed champion.`,
+
+        quote: {
+            text: "माहुली — मुंबईकरांचा सर्वात जवळचा खरा साहसी किल्ला ट्रेक",
+            attribution: "On Mahuli being Mumbai's nearest serious fort trek"
+        },
+
+        timeline: [
+            { year: '15th Century', title: 'Bahmani Construction', desc: 'The Bahmani Sultanate built fortifications on Mahuli to control the Thane-Nashik corridor and the trade routes from the Konkan coast to the Deccan.' },
+            { year: '1585', title: 'Captured by Mughals', desc: 'Mughal forces captured Mahuli as part of their Deccan expansion. It served as a garrison fort controlling the Shahapur region.' },
+            { year: '1658', title: 'Maratha Capture', desc: 'Shivaji Maharaj\'s forces captured Mahuli along with other Thane-region forts, extending Maratha influence close to the Mughal stronghold of Kalyan.' },
+            { year: '1818', title: 'British Annexation', desc: 'Mahuli was ceded to the British. They established the surrounding area as a forest reserve, which later became the Mahuli Wildlife Sanctuary.' },
+            { year: '1986', title: 'Wildlife Sanctuary', desc: 'Mahuli and surrounding forest declared a wildlife sanctuary. The fort trek now passes through protected habitat rich in biodiversity.' }
+        ],
+
+        landmarks: [
+            { title: 'Mahuli Main Peak (858 m)', desc: 'The highest point with a small Shiva temple and 360° views of the Sahyadri foothills. On clear days, you can see the towers of Mumbai\'s skyline on the southern horizon.', mustSee: true },
+            { title: 'Bhandargad Peak', desc: 'The second peak of the triple-fort complex. A ridge walk from Mahuli leads here. More ruins and cisterns, with a different angle on the surrounding landscape.', mustSee: true },
+            { title: 'Rock Climbing Section', desc: 'A thrilling 30-foot rock patch near the summit that requires hands-and-feet scrambling. This is what gives Mahuli its "difficult" rating. Ropes installed by trekking groups.', mustSee: true },
+            { title: 'Jungle Trail', desc: 'The lower trail passes through thick jungle of the wildlife sanctuary. Giant Malabar squirrels, langurs, and diverse birdlife make it feel like a proper forest expedition.', mustSee: false },
+            { title: 'Palasgad Peak', desc: 'The third peak — the most remote and least visited. For completionists who want to bag all three summits.', mustSee: false },
+            { title: 'Rock-Cut Cisterns', desc: 'Ancient water tanks on each peak. Some are large enough to sustain garrisons. Still hold water in monsoon.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Base Village Meals', type: 'Veg', price: '₹60-120', desc: 'Simple meals at Mahuli village — dal-rice, bhakri-pithla, poha. Available on request at some homes.' },
+            { name: 'Shahapur Dhabas', type: 'Veg / Non-Veg', price: '₹80-150', desc: 'Shahapur town (15 km) has roadside dhabas and restaurants for a proper meal before/after the trek.' },
+            { name: 'Carry Your Food', type: 'All', price: '₹0', desc: 'Best to carry your own supply — energy bars, trail mix, sandwiches. The trek is demanding and you\'ll need fuel.' },
+            { name: 'Sugarcane Juice', type: 'Beverage', price: '₹20-30', desc: 'Roadside sugarcane juice stalls near Shahapur — the perfect post-trek energy booster in warm weather.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Via Mahuli Village (Standard)', difficulty: 'Hard', distance: '5 km', time: '3-4 hours', desc: 'The main route from Mahuli base village. Gradual at first through forest, then increasingly steep with the rock patch near the summit. Demanding but rewarding.' },
+            { icon: '🧗', title: 'Mahuli + Bhandargad Ridge', difficulty: 'Hard', distance: '7 km', time: '5-6 hours', desc: 'Summit Mahuli, then traverse the ridge to Bhandargad. The ridge walk has some exposed sections. Adds 2 hours to the standard trek.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Train', icon: '🚂', desc: 'Train from Mumbai CST to Asangaon station (Central line). From Asangaon, auto to Mahuli base village (10 km). This is the cheapest and most popular approach.' },
+            { mode: 'By Car', icon: '🚗', desc: 'Drive to Mahuli village via Shahapur. From Mumbai: ~80 km (2 hrs) via Kasara Ghat road. Park at village. From Pune: ~180 km (4 hrs).' },
+            { mode: 'By Bus', icon: '🚌', desc: 'ST bus from Mumbai to Shahapur. Auto from Shahapur to Mahuli village (15 km).' }
+        ],
+
+        trekEssentials: [
+            'Good trekking shoes with grip — rock scrambling section is mandatory',
+            'Carry 2-3 litres water — no reliable source on the trail',
+            'Gloves helpful for the rock patch (optional but useful)',
+            'Start early (6-7 AM) — allow enough daylight for the trek',
+            'Carry food — nothing available on the trail',
+            'First aid kit — rock patch injuries are common',
+            'Monsoon: extra caution — rocks become extremely slippery',
+            'Go in a group — solo trekking not recommended for beginners'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Rock scrambling section is exposed — requires hands-and-feet climbing', season: 'All year' },
+            { msg: 'Rock patches become waterfalls in monsoon — extreme caution needed', season: 'June-Sept' },
+            { msg: 'Wildlife sanctuary has leopards — make noise while trekking', season: 'All year' },
+            { msg: 'Ridge walk to Bhandargad has exposed sections — not for vertigo', season: 'All year' }
+        ],
+
+        budget: [
+            { label: 'Train (from Mumbai CST)', value: '₹30-50' },
+            { label: 'Auto (Asangaon-Mahuli)', value: '₹50-100' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Food', value: '₹60-120' },
+            { label: 'Total', value: '₹140-270', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Food', available: true, detail: 'Base village (limited)' },
+            { label: 'Water', available: true, detail: 'Base village only' },
+            { label: 'Toilets', available: false, detail: 'None on trail' },
+            { label: 'Parking', available: true, detail: 'At base village' },
+            { label: 'Mobile Network', available: true, detail: 'Patchy on fort' },
+            { label: 'Train Access', available: true, detail: 'Asangaon station (10 km)' }
+        ],
+
+        quickFacts: [
+            { label: 'Fort Name', value: 'Mahuli (Triple Peak)' },
+            { label: 'District', value: 'Thane' },
+            { label: 'Altitude', value: '858 m (2,815 ft)' },
+            { label: 'Fort Type', value: 'Hill Fort (Giri Durg)' },
+            { label: 'Triple Complex', value: 'Mahuli + Bhandargad + Palasgad' },
+            { label: 'Built By', value: 'Bahmani dynasty' },
+            { label: 'Sanctuary', value: 'Mahuli Wildlife Sanctuary' },
+            { label: 'Difficulty', value: 'Hard — rock scrambling' },
+            { label: 'Kids Appropriate', value: 'No — rock climbing section' },
+            { label: 'Best Combined', value: 'Train from Mumbai + Mahuli day trip' }
+        ],
+
+        reviews: {
+            quote: "Mahuli is Mumbai's best-kept trekking secret — take a local train to Asangaon, trek through a wildlife sanctuary, scramble up a rock face, and stand on the tallest fort in Thane. All in a day trip!",
+            positives: [
+                'Closest serious trek to Mumbai (train accessible!)',
+                'Rock scrambling adds genuine adventure',
+                'Triple peak complex offers multiple summit experiences',
+                'Wildlife sanctuary setting is beautiful',
+                'Budget-friendly — train + auto = under ₹200'
+            ],
+            proTips: [
+                'Take the 5:30 AM local train from CST for an early start',
+                'Trek Mahuli + Bhandargad for the full experience',
+                'Carry gloves for the rock patch',
+                'Visit Oct-Dec for clear views and comfortable weather',
+                'Fill water at village — nothing available on the trail'
+            ],
+            rating: 4.5,
+            reviewCount: '9,000+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ 19. GHANGAD FORT ━━━━━━━━━━━━━━━━━━
+    ghangad: {
+        introduction: `Ghangad is the crown jewel of Tamhini Ghat trekking — a scenic hill fort at 945 metres 
+            that offers some of the most spectacular monsoon views in the entire Sahyadri range. Located near 
+            the dramatic Tailbaila twin pinnacles, Ghangad rewards trekkers with sweeping green valleys, 
+            cascading waterfalls, and mist-shrouded ridges that look like something from a fantasy film. 
+            While not as historically prominent as some forts, Ghangad's strategic position above the 
+            Tamhini Ghat — the ancient route connecting Pune to the Konkan coast — made it a valuable 
+            Maratha outpost. Today, it's the monsoon trekker's paradise.`,
+
+        quote: {
+            text: "घनगड — ताम्हिणी घाटातला पावसाळ्यातला स्वर्ग",
+            attribution: "On Ghangad being Tamhini's monsoon paradise"
+        },
+
+        timeline: [
+            { year: 'Pre-1600s', title: 'Ancient Fortification', desc: 'The original builders are unknown, but fortification remains suggest pre-Maratha era construction to control the Tamhini Ghat pass.' },
+            { year: '1660s', title: 'Maratha Usage', desc: 'Shivaji Maharaj\'s forces used Ghangad as an outpost to monitor and control the Tamhini Ghat approach to Pune from the Konkan coast.' },
+            { year: '1700s', title: 'Peshwa Period', desc: 'During the Peshwa era, Ghangad continued to serve as a frontier observation post. The bastions and walls were maintained during this period.' },
+            { year: '1818', title: 'British Era', desc: 'Ceded to the British along with other Sahyadri forts. The remote location meant it was quickly abandoned and reclaimed by vegetation.' },
+            { year: 'Present', title: 'Trekking Destination', desc: 'Ghangad has become one of the most popular monsoon treks near Pune, known for its proximity to Tailbaila and the stunning Tamhini scenery.' }
+        ],
+
+        landmarks: [
+            { title: 'Tailbaila View', desc: 'From Ghangad\'s ramparts, the dramatic twin pinnacles of Tailbaila are visible — jagged rock spires rising from the green valley. One of the most photographed views in the Sahyadris.', mustSee: true },
+            { title: 'Tamhini Valley Panorama', desc: 'The western rampart offers a vast panorama of the Tamhini Ghat valley — during monsoon, this entire landscape turns emerald green with dozens of waterfalls streaming down every cliff.', mustSee: true },
+            { title: 'Fort Summit & Temple', desc: 'A small Shiva temple at the summit marks the highest point. The 360° views from here encompass Tailbaila, Sudhagad, Tung, and the Tamhini forest canopy.', mustSee: true },
+            { title: 'Rock-Cut Steps', desc: 'Ancient steps carved into the hillside leading to the fort. Some sections are steep and narrow, adding adventure to the approach.', mustSee: false },
+            { title: 'Monsoon Waterfalls', desc: 'During June-September, the trail to Ghangad is flanked by seasonal waterfalls. The entire landscape becomes a water wonderland.', mustSee: false },
+            { title: 'Fortification Remains', desc: 'Partial walls and bastions visible around the summit perimeter. Not as well-preserved as major forts, but enough to imagine the outpost\'s layout.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Tamhini Ghat Dhabas', type: 'Veg / Non-Veg', price: '₹80-150', desc: 'A few roadside eateries on the Tamhini Ghat road serve hot meals — vada pav, bhaji, chai. Simple but perfect for a monsoon trek stop.' },
+            { name: 'Carry Your Food', type: 'All', price: '₹0', desc: 'Best to carry trek food — sandwiches, trail mix, energy bars. No stalls on the trail to Ghangad.' },
+            { name: 'Mulshi Dam Area', type: 'Veg / Non-Veg', price: '₹100-200', desc: 'Several restaurants and dhabas near Mulshi Dam (en route from Pune). Good for a post-trek meal.' },
+            { name: 'Corn & Bhutta', type: 'Veg', price: '₹20-30', desc: 'Roasted corn from roadside vendors on Tamhini Ghat during monsoon. The seasonal vibe is unbeatable.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Via Ekole Village (Standard)', difficulty: 'Medium', distance: '4 km', time: '90-120 min', desc: 'The most popular route from Ekole village on Tamhini Ghat road. Forest trail leading to steep climb near summit. The views open up dramatically in the last section.' },
+            { icon: '⛰️', title: 'Via Kotkamthe Village', difficulty: 'Medium', distance: '3.5 km', time: '90 min', desc: 'Alternative approach from the northern side. Slightly steeper but more direct. Good monsoon waterfall views on the trail.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Car', icon: '🚗', desc: 'Drive to Ekole village on Tamhini Ghat road. From Pune: ~55 km (1.5 hrs) via Mulshi Dam. From Mumbai: ~130 km (3 hrs) via Tamhini Ghat.' },
+            { mode: 'By Bike', icon: '🏍️', desc: 'Extremely popular monsoon ride from Pune via Mulshi-Tamhini Ghat. One of the most scenic routes in Maharashtra. Park at Ekole and trek.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'ST bus from Pune to Mangaon (Tamhini Ghat road). Get off at Ekole village stop. Buses are infrequent — own vehicle recommended.' }
+        ],
+
+        trekEssentials: [
+            'Waterproof trekking shoes — trail is muddy and slippery in monsoon',
+            'Full rain gear — poncho or rain jacket mandatory in monsoon',
+            'Carry 1.5 litres water and food — nothing on trail',
+            'Leech socks or salt — leeches active June-September',
+            'Quick-dry clothes — you will get thoroughly soaked in monsoon',
+            'Waterproof phone cover — protect electronics',
+            'Start early — Tamhini Ghat gets misty in afternoon',
+            'Carry a change of clothes in waterproof bag'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Tamhini Ghat road is extremely misty and slippery in monsoon — drive carefully', season: 'June-Sept' },
+            { msg: 'Leeches are very active on the trail in monsoon', season: 'June-Sept' },
+            { msg: 'Rock-cut steps near summit get slippery — use caution', season: 'June-Sept' },
+            { msg: 'Fog can reduce visibility to near-zero — don\'t wander off trail', season: 'June-Sept' }
+        ],
+
+        budget: [
+            { label: 'Transport (from Pune)', value: '₹100-300' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Food', value: '₹80-150' },
+            { label: 'Total', value: '₹180-450', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Food', available: true, detail: 'Ghat road dhabas' },
+            { label: 'Water', available: true, detail: 'Ghat road only' },
+            { label: 'Toilets', available: false, detail: 'None on trail' },
+            { label: 'Parking', available: true, detail: 'Ekole roadside' },
+            { label: 'Mobile Network', available: true, detail: 'Patchy in ghat' },
+            { label: 'Camping', available: true, detail: 'Summit plateau (monsoon camping!)' }
+        ],
+
+        quickFacts: [
+            { label: 'Fort Name', value: 'Ghangad' },
+            { label: 'District', value: 'Pune (Mulshi taluka)' },
+            { label: 'Altitude', value: '945 m (3,100 ft)' },
+            { label: 'Fort Type', value: 'Hill Fort (Giri Durg)' },
+            { label: 'Ghat', value: 'Tamhini Ghat' },
+            { label: 'Nearby Pinnacle', value: 'Tailbaila (twin spires)' },
+            { label: 'Best Season', value: 'Monsoon (July-Sept)' },
+            { label: 'Difficulty', value: 'Moderate' },
+            { label: 'Kids Appropriate', value: 'Age 10+ (monsoon slippery)' },
+            { label: 'Best Combined', value: 'Tamhini Ghat drive + Mulshi' }
+        ],
+
+        reviews: {
+            quote: "Ghangad in monsoon is like trekking through a Tolkien landscape — mist, waterfalls, green valleys as far as the eye can see, and the dramatic Tailbaila spires in the distance. Pure magic.",
+            positives: [
+                'Monsoon views are among the best in the Sahyadris',
+                'Tailbaila twin pinnacles are a stunning sight',
+                'Tamhini Ghat drive itself is an experience',
+                'Moderate difficulty — accessible to most trekkers',
+                'Less crowded than Lonavala-area forts'
+            ],
+            proTips: [
+                'Visit specifically in monsoon (July-Aug) for the best experience',
+                'The Tamhini Ghat drive from Pune is half the fun',
+                'Carry leech socks or tucked-in pants with salt',
+                'Combine with Tamhini waterfalls visit on the same day',
+                'Post-trek meal at a Mulshi dam-side restaurant — perfect ending'
+            ],
+            rating: 4.3,
+            reviewCount: '8,000+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ 20. KULABA (KOLABA) FORT ━━━━━━━━━━━━━━━━━━
+    kulaba: {
+        introduction: `Kulaba Fort (also spelled Kolaba) at Alibaug is one of Maharashtra's most accessible 
+            and unique sea forts — during low tide, you can literally walk across the seabed to reach it! 
+            Built by Chhatrapati Shivaji Maharaj himself in 1680, Kulaba holds the distinction of being 
+            one of the last forts he personally commissioned. It was later the headquarters of the legendary 
+            Maratha Admiral Kanhoji Angre, whose fleet terrorized the British, Portuguese, and Dutch navies 
+            from this very base. Rising dramatically from the Arabian Sea just 1.5 km from Alibaug beach, 
+            with its iconic gateway, temple, and crumbling bastions, Kulaba is the perfect introduction 
+            to Maharashtra's sea fort heritage.`,
+
+        quote: {
+            text: "कुलाबा — शिवरायांनी स्वतः बांधलेला, कान्होजी आंग्रेंचा अजिंक्य तळ",
+            attribution: "On Kulaba being Shivaji's creation and Kanhoji Angre's base"
+        },
+
+        timeline: [
+            { year: '1680', title: '🏗️ Built by Shivaji Maharaj', desc: 'Chhatrapati Shivaji Maharaj personally ordered the construction of Kulaba Fort to strengthen Maratha control over the Alibaug coast. One of the last forts he commissioned.' },
+            { year: '1698-1729', title: '⚓ Kanhoji Angre Era', desc: 'Admiral Kanhoji Angre made Kulaba his primary naval headquarters. From here, his fleet of warships dominated the Arabian Sea, defeating European navies repeatedly.' },
+            { year: '1733', title: 'British Attack Repelled', desc: 'The British East India Company attacked Kulaba but was repelled by Maratha naval forces. The fort\'s sea-based position made it extremely difficult to assault.' },
+            { year: '1756', title: 'Fall of Kulaba', desc: 'A combined British-Peshwa fleet finally captured Kulaba from Tulaji Angre (Kanhoji\'s successor). This ended the Angre dynasty\'s naval dominance.' },
+            { year: '1818', title: 'British Control', desc: 'The fort was formally ceded to British East India Company. They decommissioned the naval base. Alibaug became a quiet coastal town.' },
+            { year: 'Present', title: 'Tourist Attraction', desc: 'Kulaba is now Alibaug\'s top landmark. Walkable at low tide, it attracts thousands of weekend visitors from Mumbai, just a ferry ride away.' }
+        ],
+
+        landmarks: [
+            { title: 'Main Gateway (Maha Darwaza)', desc: 'The iconic arched entrance gate rising from the sea — the most photographed feature of Kulaba. Ornate stone carvings and a tiger motif represent Maratha naval power. Dramatic at all tides.', mustSee: true },
+            { title: 'Siddhivinayak Temple', desc: 'A well-maintained Ganpati temple inside the fort. Actively worshipped by local fishermen. The temple adds spiritual significance to the historical fort.', mustSee: true },
+            { title: 'Padmavati Temple', desc: 'Another temple inside the fort dedicated to Goddess Padmavati. During festivals, processions walk across the seabed to reach these temples.', mustSee: true },
+            { title: 'Bastions & Cannons', desc: 'Several intact bastions with original cannons still pointing out to sea. Walk along the ramparts imagining Kanhoji Angre\'s fleet sailing out to battle.', mustSee: true },
+            { title: 'Sweet Water Well', desc: 'A freshwater well inside the sea fort — remarkable engineering that provides potable water despite being surrounded by saltwater.', mustSee: false },
+            { title: 'Low-Tide Walking Path', desc: 'The 1.5 km walk from Alibaug beach to the fort across the exposed seabed is an experience itself. Crabs, shells, and sea anemones dot the path.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Alibaug Seafood', type: 'Non-Veg', price: '₹150-300', desc: 'Alibaug is a seafood paradise — fresh surmai, pomfret, prawns, and crab in coastal Maharashtrian preparations. Try the beach-side shacks after fort visit.' },
+            { name: 'Sol Kadhi', type: 'Beverage', price: '₹20-30', desc: 'The essential Konkan accompaniment — cool, pink kokum-coconut milk drink. Every restaurant in Alibaug serves this.' },
+            { name: 'Modak', type: 'Sweet', price: '₹10-20/piece', desc: 'Traditional steamed coconut-jaggery dumplings. Alibaug makes excellent modak, especially during Ganesh Chaturthi season.' },
+            { name: 'Tawa Fry Fish', type: 'Non-Veg', price: '₹100-200', desc: 'Fresh catch fried on a hot tawa with minimal spices — letting the fish flavor shine. Beach-side stalls near Alibaug beach serve this.' },
+            { name: 'Tender Coconut', type: 'Beverage', price: '₹30-50', desc: 'Fresh nariyal pani from Alibaug\'s coconut groves. The perfect refreshment after walking back from the fort through the sea.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🚶', title: 'Walk at Low Tide (Only Way)', difficulty: 'Easy', distance: '1.5 km each way', time: '20-30 min walk + 1 hour fort', desc: 'Walk from Alibaug beach across the exposed seabed to the fort at low tide. The water recedes to knee-level. Explore the fort for an hour, then walk back before tide comes in.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Ferry', icon: '⛴️', desc: 'Ferry from Gateway of India (Mumbai) to Mandwa Jetty (1 hr). Then auto/taxi to Alibaug beach (20 min). The ferry ride across Mumbai harbor is scenic.' },
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Mumbai via Panvel-Pen-Alibaug road (95 km, 2.5 hrs). From Pune: via Tamhini Ghat to Alibaug (140 km, 3.5 hrs). Parking at Alibaug beach.' },
+            { mode: 'By Ro-Ro Ferry', icon: '🚗', desc: 'Car + passenger ferry from Dharamtar to Rewas (30 min). Then drive to Alibaug (18 km). Saves the 3-hour road trip from Mumbai.' }
+        ],
+
+        trekEssentials: [
+            'CHECK TIDE TIMINGS before visiting — fort is accessible only at low tide',
+            'Wear waterproof sandals/shoes — you walk through shallow water',
+            'Apply sunscreen — no shade on the seabed walk',
+            'Carry water — limited inside the fort',
+            'Time your visit: reach the fort 1 hour before lowest tide',
+            'Come back before tide starts rising — water level changes fast',
+            'Carry a waterproof bag for phone and valuables',
+            'Avoid monsoon — seas are rough and fort access is dangerous'
+        ],
+
+        safetyAlerts: [
+            { msg: 'CRITICAL: Check tide timings — getting stranded at high tide is dangerous', season: 'All year' },
+            { msg: 'Seabed has sharp rocks and shells — wear protective footwear', season: 'All year' },
+            { msg: 'Do NOT attempt in monsoon — rough seas and strong currents', season: 'June-Sept' },
+            { msg: 'Sea-facing walls have no railings — stay back from edges', season: 'All year' }
+        ],
+
+        budget: [
+            { label: 'Ferry (Mumbai-Mandwa)', value: '₹150-250' },
+            { label: 'Auto (Mandwa-Alibaug)', value: '₹50-100' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Food', value: '₹150-300' },
+            { label: 'Total', value: '₹350-650', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Food', available: true, detail: 'Alibaug beach area' },
+            { label: 'Water', available: true, detail: 'Beach vendors' },
+            { label: 'Toilets', available: true, detail: 'At Alibaug beach' },
+            { label: 'Parking', available: true, detail: 'Alibaug beach lot' },
+            { label: 'Mobile Network', available: true, detail: 'Good coverage' },
+            { label: 'Ferry Service', available: true, detail: 'Mumbai-Mandwa (frequent)' }
+        ],
+
+        quickFacts: [
+            { label: 'Also Known As', value: 'Kolaba Fort' },
+            { label: 'District', value: 'Raigad (Alibaug)' },
+            { label: 'Fort Type', value: 'Sea Fort (Jal Durg)' },
+            { label: 'Built By', value: 'Chhatrapati Shivaji Maharaj' },
+            { label: 'Year Built', value: '1680' },
+            { label: 'Famous For', value: 'Kanhoji Angre\'s headquarters' },
+            { label: 'Access', value: 'Walk at low tide (1.5 km)' },
+            { label: 'From Mumbai', value: 'Ferry + auto (1.5 hrs total)' },
+            { label: 'Kids Appropriate', value: 'Yes (age 5+, check tides)' },
+            { label: 'Best Combined', value: 'Alibaug beaches + Murud-Janjira' }
+        ],
+
+        reviews: {
+            quote: "Walking across the sea at low tide to reach Kulaba Fort — water at your ankles, the fort gateway growing larger with every step — is one of the most magical experiences in Maharashtra tourism.",
+            positives: [
+                'Walking to a sea fort through the sea is magical',
+                'Built by Shivaji Maharaj himself — authentic history',
+                'Easy access from Mumbai via ferry',
+                'Active temples add spiritual dimension',
+                'Alibaug\'s seafood scene is excellent'
+            ],
+            proTips: [
+                'Check tide timings on tide-forecast.com before planning',
+                'Take the ferry from Gateway of India — the ride is half the fun',
+                'Reach fort 1 hour before lowest tide for maximum time inside',
+                'Wear waterproof sandals with grip — the seabed is rocky',
+                'Combine with Alibaug beach hopping and seafood lunch'
+            ],
+            rating: 4.4,
+            reviewCount: '16,000+'
+        }
     }
 };
 

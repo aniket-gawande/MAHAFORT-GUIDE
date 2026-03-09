@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import SindhudurgMap from '../components/SindhudurgMap';
-import BahirjiChatbot from '../components/BahirjiChatbot';
 import { FaClock, FaRupeeSign, FaCalendarAlt, FaMapMarkerAlt, FaHistory, FaMonument, FaShip, FaShieldAlt, FaUtensils, FaExclamationTriangle, FaStar, FaAnchor, FaWater, FaUmbrellaBeach } from 'react-icons/fa';
 import sindhudurgImage from '../assets/sindhudurg-hero.jpg';
 
@@ -12,7 +11,6 @@ const SindhudurgDetail = () => {
     return (
         <div className="min-h-screen bg-royal-black text-gray-300 font-body">
             <Navbar />
-            <BahirjiChatbot />
 
             {/* --- CINEMATIC HERO SECTION --- */}
             <div className="relative h-[60vh] lg:h-[75vh] w-full overflow-hidden">

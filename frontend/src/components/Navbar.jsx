@@ -86,10 +86,10 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8 font-body text-sm font-bold tracking-widest uppercase">
-          {['Home', 'Forts', 'Trip Planner', 'Fort Agent', 'About'].map((item) => (
+          {['Home', 'Forts', 'Trip Planner', 'About'].map((item) => (
             <Link 
               key={item}
-              to={item === 'Home' ? '/' : item === 'Trip Planner' ? '/trip-planner' : item === 'Fort Agent' ? '/fort-agent' : `/${item.toLowerCase()}`}
+              to={item === 'Home' ? '/' : item === 'Trip Planner' ? '/trip-planner' : `/${item.toLowerCase()}`}
               className="relative text-mist hover:text-saffron transition-colors after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-0.5 after:bg-saffron after:transition-all hover:after:w-full"
             >
               {item}
@@ -182,10 +182,10 @@ const Navbar = () => {
         <div className={`absolute right-0 top-0 h-full w-72 bg-royal-black/95 backdrop-blur-xl border-l border-saffron/20 transform transition-transform duration-300 ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
           <div className="pt-20 px-6 space-y-6">
             {/* Nav Links */}
-            {['Home', 'Forts', 'Trip Planner', 'Fort Agent', 'About'].map((item) => (
+            {['Home', 'Forts', 'Trip Planner', 'About'].map((item) => (
               <Link
                 key={item}
-                to={item === 'Home' ? '/' : item === 'Trip Planner' ? '/trip-planner' : item === 'Fort Agent' ? '/fort-agent' : `/${item.toLowerCase()}`}
+                to={item === 'Home' ? '/' : item === 'Trip Planner' ? '/trip-planner' : `/${item.toLowerCase()}`}
                 onClick={() => setMobileMenuOpen(false)}
                 className="block text-lg font-body font-bold text-white tracking-widest uppercase hover:text-saffron transition-colors py-2 border-b border-white/5"
               >

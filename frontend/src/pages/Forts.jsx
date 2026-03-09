@@ -2,7 +2,6 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { getAllForts } from '../services/api';
 import FortCard from '../components/FortCard';
 import Navbar from '../components/Navbar';
-import BahirjiChatbot from '../components/BahirjiChatbot';
 import { staticForts } from '../data/staticForts';
 import {
   FaSearch, FaFilter, FaMountain, FaFortAwesome,
@@ -110,7 +109,6 @@ const Forts = () => {
   return (
     <div className="min-h-screen bg-royal-black text-white font-body selection:bg-saffron selection:text-black">
       <Navbar />
-      <BahirjiChatbot />
 
       {/* ═══ HERO BANNER ═══ */}
       <div className="relative pt-20 pb-12 sm:pb-16 overflow-hidden">
