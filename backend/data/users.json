@@ -34,5 +34,16 @@
     "authProvider": "local",
     "fortsVisited": [],
     "createdAt": "2026-03-07T08:13:44.590Z"
+  },
+  {
+    "_id": "mlus8bpfzf1dze7f",
+    "username": "aniket_gawande_o9a9",
+    "email": "aniketgawande2509@gmail.com",
+    "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJPNWic0bmDPhlptSBkrnPvmVGR67bcOEdxGHa7TWaeOwKGOu5KHg=s96-c",
+    "role": "warrior",
+    "googleId": "103289339569197167331",
+    "authProvider": "google",
+    "fortsVisited": [],
+    "createdAt": "2026-02-20T11:04:02.115Z"
   }
 ]

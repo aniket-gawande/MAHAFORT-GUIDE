@@ -12,6 +12,7 @@ import {
 } from 'react-icons/fa';
 import { MdOutlineTravelExplore, MdDirectionsWalk } from 'react-icons/md';
 import { GiCastle, GiMountainRoad, GiBackpack, GiCompass, GiCampfire } from 'react-icons/gi';
+import heroBg from '../assets/hero-fort.jpg';
 
 // ──────────────────────────── CONSTANTS  ────────────────────────────
 
@@ -248,8 +249,12 @@ const TripPlanner = () => {
 
       {/* ───── HERO BANNER ───── */}
       <div className="relative pt-20 pb-16 overflow-hidden">
+        {/* Background image */}
+        <div className="absolute inset-0 z-0">
+          <img src={heroBg} alt="" className="w-full h-full object-cover opacity-20" />
+        </div>
         {/* Animated gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-royal-black via-[#0a0a0a] to-royal-black">
+        <div className="absolute inset-0 bg-gradient-to-br from-royal-black/95 via-royal-black/80 to-royal-black/95">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-saffron/5 rounded-full blur-[120px] animate-pulse"></div>
           <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-orange-600/5 rounded-full blur-[100px] animate-pulse delay-1000"></div>
         </div>

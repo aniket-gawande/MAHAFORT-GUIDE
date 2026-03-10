@@ -9,6 +9,7 @@ import {
 } from 'react-icons/fa';
 import { GiCastle } from 'react-icons/gi';
 import marathaFlag from '../assets/svg/maratha-flag.svg';
+import heroBg from '../assets/hero-fort.jpg';
 
 const Forts = () => {
   const [forts, setForts] = useState([]);
@@ -31,19 +32,22 @@ const Forts = () => {
       const fortsData = Array.isArray(response.data) ? response.data : [];
 
       if (fortsData.length > 0) {
+        // Normalize name for matching: lowercase, remove hyphens/extra spaces
+        const normalizeName = (n) => (n || '').toLowerCase().replace(/[-_]+/g, ' ').replace(/\s+/g, ' ').trim();
+
         const staticByName = {};
-        staticForts.forEach(sf => { staticByName[sf.name.toLowerCase()] = sf; });
+        staticForts.forEach(sf => { staticByName[normalizeName(sf.name)] = sf; });
 
         const mergedForts = fortsData.map(fort => {
-          const staticMatch = staticByName[fort.name?.toLowerCase()];
+          const staticMatch = staticByName[normalizeName(fort.name)];
           if (staticMatch?.images?.length > 0) {
-            return { ...fort, images: staticMatch.images };
+            return { ...fort, images: staticMatch.images, crowdStatus: staticMatch.crowdStatus || fort.crowdStatus };
           }
           return fort;
         });
 
-        const apiNames = new Set(mergedForts.map(f => f.name?.toLowerCase()));
-        const missingForts = staticForts.filter(sf => !apiNames.has(sf.name?.toLowerCase()));
+        const apiNames = new Set(mergedForts.map(f => normalizeName(f.name)));
+        const missingForts = staticForts.filter(sf => !apiNames.has(normalizeName(sf.name)));
         setForts([...mergedForts, ...missingForts]);
       } else {
         setForts(staticForts);
@@ -112,7 +116,11 @@ const Forts = () => {
 
       {/* ═══ HERO BANNER ═══ */}
       <div className="relative pt-20 pb-12 sm:pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-royal-black via-[#0a0a0a] to-royal-black">
+        {/* Background image */}
+        <div className="absolute inset-0 z-0">
+          <img src={heroBg} alt="" className="w-full h-full object-cover opacity-30" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-royal-black via-royal-black/60 to-royal-black">
           <div className="absolute top-10 left-1/3 w-[500px] h-[500px] bg-saffron/5 rounded-full blur-[150px] animate-pulse"></div>
           <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-orange-600/5 rounded-full blur-[100px] animate-pulse delay-1000"></div>
         </div>

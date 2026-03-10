@@ -47,7 +47,7 @@ const About = () => {
   ];
 
   const features = [
-    { icon: FaMountain, title: "4 Forts Documented", desc: "In-depth coverage of Sinhagad, Murud-Janjira, Sindhudurg, and Vishalgad — hill forts and sea forts of the Maratha Empire." },
+    { icon: FaMountain, title: "6 Forts Documented", desc: "In-depth coverage of Sinhagad, Murud-Janjira, Sindhudurg, Vishalgad, Lohagad & Tung — hill forts and sea forts of the Maratha Empire." },
     { icon: FaRoute, title: "Trek Routes & Itineraries", desc: "Detailed step-by-step trekking guides with difficulty ratings, timelines, and route maps for every fort." },
     { icon: FaBookOpen, title: "Smart Trip Planner", desc: "Plan your multi-fort trek with our intelligent trip planner — auto-calculates budgets, timelines, and difficulty levels." },
     { icon: FaMapMarkedAlt, title: "Interactive Maps", desc: "Live maps with GPS coordinates, nearby attractions, food stalls, parking locations and trail markers." },
@@ -56,7 +56,7 @@ const About = () => {
   ];
 
   const stats = [
-    { value: "4", label: "Forts Catalogued", icon: FaFortAwesome },
+    { value: "6", label: "Forts Catalogued", icon: FaFortAwesome },
     { value: "10+", label: "Trek Routes", icon: FaHiking },
     { value: "1674", label: "Legacy Since", icon: FaStar },
     { value: "100%", label: "Free & Open", icon: FaGlobeAsia },
@@ -108,7 +108,7 @@ const About = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mt-8 sm:mt-10">
             <Link
-              to="/"
+              to="/forts"
               className="group px-6 sm:px-8 py-3 sm:py-4 bg-saffron text-black font-bold rounded-xl hover:bg-saffron-dim transition-all duration-300 flex items-center gap-2 text-sm sm:text-base shadow-[0_0_20px_rgba(255,153,51,0.3)] hover:shadow-[0_0_30px_rgba(255,153,51,0.5)]"
             >
               Explore Forts <FaChevronRight className="group-hover:translate-x-1 transition-transform" />
@@ -193,7 +193,7 @@ const About = () => {
                     <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
                       MahaFort Guide is more than a travel platform — it's a digital monument to the architectural
                       genius and military brilliance of the Maratha Empire. Currently documenting
-                      4 key forts of Maharashtra with detailed trek guides and historical context.
+                      6 key forts of Maharashtra with detailed trek guides and historical context.
                     </p>
                   </div>
                 </div>
@@ -249,6 +249,10 @@ const About = () => {
           FEATURES GRID
       ═══════════════════════════════════════════ */}
       <section className="py-12 sm:py-20 bg-royal-gray/30 border-t border-b border-white/5 relative">
+        <div className="absolute inset-0 z-0 opacity-[0.06]">
+          <img src={heroBg} alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-royal-black/80 via-transparent to-royal-black/80"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-saffron-glow opacity-30 pointer-events-none"></div>
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="text-center mb-10 sm:mb-16">
@@ -345,6 +349,10 @@ const About = () => {
           CTA FOOTER SECTION
       ═══════════════════════════════════════════ */}
       <section className="py-16 sm:py-24 relative overflow-hidden">
+        <div className="absolute inset-0 z-0 opacity-[0.08]">
+          <img src={heroBg} alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-royal-black via-royal-black/70 to-royal-black"></div>
         <div className="absolute inset-0 bg-saffron-glow opacity-40 pointer-events-none"></div>
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-saffron/40 to-transparent"></div>
 
@@ -357,7 +365,7 @@ const About = () => {
             Start your journey through the mighty forts of Maharashtra. Every stone has a story waiting to be discovered.
           </p>
           <Link
-            to="/"
+            to="/forts"
             className="group inline-flex items-center gap-2 px-8 sm:px-12 py-3 sm:py-4 bg-saffron text-black font-bold text-base sm:text-lg rounded-xl hover:bg-saffron-dim transition-all duration-300 shadow-[0_0_30px_rgba(255,153,51,0.3)] hover:shadow-[0_0_50px_rgba(255,153,51,0.5)]"
           >
             Begin Your Journey <FaChevronRight className="group-hover:translate-x-1 transition-transform" />
@@ -375,7 +383,7 @@ const About = () => {
             &copy; 2026 MahaFort Guide &mdash; Built with ❤️ for the legacy of Swarajya
           </p>
           <p className="text-gray-600 text-xs mt-2">
-            "स्वराज्य हा माझा जन्मसिद्ध हक्क आहे, आणि तो मी मिळवणारच" — छत्रपती शिवाजी महाराज
+            "शत्रूच्या ताकदीशी नव्हे, तर शत्रूच्या बुद्धिशी लढा" — छत्रपती शिवाजी महाराज
           </p>
         </div>
       </footer>

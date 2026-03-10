@@ -26,24 +26,27 @@ const Home = () => {
 
       if (fortsData.length > 0) {
         // Build a name-based lookup from static forts for image overrides
+        // Normalize name for matching: lowercase, remove hyphens/extra spaces
+        const normalizeName = (n) => (n || '').toLowerCase().replace(/[-_]+/g, ' ').replace(/\s+/g, ' ').trim();
+
         const staticByName = {};
         staticForts.forEach(sf => {
-          staticByName[sf.name.toLowerCase()] = sf;
+          staticByName[normalizeName(sf.name)] = sf;
         });
 
         // Merge API forts with static fort images where API images are broken paths
         const mergedForts = fortsData.map(fort => {
-          const staticMatch = staticByName[fort.name?.toLowerCase()];
+          const staticMatch = staticByName[normalizeName(fort.name)];
           if (staticMatch && staticMatch.images && staticMatch.images.length > 0) {
             // Use static fort images (webpack imports) over API string paths
-            return { ...fort, images: staticMatch.images };
+            return { ...fort, images: staticMatch.images, crowdStatus: staticMatch.crowdStatus || fort.crowdStatus };
           }
           return fort;
         });
 
         // Also add any static forts not present in API (by name)
-        const apiNames = new Set(mergedForts.map(f => f.name?.toLowerCase()));
-        const missingForts = staticForts.filter(sf => !apiNames.has(sf.name?.toLowerCase()));
+        const apiNames = new Set(mergedForts.map(f => normalizeName(f.name)));
+        const missingForts = staticForts.filter(sf => !apiNames.has(normalizeName(sf.name)));
         setForts([...mergedForts, ...missingForts]);
       } else {
         setForts(staticForts);
