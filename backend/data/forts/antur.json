@@ -1,0 +1,74 @@
+{
+  "name": "Antur Fort",
+  "location": {
+    "district": "Chhatrapati Sambhajinagar (Aurangabad)",
+    "taluka": "Kannad",
+    "baseVillage": "Antur",
+    "coordinates": {
+      "lat": 20.3755,
+      "lng": 75.0552
+    },
+    "nearestCity": "Kannad (25 km)"
+  },
+  "category": "Hill Fort",
+
+  "description": "Antur Fort is a hill fort located in the Satmala range of Maharashtra. Known for its massive entrance gate and strong fortification, it is one of the prominent forts in the region and offers scenic views of surrounding hills.",
+
+  "trek": {
+    "routes": [
+      {
+        "name": "Antur Village Route",
+        "startPoint": "Antur village",
+        "distance": "2.5 km",
+        "duration": "1.5–2 hours",
+        "difficulty": "Moderate",
+        "description": "A well-defined path leading to the fort through rocky terrain."
+      }
+    ],
+    "bestTime": ["Winter", "Monsoon"],
+    "avoidTime": ["Summer"]
+  },
+
+  "landmarks": [
+    {
+      "name": "Main Gate",
+      "description": "Large and well-preserved entrance.",
+      "mustSee": true
+    },
+    {
+      "name": "Fort Walls",
+      "description": "Strong defensive walls.",
+      "mustSee": true
+    },
+    {
+      "name": "Water Tanks",
+      "description": "Rock-cut cisterns.",
+      "mustSee": true
+    }
+  ],
+
+  "facilities": {
+    "parking": true,
+    "water": false,
+    "food": false,
+    "network": "Weak"
+  },
+
+  "safety": {
+    "alerts": [
+      "Carry water",
+      "Slippery during monsoon"
+    ]
+  },
+
+  "visitInfo": {
+    "entryFee": 0,
+    "timeRequired": "3–4 hours",
+    "timings": "6:00 AM – 6:00 PM"
+  },
+
+  "history": {
+    "brief": "Antur Fort was part of the Satmala hill range and served as a strategic fort in the Deccan region.",
+    "rulers": ["Mughals", "Marathas", "British"]
+  }
+}

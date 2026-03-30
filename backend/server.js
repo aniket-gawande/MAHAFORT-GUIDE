@@ -56,6 +56,7 @@ const emergencyRoutes = require('./routes/emergencyRoutes');
 const adminRoutes = require('./routes/adminRoutes');
 const authRoutes = require('./routes/authRoutes');
 const agentRoutes = require('./routes/agentRoutes');
+const chatRoutes = require('./routes/chatRoutes');
 
 // Wait for MongoDB connection attempt before handling auth requests
 app.use('/api/auth', async (req, res, next) => {
@@ -69,6 +70,7 @@ app.use('/api/emergency', emergencyRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/agent', agentRoutes);
+app.use('/api/chat', chatRoutes);
 
 // Basic route
 app.get('/', (req, res) => {

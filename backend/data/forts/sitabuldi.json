@@ -1,0 +1,65 @@
+{
+  "name": "Sitabuldi Fort",
+  "location": {
+    "district": "Nagpur",
+    "taluka": "Nagpur",
+    "baseVillage": "Sitabuldi",
+    "coordinates": {
+      "lat": 21.1465,
+      "lng": 79.0882
+    },
+    "nearestCity": "Nagpur"
+  },
+  "category": "Land Fort",
+
+  "description": "Sitabuldi Fort is a historic land fort located in the center of Nagpur city. Built by the British, it is known for the Battle of Sitabuldi and serves as an important military landmark.",
+
+  "trek": {
+    "routes": [
+      {
+        "name": "Main Access",
+        "distance": "Within city",
+        "duration": "30–45 minutes",
+        "difficulty": "Easy",
+        "description": "Direct access; no trekking required."
+      }
+    ]
+  },
+
+  "landmarks": [
+    {
+      "name": "Fort Hills",
+      "description": "Two small hills forming the fort.",
+      "mustSee": true
+    },
+    {
+      "name": "British Structures",
+      "description": "Colonial-era constructions.",
+      "mustSee": true
+    },
+    {
+      "name": "Battle Site",
+      "description": "Historic battlefield location.",
+      "mustSee": true
+    }
+  ],
+
+  "facilities": {
+    "parking": true,
+    "water": true,
+    "food": true,
+    "network": "Excellent"
+  },
+
+  "visitInfo": {
+    "entryFee": 0,
+    "timeRequired": "1–2 hours",
+    "timings": "Restricted (open on specific days)"
+  },
+
+  "history": {
+    "brief": "Famous for the Battle of Sitabuldi (1817) between the British and the Marathas.",
+    "significance": "Important colonial military site.",
+    "rulers": ["British", "Marathas"]
+  }
+}

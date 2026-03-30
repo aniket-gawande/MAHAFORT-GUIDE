@@ -1,0 +1,80 @@
+{
+  "name": "Narnala Fort",
+  "location": {
+    "district": "Akola",
+    "taluka": "Akot",
+    "baseVillage": "Narnala",
+    "coordinates": {
+      "lat": 21.3265,
+      "lng": 77.0842
+    },
+    "nearestCity": "Akot (20 km)"
+  },
+  "category": "Hill Fort",
+
+  "description": "Narnala Fort is a massive hill fort located in the Satpura range, known for its vast expanse, multiple gates, and strong fortifications. It is one of the largest forts in Maharashtra and offers a rich historical and trekking experience.",
+
+  "trek": {
+    "routes": [
+      {
+        "name": "Motorable + Trek Route",
+        "startPoint": "Narnala village",
+        "distance": "4–5 km",
+        "duration": "2–3 hours",
+        "difficulty": "Moderate",
+        "description": "Partly motorable road followed by a gradual trek to the fort."
+      }
+    ],
+    "bestTime": ["Winter", "Monsoon"],
+    "avoidTime": ["Summer"]
+  },
+
+  "landmarks": [
+    {
+      "name": "Shahanur Gate",
+      "description": "Main entrance of the fort.",
+      "mustSee": true
+    },
+    {
+      "name": "Fort Walls",
+      "description": "Extensive fortification across hills.",
+      "mustSee": true
+    },
+    {
+      "name": "Water Tanks",
+      "description": "Large reservoirs inside fort.",
+      "mustSee": true
+    },
+    {
+      "name": "Viewpoints",
+      "description": "Views of Satpura forests.",
+      "mustSee": true
+    }
+  ],
+
+  "facilities": {
+    "parking": true,
+    "water": true,
+    "food": false,
+    "network": "Weak"
+  },
+
+  "safety": {
+    "alerts": [
+      "Large fort — navigation required",
+      "Wildlife presence",
+      "Fog in monsoon"
+    ]
+  },
+
+  "visitInfo": {
+    "entryFee": 20,
+    "timeRequired": "4–6 hours",
+    "timings": "6:00 AM – 5:30 PM"
+  },
+
+  "history": {
+    "brief": "Narnala Fort was ruled by the Gond kings and later controlled by the Mughals and Marathas.",
+    "rulers": ["Gond dynasty", "Mughals", "Marathas", "British"]
+  }
+}

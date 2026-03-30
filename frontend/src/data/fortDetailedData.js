@@ -4502,6 +4502,3233 @@ const fortDetailedData = {
             rating: 4.7,
             reviewCount: '9,000+'
         }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ SONGAD FORT ━━━━━━━━━━━━━━━━━━
+    songad: {
+        introduction: `Songad Fort is a hidden gem nestled deep within the dense forests of Kolhapur district, 
+            near the Maharashtra-Goa border. This lesser-known hill fort served primarily as a watchtower 
+            and surveillance post during the Maratha Empire. While it lacks the grand architecture of 
+            larger forts, Songad rewards visitors with an incredibly peaceful trekking experience through 
+            pristine forest trails and panoramic views of surrounding valleys and green landscapes.`,
+
+        quote: {
+            text: "सोनगड — कोल्हापूरच्या जंगलातला शांत प्रहरी",
+            attribution: "The silent sentinel of Kolhapur's forests"
+        },
+
+        timeline: [
+            { year: '17th Century', title: 'Fort Established', desc: 'Songad was built as a small surveillance fort during the Maratha period to monitor enemy movements near the Goa border.' },
+            { year: '1660s', title: 'Maratha Strategic Use', desc: 'The fort was used by Maratha forces as part of the defensive network controlling the southern Kolhapur region and Goa border approaches.' },
+            { year: '18th Century', title: 'Decline', desc: 'With the decline of active border conflicts, the fort lost its strategic importance and gradually fell into disuse.' },
+            { year: '1818', title: 'British Period', desc: 'The fort was abandoned after British annexation. Dense forest growth slowly reclaimed the fortifications.' }
+        ],
+
+        landmarks: [
+            { title: 'Fort Walls', desc: 'Remains of defensive stone walls that once formed the perimeter of this compact surveillance fort. Though weathered, they still outline the fort\'s original layout.', mustSee: true },
+            { title: 'Viewpoints', desc: 'Multiple natural viewpoints offering scenic views of surrounding valleys, dense forest canopy, and the Western Ghats landscape stretching towards Goa.', mustSee: true },
+            { title: 'Forest Trail', desc: 'The trek itself through dense forest is the highlight — lush green canopy, birdsong, and occasional wildlife sightings make this a nature lover\'s paradise.', mustSee: false },
+            { title: 'Fort Plateau', desc: 'A small flat area at the summit that served as the watchtower position. Peaceful and perfect for a quiet rest surrounded by nature.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Pack Your Own Meals', type: 'Veg', price: '₹0', desc: 'No food stalls at the fort or on the trail. Carry all food and snacks. Popular choices: chapati rolls, thepla, trail mix, energy bars.' },
+            { name: 'Village Meals (Base)', type: 'Veg', price: '₹60-100', desc: 'Simple home-cooked meals may be available at Songadwadi village if arranged in advance with local families.' },
+            { name: 'Chai', type: 'Beverage', price: '₹10-20', desc: 'Hot tea may be available at the base village. Best to carry your own thermos for the trek.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Via Songadwadi Route', difficulty: 'Easy-Medium', distance: '2 km', time: '60-90 min', desc: 'A short but scenic trek through dense forest trails leading to the fort plateau. Well-shaded path with gradual ascent. Best for beginners seeking a nature experience.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Bus', icon: '🚌', desc: 'ST bus from Kolhapur to Chandgad taluka (~90 km). From Chandgad, local transport or shared auto to Songadwadi village.' },
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Kolhapur via Chandgad road (~90 km, 2.5-3 hours). The road passes through scenic Sahyadri landscapes. Limited parking at base.' },
+            { mode: 'By Bike', icon: '🏍️', desc: 'Scenic ride from Kolhapur through the ghats. Park at Songadwadi and trek. The ride itself is a highlight.' }
+        ],
+
+        trekEssentials: [
+            'Good walking shoes — forest trail can be muddy',
+            'Carry 2 litres of water — no water sources on fort',
+            'Insect repellent — dense forest area',
+            'Carry all food — no stalls anywhere near',
+            'GPS/offline maps — trail can be confusing',
+            'Start early morning for best experience',
+            'Carry a torch if returning late',
+            'Inform someone of your trekking plan'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Dense forest trail — follow the path carefully and avoid venturing off-trail', season: 'All year' },
+            { msg: 'No water sources available at the fort — carry sufficient water', season: 'All year' },
+            { msg: 'Remote location — avoid solo trekking, go in groups', season: 'All year' },
+            { msg: 'Trail gets very slippery during heavy monsoon rains', season: 'June-Sept' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹200-400' },
+            { label: 'Food', value: '₹50-100' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹250-500', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'Limited, at base village' },
+            { label: 'Food Stalls', available: false, detail: 'None — carry own food' },
+            { label: 'Water Source', available: false, detail: 'None — carry own water' },
+            { label: 'Toilets', available: false, detail: 'No facilities' },
+            { label: 'Mobile Network', available: false, detail: 'Weak to no signal' },
+            { label: 'First Aid', available: false, detail: 'Carry your own' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Kolhapur (Chandgad)' },
+            { label: 'Base Village', value: 'Songadwadi' },
+            { label: 'Altitude', value: '~800 m' },
+            { label: 'Fort Type', value: 'Hill Fort (Watchtower)' },
+            { label: 'Built By', value: 'Maratha Empire' },
+            { label: 'Famous For', value: 'Forest trek, valley views' },
+            { label: 'Trek Distance', value: '2 km one way' },
+            { label: 'Time Required', value: '2-3 hours' },
+            { label: 'Kids Appropriate', value: 'Yes (short trek)' },
+            { label: 'Nearest City', value: 'Kolhapur (90 km)' }
+        ],
+
+        reviews: {
+            quote: "Songad is not about grand architecture — it's about the journey. The forest trail, the birdsong, and the peaceful valley views make it a perfect escape from city life.",
+            positives: [
+                'Peaceful and uncrowded — true offbeat destination',
+                'Beautiful forest trek with rich biodiversity',
+                'Scenic valley views from the fort plateau',
+                'Short and easy trek suitable for beginners',
+                'Close to the Goa border — combine with Goa trip'
+            ],
+            proTips: [
+                'Best visited during post-monsoon for lush green scenery',
+                'Combine with nearby Chandangad for a fort-hopping day',
+                'Carry binoculars for birdwatching in the forest',
+                'Visit on weekdays for complete solitude',
+                'Arrange village meals in advance at Songadwadi'
+            ],
+            rating: 4.0,
+            reviewCount: '500+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ BHUSHANGAD ━━━━━━━━━━━━━━━━━━
+    bhushangad: {
+        introduction: `Bhushangad is a tranquil hill fort in Satara district that stands out more for its 
+            spiritual significance than military history. Known primarily for its ancient temple and 
+            incredibly easy access, this fort offers a calm retreat with panoramic views of the 
+            surrounding Satara plains. It is an ideal destination for families, casual walkers, 
+            and anyone seeking a peaceful half-day outing in the Sahyadri foothills.`,
+
+        quote: {
+            text: "भूषणगड — साताऱ्याच्या मैदानावरचा शांत किल्ला",
+            attribution: "The serene fort overlooking Satara's plains"
+        },
+
+        timeline: [
+            { year: '17th Century', title: 'Fort Established', desc: 'Bhushangad was established as a minor hill fort during the Maratha period, serving more as a local stronghold than a major military installation.' },
+            { year: 'Historical', title: 'Temple Construction', desc: 'The Bhushangad temple was built on the fort, becoming the primary reason for local visits. The temple holds deep religious significance for surrounding villages.' },
+            { year: '18th Century', title: 'Maratha Period', desc: 'The fort continued to serve as a local administrative point under the Marathas, with the temple drawing regular devotees.' },
+            { year: '1818', title: 'British Period', desc: 'The fort\'s military significance ended with British annexation, but the temple ensured continued local visits and maintenance.' }
+        ],
+
+        landmarks: [
+            { title: 'Bhushangad Temple', desc: 'The main attraction on the fort — an active temple that draws devotees from surrounding villages. Well-maintained and spiritually significant.', mustSee: true },
+            { title: 'Plateau Views', desc: 'A wide open plateau at the summit offering expansive panoramic views of Satara district plains, nearby hillocks, and farmlands stretching to the horizon.', mustSee: true },
+            { title: 'Fort Remnants', desc: 'Basic remains of fortification walls and structures visible around the plateau perimeter. Simple but historically interesting.', mustSee: false },
+            { title: 'Sunset Point', desc: 'The western edge of the plateau offers a beautiful vantage point for watching sunsets over the Satara plains.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Pack Light Snacks', type: 'Veg', price: '₹0', desc: 'The trek is short enough that heavy meals aren\'t needed. Carry biscuits, fruits, and a water bottle.' },
+            { name: 'Village Meals', type: 'Veg', price: '₹60-100', desc: 'Simple Maharashtrian meals may be available in the nearby Bhushangad village. Dal-rice and bhakri are common.' },
+            { name: 'Chai & Snacks', type: 'Veg', price: '₹10-30', desc: 'Small tea stalls may operate near the village. Not guaranteed — best to carry your own.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Via Direct Route', difficulty: 'Easy', distance: '1 km', time: '30-45 min', desc: 'A short and simple walk from the base village to the fort top. Gentle ascent through open terrain. Suitable for all ages and fitness levels.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Bus', icon: '🚌', desc: 'ST bus from Satara city to Khatav taluka (~60 km). Local transport to Bhushangad village from Khatav.' },
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Satara via Khatav road (~60 km, 1.5-2 hours). Road is motorable to the village. Parking available near village.' },
+            { mode: 'By Bike', icon: '🏍️', desc: 'Ride from Satara through the rural countryside. Pleasant ride through Satara district villages. Park at base village.' }
+        ],
+
+        trekEssentials: [
+            'Comfortable walking shoes — terrain is easy',
+            'Carry 1 litre of water',
+            'Sun protection — very little shade on the plateau',
+            'Camera for panoramic views',
+            'Light snacks for the short trek',
+            'Best visited in morning or evening to avoid heat',
+            'Allow 1-2 hours for complete exploration',
+            'Hat and sunscreen essential in summer'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Very little shade on the plateau — avoid midday summer visits', season: 'March-May' },
+            { msg: 'Carry sufficient water — no sources on the fort', season: 'All year' },
+            { msg: 'The open plateau can get windy — secure loose items', season: 'Winter' },
+            { msg: 'Basic terrain but edges may be unguarded — supervise children', season: 'All year' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹100-300' },
+            { label: 'Food', value: '₹50-100' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹150-400', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'Near base village' },
+            { label: 'Food Stalls', available: false, detail: 'None — carry own food' },
+            { label: 'Water Source', available: false, detail: 'Carry own water' },
+            { label: 'Toilets', available: false, detail: 'No facilities' },
+            { label: 'Mobile Network', available: true, detail: 'Good (most operators)' },
+            { label: 'Temple', available: true, detail: 'Active temple on fort' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Satara (Khatav)' },
+            { label: 'Base Village', value: 'Bhushangad' },
+            { label: 'Altitude', value: '~900 m' },
+            { label: 'Fort Type', value: 'Hill Fort (Minor)' },
+            { label: 'Built By', value: 'Maratha Empire' },
+            { label: 'Famous For', value: 'Temple, easy access, panoramic views' },
+            { label: 'Trek Distance', value: '1 km one way' },
+            { label: 'Time Required', value: '1-2 hours' },
+            { label: 'Kids Appropriate', value: 'Yes (very easy)' },
+            { label: 'Nearest City', value: 'Satara (60 km)' }
+        ],
+
+        reviews: {
+            quote: "Bhushangad is the perfect fort for those who want a peaceful escape without a grueling trek. The temple, the views, and the silence — it's Maharashtra at its most serene.",
+            positives: [
+                'Extremely easy and family-friendly',
+                'Active temple adds spiritual dimension',
+                'Wide panoramic views of Satara plains',
+                'Uncrowded — peaceful experience guaranteed',
+                'Short trek perfect for casual outings'
+            ],
+            proTips: [
+                'Visit during morning or evening for best lighting and cooler temperatures',
+                'Combine with other Satara forts for a fort-hopping trip',
+                'Carry water — there is no source on the fort',
+                'Best during winter months for pleasant weather',
+                'The sunset from the western edge is spectacular'
+            ],
+            rating: 3.9,
+            reviewCount: '300+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ CHANDANGAD ━━━━━━━━━━━━━━━━━━
+    chandangad: {
+        introduction: `Chandangad is a remote and atmospheric hill fort standing guard near the Maharashtra-Goa 
+            border in Kolhapur's Chandgad taluka. Surrounded by dense, almost impenetrable forests, this 
+            fort served as a critical border surveillance post controlling the ancient routes between 
+            Maharashtra and Goa. While it lacks grand fortifications, Chandangad more than makes up for 
+            it with its pristine natural setting, adventurous forest trek, and the rare solitude that 
+            only truly remote forts can offer.`,
+
+        quote: {
+            text: "चंदनगड — महाराष्ट्र-गोवा सीमेवरचा निसर्गरम्य किल्ला",
+            attribution: "The border fortress between Maharashtra and Goa"
+        },
+
+        timeline: [
+            { year: '16th Century', title: 'Adilshahi Construction', desc: 'Chandangad was built by the Adil Shahi dynasty of Bijapur as a border fort controlling the trade and military routes between the Deccan and Goa.' },
+            { year: '1660s', title: 'Maratha Capture', desc: 'The fort was captured by Maratha forces as part of Shivaji Maharaj\'s southern expansion campaign. It continued to serve as a border surveillance post.' },
+            { year: '18th Century', title: 'Strategic Border Fort', desc: 'During the prolonged Maratha-Portuguese conflicts, Chandangad served as a watchtower monitoring Portuguese activities in Goa.' },
+            { year: '1818', title: 'British Period', desc: 'The fort was abandoned after British annexation. The dense surrounding forests gradually reclaimed the structures.' }
+        ],
+
+        landmarks: [
+            { title: 'Fort Ruins', desc: 'Remaining stone structures and wall foundations scattered across the fort area. Though heavily weathered, they tell the story of this border outpost\'s past.', mustSee: true },
+            { title: 'Forest Views', desc: 'Dense forest canopy stretching in all directions — the views from Chandangad are of unbroken green wilderness with the Western Ghats as the backdrop.', mustSee: true },
+            { title: 'Border Viewpoint', desc: 'A vantage point from where the Maharashtra-Goa border region is visible. On clear days, the landscape extends towards the Goan coast.', mustSee: false },
+            { title: 'Ancient Trail Remains', desc: 'Traces of the old trade path between Maharashtra and Goa are visible near the fort, a reminder of its strategic border-control purpose.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Pack All Meals', type: 'Veg', price: '₹0', desc: 'Extremely remote area — no food availability anywhere near the fort. Carry complete meals, snacks, and extra energy food for the trek.' },
+            { name: 'Village Meals (Chandgad)', type: 'Veg', price: '₹60-100', desc: 'Simple meals available in Chandgad town before or after the trek. Small restaurants serve basic Maharashtrian food.' },
+            { name: 'Kolhapuri Food', type: 'Non-Veg', price: '₹100-200', desc: 'On your way back through Kolhapur, don\'t miss the famous Tambda-Pandhra Rassa — the perfect post-trek reward.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Via Chandgad Route', difficulty: 'Medium', distance: '3 km', time: '90-120 min', desc: 'A forest trek from Chandgad village with a gradual ascent through dense tree cover. The trail requires some navigation skills as markings are sparse. Beautiful but demanding.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Bus', icon: '🚌', desc: 'ST bus from Kolhapur to Chandgad town (~110 km, 3-4 hours). From Chandgad, local transport or auto to the trek starting point.' },
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Kolhapur via Chandgad road (~110 km, 3 hours). The road passes through beautiful Sahyadri landscapes. Limited parking near base.' },
+            { mode: 'By Bike', icon: '🏍️', desc: 'Long but scenic ride from Kolhapur through the Western Ghats. The Chandgad ghat road is particularly stunning. Park near the village.' }
+        ],
+
+        trekEssentials: [
+            'Sturdy trekking shoes — forest trail can be rough and muddy',
+            'Carry 2-3 litres of water — no water sources on route',
+            'Insect repellent — mandatory for dense forest trek',
+            'Full food supply — nothing available on or near the fort',
+            'GPS/offline maps — trail markings are sparse',
+            'Trek in a group — avoid solo trekking in this remote area',
+            'Carry a torch and extra batteries',
+            'Inform someone of your itinerary and expected return time'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Remote forest area — do not trek alone, always go in a group of 4+', season: 'All year' },
+            { msg: 'Carry sufficient water and food — absolutely no sources on the trail or fort', season: 'All year' },
+            { msg: 'Forest trail can be confusing — use GPS and stay on the main path', season: 'All year' },
+            { msg: 'Heavy monsoon makes the forest trail dangerous with leeches and slippery terrain', season: 'June-Sept' },
+            { msg: 'Very weak mobile network — download offline maps before starting', season: 'All year' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹300-600' },
+            { label: 'Food', value: '₹100-200' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹400-800', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'Limited, near Chandgad village' },
+            { label: 'Food Stalls', available: false, detail: 'None — carry all food' },
+            { label: 'Water Source', available: false, detail: 'None — carry all water' },
+            { label: 'Toilets', available: false, detail: 'No facilities' },
+            { label: 'Mobile Network', available: false, detail: 'Very weak to no signal' },
+            { label: 'First Aid', available: false, detail: 'Nearest at Chandgad town' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Kolhapur (Chandgad)' },
+            { label: 'Base Village', value: 'Chandgad' },
+            { label: 'Altitude', value: '~750 m' },
+            { label: 'Fort Type', value: 'Hill Fort (Border)' },
+            { label: 'Built By', value: 'Adilshahi dynasty' },
+            { label: 'Famous For', value: 'Border fort, forest trek, solitude' },
+            { label: 'Trek Distance', value: '3 km one way' },
+            { label: 'Time Required', value: '3-4 hours' },
+            { label: 'Kids Appropriate', value: 'No (remote forest)' },
+            { label: 'Nearest City', value: 'Kolhapur (110 km)' }
+        ],
+
+        reviews: {
+            quote: "Chandangad is for those who seek the road less traveled. The dense forest, the silence, and the feeling of being at the edge of Maharashtra — it's an experience you won't find at popular forts.",
+            positives: [
+                'Truly offbeat and remote destination',
+                'Dense forest trek is an adventure in itself',
+                'Complete solitude — almost no other visitors',
+                'Strategic border location adds historical interest',
+                'Beautiful Western Ghats wilderness setting'
+            ],
+            proTips: [
+                'Best combined with Songad Fort for a border forts exploration',
+                'Visit during post-monsoon (Oct-Nov) for lush green forests',
+                'Go with experienced trekkers who know the area',
+                'Carry enough supplies for the full day — it\'s truly remote',
+                'Plan the Kolhapur-Chandgad drive as part of the experience'
+            ],
+            rating: 4.1,
+            reviewCount: '200+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ PAVANGAD FORT ━━━━━━━━━━━━━━━━━━
+    pavangad: {
+        introduction: `Pavangad Fort is a compact hill fort situated in the shadow of the mighty Panhala Fort 
+            in Kolhapur district. While Panhala dominates the skyline, Pavangad served as its loyal companion — 
+            a strategic support fort that provided additional surveillance and defensive capability. Just 20 km 
+            from Kolhapur city, this fort offers a short and rewarding trek with excellent views of the Panhala 
+            region and surrounding valleys, making it a perfect half-day outing.`,
+
+        quote: {
+            text: "पावनगड — पन्हाळ्याचा विश्वासू साथीदार",
+            attribution: "Pavangad — the faithful companion of Panhala"
+        },
+
+        timeline: [
+            { year: '17th Century', title: 'Fort Established', desc: 'Pavangad was built during the Maratha period as a support fort to complement the defenses of the nearby Panhala Fort.' },
+            { year: '1660', title: 'Strategic Importance', desc: 'During the siege of Panhala by Siddi Johar, Pavangad served as part of the outer defense network protecting the approaches to the larger fort.' },
+            { year: '18th Century', title: 'Continued Use', desc: 'The Marathas maintained Pavangad as a watchtower and signaling outpost for Panhala throughout the 18th century.' },
+            { year: '1844', title: 'British Period', desc: 'Like Panhala, Pavangad was annexed by the British. It gradually fell into disuse as Panhala became a hill station.' }
+        ],
+
+        landmarks: [
+            { title: 'Fort Walls', desc: 'Remains of defensive stone walls that formed the perimeter of this compact support fort. Though smaller than Panhala, the construction shows solid Maratha engineering.', mustSee: true },
+            { title: 'Panhala Viewpoint', desc: 'A spectacular vantage point offering direct views of the massive Panhala Fort complex. Perfect for understanding the strategic relationship between the two forts.', mustSee: true },
+            { title: 'Valley Views', desc: 'Panoramic views of the Kolhapur valleys and surrounding Sahyadri foothills. Beautiful during monsoon when the landscape turns lush green.', mustSee: true },
+            { title: 'Fort Plateau', desc: 'A small but pleasant plateau area at the summit. Ideal for a rest stop with scenic surroundings.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Pack Light Snacks', type: 'Veg', price: '₹0', desc: 'Short trek — carry biscuits, fruits, and a water bottle. No stalls at the fort.' },
+            { name: 'Kolhapuri Tambda Rassa', type: 'Non-Veg', price: '₹120-200', desc: 'After the trek, head to Kolhapur (20 km) for the iconic fiery red mutton curry. The perfect reward.' },
+            { name: 'Panhala Food Stalls', type: 'Veg', price: '₹50-100', desc: 'If combining with Panhala visit, food stalls are available at Panhala Fort entrance.' },
+            { name: 'Chai', type: 'Beverage', price: '₹10-20', desc: 'Tea available in Panhala town or Kolhapur. Not at the fort itself.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Via Pavangad Village Route', difficulty: 'Easy', distance: '1.5 km', time: '45-60 min', desc: 'A short and gradual climb suitable for beginners. The trail passes through open terrain with views opening up as you ascend. Family-friendly.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Bus', icon: '🚌', desc: 'ST bus from Kolhapur to Panhala (20 km, 40 min). From Panhala, local transport to Pavangad village.' },
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Kolhapur via Panhala road (~20 km, 30-40 min). Easy to combine with a Panhala Fort visit. Parking near base.' },
+            { mode: 'By Bike', icon: '🏍️', desc: 'Short ride from Kolhapur through scenic ghat road. Park at the village and trek up.' }
+        ],
+
+        trekEssentials: [
+            'Comfortable walking shoes — easy terrain',
+            'Carry 1 litre of water — no sources at fort',
+            'Sun protection — open areas with limited shade',
+            'Camera for Panhala and valley views',
+            'Light snacks for the short trek',
+            'Allow 2-3 hours for exploration',
+            'Best visited morning or evening',
+            'Combine with Panhala for a full day trip'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Open areas with limited shade — carry sun protection in summer', season: 'March-May' },
+            { msg: 'Carry water — no sources available on the fort', season: 'All year' },
+            { msg: 'Some wall edges may be unguarded — supervise children', season: 'All year' },
+            { msg: 'Can be windy at the top — secure loose items', season: 'Monsoon/Winter' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹50-150' },
+            { label: 'Food', value: '₹50-200' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹100-350', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'Near base village' },
+            { label: 'Food Stalls', available: false, detail: 'None — carry own food' },
+            { label: 'Water Source', available: false, detail: 'Carry own water' },
+            { label: 'Toilets', available: false, detail: 'No facilities' },
+            { label: 'Mobile Network', available: true, detail: 'Good (near Kolhapur)' },
+            { label: 'Nearby Fort', available: true, detail: 'Panhala Fort (adjacent)' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Kolhapur (Panhala)' },
+            { label: 'Base Village', value: 'Pavangad' },
+            { label: 'Altitude', value: '~850 m' },
+            { label: 'Fort Type', value: 'Hill Fort (Support)' },
+            { label: 'Built By', value: 'Maratha Empire' },
+            { label: 'Famous For', value: 'Panhala views, easy trek' },
+            { label: 'Trek Distance', value: '1.5 km one way' },
+            { label: 'Time Required', value: '2-3 hours' },
+            { label: 'Kids Appropriate', value: 'Yes (easy trek)' },
+            { label: 'Nearest City', value: 'Kolhapur (20 km)' }
+        ],
+
+        reviews: {
+            quote: "Pavangad is the perfect appetizer before the main course of Panhala. The views of Panhala Fort from here give you a completely new perspective of that massive fortification.",
+            positives: [
+                'Short and easy trek — great for beginners',
+                'Excellent views of Panhala Fort',
+                'Very close to Kolhapur city',
+                'Uncrowded and peaceful',
+                'Perfect for combining with Panhala visit'
+            ],
+            proTips: [
+                'Always combine with Panhala Fort for a complete experience',
+                'Visit early morning for best views and cooler weather',
+                'After the trek, enjoy Kolhapuri food in the city',
+                'Carry binoculars for detailed views of Panhala',
+                'Monsoon turns the landscape spectacularly green'
+            ],
+            rating: 4.0,
+            reviewCount: '400+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ BHORGIRI FORT ━━━━━━━━━━━━━━━━━━
+    bhorgiri: {
+        introduction: `Bhorgiri Fort is a serene hill fort located near the sacred Bhimashankar Jyotirlinga 
+            temple in Pune district's Khed taluka. Nestled within the lush Bhimashankar Wildlife Sanctuary, 
+            this fort combines ancient caves, a local temple, and dense forest surroundings into a peaceful 
+            trekking experience. It is a hidden treasure for those who love the intersection of nature, 
+            history, and spirituality — far from the crowds of more popular Pune forts.`,
+
+        quote: {
+            text: "भोरगिरी — भीमाशंकरच्या जंगलातला शांत किल्ला",
+            attribution: "The peaceful fort in Bhimashankar's forests"
+        },
+
+        timeline: [
+            { year: 'Ancient', title: 'Cave Habitation', desc: 'The Bhorgiri caves were used as shelters by early inhabitants and later by monks and travelers traversing the Sahyadri routes.' },
+            { year: '17th Century', title: 'Maratha Period', desc: 'The fort was used by Maratha forces for surveillance of the Bhimashankar region and the trade routes passing through the dense forests.' },
+            { year: '18th Century', title: 'Temple Construction', desc: 'A local temple was established on the fort, adding spiritual significance to the already historically important site.' },
+            { year: '1818', title: 'British Period', desc: 'The fort was abandoned after British annexation. The surrounding Bhimashankar forest gradually reclaimed the structures.' }
+        ],
+
+        landmarks: [
+            { title: 'Bhorgiri Caves', desc: 'Ancient caves carved into the hillside, once used for shelter and meditation. Cool interiors and atmospheric setting make them the highlight of the fort visit.', mustSee: true },
+            { title: 'Temple', desc: 'A local temple on the fort plateau that attracts devotees from nearby villages. Small but well-maintained with a peaceful atmosphere.', mustSee: true },
+            { title: 'Forest Views', desc: 'Dense forest surroundings of the Bhimashankar Wildlife Sanctuary visible from the fort. In monsoon, the greenery and mist create a magical atmosphere.', mustSee: true },
+            { title: 'Fort Remains', desc: 'Basic fortification remains including wall fragments and platform structures. Simple but historically indicative of its surveillance role.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Pack Your Own Meals', type: 'Veg', price: '₹0', desc: 'No food stalls at the fort. Carry packed meals, snacks, and sufficient water for the forest trek.' },
+            { name: 'Bhimashankar Stalls', type: 'Veg', price: '₹50-100', desc: 'If combining with Bhimashankar temple visit, food stalls are available near the temple. Traditional Maharashtrian snacks.' },
+            { name: 'Village Meals', type: 'Veg', price: '₹60-100', desc: 'Home-cooked meals may be available in Bhorgiri village if arranged in advance. Simple dal-rice and bhakri.' },
+            { name: 'Chai', type: 'Beverage', price: '₹10-20', desc: 'Tea available at Bhimashankar temple area. Carry your own for the Bhorgiri trek.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Via Bhorgiri Village Route', difficulty: 'Easy-Medium', distance: '2 km', time: '60-90 min', desc: 'A forest trail from Bhorgiri village leading through dense tree cover to the caves and fort remains. Well-shaded and atmospheric. Some slippery patches in monsoon.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Bus', icon: '🚌', desc: 'ST bus from Pune to Khed/Rajgurunagar (~60 km), then local transport towards Bhimashankar. Bhorgiri village is near the Bhimashankar route.' },
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Pune via Chakan-Rajgurunagar-Bhimashankar road (~95 km, 2.5-3 hours). Scenic ghat road with forest surroundings.' },
+            { mode: 'By Bike', icon: '🏍️', desc: 'Beautiful ride from Pune through the Bhimashankar ghats. Park at Bhorgiri village and trek. Combine with Bhimashankar temple visit.' }
+        ],
+
+        trekEssentials: [
+            'Good trekking shoes — forest trail can be slippery',
+            'Carry 2 litres of water',
+            'Insect repellent — dense forest area',
+            'Carry packed food — no stalls at fort',
+            'Torch for exploring caves',
+            'Rain gear during monsoon',
+            'Stay on the marked trail — forest can be confusing',
+            'Best combined with Bhimashankar temple visit'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Forest trails get slippery in monsoon — wear proper shoes', season: 'June-Sept' },
+            { msg: 'Stay on the marked path — dense forest can be disorienting', season: 'All year' },
+            { msg: 'Wildlife sanctuary area — do not disturb wildlife or litter', season: 'All year' },
+            { msg: 'Carry a torch for cave exploration — dark interiors', season: 'All year' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹150-400' },
+            { label: 'Food', value: '₹50-150' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹200-550', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'Near Bhorgiri village' },
+            { label: 'Food Stalls', available: false, detail: 'None at fort (available at Bhimashankar)' },
+            { label: 'Water Source', available: true, detail: 'Natural springs near base' },
+            { label: 'Toilets', available: false, detail: 'No facilities at fort' },
+            { label: 'Mobile Network', available: false, detail: 'Weak signal in forest' },
+            { label: 'Nearby Temple', available: true, detail: 'Bhimashankar Jyotirlinga' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Pune (Khed)' },
+            { label: 'Base Village', value: 'Bhorgiri' },
+            { label: 'Altitude', value: '~900 m' },
+            { label: 'Fort Type', value: 'Hill Fort (Surveillance)' },
+            { label: 'Built By', value: 'Maratha Empire' },
+            { label: 'Famous For', value: 'Caves, temple, forest trek' },
+            { label: 'Trek Distance', value: '2 km one way' },
+            { label: 'Time Required', value: '2-3 hours' },
+            { label: 'Kids Appropriate', value: 'Yes (with supervision)' },
+            { label: 'Nearest City', value: 'Pune (95 km)' }
+        ],
+
+        reviews: {
+            quote: "Bhorgiri is the kind of fort where nature steals the show. The ancient caves, the temple bells, and the dense forest — it's meditation in motion.",
+            positives: [
+                'Beautiful forest trek in Bhimashankar region',
+                'Ancient caves add mystery and charm',
+                'Peaceful and rarely crowded',
+                'Can combine with Bhimashankar Jyotirlinga visit',
+                'Rich biodiversity — birdwatching paradise'
+            ],
+            proTips: [
+                'Always combine with Bhimashankar temple for a full day trip',
+                'Visit during monsoon for the most atmospheric experience',
+                'Carry a torch for exploring the caves properly',
+                'Start early to enjoy the forest sounds in morning calm',
+                'Look out for the Indian Giant Squirrel in the sanctuary'
+            ],
+            rating: 4.1,
+            reviewCount: '350+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ SOLAPUR BHUIKOT FORT ━━━━━━━━━━━━━━━━━━
+    'solapur-bhuikot': {
+        introduction: `Solapur Bhuikot Fort is one of the finest examples of Deccan land fort architecture, 
+            standing proudly in the heart of Solapur city. Unlike the hill forts of the Sahyadris, Bhuikot 
+            is a massive ground-level fortification featuring remarkable double fortification walls, a 
+            water-filled moat, and imposing bastions that showcase the military engineering of the Bahmani 
+            Sultanate. Having changed hands between the Bahmanis, Adil Shahis, Mughals, and the British, 
+            this fort is a living chronicle of Deccan political history.`,
+
+        quote: {
+            text: "सोलापूर भुईकोट — दख्खनच्या मैदानी किल्ल्यांचा राजा",
+            attribution: "The king of Deccan's land forts"
+        },
+
+        timeline: [
+            { year: '15th Century', title: 'Bahmani Construction', desc: 'The Bahmani Sultanate built Bhuikot Fort as a massive ground-level fortification to control the strategic Solapur region — a key crossroads of Deccan trade routes.' },
+            { year: '1490', title: 'Adil Shahi Control', desc: 'After the breakup of the Bahmani Sultanate, the Adil Shahi dynasty of Bijapur took control and further strengthened the double-wall defenses and moat system.' },
+            { year: '1668', title: 'Mughal Conquest', desc: 'The Mughals captured Solapur and Bhuikot Fort as part of Aurangzeb\'s Deccan campaigns. The fort served as a Mughal garrison.' },
+            { year: '1818', title: 'British Annexation', desc: 'The British took control of Solapur and the fort. It was used for administrative purposes before gradually transitioning into a heritage monument.' },
+            { year: 'Modern', title: 'Heritage Conservation', desc: 'The fort has been partially restored and is maintained as a historical monument. It remains a prominent landmark in Solapur city.' }
+        ],
+
+        landmarks: [
+            { title: 'Double Fort Walls', desc: 'A unique defensive feature — two concentric fortification walls creating a deadly killing zone between them. This double-wall design is among the finest in Deccan military architecture.', mustSee: true },
+            { title: 'Moat (Khandak)', desc: 'A water-filled moat surrounding the outer wall, forming the first line of defense. Still partially water-filled, it dramatically enhances the fort\'s imposing appearance.', mustSee: true },
+            { title: 'Temple Inside Fort', desc: 'A well-maintained religious structure within the fort complex. Draws regular devotees and adds a spiritual dimension to the historical visit.', mustSee: true },
+            { title: 'Bastions & Towers', desc: 'Massive semicircular bastions at regular intervals along the walls, designed for cannon placement and defensive fire. Impressive engineering.', mustSee: true },
+            { title: 'Main Gateway', desc: 'The fortified entrance featuring a bent-axis approach designed to slow attacking forces. Classic Deccan military gateway architecture.', mustSee: false },
+            { title: 'Inner Fort Area', desc: 'The spacious interior area that once housed barracks, administrative buildings, and storage facilities. Now a pleasant area for exploration.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Solapur Shenga Chutney', type: 'Veg', price: '₹30-50', desc: 'Solapur\'s famous peanut chutney — a local delicacy that pairs with everything. Available at restaurants throughout the city.' },
+            { name: 'Jowar Bhakri Thali', type: 'Veg', price: '₹80-120', desc: 'Traditional Solapur thali with jowar bhakri, pithla, zunka, and curd. Authentic Deccan flavors at local eateries.' },
+            { name: 'Solapur Chaddi Baniyan Dosa', type: 'Veg', price: '₹40-70', desc: 'Solapur\'s uniquely named famous dosa — paper-thin and incredibly crispy. A must-try local street food experience.' },
+            { name: 'Chai & Snacks', type: 'Beverage', price: '₹10-30', desc: 'Tea stalls and snack shops surround the fort area. Easy access to refreshments before and after the visit.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🚶', title: 'Main Entrance Walk', difficulty: 'Easy', distance: '1 km', time: '30-45 min', desc: 'Direct walking access through the main gateway. No trekking required — the fort is at ground level in the city. Fully wheelchair accessible in main areas.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Bus', icon: '🚌', desc: 'Solapur has excellent bus connectivity from Pune (250 km), Mumbai (400 km), and Hyderabad (300 km). The fort is in the city center — auto/taxi from bus stand.' },
+            { mode: 'By Car', icon: '🚗', desc: 'Drive via NH65 from Pune (~250 km, 4 hours) or via NH44 from Hyderabad (~300 km, 5 hours). Fort is centrally located with parking nearby.' },
+            { mode: 'By Train', icon: '🚂', desc: 'Solapur Junction is a major railway station with direct trains from Mumbai, Pune, Hyderabad, Chennai, and Delhi. Fort is 2 km from station — auto ₹30-50.' }
+        ],
+
+        trekEssentials: [
+            'Comfortable walking shoes — paved paths',
+            'Water bottle — stalls available nearby',
+            'Camera — impressive architecture',
+            'Sun protection — open fort, limited shade',
+            'Cash for entry fee (₹20) and food',
+            'Budget 2-3 hours for thorough exploration',
+            'Best visited early morning or late afternoon',
+            'Local guide available for historical context'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Crowded area on weekends and holidays — visit on weekdays for better experience', season: 'All year' },
+            { msg: 'Large fort — explore carefully, some areas may have uneven ground', season: 'All year' },
+            { msg: 'Moat area — keep children away from the water edges', season: 'All year' },
+            { msg: 'Summer heat in Solapur can be extreme — carry sun protection and water', season: 'March-May' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹30-100 (local)' },
+            { label: 'Entry', value: '₹20' },
+            { label: 'Food', value: '₹80-200' },
+            { label: 'Guide', value: '₹100-200' },
+            { label: 'Total', value: '₹230-520', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'Public parking nearby' },
+            { label: 'Food Stalls', available: true, detail: 'Multiple near fort' },
+            { label: 'Drinking Water', available: true, detail: 'Available' },
+            { label: 'Toilets', available: true, detail: 'Public toilets nearby' },
+            { label: 'Mobile Network', available: true, detail: 'Excellent (city center)' },
+            { label: 'Wheelchair Access', available: true, detail: 'Partial (main areas)' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Solapur' },
+            { label: 'Location', value: 'Solapur city center' },
+            { label: 'Altitude', value: 'Ground level' },
+            { label: 'Fort Type', value: 'Land Fort (Bhuikot)' },
+            { label: 'Built By', value: 'Bahmani Sultanate' },
+            { label: 'Famous For', value: 'Double walls, moat, Deccan architecture' },
+            { label: 'Entry Fee', value: '₹20' },
+            { label: 'Time Required', value: '2-3 hours' },
+            { label: 'Kids Appropriate', value: 'Yes (easy access)' },
+            { label: 'Best Combined', value: 'Solapur city tour' }
+        ],
+
+        reviews: {
+            quote: "Solapur Bhuikot is proof that not all great forts sit on hilltops. The double walls and moat are engineering marvels, and being in a city makes it uniquely accessible.",
+            positives: [
+                'Unique double-wall fortification — rare in Maharashtra',
+                'Water-filled moat is impressive and photogenic',
+                'Easy access — no trekking, located in city center',
+                'Rich multi-dynasty history spanning 500+ years',
+                'Good facilities — food, water, network all available'
+            ],
+            proTips: [
+                'Visit early morning to avoid crowds and heat',
+                'Hire a local guide for historical context — ₹100-200',
+                'Try Solapur\'s famous Chaddi Baniyan Dosa nearby',
+                'Combine with Siddheshwar temple visit in the city',
+                'The moat looks most impressive during monsoon when full'
+            ],
+            rating: 4.2,
+            reviewCount: '2,000+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ ARNALA FORT ━━━━━━━━━━━━━━━━━━
+    arnala: {
+        introduction: `Arnala Fort is a striking sea fort perched on a small island off the coast of Virar in 
+            Palghar district. Originally built by the Portuguese as a coastal defense outpost, the fort was 
+            later captured by the Marathas under Chimaji Appa in 1737 during the famous Vasai campaign. 
+            Surrounded by the turquoise waters of the Arabian Sea, Arnala is one of the most accessible 
+            sea forts near Mumbai — just a 10-minute boat ride from Arnala beach. Its well-preserved walls, 
+            corner bastions, and interior temple make it a rewarding half-day escape from the city.`,
+
+        quote: {
+            text: "अर्नाळा — विरारच्या समुद्रातला मराठ्यांचा विजयकिल्ला",
+            attribution: "Arnala — the Maratha victory fort in Virar's waters"
+        },
+
+        timeline: [
+            { year: '16th Century', title: 'Portuguese Construction', desc: 'The Portuguese built Arnala Fort as part of their coastal defense network to protect the lucrative trade routes along the northern Konkan coast.' },
+            { year: '1737', title: '🏆 Maratha Capture', desc: 'Chimaji Appa, brother of Peshwa Bajirao I, captured Arnala Fort from the Portuguese during the historic Vasai campaign. A significant Maratha naval victory.' },
+            { year: '18th Century', title: 'Maratha Naval Base', desc: 'The Marathas strengthened the fort and used it as a naval outpost, adding the temple and expanding the bastions.' },
+            { year: '1818', title: 'British Takeover', desc: 'The British East India Company took control of Arnala along with other Maratha territories. The fort was used briefly before gradual disuse.' }
+        ],
+
+        landmarks: [
+            { title: 'Main Fort Walls', desc: 'Strong stone fortification walls encircling the entire island. The Portuguese construction is evident in the masonry style, with Maratha-era additions visible at several points.', mustSee: true },
+            { title: 'Corner Bastions', desc: 'Four imposing bastions at each corner of the fort offering panoramic views of the Arabian Sea. Once mounted with cannons for coastal defense.', mustSee: true },
+            { title: 'Temple Inside Fort', desc: 'A well-maintained Hindu temple within the fort walls, added by the Marathas after capturing the fort. Active and visited by local devotees.', mustSee: true },
+            { title: 'Main Gateway', desc: 'The fortified sea-facing entrance with a bent-axis design typical of Portuguese military architecture. Impressive stonework.', mustSee: false },
+            { title: 'Interior Ruins', desc: 'Remains of barracks, storage rooms, and water cisterns inside the fort. Give a sense of the fort\'s operational scale.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Arnala Beach Stalls', type: 'Non-Veg', price: '₹100-200', desc: 'Fresh seafood stalls line Arnala beach — fried bombil (Bombay duck), surmai fry, and prawns are local specialties.' },
+            { name: 'Vada Pav & Snacks', type: 'Veg', price: '₹20-40', desc: 'Quick snacks available at Arnala beach before or after the boat ride. Classic Mumbai-style vada pav.' },
+            { name: 'Fish Thali', type: 'Non-Veg', price: '₹150-250', desc: 'Full Konkan fish thali with rice, fish curry, fry, sol kadhi, and papad. Available at beach restaurants.' },
+            { name: 'Chai & Cold Drinks', type: 'Beverage', price: '₹10-30', desc: 'Tea stalls and cold drink vendors at Arnala beach. Refreshing after the fort visit.' }
+        ],
+
+        trekRoutes: [
+            { icon: '⛵', title: 'Via Boat from Arnala Beach', difficulty: 'Easy', distance: '1 km (sea route)', time: '10-15 min', desc: 'Short and scenic boat ride from Arnala beach to the island fort. Boats operate regularly during good weather. ₹50-100 per person.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Train', icon: '🚂', desc: 'Take Western Railway local to Virar station (~1.5 hours from Churchgate). From Virar, auto/bus to Arnala beach (~10 km, 20 min).' },
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Mumbai via NH48 to Virar, then to Arnala beach (~80 km, 2-2.5 hours). Parking available near the beach.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'MSRTC buses from Mumbai to Virar. From Virar bus stand, local bus or auto to Arnala beach.' }
+        ],
+
+        trekEssentials: [
+            'Comfortable shoes — some rocky surfaces inside fort',
+            'Carry 1-2 litres of water — no water inside fort',
+            'Sun protection — exposed fort with limited shade',
+            'Camera — beautiful sea views from bastions',
+            'Cash for boat ride (₹50-100)',
+            'Check boat timings before visiting',
+            'Allow 2-3 hours including boat ride',
+            'Avoid during rough sea/monsoon'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Check boat timings and sea conditions before planning — boats stop in rough weather', season: 'All year' },
+            { msg: 'Avoid visiting during monsoon — sea is rough and boats don\'t operate', season: 'June-Sept' },
+            { msg: 'Fort surfaces can be slippery, especially near the sea-facing walls', season: 'Monsoon' },
+            { msg: 'Keep children supervised near bastion edges — no railings', season: 'All year' }
+        ],
+
+        budget: [
+            { label: 'Transport (local)', value: '₹50-150' },
+            { label: 'Boat Ride', value: '₹50-100' },
+            { label: 'Food', value: '₹100-250' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹200-500', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'At Arnala beach' },
+            { label: 'Food Stalls', available: true, detail: 'At beach (not on fort)' },
+            { label: 'Drinking Water', available: false, detail: 'Carry own — none on fort' },
+            { label: 'Toilets', available: false, detail: 'At beach only' },
+            { label: 'Mobile Network', available: true, detail: 'Moderate signal' },
+            { label: 'Boat Service', available: true, detail: '₹50-100, weather dependent' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Palghar (Vasai)' },
+            { label: 'Access', value: 'Boat from Arnala Beach' },
+            { label: 'Altitude', value: 'Sea level' },
+            { label: 'Fort Type', value: 'Sea Fort (Island)' },
+            { label: 'Built By', value: 'Portuguese' },
+            { label: 'Captured By', value: 'Chimaji Appa (1737)' },
+            { label: 'Famous For', value: 'Portuguese-Maratha history, sea views' },
+            { label: 'Time Required', value: '2-3 hours' },
+            { label: 'Kids Appropriate', value: 'Yes (calm boat ride)' },
+            { label: 'Nearest City', value: 'Virar (10 km)' }
+        ],
+
+        reviews: {
+            quote: "Arnala is the most accessible sea fort near Mumbai. The boat ride, the Portuguese walls, and the sea breeze — it's a perfect weekend escape without the crowds.",
+            positives: [
+                'Very accessible from Mumbai/Virar',
+                'Short and pleasant boat ride',
+                'Well-preserved fort walls and bastions',
+                'Beautiful Arabian Sea views',
+                'Great seafood at Arnala beach'
+            ],
+            proTips: [
+                'Visit on weekdays for fewer crowds on the boat',
+                'Combine with Arnala beach for a full day trip',
+                'Go early morning for the best sea views and cooler weather',
+                'Try the fresh Bombay duck fry at beach stalls',
+                'Best visited October to May — monsoon boats don\'t run'
+            ],
+            rating: 4.2,
+            reviewCount: '1,500+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ KELVE FORT ━━━━━━━━━━━━━━━━━━
+    kelve: {
+        introduction: `Kelve Fort is a quiet coastal fort near the popular Kelve Beach in Palghar district. 
+            Now mostly in ruins, this fort was once part of the Portuguese and later Maratha coastal defense 
+            network along the northern Konkan coast. While it lacks the grandeur of larger sea forts, Kelve 
+            Fort rewards visitors with scenic Arabian Sea views, a peaceful atmosphere, and the charm of 
+            exploring an uncrowded historical site right by the beach. It's an ideal addition to a Kelve 
+            Beach day trip.`,
+
+        quote: {
+            text: "केळवे किल्ला — कोकण किनारपट्टीवरचा शांत इतिहास",
+            attribution: "Kelve Fort — quiet history on the Konkan coast"
+        },
+
+        timeline: [
+            { year: '16th Century', title: 'Portuguese Period', desc: 'The Portuguese built fortifications at Kelve as part of their coastal defense chain protecting the trade routes along the northern Konkan coast.' },
+            { year: '17th Century', title: 'Maratha Control', desc: 'The Marathas captured the fort as they expanded control over the Konkan coast. It served as a minor coastal outpost.' },
+            { year: '18th Century', title: 'Gradual Decline', desc: 'As larger forts took strategic precedence, Kelve Fort gradually lost importance and fell into disrepair.' },
+            { year: 'Modern', title: 'Ruins & Tourism', desc: 'Today the fort exists as atmospheric ruins near Kelve Beach, attracting history enthusiasts and beach visitors alike.' }
+        ],
+
+        landmarks: [
+            { title: 'Fort Ruins', desc: 'Scattered stone remains of the original fort structures — walls, foundations, and platform remnants that hint at the fort\'s former layout. Atmospheric and photogenic.', mustSee: true },
+            { title: 'Sea View', desc: 'Beautiful panoramic views of the Arabian Sea from the fort\'s elevated position. Stunning during sunset when the sky turns golden over the water.', mustSee: true },
+            { title: 'Beach Connection', desc: 'The fort sits adjacent to Kelve Beach, one of the cleanest and most scenic beaches in Palghar. The combination makes for a perfect day trip.', mustSee: false },
+            { title: 'Coastal Rock Formations', desc: 'Interesting rock formations near the fort exposed during low tide. Worth exploring for the geological patterns and tidal pools.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Beach Stall Snacks', type: 'Veg', price: '₹30-60', desc: 'Bhel puri, pani puri, and corn on cob at beach-side stalls. Classic beach food experience.' },
+            { name: 'Seafood', type: 'Non-Veg', price: '₹100-200', desc: 'Fresh fish fry and seafood available at restaurants near Kelve Beach. Bombil and surmai are popular choices.' },
+            { name: 'Kelve Village Food', type: 'Veg', price: '₹60-120', desc: 'Simple Maharashtrian meals at small eateries in Kelve village. Vada pav and misal also available.' },
+            { name: 'Coconut Water', type: 'Beverage', price: '₹30-50', desc: 'Fresh coconut water from beach vendors — the perfect refreshment in the coastal heat.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🚶', title: 'Via Beach Route', difficulty: 'Easy', distance: '1 km', time: '20-30 min', desc: 'A leisurely walk from Kelve Beach to the fort remains. Flat, sandy terrain with no climbing involved. Suitable for all ages.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Train', icon: '🚂', desc: 'Take Western Railway to Kelve Road station (~2 hours from Churchgate). Auto/rickshaw from station to Kelve Beach (~5 km).' },
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Mumbai via NH48 towards Palghar, then to Kelve Beach (~130 km, 2.5-3 hours). Parking at the beach area.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'MSRTC buses from Mumbai to Palghar. Local transport from Palghar to Kelve Beach (~12 km).' }
+        ],
+
+        trekEssentials: [
+            'Comfortable sandals or shoes — beach and ruins terrain',
+            'Carry water and sunscreen',
+            'Camera for sunset and sea views',
+            'Visit during low tide for better access',
+            'Light clothing — coastal heat',
+            'Allow 1-2 hours for fort exploration',
+            'Combine with Kelve Beach for a full day',
+            'Carry cash — limited UPI at beach stalls'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Visit during low tide for better access and safer exploration', season: 'All year' },
+            { msg: 'Some structures are fragile ruins — explore carefully and don\'t climb on walls', season: 'All year' },
+            { msg: 'Slippery rocks near the fort during wet conditions', season: 'Monsoon' },
+            { msg: 'Strong currents at the beach — don\'t swim near fort area', season: 'Monsoon' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹100-300' },
+            { label: 'Food', value: '₹80-200' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹180-500', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'At Kelve Beach' },
+            { label: 'Food Stalls', available: true, detail: 'At beach area' },
+            { label: 'Drinking Water', available: false, detail: 'Buy at beach stalls' },
+            { label: 'Toilets', available: false, detail: 'At beach restaurants' },
+            { label: 'Mobile Network', available: true, detail: 'Good signal' },
+            { label: 'Beach Access', available: true, detail: 'Adjacent to Kelve Beach' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Palghar' },
+            { label: 'Access', value: 'Walk from Kelve Beach' },
+            { label: 'Altitude', value: 'Sea level' },
+            { label: 'Fort Type', value: 'Land Fort (Coastal)' },
+            { label: 'Built By', value: 'Portuguese' },
+            { label: 'Famous For', value: 'Ruins, sea views, beach proximity' },
+            { label: 'Time Required', value: '1-2 hours' },
+            { label: 'Kids Appropriate', value: 'Yes (beach + fort)' },
+            { label: 'Best Combined', value: 'Kelve Beach day trip' },
+            { label: 'Nearest City', value: 'Palghar (12 km)' }
+        ],
+
+        reviews: {
+            quote: "Kelve Fort is more about the atmosphere than the architecture. The ruins by the sea, the quiet beach, and the sunset — it's a peaceful escape that history lovers will appreciate.",
+            positives: [
+                'Quiet and uncrowded — perfect for solitude seekers',
+                'Beautiful sea views, especially at sunset',
+                'Located right next to scenic Kelve Beach',
+                'Easy access — no trekking required',
+                'Good food options at the beach'
+            ],
+            proTips: [
+                'Time your visit with low tide for best access',
+                'Stay for sunset — the views are spectacular',
+                'Combine with Kelve Beach for a full day trip',
+                'Visit on weekdays for complete peace',
+                'Carry your own water and snacks to the fort area'
+            ],
+            rating: 3.8,
+            reviewCount: '800+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ UNDERI FORT ━━━━━━━━━━━━━━━━━━
+    underi: {
+        introduction: `Underi Fort is a remote and atmospheric sea fort located on a small rocky island near 
+            Alibaug in Raigad district. Built by the Siddis — African-origin rulers who controlled parts of 
+            the Konkan coast — this fort was a constant point of conflict between the Siddis, Marathas, and 
+            later the British. Unlike its better-known neighbor Khanderi Fort, Underi remains largely 
+            unvisited and offers an authentic, raw sea fort experience for adventurous history enthusiasts 
+            willing to navigate tide-dependent boat access.`,
+
+        quote: {
+            text: "उंदेरी — अलिबागजवळचा अज्ञात समुद्री किल्ला",
+            attribution: "Underi — the unknown sea fort near Alibaug"
+        },
+
+        timeline: [
+            { year: '17th Century', title: 'Siddi Construction', desc: 'The Siddi rulers of Janjira built Underi Fort as a strategic naval outpost to control the sea lanes near Alibaug and protect approaches to their capital at Murud-Janjira.' },
+            { year: '1660s-1700s', title: 'Maratha-Siddi Conflicts', desc: 'The Marathas repeatedly attempted to capture Underi as part of their naval campaign against the Siddis. The fort changed hands multiple times during fierce sea battles.' },
+            { year: '18th Century', title: 'British Interest', desc: 'The British East India Company took interest in controlling the Alibaug coast. Underi eventually came under British influence.' },
+            { year: 'Modern', title: 'Abandoned Monument', desc: 'Today Underi stands as an abandoned but atmospheric sea fort, visited only by the most dedicated fort enthusiasts and fishermen.' }
+        ],
+
+        landmarks: [
+            { title: 'Fort Walls', desc: 'Strong basalt fortification walls rising from the rocky island. The Siddi construction style is distinct — thick, dark stone walls designed to withstand both sea erosion and cannon fire.', mustSee: true },
+            { title: 'Defensive Bastions', desc: 'Semicircular bastions facing the open sea, once armed with cannons. They offer dramatic views of the Arabian Sea and neighboring Khanderi Fort.', mustSee: true },
+            { title: 'Khanderi Fort Views', desc: 'Clear views of the neighboring Khanderi Fort across the water. Understanding both forts together reveals the strategic naval chess game played between the Siddis and Marathas.', mustSee: false },
+            { title: 'Rocky Island Terrain', desc: 'The exposed rocky terrain of the island itself is interesting — tidal pools, nesting seabirds, and raw coastal geology.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Pack All Food', type: 'Veg', price: '₹0', desc: 'Absolutely nothing available on the island. Carry all food, snacks, and water for the entire trip.' },
+            { name: 'Thal Village Food', type: 'Non-Veg', price: '₹100-200', desc: 'Small eateries in Thal village serve basic meals and fresh seafood. Eat before or after the boat trip.' },
+            { name: 'Alibaug Restaurants', type: 'Non-Veg', price: '₹150-300', desc: 'Alibaug town has several good Konkan seafood restaurants. Surmai thali and kolambi (prawns) are highlights.' }
+        ],
+
+        trekRoutes: [
+            { icon: '⛵', title: 'Via Boat from Thal Village', difficulty: 'Moderate', distance: 'Sea route', time: '15-20 min', desc: 'Boat ride from Thal village to the island. Access is entirely tide-dependent — only possible during favorable conditions. Arrange boat with local fishermen. ₹100-300 per group.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Ferry + Auto', icon: '⛴️', desc: 'Gateway of India ferry to Alibaug/Mandwa (~1 hour). From Alibaug, auto to Thal village (~10 km). Arrange boat to Underi from Thal.' },
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Mumbai via Mumbai-Pune Expressway to Pen, then to Alibaug-Thal (~120 km, 3 hours). Park at Thal and arrange boat.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'MSRTC bus from Mumbai to Alibaug. Auto from Alibaug to Thal village. Boat from Thal to the fort island.' }
+        ],
+
+        trekEssentials: [
+            'Non-slip shoes — rocky island with slippery surfaces',
+            'Carry 2-3 litres of water — absolutely nothing on the island',
+            'All food and snacks — no stalls anywhere near',
+            'Sun protection — fully exposed island with zero shade',
+            'Camera — dramatic sea fort views',
+            'Check tide tables before planning — access is tide-dependent',
+            'Arrange boat in advance with local fishermen',
+            'Life jacket recommended for boat ride'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Access is entirely tide-dependent — plan around low tide and confirm with local fishermen', season: 'All year' },
+            { msg: 'Boat availability is limited and not commercial — must arrange privately with fishermen', season: 'All year' },
+            { msg: 'Rocky surfaces near the fort are extremely slippery — non-slip shoes mandatory', season: 'All year' },
+            { msg: 'Do NOT visit during monsoon — sea conditions are dangerous and boats won\'t operate', season: 'June-Sept' },
+            { msg: 'No mobile network on the island — inform someone of your plans before going', season: 'All year' }
+        ],
+
+        budget: [
+            { label: 'Transport (to Thal)', value: '₹200-500' },
+            { label: 'Boat Ride', value: '₹100-300' },
+            { label: 'Food', value: '₹100-200' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹400-1000', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'At Thal village' },
+            { label: 'Food Stalls', available: false, detail: 'None — carry all food' },
+            { label: 'Drinking Water', available: false, detail: 'None — carry all water' },
+            { label: 'Toilets', available: false, detail: 'No facilities' },
+            { label: 'Mobile Network', available: false, detail: 'Weak to no signal on island' },
+            { label: 'Boat Service', available: true, detail: '₹100-300, tide dependent' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Raigad (Alibaug)' },
+            { label: 'Access', value: 'Boat from Thal village' },
+            { label: 'Altitude', value: 'Sea level' },
+            { label: 'Fort Type', value: 'Sea Fort (Island)' },
+            { label: 'Built By', value: 'Siddi rulers' },
+            { label: 'Famous For', value: 'Remote sea fort, Siddi history, solitude' },
+            { label: 'Nearby Fort', value: 'Khanderi Fort' },
+            { label: 'Time Required', value: '2-3 hours' },
+            { label: 'Kids Appropriate', value: 'No (difficult access)' },
+            { label: 'Nearest City', value: 'Alibaug (10 km)' }
+        ],
+
+        reviews: {
+            quote: "Underi is for the truly adventurous. Getting there is half the challenge, but standing on a Siddi-built fortress surrounded by nothing but the Arabian Sea — that's an experience money can't buy.",
+            positives: [
+                'Truly offbeat — one of the least visited sea forts',
+                'Raw, unrestored fort gives authentic historical feel',
+                'Dramatic sea views and island atmosphere',
+                'Fascinating Siddi dynasty history',
+                'Views of neighboring Khanderi Fort'
+            ],
+            proTips: [
+                'Always check tide tables before planning your visit',
+                'Arrange boat with fishermen at Thal well in advance',
+                'Visit October to February for calmest seas',
+                'Combine with Khanderi Fort if boat can cover both',
+                'Carry everything you need — the island has nothing'
+            ],
+            rating: 4.0,
+            reviewCount: '150+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ REVDANDA FORT ━━━━━━━━━━━━━━━━━━
+    revdanda: {
+        introduction: `Revdanda Fort is one of the most atmospheric Portuguese ruins on the Konkan coast, 
+            sprawling along the shoreline at the mouth of the Kundalika river in Raigad district. Built by 
+            the Portuguese in the early 16th century as a major coastal bastion, the fort's massive walls, 
+            imposing bastions, and haunting church ruins seamlessly blend into the fabric of modern Revdanda 
+            village. Walking through its streets feels like stepping into a colonial time capsule, where 
+            fishermen's homes sit within centuries-old fortification walls.`,
+
+        quote: {
+            text: "रेवदंडा — पोर्तुगीज कोकणाचा जिवंत इतिहास",
+            attribution: "Revdanda — the living history of Portuguese Konkan"
+        },
+
+        timeline: [
+            { year: '1524', title: 'Portuguese Construction', desc: 'The Portuguese built a massive fortification at Revdanda (they called it "Chaul de Cima") to control the Kundalika river mouth and protect their lucrative spice trade.' },
+            { year: '16th-17th Century', title: 'Major Portuguese Base', desc: 'Revdanda became one of the most important Portuguese military bases on the Konkan coast, second only to Bassein (Vasai). Churches, convents, and administrative buildings were built inside.' },
+            { year: '1739', title: 'Maratha Capture', desc: 'Chimaji Appa captured Revdanda during the historic Vasai campaign. The Marathas dismantled much of the Portuguese administrative infrastructure while maintaining the military walls.' },
+            { year: '1818', title: 'British Period', desc: 'The fort passed to the British. The village gradually absorbed the fort ruins, creating the unique village-within-a-fort landscape visible today.' }
+        ],
+
+        landmarks: [
+            { title: 'Fort Walls', desc: 'Long, impressive coastal walls stretching along the beach and village. Portuguese-style masonry with thick basalt blocks. Some sections stand over 10 metres high.', mustSee: true },
+            { title: 'Corner Bastions', desc: 'Large semicircular bastions at strategic points along the wall, once armed with cannons facing the Arabian Sea. Stunning views from the top.', mustSee: true },
+            { title: 'Church Ruins', desc: 'Haunting remains of Portuguese-era churches and convents within the fort. Stone archways, altar platforms, and decorative fragments create an evocative atmosphere.', mustSee: true },
+            { title: 'Kundalika River View', desc: 'Views of the Kundalika river meeting the Arabian Sea from the fort\'s eastern walls. Beautiful at sunrise.', mustSee: false },
+            { title: 'Village Integration', desc: 'Unique experience of a living village built within and around fort walls. Daily life happening amidst centuries-old fortifications.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Konkan Seafood', type: 'Non-Veg', price: '₹100-250', desc: 'Fresh fish and prawns from local restaurants in Revdanda village. Surmai, pomfret, and kolambi are specialties.' },
+            { name: 'Beach Stall Snacks', type: 'Veg', price: '₹30-60', desc: 'Bhel puri, vada pav, and corn at beach-side stalls near the fort.' },
+            { name: 'Sol Kadhi', type: 'Beverage', price: '₹20-40', desc: 'Refreshingly tangy coconut-kokum drink — a Konkan essential, especially after exploring in the heat.' },
+            { name: 'Chai', type: 'Beverage', price: '₹10-20', desc: 'Tea stalls in the village. Enjoy a cup while sitting on fort walls watching the sea.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🚶', title: 'Via Revdanda Village Walk', difficulty: 'Easy', distance: '1 km', time: '30-45 min', desc: 'Walk directly through the village into the fort ruins. No trekking required — the fort and village are intertwined. Explore at your own pace.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Ferry + Auto', icon: '⛴️', desc: 'Ferry from Gateway of India to Mandwa/Alibaug (~1 hour). Auto from Alibaug to Revdanda (~17 km, 30 min).' },
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Mumbai via Pen-Alibaug road (~130 km, 3 hours). Or from Pune via Tamhini Ghat (~170 km, 4 hours). Parking in the village.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'MSRTC bus from Mumbai to Alibaug. Local bus or auto from Alibaug to Revdanda (~17 km).' }
+        ],
+
+        trekEssentials: [
+            'Comfortable walking shoes — village paths and ruins',
+            'Camera — the church ruins are incredibly photogenic',
+            'Water and sunscreen — limited shade in the fort',
+            'Explore respectfully — the fort is part of a living village',
+            'Allow 2-3 hours for thorough exploration',
+            'Best visited early morning or late afternoon',
+            'Combine with Korlai Fort (10 km south) for a full day',
+            'Cash for food stalls and local transport'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Ruins are scattered and some walls may be unstable — explore carefully', season: 'All year' },
+            { msg: 'Slippery rocks near the sea-facing walls, especially during high tide', season: 'All year' },
+            { msg: 'Respect private property — parts of the fort are integrated into village homes', season: 'All year' },
+            { msg: 'Strong sun exposure — carry water and sun protection', season: 'March-May' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹100-300' },
+            { label: 'Food', value: '₹80-200' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹180-500', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'In village area' },
+            { label: 'Food Stalls', available: true, detail: 'In village and near beach' },
+            { label: 'Drinking Water', available: false, detail: 'Buy from shops' },
+            { label: 'Toilets', available: false, detail: 'Limited — at restaurants' },
+            { label: 'Mobile Network', available: true, detail: 'Good signal' },
+            { label: 'Nearby Fort', available: true, detail: 'Korlai Fort (10 km)' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Raigad (Alibaug)' },
+            { label: 'Access', value: 'Walk through village' },
+            { label: 'Altitude', value: 'Sea level' },
+            { label: 'Fort Type', value: 'Sea Fort (Coastal)' },
+            { label: 'Built By', value: 'Portuguese' },
+            { label: 'Portuguese Name', value: 'Chaul de Cima' },
+            { label: 'Famous For', value: 'Church ruins, village-fort blend' },
+            { label: 'Time Required', value: '2-3 hours' },
+            { label: 'Kids Appropriate', value: 'Yes (easy walk)' },
+            { label: 'Best Combined', value: 'Korlai Fort, Alibaug' }
+        ],
+
+        reviews: {
+            quote: "Revdanda is unlike any other fort — you're not visiting ruins, you're walking through a village that lives inside a 500-year-old Portuguese fortress. The church ruins at sunset are hauntingly beautiful.",
+            positives: [
+                'Unique village-within-fort experience',
+                'Atmospheric Portuguese church ruins',
+                'Impressive coastal walls and bastions',
+                'Easy access — no trekking required',
+                'Great seafood in the village'
+            ],
+            proTips: [
+                'Visit at golden hour for the best photos of church ruins',
+                'Combine with Korlai Fort (10 km south) for a Portuguese forts day',
+                'Walk along the beach to see the full extent of the walls',
+                'Ask locals to point out hidden Portuguese inscriptions',
+                'The Kundalika river mouth is beautiful at sunrise'
+            ],
+            rating: 4.1,
+            reviewCount: '1,200+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ BANKOT FORT (HIMMATGAD) ━━━━━━━━━━━━━━━━━━
+    bankot: {
+        introduction: `Bankot Fort, also known as Himmatgad and later renamed Fort Victoria by the British, 
+            commands a dramatic position at the mouth of the Savitri river where it meets the Arabian Sea. 
+            Originally built by the Adil Shahi dynasty, this coastal fort served as a crucial point for 
+            controlling maritime trade along the Konkan coast. The fort offers commanding panoramic views 
+            of the river confluence and the endless Arabian Sea — a visual spectacle that makes the visit 
+            worthwhile even beyond its historical significance.`,
+
+        quote: {
+            text: "बाणकोट — सावित्री नदीच्या मुखावरचा प्रहरी",
+            attribution: "Bankot — the sentinel at the mouth of the Savitri river"
+        },
+
+        timeline: [
+            { year: '16th Century', title: 'Adilshahi Construction', desc: 'The Adil Shahi dynasty of Bijapur built the fort at the strategic Savitri river mouth to control the maritime trade routes along the Konkan coast.' },
+            { year: '17th Century', title: 'Maratha Capture', desc: 'The Marathas captured Bankot and renamed it Himmatgad. It served as an important coastal outpost in their naval defense network.' },
+            { year: '1756', title: 'British Capture', desc: 'The British East India Company captured the fort and renamed it "Fort Victoria." They used it as a coastal garrison and trading post.' },
+            { year: '19th Century', title: 'Decline', desc: 'The fort gradually lost military importance and fell into disuse. It now stands as an atmospheric ruin overlooking the river and sea.' }
+        ],
+
+        landmarks: [
+            { title: 'Fort Gate', desc: 'The main entrance structure with characteristic Deccan-style architecture. Though partially ruined, it retains its imposing presence and gives a sense of the fort\'s former grandeur.', mustSee: true },
+            { title: 'Savitri River Viewpoint', desc: 'A spectacular panoramic viewpoint where the Savitri river meets the Arabian Sea. The vast expanse of water, fishing boats, and the coastline create a mesmerizing scene.', mustSee: true },
+            { title: 'Fort Walls', desc: 'Remains of defensive walls and bastions running along the cliff edge. The positioning reveals the strategic genius of placing a fort at this river-sea confluence.', mustSee: true },
+            { title: 'Interior Ruins', desc: 'Scattered remains of buildings, water tanks, and storage structures inside the fort. Simple but historically interesting.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Bankot Village Food', type: 'Non-Veg', price: '₹80-150', desc: 'Simple home-style Konkan meals available at small eateries in Bankot village. Fresh fish when available.' },
+            { name: 'Dapoli Restaurants', type: 'Non-Veg', price: '₹100-250', desc: 'Dapoli (~45 km) has better dining options with Konkan seafood thalis and Malvani cuisine.' },
+            { name: 'Pack Your Own', type: 'Veg', price: '₹0', desc: 'Limited food options at the fort. Carry snacks and water for the visit.' },
+            { name: 'Chai', type: 'Beverage', price: '₹10-20', desc: 'Tea available in Bankot village. Simple but welcome after fort exploration.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🚶', title: 'Via Road and Steps', difficulty: 'Easy', distance: '1 km', time: '30-40 min', desc: 'Direct access from Bankot village via road and steps to the fort. No trekking required. Easy walk suitable for most visitors.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Pune via Tamhini Ghat to Mangaon, then to Bankot (~180 km, 4-5 hours). Or from Mumbai via Pen-Roha-Bankot (~200 km, 5 hours).' },
+            { mode: 'By Bus', icon: '🚌', desc: 'MSRTC bus from Mumbai or Pune to Mandangad. Local transport from Mandangad to Bankot village.' },
+            { mode: 'By Train', icon: '🚂', desc: 'Nearest station: Khed on Konkan Railway. Bus/auto from Khed to Bankot (~30 km).' }
+        ],
+
+        trekEssentials: [
+            'Comfortable walking shoes',
+            'Carry 1-2 litres of water — limited availability',
+            'Sun protection — open fort with limited shade',
+            'Camera for spectacular river-sea views',
+            'Carry snacks — limited food near fort',
+            'Allow 1.5-2 hours for exploration',
+            'Best visited morning for cooler temperatures',
+            'Combine with Dapoli beach trip'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Limited facilities at the fort — carry water and essentials', season: 'All year' },
+            { msg: 'Hot conditions during summer — avoid midday visits', season: 'March-May' },
+            { msg: 'Cliff edges near the viewpoints — maintain safe distance', season: 'All year' },
+            { msg: 'Remote location — plan transport in advance', season: 'All year' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹200-500' },
+            { label: 'Food', value: '₹50-150' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹250-650', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'Near Bankot village' },
+            { label: 'Food Stalls', available: false, detail: 'Limited — carry own' },
+            { label: 'Drinking Water', available: false, detail: 'Carry own water' },
+            { label: 'Toilets', available: false, detail: 'No facilities at fort' },
+            { label: 'Mobile Network', available: true, detail: 'Moderate signal' },
+            { label: 'Guide', available: false, detail: 'None — self-explore' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Ratnagiri (Mandangad)' },
+            { label: 'Also Known As', value: 'Himmatgad / Fort Victoria' },
+            { label: 'Altitude', value: 'Sea level' },
+            { label: 'Fort Type', value: 'Sea Fort (Coastal)' },
+            { label: 'Built By', value: 'Adilshahi dynasty' },
+            { label: 'Famous For', value: 'Savitri river views, triple-name history' },
+            { label: 'Time Required', value: '1.5-2 hours' },
+            { label: 'Kids Appropriate', value: 'Yes (easy access)' },
+            { label: 'Best Combined', value: 'Dapoli beaches' },
+            { label: 'Nearest City', value: 'Dapoli (45 km)' }
+        ],
+
+        reviews: {
+            quote: "The view of the Savitri river meeting the Arabian Sea from Bankot Fort is worth the entire journey. Three names, three empires, one stunning location.",
+            positives: [
+                'Spectacular river-sea confluence views',
+                'Interesting triple-name history (Bankot/Himmatgad/Fort Victoria)',
+                'Peaceful and uncrowded',
+                'Easy access — no trekking needed',
+                'Great photo opportunities'
+            ],
+            proTips: [
+                'Visit at sunrise for the most dramatic river-sea views',
+                'Combine with Dapoli beach trip for a full day',
+                'The ferry crossing at Bankot is an experience in itself',
+                'Carry all supplies — very limited local options',
+                'Best during winter for clear views and pleasant weather'
+            ],
+            rating: 4.0,
+            reviewCount: '600+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ JAIGAD FORT ━━━━━━━━━━━━━━━━━━
+    jaigad: {
+        introduction: `Jaigad Fort is one of the best-preserved coastal forts along the Konkan coast, standing 
+            proudly at the entrance of the Shastri river in Ratnagiri district. The fort's name literally means 
+            "Place of Victory" (Jai = Victory, Gad = Fort). Controlled by the Marathas and later the British, 
+            this fort offers a complete sea fort experience — well-preserved walls, massive bastions, a 
+            nearby lighthouse, and spectacular views of the Arabian Sea meeting the Shastri river. Its 
+            proximity to Ganapatipule makes it a popular addition to Konkan coastal trips.`,
+
+        quote: {
+            text: "जयगड — शास्त्री नदीच्या मुखावरचा विजयकिल्ला",
+            attribution: "Jaigad — the Victory Fort at the Shastri river mouth"
+        },
+
+        timeline: [
+            { year: '16th Century', title: 'Fort Construction', desc: 'Jaigad was built as a coastal defense fort to control the entrance to the Shastri river and protect the maritime trade routes along the Ratnagiri coast.' },
+            { year: '17th Century', title: 'Maratha Control', desc: 'The Marathas strengthened Jaigad as part of their coastal defense chain. The fort served as a naval outpost and signal station.' },
+            { year: '1818', title: 'British Capture', desc: 'The British East India Company took control of Jaigad. They maintained it briefly and later built the Jaigad Lighthouse nearby.' },
+            { year: 'Modern', title: 'Heritage & Tourism', desc: 'Jaigad Fort has been partially restored and is maintained as a heritage monument. The nearby lighthouse adds to its tourist appeal.' }
+        ],
+
+        landmarks: [
+            { title: 'Fort Walls', desc: 'Well-preserved defensive walls running along the cliff edge, featuring thick basalt construction. Some of the best-maintained coastal fort walls in the Konkan region.', mustSee: true },
+            { title: 'Bastions', desc: 'Large, imposing bastions at strategic points along the walls, offering commanding views of the Arabian Sea and Shastri river entrance. Once armed with heavy cannons.', mustSee: true },
+            { title: 'Jaigad Lighthouse', desc: 'A working lighthouse adjacent to the fort, offering panoramic views of the coastline. The lighthouse and fort together create a striking visual landmark.', mustSee: true },
+            { title: 'Fort Interior', desc: 'Spacious interior area with remains of buildings, wells, and platforms. Well-maintained grounds make for a pleasant exploration.', mustSee: false },
+            { title: 'Shastri River View', desc: 'Views of the Shastri river meeting the Arabian Sea from the fort\'s eastern bastions. Fishing boats dotting the water add to the maritime atmosphere.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Jaigad Village Food', type: 'Non-Veg', price: '₹80-150', desc: 'Small eateries in Jaigad village serve fresh Konkan seafood and basic Maharashtrian meals.' },
+            { name: 'Ganapatipule Restaurants', type: 'Non-Veg', price: '₹100-250', desc: 'Ganapatipule (~25 km) has good Konkan restaurants. Malvani fish curry and sol kadhi are must-tries.' },
+            { name: 'Beach Snacks', type: 'Veg', price: '₹30-60', desc: 'Bhel puri, corn, and fruit available at nearby beach areas.' },
+            { name: 'Kokum Sherbet', type: 'Beverage', price: '₹20-30', desc: 'Refreshing kokum drink — a Konkan specialty, perfect for the coastal heat.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🚗', title: 'Via Road Access', difficulty: 'Easy', distance: '1 km', time: '30-45 min', desc: 'Drive to the fort entrance. Short walk inside to explore. No trekking required — fully road-accessible. Suitable for all ages.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Ratnagiri (~40 km, 1 hour) or from Ganapatipule (~25 km, 30 min). Well-maintained coastal road. Parking at fort entrance.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'MSRTC bus from Ratnagiri to Jaigad village. Or bus to Ganapatipule, then local transport to Jaigad.' },
+            { mode: 'By Train', icon: '🚂', desc: 'Nearest station: Ratnagiri on Konkan Railway. Bus/taxi from Ratnagiri to Jaigad (~40 km).' }
+        ],
+
+        trekEssentials: [
+            'Comfortable walking shoes — paved and rocky surfaces',
+            'Water bottle — stalls may be available nearby',
+            'Camera — the lighthouse and sea views are stunning',
+            'Sun protection — exposed fort areas',
+            'Cash for food and transport',
+            'Allow 2-3 hours for fort and lighthouse',
+            'Best visited morning or late afternoon',
+            'Combine with Ganapatipule for a full trip'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Strong winds near the cliff edges — keep safe distance and hold children', season: 'All year' },
+            { msg: 'Do not climb fort walls — some sections are old and may be unstable', season: 'All year' },
+            { msg: 'Slippery surfaces near the sea during monsoon', season: 'June-Sept' },
+            { msg: 'Afternoon heat can be intense in summer — carry water', season: 'March-May' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹100-300' },
+            { label: 'Food', value: '₹80-200' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹180-500', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'At fort entrance' },
+            { label: 'Food Stalls', available: true, detail: 'Basic, near fort' },
+            { label: 'Drinking Water', available: true, detail: 'Available' },
+            { label: 'Toilets', available: false, detail: 'Limited' },
+            { label: 'Mobile Network', available: true, detail: 'Good signal' },
+            { label: 'Lighthouse', available: true, detail: 'Working lighthouse nearby' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Ratnagiri' },
+            { label: 'Meaning', value: 'Jai (Victory) + Gad (Fort)' },
+            { label: 'Altitude', value: 'Sea level (cliff-top)' },
+            { label: 'Fort Type', value: 'Sea Fort (Coastal)' },
+            { label: 'Built By', value: 'Maratha Empire' },
+            { label: 'Famous For', value: 'Well-preserved walls, lighthouse, sea views' },
+            { label: 'Time Required', value: '2-3 hours' },
+            { label: 'Kids Appropriate', value: 'Yes (road access)' },
+            { label: 'Best Combined', value: 'Ganapatipule temple & beach' },
+            { label: 'Nearest City', value: 'Ratnagiri (40 km)' }
+        ],
+
+        reviews: {
+            quote: "Jaigad is the complete Konkan fort experience — massive walls, sea views, a working lighthouse, and the Shastri river below. It's well-preserved and easy to explore, making it a must-visit on any Konkan trip.",
+            positives: [
+                'One of the best-preserved coastal forts',
+                'Working lighthouse adds unique appeal',
+                'Spectacular sea and river views',
+                'Easy road access — family-friendly',
+                'Close to popular Ganapatipule'
+            ],
+            proTips: [
+                'Combine with Ganapatipule temple for a full day',
+                'Visit the lighthouse for the best panoramic views',
+                'Early morning or sunset visits are most beautiful',
+                'Try local Malvani food in Ganapatipule after the visit',
+                'The Konkan Railway journey to Ratnagiri is scenic — consider train travel'
+            ],
+            rating: 4.3,
+            reviewCount: '2,500+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ ACHALA FORT ━━━━━━━━━━━━━━━━━━
+    achala: {
+        introduction: `Achala Fort is one of the most remote and rugged hill forts in Maharashtra, tucked away 
+            in the Baglan region of Nashik district near the famous twin forts of Salher and Mulher. This 
+            lesser-known fort rewards the dedicated trekker with solitude, challenging terrain, and stunning 
+            panoramic views of the surrounding Sahyadri ranges. Part of the historic Baglan fort system that 
+            controlled crucial trade routes, Achala offers an authentic, off-the-beaten-path trekking experience 
+            far removed from the crowds of more popular forts.`,
+
+        quote: {
+            text: "अचला — बागलाणच्या डोंगररांगेतला अज्ञात योद्धा",
+            attribution: "Achala — the unknown warrior of the Baglan ranges"
+        },
+
+        timeline: [
+            { year: '17th Century', title: 'Maratha Period', desc: 'Achala Fort was part of the Baglan fort system used by the Marathas to control trade routes and maintain surveillance over the strategic northern Sahyadri passes.' },
+            { year: '1672', title: 'Battle of Salher Connection', desc: 'During the famous Battle of Salher — the largest pitched battle of the Maratha-Mughal wars — Achala served as part of the wider defensive network in the Baglan region.' },
+            { year: '18th Century', title: 'Mughal Conflict', desc: 'Like its neighbors Salher and Mulher, Achala changed hands between the Marathas and Mughals during their prolonged conflicts in the Baglan region.' },
+            { year: '1818', title: 'British Annexation', desc: 'The British took control of the Baglan region. Achala, like other remote forts, was abandoned and gradually fell into ruin.' }
+        ],
+
+        landmarks: [
+            { title: 'Fort Plateau', desc: 'An open plateau at the summit with scattered ruins and foundations of old structures. The wide-open space offers 360-degree views of the surrounding mountain ranges.', mustSee: true },
+            { title: 'Water Cisterns', desc: 'Rock-cut tanks carved into the basalt plateau for storing rainwater. These engineering marvels sustained garrison life in this remote location.', mustSee: true },
+            { title: 'Salher-Mulher Views', desc: 'Breathtaking panoramic views of the nearby Salher and Mulher forts from Achala\'s plateau. Seeing all three forts together reveals the strategic genius of the Baglan fort system.', mustSee: true },
+            { title: 'Ruined Walls', desc: 'Fragments of the original fortification walls, showing the construction techniques used in this remote highland fort.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Pack All Food', type: 'Veg', price: '₹0', desc: 'Absolutely no food available at the fort or on the trail. Carry all meals, snacks, and ample water for the entire trek.' },
+            { name: 'Village Meals', type: 'Veg', price: '₹60-100', desc: 'Basic home-cooked meals (dal-rice, bhakri) may be available at Pingalwadi base village if arranged in advance with villagers.' },
+            { name: 'Satana Town', type: 'Veg/Non-Veg', price: '₹80-150', desc: 'Satana town (~50 km) has restaurants and dhabas. Stock up before heading to the remote fort area.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Via Pingalwadi Route', difficulty: 'Hard', distance: '4 km', time: '2-3 hrs', desc: 'The trek involves forest patches, rocky terrain, and a gradual ascent to the fort plateau. Trail can be confusing in places — a local guide is strongly recommended. Not for beginners.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Nashik to Satana (~100 km), then to Pingalwadi village (~50 km further). Last stretch is rough road. 4WD recommended.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'ST bus from Nashik to Satana. Local transport from Satana towards Pingalwadi. Very limited connectivity — plan carefully.' },
+            { mode: 'By Bike', icon: '🏍️', desc: 'Riders from Nashik enjoy the scenic route through Baglan. Park at Pingalwadi and trek. Carry extra fuel — remote area.' }
+        ],
+
+        trekEssentials: [
+            'Sturdy trekking shoes — rocky and uneven terrain',
+            'Carry 3+ litres of water — no sources on trail or fort',
+            'All food and snacks for the entire trek',
+            'Local guide strongly recommended — trails are confusing',
+            'First aid kit — remote area with no medical help',
+            'Torch/headlamp for early morning starts',
+            'Trekking poles recommended',
+            'Avoid solo trekking — go in groups of 3+'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Remote area — NEVER trek solo. Always go with a group and inform someone of your plans', season: 'All year' },
+            { msg: 'Limited water availability — carry minimum 3 litres per person', season: 'All year' },
+            { msg: 'Trail may be confusing — hire a local guide from Pingalwadi', season: 'All year' },
+            { msg: 'Extremely slippery in monsoon — avoid heavy rain days', season: 'June-Sept' },
+            { msg: 'Very hot in summer — avoid peak afternoon hours', season: 'March-May' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹300-700' },
+            { label: 'Food', value: '₹150-300' },
+            { label: 'Guide', value: '₹200-400' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹650-1400', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'At base village (limited)' },
+            { label: 'Food Stalls', available: false, detail: 'None — carry everything' },
+            { label: 'Water Source', available: false, detail: 'None — carry all water' },
+            { label: 'Toilets', available: false, detail: 'No facilities' },
+            { label: 'Mobile Network', available: false, detail: 'Very weak to none' },
+            { label: 'Nearby Forts', available: true, detail: 'Salher, Mulher (adjacent)' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Nashik (Baglan)' },
+            { label: 'Base Village', value: 'Pingalwadi / Achala' },
+            { label: 'Altitude', value: '~1100 m' },
+            { label: 'Fort Type', value: 'Hill Fort (Remote)' },
+            { label: 'Built By', value: 'Maratha Empire' },
+            { label: 'Famous For', value: 'Remote trek, Salher-Mulher views' },
+            { label: 'Trek Distance', value: '4 km one way' },
+            { label: 'Time Required', value: '4-5 hours' },
+            { label: 'Kids Appropriate', value: 'No (difficult trek)' },
+            { label: 'Nearest City', value: 'Satana (50 km)' }
+        ],
+
+        reviews: {
+            quote: "Achala is for those who want the Sahyadris to themselves. No crowds, no stalls, just raw mountains and the ghosts of history. The views of Salher and Mulher from here are absolutely worth the effort.",
+            positives: [
+                'Completely offbeat — solitude guaranteed',
+                'Stunning views of Salher and Mulher forts',
+                'Authentic rugged trekking experience',
+                'Rich history connected to Battle of Salher',
+                'Beautiful natural surroundings'
+            ],
+            proTips: [
+                'Always hire a local guide from Pingalwadi',
+                'Best combined with Salher-Mulher for a multi-fort expedition',
+                'Winter is ideal — clear skies and comfortable temperatures',
+                'Carry extra water and food — nothing available for miles',
+                'Start early to avoid afternoon heat'
+            ],
+            rating: 4.1,
+            reviewCount: '200+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ MARKANDEY FORT ━━━━━━━━━━━━━━━━━━
+    markandey: {
+        introduction: `Markandey Fort is another hidden gem in the Baglan fort system of Nashik district, 
+            sitting near the mighty Mulher Fort. Named after the sage Markandey from Hindu mythology, this 
+            fort offers a quieter alternative to the more popular Salher trek. The moderate difficulty trail 
+            passes through rocky terrain and connects with the Mulher fort region, rewarding trekkers with 
+            panoramic views of the surrounding Sahyadri peaks and valleys.`,
+
+        quote: {
+            text: "मार्कंडेय — मुल्हेरजवळचा शांत निरीक्षक",
+            attribution: "Markandey — the quiet observer near Mulher"
+        },
+
+        timeline: [
+            { year: '17th Century', title: 'Maratha Period', desc: 'Markandey Fort was built as part of the Baglan fort chain to monitor trade routes and provide mutual support with the nearby Mulher and Salher forts.' },
+            { year: '1672', title: 'Baglan Conflicts', desc: 'The fort played a supporting role during the Maratha-Mughal conflicts in the Baglan region, serving as a communication link between the main forts.' },
+            { year: '18th Century', title: 'Mughal Control', desc: 'Like other Baglan forts, Markandey was briefly held by the Mughals before reverting to Maratha control.' },
+            { year: '1818', title: 'Abandonment', desc: 'The British annexation led to the fort being abandoned. Its remote location accelerated its deterioration.' }
+        ],
+
+        landmarks: [
+            { title: 'Fort Plateau', desc: 'Open plateau at the summit with scenic views in all directions. A peaceful spot ideal for resting and absorbing the mountain landscape.', mustSee: true },
+            { title: 'Water Cisterns', desc: 'Rock-cut water storage tanks on the plateau — essential infrastructure that allowed garrisons to survive in this remote location.', mustSee: true },
+            { title: 'Mulher-Salher Views', desc: 'Panoramic views of the neighboring Mulher and Salher forts and surrounding Sahyadri peaks. The interconnected fort system is clearly visible.', mustSee: true },
+            { title: 'Fort Remains', desc: 'Basic fortification remains including wall fragments and foundations. Simple but historically indicative.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Pack All Food', type: 'Veg', price: '₹0', desc: 'No food available at the fort. Carry everything you need for the trek.' },
+            { name: 'Village Meals', type: 'Veg', price: '₹50-100', desc: 'Home-cooked meals at Mulher/Taharabad village if arranged beforehand. Simple bhakri, dal, and rice.' },
+            { name: 'Satana Town', type: 'Veg', price: '₹80-150', desc: 'Stock up on supplies at Satana town before heading to the remote trek area.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Via Mulher Route', difficulty: 'Medium', distance: '3.5 km', time: '2-2.5 hrs', desc: 'A moderate trek from Mulher village through rocky terrain. The trail connects with the Mulher fort region. Some sections may require route-finding — a guide is helpful.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Nashik to Satana (~100 km), then to Mulher/Taharabad village (~40 km). Last stretch on rough road.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'ST bus from Nashik to Satana. Local transport to Mulher village. Limited connectivity — pre-plan transport.' },
+            { mode: 'By Bike', icon: '🏍️', desc: 'Scenic ride from Nashik through the Baglan region. Park at base village and trek up.' }
+        ],
+
+        trekEssentials: [
+            'Good trekking shoes — rocky terrain',
+            'Carry 2-3 litres of water',
+            'All food and snacks for the trek',
+            'Local guide recommended — trails not clearly marked',
+            'Sun protection — exposed plateau',
+            'First aid kit',
+            'Trekking in groups recommended',
+            'Start early morning for best conditions'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Remote location — avoid solo trekking, go with experienced group', season: 'All year' },
+            { msg: 'Carry sufficient water — no sources on trail or fort', season: 'All year' },
+            { msg: 'Trail may not be clearly marked — local guide recommended', season: 'All year' },
+            { msg: 'Slippery paths during monsoon — use proper trekking shoes', season: 'June-Sept' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹300-700' },
+            { label: 'Food', value: '₹150-300' },
+            { label: 'Guide', value: '₹150-300' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹600-1300', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'At base village' },
+            { label: 'Food Stalls', available: false, detail: 'None — carry everything' },
+            { label: 'Water Source', available: false, detail: 'Carry all water' },
+            { label: 'Toilets', available: false, detail: 'No facilities' },
+            { label: 'Mobile Network', available: false, detail: 'Very weak signal' },
+            { label: 'Nearby Forts', available: true, detail: 'Mulher, Salher, Achala' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Nashik (Baglan)' },
+            { label: 'Base Village', value: 'Mulher / Taharabad' },
+            { label: 'Altitude', value: '~1000 m' },
+            { label: 'Fort Type', value: 'Hill Fort' },
+            { label: 'Built By', value: 'Maratha Empire' },
+            { label: 'Famous For', value: 'Peaceful trek, Mulher-Salher views' },
+            { label: 'Trek Distance', value: '3.5 km one way' },
+            { label: 'Time Required', value: '4-5 hours' },
+            { label: 'Kids Appropriate', value: 'No (moderate-hard trek)' },
+            { label: 'Nearest City', value: 'Satana (40 km)' }
+        ],
+
+        reviews: {
+            quote: "Markandey is the quieter sibling in the Baglan fort family. While everyone heads to Salher, this fort rewards you with equal views and zero crowds.",
+            positives: [
+                'Peaceful and uncrowded',
+                'Great views of Mulher and Salher',
+                'Moderate difficulty — challenging but not extreme',
+                'Rich Baglan fort system history',
+                'Beautiful natural setting'
+            ],
+            proTips: [
+                'Combine with Mulher Fort trek for a multi-fort day',
+                'Winter months (Nov-Feb) are ideal',
+                'A local guide from Mulher village is very helpful',
+                'Carry camp essentials if planning to stay overnight',
+                'Start early — afternoon heat makes the return harder'
+            ],
+            rating: 4.0,
+            reviewCount: '150+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ HATGAD FORT ━━━━━━━━━━━━━━━━━━
+    hatgad: {
+        introduction: `Hatgad Fort is a fascinating frontier fort straddling the Maharashtra-Gujarat border, 
+            just 5 km from the popular hill station of Saputara. This historic fort controlled the strategic 
+            passes between Maharashtra and Gujarat, and its relatively easy accessibility makes it a perfect 
+            trekking add-on for anyone visiting Saputara. The fort offers impressive views of the dense 
+            Dang forests on the Gujarat side and the Sahyadri ranges on the Maharashtra side — literally 
+            standing with one foot in each state.`,
+
+        quote: {
+            text: "हातगड — महाराष्ट्र-गुजरात सीमेवरचा सीमारक्षक",
+            attribution: "Hatgad — the border guardian between Maharashtra and Gujarat"
+        },
+
+        timeline: [
+            { year: '17th Century', title: 'Maratha Construction', desc: 'The Marathas built Hatgad as a frontier fort to control the passes between Maharashtra and Gujarat, particularly the routes leading to the Dang forest region.' },
+            { year: '17th-18th Century', title: 'Mughal Conflicts', desc: 'The fort saw conflicts between the Marathas and Mughals who sought control of the border trade routes.' },
+            { year: '1818', title: 'British Takeover', desc: 'The British took control of the fort and the border region. Hatgad gradually lost strategic importance as borders stabilized.' },
+            { year: 'Modern', title: 'Tourist Destination', desc: 'Today Hatgad is a popular trekking destination for visitors to Saputara hill station, offering history and views in a convenient package.' }
+        ],
+
+        landmarks: [
+            { title: 'Fort Walls', desc: 'Well-preserved fortification walls showcasing sturdy Maratha construction. The walls are best seen from the approach path where their defensive positioning is evident.', mustSee: true },
+            { title: 'Stone Steps', desc: 'A defined stone step path leading to the fort top. Well-constructed and atmospheric — walk the same path that soldiers took centuries ago.', mustSee: true },
+            { title: 'Border Viewpoints', desc: 'Spectacular views of the Dang forests (Gujarat) and Sahyadri ranges (Maharashtra). Standing at the fort, you literally see two states stretching before you.', mustSee: true },
+            { title: 'Fort Plateau', desc: 'The summit plateau with remains and open areas. A great spot for rest and photos.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Saputara Restaurants', type: 'Veg/Non-Veg', price: '₹80-200', desc: 'Saputara (~5 km) has numerous restaurants serving Gujarati and Maharashtrian cuisine. Thalis and street food available.' },
+            { name: 'Pack Light Snacks', type: 'Veg', price: '₹0', desc: 'Carry snacks and water for the short trek. No stalls at the fort.' },
+            { name: 'Saputara Street Food', type: 'Veg', price: '₹30-60', desc: 'Corn on cob, bhel puri, and ice gola at Saputara lake area. Fun after the trek.' },
+            { name: 'Chai', type: 'Beverage', price: '₹10-20', desc: 'Tea stalls aplenty in Saputara. Perfect for warming up after a monsoon trek.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Via Hatgad Village Route', difficulty: 'Easy-Medium', distance: '1.5-2 km', time: '60-90 min', desc: 'A gradual climb with stone steps and defined trails leading to the fort top. Suitable for most trekkers. Beautiful forest surroundings.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Nashik to Saputara (~110 km, 3 hours). Hatgad is ~5 km from Saputara. Or from Surat (~160 km, 3.5 hours).' },
+            { mode: 'By Bus', icon: '🚌', desc: 'ST bus from Nashik to Saputara. Or GSRTC buses from Surat/Ahmedabad to Saputara. Local transport to Hatgad.' },
+            { mode: 'By Bike', icon: '🏍️', desc: 'Scenic ride to Saputara through ghats. The road to Hatgad is well-maintained. Park at the village.' }
+        ],
+
+        trekEssentials: [
+            'Comfortable trekking shoes — stone steps and rocky paths',
+            'Carry 1-2 litres of water',
+            'Sun protection — limited shade on open sections',
+            'Camera — border views are spectacular',
+            'Light snacks for the short trek',
+            'Allow 2-3 hours total',
+            'Monsoon visits are magical but steps get slippery',
+            'Combine with Saputara sightseeing'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Stone steps become slippery during monsoon — wear proper trekking shoes', season: 'June-Sept' },
+            { msg: 'Carry water — no sources available at the fort', season: 'All year' },
+            { msg: 'Limited shade on the approach — carry sun protection in summer', season: 'March-May' },
+            { msg: 'Afternoon fog in monsoon can reduce visibility — start early', season: 'June-Sept' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹100-300' },
+            { label: 'Food', value: '₹80-200' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹180-500', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'Near base village' },
+            { label: 'Food Stalls', available: false, detail: 'None at fort (available in Saputara)' },
+            { label: 'Water Source', available: false, detail: 'Carry own water' },
+            { label: 'Toilets', available: false, detail: 'At Saputara hotels' },
+            { label: 'Mobile Network', available: true, detail: 'Moderate (near Saputara)' },
+            { label: 'Hill Station', available: true, detail: 'Saputara (5 km)' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Nashik (Baglan)' },
+            { label: 'Base Village', value: 'Hatgad' },
+            { label: 'Altitude', value: '~900 m' },
+            { label: 'Fort Type', value: 'Hill Fort (Frontier)' },
+            { label: 'Built By', value: 'Maratha Empire' },
+            { label: 'Famous For', value: 'Border views, Saputara proximity' },
+            { label: 'Trek Distance', value: '1.5-2 km one way' },
+            { label: 'Time Required', value: '2-3 hours' },
+            { label: 'Kids Appropriate', value: 'Yes (with supervision)' },
+            { label: 'Nearest City', value: 'Saputara (5 km)' }
+        ],
+
+        reviews: {
+            quote: "Hatgad is the perfect Saputara bonus. A short trek, impressive fort walls, and views that span two states — it's history with a view, literally.",
+            positives: [
+                'Easy access from popular Saputara hill station',
+                'Views spanning Maharashtra and Gujarat',
+                'Well-defined stone step path',
+                'Short trek suitable for families',
+                'Monsoon views are breathtaking'
+            ],
+            proTips: [
+                'Always combine with Saputara sightseeing',
+                'Monsoon is the most scenic time but steps get slippery',
+                'Early morning gives the clearest border views',
+                'Stay overnight in Saputara for a relaxed trip',
+                'The drive from Nashik through ghats is scenic — enjoy the journey'
+            ],
+            rating: 4.2,
+            reviewCount: '1,000+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ LALING FORT ━━━━━━━━━━━━━━━━━━
+    laling: {
+        introduction: `Laling Fort is a historically significant hill fort rising above the plains near Dhule 
+            city, overlooking the Mumbai-Agra highway (NH3). Originally built by the Farooqui dynasty — the 
+            rulers of Khandesh — this fort has witnessed the rule of multiple empires including the Mughals, 
+            Marathas, and the British. Its easy accessibility from Dhule makes it a popular short trek 
+            destination, while its ancient caves and panoramic views of the surrounding plains make it 
+            historically and scenically rewarding.`,
+
+        quote: {
+            text: "लळिंग — खानदेशच्या मैदानावरचा प्रहरी",
+            attribution: "Laling — the sentinel over the Khandesh plains"
+        },
+
+        timeline: [
+            { year: '15th Century', title: 'Farooqui Construction', desc: 'The Farooqui dynasty, rulers of the Khandesh region, built Laling Fort as a watchtower and control point for the important trade routes passing through the area.' },
+            { year: '16th Century', title: 'Mughal Capture', desc: 'The Mughals captured Khandesh and Laling Fort during their southern expansion. The fort served as a Mughal garrison in the Deccan.' },
+            { year: '17th-18th Century', title: 'Maratha Control', desc: 'The Marathas captured the fort during their expansion. It served as a minor outpost in the broader Maratha defense network.' },
+            { year: '1818', title: 'British Period', desc: 'The British took control. The fort lost strategic importance and gradually fell into disuse.' }
+        ],
+
+        landmarks: [
+            { title: 'Fort Walls', desc: 'Remains of old fortification walls showing construction techniques from the Farooqui and Mughal periods. Simple but historically instructive.', mustSee: true },
+            { title: 'Ancient Caves', desc: 'Interesting caves on the fort hill that were used for shelter and storage. Cool interiors provide welcome relief from the Khandesh heat.', mustSee: true },
+            { title: 'Highway Viewpoint', desc: 'Panoramic views of the surrounding plains and the Mumbai-Agra highway stretching into the distance. At night, the highway lights create a ribbon of light.', mustSee: true },
+            { title: 'Fort Plateau', desc: 'Open plateau at the summit with scattered remains. Good area for rest and exploration.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Dhule City Food', type: 'Veg/Non-Veg', price: '₹60-150', desc: 'Dhule (~10 km) has good restaurants serving Khandeshi cuisine, North Indian food, and fast food.' },
+            { name: 'Highway Dhabas', type: 'Veg/Non-Veg', price: '₹80-200', desc: 'Numerous dhabas on the Mumbai-Agra highway near Dhule. Hearty meals and chai.' },
+            { name: 'Pack Snacks', type: 'Veg', price: '₹0', desc: 'Carry light snacks and water for the short trek. No stalls at the fort.' },
+            { name: 'Chai', type: 'Beverage', price: '₹10-20', desc: 'Tea available in Laling village. Perfect for a pre or post-trek break.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Via Laling Village Route', difficulty: 'Easy', distance: '1.5 km', time: '60-90 min', desc: 'A gradual climb through open terrain leading to the fort plateau. Well-defined path suitable for beginners and families.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Dhule (~10 km, 15 min) on the Mumbai-Agra highway. Well-connected and easy to find. Parking at the village.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'Local bus from Dhule city to Laling village. Very frequent service due to proximity.' },
+            { mode: 'By Highway', icon: '🛣️', desc: 'Located right off the Mumbai-Agra highway (NH3). Easy pit stop for road trippers.' }
+        ],
+
+        trekEssentials: [
+            'Comfortable shoes — open terrain',
+            'Carry 1 litre of water',
+            'Sun protection — little shade on the hill',
+            'Camera for plains views',
+            'Light snacks',
+            'Allow 2-3 hours total',
+            'Best visited early morning or evening',
+            'Torch for exploring caves'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Carry water — no sources on the fort', season: 'All year' },
+            { msg: 'Open terrain with little shade — avoid midday in summer', season: 'March-May' },
+            { msg: 'Cave interiors can be dark — carry a torch', season: 'All year' },
+            { msg: 'Khandesh summers are extremely hot — plan morning visits only', season: 'April-June' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹30-100' },
+            { label: 'Food', value: '₹60-150' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹90-250', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'At Laling village' },
+            { label: 'Food Stalls', available: false, detail: 'None at fort (Dhule nearby)' },
+            { label: 'Water Source', available: false, detail: 'Carry own water' },
+            { label: 'Toilets', available: false, detail: 'No facilities' },
+            { label: 'Mobile Network', available: true, detail: 'Good (near Dhule)' },
+            { label: 'Highway', available: true, detail: 'Mumbai-Agra highway nearby' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Dhule' },
+            { label: 'Base Village', value: 'Laling' },
+            { label: 'Altitude', value: '~700 m' },
+            { label: 'Fort Type', value: 'Hill Fort (Watchtower)' },
+            { label: 'Built By', value: 'Farooqui dynasty' },
+            { label: 'Famous For', value: 'Caves, highway views, easy trek' },
+            { label: 'Trek Distance', value: '1.5 km one way' },
+            { label: 'Time Required', value: '2-3 hours' },
+            { label: 'Kids Appropriate', value: 'Yes (easy climb)' },
+            { label: 'Nearest City', value: 'Dhule (10 km)' }
+        ],
+
+        reviews: {
+            quote: "Laling is the perfect road trip fort — right off the Mumbai-Agra highway, an easy climb, ancient caves, and views of the Khandesh plains. Perfect for a 2-hour history break.",
+            positives: [
+                'Very accessible from Dhule and the highway',
+                'Easy trek suitable for all fitness levels',
+                'Interesting caves to explore',
+                'Unique Farooqui dynasty history',
+                'Good views of surrounding plains'
+            ],
+            proTips: [
+                'Perfect pit stop on Mumbai-Agra highway road trips',
+                'Visit early morning or evening — Khandesh gets very hot',
+                'Carry a torch for the caves',
+                'Combine with Dhule city sightseeing',
+                'Monsoon transforms the brown plains into green fields'
+            ],
+            rating: 4.0,
+            reviewCount: '500+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ TORANMAL HILL STATION ━━━━━━━━━━━━━━━━━━
+    toranmal: {
+        introduction: `Toranmal is a hidden jewel of northern Maharashtra — a scenic hill station perched 
+            in the Satpuda mountain range of Nandurbar district. Often called "Maharashtra's best-kept 
+            secret," Toranmal offers cool climate, lush forests, serene lakes, and spectacular viewpoints 
+            at an altitude of 1,150 metres. Unlike forts, Toranmal is a nature and spiritual destination 
+            featuring the beautiful Yashwant Lake, the ancient Gorakhnath Temple, and stunning sunset 
+            points. It provides a rare chance to experience northern Maharashtra's tribal culture and 
+            natural beauty far from tourist crowds.`,
+
+        quote: {
+            text: "तोरणमाळ — सातपुड्यातला महाराष्ट्राचा गुप्त स्वर्ग",
+            attribution: "Toranmal — Maharashtra's hidden paradise in the Satpudas"
+        },
+
+        timeline: [
+            { year: 'Ancient', title: 'Spiritual Significance', desc: 'Toranmal has been a sacred site since ancient times, with the Gorakhnath Temple attracting devotees and sadhus (saints) from across western India.' },
+            { year: 'Medieval', title: 'Tribal Heritage', desc: 'The region has been home to Bhil and other tribal communities for centuries. Their culture and traditions remain alive in the surrounding villages.' },
+            { year: 'British Era', title: 'Hill Station Development', desc: 'The British recognized Toranmal\'s cool climate and developed it as a small hill station. Yashwant Lake was maintained as a scenic attraction.' },
+            { year: 'Modern', title: 'Tourism Growth', desc: 'Toranmal is gradually gaining recognition as an alternative to crowded hill stations. Government initiatives are improving infrastructure and connectivity.' }
+        ],
+
+        landmarks: [
+            { title: 'Yashwant Lake', desc: 'A beautiful, serene lake surrounded by forest and hills. Perfect for boat riding, photography, or simply sitting and absorbing the peaceful atmosphere. The lake reflects the surrounding hills beautifully.', mustSee: true },
+            { title: 'Sunset Point', desc: 'A spectacular viewpoint offering panoramic sunset views over the Satpuda ranges. The sky turns incredible shades of orange and purple as the sun dips below the mountain line.', mustSee: true },
+            { title: 'Gorakhnath Temple', desc: 'An ancient temple dedicated to the Nath Sampradaya saint Gorakhnath. Situated on a hilltop, it combines spiritual significance with panoramic views.', mustSee: true },
+            { title: 'Sita Khai', desc: 'A deep gorge according to legend associated with Sita from the Ramayana. The dramatic cliff and valley views are impressive.', mustSee: true },
+            { title: 'Forest Trails', desc: 'Numerous walking trails through dense Satpuda forests. Rich biodiversity with unique flora and tribal medicinal plants.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Local Dhabas', type: 'Veg', price: '₹60-120', desc: 'Simple but hearty Maharashtrian meals at small eateries in Toranmal. Dal-rice, bhakri, and seasonal vegetables.' },
+            { name: 'MTDC Restaurant', type: 'Veg', price: '₹80-200', desc: 'The MTDC resort at Toranmal has a restaurant serving decent vegetarian meals and snacks.' },
+            { name: 'Tribal Food', type: 'Veg', price: '₹40-80', desc: 'If you can find local tribal food — ragi rotis, wild greens, and simple curries — it\'s an authentic culinary experience.' },
+            { name: 'Chai', type: 'Beverage', price: '₹10-20', desc: 'Tea stalls in the small market area. The cool climate makes chai especially enjoyable.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🚶', title: 'Nature Trail Walk', difficulty: 'Easy', distance: '2-5 km', time: '1-3 hrs', desc: 'Various walking trails around Toranmal connecting Yashwant Lake, Sunset Point, and Gorakhnath Temple. Easy walks through forest paths. Suitable for all ages.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Dhule (~120 km, 3 hours) or from Shahada (~55 km, 1.5 hours). Mountain road with hairpin bends — drive carefully.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'ST bus from Shahada or Nandurbar to Toranmal. Limited service — check timings. Shahada has the best connections.' },
+            { mode: 'By Train', icon: '🚂', desc: 'Nearest railhead: Nandurbar on the Mumbai-Delhi line. Bus/taxi from Nandurbar to Toranmal (~80 km, 2.5 hours).' }
+        ],
+
+        trekEssentials: [
+            'Comfortable walking shoes — forest trails',
+            'Light jacket — cool climate even in summer',
+            'Camera — stunning lake and sunset views',
+            'Carry snacks — limited food options',
+            'Water bottle',
+            'Allow full day for complete sightseeing',
+            'Book MTDC stay in advance — limited options',
+            'Cash essential — very limited UPI/ATMs'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Limited accommodation — book MTDC resort or homestay well in advance', season: 'All year' },
+            { msg: 'Mountain road with hairpin bends — drive carefully, especially in monsoon', season: 'June-Sept' },
+            { msg: 'Limited mobile network and no ATMs — carry cash', season: 'All year' },
+            { msg: 'Forest trails can be confusing — stick to marked paths', season: 'All year' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹300-700' },
+            { label: 'Food', value: '₹150-300' },
+            { label: 'Stay (MTDC)', value: '₹500-1500' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total (day trip)', value: '₹500-1000', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'At multiple spots' },
+            { label: 'Food', available: true, detail: 'Limited — dhabas and MTDC' },
+            { label: 'Drinking Water', available: true, detail: 'Available' },
+            { label: 'Stay', available: true, detail: 'MTDC resort + homestays' },
+            { label: 'Mobile Network', available: true, detail: 'Moderate (BSNL best)' },
+            { label: 'Boating', available: true, detail: 'At Yashwant Lake' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Nandurbar' },
+            { label: 'Type', value: 'Hill Station' },
+            { label: 'Altitude', value: '1,150 m' },
+            { label: 'Mountain Range', value: 'Satpuda' },
+            { label: 'Famous For', value: 'Yashwant Lake, Sunset Point, cool climate' },
+            { label: 'Best Time', value: 'October to March (Winter)' },
+            { label: 'Time Required', value: '4-6 hours (full day ideal)' },
+            { label: 'Kids Appropriate', value: 'Yes (nature trails)' },
+            { label: 'Stay Options', value: 'MTDC resort, homestays' },
+            { label: 'Nearest City', value: 'Shahada (55 km)' }
+        ],
+
+        reviews: {
+            quote: "Toranmal is what Mahabaleshwar was 30 years ago — unspoiled, uncrowded, and absolutely magical. The sunset over the Satpuda range is worth the journey alone.",
+            positives: [
+                'Incredibly peaceful — far from tourist crowds',
+                'Cool climate even in summer',
+                'Beautiful Yashwant Lake',
+                'Stunning sunset views over Satpuda range',
+                'Unique tribal culture experience'
+            ],
+            proTips: [
+                'Book MTDC resort well in advance — very limited rooms',
+                'Carry cash — no ATMs and limited UPI',
+                'BSNL network works best here',
+                'Visit during monsoon for the greenest, most dramatic views',
+                'Try to interact with local tribal communities — fascinating culture'
+            ],
+            rating: 4.3,
+            reviewCount: '800+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ KANHERGARH ━━━━━━━━━━━━━━━━━━
+    kanhergarh: {
+        introduction: `Kanhergarh is one of the most remote and least-visited forts in Maharashtra, tucked 
+            away in the Sakri taluka of Dhule district deep within the Khandesh region. This unassuming 
+            hill fort served as a minor surveillance outpost, but its isolation is precisely what makes it 
+            appealing to hardcore trekking enthusiasts. With virtually no tourist infrastructure and barely 
+            any marked trails, Kanhergarh offers a raw, wilderness trekking experience through the dry 
+            Khandesh landscape — a world apart from the lush Sahyadri forts that dominate most trekking lists.`,
+
+        quote: {
+            text: "कान्हेरगड — खानदेशच्या दुर्गम जंगलातला विसरलेला किल्ला",
+            attribution: "Kanhergarh — the forgotten fort in Khandesh's remote forests"
+        },
+
+        timeline: [
+            { year: '17th Century', title: 'Local Construction', desc: 'Kanhergarh was built by local rulers in the Khandesh region as a minor surveillance outpost to monitor the surrounding terrain and trade paths.' },
+            { year: '17th-18th Century', title: 'Maratha Period', desc: 'The Marathas incorporated Kanhergarh into their broader defense network during their expansion through Khandesh.' },
+            { year: '19th Century', title: 'Abandonment', desc: 'After the British annexation, the fort was completely abandoned. Its remote location meant it was forgotten by all but the most dedicated local historians.' }
+        ],
+
+        landmarks: [
+            { title: 'Fort Plateau', desc: 'An open plateau at the summit with basic ruins — wall fragments, foundations, and cleared areas that once housed the garrison. The remoteness adds to its atmospheric quality.', mustSee: true },
+            { title: 'Water Tanks', desc: 'Rock-cut cisterns carved into the basalt rock for rainwater storage. Essential survival infrastructure in this dry Khandesh climate.', mustSee: true },
+            { title: 'Khandesh Viewpoints', desc: 'Views of the surrounding Khandesh plains and hills. The dry, rugged landscape is starkly different from the green Western Ghats forts.', mustSee: true }
+        ],
+
+        food: [
+            { name: 'Pack Everything', type: 'Veg', price: '₹0', desc: 'Absolutely no food available anywhere near the fort. Carry all meals, snacks, and water for the entire trek. Plan as a self-sufficient expedition.' },
+            { name: 'Sakri Town', type: 'Veg', price: '₹50-100', desc: 'Basic eateries in Sakri town. Stock up before heading to the remote fort area.' },
+            { name: 'Dhule City', type: 'Veg/Non-Veg', price: '₹80-200', desc: 'Dhule (~60 km) has proper restaurants. Eat well before the expedition.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Via Kanher Village Route', difficulty: 'Medium', distance: '3 km', time: '2-2.5 hrs', desc: 'A gradual climb through open terrain and forest patches to the fort plateau. Trail is not well-marked — local guide essential. Not recommended for beginners.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Dhule to Sakri (~40 km), then to Kanher village (~20 km). Last stretch is rough road — high-clearance vehicle recommended.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'ST bus from Dhule to Sakri. Very limited local transport to Kanher village. Plan private transport for the last leg.' },
+            { mode: 'By Bike', icon: '🏍️', desc: 'Ride from Dhule through Khandesh countryside. Roads are rough near the base — sturdy bike recommended.' }
+        ],
+
+        trekEssentials: [
+            'Sturdy trekking shoes — rough, uneven terrain',
+            'Carry 3+ litres of water — NO sources anywhere',
+            'All food for full day — no stalls within miles',
+            'Local guide essential — trail not marked',
+            'First aid kit — very remote, no medical help',
+            'Sun protection — dry Khandesh terrain, little shade',
+            'Group trekking mandatory — never go solo',
+            'Inform someone of your plans and expected return'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Extremely remote — NEVER trek solo. Go with experienced group and inform someone', season: 'All year' },
+            { msg: 'No water anywhere — carry minimum 3 litres per person', season: 'All year' },
+            { msg: 'Trail not well-marked — hire a local guide from Kanher village', season: 'All year' },
+            { msg: 'Extreme heat in summer — avoid entirely April to June', season: 'April-June' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹400-800' },
+            { label: 'Food', value: '₹100-200' },
+            { label: 'Guide', value: '₹200-400' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹700-1400', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: false, detail: 'Village road — limited space' },
+            { label: 'Food Stalls', available: false, detail: 'None — carry everything' },
+            { label: 'Water Source', available: false, detail: 'None — carry all water' },
+            { label: 'Toilets', available: false, detail: 'No facilities' },
+            { label: 'Mobile Network', available: false, detail: 'Very weak to none' },
+            { label: 'Medical', available: false, detail: 'None — nearest in Sakri' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Dhule (Sakri)' },
+            { label: 'Base Village', value: 'Kanher' },
+            { label: 'Altitude', value: '~800 m' },
+            { label: 'Fort Type', value: 'Hill Fort (Surveillance)' },
+            { label: 'Built By', value: 'Local rulers' },
+            { label: 'Famous For', value: 'Remote trek, Khandesh isolation' },
+            { label: 'Trek Distance', value: '3 km one way' },
+            { label: 'Time Required', value: '4-5 hours' },
+            { label: 'Kids Appropriate', value: 'No (remote, difficult)' },
+            { label: 'Nearest City', value: 'Dhule (60 km)' }
+        ],
+
+        reviews: {
+            quote: "Kanhergarh is for those who find even Achala too mainstream. This is extreme offbeat trekking — no trails, no people, no facilities, just you and the Khandesh wilderness.",
+            positives: [
+                'Ultimate solitude — practically zero visitors',
+                'Raw wilderness trekking experience',
+                'Unique Khandesh landscape',
+                'Authentic rock-cut water cisterns',
+                'Satisfying challenge for experienced trekkers'
+            ],
+            proTips: [
+                'Hire a local guide from Kanher village — non-negotiable',
+                'Winter only — Khandesh summers are brutal',
+                'Carry more water than you think you need',
+                'Start very early to maximize daylight',
+                'Consider this a wilderness expedition, not a casual trek'
+            ],
+            rating: 3.8,
+            reviewCount: '50+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ PISOLGAD ━━━━━━━━━━━━━━━━━━
+    pisolgad: {
+        introduction: `Pisolgad is perhaps the most extreme offbeat fort trek in Maharashtra. Located in the 
+            remote reaches of Jalgaon district near the Chalisgaon region, this fort exists in near-total 
+            isolation. With no mobile signal, no marked trails, and virtually no visitors, Pisolgad is a 
+            destination purely for the most hardcore and experienced trekkers who seek the thrill of navigating 
+            uncharted terrain. The fort itself has minimal ruins, but the journey — through rugged rocky 
+            terrain and sparse forest — is the real reward.`,
+
+        quote: {
+            text: "पिसोळगड — जळगावच्या निर्जन डोंगरांतला सर्वात एकांत किल्ला",
+            attribution: "Pisolgad — the most solitary fort in Jalgaon's barren hills"
+        },
+
+        timeline: [
+            { year: '17th Century', title: 'Maratha Period', desc: 'Pisolgad was likely established as a minor hill fort for local defense and observation. Its remote location made it useful as a hidden outpost.' },
+            { year: '18th Century', title: 'Decline', desc: 'Even during its active period, Pisolgad was a minor fort. It was among the first to be abandoned as military strategies evolved.' },
+            { year: '19th Century', title: 'Forgotten', desc: 'After British annexation, the fort was completely forgotten. Only local shepherds and the most dedicated fort explorers know of its existence.' }
+        ],
+
+        landmarks: [
+            { title: 'Rocky Plateau', desc: 'The summit plateau with minimal ruins — scattered stones and foundations that hint at a once-functional outpost. The stark emptiness is both haunting and beautiful.', mustSee: true },
+            { title: 'Water Cisterns', desc: 'Limited seasonal water sources carved into rock. Functional only during and shortly after monsoon. Engineering in the most basic, practical sense.', mustSee: true },
+            { title: 'Panoramic Views', desc: 'Wide, unobstructed views of the surrounding Jalgaon region. The barren landscape stretching to the horizon creates a sense of vastness and isolation.', mustSee: true }
+        ],
+
+        food: [
+            { name: 'Self-Sufficient Only', type: 'Veg', price: '₹0', desc: 'Absolutely nothing available. This is a wilderness expedition — carry ALL food, water, and supplies for the entire day. Pre-plan every meal.' },
+            { name: 'Chalisgaon', type: 'Veg/Non-Veg', price: '₹60-150', desc: 'Chalisgaon town (~40 km) has basic restaurants. Stock up before heading out.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Via Pisole Village Route', difficulty: 'Hard', distance: '4 km', time: '2.5-3 hrs', desc: 'A long, challenging trek through rocky terrain and sparse forest. No marked trail — navigation skills and a local guide are mandatory. For experienced trekkers only.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Jalgaon or Chalisgaon towards Pisole village. Roads deteriorate significantly near the base. High-clearance vehicle essential.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'Very limited bus service to Pisole area. Private transport strongly recommended.' },
+            { mode: 'By Bike', icon: '🏍️', desc: 'Experienced riders can reach the base. Roads near Pisole are rough — adventure bike recommended.' }
+        ],
+
+        trekEssentials: [
+            'Heavy-duty trekking shoes — extremely rocky terrain',
+            'Carry 4+ litres of water — NOTHING available',
+            'All food for full day, packed meals',
+            'Local guide MANDATORY — no trail exists',
+            'GPS device or offline maps — no mobile signal',
+            'Complete first aid kit',
+            'Trekking poles — rocky, uneven ground',
+            'Group of 4+ people minimum'
+        ],
+
+        safetyAlerts: [
+            { msg: 'EXTREME REMOTE — no facilities, no network, no medical help. Plan as a serious expedition', season: 'All year' },
+            { msg: 'No mobile signal — carry GPS, offline maps, and inform someone of detailed plans', season: 'All year' },
+            { msg: 'No water anywhere — carry minimum 4 litres per person', season: 'All year' },
+            { msg: 'Navigation required — no marked trails exist. Local guide mandatory', season: 'All year' },
+            { msg: 'Avoid monsoon (slippery rocks) and summer (extreme heat)', season: 'June-Sept, March-May' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹500-1000' },
+            { label: 'Food', value: '₹150-300' },
+            { label: 'Guide', value: '₹300-500' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹950-1800', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: false, detail: 'Road-side only' },
+            { label: 'Food Stalls', available: false, detail: 'None within 20 km' },
+            { label: 'Water Source', available: false, detail: 'None — carry everything' },
+            { label: 'Toilets', available: false, detail: 'No facilities' },
+            { label: 'Mobile Network', available: false, detail: 'NO signal' },
+            { label: 'Medical', available: false, detail: 'None — nearest 40+ km' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Jalgaon (Chalisgaon)' },
+            { label: 'Base Village', value: 'Pisole' },
+            { label: 'Altitude', value: '~850 m' },
+            { label: 'Fort Type', value: 'Hill Fort (Remote)' },
+            { label: 'Built By', value: 'Maratha Empire' },
+            { label: 'Famous For', value: 'Extreme isolation, offbeat trek' },
+            { label: 'Trek Distance', value: '4 km one way' },
+            { label: 'Time Required', value: '5-6 hours' },
+            { label: 'Kids Appropriate', value: 'Absolutely not' },
+            { label: 'Nearest City', value: 'Chalisgaon (40 km)' }
+        ],
+
+        reviews: {
+            quote: "If you want to tell people you've been to a fort nobody has heard of, Pisolgad is your answer. It's not pretty, it's not easy, but it's 100% authentic exploration.",
+            positives: [
+                'Possibly the most offbeat fort in Maharashtra',
+                'True wilderness exploration experience',
+                'Complete solitude — you won\'t see another soul',
+                'Satisfaction of conquering the unknown',
+                'Unique barren landscape'
+            ],
+            proTips: [
+                'Only attempt with experienced trekking group',
+                'Winter (Nov-Jan) is the ONLY viable season',
+                'Carry GPS — this is not a casual trek',
+                'Pre-arrange guide from Pisole village well in advance',
+                'Treat this as a mountain expedition, not a day hike'
+            ],
+            rating: 3.7,
+            reviewCount: '30+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ AUSA FORT ━━━━━━━━━━━━━━━━━━
+    ausa: {
+        introduction: `Ausa Fort is a magnificent example of Deccan land fort architecture, standing in the 
+            heart of Ausa town in Latur district. Built during the Bahmani Sultanate period, this fort 
+            showcases the Islamic architectural influences that dominated the Deccan military landscape. 
+            With its strong fortification walls, imposing bastions, and well-planned interior structures, 
+            Ausa Fort tells the story of Marathwada's rich Islamic and medieval history — a heritage that 
+            is often overshadowed by the Sahyadri hill forts in popular imagination.`,
+
+        quote: {
+            text: "औसा किल्ला — मराठवाड्यातला दख्खनी वास्तुकलेचा नमुना",
+            attribution: "Ausa Fort — a specimen of Deccan architecture in Marathwada"
+        },
+
+        timeline: [
+            { year: '15th Century', title: 'Bahmani Construction', desc: 'The Bahmani Sultanate built Ausa Fort as a regional stronghold in the eastern Deccan. Its design reflects the Islamic military architecture prevalent during the period.' },
+            { year: '1490', title: 'Post-Bahmani Period', desc: 'After the Bahmani Sultanate fragmented, Ausa Fort came under the control of various successor states, with the Nizam of Hyderabad eventually gaining control.' },
+            { year: '17th Century', title: 'Mughal Influence', desc: 'During Aurangzeb\'s Deccan campaigns, the Mughals exerted influence over the region. The fort served administrative and military functions.' },
+            { year: '1818', title: 'British Period', desc: 'The British took control of the Marathwada region. The fort gradually transitioned from military use to a heritage monument.' },
+            { year: 'Modern', title: 'Heritage Status', desc: 'Ausa Fort is recognized as a significant historical monument in Marathwada. Efforts are underway for conservation and tourism development.' }
+        ],
+
+        landmarks: [
+            { title: 'Fort Walls', desc: 'Strong stone fortification walls encircling the town. The thick basalt construction shows Bahmani-era engineering with Islamic architectural elements visible in the wall design.', mustSee: true },
+            { title: 'Bastions', desc: 'Large defensive bastions at strategic points, designed for cannon placement and defensive fire. The bastions show both Deccan and Mughal architectural influences.', mustSee: true },
+            { title: 'Interior Structures', desc: 'Remains of old buildings within the fort — administrative quarters, storage facilities, and religious structures that reveal the fort\'s multi-functional nature.', mustSee: true },
+            { title: 'Fort Gates', desc: 'Fortified entrance gates with bent-axis approaches designed to slow attacking forces. Classic Deccan military gateway architecture.', mustSee: false },
+            { title: 'Islamic Elements', desc: 'Architectural details showing Islamic influence — arches, inscriptions, and decorative elements that distinguish this from Maratha-era forts.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Ausa Town Food', type: 'Veg/Non-Veg', price: '₹50-120', desc: 'Local restaurants in Ausa town serve Marathwada cuisine — jowar bhakri, zunka, and simple non-veg dishes.' },
+            { name: 'Latur City', type: 'Veg/Non-Veg', price: '₹80-200', desc: 'Latur (~20 km) has better dining options with a wider variety including biryanis and kebabs reflecting Hyderabadi influence.' },
+            { name: 'Street Food', type: 'Veg', price: '₹20-50', desc: 'Basic street food in Ausa town — vada pav, bhel, and chai at local stalls near the fort.' },
+            { name: 'Chai', type: 'Beverage', price: '₹10-15', desc: 'Tea stalls in Ausa town. Marathwada-style strong chai.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🚶', title: 'Main Entrance Walk', difficulty: 'Easy', distance: '1 km', time: '30-45 min', desc: 'Direct walk-in access through the main gate. No trekking required — the fort is at ground level in Ausa town. Accessible for all ages and abilities.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Latur (~20 km, 30 min) or from Osmanabad (~60 km, 1.5 hours). Well-connected roads. Fort is in the town center.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'Frequent ST buses from Latur to Ausa. The fort is a short walk from the Ausa bus stand.' },
+            { mode: 'By Train', icon: '🚂', desc: 'Nearest station: Latur on the Latur-Kurduwadi line. Bus/auto from Latur to Ausa (~20 km).' }
+        ],
+
+        trekEssentials: [
+            'Comfortable walking shoes — paved and unpaved surfaces',
+            'Water bottle — stalls available in town',
+            'Camera — impressive Deccan architecture',
+            'Sun protection — open fort, limited shade',
+            'Cash for food and local transport',
+            'Allow 2-3 hours for thorough exploration',
+            'Best visited morning or late afternoon',
+            'Ask locals for historical context'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Large fort area — explore carefully, some sections may have uneven ground', season: 'All year' },
+            { msg: 'Marathwada summers are extremely hot — avoid midday visits April to June', season: 'April-June' },
+            { msg: 'Some interior structures may be unstable — don\'t climb on ruins', season: 'All year' },
+            { msg: 'Carry water for the walk even though stalls are nearby', season: 'All year' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹50-200' },
+            { label: 'Food', value: '₹50-150' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹100-350', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'In Ausa town' },
+            { label: 'Food Stalls', available: true, detail: 'In town, near fort' },
+            { label: 'Drinking Water', available: true, detail: 'Available in town' },
+            { label: 'Toilets', available: true, detail: 'Public facilities nearby' },
+            { label: 'Mobile Network', available: true, detail: 'Good signal' },
+            { label: 'Local Transport', available: true, detail: 'Autos in Ausa town' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Latur' },
+            { label: 'Location', value: 'Ausa town center' },
+            { label: 'Altitude', value: 'Ground level' },
+            { label: 'Fort Type', value: 'Land Fort' },
+            { label: 'Built By', value: 'Bahmani Sultanate' },
+            { label: 'Famous For', value: 'Deccan architecture, Islamic elements' },
+            { label: 'Time Required', value: '2-3 hours' },
+            { label: 'Kids Appropriate', value: 'Yes (easy access)' },
+            { label: 'Architectural Style', value: 'Islamic / Deccan' },
+            { label: 'Nearest City', value: 'Latur (20 km)' }
+        ],
+
+        reviews: {
+            quote: "Ausa Fort is a reminder that Maharashtra's fort heritage extends far beyond the Sahyadris. The Islamic architectural elements and Bahmani history make it a unique cultural experience.",
+            positives: [
+                'Unique Islamic/Deccan architectural style',
+                'Easy access — no trekking, in town center',
+                'Rich multi-dynasty history',
+                'Well-preserved fort walls and bastions',
+                'Good facilities in Ausa town'
+            ],
+            proTips: [
+                'Visit during winter for comfortable exploration',
+                'Combine with Latur city sightseeing',
+                'Ask local history enthusiasts for guided context',
+                'The Islamic architectural details are best appreciated slowly',
+                'Try Marathwada cuisine — different from Konkan/Pune food'
+            ],
+            rating: 4.1,
+            reviewCount: '600+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ KANDHAR FORT ━━━━━━━━━━━━━━━━━━
+    kandhar: {
+        introduction: `Kandhar Fort is one of the most imposing land forts in the Marathwada region, standing 
+            majestically in Kandhar town of Nanded district. Its origins date back to the Rashtrakuta dynasty 
+            — making it one of the oldest forts in Maharashtra — and it has since been expanded and modified 
+            by the Bahmanis, Mughals, and Marathas. The fort's massive defensive walls, deep water-filled 
+            moat, and powerful bastions represent centuries of military engineering evolution across multiple 
+            dynasties.`,
+
+        quote: {
+            text: "कंधार किल्ला — मराठवाड्यातला प्राचीन भूदुर्ग",
+            attribution: "Kandhar Fort — the ancient land fort of Marathwada"
+        },
+
+        timeline: [
+            { year: '9th Century', title: 'Rashtrakuta Origins', desc: 'The Rashtrakuta dynasty established the original fortification at Kandhar, making it one of the oldest continuously modified forts in Maharashtra.' },
+            { year: '14th-15th Century', title: 'Bahmani Expansion', desc: 'The Bahmani Sultanate significantly expanded and strengthened the fort, adding the moat system and Islamic architectural elements.' },
+            { year: '17th Century', title: 'Mughal Control', desc: 'During the Mughal Deccan campaigns, Kandhar Fort served as an important garrison. The Mughals added their own defensive modifications.' },
+            { year: '18th Century', title: 'Maratha Period', desc: 'The Marathas captured Kandhar Fort during their expansion into Marathwada. It served as a regional administrative center.' },
+            { year: '1818', title: 'British Annexation', desc: 'The British took control and the fort gradually transitioned from military use to a historical monument.' }
+        ],
+
+        landmarks: [
+            { title: 'Massive Fort Walls', desc: 'Towering stone walls that have been reinforced by successive dynasties over 1,000+ years. The thickness and height reveal the fort\'s strategic importance across multiple eras.', mustSee: true },
+            { title: 'Deep Moat', desc: 'A wide, water-filled moat surrounding the fort — the first line of defense. One of the most impressive moats among Marathwada forts.', mustSee: true },
+            { title: 'Bastions', desc: 'Strong circular bastions at regular intervals, designed for cannon placement. Their design shows both Deccan and Mughal engineering influences.', mustSee: true },
+            { title: 'Fort Gates', desc: 'Multiple fortified gates with bent-axis approach designs. Each gate tells a story of the dynasty that built or modified it.', mustSee: false },
+            { title: 'Interior Remains', desc: 'Ruins of administrative buildings, temples, and storage structures inside the fort, spanning multiple historical periods.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Kandhar Town Food', type: 'Veg/Non-Veg', price: '₹50-120', desc: 'Local restaurants in Kandhar serve Marathwada cuisine — jowar bhakri, zunka-bhakar, and mutton dishes with Hyderabadi influence.' },
+            { name: 'Nanded City', type: 'Veg/Non-Veg', price: '₹80-200', desc: 'Nanded (~50 km) has diverse dining — Punjabi dhabas, Hyderabadi biryani, and Marathwada thalis.' },
+            { name: 'Street Snacks', type: 'Veg', price: '₹20-50', desc: 'Chai, vada pav, and local snacks near the fort entrance.' },
+            { name: 'Chai', type: 'Beverage', price: '₹10-15', desc: 'Strong Marathwada-style chai at stalls near the fort.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🚶', title: 'Main Entrance Walk', difficulty: 'Easy', distance: '1 km', time: '30-45 min', desc: 'Direct access through the main gate. No trekking — ground-level fort in Kandhar town. Accessible for all ages.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Nanded (~50 km, 1 hour). Well-connected road. Fort is in Kandhar town center.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'Frequent ST buses from Nanded to Kandhar. Fort is a short walk from the bus stand.' },
+            { mode: 'By Train', icon: '🚂', desc: 'Nearest major station: Nanded Junction on the Mumbai-Hyderabad line. Bus from Nanded to Kandhar.' }
+        ],
+
+        trekEssentials: [
+            'Comfortable walking shoes — paved and unpaved areas',
+            'Water bottle — stalls available nearby',
+            'Camera — impressive walls and moat',
+            'Sun protection — open fort, limited shade',
+            'Cash for food and transport',
+            'Allow 2-3 hours for thorough exploration',
+            'Best visited morning or late afternoon',
+            'Ask locals about the fort history'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Large fort area — explore carefully, uneven ground in places', season: 'All year' },
+            { msg: 'Marathwada summers are extreme — avoid midday visits', season: 'April-June' },
+            { msg: 'Keep children away from moat edges', season: 'All year' },
+            { msg: 'Some interior ruins may be unstable', season: 'All year' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹50-200' },
+            { label: 'Food', value: '₹50-150' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹100-350', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'In Kandhar town' },
+            { label: 'Food Stalls', available: true, detail: 'Near fort entrance' },
+            { label: 'Drinking Water', available: true, detail: 'Available in town' },
+            { label: 'Toilets', available: true, detail: 'Public facilities nearby' },
+            { label: 'Mobile Network', available: true, detail: 'Good signal' },
+            { label: 'Local Transport', available: true, detail: 'Autos in town' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Nanded' },
+            { label: 'Location', value: 'Kandhar town center' },
+            { label: 'Altitude', value: 'Ground level' },
+            { label: 'Fort Type', value: 'Land Fort' },
+            { label: 'Built By', value: 'Rashtrakuta dynasty (9th century)' },
+            { label: 'Famous For', value: 'Massive walls, moat, 1000+ year history' },
+            { label: 'Time Required', value: '2-3 hours' },
+            { label: 'Kids Appropriate', value: 'Yes (easy access)' },
+            { label: 'Dynasties', value: 'Rashtrakuta → Bahmani → Mughal → Maratha' },
+            { label: 'Nearest City', value: 'Nanded (50 km)' }
+        ],
+
+        reviews: {
+            quote: "Kandhar Fort is a living textbook of Deccan history — from the Rashtrakutas to the British, every dynasty has left its mark on these ancient walls. The moat alone is worth the visit.",
+            positives: [
+                'One of the oldest forts in Maharashtra (9th century!)',
+                'Impressive moat and massive walls',
+                'Multi-dynasty history spanning 1000+ years',
+                'Easy access in town center',
+                'Good facilities nearby'
+            ],
+            proTips: [
+                'Visit during winter for comfortable exploration',
+                'Combine with Nanded Gurudwara visit',
+                'The moat looks most impressive after monsoon when full',
+                'Ask local history teachers for guided context',
+                'Early morning light is best for photography of the walls'
+            ],
+            rating: 4.2,
+            reviewCount: '1,000+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ DHARUR FORT ━━━━━━━━━━━━━━━━━━
+    dharur: {
+        introduction: `Dharur Fort stands as a fine example of classic Deccan military architecture in the 
+            heart of Beed district. Built during the Bahmani Sultanate period, this land fort features 
+            imposing stone walls, strategic bastions, and historic gateways that showcase the engineering 
+            prowess of Deccan-era fort builders. While less famous than the coastal and hill forts of 
+            western Maharashtra, Dharur Fort offers an authentic window into Marathwada's rich medieval 
+            history and the military traditions of the Deccan plateau.`,
+
+        quote: {
+            text: "धारूर किल्ला — बीड जिल्ह्यातला दख्खनी स्थापत्यकलेचा दुर्ग",
+            attribution: "Dharur Fort — the Deccan architectural fortress of Beed"
+        },
+
+        timeline: [
+            { year: '15th Century', title: 'Bahmani Construction', desc: 'The Bahmani Sultanate built Dharur Fort as a regional stronghold in the Beed area, incorporating classic Deccan military design elements.' },
+            { year: '16th Century', title: 'Post-Bahmani Period', desc: 'After the Bahmani breakup, the fort came under various Deccan successor states before Mughal dominance.' },
+            { year: '17th Century', title: 'Mughal Control', desc: 'The Mughals took control during their Deccan campaigns. The fort served as a local administrative and military post.' },
+            { year: '18th Century', title: 'Maratha Period', desc: 'The Marathas captured Dharur Fort during their expansion into Marathwada.' },
+            { year: '1818', title: 'British Period', desc: 'British annexation. The fort transitioned to a heritage monument.' }
+        ],
+
+        landmarks: [
+            { title: 'Fort Walls', desc: 'Massive defensive walls encircling the fort area. The thick basalt construction is typical of Bahmani-era engineering — built to withstand both sieges and time.', mustSee: true },
+            { title: 'Bastions', desc: 'Strategic circular bastions positioned at intervals along the walls. Designed for artillery placement and providing overlapping fields of fire.', mustSee: true },
+            { title: 'Main Gate', desc: 'A historic entry structure with fortified approach. The gateway architecture shows Deccan-style design with both defensive and decorative elements.', mustSee: true },
+            { title: 'Interior Ruins', desc: 'Remains of buildings and structures within the fort — evidence of its role as both military post and administrative center.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Dharur Town Food', type: 'Veg/Non-Veg', price: '₹50-100', desc: 'Simple Maharashtrian meals at local eateries — jowar bhakri, pithla, and basic non-veg options.' },
+            { name: 'Beed City', type: 'Veg/Non-Veg', price: '₹80-200', desc: 'Beed (~60 km) has better restaurant options with Marathwada cuisine and standard fare.' },
+            { name: 'Street Food', type: 'Veg', price: '₹20-40', desc: 'Basic snacks and chai near the fort.' },
+            { name: 'Chai', type: 'Beverage', price: '₹10-15', desc: 'Tea stalls in Dharur town.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🚶', title: 'Main Entrance Walk', difficulty: 'Easy', distance: '1 km', time: '30-45 min', desc: 'Easy access via Dharur town. Walk directly into the fort. No trekking required.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Beed (~60 km, 1.5 hours) or from Aurangabad (~120 km, 2.5 hours). Fort is in Dharur town.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'ST buses from Beed to Dharur. Fort is near the town center.' },
+            { mode: 'By Train', icon: '🚂', desc: 'Nearest station: Beed or Parli-Vaijnath. Bus/taxi to Dharur.' }
+        ],
+
+        trekEssentials: [
+            'Comfortable walking shoes',
+            'Water bottle',
+            'Camera — impressive Deccan architecture',
+            'Sun protection — open fort area',
+            'Cash for food and transport',
+            'Allow 2-3 hours',
+            'Best in morning or evening',
+            'Combine with Beed district sightseeing'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Large fort — stay aware of surroundings in less-visited sections', season: 'All year' },
+            { msg: 'Extreme summer temperatures in Beed — avoid midday visits', season: 'April-June' },
+            { msg: 'Some structures may be unstable — don\'t climb on ruins', season: 'All year' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹100-300' },
+            { label: 'Food', value: '₹50-120' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹150-420', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'In Dharur town' },
+            { label: 'Food Stalls', available: true, detail: 'In town' },
+            { label: 'Drinking Water', available: true, detail: 'Available' },
+            { label: 'Toilets', available: true, detail: 'Public facilities' },
+            { label: 'Mobile Network', available: true, detail: 'Good signal' },
+            { label: 'Guide', available: false, detail: 'Self-explore' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Beed' },
+            { label: 'Location', value: 'Dharur town' },
+            { label: 'Altitude', value: 'Ground level' },
+            { label: 'Fort Type', value: 'Land Fort' },
+            { label: 'Built By', value: 'Bahmani Sultanate' },
+            { label: 'Famous For', value: 'Deccan architecture, bastions' },
+            { label: 'Time Required', value: '2-3 hours' },
+            { label: 'Kids Appropriate', value: 'Yes (easy access)' },
+            { label: 'Architectural Style', value: 'Deccan / Islamic' },
+            { label: 'Nearest City', value: 'Beed (60 km)' }
+        ],
+
+        reviews: {
+            quote: "Dharur Fort is Marathwada's quiet museum of Deccan military history. No crowds, solid walls, and a gateway that makes you pause and appreciate medieval engineering.",
+            positives: [
+                'Classic Deccan military architecture',
+                'Well-preserved walls and bastions',
+                'Historic gateway is impressive',
+                'Easy access — no trekking',
+                'Uncrowded and peaceful'
+            ],
+            proTips: [
+                'Visit during winter — Beed summers are harsh',
+                'Combine with other Beed district heritage sites',
+                'Morning light is best for photography',
+                'Ask local elders — they share fascinating stories',
+                'The bastions offer the best views of the fort layout'
+            ],
+            rating: 4.0,
+            reviewCount: '500+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ AMBAD FORT ━━━━━━━━━━━━━━━━━━
+    ambad: {
+        introduction: `Ambad Fort is a partially ruined but historically significant land fort in Jalna 
+            district, deep in the Marathwada region. Built during the Bahmani Sultanate period, this fort 
+            reflects the architectural style of Deccan-era fortifications with its thick walls, defensive 
+            bastions, and remnants of internal structures. While less grand than the major Marathwada forts, 
+            Ambad offers an authentic glimpse into the region's medieval military heritage and the layered 
+            history of the Deccan plateau.`,
+
+        quote: {
+            text: "अंबड किल्ला — जालना जिल्ह्यातला ऐतिहासिक भूदुर्ग",
+            attribution: "Ambad Fort — the historic land fort of Jalna district"
+        },
+
+        timeline: [
+            { year: '15th Century', title: 'Bahmani Construction', desc: 'The Bahmani Sultanate built Ambad Fort as a regional defense post in the Jalna area, part of their network of land forts across the Deccan plateau.' },
+            { year: '16th Century', title: 'Successor States', desc: 'After the Bahmani fragmentation, the fort was controlled by various Deccan successor states.' },
+            { year: '17th Century', title: 'Mughal Period', desc: 'The Mughals took control during their Deccan campaigns. The fort served Mughal administrative purposes.' },
+            { year: '18th Century', title: 'Maratha Control', desc: 'The Marathas captured Ambad Fort during their expansion into eastern Maharashtra.' },
+            { year: 'Modern', title: 'Heritage Ruins', desc: 'The fort exists partially in ruins today but remains a significant historical landmark in Jalna district.' }
+        ],
+
+        landmarks: [
+            { title: 'Fort Walls', desc: 'Remaining sections of strong defensive walls showing Bahmani-era construction. Though partially ruined, the scale of the original fortification is evident.', mustSee: true },
+            { title: 'Bastions', desc: 'Defensive bastions at strategic points around the fort perimeter. Their positioning reveals the military planning of Deccan fort builders.', mustSee: true },
+            { title: 'Inner Structures', desc: 'Ruins of buildings inside the fort — possibly administrative quarters, storage areas, and religious structures. Atmospheric and photogenic.', mustSee: true },
+            { title: 'Fort Gates', desc: 'Remains of the fortified entrance. The gateway design shows typical Deccan military architecture.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Ambad Town Food', type: 'Veg/Non-Veg', price: '₹50-100', desc: 'Local eateries in Ambad town serving simple Maharashtrian meals — dal-rice, bhakri, and basic curries.' },
+            { name: 'Jalna City', type: 'Veg/Non-Veg', price: '₹80-180', desc: 'Jalna city (~40 km) has more dining variety including restaurants, dhabas, and street food.' },
+            { name: 'Snacks', type: 'Veg', price: '₹20-40', desc: 'Basic chai and snacks available in Ambad town near the fort.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🚶', title: 'Main Access Walk', difficulty: 'Easy', distance: '1 km', time: '30-45 min', desc: 'Direct access from Ambad town. Walk into the fort area — no trekking required. Suitable for all visitors.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Jalna (~40 km, 1 hour) or from Aurangabad (~110 km, 2 hours). Fort is in Ambad town.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'ST buses from Jalna to Ambad. The fort is near the town center.' },
+            { mode: 'By Train', icon: '🚂', desc: 'Nearest station: Jalna on the Manmad-Kachiguda line. Bus/auto to Ambad (~40 km).' }
+        ],
+
+        trekEssentials: [
+            'Comfortable walking shoes — ruins with uneven ground',
+            'Water bottle',
+            'Camera — atmospheric ruins',
+            'Sun protection',
+            'Cash for food and transport',
+            'Allow 2-3 hours',
+            'Explore carefully — some walls may be unstable',
+            'Best visited morning or evening'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Ruins — walk carefully and don\'t climb on unstable structures', season: 'All year' },
+            { msg: 'Extreme heat in Jalna during summer — visit early morning only', season: 'April-June' },
+            { msg: 'Some areas may have overgrowth — watch your step', season: 'Monsoon' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹50-200' },
+            { label: 'Food', value: '₹50-120' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹100-320', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'In Ambad town' },
+            { label: 'Food Stalls', available: true, detail: 'In town' },
+            { label: 'Drinking Water', available: true, detail: 'Available in town' },
+            { label: 'Toilets', available: true, detail: 'Public facilities' },
+            { label: 'Mobile Network', available: true, detail: 'Good signal' },
+            { label: 'Guide', available: false, detail: 'Self-explore' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Jalna' },
+            { label: 'Location', value: 'Ambad town' },
+            { label: 'Altitude', value: 'Ground level' },
+            { label: 'Fort Type', value: 'Land Fort' },
+            { label: 'Built By', value: 'Bahmani Sultanate' },
+            { label: 'Famous For', value: 'Deccan ruins, Bahmani architecture' },
+            { label: 'Time Required', value: '2-3 hours' },
+            { label: 'Kids Appropriate', value: 'Yes (easy access)' },
+            { label: 'Condition', value: 'Partially ruined' },
+            { label: 'Nearest City', value: 'Jalna (40 km)' }
+        ],
+
+        reviews: {
+            quote: "Ambad Fort may be partially ruined, but walking through its Bahmani-era walls reminds you that Maharashtra's fort story extends far beyond the Western Ghats.",
+            positives: [
+                'Authentic Bahmani-era architecture',
+                'Easy access in town center',
+                'Atmospheric ruins for photography',
+                'Uncrowded and peaceful',
+                'Good facilities in Ambad town'
+            ],
+            proTips: [
+                'Visit October to February for comfortable weather',
+                'Combine with Jalna city for a complete day trip',
+                'The ruins photograph best in golden hour light',
+                'Local shops and chai stalls make for pleasant post-visit relaxation',
+                'Ask locals about the fort — everyone knows it'
+            ],
+            rating: 3.9,
+            reviewCount: '400+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ UDGIR FORT ━━━━━━━━━━━━━━━━━━
+    udgir: {
+        introduction: `Udgir Fort is arguably the most historically significant land fort in the Marathwada 
+            region, standing in Udgir town of Latur district. The fort is forever linked to the famous 
+            Battle of Udgir (1760), a decisive conflict between the Maratha Empire and the Nizam of 
+            Hyderabad. Beyond its battlefield legacy, the fort boasts massive fortifications, intriguing 
+            underground passages, and architectural layers spanning multiple ruling dynasties — from the 
+            Bahmanis to the Nizams to the Marathas.`,
+
+        quote: {
+            text: "उदगीर किल्ला — मराठ्यांच्या विजयाचा ऐतिहासिक साक्षीदार",
+            attribution: "Udgir Fort — the historic witness to Maratha victory"
+        },
+
+        timeline: [
+            { year: '15th Century', title: 'Bahmani Construction', desc: 'The Bahmani Sultanate built the original fortification at Udgir as part of their Deccan defense network.' },
+            { year: '16th-17th Century', title: 'Nizam Control', desc: 'After the Bahmani decline, the Nizam of Hyderabad took control and significantly expanded the fort, adding underground passages and stronger defenses.' },
+            { year: '1760', title: 'Battle of Udgir', desc: 'The famous Battle of Udgir — Sadashivrao Bhau led the Marathas to a decisive victory over the Nizam. This established Maratha supremacy in the Deccan and is one of the most celebrated Maratha military victories.' },
+            { year: '18th Century', title: 'Maratha Period', desc: 'After their victory, the Marathas controlled the fort and used it as a major administrative center in eastern Maharashtra.' },
+            { year: '1818', title: 'British Annexation', desc: 'The British took control. The fort gradually transitioned to a heritage site.' }
+        ],
+
+        landmarks: [
+            { title: 'Massive Fort Walls', desc: 'Towering defensive walls built and reinforced by multiple dynasties. The sheer scale of the fortification reflects Udgir\'s strategic importance in Deccan politics.', mustSee: true },
+            { title: 'Underground Passages', desc: 'Secret tunnels and underground passages used for troop movement, supply transport, and emergency escape. A fascinating and mysterious feature of the fort.', mustSee: true },
+            { title: 'Bastions', desc: 'Strong defensive bastions positioned strategically around the walls. Designed for cannon placement and overlapping fields of fire.', mustSee: true },
+            { title: 'Fort Gates', desc: 'Fortified entrance gates with multiple defensive layers. The gateway architecture reflects both Nizam and Maratha influences.', mustSee: false },
+            { title: 'Battle of Udgir Memorial', desc: 'Commemorative elements related to the 1760 battle. Standing here, you\'re on the ground where Maratha history was made.', mustSee: true }
+        ],
+
+        food: [
+            { name: 'Udgir Town Food', type: 'Veg/Non-Veg', price: '₹50-120', desc: 'Local restaurants serving Marathwada and Hyderabadi-influenced cuisine — biryani, jowar bhakri, and non-veg curries.' },
+            { name: 'Latur City', type: 'Veg/Non-Veg', price: '₹80-200', desc: 'Latur (~65 km) has more dining variety. Marathwada thalis and Hyderabadi food.' },
+            { name: 'Street Food', type: 'Veg', price: '₹20-50', desc: 'Chai, vada pav, and local snacks near the fort.' },
+            { name: 'Chai', type: 'Beverage', price: '₹10-15', desc: 'Strong Marathwada chai at stalls near the fort entrance.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🚶', title: 'Main Entrance Walk', difficulty: 'Easy', distance: '1 km', time: '30-45 min', desc: 'Direct walk-in access. No trekking — ground-level fort in Udgir town. Accessible for all ages and abilities.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Latur (~65 km, 1.5 hours) or from Nanded (~100 km, 2 hours). Fort is in Udgir town center.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'Frequent ST buses from Latur and Nanded to Udgir. Fort is walkable from the bus stand.' },
+            { mode: 'By Train', icon: '🚂', desc: 'Udgir has a railway station on the Latur-Bidar line. Fort is a short auto ride from the station.' }
+        ],
+
+        trekEssentials: [
+            'Comfortable walking shoes',
+            'Torch/flashlight — essential for underground passages',
+            'Water bottle — stalls available nearby',
+            'Camera — impressive walls and passages',
+            'Sun protection — open fort areas',
+            'Allow 2-3 hours for thorough exploration',
+            'Best visited morning or late afternoon',
+            'Ask locals to show underground passage entrances'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Underground passages can be dark and narrow — carry a torch and go carefully', season: 'All year' },
+            { msg: 'Large fort area — stay aware of surroundings, especially in less-visited sections', season: 'All year' },
+            { msg: 'Extreme heat in Marathwada summer — visit early morning only', season: 'April-June' },
+            { msg: 'Don\'t enter unstable tunnel sections', season: 'All year' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹50-200' },
+            { label: 'Food', value: '₹50-150' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹100-350', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'In Udgir town' },
+            { label: 'Food Stalls', available: true, detail: 'Near fort entrance' },
+            { label: 'Drinking Water', available: true, detail: 'Available in town' },
+            { label: 'Toilets', available: true, detail: 'Public facilities nearby' },
+            { label: 'Mobile Network', available: true, detail: 'Good signal' },
+            { label: 'Railway Station', available: true, detail: 'In Udgir town' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Latur' },
+            { label: 'Location', value: 'Udgir town center' },
+            { label: 'Altitude', value: 'Ground level' },
+            { label: 'Fort Type', value: 'Land Fort' },
+            { label: 'Built By', value: 'Bahmani Sultanate' },
+            { label: 'Famous For', value: 'Battle of Udgir (1760), tunnels' },
+            { label: 'Time Required', value: '2-3 hours' },
+            { label: 'Kids Appropriate', value: 'Yes (easy access)' },
+            { label: 'Key Battle', value: 'Marathas vs Nizam (1760)' },
+            { label: 'Nearest City', value: 'Latur (65 km)' }
+        ],
+
+        reviews: {
+            quote: "Standing in Udgir Fort is standing on a battlefield that changed Deccan history. The underground passages add a layer of mystery, and the massive walls remind you of the fort's five-century legacy.",
+            positives: [
+                'Major historical significance — Battle of Udgir',
+                'Fascinating underground passages',
+                'Massive and impressive fortifications',
+                'Easy access — no trekking needed',
+                'Multi-dynasty architectural layers'
+            ],
+            proTips: [
+                'Carry a torch for the underground passages — essential',
+                'Ask locals to show you the tunnel entrances (not always obvious)',
+                'Visit during winter for comfortable exploration',
+                'Read about the Battle of Udgir before visiting — makes the experience richer',
+                'Combine with Ausa Fort (same district) for a Latur forts day'
+            ],
+            rating: 4.3,
+            reviewCount: '1,500+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ PARBHANI FORT ━━━━━━━━━━━━━━━━━━
+    parbhani: {
+        introduction: `Parbhani does not have a prominent surviving fort structure today. However, the town 
+            and district were historically significant during the medieval period as part of the Deccan 
+            Sultanates, the Nizam's dominion, and later the Maratha sphere of influence. Scattered remains 
+            of historic structures, administrative buildings, and defensive elements can be found in and 
+            around the town — silent witnesses to Parbhani's medieval past. For history enthusiasts, a walk 
+            through these remains offers a glimpse into the region's layered heritage.`,
+
+        quote: {
+            text: "परभणी — मध्ययुगीन दख्खनचे ऐतिहासिक अवशेष",
+            attribution: "Parbhani — historic remains of medieval Deccan"
+        },
+
+        timeline: [
+            { year: 'Medieval', title: 'Deccan Sultanates', desc: 'Parbhani region was part of the Bahmani Sultanate and later the Bidar Sultanate. Small defensive and administrative structures were built during this period.' },
+            { year: '17th-18th Century', title: 'Nizam Control', desc: 'The Nizam of Hyderabad controlled Parbhani. The region served administrative rather than military purposes during this period.' },
+            { year: '18th Century', title: 'Maratha Influence', desc: 'Maratha expansion brought Parbhani under their influence, though it remained primarily an administrative region.' },
+            { year: 'Modern', title: 'Heritage Status', desc: 'Scattered remains are recognized as local heritage sites. Conservation efforts are limited but awareness is growing.' }
+        ],
+
+        landmarks: [
+            { title: 'Local Ruins', desc: 'Scattered remains of historical structures throughout the town — wall fragments, foundations, and architectural elements from the medieval period.', mustSee: false },
+            { title: 'Historic Town Area', desc: 'The old town area of Parbhani retains some medieval character. Narrow lanes and old buildings hint at its Deccan Sultanate past.', mustSee: false },
+            { title: 'Regional Heritage Sites', desc: 'Various heritage spots in Parbhani district including old mosques, step-wells, and administrative ruins.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Parbhani City Food', type: 'Veg/Non-Veg', price: '₹50-150', desc: 'Parbhani has good restaurants serving Marathwada cuisine, Hyderabadi biryani, and standard fare.' },
+            { name: 'Street Food', type: 'Veg', price: '₹20-50', desc: 'Chai, samosa, vada pav, and local snacks throughout the city.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🚶', title: 'Town Walk', difficulty: 'Easy', distance: '1-2 km', time: '1 hr', desc: 'Walk through the old town area to see scattered remains. No trekking — flat terrain. More of a heritage walk than fort exploration.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Car', icon: '🚗', desc: 'Well-connected by road from Aurangabad (~200 km), Nanded (~180 km), or Pune (~400 km).' },
+            { mode: 'By Bus', icon: '🚌', desc: 'Major bus hub with frequent ST buses from all Marathwada cities.' },
+            { mode: 'By Train', icon: '🚂', desc: 'Parbhani Junction on the Manmad-Kachiguda line. Well-connected to Mumbai, Hyderabad, and Aurangabad.' }
+        ],
+
+        trekEssentials: [
+            'Comfortable walking shoes',
+            'Water bottle',
+            'Camera for old architecture',
+            'Sun protection',
+            'Allow 1 hour',
+            'Ask locals for historical context'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Scattered remains — some structures may be unstable', season: 'All year' },
+            { msg: 'Hot summers in Marathwada — plan morning visits', season: 'April-June' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹20-100' },
+            { label: 'Food', value: '₹50-120' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹70-220', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'City parking' },
+            { label: 'Food', available: true, detail: 'City restaurants' },
+            { label: 'Drinking Water', available: true, detail: 'Available' },
+            { label: 'Toilets', available: true, detail: 'Public facilities' },
+            { label: 'Mobile Network', available: true, detail: 'Good signal' },
+            { label: 'Railway', available: true, detail: 'Parbhani Junction' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Parbhani' },
+            { label: 'Location', value: 'Parbhani city' },
+            { label: 'Altitude', value: 'Ground level' },
+            { label: 'Type', value: 'Historic Remains' },
+            { label: 'Period', value: 'Medieval (Bahmani/Nizam)' },
+            { label: 'Condition', value: 'Scattered ruins only' },
+            { label: 'Time Required', value: '1 hour' },
+            { label: 'Kids Appropriate', value: 'Yes' },
+            { label: 'Best For', value: 'History enthusiasts' },
+            { label: 'Connectivity', value: 'Parbhani Junction (rail)' }
+        ],
+
+        reviews: {
+            quote: "Parbhani's fort remains are minimal, but for those interested in Marathwada's layered medieval history, a walk through the old town reveals fascinating fragments of the Deccan past.",
+            positives: [
+                'Easy city access',
+                'Good local food scene',
+                'Historical regional context',
+                'Well-connected by rail',
+                'Comfortable town exploration'
+            ],
+            proTips: [
+                'This is not a major fort — set expectations accordingly',
+                'Ask local history teachers for context',
+                'Combine with Parbhani city sightseeing',
+                'Best as a brief stop if passing through Marathwada',
+                'Winter months are most comfortable'
+            ],
+            rating: 3.2,
+            reviewCount: '100+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ MAHUR FORT ━━━━━━━━━━━━━━━━━━
+    mahur: {
+        introduction: `Mahur Fort is a unique hill fort in Nanded district that blends military history with 
+            deep religious significance. Perched on a hilltop in the remote Mahur taluka, this fort is 
+            closely associated with the famous Renuka Devi temple — one of the Shakti Peethas (sacred seats 
+            of the goddess). The fort offers panoramic views of the surrounding hills and valleys, and its 
+            combination of historical ruins, temple atmosphere, and natural beauty makes it a distinctive 
+            destination in eastern Maharashtra.`,
+
+        quote: {
+            text: "माहूर गड — रेणुका देवीच्या सान्निध्यातला ऐतिहासिक दुर्ग",
+            attribution: "Mahur Fort — the historic fort in the presence of Renuka Devi"
+        },
+
+        timeline: [
+            { year: 'Ancient', title: 'Religious Origins', desc: 'Mahur has been a sacred site since ancient times. The Renuka Devi temple predates the fort and drew pilgrims from across the Deccan.' },
+            { year: '17th Century', title: 'Fort Construction', desc: 'The fort was built on the strategic hilltop near the temple, combining military and religious significance. Both Marathas and Nizam rulers contributed to its construction.' },
+            { year: '18th Century', title: 'Maratha-Nizam Contests', desc: 'Mahur Fort changed hands between the Marathas and the Nizam of Hyderabad as both sought control of this strategic and religiously important location.' },
+            { year: '1818', title: 'British Period', desc: 'British annexation brought stability but the fort lost military importance. The temple continued to draw pilgrims.' },
+            { year: 'Modern', title: 'Pilgrimage & Tourism', desc: 'Mahur is primarily known today as a pilgrimage destination. The fort adds historical depth to the temple visit.' }
+        ],
+
+        landmarks: [
+            { title: 'Fort Walls', desc: 'Remains of fortification walls running along the hilltop. Though partially ruined, they frame the temple complex and offer viewpoints.', mustSee: true },
+            { title: 'Hilltop Viewpoints', desc: 'Panoramic views of the surrounding hills, valleys, and the Penganga river basin. Stunning during sunrise and sunset.', mustSee: true },
+            { title: 'Renuka Devi Temple', desc: 'The famous Shakti Peetha dedicated to goddess Renuka Devi. Ancient, deeply revered, and the primary draw for most visitors to Mahur.', mustSee: true },
+            { title: 'Dattatreya Temple', desc: 'Another important temple on the Mahur hill associated with Lord Dattatreya. Part of the sacred geography of the hilltop.', mustSee: true },
+            { title: 'Fort Remains', desc: 'Scattered defensive structures and ruins that tell of the fort\'s military past alongside its religious significance.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Temple Prasad', type: 'Veg', price: '₹20-50', desc: 'Simple prasad meals available near the temple. Basic but filling vegetarian food served to pilgrims.' },
+            { name: 'Mahur Town Food', type: 'Veg', price: '₹50-100', desc: 'Small eateries in Mahur town serving simple vegetarian meals, especially during festival seasons.' },
+            { name: 'Nanded City', type: 'Veg/Non-Veg', price: '₹80-200', desc: 'Nanded (~130 km) has full dining options for a meal before or after the Mahur visit.' },
+            { name: 'Chai', type: 'Beverage', price: '₹10-15', desc: 'Tea stalls along the temple path. Warming chai after the morning climb.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Via Mahur Town Steps', difficulty: 'Easy-Medium', distance: '2 km', time: '60-90 min', desc: 'A short climb via steps and trail from Mahur town to the fort and temple complex. Moderate effort suitable for most visitors. Many pilgrims make this climb regularly.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Nanded (~130 km, 3 hours). Road is decent but the last stretch through rural area requires attention.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'ST bus from Nanded to Mahur. Service is regular, especially during festival seasons.' },
+            { mode: 'By Train', icon: '🚂', desc: 'Nearest station: Kinwat or Nanded. Bus/taxi from either to Mahur.' }
+        ],
+
+        trekEssentials: [
+            'Comfortable shoes — steps and trail',
+            'Water bottle — stalls on the path',
+            'Sun protection — exposed climb',
+            'Camera — hilltop views are stunning',
+            'Cash for temple offerings and food',
+            'Allow 2-3 hours including temple visit',
+            'Dress modestly — temple area',
+            'Festival seasons bring huge crowds — plan accordingly'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Steps can be slippery during monsoon — wear proper shoes', season: 'June-Sept' },
+            { msg: 'Very crowded during Navratri and other festivals — plan timing carefully', season: 'Festival seasons' },
+            { msg: 'Remote location — plan transport in advance', season: 'All year' },
+            { msg: 'Summer heat is intense — climb early morning', season: 'March-May' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹200-500' },
+            { label: 'Food', value: '₹50-120' },
+            { label: 'Temple Offering', value: '₹20-100' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹270-720', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'At base of hill' },
+            { label: 'Food Stalls', available: true, detail: 'Along temple path' },
+            { label: 'Drinking Water', available: true, detail: 'At temple complex' },
+            { label: 'Toilets', available: true, detail: 'At temple premises' },
+            { label: 'Mobile Network', available: true, detail: 'Moderate signal' },
+            { label: 'Accommodation', available: true, detail: 'Dharamshala near temple' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Nanded' },
+            { label: 'Location', value: 'Mahur hilltop' },
+            { label: 'Altitude', value: '~700 m' },
+            { label: 'Fort Type', value: 'Hill Fort (Religious)' },
+            { label: 'Built By', value: 'Marathas / Nizam' },
+            { label: 'Famous For', value: 'Renuka Devi temple, hilltop views' },
+            { label: 'Time Required', value: '2-3 hours' },
+            { label: 'Kids Appropriate', value: 'Yes (with supervision on steps)' },
+            { label: 'Shakti Peetha', value: 'Yes — Renuka Devi' },
+            { label: 'Nearest City', value: 'Nanded (130 km)' }
+        ],
+
+        reviews: {
+            quote: "Mahur is where history meets devotion. The fort ruins give context to the ancient Renuka Devi temple, and the hilltop views of eastern Maharashtra are breathtaking. A pilgrimage and trek in one.",
+            positives: [
+                'Unique blend of fort history and temple pilgrimage',
+                'Stunning hilltop panoramic views',
+                'Famous Renuka Devi Shakti Peetha',
+                'Moderate climb suitable for most visitors',
+                'Good facilities at temple complex'
+            ],
+            proTips: [
+                'Avoid Navratri unless you enjoy massive crowds',
+                'Sunrise from the hilltop is extraordinary',
+                'Stay at the dharamshala for a full experience',
+                'The Dattatreya temple is equally worth visiting',
+                'Best combined with a broader Nanded district trip'
+            ],
+            rating: 4.2,
+            reviewCount: '3,000+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ ANTUR FORT ━━━━━━━━━━━━━━━━━━
+    antur: {
+        introduction: `Antur Fort is a majestic hill fort nestled in the Satmala range of Chhatrapati 
+            Sambhajinagar (Aurangabad) district. Unlike the more famous coastal and Sahyadri forts, Antur 
+            represents the military architecture of the Marathwada region. Known for its massive, well-preserved 
+            entrance gate and strong fortification walls, the fort served as a vital strategic outpost guarding 
+            the trade routes and political boundaries between the Deccan Sultanates and later the Mughal Empire.`,
+
+        quote: {
+            text: "अंतूर किल्ला — सातमाळा रांगेतील एक अभेद्य दुर्ग",
+            attribution: "Antur Fort — an impregnable bastion in the Satmala range"
+        },
+
+        timeline: [
+            { year: '15th Century', title: 'Construction', desc: 'The fort was heavily developed during the reign of Ahmad Nizam Shah of the Ahmadnagar Sultanate, though local rulers established earlier fortifications.' },
+            { year: '17th Century', title: 'Mughal Period', desc: 'The fort fell under Mughal control during their Deccan campaigns. Evidences of Mughal architectural elements can be seen in later additions.' },
+            { year: '18th Century', title: 'Maratha Control', desc: 'As the Maratha Empire expanded its influence across Marathwada, Antur Fort became a strategic stronghold for regional administration.' },
+            { year: '19th Century', title: 'Nizam Dominion', desc: 'The fort eventually came under the dominion of the Nizam of Hyderabad until India\'s independence.' }
+        ],
+
+        landmarks: [
+            { title: 'Main Gate (Mahadarwaja)', desc: 'The imposing and well-preserved entrance gate of the fort. Its massive scale and defensive design make it the primary highlight of the visit.', mustSee: true },
+            { title: 'Fort Walls', desc: 'Strong defensive fortification walls encircling the plateau, showing a mix of Deccan and local architectural styles.', mustSee: true },
+            { title: 'Water Cisterns', desc: 'Rock-cut water tanks strategically placed around the fort to ensure water supply during long sieges.', mustSee: true },
+            { title: 'Arabic/Persian Inscriptions', desc: 'Historical inscriptions found near the gates and bastions, dating back to the Nizam Shahi and Mughal periods.', mustSee: false },
+            { title: 'Viewpoints', desc: 'Panoramic views of the Satmala mountain range and the vast plains of Marathwada stretching beyond.', mustSee: true }
+        ],
+
+        food: [
+            { name: 'Self-Sufficient Only', type: 'Veg', price: '₹0', desc: 'No food stalls are available on or immediately near the fort. You must carry your own snacks and meals.' },
+            { name: 'Kannad Town', type: 'Veg/Non-Veg', price: '₹60-150', desc: 'Kannad (~25 km away) has local eateries and dhabas where you can have a full meal before or after the trek.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Via Antur Village', difficulty: 'Medium', distance: '2.5 km', time: '1.5-2 hrs', desc: 'A well-defined path leading up from the base village. The trail involves a gradual ascent through rocky terrain and scrub forest.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Chhatrapati Sambhajinagar to Kannad (~60 km), then take the local road towards Antur village (~25 km).' },
+            { mode: 'By Bus', icon: '🚌', desc: 'ST buses run from Sambhajinagar to Kannad. From Kannad, local transport or shared jeeps to Antur village may be available but infrequent.' },
+            { mode: 'By Bike', icon: '🏍️', desc: 'A scenic ride through the Marathwada plains leading into the Satmala hills. The final stretch to the base village involves rural roads.' }
+        ],
+
+        trekEssentials: [
+            'Good grip trekking shoes — rocky trail',
+            'Minimum 2-3 litres of water — no reliable sources on top',
+            'Packed food and snacks',
+            'Sun protection (cap, sunglasses) — very exposed in daylight',
+            'Camera for the impressive main gate',
+            'Start early to avoid the midday Marathwada heat'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Carry abundant water; heat can be exhausting, especially post-monsoon or summer.', season: 'All year' },
+            { msg: 'Trail can get slippery during the monsoon. Walk carefully on rocky sections.', season: 'June-Sept' },
+            { msg: 'Remote location with weak mobile network. Trek in a group.', season: 'All year' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹200-500 (from Kannad)' },
+            { label: 'Food', value: '₹100-200 (in town)' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹300-700', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'Available at the base village' },
+            { label: 'Food Stalls', available: false, detail: 'None near the fort' },
+            { label: 'Drinking Water', available: false, detail: 'Carry your own' },
+            { label: 'Toilets', available: false, detail: 'No facilities' },
+            { label: 'Mobile Network', available: true, detail: 'Weak / Spotty signal' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Chhatrapati Sambhajinagar' },
+            { label: 'Base Village', value: 'Antur' },
+            { label: 'Altitude', value: '~820 m' },
+            { label: 'Fort Type', value: 'Hill Fort' },
+            { label: 'Range', value: 'Satmala Range' },
+            { label: 'Trek Difficulty', value: 'Moderate' },
+            { label: 'Time Required', value: '3-4 hours total' },
+            { label: 'Nearest City', value: 'Kannad (25 km)' }
+        ],
+
+        reviews: {
+            quote: "Antur Fort is a hidden gem of Marathwada. The sheer size of its Mahadarwaja leaves you in awe of the Deccan Sultanate's architectural capabilities.",
+            positives: [
+                'Magnificent and photogenic main entrance gate',
+                'Uncrowded, peaceful trekking experience',
+                'Beautiful views of the Satmala range',
+                'Rich mix of historical inscriptions',
+                'Good condition of major peripheral walls'
+            ],
+            proTips: [
+                'Visit during winter (Nov-Feb); the summer heat here is unforgiving.',
+                'The inscriptions near the gate are easy to miss — look closely.',
+                'Combine the visit with a trip to the nearby Gautala Autramghat Wildlife Sanctuary.',
+                'Ensure you have offline maps downloaded.'
+            ],
+            rating: 4.1,
+            reviewCount: '400+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ WAGHALA FORT (LOCAL REMAINS) ━━━━━━━━━━━━━━━━━━
+    waghala: {
+        introduction: `Waghala does not feature a prominent, towering fort structure today. Situated in the 
+            Nanded district, the area historically housed small defensive and administrative outposts during the 
+            era of the Deccan Sultanates and subsequently under Maratha and Nizam rule. Today, the remnants of 
+            these structures are scattered quietly amidst local settlements, offering a glimpse into the localized 
+            administration and security infrastructure of medieval Marathwada.`,
+
+        quote: {
+            text: "वाघाळा — स्थानिक इतिहासाचे मूक साक्षीदार",
+            attribution: "Waghala — silent witnesses to local history"
+        },
+
+        timeline: [
+            { year: 'Medieval Period', title: 'Local Outposts', desc: 'Small earthen or stone fortifications and regional administrative offices were established here under the Bahmani and later Deccan Sultanates.' },
+            { year: '18th Century', title: 'Nizam and Maratha Influence', desc: 'The area operated as a local hub for tax collection and regional security, frequently shifting between Nizam and Maratha control.' },
+            { year: 'Modern Era', title: 'Urbanization', desc: 'As the town grew, much of the original historic structures were dismantled or absorbed into modern dwellings and civic layouts.' }
+        ],
+
+        landmarks: [
+            { title: 'Local Ruins', desc: 'Scattered foundational stones, partial walls, and remnants of old wadas (mansions) that hint at the area\'s historical footprint.', mustSee: false },
+            { title: 'Historic Lanes', desc: 'Some old pathways and local shrines that have survived the test of time, reflecting the medieval layout of the settlement.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Nanded City Eateries', type: 'Veg/Non-Veg', price: '₹80-200', desc: 'Being practically in the Nanded urban sphere, one has access to a wide variety of Marathwada and Hyderabadi cuisine.' },
+            { name: 'Local Snacks', type: 'Veg', price: '₹20-50', desc: 'Chai, vada pav, and mirchi bhaji available easily at local stops.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🚶', title: 'Heritage Walk', difficulty: 'Easy', distance: '1 km', time: '30-45 min', desc: 'This is not a trek but a brief heritage walk through the local village/suburban area to spot historical fragments.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Car / Auto', icon: '🚗', desc: 'Easily accessible from Nanded city center via local autos or taxis.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'Local city buses cover the routes passing near the Waghala area.' }
+        ],
+
+        trekEssentials: [
+            'Comfortable walking shoes',
+            'Water bottle',
+            'Inquisitive mind to look for historical traces',
+            'Ask local elders for historical context'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Respect local privacy as ruins are often close to or within residential property.', season: 'All year' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹50-100 (Auto from Nanded)' },
+            { label: 'Food', value: '₹50-150' },
+            { label: 'Total', value: '₹100-250', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'City parking available' },
+            { label: 'Food Stalls', available: true, detail: 'City eateries' },
+            { label: 'Water & Toilets', available: true, detail: 'Available nearby' },
+            { label: 'Mobile Network', available: true, detail: 'Excellent signal' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Nanded' },
+            { label: 'Location', value: 'Waghala (Nanded)' },
+            { label: 'Fort Type', value: 'Land Fort / Local Remains' },
+            { label: 'Time Required', value: '1 hour' },
+            { label: 'Best For', value: 'Hyper-local history enthusiasts' },
+            { label: 'Nearest City', value: 'Nanded' }
+        ],
+
+        reviews: {
+            quote: "There isn't a grand fort to climb, but walking through Waghala reminds you that history isn't just in the big monuments—it's in the foundations of the places people still live.",
+            positives: [
+                'Incredibly easy to access from Nanded',
+                'No physical exertion required',
+                'Good starting point to understand local Marathwada micro-history'
+            ],
+            proTips: [
+                'Manage expectations: do not expect a massive fort structure.',
+                'The real story is held by the local residents — striking up a conversation is highly recommended.'
+            ],
+            rating: 3.0,
+            reviewCount: '50+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ ROHILAGAD ━━━━━━━━━━━━━━━━━━
+    rohilagad: {
+        introduction: `Rohilagad is a truly offbeat, lesser-known hill fort situated in the Patoda region of 
+            Beed district. Far from the commercialized tourist trails, this small surveillance fort offers an 
+            uninterrupted, rugged trekking experience in the dry landscapes of Marathwada. While it lacks grand 
+            architectural marvels, its raw appeal lies in its isolation, open plateaus, and the panoramic views 
+            it commands over the surrounding plains.`,
+
+        quote: {
+            text: "रोहिलागड — बीडच्या डोंगराळ भागातील एकांत दुर्ग",
+            attribution: "Rohilagad — a solitary fort in the hilly tracts of Beed"
+        },
+
+        timeline: [
+            { year: '17th Century', title: 'Maratha Outpost', desc: 'Rohilagad functioned primarily as a strategic watchpoint and minor garrison under the Maratha Empire, monitoring movements in the Beed hinterlands.' },
+            { year: '18th Century', title: 'Administrative Decline', desc: 'As borders shifted and regional threats diminished, the fort lost its military relevance and was abandoned.' },
+            { year: 'Modern', title: 'Forgotten Heritage', desc: 'Today, it remains largely forgotten by mainstream tourism, visited only by local villagers and dedicated fort explorers.' }
+        ],
+
+        landmarks: [
+            { title: 'Fort Plateau', desc: 'A wide, open summit with minimal structural ruins. The sense of space and silence here is profound.', mustSee: true },
+            { title: 'Surveillance Viewpoints', desc: 'Strategic vantage points at the edges of the plateau offering massive, sweeping views of the Beed district plains.', mustSee: true },
+            { title: 'Remnant Foundations', desc: 'A few scattered stone foundations that once supported watchtowers and basic shelters for the garisson.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Self-Sufficient Only', type: 'Veg', price: '₹0', desc: 'Zero facilities available. You must carry all your own food, snacks, and a heavy supply of water.' },
+            { name: 'Beed City / Highways', type: 'Veg/Non-Veg', price: '₹60-150', desc: 'Eat at dhabas or restaurants in Beed city (~40 km away) before making the journey.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Via Rohila Village', difficulty: 'Medium', distance: '3 km', time: '2-3 hrs', desc: 'A basic, unpaved trek starting from Rohila village. The path goes through dry scrub, open terrain, and rocky patches leading to the plateau.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Car / Bike', icon: '🚗', desc: 'Drive from Beed towards the Patoda region. The road leads to Rohila village. Private or hired vehicle is strongly recommended due to the remote location.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'Very limited local ST buses to villages in the Patoda region. Not a reliable option for a day trip.' }
+        ],
+
+        trekEssentials: [
+            'Sturdy trekking shoes for uneven, rocky terrain',
+            'Minimum 3 litres of water — absolute necessity in dry Beed climate',
+            'Packed lunch',
+            'First aid kit — highly remote area with no nearby medical help',
+            'Sun protection (Wide-brimmed hat, sunscreen)'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Extremely remote location. It is advised to trek in a group.', season: 'All year' },
+            { msg: 'Strictly avoid during summer months (Mar-Jun) due to severe heat and lack of shade.', season: 'Summer' },
+            { msg: 'Trails are not marked. Having a local guide or good GPS/map is helpful.', season: 'All year' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹300-600 (Fuel/Hire from Beed)' },
+            { label: 'Food & Supplies', value: '₹100-200' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹400-800', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: false, detail: 'Park cautiously in the village' },
+            { label: 'Food & Water', available: false, detail: 'None — Carry everything' },
+            { label: 'Toilets', available: false, detail: 'No facilities' },
+            { label: 'Mobile Network', available: true, detail: 'Weak / Intermittent' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Beed' },
+            { label: 'Base Village', value: 'Rohila' },
+            { label: 'Altitude', value: '~800 m' },
+            { label: 'Fort Type', value: 'Hill Fort (Watchpost)' },
+            { label: 'Trek Difficulty', value: 'Moderate' },
+            { label: 'Time Required', value: '4-5 hours' },
+            { label: 'Built By', value: 'Maratha Empire' },
+            { label: 'Nearest City', value: 'Beed (40 km)' }
+        ],
+
+        reviews: {
+            quote: "Rohilagad is not for those seeking grand architecture; it is for trekkers seeking ultimate solitude and the raw, harsh beauty of the Marathwada landscape.",
+            positives: [
+                'Complete isolation and peace',
+                'Excellent offbeat trekking experience',
+                'Expansive, unhindered views of the plains'
+            ],
+            proTips: [
+                'Do not attempt the trek without sufficient water.',
+                'The golden hour (sunset) from the plateau is beautiful, but ensure you descend before dark as the trail is tricky.',
+                'Engage with villagers at Rohila; they are welcoming and might offer to guide you.'
+            ],
+            rating: 3.5,
+            reviewCount: '40+'
+        }
     }
 };
 

@@ -1,0 +1,40 @@
+{
+  "name": "Waghala Fort (Local Remains)",
+  "location": {
+    "district": "Nanded",
+    "taluka": "Nanded",
+    "baseVillage": "Waghala",
+    "coordinates": {
+      "lat": 19.1385,
+      "lng": 77.3125
+    },
+    "nearestCity": "Nanded"
+  },
+  "category": "Land Fort",
+
+  "description": "Waghala does not have a prominent surviving fort structure today. The area historically had small defensive structures used for local administration and security.",
+
+  "landmarks": [
+    {
+      "name": "Local Ruins",
+      "description": "Scattered remains of structures.",
+      "mustSee": false
+    }
+  ],
+
+  "facilities": {
+    "parking": true,
+    "water": true,
+    "food": true,
+    "network": "Good"
+  },
+
+  "visitInfo": {
+    "timeRequired": "1 hour"
+  },
+
+  "history": {
+    "brief": "Region historically under Deccan Sultanates and later Maratha/Nizam control.",
+    "rulers": ["Bahmani", "Nizam", "Marathas"]
+  }
+}

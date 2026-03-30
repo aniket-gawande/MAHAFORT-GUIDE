@@ -1,0 +1,73 @@
+{
+  "name": "Gawilgad Fort",
+  "location": {
+    "district": "Amravati",
+    "taluka": "Chikhaldara",
+    "baseVillage": "Chikhaldara",
+    "coordinates": {
+      "lat": 21.4095,
+      "lng": 77.3452
+    },
+    "nearestCity": "Amravati (100 km)"
+  },
+  "category": "Hill Fort",
+
+  "description": "Gawilgad Fort is a massive hill fort located in the Satpura range near Chikhaldara. Known for its strong fortifications and scenic surroundings, it is one of the most important forts in Vidarbha.",
+
+  "trek": {
+    "routes": [
+      {
+        "name": "Chikhaldara Route",
+        "startPoint": "Chikhaldara",
+        "distance": "2 km",
+        "duration": "1–2 hours",
+        "difficulty": "Easy to Moderate",
+        "description": "A short walk through forest and ruins."
+      }
+    ],
+    "bestTime": ["Winter", "Monsoon"]
+  },
+
+  "landmarks": [
+    {
+      "name": "Delhi Gate",
+      "description": "Main entrance of the fort.",
+      "mustSee": true
+    },
+    {
+      "name": "Fort Walls",
+      "description": "Extensive defensive structures.",
+      "mustSee": true
+    },
+    {
+      "name": "Viewpoints",
+      "description": "Views of Satpura forests.",
+      "mustSee": true
+    }
+  ],
+
+  "facilities": {
+    "parking": true,
+    "water": false,
+    "food": false,
+    "network": "Weak"
+  },
+
+  "safety": {
+    "alerts": [
+      "Wildlife area nearby",
+      "Fog during monsoon"
+    ]
+  },
+
+  "visitInfo": {
+    "entryFee": 20,
+    "timeRequired": "3–4 hours",
+    "timings": "8:00 AM – 5:00 PM"
+  },
+
+  "history": {
+    "brief": "Gawilgad Fort was built by the Gond rulers and later captured by the Mughals and British.",
+    "rulers": ["Gond dynasty", "Mughals", "Marathas", "British"]
+  }
+}

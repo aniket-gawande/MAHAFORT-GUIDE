@@ -1,0 +1,70 @@
+{
+  "name": "Bhamragad Fort",
+  "location": {
+    "district": "Gadchiroli",
+    "taluka": "Bhamragad",
+    "baseVillage": "Bhamragad",
+    "coordinates": {
+      "lat": 19.4095,
+      "lng": 80.4815
+    },
+    "nearestCity": "Gadchiroli (150 km)"
+  },
+  "category": "Hill Fort",
+
+  "description": "Bhamragad Fort is a remote and lesser-known hill fort located in the dense forest region of Gadchiroli. Known for its isolation and natural surroundings, it is an offbeat destination ideal for experienced trekkers.",
+
+  "trek": {
+    "routes": [
+      {
+        "name": "Forest Route",
+        "startPoint": "Bhamragad village",
+        "distance": "4–5 km",
+        "duration": "3–4 hours",
+        "difficulty": "Moderate to Hard",
+        "description": "A forest trek through dense vegetation and rugged terrain."
+      }
+    ],
+    "bestTime": ["Winter"],
+    "avoidTime": ["Monsoon (heavy rainfall)", "Summer (extreme heat)"]
+  },
+
+  "landmarks": [
+    {
+      "name": "Fort Plateau",
+      "description": "Open area with minimal ruins.",
+      "mustSee": true
+    },
+    {
+      "name": "Forest Views",
+      "description": "Dense forest surroundings.",
+      "mustSee": true
+    }
+  ],
+
+  "facilities": {
+    "parking": false,
+    "water": false,
+    "food": false,
+    "network": "No signal"
+  },
+
+  "safety": {
+    "alerts": [
+      "Very remote — go with local guide",
+      "Wildlife presence",
+      "No network connectivity"
+    ]
+  },
+
+  "visitInfo": {
+    "entryFee": 0,
+    "timeRequired": "5–6 hours",
+    "timings": "6:00 AM – 5:00 PM"
+  },
+
+  "history": {
+    "brief": "Bhamragad Fort has limited documented history and likely served as a minor regional lookout point.",
+    "rulers": ["Local rulers"]
+  }
+}

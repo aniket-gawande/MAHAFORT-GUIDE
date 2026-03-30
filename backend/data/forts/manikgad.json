@@ -1,0 +1,47 @@
+{
+  "name": "Manikgad Fort (Wardha)",
+  "location": {
+    "district": "Wardha",
+    "taluka": "Wardha region",
+    "baseVillage": "Local village (approximate)",
+    "coordinates": {
+      "lat": 20.7455,
+      "lng": 78.6025
+    },
+    "nearestCity": "Wardha"
+  },
+  "category": "Land Fort",
+
+  "description": "Manikgad in Wardha is a lesser-known and minimally preserved fort site. It is not a major tourist destination and has limited visible structures.",
+
+  "landmarks": [
+    {
+      "name": "Fort Remains",
+      "description": "Scattered ruins of historical structures.",
+      "mustSee": false
+    }
+  ],
+
+  "facilities": {
+    "parking": false,
+    "water": false,
+    "food": false,
+    "network": "Moderate"
+  },
+
+  "safety": {
+    "alerts": [
+      "Limited information available",
+      "Visit with local guidance"
+    ]
+  },
+
+  "visitInfo": {
+    "timeRequired": "1–2 hours"
+  },
+
+  "history": {
+    "brief": "Manikgad in Wardha region has limited documented history and likely served as a minor defensive site.",
+    "rulers": ["Local rulers"]
+  }
+}

@@ -50,9 +50,26 @@ import parandaImg from '../assets/paranda.png';
 import gharapuriImg from '../assets/gharapuri.png';
 import ranganaImg from '../assets/rangana.png';
 import kalavantindurgImg from '../assets/kalavantindurg.jpg';
+import anturImg from '../assets/antur.png';
+import waghalaImg from '../assets/waghala.png';
+import rohilagadImg from '../assets/rohilagad.png';
+import sitabuldiImg from '../assets/sitabuldi.png';
+import gawilgadImg from '../assets/gawilgad.png';
+import narnalaImg from '../assets/narnala.png';
+import balapurImg from '../assets/balapur.png';
+import manikgadImg from '../assets/manikgad.png';
+import achalpurImg from '../assets/achalpur.png';
+import bhamragadImg from '../assets/bhamragad.png';
+import sindkhedRajaImg from '../assets/sindkhed_raja.png';
+
+import bhushangadImg from '../assets/bhushangad.png';
+import chandangadImg from '../assets/chandangad.png';
+import pavangadImg from '../assets/pavangad.png';
+import bhorgiriImg from '../assets/bhorgiri.png';
+import solapurBhuikotImg from '../assets/solapur_bhuikot.png';
 
 /**
- * 🏰 Maharashtra Forts Database — 51 forts
+ * 🏰 Maharashtra Forts Database — 88 forts
  * 
  * 6 forts have dedicated detail pages (hasDetailPage: true).
  * 10 forts have rich detailed data in fortDetailedData.js.
@@ -1157,6 +1174,807 @@ export const staticForts = [
         trek: { routes: [{ difficulty: 'Difficult' }] },
         history: { builtBy: 'Unknown (Maratha era)', year: 'Pre-17th century' }
     },
+
+    // ━━━━━━━━━━━━━━━━━━ BATCH 11 — FORTS 52–54 ━━━━━━━━━━━━━━━━━━
+
+    // 52. Songad Fort
+    {
+        _id: 'songad',
+        name: 'Songad Fort',
+        location: { district: 'Kolhapur', state: 'Maharashtra' },
+        difficulty: 'Easy',
+        type: 'Hill Fort',
+        description: 'Songad Fort is a lesser-known hill fort located in the dense forest region of Kolhapur near the Goa border. It served primarily as a watchtower fort and offers a peaceful trekking experience with scenic views of valleys and forest landscapes.',
+        images: [],
+        rating: 4.0,
+        visitors: 1500,
+        crowdStatus: 'low',
+        bestTimeToVisit: 'October to February',
+        entryFee: 'Free',
+        timings: '6:00 AM - 6:00 PM',
+        altitude: '~800 m',
+        historicalSignificance: 'Maratha surveillance fort near the Goa border, dense forest surroundings',
+        trek: { routes: [{ difficulty: 'Easy' }] },
+        history: { builtBy: 'Maratha Empire', year: '17th century' }
+    },
+
+    // 53. Bhushangad
+    {
+        _id: 'bhushangad',
+        name: 'Bhushangad',
+        location: { district: 'Satara', state: 'Maharashtra' },
+        difficulty: 'Easy',
+        type: 'Hill Fort',
+        description: 'Bhushangad is a small hill fort in Satara district, known more for its temple and easy access than military importance. It is a calm destination with panoramic views of surrounding plains.',
+        images: [bhushangadImg],
+        rating: 3.9,
+        visitors: 1200,
+        crowdStatus: 'low',
+        bestTimeToVisit: 'October to March',
+        entryFee: 'Free',
+        timings: '6:00 AM - 6:00 PM',
+        altitude: '~900 m',
+        historicalSignificance: 'Minor Maratha hill fort with local religious importance, Bhushangad temple',
+        trek: { routes: [{ difficulty: 'Easy' }] },
+        history: { builtBy: 'Maratha Empire', year: '17th century' }
+    },
+
+    // 54. Chandangad
+    {
+        _id: 'chandangad',
+        name: 'Chandangad',
+        location: { district: 'Kolhapur', state: 'Maharashtra' },
+        difficulty: 'Moderate',
+        type: 'Hill Fort',
+        description: 'Chandangad is a remote hill fort located near the Maharashtra-Goa border. Surrounded by dense forests, it is known for its peaceful environment and strategic location as a border surveillance fort.',
+        images: [chandangadImg],
+        rating: 4.1,
+        visitors: 1000,
+        crowdStatus: 'low',
+        bestTimeToVisit: 'October to February',
+        entryFee: 'Free',
+        timings: '6:00 AM - 6:00 PM',
+        altitude: '~750 m',
+        historicalSignificance: 'Border fort controlling access between Maharashtra and Goa, Adilshahi and Maratha era',
+        trek: { routes: [{ difficulty: 'Moderate' }] },
+        history: { builtBy: 'Adilshahi dynasty (used by Marathas)', year: '16th century' }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ BATCH 12 — FORTS 55–57 ━━━━━━━━━━━━━━━━━━
+
+    // 55. Pavangad Fort
+    {
+        _id: 'pavangad',
+        name: 'Pavangad Fort',
+        location: { district: 'Kolhapur', state: 'Maharashtra' },
+        difficulty: 'Easy',
+        type: 'Hill Fort',
+        description: 'Pavangad Fort is a small hill fort located near the famous Panhala Fort in Kolhapur district. It served as a strategic support fort and offers a short and easy trek with scenic views of the surrounding region.',
+        images: [pavangadImg],
+        rating: 4.0,
+        visitors: 2000,
+        crowdStatus: 'low',
+        bestTimeToVisit: 'October to March',
+        entryFee: 'Free',
+        timings: '6:00 AM - 6:00 PM',
+        altitude: '~850 m',
+        historicalSignificance: 'Support fort for Panhala during the Maratha period, views of Panhala region',
+        trek: { routes: [{ difficulty: 'Easy' }] },
+        history: { builtBy: 'Maratha Empire', year: '17th century' }
+    },
+
+    // 56. Bhorgiri Fort
+    {
+        _id: 'bhorgiri',
+        name: 'Bhorgiri Fort',
+        location: { district: 'Pune', state: 'Maharashtra' },
+        difficulty: 'Easy',
+        type: 'Hill Fort',
+        description: 'Bhorgiri Fort is a small hill fort near Bhimashankar, known for its caves, temple, and scenic forest surroundings. It is a peaceful trekking destination combining nature and history.',
+        images: [bhorgiriImg],
+        rating: 4.1,
+        visitors: 1800,
+        crowdStatus: 'low',
+        bestTimeToVisit: 'October to March',
+        entryFee: 'Free',
+        timings: '6:00 AM - 6:00 PM',
+        altitude: '~900 m',
+        historicalSignificance: 'Small surveillance fort near Bhimashankar with ancient caves and temple',
+        trek: { routes: [{ difficulty: 'Easy' }] },
+        history: { builtBy: 'Maratha Empire', year: '17th century' }
+    },
+
+    // 57. Solapur Bhuikot Fort
+    {
+        _id: 'solapur-bhuikot',
+        name: 'Solapur Bhuikot Fort',
+        location: { district: 'Solapur', state: 'Maharashtra' },
+        difficulty: 'Easy',
+        type: 'Land Fort',
+        description: 'Solapur Bhuikot Fort is a prominent land fort located in Solapur city, known for its double fortification walls, moat, and strong defensive architecture representing Deccan military design.',
+        images: [solapurBhuikotImg],
+        rating: 4.2,
+        visitors: 8000,
+        crowdStatus: 'moderate',
+        bestTimeToVisit: 'October to February',
+        entryFee: '₹20',
+        timings: '9:00 AM - 5:30 PM',
+        altitude: 'Ground level',
+        historicalSignificance: 'Bahmani-era land fort with double walls and moat, Deccan military architecture',
+        trek: { routes: [{ difficulty: 'Easy' }] },
+        history: { builtBy: 'Bahmani Sultanate', year: '15th century' }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ BATCH 13 — FORTS 58–60 ━━━━━━━━━━━━━━━━━━
+
+    // 58. Arnala Fort
+    {
+        _id: 'arnala',
+        name: 'Arnala Fort',
+        location: { district: 'Palghar', state: 'Maharashtra' },
+        difficulty: 'Easy',
+        type: 'Sea Fort',
+        description: 'Arnala Fort is a coastal sea fort located on an island off the coast of Virar. Built by the Portuguese and later captured by the Marathas, the fort is surrounded by the Arabian Sea and is accessible via a short boat ride.',
+        images: [],
+        rating: 4.2,
+        visitors: 5000,
+        crowdStatus: 'moderate',
+        bestTimeToVisit: 'October to May',
+        entryFee: 'Free (Boat: ₹50-100)',
+        timings: '6:00 AM - 6:00 PM',
+        altitude: 'Sea level',
+        historicalSignificance: 'Portuguese-built sea fort captured by Marathas, island fortification on Arabian Sea',
+        trek: { routes: [{ difficulty: 'Easy' }] },
+        history: { builtBy: 'Portuguese (captured by Marathas)', year: '16th century' }
+    },
+
+    // 59. Kelve Fort
+    {
+        _id: 'kelve',
+        name: 'Kelve Fort',
+        location: { district: 'Palghar', state: 'Maharashtra' },
+        difficulty: 'Easy',
+        type: 'Land Fort',
+        description: 'Kelve Fort is a coastal fort located near Kelve Beach in Palghar district. Now mostly in ruins, it offers scenic views of the Arabian Sea and is a quiet, less crowded historical site.',
+        images: [],
+        rating: 3.8,
+        visitors: 3000,
+        crowdStatus: 'low',
+        bestTimeToVisit: 'October to March',
+        entryFee: 'Free',
+        timings: '6:00 AM - 6:00 PM',
+        altitude: 'Sea level',
+        historicalSignificance: 'Coastal defense fort from Portuguese and Maratha periods, near Kelve Beach',
+        trek: { routes: [{ difficulty: 'Easy' }] },
+        history: { builtBy: 'Portuguese (used by Marathas)', year: '16th century' }
+    },
+
+    // 60. Underi Fort
+    {
+        _id: 'underi',
+        name: 'Underi Fort',
+        location: { district: 'Raigad', state: 'Maharashtra' },
+        difficulty: 'Moderate',
+        type: 'Sea Fort',
+        description: 'Underi Fort is a sea fort located near Alibaug, built by the Siddis and later contested by the Marathas. Situated on a small island, it is less accessible and less visited compared to nearby forts like Khanderi.',
+        images: [],
+        rating: 4.0,
+        visitors: 1500,
+        crowdStatus: 'low',
+        bestTimeToVisit: 'October to May',
+        entryFee: 'Free (Boat: ₹100-300)',
+        timings: 'Depends on tide',
+        altitude: 'Sea level',
+        historicalSignificance: 'Siddi-built sea fort contested by Marathas, strategic island outpost near Alibaug',
+        trek: { routes: [{ difficulty: 'Moderate' }] },
+        history: { builtBy: 'Siddi rulers (contested by Marathas)', year: '17th century' }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ BATCH 14 — FORTS 61–63 ━━━━━━━━━━━━━━━━━━
+
+    // 61. Revdanda Fort
+    {
+        _id: 'revdanda',
+        name: 'Revdanda Fort',
+        location: { district: 'Raigad', state: 'Maharashtra' },
+        difficulty: 'Easy',
+        type: 'Sea Fort',
+        description: 'Revdanda Fort is a historic coastal fort located at the mouth of the Kundalika river. Built by the Portuguese, it stretches along the shoreline and features massive walls, bastions, and ruins blending into the village landscape.',
+        images: [],
+        rating: 4.1,
+        visitors: 4000,
+        crowdStatus: 'low',
+        bestTimeToVisit: 'October to March',
+        entryFee: 'Free',
+        timings: 'Open all day',
+        altitude: 'Sea level',
+        historicalSignificance: 'Major Portuguese coastal fort at the Kundalika river mouth, church ruins, captured by Marathas',
+        trek: { routes: [{ difficulty: 'Easy' }] },
+        history: { builtBy: 'Portuguese (captured by Marathas)', year: '16th century' }
+    },
+
+    // 62. Bankot Fort (Himmatgad)
+    {
+        _id: 'bankot',
+        name: 'Bankot Fort (Himmatgad)',
+        location: { district: 'Ratnagiri', state: 'Maharashtra' },
+        difficulty: 'Easy',
+        type: 'Sea Fort',
+        description: 'Bankot Fort, also known as Himmatgad, is a coastal fort situated at the mouth of the Savitri river. It offers commanding views of the river and Arabian Sea and was an important strategic point for controlling maritime trade routes.',
+        images: [],
+        rating: 4.0,
+        visitors: 2500,
+        crowdStatus: 'low',
+        bestTimeToVisit: 'October to March',
+        entryFee: 'Free',
+        timings: '6:00 AM - 6:00 PM',
+        altitude: 'Sea level',
+        historicalSignificance: 'Adilshahi coastal fort at Savitri river mouth, renamed Fort Victoria by British',
+        trek: { routes: [{ difficulty: 'Easy' }] },
+        history: { builtBy: 'Adilshahi dynasty (captured by British)', year: '16th century' }
+    },
+
+    // 63. Jaigad Fort
+    {
+        _id: 'jaigad',
+        name: 'Jaigad Fort',
+        location: { district: 'Ratnagiri', state: 'Maharashtra' },
+        difficulty: 'Easy',
+        type: 'Sea Fort',
+        description: 'Jaigad Fort is a well-preserved sea fort located at the entrance of the Shastri river. Built to control maritime activities, the fort offers spectacular views of the sea and nearby lighthouse.',
+        images: [],
+        rating: 4.3,
+        visitors: 5000,
+        crowdStatus: 'moderate',
+        bestTimeToVisit: 'October to March',
+        entryFee: 'Free',
+        timings: '8:00 AM - 6:00 PM',
+        altitude: 'Sea level',
+        historicalSignificance: 'Well-preserved Maratha coastal fort at Shastri river entrance, nearby lighthouse',
+        trek: { routes: [{ difficulty: 'Easy' }] },
+        history: { builtBy: 'Maratha Empire', year: '16th-17th century' }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ BATCH 15 — FORTS 64–68 ━━━━━━━━━━━━━━━━━━
+
+    // 64. Achala Fort
+    {
+        _id: 'achala',
+        name: 'Achala Fort',
+        location: { district: 'Nashik', state: 'Maharashtra' },
+        difficulty: 'Difficult',
+        type: 'Hill Fort',
+        description: 'Achala Fort is a lesser-known hill fort in the Baglan region of Nashik district, located near the famous Salher and Mulher forts. It is a remote and rugged trek offering scenic views and a peaceful experience away from crowded routes.',
+        images: [],
+        rating: 4.1,
+        visitors: 800,
+        crowdStatus: 'low',
+        bestTimeToVisit: 'November to February',
+        entryFee: 'Free',
+        timings: '6:00 AM - 6:00 PM',
+        altitude: '~1100 m',
+        historicalSignificance: 'Part of the Baglan fort system near Salher and Mulher, controlled trade routes',
+        trek: { routes: [{ difficulty: 'Difficult' }] },
+        history: { builtBy: 'Maratha Empire (Baglan region)', year: '17th century' }
+    },
+
+    // 65. Markandey Fort
+    {
+        _id: 'markandey',
+        name: 'Markandey Fort',
+        location: { district: 'Nashik', state: 'Maharashtra' },
+        difficulty: 'Moderate',
+        type: 'Hill Fort',
+        description: 'Markandey Fort is a lesser-known hill fort located near Mulher Fort in the Baglan region of Nashik. It offers a peaceful trekking experience with panoramic views of nearby forts and valleys.',
+        images: [],
+        rating: 4.0,
+        visitors: 700,
+        crowdStatus: 'low',
+        bestTimeToVisit: 'November to February',
+        entryFee: 'Free',
+        timings: '6:00 AM - 6:00 PM',
+        altitude: '~1000 m',
+        historicalSignificance: 'Part of the Baglan fort system connected with Mulher and Salher forts',
+        trek: { routes: [{ difficulty: 'Moderate' }] },
+        history: { builtBy: 'Maratha Empire (Baglan region)', year: '17th century' }
+    },
+
+    // 66. Hatgad Fort
+    {
+        _id: 'hatgad',
+        name: 'Hatgad Fort',
+        location: { district: 'Nashik', state: 'Maharashtra' },
+        difficulty: 'Easy',
+        type: 'Hill Fort',
+        description: 'Hatgad Fort is a historic hill fort located near the Maharashtra-Gujarat border close to Saputara. Known for its easy accessibility and scenic surroundings, it offers a short trek with impressive views of the Dang forests and nearby hills.',
+        images: [],
+        rating: 4.2,
+        visitors: 3000,
+        crowdStatus: 'moderate',
+        bestTimeToVisit: 'November to February',
+        entryFee: 'Free',
+        timings: '6:00 AM - 6:00 PM',
+        altitude: '~900 m',
+        historicalSignificance: 'Frontier fort controlling the Maharashtra-Gujarat border, near Saputara',
+        trek: { routes: [{ difficulty: 'Easy' }] },
+        history: { builtBy: 'Maratha Empire', year: '17th century' }
+    },
+
+    // 67. Laling Fort
+    {
+        _id: 'laling',
+        name: 'Laling Fort',
+        location: { district: 'Dhule', state: 'Maharashtra' },
+        difficulty: 'Easy',
+        type: 'Hill Fort',
+        description: 'Laling Fort is a historic hill fort located near Dhule city, overlooking the Mumbai-Agra highway. It is known for its strategic position and easy accessibility, making it a popular short trek destination.',
+        images: [],
+        rating: 4.0,
+        visitors: 2500,
+        crowdStatus: 'low',
+        bestTimeToVisit: 'October to February',
+        entryFee: 'Free',
+        timings: '6:00 AM - 6:00 PM',
+        altitude: '~700 m',
+        historicalSignificance: 'Watchtower fort controlling trade routes near Dhule, Farooqui dynasty origin',
+        trek: { routes: [{ difficulty: 'Easy' }] },
+        history: { builtBy: 'Farooqui dynasty', year: '15th century' }
+    },
+
+    // 68. Toranmal Hill Station
+    {
+        _id: 'toranmal',
+        name: 'Toranmal Hill Station',
+        location: { district: 'Nandurbar', state: 'Maharashtra' },
+        difficulty: 'Easy',
+        type: 'Hill Station',
+        description: 'Toranmal is a scenic hill station in Nandurbar district, known for its cool climate, viewpoints, and lakes. A popular tourist destination in northern Maharashtra offering nature trails and panoramic Satpuda range views.',
+        images: [],
+        rating: 4.3,
+        visitors: 5000,
+        crowdStatus: 'moderate',
+        bestTimeToVisit: 'October to March',
+        entryFee: 'Free',
+        timings: 'Open all day',
+        altitude: '1150 m',
+        historicalSignificance: 'Scenic hill station in the Satpuda range with Yashwant Lake and Gorakhnath Temple',
+        trek: { routes: [{ difficulty: 'Easy' }] },
+        history: { builtBy: 'Natural hill station', year: 'Ancient' }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ BATCH 16 — FORTS 69–71 ━━━━━━━━━━━━━━━━━━
+
+    // 69. Kanhergarh
+    {
+        _id: 'kanhergarh',
+        name: 'Kanhergarh',
+        location: { district: 'Dhule', state: 'Maharashtra' },
+        difficulty: 'Moderate',
+        type: 'Hill Fort',
+        description: 'Kanhergarh is a lesser-known hill fort in Dhule district, located in a remote region of Khandesh. It offers a quiet trekking experience with natural surroundings and minimal crowd.',
+        images: [],
+        rating: 3.8,
+        visitors: 400,
+        crowdStatus: 'low',
+        bestTimeToVisit: 'November to February',
+        entryFee: 'Free',
+        timings: '6:00 AM - 6:00 PM',
+        altitude: '~800 m',
+        historicalSignificance: 'Minor surveillance fort in the remote Khandesh region',
+        trek: { routes: [{ difficulty: 'Moderate' }] },
+        history: { builtBy: 'Local rulers / Marathas', year: '17th century' }
+    },
+
+    // 70. Pisolgad
+    {
+        _id: 'pisolgad',
+        name: 'Pisolgad',
+        location: { district: 'Jalgaon', state: 'Maharashtra' },
+        difficulty: 'Difficult',
+        type: 'Hill Fort',
+        description: 'Pisolgad is a remote hill fort in Jalgaon district, known for its rugged terrain and isolation. It is ideal for trekkers seeking an offbeat experience.',
+        images: [],
+        rating: 3.7,
+        visitors: 200,
+        crowdStatus: 'low',
+        bestTimeToVisit: 'November to February',
+        entryFee: 'Free',
+        timings: '6:00 AM - 5:30 PM',
+        altitude: '~850 m',
+        historicalSignificance: 'Remote hill fort used for local defense and observation in Jalgaon region',
+        trek: { routes: [{ difficulty: 'Difficult' }] },
+        history: { builtBy: 'Maratha Empire', year: '17th century' }
+    },
+
+    // 71. Ausa Fort
+    {
+        _id: 'ausa',
+        name: 'Ausa Fort',
+        location: { district: 'Latur', state: 'Maharashtra' },
+        difficulty: 'Easy',
+        type: 'Land Fort',
+        description: 'Ausa Fort is a historic land fort in Latur district, known for its strong fortifications, bastions, and Islamic architectural influence. It is an important example of Deccan-era military construction.',
+        images: [],
+        rating: 4.1,
+        visitors: 4000,
+        crowdStatus: 'moderate',
+        bestTimeToVisit: 'October to February',
+        entryFee: 'Free',
+        timings: '9:00 AM - 6:00 PM',
+        altitude: 'Ground level',
+        historicalSignificance: 'Bahmani-era land fort with strong fortifications, Islamic architectural influence',
+        trek: { routes: [{ difficulty: 'Easy' }] },
+        history: { builtBy: 'Bahmani Sultanate', year: '15th century' }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ BATCH 17 — FORTS 72–74 ━━━━━━━━━━━━━━━━━━
+
+    // 72. Kandhar Fort
+    {
+        _id: 'kandhar',
+        name: 'Kandhar Fort',
+        location: { district: 'Nanded', state: 'Maharashtra' },
+        difficulty: 'Easy',
+        type: 'Land Fort',
+        description: 'Kandhar Fort is a historic land fort in Nanded district, known for its massive walls, deep moat, and strong defensive architecture. It is one of the prominent forts of the Marathwada region.',
+        images: [],
+        rating: 4.2,
+        visitors: 5000,
+        crowdStatus: 'moderate',
+        bestTimeToVisit: 'October to February',
+        entryFee: 'Free',
+        timings: '9:00 AM - 6:00 PM',
+        altitude: 'Ground level',
+        historicalSignificance: 'Rashtrakuta-era land fort with massive walls and moat, multi-dynasty history',
+        trek: { routes: [{ difficulty: 'Easy' }] },
+        history: { builtBy: 'Rashtrakuta dynasty', year: '9th century' }
+    },
+
+    // 73. Dharur Fort
+    {
+        _id: 'dharur',
+        name: 'Dharur Fort',
+        location: { district: 'Beed', state: 'Maharashtra' },
+        difficulty: 'Easy',
+        type: 'Land Fort',
+        description: 'Dharur Fort is a well-known land fort in Beed district, featuring strong stone walls, bastions, and historic gateways. It represents classic Deccan military architecture.',
+        images: [],
+        rating: 4.0,
+        visitors: 3500,
+        crowdStatus: 'moderate',
+        bestTimeToVisit: 'October to February',
+        entryFee: 'Free',
+        timings: '9:00 AM - 6:00 PM',
+        altitude: 'Ground level',
+        historicalSignificance: 'Bahmani-era land fort with classic Deccan military architecture',
+        trek: { routes: [{ difficulty: 'Easy' }] },
+        history: { builtBy: 'Bahmani Sultanate', year: '15th century' }
+    },
+
+    // 74. Ambad Fort
+    {
+        _id: 'ambad',
+        name: 'Ambad Fort',
+        location: { district: 'Jalna', state: 'Maharashtra' },
+        difficulty: 'Easy',
+        type: 'Land Fort',
+        description: 'Ambad Fort is a land fort in Jalna district known for its strong fortification and historical structures. Though partially in ruins, it reflects the architectural style of Deccan-era forts.',
+        images: [],
+        rating: 3.9,
+        visitors: 2500,
+        crowdStatus: 'low',
+        bestTimeToVisit: 'October to February',
+        entryFee: 'Free',
+        timings: '9:00 AM - 6:00 PM',
+        altitude: 'Ground level',
+        historicalSignificance: 'Bahmani-era land fort with Deccan architectural style in Jalna region',
+        trek: { routes: [{ difficulty: 'Easy' }] },
+        history: { builtBy: 'Bahmani Sultanate', year: '15th century' }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ BATCH 18 — FORTS 75–77 ━━━━━━━━━━━━━━━━━━
+
+    // 75. Udgir Fort
+    {
+        _id: 'udgir',
+        name: 'Udgir Fort',
+        location: { district: 'Latur', state: 'Maharashtra' },
+        difficulty: 'Easy',
+        type: 'Land Fort',
+        description: 'Udgir Fort is a historically significant land fort in Latur district, known for its massive fortifications, underground passages, and role in the Battle of Udgir. It is one of the most important forts in Marathwada.',
+        images: [],
+        rating: 4.3,
+        visitors: 6000,
+        crowdStatus: 'moderate',
+        bestTimeToVisit: 'October to February',
+        entryFee: 'Free',
+        timings: '9:00 AM - 6:00 PM',
+        altitude: 'Ground level',
+        historicalSignificance: 'Battle of Udgir (1760) — key Maratha victory over the Nizam, underground passages',
+        trek: { routes: [{ difficulty: 'Easy' }] },
+        history: { builtBy: 'Bahmani Sultanate (modified by Nizam/Marathas)', year: '15th century' }
+    },
+
+    // 76. Parbhani Fort (Local Remains)
+    {
+        _id: 'parbhani',
+        name: 'Parbhani Fort (Local Remains)',
+        location: { district: 'Parbhani', state: 'Maharashtra' },
+        difficulty: 'Easy',
+        type: 'Land Fort',
+        description: 'Parbhani does not have a prominent surviving fort structure today. However, the region historically had small defensive structures and administrative centers during medieval times.',
+        images: [],
+        rating: 3.2,
+        visitors: 500,
+        crowdStatus: 'low',
+        bestTimeToVisit: 'October to February',
+        entryFee: 'Free',
+        timings: 'Open all day',
+        altitude: 'Ground level',
+        historicalSignificance: 'Scattered medieval remains from Deccan Sultanate and Nizam period',
+        trek: { routes: [{ difficulty: 'Easy' }] },
+        history: { builtBy: 'Bahmani / Nizam', year: 'Medieval period' }
+    },
+
+    // 77. Mahur Fort
+    {
+        _id: 'mahur',
+        name: 'Mahur Fort',
+        location: { district: 'Nanded', state: 'Maharashtra' },
+        difficulty: 'Moderate',
+        type: 'Hill Fort',
+        description: 'Mahur Fort is a historic hill fort located in Nanded district, known for its religious importance and scenic hilltop views. It is situated near the famous Renuka Devi temple.',
+        images: [],
+        rating: 4.2,
+        visitors: 8000,
+        crowdStatus: 'moderate',
+        bestTimeToVisit: 'October to February',
+        entryFee: 'Free',
+        timings: '6:00 AM - 6:00 PM',
+        altitude: '~700 m',
+        historicalSignificance: 'Historic hill fort near Renuka Devi temple, religious and strategic importance',
+        trek: { routes: [{ difficulty: 'Moderate' }] },
+        history: { builtBy: 'Maratha Empire / Nizam', year: '17th century' }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ BATCH 19 — FORTS 78–80 ━━━━━━━━━━━━━━━━━━
+
+    // 78. Antur Fort
+    {
+        _id: 'antur',
+        name: 'Antur Fort',
+        location: { district: 'Chhatrapati Sambhajinagar', state: 'Maharashtra' },
+        difficulty: 'Moderate',
+        type: 'Hill Fort',
+        description: 'Antur Fort is a hill fort located in the Satmala range of Maharashtra. Known for its massive entrance gate and strong fortification, it is one of the prominent forts in the region and offers scenic views of surrounding hills.',
+        images: [anturImg],
+        rating: 4.1,
+        visitors: 4000,
+        crowdStatus: 'moderate',
+        bestTimeToVisit: 'October to February',
+        entryFee: 'Free',
+        timings: '6:00 AM - 6:00 PM',
+        altitude: '~820 m',
+        historicalSignificance: 'Strategic fort in Satmala range, known for massive entrance and defensive walls',
+        trek: { routes: [{ difficulty: 'Moderate' }] },
+        history: { builtBy: 'Ahmad Nizam Shah / Local Maratha Rulers', year: '15th Century' }
+    },
+
+    // 79. Waghala Fort (Local Remains)
+    {
+        _id: 'waghala',
+        name: 'Waghala Fort (Local Remains)',
+        location: { district: 'Nanded', state: 'Maharashtra' },
+        difficulty: 'Easy',
+        type: 'Land Fort',
+        description: 'Waghala does not have a prominent surviving fort structure today. The area historically had small defensive structures used for local administration and security.',
+        images: [waghalaImg],
+        rating: 3.0,
+        visitors: 300,
+        crowdStatus: 'low',
+        bestTimeToVisit: 'October to February',
+        entryFee: 'Free',
+        timings: 'Open all day',
+        altitude: 'Ground level',
+        historicalSignificance: 'Medieval administrative remains in Nanded region',
+        trek: { routes: [{ difficulty: 'Easy' }] },
+        history: { builtBy: 'Deccan Sultanates', year: 'Medieval period' }
+    },
+
+    // 80. Rohilagad
+    {
+        _id: 'rohilagad',
+        name: 'Rohilagad',
+        location: { district: 'Beed', state: 'Maharashtra' },
+        difficulty: 'Moderate',
+        type: 'Hill Fort',
+        description: 'Rohilagad is a lesser-known hill fort in Beed district. It is an offbeat destination with minimal ruins and offers a quiet trekking experience.',
+        images: [rohilagadImg],
+        rating: 3.5,
+        visitors: 400,
+        crowdStatus: 'low',
+        bestTimeToVisit: 'October to February',
+        entryFee: 'Free',
+        timings: '6:00 AM - 6:00 PM',
+        altitude: '~800 m',
+        historicalSignificance: 'Small hill fort used for local surveillance in the Marathwada region',
+        trek: { routes: [{ difficulty: 'Moderate' }] },
+        history: { builtBy: 'Maratha Empire', year: '17th Century' }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ BATCH 20 — FORTS 81–82 ━━━━━━━━━━━━━━━━━━
+
+    // 81. Sitabuldi Fort
+    {
+        _id: 'sitabuldi',
+        name: 'Sitabuldi Fort',
+        location: { district: 'Nagpur', state: 'Maharashtra' },
+        difficulty: 'Easy',
+        type: 'Land Fort',
+        description: 'Sitabuldi Fort is a historic land fort located in the center of Nagpur city. Built by the British, it is known for the Battle of Sitabuldi and serves as an important military landmark.',
+        images: [sitabuldiImg],
+        rating: 4.2,
+        visitors: 5000,
+        crowdStatus: 'moderate',
+        bestTimeToVisit: 'October to February',
+        entryFee: 'Free',
+        timings: 'Restricted (open on specific days)',
+        altitude: 'Ground level',
+        historicalSignificance: 'Famous for the Battle of Sitabuldi (1817)',
+        trek: { routes: [{ difficulty: 'Easy' }] },
+        history: { builtBy: 'British', year: '1817' }
+    },
+
+    // 82. Gawilgad Fort
+    {
+        _id: 'gawilgad',
+        name: 'Gawilgad Fort',
+        location: { district: 'Amravati', state: 'Maharashtra' },
+        difficulty: 'Moderate',
+        type: 'Hill Fort',
+        description: 'Gawilgad Fort is a massive hill fort located in the Satpura range near Chikhaldara. Known for its strong fortifications and scenic surroundings, it is one of the most important forts in Vidarbha.',
+        images: [gawilgadImg],
+        rating: 4.5,
+        visitors: 8000,
+        crowdStatus: 'moderate',
+        bestTimeToVisit: 'October to March',
+        entryFee: '₹20',
+        timings: '8:00 AM - 5:00 PM',
+        altitude: '1083 m',
+        historicalSignificance: 'Massive Vidarbha stronghold, important in Second Anglo-Maratha War',
+        trek: { routes: [{ difficulty: 'Moderate' }] },
+        history: { builtBy: 'Gond dynasty', year: '12th Century' }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ BATCH 21 — FORTS 83–85 ━━━━━━━━━━━━━━━━━━
+
+    // 83. Narnala Fort
+    {
+        _id: 'narnala',
+        name: 'Narnala Fort',
+        location: { district: 'Akola', state: 'Maharashtra' },
+        difficulty: 'Moderate',
+        type: 'Hill Fort',
+        description: 'Narnala Fort is a massive hill fort located in the Satpura range, known for its vast expanse, multiple gates, and strong fortifications. It is one of the largest forts in Maharashtra and offers a rich historical and trekking experience.',
+        images: [narnalaImg],
+        rating: 4.6,
+        visitors: 6000,
+        crowdStatus: 'moderate',
+        bestTimeToVisit: 'October to February',
+        entryFee: '₹20',
+        timings: '6:00 AM – 5:30 PM',
+        altitude: '~900 m',
+        historicalSignificance: 'One of the largest hill forts in Maharashtra, ruled by Gond kings',
+        trek: { routes: [{ difficulty: 'Moderate' }] },
+        history: { builtBy: 'Gond dynasty', year: '10th Century' }
+    },
+
+    // 84. Balapur Fort
+    {
+        _id: 'balapur',
+        name: 'Balapur Fort',
+        location: { district: 'Akola', state: 'Maharashtra' },
+        difficulty: 'Easy',
+        type: 'Land Fort',
+        description: 'Balapur Fort is a well-preserved land fort located at the confluence of the Murtizapur and Man rivers. Known for its strong architecture and historical importance, it is a significant fort in the Vidarbha region.',
+        images: [balapurImg],
+        rating: 4.1,
+        visitors: 3000,
+        crowdStatus: 'low',
+        bestTimeToVisit: 'October to February',
+        entryFee: 'Free',
+        timings: '8:00 AM – 6:00 PM',
+        altitude: 'Ground level',
+        historicalSignificance: 'Built at the confluence of two rivers, important Mughal military station',
+        trek: { routes: [{ difficulty: 'Easy' }] },
+        history: { builtBy: 'Mughals', year: '17th Century' }
+    },
+
+    // 85. Manikgad Fort (Wardha)
+    {
+        _id: 'manikgad',
+        name: 'Manikgad Fort (Wardha)',
+        location: { district: 'Wardha', state: 'Maharashtra' },
+        difficulty: 'Easy',
+        type: 'Land Fort',
+        description: 'Manikgad in Wardha is a lesser-known and minimally preserved fort site. It is not a major tourist destination and has limited visible structures.',
+        images: [manikgadImg],
+        rating: 3.0,
+        visitors: 200,
+        crowdStatus: 'low',
+        bestTimeToVisit: 'October to February',
+        entryFee: 'Free',
+        timings: 'Open all day',
+        altitude: 'Ground level',
+        historicalSignificance: 'Minimal remains of a minor defensive site in the Wardha region',
+        trek: { routes: [{ difficulty: 'Easy' }] },
+        history: { builtBy: 'Local rulers', year: 'Unknown' }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ BATCH 22 — FORTS 86–88 ━━━━━━━━━━━━━━━━━━
+
+    // 86. Achalpur Fort
+    {
+        _id: 'achalpur',
+        name: 'Achalpur Fort',
+        location: { district: 'Amravati', state: 'Maharashtra' },
+        difficulty: 'Easy',
+        type: 'Land Fort',
+        description: 'Achalpur Fort is a historic land fort located in Amravati district. Once an important administrative and military center, the fort features strong walls, bastions, and remnants of ancient structures reflecting medieval Deccan architecture.',
+        images: [achalpurImg],
+        rating: 4.0,
+        visitors: 1500,
+        crowdStatus: 'low',
+        bestTimeToVisit: 'October to February',
+        entryFee: 'Free',
+        timings: '8:00 AM – 6:00 PM',
+        altitude: 'Ground level',
+        historicalSignificance: 'Significant center during Bahmani and Mughal periods',
+        trek: { routes: [{ difficulty: 'Easy' }] },
+        history: { builtBy: 'Bahmani dynasty', year: 'Medieval period' }
+    },
+
+    // 87. Bhamragad Fort
+    {
+        _id: 'bhamragad',
+        name: 'Bhamragad Fort',
+        location: { district: 'Gadchiroli', state: 'Maharashtra' },
+        difficulty: 'Hard',
+        type: 'Hill Fort',
+        description: 'Bhamragad Fort is a remote and lesser-known hill fort located in the dense forest region of Gadchiroli. Known for its isolation and natural surroundings, it is an offbeat destination ideal for experienced trekkers.',
+        images: [bhamragadImg],
+        rating: 3.8,
+        visitors: 500,
+        crowdStatus: 'low',
+        bestTimeToVisit: 'Winter',
+        entryFee: 'Free',
+        timings: '6:00 AM – 5:00 PM',
+        altitude: '~800 m',
+        historicalSignificance: 'Remote regional lookout point deep in Gadchiroli forests',
+        trek: { routes: [{ difficulty: 'Hard' }] },
+        history: { builtBy: 'Local rulers', year: 'Unknown' }
+    },
+
+    // 88. Sindkhed Raja Fort
+    {
+        _id: 'sindkhed_raja',
+        name: 'Sindkhed Raja Fort',
+        location: { district: 'Buldhana', state: 'Maharashtra' },
+        difficulty: 'Easy',
+        type: 'Land Fort',
+        description: 'Sindkhed Raja Fort is historically significant as the birthplace of Rajmata Jijabai, mother of Chhatrapati Shivaji Maharaj. Though much of the fort is in ruins, it holds immense cultural and historical importance.',
+        images: [sindkhedRajaImg],
+        rating: 4.3,
+        visitors: 4000,
+        crowdStatus: 'moderate',
+        bestTimeToVisit: 'October to February',
+        entryFee: 'Free',
+        timings: '8:00 AM – 6:00 PM',
+        altitude: 'Ground level',
+        historicalSignificance: 'Birthplace of Rajmata Jijabai, mother of Shivaji Maharaj',
+        trek: { routes: [{ difficulty: 'Easy' }] },
+        history: { builtBy: 'Jadhav family', year: 'Pre-17th Century' }
+    }
 
 ];
 

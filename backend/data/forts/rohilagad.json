@@ -1,0 +1,69 @@
+{
+  "name": "Rohilagad",
+  "location": {
+    "district": "Beed",
+    "taluka": "Patoda region",
+    "baseVillage": "Rohila",
+    "coordinates": {
+      "lat": 18.7955,
+      "lng": 75.5452
+    },
+    "nearestCity": "Beed (40 km)"
+  },
+  "category": "Hill Fort",
+
+  "description": "Rohilagad is a lesser-known hill fort in Beed district. It is an offbeat destination with minimal ruins and offers a quiet trekking experience.",
+
+  "trek": {
+    "routes": [
+      {
+        "name": "Rohila Route",
+        "startPoint": "Rohila village",
+        "distance": "3 km",
+        "duration": "2–3 hours",
+        "difficulty": "Moderate",
+        "description": "A basic trek through open terrain and rocky patches."
+      }
+    ],
+    "bestTime": ["Winter", "Post-monsoon"],
+    "avoidTime": ["Summer"]
+  },
+
+  "landmarks": [
+    {
+      "name": "Fort Plateau",
+      "description": "Open top with minimal structures.",
+      "mustSee": true
+    },
+    {
+      "name": "Viewpoints",
+      "description": "Views of surrounding plains.",
+      "mustSee": true
+    }
+  ],
+
+  "facilities": {
+    "parking": false,
+    "water": false,
+    "food": false,
+    "network": "Weak"
+  },
+
+  "safety": {
+    "alerts": [
+      "Carry water",
+      "Remote location"
+    ]
+  },
+
+  "visitInfo": {
+    "entryFee": 0,
+    "timeRequired": "4–5 hours",
+    "timings": "6:00 AM – 6:00 PM"
+  },
+
+  "history": {
+    "brief": "Rohilagad was a small hill fort used for local surveillance in the region.",
+    "rulers": ["Marathas"]
+  }
+}

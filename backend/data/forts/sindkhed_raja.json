@@ -1,0 +1,72 @@
+{
+  "name": "Sindkhed Raja Fort",
+  "location": {
+    "district": "Buldhana",
+    "taluka": "Sindkhed Raja",
+    "baseVillage": "Sindkhed Raja",
+    "coordinates": {
+      "lat": 19.9645,
+      "lng": 76.3285
+    },
+    "nearestCity": "Buldhana (50 km)"
+  },
+  "category": "Land Fort",
+
+  "description": "Sindkhed Raja Fort is historically significant as the birthplace of Rajmata Jijabai, mother of Chhatrapati Shivaji Maharaj. Though much of the fort is in ruins, it holds immense cultural and historical importance.",
+
+  "trek": {
+    "routes": [
+      {
+        "name": "Town Access",
+        "distance": "Within town",
+        "duration": "30–60 minutes",
+        "difficulty": "Easy",
+        "description": "Accessible without trekking."
+      }
+    ]
+  },
+
+  "landmarks": [
+    {
+      "name": "Rajmata Jijabai Birthplace",
+      "description": "Historic site within the fort area.",
+      "mustSee": true
+    },
+    {
+      "name": "Fort Walls",
+      "description": "Remains of defensive structures.",
+      "mustSee": true
+    },
+    {
+      "name": "Historic Structures",
+      "description": "Ruins of buildings inside the fort.",
+      "mustSee": true
+    }
+  ],
+
+  "facilities": {
+    "parking": true,
+    "water": true,
+    "food": true,
+    "network": "Good"
+  },
+
+  "safety": {
+    "alerts": [
+      "Respect heritage site",
+      "Explore ruins carefully"
+    ]
+  },
+
+  "visitInfo": {
+    "entryFee": 0,
+    "timeRequired": "2–3 hours",
+    "timings": "8:00 AM – 6:00 PM"
+  },
+
+  "history": {
+    "brief": "Sindkhed Raja is the birthplace of Rajmata Jijabai and holds great importance in Maratha history.",
+    "significance": "Linked to the origin of the Maratha Empire.",
+    "rulers": ["Jadhav family", "Marathas", "Mughals", "British"]
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "name": "Achalpur Fort",
+  "location": {
+    "district": "Amravati",
+    "taluka": "Achalpur",
+    "baseVillage": "Achalpur",
+    "coordinates": {
+      "lat": 21.2565,
+      "lng": 77.5112
+    },
+    "nearestCity": "Amravati (50 km)"
+  },
+  "category": "Land Fort",
+
+  "description": "Achalpur Fort is a historic land fort located in Amravati district. Once an important administrative and military center, the fort features strong walls, bastions, and remnants of ancient structures reflecting medieval Deccan architecture.",
+
+  "trek": {
+    "routes": [
+      {
+        "name": "City Access Route",
+        "distance": "Within town",
+        "duration": "30–60 minutes",
+        "difficulty": "Easy",
+        "description": "Direct access without trekking."
+      }
+    ]
+  },
+
+  "landmarks": [
+    {
+      "name": "Fort Walls",
+      "description": "Remains of strong defensive walls.",
+      "mustSee": true
+    },
+    {
+      "name": "Bastions",
+      "description": "Strategic defense structures.",
+      "mustSee": true
+    },
+    {
+      "name": "Historic Gates",
+      "description": "Entry points to the fort.",
+      "mustSee": true
+    }
+  ],
+
+  "facilities": {
+    "parking": true,
+    "water": true,
+    "food": true,
+    "network": "Good"
+  },
+
+  "safety": {
+    "alerts": [
+      "Explore ruins carefully",
+      "Crowded during local events"
+    ]
+  },
+
+  "visitInfo": {
+    "entryFee": 0,
+    "timeRequired": "2–3 hours",
+    "timings": "8:00 AM – 6:00 PM"
+  },
+
+  "history": {
+    "brief": "Achalpur Fort was a significant center during the Bahmani and Mughal periods and later came under Maratha control.",
+    "rulers": ["Bahmani", "Mughals", "Marathas", "British"]
+  }
+}

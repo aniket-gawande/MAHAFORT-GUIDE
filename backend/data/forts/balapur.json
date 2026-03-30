@@ -1,0 +1,71 @@
+{
+  "name": "Balapur Fort",
+  "location": {
+    "district": "Akola",
+    "taluka": "Balapur",
+    "baseVillage": "Balapur",
+    "coordinates": {
+      "lat": 20.6685,
+      "lng": 76.7705
+    },
+    "nearestCity": "Akola (25 km)"
+  },
+  "category": "Land Fort",
+
+  "description": "Balapur Fort is a well-preserved land fort located at the confluence of the Murtizapur and Man rivers. Known for its strong architecture and historical importance, it is a significant fort in the Vidarbha region.",
+
+  "trek": {
+    "routes": [
+      {
+        "name": "Main Entrance",
+        "distance": "Within town",
+        "duration": "30–60 minutes",
+        "difficulty": "Easy",
+        "description": "Direct access; no trekking required."
+      }
+    ]
+  },
+
+  "landmarks": [
+    {
+      "name": "Massive Walls",
+      "description": "Strong fortification around the fort.",
+      "mustSee": true
+    },
+    {
+      "name": "Bastions",
+      "description": "Used for defense and artillery.",
+      "mustSee": true
+    },
+    {
+      "name": "River Confluence View",
+      "description": "View of rivers near fort.",
+      "mustSee": true
+    }
+  ],
+
+  "facilities": {
+    "parking": true,
+    "water": true,
+    "food": true,
+    "network": "Good"
+  },
+
+  "safety": {
+    "alerts": [
+      "Watch edges near river",
+      "Hot during summer"
+    ]
+  },
+
+  "visitInfo": {
+    "entryFee": 0,
+    "timeRequired": "2–3 hours",
+    "timings": "8:00 AM – 6:00 PM"
+  },
+
+  "history": {
+    "brief": "Balapur Fort was built during the Mughal period and later used by the Marathas.",
+    "rulers": ["Mughals", "Marathas", "British"]
+  }
+}
