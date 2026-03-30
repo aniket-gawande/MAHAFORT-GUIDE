@@ -14,7 +14,8 @@ import shivajiImg from '../assets/shivaji.jpg';
 import chart1 from '../assets/Aniket.png';
 import chart2 from '../assets/Athrav.png';
 import chart3 from '../assets/Nishtha.png';
-import chart4 from 'C:/Users/anike/Downloads/IMG-20260327-WA0008.jpg';
+import ashuImg from '../assets/ashu.jpeg';
+// import chart4 from '../assets/IMG-20260327-WA0008.jpg';
 
 /* ─── Animated Counter Hook ─── */
 const useCounter = (end, duration = 2000, shouldStart = false) => {
@@ -61,7 +62,7 @@ const About = () => {
     {
       name: "Ashutosh More",
       role: "UI/UX Designer & Frontend Developer",
-      image: chart4,
+      image: ashuImg,
       linkedin: "#",
       github: "#"
     },

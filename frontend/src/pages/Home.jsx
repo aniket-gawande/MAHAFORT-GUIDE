@@ -5,6 +5,7 @@ import FortCard from '../components/FortCard';
 import Navbar from '../components/Navbar';
 import { staticForts } from '../data/staticForts';
 import { FaChevronRight } from 'react-icons/fa';
+import BahirjiChatbot from '../components/BahirjiChatbot';
 
 // Assets
 import shivaji from '../assets/shivaji.jpg';
@@ -201,6 +202,8 @@ const Home = () => {
           </Link>
         </div>
       </section>
+
+      <BahirjiChatbot />
 
     </div>
   );
