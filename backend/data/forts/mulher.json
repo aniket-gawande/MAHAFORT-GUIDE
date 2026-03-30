@@ -1,0 +1,203 @@
+{
+    "name": "Mulher Fort",
+    "location": {
+        "district": "Nashik",
+        "taluka": "Satana",
+        "baseVillage": "Mulher",
+        "coordinates": {
+            "lat": 20.7815,
+            "lng": 73.9365
+        },
+        "nearestCity": "Nashik (130 km)"
+    },
+    "googleMaps": {
+        "placeId": "MulherFortMapID",
+        "rating": 4.5,
+        "totalReviews": 2500,
+        "url": "https://maps.google.com/?q=Mulher+Fort"
+    },
+    "description": "Mulher Fort is one of the largest forts in the Baglan region of Nashik district and forms a twin fort complex with Salher. Known for its vast plateau, ancient temples, and historical importance during the Maratha-Mughal conflicts, Mulher offers a raw and less crowded trekking experience.",
+    "trek": {
+        "routes": [
+            {
+                "name": "Mulher Village Route",
+                "startPoint": "Mulher Village",
+                "distance": "6 km",
+                "duration": "2.5–3 hours",
+                "difficulty": "Moderate to Hard",
+                "elevation": "1306 m",
+                "description": "A long but gradual ascent through rocky terrain and forest patches leading to a massive plateau. The trek is physically demanding due to distance.",
+                "facilities": [
+                    "Basic shops at base village",
+                    "Parking available",
+                    "Local guides available"
+                ]
+            }
+        ],
+        "bestTime": [
+            "Winter (November–February) – Clear views and pleasant weather",
+            "Post-monsoon (September–October) – Lush greenery"
+        ],
+        "avoidTime": [
+            "Peak summer – Very hot and exhausting",
+            "Heavy monsoon – Slippery trails"
+        ]
+    },
+    "landmarks": [
+        {
+            "name": "Mulher Plateau",
+            "type": "Fort Top",
+            "description": "A vast plateau that allows extensive exploration of ruins and landscapes.",
+            "historicalSignificance": "Used for military camps and storage.",
+            "timeToExplore": "60 minutes",
+            "mustSee": true
+        },
+        {
+            "name": "Ancient Temples",
+            "type": "Temple",
+            "description": "Remains of temples dedicated to local deities.",
+            "historicalSignificance": "Reflects cultural and religious importance.",
+            "timeToExplore": "20 minutes",
+            "mustSee": true
+        },
+        {
+            "name": "Fort Walls",
+            "type": "Fortification",
+            "description": "Ruins of massive defensive walls.",
+            "historicalSignificance": "Key defensive structure of Baglan forts.",
+            "timeToExplore": "30 minutes",
+            "mustSee": true
+        }
+    ],
+    "food": {
+        "onFort": [
+            {
+                "name": "Basic Snacks",
+                "type": "Veg",
+                "price": "₹20-50",
+                "description": "Very limited food availability.",
+                "mustTry": false
+            }
+        ],
+        "nearbyRestaurants": [
+            {
+                "name": "Local Dhaba",
+                "distance": "Mulher village",
+                "type": "Veg",
+                "priceRange": "₹100-200",
+                "speciality": "Simple Maharashtrian meals"
+            }
+        ],
+        "mustTryDishes": [
+            {
+                "name": "Pithla Bhakri",
+                "type": "Veg",
+                "price": "₹80-120",
+                "description": "Traditional village meal.",
+                "mustTry": true
+            }
+        ]
+    },
+    "facilities": {
+        "parking": {
+            "available": true,
+            "cost": "Free",
+            "capacity": "Limited at base village"
+        },
+        "washrooms": {
+            "available": false,
+            "condition": "Not available"
+        },
+        "drinkingWater": {
+            "available": false,
+            "points": [
+                "Carry your own water",
+                "Limited seasonal sources"
+            ]
+        },
+        "mobileNetwork": {
+            "quality": "Very weak",
+            "providers": ["Jio (limited)", "Airtel (patchy)"]
+        },
+        "firstAid": {
+            "available": false,
+            "location": "Nearest medical help at Satana"
+        },
+        "guides": {
+            "available": true,
+            "cost": "₹300-500"
+        }
+    },
+    "safety": {
+        "alerts": [
+            {
+                "type": "Warning",
+                "message": "Long trek requires good stamina",
+                "season": "All year"
+            },
+            {
+                "type": "Warning",
+                "message": "Limited water availability",
+                "season": "All year"
+            },
+            {
+                "type": "Warning",
+                "message": "Remote area — avoid solo trekking",
+                "season": "All year"
+            }
+        ],
+        "emergencyContacts": [
+            {
+                "type": "Police",
+                "name": "Satana Police Station",
+                "phone": "100",
+                "availability": "24/7"
+            }
+        ]
+    },
+    "accessibility": {
+        "wheelchairFriendly": false,
+        "elderlyFriendly": false,
+        "kidsAppropriate": false,
+        "stepsCount": 0,
+        "restPoints": 2,
+        "alternativeAccess": "Requires long trekking effort"
+    },
+    "visitInfo": {
+        "entryFee": {
+            "indian": 0,
+            "foreigner": 0
+        },
+        "timings": "6:00 AM – 6:00 PM",
+        "timeRequired": "4–6 hours",
+        "bestTimeOfDay": "Early morning",
+        "crowdLevel": {
+            "weekday": "Low",
+            "weekend": "Moderate"
+        },
+        "photography": {
+            "allowed": true
+        }
+    },
+    "budget": {
+        "transport": "₹300-700",
+        "food": "₹150-300",
+        "entry": "₹0",
+        "misc": "₹100-200",
+        "totalPerPerson": "₹500-1000"
+    },
+    "history": {
+        "brief": "Mulher Fort was an important stronghold in the Baglan region and witnessed multiple battles between the Marathas and Mughals.",
+        "significance": "Part of the Salher-Mulher defense system, crucial in controlling trade routes.",
+        "famousBattles": [
+            "Battle of Salher (nearby region)"
+        ],
+        "rulers": [
+            "Marathas",
+            "Mughals",
+            "British"
+        ]
+    },
+    "featured": false,
+    "crowdStatus": "Low"
+}

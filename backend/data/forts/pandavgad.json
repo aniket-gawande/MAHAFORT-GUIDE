@@ -1,0 +1,193 @@
+{
+    "name": "Pandavgad Fort",
+    "location": {
+        "district": "Satara",
+        "taluka": "Wai",
+        "baseVillage": "Pandavgad / Dhom",
+        "coordinates": {
+            "lat": 17.9075,
+            "lng": 73.7915
+        },
+        "nearestCity": "Satara (25 km)"
+    },
+    "googleMaps": {
+        "placeId": "PandavgadFortMapID",
+        "rating": 4.5,
+        "totalReviews": 3000,
+        "url": "https://maps.google.com/?q=Pandavgad+Fort"
+    },
+    "description": "Pandavgad Fort is a massive hill fort located near Wai in Satara district. Known for its large plateau and mythological connection to the Pandavas, the fort offers scenic views of the Dhom Dam and surrounding Sahyadri ranges. It is a moderately easy trek suitable for beginners.",
+    "trek": {
+        "routes": [
+            {
+                "name": "Dhom / Pandavgad Village Route",
+                "startPoint": "Pandavgad Village",
+                "distance": "3 km",
+                "duration": "1.5–2 hours",
+                "difficulty": "Easy to Moderate",
+                "elevation": "1273 m",
+                "description": "A gradual ascent through forest patches and rocky terrain leading to a wide plateau. Suitable for beginners with basic fitness.",
+                "facilities": [
+                    "Parking at base village",
+                    "Basic local shops",
+                    "Clear trail"
+                ]
+            }
+        ],
+        "bestTime": [
+            "Winter (November–February) – Pleasant weather",
+            "Monsoon (July–September) – Lush greenery and scenic views"
+        ],
+        "avoidTime": [
+            "Peak summer – Very hot and dry"
+        ]
+    },
+    "landmarks": [
+        {
+            "name": "Pandav Caves",
+            "type": "Cave",
+            "description": "Caves believed to be associated with the Pandavas.",
+            "historicalSignificance": "Mythological connection to Mahabharata.",
+            "timeToExplore": "20 minutes",
+            "mustSee": true
+        },
+        {
+            "name": "Fort Plateau",
+            "type": "Fort Top",
+            "description": "Large flat area ideal for exploration.",
+            "historicalSignificance": "Used for settlements and defense.",
+            "timeToExplore": "45 minutes",
+            "mustSee": true
+        },
+        {
+            "name": "Dhom Dam Viewpoint",
+            "type": "Viewpoint",
+            "description": "Panoramic view of Dhom Dam and valley.",
+            "historicalSignificance": "Strategic observation point.",
+            "timeToExplore": "20 minutes",
+            "mustSee": true
+        }
+    ],
+    "food": {
+        "onFort": [
+            {
+                "name": "Snacks",
+                "type": "Veg",
+                "price": "₹20-50",
+                "description": "Very limited availability.",
+                "mustTry": false
+            }
+        ],
+        "nearbyRestaurants": [
+            {
+                "name": "Local Dhaba",
+                "distance": "Wai town",
+                "type": "Veg",
+                "priceRange": "₹100-250",
+                "speciality": "Maharashtrian meals"
+            }
+        ],
+        "mustTryDishes": [
+            {
+                "name": "Pithla Bhakri",
+                "type": "Veg",
+                "price": "₹80-120",
+                "description": "Traditional meal in nearby villages.",
+                "mustTry": true
+            }
+        ]
+    },
+    "facilities": {
+        "parking": {
+            "available": true,
+            "cost": "Free",
+            "capacity": "Available at base"
+        },
+        "washrooms": {
+            "available": false,
+            "condition": "Not available"
+        },
+        "drinkingWater": {
+            "available": false,
+            "points": [
+                "Carry your own water"
+            ]
+        },
+        "mobileNetwork": {
+            "quality": "Moderate",
+            "providers": ["Jio", "Airtel"]
+        },
+        "firstAid": {
+            "available": false,
+            "location": "Nearest hospital in Wai"
+        },
+        "guides": {
+            "available": false,
+            "cost": "Not required"
+        }
+    },
+    "safety": {
+        "alerts": [
+            {
+                "type": "Warning",
+                "message": "No shade on plateau — carry sun protection",
+                "season": "Summer"
+            },
+            {
+                "type": "Warning",
+                "message": "Slippery trails during monsoon",
+                "season": "Monsoon"
+            }
+        ],
+        "emergencyContacts": [
+            {
+                "type": "Police",
+                "name": "Wai Police Station",
+                "phone": "100",
+                "availability": "24/7"
+            }
+        ]
+    },
+    "accessibility": {
+        "wheelchairFriendly": false,
+        "elderlyFriendly": false,
+        "kidsAppropriate": true,
+        "stepsCount": 0,
+        "restPoints": 3,
+        "alternativeAccess": "Moderate trek, manageable with basic fitness"
+    },
+    "visitInfo": {
+        "entryFee": {
+            "indian": 0,
+            "foreigner": 0
+        },
+        "timings": "6:00 AM – 6:00 PM",
+        "timeRequired": "3–4 hours",
+        "bestTimeOfDay": "Morning",
+        "crowdLevel": {
+            "weekday": "Low",
+            "weekend": "Moderate"
+        },
+        "photography": {
+            "allowed": true
+        }
+    },
+    "budget": {
+        "transport": "₹200-500",
+        "food": "₹100-200",
+        "entry": "₹0",
+        "misc": "₹50-100",
+        "totalPerPerson": "₹350-800"
+    },
+    "history": {
+        "brief": "Pandavgad Fort is believed to have mythological connections to the Pandavas from the Mahabharata, though historically it served as a strategic hill fort in the Sahyadri region.",
+        "significance": "Important for its location overlooking trade routes and Dhom region.",
+        "famousBattles": [],
+        "rulers": [
+            "Marathas",
+            "British"
+        ]
+    },
+    "featured": false,
+    "crowdStatus": "Low"
+}

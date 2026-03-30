@@ -1,0 +1,42 @@
+{
+    "name": "Rangana Fort",
+    "location": {
+        "district": "Kolhapur",
+        "taluka": "Bhudargad / Gaganbawda region",
+        "baseVillage": "Bhatwadi / Chikkevadi",
+        "coordinates": { "lat": 16.1485, "lng": 73.9023 },
+        "nearestCity": "Kolhapur (80 km)"
+    },
+    "googleMaps": { "placeId": "RanganaFortMapID", "rating": 4.7, "totalReviews": 2500, "url": "https://maps.google.com/?q=Rangana+Fort" },
+    "description": "Rangana Fort is a massive and remote hill fort located deep in the Sahyadri ranges near the Kolhapur–Sindhudurg border. Surrounded by dense forests and valleys, the fort is known for its strong fortifications, large plateau, and breathtaking monsoon scenery when clouds engulf the entire region.",
+    "trek": {
+        "routes": [{ "name": "Bhatwadi Route (Main)", "startPoint": "Bhatwadi Village", "distance": "5 km", "duration": "2.5–3.5 hours", "difficulty": "Moderate to Hard", "elevation": "882 m", "description": "Dense forest trek with steady climb. Trail can be confusing in forest sections.", "facilities": ["Parking at base village", "Local guides recommended", "No shops on route"] }],
+        "bestTime": ["Monsoon (July–September) – Misty and scenic", "Winter (November–February)"],
+        "avoidTime": ["Heavy monsoon – Difficult navigation", "Peak summer"]
+    },
+    "landmarks": [
+        { "name": "Rangana Bastions", "type": "Fortification", "description": "Strong bastions overlooking deep valleys.", "historicalSignificance": "Key defensive feature.", "timeToExplore": "30 minutes", "mustSee": true },
+        { "name": "Hanuman Temple", "type": "Temple", "description": "Temple on the fort plateau.", "historicalSignificance": "Spiritual importance for locals.", "timeToExplore": "15 minutes", "mustSee": true },
+        { "name": "Fort Plateau", "type": "Fort Top", "description": "Large plateau with ruins and forest cover.", "historicalSignificance": "Used for military settlement.", "timeToExplore": "45 minutes", "mustSee": true },
+        { "name": "Water Cisterns", "type": "Water Source", "description": "Rock-cut tanks for water storage.", "historicalSignificance": "Sustained fort inhabitants.", "timeToExplore": "15 minutes", "mustSee": true }
+    ],
+    "food": { "onFort": [{ "name": "No Food Available", "type": "N/A", "price": "N/A", "description": "Carry your own food.", "mustTry": false }], "nearbyRestaurants": [{ "name": "Village Food", "distance": "Base village", "type": "Veg", "priceRange": "₹100-200", "speciality": "Home-cooked meals" }] },
+    "facilities": {
+        "parking": { "available": true, "cost": "Free", "capacity": "Limited at base" },
+        "washrooms": { "available": false, "condition": "Not available" },
+        "drinkingWater": { "available": true, "points": ["Cisterns (seasonal)"] },
+        "mobileNetwork": { "quality": "Very weak", "providers": ["Limited signal"] },
+        "firstAid": { "available": false, "location": "Nearest facility far from fort" },
+        "guides": { "available": true, "cost": "₹400-600" }
+    },
+    "safety": { "alerts": [
+        { "type": "Warning", "message": "Dense forest trail — easy to lose path", "season": "All year" },
+        { "type": "Warning", "message": "Wildlife presence in forest", "season": "All year" },
+        { "type": "Warning", "message": "Slippery trails during monsoon", "season": "Monsoon" },
+        { "type": "Warning", "message": "No network — inform someone before trek", "season": "All year" }
+    ] },
+    "budget": { "transport": "₹500-1000", "food": "₹150-300", "entry": "₹0", "guide": "₹400-600", "totalPerPerson": "₹800-1500" },
+    "history": { "brief": "Rangana Fort played a role in Maratha defense strategies in the southern Sahyadri.", "significance": "Known for strong fortifications and remote location.", "famousBattles": [], "rulers": ["Marathas", "Adilshahi", "British"] },
+    "featured": true,
+    "crowdStatus": "Low"
+}

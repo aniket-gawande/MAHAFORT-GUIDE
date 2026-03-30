@@ -1,0 +1,39 @@
+{
+    "name": "Anjaneri Fort",
+    "location": {
+        "district": "Nashik",
+        "taluka": "Trimbakeshwar",
+        "baseVillage": "Anjaneri",
+        "coordinates": { "lat": 19.9335, "lng": 73.5332 },
+        "nearestCity": "Nashik (20 km)"
+    },
+    "googleMaps": { "placeId": "AnjaneriFortMapID", "rating": 4.6, "totalReviews": 7000, "url": "https://maps.google.com/?q=Anjaneri+Fort" },
+    "description": "Anjaneri Fort is a scenic hill fort near Trimbakeshwar, traditionally believed to be the birthplace of Lord Hanuman. The trek is relatively easy and passes through plateaus, forest trails, and temple complexes, offering panoramic views of the Brahmagiri range and Nashik valley.",
+    "trek": {
+        "routes": [{ "name": "Anjaneri Village Route (Main)", "startPoint": "Anjaneri Village", "distance": "2.5–3 km", "duration": "1.5–2 hours", "difficulty": "Easy", "elevation": "1280 m", "description": "A gradual climb through forest patches and open plateaus with steps and well-defined trails.", "facilities": ["Parking at base village", "Food stalls", "Clear trail markings"] }],
+        "bestTime": ["Winter (November–February)", "Monsoon (July–September)"],
+        "avoidTime": ["Peak summer afternoons"]
+    },
+    "landmarks": [
+        { "name": "Anjani Mata Temple", "type": "Temple", "description": "Temple dedicated to Anjani Mata, mother of Lord Hanuman.", "historicalSignificance": "Religious importance linked to Hanuman's birthplace.", "timeToExplore": "20 minutes", "mustSee": true },
+        { "name": "Hanuman Birthplace Point", "type": "Religious Site", "description": "Sacred location believed to be birthplace of Lord Hanuman.", "historicalSignificance": "Important pilgrimage site.", "timeToExplore": "20 minutes", "mustSee": true },
+        { "name": "Fort Plateau", "type": "Fort Top", "description": "Wide plateau with scenic views of Brahmagiri hills.", "historicalSignificance": "Used for observation and settlement.", "timeToExplore": "40 minutes", "mustSee": true }
+    ],
+    "food": { "onFort": [{ "name": "Snacks & Tea", "type": "Veg", "price": "₹20-50", "description": "Available at base village.", "mustTry": false }], "nearbyRestaurants": [{ "name": "Local Dhaba", "distance": "Anjaneri village", "type": "Veg", "priceRange": "₹100-200", "speciality": "Maharashtrian food" }] },
+    "facilities": {
+        "parking": { "available": true, "cost": "₹30-50", "capacity": "Available at base" },
+        "washrooms": { "available": false, "condition": "Limited/basic" },
+        "drinkingWater": { "available": false, "points": ["Carry your own water", "Seasonal cisterns"] },
+        "mobileNetwork": { "quality": "Good", "providers": ["Jio", "Airtel"] },
+        "firstAid": { "available": false, "location": "Nearest hospital at Nashik" },
+        "guides": { "available": false, "cost": "Not required" }
+    },
+    "safety": { "alerts": [
+        { "type": "Info", "message": "Easy trek suitable for beginners", "season": "All year" },
+        { "type": "Warning", "message": "Slippery trails during monsoon", "season": "Monsoon" }
+    ] },
+    "budget": { "transport": "₹100-300", "food": "₹100-200", "entry": "₹0", "totalPerPerson": "₹250-600" },
+    "history": { "brief": "Anjaneri Fort holds mythological importance as the birthplace of Lord Hanuman and was later used during the Maratha period.", "significance": "Combination of religious and historical importance.", "famousBattles": [], "rulers": ["Marathas", "British"] },
+    "featured": true,
+    "crowdStatus": "Moderate"
+}

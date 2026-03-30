@@ -1,0 +1,41 @@
+{
+    "name": "Sudhagad Fort",
+    "location": {
+        "district": "Raigad",
+        "taluka": "Pali",
+        "baseVillage": "Pachapur / Thakurwadi",
+        "coordinates": { "lat": 18.5012, "lng": 73.2815 },
+        "nearestCity": "Pali (20 km)"
+    },
+    "googleMaps": { "placeId": "SudhagadFortMapID", "rating": 4.6, "totalReviews": 5500, "url": "https://maps.google.com/?q=Sudhagad+Fort" },
+    "description": "Sudhagad Fort, also known as Bhorapgad, is a massive hill fort in Raigad district and was once considered by Chhatrapati Shivaji Maharaj as a potential capital of the Maratha Empire before Raigad was finalized. Known for its vast plateau, historical structures, and scenic beauty.",
+    "trek": {
+        "routes": [{ "name": "Pachapur Route (Main)", "startPoint": "Pachapur Village", "distance": "3 km", "duration": "1.5–2 hours", "difficulty": "Easy to Moderate", "elevation": "590 m", "description": "A well-defined forest trail leading to the fort plateau.", "facilities": ["Parking at base village", "Local guides available", "Basic food stalls"] }],
+        "bestTime": ["Monsoon (July–September)", "Winter (November–February)"],
+        "avoidTime": ["Peak summer"]
+    },
+    "landmarks": [
+        { "name": "Bhorai Devi Temple", "type": "Temple", "description": "Temple dedicated to the local deity.", "historicalSignificance": "Spiritual center of the fort.", "timeToExplore": "20 minutes", "mustSee": true },
+        { "name": "Sudhagad Plateau", "type": "Fort Top", "description": "Extremely large plateau comparable to Raigad.", "historicalSignificance": "Used for settlements and military planning.", "timeToExplore": "60 minutes", "mustSee": true },
+        { "name": "Fort Walls and Bastions", "type": "Fortification", "description": "Remains of strong defensive structures.", "historicalSignificance": "Strategic defense of Konkan region.", "timeToExplore": "30 minutes", "mustSee": true },
+        { "name": "Water Cisterns", "type": "Water Source", "description": "Rock-cut water storage tanks.", "historicalSignificance": "Ensured water supply for fort residents.", "timeToExplore": "15 minutes", "mustSee": true }
+    ],
+    "food": { "onFort": [{ "name": "Simple Meals", "type": "Veg", "price": "₹100-150", "description": "Basic food available near temple area.", "mustTry": false }], "nearbyRestaurants": [{ "name": "Local Dhaba", "distance": "Pachapur Village", "type": "Veg", "priceRange": "₹100-250", "speciality": "Maharashtrian food" }] },
+    "facilities": {
+        "parking": { "available": true, "cost": "₹30-50", "capacity": "Available at base village" },
+        "washrooms": { "available": false, "condition": "Not available" },
+        "drinkingWater": { "available": true, "points": ["Temple area", "Water cisterns"] },
+        "mobileNetwork": { "quality": "Weak", "providers": ["Jio (limited)"] },
+        "firstAid": { "available": false, "location": "Nearest medical facility at Pali" },
+        "guides": { "available": true, "cost": "₹300-500" }
+    },
+    "safety": { "alerts": [
+        { "type": "Info", "message": "Suitable for beginners with basic fitness", "season": "All year" },
+        { "type": "Warning", "message": "Fog reduces visibility during monsoon", "season": "Monsoon" },
+        { "type": "Warning", "message": "Large plateau — risk of losing direction", "season": "All year" }
+    ] },
+    "budget": { "transport": "₹200-500", "food": "₹150-300", "entry": "₹0", "totalPerPerson": "₹400-900" },
+    "history": { "brief": "Sudhagad Fort was considered as a possible capital before Raigad was chosen.", "significance": "Comparable in size and structure to Raigad.", "famousBattles": [], "rulers": ["Marathas", "British"] },
+    "featured": true,
+    "crowdStatus": "Moderate"
+}

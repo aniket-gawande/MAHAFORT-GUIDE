@@ -1,0 +1,40 @@
+{
+    "name": "Kamalgad Fort",
+    "location": {
+        "district": "Satara",
+        "taluka": "Wai",
+        "baseVillage": "Tupewadi / Nandgane",
+        "coordinates": { "lat": 17.8832, "lng": 73.7618 },
+        "nearestCity": "Wai (30 km)"
+    },
+    "googleMaps": { "placeId": "KamalgadFortMapID", "rating": 4.5, "totalReviews": 3500, "url": "https://maps.google.com/?q=Kamalgad+Fort" },
+    "description": "Kamalgad Fort is a lesser-known hill fort located near Wai in Satara district. Known for its unique geological feature called the 'Geru well', a deep vertical pit carved into the rock, the fort offers a short yet adventurous trek with scenic views of the Dhom Dam and surrounding Sahyadri ranges.",
+    "trek": {
+        "routes": [{ "name": "Tupewadi Route (Main)", "startPoint": "Tupewadi Village", "distance": "2.5 km", "duration": "1.5–2 hours", "difficulty": "Moderate", "elevation": "1312 m", "description": "Forest trail followed by steep climb and short rock patch near the top.", "facilities": ["Parking at base village", "Local guides available", "No shops on route"] }],
+        "bestTime": ["Winter (November–February)", "Monsoon (July–September)"],
+        "avoidTime": ["Heavy monsoon – Slippery rock patch", "Peak summer"]
+    },
+    "landmarks": [
+        { "name": "Geru Well", "type": "Rock Structure", "description": "A deep cylindrical pit carved into the rock, accessed via steps inside.", "historicalSignificance": "Unique feature possibly used as prison or storage.", "timeToExplore": "20 minutes", "mustSee": true },
+        { "name": "Fort Plateau", "type": "Fort Top", "description": "Flat top area with great views.", "historicalSignificance": "Used for surveillance and settlement.", "timeToExplore": "30 minutes", "mustSee": true },
+        { "name": "Dhom Dam View", "type": "Viewpoint", "description": "Panoramic view of Dhom Dam and valley.", "historicalSignificance": "Strategic observation point.", "timeToExplore": "20 minutes", "mustSee": true }
+    ],
+    "food": { "onFort": [{ "name": "No Food Available", "type": "N/A", "price": "N/A", "description": "Carry your own food.", "mustTry": false }], "nearbyRestaurants": [{ "name": "Local Dhaba", "distance": "Wai town", "type": "Veg", "priceRange": "₹100-250", "speciality": "Maharashtrian food" }] },
+    "facilities": {
+        "parking": { "available": true, "cost": "Free", "capacity": "Available at base village" },
+        "washrooms": { "available": false, "condition": "Not available" },
+        "drinkingWater": { "available": false, "points": ["Carry your own water"] },
+        "mobileNetwork": { "quality": "Moderate", "providers": ["Jio", "Airtel"] },
+        "firstAid": { "available": false, "location": "Nearest hospital at Wai" },
+        "guides": { "available": true, "cost": "₹300-500" }
+    },
+    "safety": { "alerts": [
+        { "type": "Warning", "message": "Final rock patch requires careful climbing", "season": "All year" },
+        { "type": "Warning", "message": "Geru well is deep — avoid careless entry", "season": "All year" },
+        { "type": "Warning", "message": "Slippery trails during monsoon", "season": "Monsoon" }
+    ] },
+    "budget": { "transport": "₹200-500", "food": "₹100-200", "entry": "₹0", "guide": "₹300-500", "totalPerPerson": "₹500-1000" },
+    "history": { "brief": "Kamalgad Fort served as a strategic lookout connected to nearby forts through signaling systems.", "significance": "Important for surveillance and communication in the Maratha network.", "famousBattles": [], "rulers": ["Marathas", "British"] },
+    "featured": false,
+    "crowdStatus": "Low"
+}

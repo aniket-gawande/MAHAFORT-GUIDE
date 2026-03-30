@@ -1,0 +1,202 @@
+{
+  "name": "Kalavantin Durg",
+  "location": {
+    "district": "Raigad",
+    "taluka": "Panvel",
+    "baseVillage": "Thakurwadi",
+    "coordinates": {
+      "lat": 18.9825,
+      "lng": 73.2245
+    },
+    "nearestCity": "Panvel (15 km)"
+  },
+  "googleMaps": {
+    "placeId": "KalavantinDurgMapID",
+    "rating": 4.7,
+    "totalReviews": 9000,
+    "url": "https://maps.google.com/?q=Kalavantin+Durg"
+  },
+  "description": "Kalavantin Durg is one of the most iconic and thrilling trekking destinations in Maharashtra, known for its steep rock-cut steps carved into a narrow ridge. Located near Prabalgad, the fort offers breathtaking views and an adrenaline-filled climbing experience.",
+  "trek": {
+    "routes": [
+      {
+        "name": "Thakurwadi Route (via Prabalgad Plateau)",
+        "startPoint": "Thakurwadi Village",
+        "distance": "3.5 km",
+        "duration": "1.5–2.5 hours",
+        "difficulty": "Hard",
+        "elevation": "686 m",
+        "description": "The trek starts from Thakurwadi village, passes through forest and Prabalgad plateau, followed by a steep climb on exposed rock-cut steps without railings.",
+        "facilities": [
+          "Parking at base village",
+          "Local guides available",
+          "Basic food stalls"
+        ]
+      }
+    ],
+    "bestTime": [
+      "Winter (November–February) – Clear views",
+      "Post-monsoon (September–October) – Green surroundings"
+    ],
+    "avoidTime": [
+      "Heavy monsoon – Extremely slippery steps",
+      "Peak summer afternoons – Very hot"
+    ]
+  },
+  "landmarks": [
+    {
+      "name": "Rock-Cut Steps",
+      "type": "Trekking Feature",
+      "description": "Narrow and steep steps carved into the rock ridge.",
+      "historicalSignificance": "Provided controlled access to the fort.",
+      "timeToExplore": "30 minutes",
+      "mustSee": true
+    },
+    {
+      "name": "Summit Viewpoint",
+      "type": "Viewpoint",
+      "description": "Top point offering panoramic views of Prabalgad and surrounding valleys.",
+      "historicalSignificance": "Strategic lookout point.",
+      "timeToExplore": "20 minutes",
+      "mustSee": true
+    },
+    {
+      "name": "Prabalgad View",
+      "type": "Viewpoint",
+      "description": "Clear view of nearby Prabalgad Fort.",
+      "historicalSignificance": "Connected fort system.",
+      "timeToExplore": "15 minutes",
+      "mustSee": true
+    }
+  ],
+  "food": {
+    "onFort": [
+      {
+        "name": "Snacks & Lemon Water",
+        "type": "Veg",
+        "price": "₹30-80",
+        "description": "Available at base and plateau.",
+        "mustTry": false
+      }
+    ],
+    "nearbyRestaurants": [
+      {
+        "name": "Village Food Stalls",
+        "distance": "Thakurwadi",
+        "type": "Veg",
+        "priceRange": "₹100-200",
+        "speciality": "Simple meals"
+      }
+    ],
+    "mustTryDishes": [
+      {
+        "name": "Maggi & Lemon Water",
+        "type": "Veg",
+        "price": "₹50-100",
+        "description": "Popular among trekkers.",
+        "mustTry": true
+      }
+    ]
+  },
+  "facilities": {
+    "parking": {
+      "available": true,
+      "cost": "₹50-100",
+      "capacity": "Available at base"
+    },
+    "washrooms": {
+      "available": false,
+      "condition": "Not available"
+    },
+    "drinkingWater": {
+      "available": false,
+      "points": [
+        "Carry your own water",
+        "Limited stalls at plateau"
+      ]
+    },
+    "mobileNetwork": {
+      "quality": "Moderate",
+      "providers": ["Jio", "Airtel"]
+    },
+    "firstAid": {
+      "available": false,
+      "location": "Nearest at base village"
+    },
+    "guides": {
+      "available": true,
+      "cost": "₹300-500"
+    }
+  },
+  "safety": {
+    "alerts": [
+      {
+        "type": "Critical",
+        "message": "No railings on steep steps — high fall risk",
+        "season": "All year"
+      },
+      {
+        "type": "Warning",
+        "message": "Extremely slippery during monsoon",
+        "season": "Monsoon"
+      },
+      {
+        "type": "Warning",
+        "message": "Crowding on steps can be dangerous",
+        "season": "Weekends"
+      }
+    ],
+    "emergencyContacts": [
+      {
+        "type": "Rescue",
+        "name": "Local Rescue Team",
+        "phone": "108",
+        "availability": "Emergency"
+      }
+    ]
+  },
+  "accessibility": {
+    "wheelchairFriendly": false,
+    "elderlyFriendly": false,
+    "kidsAppropriate": false,
+    "stepsCount": 200,
+    "restPoints": 2,
+    "alternativeAccess": "Not suitable for beginners or unfit individuals"
+  },
+  "visitInfo": {
+    "entryFee": {
+      "indian": 0,
+      "foreigner": 0
+    },
+    "timings": "6:00 AM – 5:30 PM",
+    "timeRequired": "3–5 hours",
+    "bestTimeOfDay": "Early morning",
+    "crowdLevel": {
+      "weekday": "Moderate",
+      "weekend": "High"
+    },
+    "photography": {
+      "allowed": true
+    }
+  },
+  "budget": {
+    "transport": "₹200-500",
+    "food": "₹150-300",
+    "entry": "₹0",
+    "guide": "₹300-500",
+    "misc": "₹100-200",
+    "totalPerPerson": "₹500-1000"
+  },
+  "history": {
+    "brief": "Kalavantin Durg is believed to have been used as a watchtower fort in the Konkan region and is closely associated with nearby Prabalgad.",
+    "significance": "Known more for its trekking challenge than major historical events.",
+    "famousBattles": [],
+    "rulers": [
+      "Marathas",
+      "Mughals",
+      "British"
+    ]
+  },
+  "featured": true,
+  "crowdStatus": "High"
+}

@@ -1,0 +1,209 @@
+{
+    "name": "Hadsar Fort",
+    "location": {
+        "district": "Pune",
+        "taluka": "Junnar",
+        "baseVillage": "Hadsar",
+        "coordinates": {
+            "lat": 19.2212,
+            "lng": 73.8725
+        },
+        "nearestCity": "Junnar (15 km)"
+    },
+    "googleMaps": {
+        "placeId": "HadsarFortMapID",
+        "rating": 4.6,
+        "totalReviews": 4200,
+        "url": "https://maps.google.com/?q=Hadsar+Fort"
+    },
+    "description": "Hadsar Fort is a rugged hill fort near Junnar known for its impressive rock-cut steps and grand entrance carved directly into the mountain. It is part of the famous Junnar fort belt and offers a thrilling trekking experience with historical significance.",
+    "trek": {
+        "routes": [
+            {
+                "name": "Hadsar Village Route (Main)",
+                "startPoint": "Hadsar Village",
+                "distance": "3 km",
+                "duration": "1.5–2 hours",
+                "difficulty": "Moderate to Hard",
+                "elevation": "1067 m",
+                "description": "The trek begins with a gradual climb and ends with steep rock-cut steps leading to the main entrance. The final section is challenging and requires careful footing.",
+                "facilities": [
+                    "Parking available at base",
+                    "Local guide available",
+                    "Basic shops at village"
+                ]
+            }
+        ],
+        "bestTime": [
+            "Winter (November–February) – Pleasant weather",
+            "Post-monsoon (September–October) – Green surroundings"
+        ],
+        "avoidTime": [
+            "Heavy monsoon – Steps become very slippery",
+            "Peak summer – Hot and dry conditions"
+        ]
+    },
+    "landmarks": [
+        {
+            "name": "Rock-Cut Steps",
+            "type": "Trekking Feature",
+            "description": "Steep steps carved directly into rock leading to the fort entrance.",
+            "historicalSignificance": "Ingenious design for defense and restricted access.",
+            "timeToExplore": "15-20 minutes",
+            "mustSee": true
+        },
+        {
+            "name": "Main Entrance Gate",
+            "type": "Gate",
+            "description": "Massive entrance carved into the rock face.",
+            "historicalSignificance": "Primary defensive structure of the fort.",
+            "timeToExplore": "20 minutes",
+            "mustSee": true
+        },
+        {
+            "name": "Fort Plateau",
+            "type": "Fort Top",
+            "description": "Open area offering views of surrounding forts like Chavand and Jivdhan.",
+            "historicalSignificance": "Used for surveillance and defense.",
+            "timeToExplore": "30 minutes",
+            "mustSee": true
+        },
+        {
+            "name": "Water Cisterns",
+            "type": "Water Source",
+            "description": "Rock-cut tanks used for water storage.",
+            "historicalSignificance": "Ensured water availability for inhabitants.",
+            "timeToExplore": "15 minutes",
+            "mustSee": true
+        }
+    ],
+    "food": {
+        "onFort": [
+            {
+                "name": "Snacks",
+                "type": "Veg",
+                "price": "₹20-50",
+                "description": "Limited availability at base village.",
+                "mustTry": false
+            }
+        ],
+        "nearbyRestaurants": [
+            {
+                "name": "Local Dhaba",
+                "distance": "Junnar town",
+                "type": "Veg",
+                "priceRange": "₹100-250",
+                "speciality": "Maharashtrian meals"
+            }
+        ],
+        "mustTryDishes": [
+            {
+                "name": "Pithla Bhakri",
+                "type": "Veg",
+                "price": "₹80-120",
+                "description": "Traditional rural dish.",
+                "mustTry": true
+            }
+        ]
+    },
+    "facilities": {
+        "parking": {
+            "available": true,
+            "cost": "Free",
+            "capacity": "Available at base village"
+        },
+        "washrooms": {
+            "available": false,
+            "condition": "Not available"
+        },
+        "drinkingWater": {
+            "available": false,
+            "points": [
+                "Carry your own water",
+                "Seasonal cistern water"
+            ]
+        },
+        "mobileNetwork": {
+            "quality": "Moderate",
+            "providers": ["Jio", "Airtel"]
+        },
+        "firstAid": {
+            "available": false,
+            "location": "Nearest hospital at Junnar"
+        },
+        "guides": {
+            "available": true,
+            "cost": "₹300-500"
+        }
+    },
+    "safety": {
+        "alerts": [
+            {
+                "type": "Warning",
+                "message": "Rock-cut steps are steep and risky",
+                "season": "All year"
+            },
+            {
+                "type": "Warning",
+                "message": "Avoid trekking during heavy rain due to slippery rocks",
+                "season": "Monsoon"
+            },
+            {
+                "type": "Warning",
+                "message": "No railings near edges",
+                "season": "All year"
+            }
+        ],
+        "emergencyContacts": [
+            {
+                "type": "Police",
+                "name": "Junnar Police Station",
+                "phone": "100",
+                "availability": "24/7"
+            }
+        ]
+    },
+    "accessibility": {
+        "wheelchairFriendly": false,
+        "elderlyFriendly": false,
+        "kidsAppropriate": false,
+        "stepsCount": 100,
+        "restPoints": 3,
+        "alternativeAccess": "Requires moderate fitness and climbing ability"
+    },
+    "visitInfo": {
+        "entryFee": {
+            "indian": 0,
+            "foreigner": 0
+        },
+        "timings": "6:00 AM – 6:00 PM",
+        "timeRequired": "3–4 hours",
+        "bestTimeOfDay": "Morning",
+        "crowdLevel": {
+            "weekday": "Low",
+            "weekend": "Moderate"
+        },
+        "photography": {
+            "allowed": true
+        }
+    },
+    "budget": {
+        "transport": "₹200-500",
+        "food": "₹100-200",
+        "entry": "₹0",
+        "misc": "₹100-200",
+        "totalPerPerson": "₹400-900"
+    },
+    "history": {
+        "brief": "Hadsar Fort was part of the Junnar fort belt and played a strategic role in controlling the surrounding region during the Maratha period.",
+        "significance": "Known for its unique rock-cut architecture and defensive design.",
+        "famousBattles": [],
+        "rulers": [
+            "Marathas",
+            "Mughals",
+            "British"
+        ]
+    },
+    "featured": false,
+    "crowdStatus": "Low"
+}

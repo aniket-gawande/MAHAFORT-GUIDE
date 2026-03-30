@@ -1,0 +1,42 @@
+{
+    "name": "Naldurg Fort",
+    "location": {
+        "district": "Dharashiv (Osmanabad)",
+        "taluka": "Tuljapur",
+        "baseVillage": "Naldurg",
+        "coordinates": { "lat": 17.8165, "lng": 76.2843 },
+        "nearestCity": "Solapur (50 km)"
+    },
+    "googleMaps": { "placeId": "NaldurgFortMapID", "rating": 4.5, "totalReviews": 6000, "url": "https://maps.google.com/?q=Naldurg+Fort" },
+    "description": "Naldurg Fort is a massive land fort in the Marathwada region, built during the Bahmani and later ruled by the Adilshahi dynasty. Known for its gigantic stone walls, 100+ bastions, and unique water defense system, the fort stretches over a large area and showcases impressive medieval military architecture.",
+    "trek": {
+        "routes": [{ "name": "Main Entrance Access", "startPoint": "Naldurg Town", "distance": "1 km", "duration": "30–45 minutes", "difficulty": "Easy", "elevation": "Ground level fort", "description": "No trekking required — easy walk through fort.", "facilities": ["Parking available", "Guides available", "Easy access roads"] }],
+        "bestTime": ["Winter (November–February)", "Monsoon (July–September) – Waterfall active"],
+        "avoidTime": ["Peak summer"]
+    },
+    "landmarks": [
+        { "name": "Pani Mahal", "type": "Palace", "description": "Palace structure near the water system.", "historicalSignificance": "Unique water engineering structure.", "timeToExplore": "30 minutes", "mustSee": true },
+        { "name": "Fort Walls", "type": "Fortification", "description": "Massive stone walls extending over several kilometers.", "historicalSignificance": "One of the strongest defensive systems in Deccan.", "timeToExplore": "45 minutes", "mustSee": true },
+        { "name": "Bastions (Buruj)", "type": "Fortification", "description": "Over 100 bastions used for defense.", "historicalSignificance": "Provided artillery advantage.", "timeToExplore": "30 minutes", "mustSee": true },
+        { "name": "Waterfall System", "type": "Water Feature", "description": "Seasonal waterfall flowing within the fort during monsoon.", "historicalSignificance": "Part of water defense mechanism.", "timeToExplore": "20 minutes", "mustSee": true }
+    ],
+    "food": { "onFort": [{ "name": "Snacks", "type": "Veg", "price": "₹20-50", "description": "Available near entrance.", "mustTry": false }], "nearbyRestaurants": [{ "name": "Local Hotel", "distance": "Naldurg town", "type": "Veg/Non-Veg", "priceRange": "₹100-300", "speciality": "Local Maharashtrian food" }] },
+    "facilities": {
+        "parking": { "available": true, "cost": "₹30-50", "capacity": "Large parking area" },
+        "washrooms": { "available": true, "condition": "Basic facilities near entrance" },
+        "drinkingWater": { "available": true, "points": ["Available near entry"] },
+        "mobileNetwork": { "quality": "Good", "providers": ["Jio", "Airtel"] },
+        "firstAid": { "available": true, "location": "Nearby town" },
+        "guides": { "available": true, "cost": "₹200-400" }
+    },
+    "safety": { "alerts": [
+        { "type": "Info", "message": "No trekking required — safe for all age groups", "season": "All year" },
+        { "type": "Warning", "message": "Large area — avoid exploring alone", "season": "All year" },
+        { "type": "Warning", "message": "Slippery surfaces during monsoon", "season": "Monsoon" }
+    ] },
+    "visitInfo": { "entryFee": { "indian": 25, "foreigner": 300 }, "timings": "9:00 AM – 5:30 PM" },
+    "budget": { "transport": "₹300-800", "food": "₹150-300", "entry": "₹25", "guide": "₹200-400", "totalPerPerson": "₹600-1200" },
+    "history": { "brief": "Built during the Bahmani period and later ruled by the Adilshahi dynasty.", "significance": "Famous for its strong fortification and advanced water defense system.", "famousBattles": [], "rulers": ["Bahmani Sultanate", "Adilshahi", "Mughals", "British"] },
+    "featured": true,
+    "crowdStatus": "Moderate"
+}

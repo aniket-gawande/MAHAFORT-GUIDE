@@ -248,70 +248,53 @@ const TripPlanner = () => {
       <Navbar />
 
       {/* ───── HERO BANNER ───── */}
-      <div className="relative pt-20 pb-16 overflow-hidden">
-        {/* Background image */}
-        <div className="absolute inset-0 z-0">
-          <img src={heroBg} alt="" className="w-full h-full object-cover opacity-20" />
-        </div>
-        {/* Animated gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-royal-black/95 via-royal-black/80 to-royal-black/95">
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-saffron/5 rounded-full blur-[120px] animate-pulse"></div>
-          <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-orange-600/5 rounded-full blur-[100px] animate-pulse delay-1000"></div>
-        </div>
+      <div className="relative pt-24 pb-12 flex flex-col items-center text-center">
+        {/* Very subtle background gradient, no image noise */}
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#0a0a0a] via-[#080808] to-royal-black"></div>
 
-        {/* Grid pattern overlay */}
-        <div className="absolute inset-0 opacity-[0.03]" style={{
-          backgroundImage: 'linear-gradient(rgba(255,153,51,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,153,51,0.3) 1px, transparent 1px)',
-          backgroundSize: '50px 50px'
-        }}></div>
-
-        <div className="container mx-auto px-4 sm:px-6 relative z-10 pt-12 pb-4">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-3 px-5 py-2 bg-saffron/10 border border-saffron/30 rounded-full mb-8 animate-fade-in-up">
-              <MdOutlineTravelExplore className="text-saffron text-xl" />
-              <span className="text-saffron font-bold tracking-[0.2em] text-xs uppercase">Expedition Command Center</span>
-            </div>
-            <h1 className="text-4xl sm:text-6xl md:text-7xl font-cinematic font-black mb-6 leading-tight animate-fade-in-up delay-100">
-              PLAN YOUR <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-saffron via-yellow-200 to-saffron animate-gradient">
-                CONQUEST
-              </span>
-            </h1>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed animate-fade-in-up delay-200">
-              Chart your course through Maharashtra's legendary forts. Pick your targets, plan your days, 
-              gear up like a true Mavla, and march into history.
-            </p>
+        <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#111] border border-saffron/30 rounded-full mb-6 relative">
+            <GiCompass className="text-saffron text-sm" />
+            <span className="text-saffron font-bold tracking-widest text-[10px] uppercase">Expedition Command Center</span>
+            <div className="absolute inset-0 bg-saffron/5 blur-sm rounded-full -z-10"></div>
           </div>
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-cinematic font-black mb-4 leading-tight tracking-wider">
+            <span className="text-white block">PLAN YOUR</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-saffron via-yellow-400 to-[#d97c26] block drop-shadow-sm">
+              CONQUEST
+            </span>
+          </h1>
+          <p className="text-gray-500 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
+            Chart your course through Maharashtra's legendary forts. Pick your
+            targets, plan your days, gear up like a true Mavla, and march into history.
+          </p>
         </div>
       </div>
 
       {/* ───── STEP PROGRESS BAR ───── */}
-      <div className="sticky top-[60px] z-40 bg-royal-black/90 backdrop-blur-xl border-b border-white/5">
-        <div className="container mx-auto px-4 sm:px-6 py-4">
-          <div className="flex items-center justify-between max-w-4xl mx-auto">
+      <div className="relative z-40 bg-royal-black pb-10">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="flex items-center justify-center max-w-4xl mx-auto">
             {STEPS.map((s, i) => (
               <React.Fragment key={s.id}>
                 <button
                   onClick={() => (i <= step || (i === step + 1 && canProceed)) && setStep(i)}
-                  className={`flex flex-col sm:flex-row items-center gap-1 sm:gap-2 transition-all duration-300 group cursor-pointer
-                    ${i === step ? 'scale-105' : i < step ? 'opacity-80' : 'opacity-40'}
-                  `}
+                  className={`flex flex-col sm:flex-row items-center gap-1.5 sm:gap-2.5 transition-all duration-300 group cursor-pointer ${i === step ? 'scale-105' : i < step ? 'opacity-80' : 'opacity-40 hover:opacity-70'}`}
                 >
-                  <div className={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl flex items-center justify-center text-lg transition-all duration-300
-                    ${i < step ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30' :
-                      i === step ? 'bg-saffron/20 text-saffron border border-saffron/50 shadow-[0_0_20px_rgba(255,153,51,0.3)]' :
-                      'bg-white/5 text-gray-500 border border-white/10'}
+                  <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-lg flex items-center justify-center text-sm transition-all duration-300
+                    ${i === step ? 'bg-saffron/10 text-saffron border border-saffron/40 shadow-inner' :
+                      i < step ? 'text-saffron' : 'text-gray-500'}
                   `}>
-                    {i < step ? <FaCheckCircle /> : s.icon}
+                    {i === 0 && i === step ? <GiCastle size={14} /> : React.cloneElement(s.icon, {size: 14})}
                   </div>
-                  <span className={`text-[10px] sm:text-xs font-bold tracking-wider uppercase hidden sm:block
-                    ${i === step ? 'text-saffron' : i < step ? 'text-emerald-400' : 'text-gray-500'}`}>
+                  <span className={`text-[9px] sm:text-[10px] font-bold tracking-[0.15em] uppercase hidden sm:block
+                    ${i === step ? 'text-saffron' : i < step ? 'text-saffron/60' : 'text-gray-500'}`}>
                     {s.label}
                   </span>
                 </button>
                 {i < STEPS.length - 1 && (
-                  <div className={`flex-1 h-0.5 mx-1 sm:mx-3 rounded-full transition-all duration-500
-                    ${i < step ? 'bg-gradient-to-r from-emerald-500 to-emerald-500/30' : 'bg-white/5'}`}
+                  <div className={`w-6 sm:w-10 h-px mx-1.5 sm:mx-3 transition-all duration-500
+                    ${i < step ? 'bg-saffron/30' : 'bg-white/10'}`}
                   ></div>
                 )}
               </React.Fragment>
@@ -321,142 +304,129 @@ const TripPlanner = () => {
       </div>
 
       {/* ───── MAIN CONTENT ───── */}
-      <div className="container mx-auto px-4 sm:px-6 py-10">
+      <div className="container mx-auto px-4 sm:px-6 py-4">
 
         {/* ╔═══════════════════ STEP 0: SELECT FORTS ═══════════════════╗ */}
         {step === 0 && (
-          <div className="animate-fade-in-up">
+          <div className="animate-fade-in-up flex flex-col items-center">
             {/* Header */}
-            <div className="text-center mb-10">
-              <h2 className="text-3xl sm:text-4xl font-cinematic font-bold mb-3">
-                <GiCastle className="inline text-saffron mr-3" />
-                Choose Your <span className="text-saffron">Forts</span>
+            <div className="text-center mb-8">
+              <h2 className="text-xl sm:text-2xl font-cinematic font-bold mb-2 flex items-center justify-center gap-3">
+                <GiCastle className="text-saffron" size={24} />
+                <span className="text-white">CHOOSE YOUR</span> <span className="text-saffron">FORTS</span>
               </h2>
-              <p className="text-gray-400 max-w-xl mx-auto">Select the forts you want to conquer. We'll optimize your route and build a battle plan.</p>
+              <p className="text-gray-500 text-[11px] sm:text-xs max-w-sm mx-auto">Select the forts you want to conquer. We'll optimize your route and build a battle plan.</p>
             </div>
 
-            {/* Selected Strip */}
-            {selectedForts.length > 0 && (
-              <div className="mb-8 p-4 bg-saffron/5 border border-saffron/20 rounded-2xl">
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-saffron font-bold text-sm tracking-wider uppercase flex items-center gap-2">
-                    <FaFlagCheckered /> {selectedForts.length} Fort{selectedForts.length > 1 ? 's' : ''} Selected
-                  </span>
-                  <button onClick={() => setSelectedForts([])} className="text-xs text-gray-500 hover:text-red-400 transition-colors">Clear All</button>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {selectedForts.map(f => (
-                    <span key={f._id} className="inline-flex items-center gap-2 px-3 py-1.5 bg-saffron/10 border border-saffron/30 rounded-lg text-sm text-saffron">
-                      {f.name}
-                      <button onClick={() => toggleFort(f)} className="hover:text-red-400 transition-colors"><FaTimes size={10} /></button>
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
-
             {/* Search & Filter Bar */}
-            <div className="bg-white/[0.02] backdrop-blur-sm border border-white/5 rounded-2xl p-4 sm:p-5 mb-8 flex flex-col md:flex-row gap-4">
-              <div className="flex-1 relative">
-                <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-600" />
+            <div className="w-full max-w-5xl bg-[#0a0a0a] border border-white/5 rounded-2xl p-2 mb-10 flex flex-col md:flex-row items-center gap-2">
+              <div className="flex-1 w-full relative">
+                <FaSearch className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-500" size={14} />
                 <input
                   type="text"
-                  placeholder="Search forts by name..."
+                  placeholder="Search forts by name.."
                   value={searchTerm}
                   onChange={e => setSearchTerm(e.target.value)}
-                  className="w-full bg-royal-black/50 border border-white/10 rounded-xl py-3 pl-12 pr-4 text-white placeholder-gray-600 focus:border-saffron focus:outline-none focus:ring-1 focus:ring-saffron transition-all"
+                  className="w-full bg-transparent border-none py-3 pl-12 pr-4 text-gray-300 placeholder-gray-600 focus:outline-none text-xs"
                 />
               </div>
-              <div className="flex gap-3">
+              <div className="flex gap-2 w-full md:w-auto p-1">
                 <select value={districtFilter} onChange={e => setDistrictFilter(e.target.value)}
-                  className="bg-royal-black/50 border border-white/10 rounded-xl py-3 px-4 text-white appearance-none cursor-pointer hover:border-saffron/50 focus:border-saffron focus:outline-none text-sm">
-                  <option value="all" className="bg-royal-black">All Districts</option>
-                  {districts.filter(d => d !== 'all').map(d => <option key={d} value={d} className="bg-royal-black">{d}</option>)}
+                  className="bg-[#111] border border-white/5 rounded-xl py-2.5 px-6 text-gray-400 appearance-none cursor-pointer focus:outline-none text-[10px] font-bold tracking-widest uppercase hover:bg-[#1a1a1a] transition-colors">
+                  <option value="all">All Districts</option>
+                  {districts.filter(d => d !== 'all').map(d => <option key={d} value={d}>{d}</option>)}
                 </select>
                 <select value={difficultyFilter} onChange={e => setDifficultyFilter(e.target.value)}
-                  className="bg-royal-black/50 border border-white/10 rounded-xl py-3 px-4 text-white appearance-none cursor-pointer hover:border-saffron/50 focus:border-saffron focus:outline-none text-sm">
-                  <option value="all" className="bg-royal-black">All Levels</option>
-                  <option value="Easy" className="bg-royal-black">Easy</option>
-                  <option value="Moderate" className="bg-royal-black">Moderate</option>
-                  <option value="Hard" className="bg-royal-black">Hard</option>
+                  className="bg-[#111] border border-white/5 rounded-xl py-2.5 px-6 text-gray-400 appearance-none cursor-pointer focus:outline-none text-[10px] font-bold tracking-widest uppercase hover:bg-[#1a1a1a] transition-colors">
+                  <option value="all">All Levels</option>
+                  <option value="Easy">Easy</option>
+                  <option value="Moderate">Moderate</option>
+                  <option value="Hard">Hard</option>
                 </select>
               </div>
             </div>
 
             {/* Fort Cards Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+            <div className="w-full max-w-7xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
               {displayedForts.map(fort => {
                 const isSelected = selectedForts.find(f => f._id === fort._id);
-                const dc = DIFFICULTY_COLORS[fort.difficulty] || DIFFICULTY_COLORS.Moderate;
+                // Difficulty pill styles for the image overlay
+                const diffStyles = {
+                  Easy: 'bg-emerald-500/80 text-white',
+                  Moderate: 'bg-yellow-500/80 text-white',
+                  Hard: 'bg-red-500/80 text-white',
+                  Difficult: 'bg-red-500/80 text-white'
+                };
+                const dcClass = diffStyles[fort.difficulty] || diffStyles.Moderate;
                 const fortImage = fort.images && fort.images.length > 0 ? fort.images[0] : 'https://images.unsplash.com/photo-1587474260584-136574528ed5?w=500';
+
                 return (
-                  <button
-                    key={fort._id}
-                    onClick={() => toggleFort(fort)}
-                    className={`group relative text-left rounded-2xl border overflow-hidden transition-all duration-300 hover:-translate-y-1
-                      ${isSelected
-                        ? 'bg-saffron/10 border-saffron/50 shadow-[0_0_25px_rgba(255,153,51,0.15)]'
-                        : 'bg-white/[0.02] border-white/5 hover:border-saffron/30 hover:bg-white/[0.04]'}
-                    `}
-                  >
-                    {/* Fort Image */}
-                    <div className="relative h-40 w-full overflow-hidden">
-                      <img
-                        src={fortImage}
-                        alt={fort.name}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-royal-black via-transparent to-transparent"></div>
-
-                      {/* Selection indicator */}
-                      <div className={`absolute top-3 right-3 w-7 h-7 rounded-full flex items-center justify-center transition-all duration-300
-                        ${isSelected ? 'bg-saffron text-black scale-100' : 'bg-black/50 backdrop-blur-sm border border-white/20 scale-90 group-hover:scale-100 group-hover:border-saffron/40'}`}>
-                        {isSelected ? <FaCheckCircle size={12} /> : <FaPlus size={10} className="text-gray-300 group-hover:text-saffron transition-colors" />}
-                      </div>
-
-                      {/* Difficulty badge on image */}
-                      <div className="absolute top-3 left-3">
-                        <span className={`px-2 py-0.5 rounded-md text-[10px] font-bold ${dc.bg} ${dc.text} ${dc.border} border backdrop-blur-sm`}>
+                  <div key={fort._id} className={`group flex flex-col overflow-hidden rounded-2xl bg-[#0F0F0F] border transition-all duration-300 ${isSelected ? 'border-saffron/60 shadow-[0_0_15px_rgba(255,153,51,0.1)]' : 'border-white/5 hover:border-white/10 hover:shadow-xl'}`}>
+                    {/* Top Image */}
+                    <div className="relative h-44 w-full overflow-hidden">
+                      <img src={fortImage} alt={fort.name} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-transform duration-700 group-hover:scale-105" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0F0F0F] via-transparent to-transparent opacity-90"></div>
+                      
+                      {/* Difficulty Badge */}
+                      <div className="absolute top-4 left-4">
+                        <span className={`px-2.5 py-1 rounded-md text-[9px] font-bold uppercase tracking-wider backdrop-blur-sm ${dcClass}`}>
                           {fort.difficulty}
                         </span>
                       </div>
+                      
+                      {/* Plus / Check Button */}
+                      <button 
+                        onClick={() => toggleFort(fort)} 
+                        className={`absolute top-4 right-4 w-7 h-7 rounded-full flex items-center justify-center backdrop-blur-md transition-all border ${isSelected ? 'bg-saffron text-black border-saffron' : 'bg-black/40 text-white hover:bg-black/60 border-white/20'}`}
+                      >
+                        {isSelected ? <FaCheckCircle size={12} /> : <FaPlus size={10} />}
+                      </button>
                     </div>
 
-                    {/* Fort info */}
-                    <div className="p-4">
-                      <div className="flex items-center gap-2 text-saffron text-xs font-bold tracking-wider uppercase mb-2">
-                        <FaMapMarkerAlt size={10} /> {fort.location?.district}
+                    {/* Content */}
+                    <div className="p-5 flex flex-col flex-1 pb-6">
+                      <div className="flex items-center gap-1.5 text-saffron text-[10px] font-bold tracking-[0.15em] uppercase mb-1">
+                        <FaMapMarkerAlt size={10} /> {fort.location?.district || 'PUNE'}
                       </div>
-                      <h3 className={`text-lg font-cinematic font-bold mb-2 transition-colors ${isSelected ? 'text-saffron' : 'text-white group-hover:text-saffron'}`}>
+                      <h3 className="text-white font-cinematic font-bold text-sm uppercase tracking-wide mb-2 truncate">
                         {fort.name}
                       </h3>
-                      <p className="text-gray-500 text-xs leading-relaxed mb-3 line-clamp-2">{fort.description}</p>
-
-                      <div className="flex flex-wrap items-center gap-2">
-                        <span className="text-gray-600 text-[10px] flex items-center gap-1">
-                          <FaMountain size={8} /> {fort.altitude || 'N/A'}
-                        </span>
-                        {fort.rating && (
-                          <span className="text-gray-600 text-[10px] flex items-center gap-1">
-                            <FaStar size={8} className="text-amber-500" /> {fort.rating}
-                          </span>
-                        )}
+                      <p className="text-gray-500 text-[10px] leading-relaxed line-clamp-2 mb-4 flex-1">
+                        {fort.description || fort.historicalSignificance || 'A historic fort offering spectacular views and a glimpse into the Maratha empire.'}
+                      </p>
+                      
+                      <div className="flex items-center gap-3 text-gray-500 text-[9px] font-bold tracking-wider">
+                        <span className="flex items-center gap-1 text-[#C47D3B]">▲ {fort.altitude || '1312 m'}</span>
+                        <span className="flex items-center gap-1 text-[#C47D3B]">★ {fort.rating || '4.6'}</span>
                       </div>
                     </div>
-                  </button>
+                  </div>
                 );
               })}
             </div>
 
             {/* Show more */}
             {filteredForts.length > 12 && !showAllForts && (
-              <div className="text-center mt-8">
+              <div className="text-center w-full mb-6">
                 <button onClick={() => setShowAllForts(true)}
-                  className="px-8 py-3 bg-white/5 border border-white/10 rounded-xl text-gray-400 hover:text-saffron hover:border-saffron/30 transition-all text-sm font-bold tracking-wider">
-                  SHOW ALL {filteredForts.length} FORTS <FaArrowDown className="inline ml-2" />
+                  className="px-6 py-2.5 bg-[#111] border border-white/5 rounded-lg text-gray-400 hover:text-white transition-colors text-[10px] font-bold tracking-widest uppercase">
+                  SHOW ALL {filteredForts.length} FORTS ↓
                 </button>
               </div>
             )}
+            
+            {/* Sticky Floating Action Button for Step 0 */}
+            <div className="fixed bottom-6 right-6 z-50">
+               <button onClick={nextStep} disabled={!canProceed}
+                 className={`flex items-center gap-3 px-6 py-3.5 rounded-xl font-bold text-[10px] tracking-widest uppercase transition-all shadow-xl
+                   ${canProceed
+                     ? 'bg-[#111] border border-white/10 text-gray-300 hover:border-saffron hover:text-saffron'
+                     : 'bg-[#0a0a0a] text-gray-700 cursor-not-allowed border border-white/5 opacity-80'
+                   }`}
+               >
+                 PLAN {selectedForts.length} FORT{selectedForts.length !== 1 ? 'S' : ''} <FaChevronRight size={10} />
+               </button>
+            </div>
           </div>
         )}
 
@@ -932,36 +902,34 @@ const TripPlanner = () => {
           </div>
         )}
 
-        {/* ───── NAVIGATION BUTTONS ───── */}
-        <div className="flex items-center justify-between mt-12 pt-8 border-t border-white/5">
-          {step > 0 ? (
+        {/* ───── NAVIGATION BUTTONS (For Steps 1-4) ───── */}
+        {step > 0 && (
+          <div className="flex items-center justify-between mt-12 pt-8 border-t border-white/5 pb-10">
             <button onClick={prevStep}
-              className="flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-gray-300 hover:text-white hover:border-saffron/30 transition-all font-bold text-sm tracking-wider">
-              <FaChevronLeft size={12} /> BACK
+              className="flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-gray-300 hover:text-white hover:border-saffron/30 transition-all font-bold text-[10px] tracking-widest uppercase">
+              <FaChevronLeft size={10} /> BACK
             </button>
-          ) : <div />}
 
-          {step < 4 ? (
-            <button onClick={nextStep} disabled={!canProceed}
-              className={`flex items-center gap-2 px-8 py-3 rounded-xl font-bold text-sm tracking-wider transition-all
-                ${canProceed
-                  ? 'bg-saffron text-black hover:bg-white hover:scale-105 shadow-[0_0_20px_rgba(255,153,51,0.3)]'
-                  : 'bg-white/5 text-gray-600 cursor-not-allowed border border-white/10'
-                }`}
-            >
-              {step === 0 ? `PLAN ${selectedForts.length} FORT${selectedForts.length !== 1 ? 'S' : ''}` : 'NEXT STEP'}
-              <FaChevronRight size={12} />
-            </button>
-          ) : null}
-        </div>
+            {step < 4 && (
+              <button onClick={nextStep} disabled={!canProceed}
+                className={`flex items-center gap-2 px-8 py-3 rounded-xl font-bold text-[10px] tracking-widest uppercase transition-all
+                  ${canProceed
+                    ? 'bg-saffron text-black hover:bg-white hover:scale-105 shadow-[0_0_20px_rgba(255,153,51,0.3)]'
+                    : 'bg-white/5 text-gray-600 cursor-not-allowed border border-white/10'
+                  }`}
+              >
+                NEXT STEP <FaChevronRight size={10} />
+              </button>
+            )}
+          </div>
+        )}
       </div>
 
       {/* ───── FOOTER ───── */}
-      <footer className="mt-20 border-t border-white/5 bg-white/[0.01] py-10">
-        <div className="container mx-auto px-4 sm:px-6 text-center">
-          <p className="text-gray-600 text-sm">
-            Built with ❤️ for the Maratha Legacy |{' '}
-            <Link to="/" className="text-saffron hover:underline">MAHAFORT GUIDE</Link>
+      <footer className="mt-8 py-8 border-t border-white/5">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-gray-500 text-[10px] font-bold tracking-widest mb-4">
+            Built with <span className="text-[#C47D3B]">♥</span> for the Maratha Legacy | <span className="text-[#C47D3B]">MAHAFORT GUIDE</span>
           </p>
         </div>
       </footer>

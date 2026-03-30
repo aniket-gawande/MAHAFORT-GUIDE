@@ -2,6 +2,7 @@ import React, { Suspense, lazy, useContext } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, AuthContext } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
+import BahirjiChatbot from './components/BahirjiChatbot';
 
 // Lazy load all pages for faster initial startup
 const Home = lazy(() => import('./pages/Home'));
@@ -101,6 +102,7 @@ function App() {
       <Router>
         <div className="App">
           <AppRoutes />
+          <BahirjiChatbot />
         </div>
       </Router>
     </AuthProvider>

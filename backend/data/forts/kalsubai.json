@@ -1,0 +1,197 @@
+{
+    "name": "Kalsubai Peak",
+    "location": {
+        "district": "Ahmednagar",
+        "taluka": "Akole",
+        "baseVillage": "Bari",
+        "coordinates": {
+            "lat": 19.6012,
+            "lng": 73.7007
+        },
+        "nearestCity": "Nashik (60 km)"
+    },
+    "googleMaps": {
+        "placeId": "KalsubaiPeakMapID",
+        "rating": 4.8,
+        "totalReviews": 12000,
+        "url": "https://maps.google.com/?q=Kalsubai+Peak"
+    },
+    "description": "Kalsubai Peak is the highest point in Maharashtra at an elevation of 1646 meters. Known as the 'Everest of Maharashtra', it offers breathtaking panoramic views of the Sahyadri range including Alang, Madan, Kulang, and Ratangad. The trek is popular among beginners and experienced trekkers alike.",
+    "trek": {
+        "routes": [
+            {
+                "name": "Bari Village Route (Main)",
+                "startPoint": "Bari Village",
+                "distance": "5.5 km",
+                "duration": "2.5–3 hours",
+                "difficulty": "Moderate",
+                "elevation": "1646 m",
+                "description": "The most popular route with well-defined trails and multiple iron ladders installed at steep sections for safety.",
+                "facilities": [
+                    "Food stalls at base village",
+                    "Parking available",
+                    "Local guides available"
+                ]
+            }
+        ],
+        "bestTime": [
+            "Winter (November–February) – Clear views and cool weather",
+            "Post-monsoon (September–October) – Green landscapes"
+        ],
+        "avoidTime": [
+            "Heavy monsoon – Extremely slippery ladders",
+            "Peak afternoon in summer – very hot"
+        ]
+    },
+    "landmarks": [
+        {
+            "name": "Kalsubai Temple",
+            "type": "Temple",
+            "description": "Small temple dedicated to Goddess Kalsubai at the summit.",
+            "historicalSignificance": "Sacred pilgrimage site for locals.",
+            "timeToExplore": "15-20 minutes",
+            "mustSee": true
+        },
+        {
+            "name": "Iron Ladders",
+            "type": "Trekking Feature",
+            "description": "Series of ladders installed at steep rock sections.",
+            "historicalSignificance": "Modern addition for trek safety.",
+            "timeToExplore": "Throughout trek",
+            "mustSee": true
+        },
+        {
+            "name": "Panoramic Viewpoints",
+            "type": "Viewpoint",
+            "description": "360° views of Sahyadri peaks like Ratangad and Alang.",
+            "historicalSignificance": "Geographical high point of Maharashtra.",
+            "timeToExplore": "30 minutes",
+            "mustSee": true
+        }
+    ],
+    "food": {
+        "onFort": [
+            {
+                "name": "Snacks & Maggi",
+                "type": "Veg",
+                "price": "₹30-80",
+                "description": "Available at multiple stalls along route.",
+                "mustTry": false
+            }
+        ],
+        "nearbyRestaurants": [
+            {
+                "name": "Local Village Stalls",
+                "distance": "Bari Village",
+                "type": "Veg",
+                "priceRange": "₹100-200",
+                "speciality": "Home-cooked Maharashtrian meals"
+            }
+        ],
+        "mustTryDishes": [
+            {
+                "name": "Pithla Bhakri",
+                "type": "Veg",
+                "price": "₹80-120",
+                "description": "Traditional meal served at base village.",
+                "mustTry": true
+            }
+        ]
+    },
+    "facilities": {
+        "parking": {
+            "available": true,
+            "cost": "₹50-100",
+            "capacity": "Available at Bari village"
+        },
+        "washrooms": {
+            "available": false,
+            "condition": "Limited/basic at base"
+        },
+        "drinkingWater": {
+            "available": false,
+            "points": [
+                "Carry your own water",
+                "Limited stalls sell bottled water"
+            ]
+        },
+        "mobileNetwork": {
+            "quality": "Moderate",
+            "providers": ["Jio", "Airtel"]
+        },
+        "firstAid": {
+            "available": false,
+            "location": "Nearest medical facility at base village"
+        },
+        "guides": {
+            "available": true,
+            "cost": "₹300-500"
+        }
+    },
+    "safety": {
+        "alerts": [
+            {
+                "type": "Warning",
+                "message": "Iron ladders become slippery during monsoon",
+                "season": "Monsoon"
+            },
+            {
+                "type": "Warning",
+                "message": "Heavy crowding near ladders can cause delays",
+                "season": "Weekends"
+            },
+            {
+                "type": "Warning",
+                "message": "Carry sufficient water — no natural sources",
+                "season": "All year"
+            }
+        ],
+        "emergencyContacts": [
+            {
+                "type": "Rescue",
+                "name": "Local Trek Rescue",
+                "phone": "108",
+                "availability": "Emergency"
+            }
+        ]
+    },
+    "accessibility": {
+        "wheelchairFriendly": false,
+        "elderlyFriendly": false,
+        "kidsAppropriate": true,
+        "stepsCount": 0,
+        "restPoints": 4,
+        "alternativeAccess": "Requires moderate fitness; ladders make it unsuitable for elderly"
+    },
+    "visitInfo": {
+        "entryFee": {
+            "indian": 0,
+            "foreigner": 0
+        },
+        "timings": "Open all day (best to start early morning)",
+        "timeRequired": "4–6 hours (round trip)",
+        "bestTimeOfDay": "Early morning (sunrise trek recommended)",
+        "crowdLevel": {
+            "weekday": "Moderate",
+            "weekend": "High"
+        },
+        "photography": {
+            "allowed": true
+        }
+    },
+    "budget": {
+        "transport": "₹300-700",
+        "food": "₹150-300",
+        "entry": "₹0",
+        "misc": "₹100-200",
+        "totalPerPerson": "₹500-1000"
+    },
+    "history": {
+        "brief": "Kalsubai Peak is named after a local woman named Kalsubai who is believed to have lived on the mountain.",
+        "significance": "It is the highest peak in Maharashtra and a popular trekking destination.",
+        "famousBattles": [],
+        "rulers": []
+    },
+    "featured": true,
+    "crowdStatus": "High"
+}

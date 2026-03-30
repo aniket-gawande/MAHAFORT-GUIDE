@@ -1,0 +1,41 @@
+{
+    "name": "Avchitgad Fort",
+    "location": {
+        "district": "Raigad",
+        "taluka": "Roha",
+        "baseVillage": "Medha",
+        "coordinates": { "lat": 18.4365, "lng": 73.1132 },
+        "nearestCity": "Roha (10 km)"
+    },
+    "googleMaps": { "placeId": "AvchitgadFortMapID", "rating": 4.4, "totalReviews": 3200, "url": "https://maps.google.com/?q=Avchitgad+Fort" },
+    "description": "Avchitgad Fort is a small yet scenic hill fort located near Roha in Raigad district. Surrounded by dense greenery and offering beautiful views of the Kundalika river valley and Konkan landscape, it is an easy and peaceful trekking destination. The fort was captured by Chhatrapati Shivaji Maharaj from the Adilshahi in 1660.",
+    "trek": {
+        "routes": [{ "name": "Medha Village Route (Main)", "startPoint": "Medha Village", "distance": "2.5 km", "duration": "1–1.5 hours", "difficulty": "Easy", "elevation": "330 m", "description": "A short and straightforward trek through forest paths.", "facilities": ["Parking at base village", "Basic shops", "Clear trail"] }],
+        "bestTime": ["Monsoon (July–September)", "Winter (November–February)"],
+        "avoidTime": ["Peak summer"]
+    },
+    "landmarks": [
+        { "name": "Fort Walls", "type": "Fortification", "description": "Remains of defensive structures.", "historicalSignificance": "Used for regional defense.", "timeToExplore": "20 minutes", "mustSee": true },
+        { "name": "Bastions", "type": "Fortification", "description": "Small bastions overlooking valley.", "historicalSignificance": "Watch points for enemy movement.", "timeToExplore": "15 minutes", "mustSee": true },
+        { "name": "Water Tanks", "type": "Water Source", "description": "Rock-cut water storage tanks.", "historicalSignificance": "Provided water supply.", "timeToExplore": "10 minutes", "mustSee": true },
+        { "name": "Viewpoints", "type": "Viewpoint", "description": "Views of Kundalika valley and Konkan greenery.", "historicalSignificance": "Strategic observation points.", "timeToExplore": "20 minutes", "mustSee": true }
+    ],
+    "food": { "onFort": [{ "name": "No Food Available", "type": "N/A", "price": "N/A", "description": "Carry your own food.", "mustTry": false }], "nearbyRestaurants": [{ "name": "Local Dhaba", "distance": "Roha town", "type": "Veg", "priceRange": "₹100-250", "speciality": "Maharashtrian meals" }] },
+    "facilities": {
+        "parking": { "available": true, "cost": "Free", "capacity": "Available at Medha village" },
+        "washrooms": { "available": false, "condition": "Not available" },
+        "drinkingWater": { "available": false, "points": ["Carry your own water", "Seasonal cistern water"] },
+        "mobileNetwork": { "quality": "Good", "providers": ["Jio", "Airtel"] },
+        "firstAid": { "available": false, "location": "Nearest hospital in Roha" },
+        "guides": { "available": false, "cost": "Not required" }
+    },
+    "safety": { "alerts": [
+        { "type": "Info", "message": "Easy trek suitable for beginners", "season": "All year" },
+        { "type": "Warning", "message": "Slippery trails during monsoon", "season": "Monsoon" },
+        { "type": "Warning", "message": "Dense vegetation — watch for insects", "season": "All year" }
+    ] },
+    "budget": { "transport": "₹200-500", "food": "₹100-200", "entry": "₹0", "totalPerPerson": "₹350-800" },
+    "history": { "brief": "Captured by Chhatrapati Shivaji Maharaj from the Adilshahi in 1660.", "significance": "Important for regional surveillance and control of trade routes.", "famousBattles": [], "rulers": ["Adilshahi", "Marathas", "British"] },
+    "featured": false,
+    "crowdStatus": "Low"
+}

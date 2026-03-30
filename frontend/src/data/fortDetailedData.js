@@ -2413,8 +2413,2099 @@ const fortDetailedData = {
             rating: 4.4,
             reviewCount: '16,000+'
         }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ 11. VISAPUR FORT ━━━━━━━━━━━━━━━━━━
+    visapur: {
+        introduction: `Visapur Fort is a massive hill fort near Lonavala, famous for its vast plateau, ancient ruins, 
+            and breathtaking monsoon views. Built by the Marathas during the Peshwa era, it is one of the most 
+            popular trekking destinations in Maharashtra. The twin fort of Lohagad, Visapur is actually the larger 
+            and more imposing of the pair, with sprawling ruins, rock-cut cisterns, and unmatched panoramic views 
+            of the Sahyadri range.`,
+
+        quote: {
+            text: "गड जिंकला म्हणजे स्वराज्याचा विजय!",
+            attribution: "Maratha war philosophy"
+        },
+
+        timeline: [
+            { year: '1713', title: 'Fort Construction', desc: 'Built by Balaji Vishwanath, the first Peshwa of the Maratha Empire, as a strategic companion to the older Lohagad Fort.' },
+            { year: '1818', title: 'British Attack', desc: 'British forces attacked and captured Visapur using heavy artillery during the Third Anglo-Maratha War. The fort fell after a fierce bombardment.' },
+            { year: '1818', title: 'Destruction of Fortifications', desc: 'Major structures were systematically destroyed by the British to permanently weaken Maratha resistance and prevent future rebellions.' },
+            { year: 'Present', title: 'Popular Tourist & Trekking Destination', desc: 'Now a beloved monsoon trekking destination near Pune and Mumbai, attracting thousands of trekkers annually for its lush green scenery and historical ruins.' }
+        ],
+
+        landmarks: [
+            { title: 'Main Entrance Gate', desc: 'Historic stone entrance showcasing strong Maratha fort architecture with imposing walls and carved stonework. The gateway is well-preserved and sets the tone for the fort exploration.', mustSee: true },
+            { title: 'Rock-Cut Water Cisterns', desc: 'Ancient rock-cut tanks that miraculously still store water year-round. These cisterns sustained the fort garrison and remain an impressive feat of ancient engineering.', mustSee: true },
+            { title: 'Hanuman Carving', desc: 'A beautiful and well-preserved carving of Lord Hanuman near the entrance gate. A testament to the spiritual traditions of the Maratha warriors who worshipped here.', mustSee: true },
+            { title: 'British-era Cannons', desc: 'Old British-era cannons scattered across the fort plateau, remnants of the fierce 1818 battle that decided the fort\'s fate.', mustSee: true },
+            { title: 'Fort Walls & Bastions', desc: 'Extensive fortification walls running along the plateau edge, offering panoramic valley views of Pawna Lake, Lohagad, Tung, and Tikona forts.', mustSee: true },
+            { title: 'Summit Plateau', desc: 'A vast open area ideal for exploration and photography. During monsoon, the entire plateau turns emerald green with cascading waterfalls on every side.', mustSee: true }
+        ],
+
+        food: [
+            { name: 'Pithla Bhakri', type: 'Veg', price: '₹80-120', desc: 'Traditional Maharashtrian besan curry with jowar/bajri bhakri. Available at base villages like Patan and Bhaje.' },
+            { name: 'Maggi & Snacks', type: 'Veg', price: '₹30-80', desc: 'Quick trail snacks available at trek starting points. Maggi is the ultimate trekker fuel in the Sahyadris.' },
+            { name: 'Vada Pav', type: 'Veg', price: '₹15-25', desc: 'Maharashtra\'s iconic spiced potato fritter in a pav bun — available at roadside stalls near Lonavala and Malavli.' },
+            { name: 'Chai (Tea)', type: 'Beverage', price: '₹10-20', desc: 'Hot ginger tea available at the base villages. The perfect energy boost before the climb.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Lohagad Side (Patan Village Route)', difficulty: 'Easy', distance: '3 km', time: '60-90 min', desc: 'The easiest and most commonly used route. The trail is wide and gradual, making it suitable for beginners and families. It connects from Lohagad side via Patan village.' },
+            { icon: '⛰️', title: 'Bhaje Caves Route', difficulty: 'Medium-Hard', distance: '4 km', time: '90-120 min', desc: 'This route starts near the ancient Bhaje Caves and involves steep climbs, rocky patches, and forest trails. It becomes slippery during monsoon and is recommended only for experienced trekkers.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Train', icon: '🚆', desc: 'Nearest railway station is Malavli (2 km from base) on the Mumbai-Pune local/express line. From Malavli, take an auto or walk to the base village.' },
+            { mode: 'By Car', icon: '🚗', desc: 'Drive via Mumbai-Pune Expressway to Lonavala, then head towards Patan village. Parking available at the base. ~110 km from Mumbai, ~65 km from Pune.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'ST buses and private buses available to Lonavala from Mumbai and Pune. From Lonavala, take local transport to Malavli or Patan base village.' }
+        ],
+
+        trekEssentials: [
+            'Good trekking shoes with anti-slip grip — monsoon trails are slippery',
+            'Carry 2-3 litres of water per person — no reliable source at top',
+            'Raincoat or poncho during monsoon season (June-Sept)',
+            'Snacks and energy bars — no food stalls on the fort',
+            'Basic first aid kit — nearest hospital is in Lonavala',
+            'Torch or flashlight for early morning or late return',
+            'Power bank — limited mobile signal at the top',
+            'Camera — the monsoon views are spectacular'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Trails become extremely slippery during monsoon — wear proper grip shoes', season: 'June-Sept' },
+            { msg: 'Strong and unpredictable winds at the top plateau — secure your belongings', season: 'All year' },
+            { msg: 'No railings near cliff edges — maintain safe distance, especially in fog', season: 'All year' },
+            { msg: 'Avoid trekking after sunset — trails are unlit and dangerous at night', season: 'All year' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹200-500' },
+            { label: 'Food', value: '₹100-300' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹300-800', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'Available at Patan village' },
+            { label: 'Drinking Water', available: false, detail: 'Not reliable — carry your own' },
+            { label: 'Toilets', available: false, detail: 'Not available on the fort' },
+            { label: 'Mobile Network', available: true, detail: 'Limited / patchy at top' },
+            { label: 'Food Stalls', available: false, detail: 'Only at base villages' },
+            { label: 'Camping', available: true, detail: 'Open plateau — carry tent' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Pune' },
+            { label: 'Altitude', value: '1,084 m (3,556 ft)' },
+            { label: 'Built By', value: 'Peshwa Balaji Vishwanath' },
+            { label: 'Fort Type', value: 'Hill Fort' },
+            { label: 'Best Season', value: 'Monsoon (June-Sept)' },
+            { label: 'Difficulty', value: 'Easy to Moderate' },
+            { label: 'Twin Fort', value: 'Lohagad Fort' },
+            { label: 'Nearest Station', value: 'Malavli (2 km)' },
+            { label: 'Kids Appropriate', value: 'Yes (Patan route)' },
+            { label: 'Best Combined', value: 'Lohagad + Bhaje Caves' }
+        ],
+
+        reviews: {
+            quote: "One of the best monsoon treks near Pune with stunning views and waterfalls everywhere! The vast plateau feels like walking on clouds during the rains.",
+            positives: [
+                'Easy trek option available via Patan route',
+                'Breathtaking monsoon scenery with waterfalls',
+                'Large fort area to explore and camp',
+                'Rich historical significance — Peshwa era fort',
+                'Spectacular views of Pawna Lake and surrounding forts'
+            ],
+            proTips: [
+                'Start early morning to avoid afternoon heat and crowds',
+                'Choose your route based on experience — Patan for beginners, Bhaje for adventurers',
+                'Wear anti-slip shoes — the rocks get very slippery in monsoon',
+                'Carry enough water — there are no shops on the fort',
+                'Combine with Lohagad Fort for a full-day twin-fort trek'
+            ],
+            rating: 4.5,
+            reviewCount: '10,000+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ 12. ROHIDA FORT (VICHITRAGAD) ━━━━━━━━━━━━━━━━━━
+    rohida: {
+        introduction: `Rohida Fort, also known as Vichitragad, is a historic hill fort in Satara district known 
+            for its strong fortifications, ancient gates, and scenic Sahyadri views. Captured by Chhatrapati 
+            Shivaji Maharaj from the Adilshahi in 1656 during the early expansion of Swarajya, it served as 
+            a strategic military outpost. The fort is a perfect destination for beginners and history lovers, 
+            offering a relatively easy trek with rewarding panoramic views.`,
+
+        quote: {
+            text: "स्वराज्याची प्रत्येक किल्ला ही स्वाभिमानाची ओळख आहे.",
+            attribution: "Maratha legacy"
+        },
+
+        timeline: [
+            { year: '1656', title: 'Captured by Shivaji Maharaj', desc: 'Rohida Fort was captured by Chhatrapati Shivaji Maharaj from the Adilshahi sultanate during the early expansion of Swarajya in the Satara region.' },
+            { year: '17th Century', title: 'Strategically Strengthened', desc: 'The fort was strengthened with additional bastions, walls, and gates, and used as a key strategic military post in the Maratha defense network.' },
+            { year: '1818', title: 'British Control', desc: 'Captured by the British East India Company during the fall of the Maratha Empire in the Third Anglo-Maratha War.' },
+            { year: 'Present', title: 'Trekking & Tourism', desc: 'Now a popular trekking destination with well-preserved gates, walls, and a temple — attracting history lovers and weekend trekkers.' }
+        ],
+
+        landmarks: [
+            { title: 'Three Entrance Gates', desc: 'Rohida features three well-preserved gates with unique carvings and inscriptions. Each gate is designed with sharp turns and narrow passages — classic Maratha defensive architecture.', mustSee: true },
+            { title: 'Bastions', desc: 'Strong bastions positioned at strategic corners offering panoramic 360° views of the surrounding Sahyadri valleys and Bhor ghat.', mustSee: true },
+            { title: 'Rohideshwar Temple', desc: 'An ancient temple dedicated to Lord Shiva located at the summit of the fort. Well-maintained and still active — a serene spot for prayer and rest after the climb.', mustSee: true },
+            { title: 'Rock-Cut Water Tanks', desc: 'Ancient rock-cut water cisterns carved into the plateau, used to store rainwater for the garrison during sieges. Some still hold water during monsoon.', mustSee: true },
+            { title: 'Fort Walls', desc: 'Well-preserved fortification walls showcasing classic Maratha stone masonry. Walking along them offers stunning views of the valley below.', mustSee: true }
+        ],
+
+        food: [
+            { name: 'Pithla Bhakri', type: 'Veg', price: '₹80-120', desc: 'Classic Maharashtrian besan curry with jowar bhakri — available at Bazarwadi and nearby villages.' },
+            { name: 'Thecha Bhakri', type: 'Veg', price: '₹60-100', desc: 'Fiery green chilli-garlic paste with crispy bhakri — a Sahyadri trekking staple that packs a punch.' },
+            { name: 'Tea & Snacks', type: 'Beverage', price: '₹20-50', desc: 'Basic tea and biscuits available at the base village Bazarwadi. Simple but essential trekker fuel.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Bazarwadi Village Route', difficulty: 'Easy to Moderate', distance: '2.5 km', time: '60-90 min', desc: 'The most popular and well-defined route. Suitable for beginners with a gradual ascent through forest and grassland. Well-marked trail leading through all three entrance gates.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Pune to Bhor (~60 km), then continue to Bazarwadi village (base). About 2 hours from Pune. Parking available at the village.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'MSRTC buses available from Pune (Swargate) to Bhor town. From Bhor, take local transport or shared auto to Bazarwadi village.' },
+            { mode: 'By Train', icon: '🚆', desc: 'Nearest railway station is Pune. From Pune, travel by road via Bhor to the base village (~70 km total).' }
+        ],
+
+        trekEssentials: [
+            'Good trekking shoes — some rocky sections near the top',
+            'Carry 2 litres of water — no water source on the fort',
+            'Cap and sunglasses for sun protection',
+            'Snacks and energy bars — no food stalls on the fort',
+            'Basic first aid kit',
+            'Raincoat during monsoon season',
+            'Power bank — limited network coverage'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Trails become slippery during monsoon — wear proper grip shoes', season: 'June-Sept' },
+            { msg: 'Steep sections near the final climb require caution', season: 'All year' },
+            { msg: 'No railings near fort edges — maintain safe distance', season: 'All year' },
+            { msg: 'Carry enough water — no reliable source on the fort', season: 'All year' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹200-400' },
+            { label: 'Food', value: '₹100-200' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹300-600', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'Available at Bazarwadi' },
+            { label: 'Drinking Water', available: false, detail: 'Carry your own' },
+            { label: 'Toilets', available: false, detail: 'Not available on fort' },
+            { label: 'Mobile Network', available: true, detail: 'Limited / patchy signal' },
+            { label: 'Food Stalls', available: false, detail: 'Only at base village' },
+            { label: 'Camping', available: true, detail: 'Open plateau area' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Satara' },
+            { label: 'Altitude', value: '1,100 m (3,609 ft)' },
+            { label: 'Also Known As', value: 'Vichitragad' },
+            { label: 'Fort Type', value: 'Hill Fort' },
+            { label: 'Captured By', value: 'Shivaji Maharaj (1656)' },
+            { label: 'Best Season', value: 'Monsoon & Winter' },
+            { label: 'Difficulty', value: 'Easy to Moderate' },
+            { label: 'Base Village', value: 'Bazarwadi' },
+            { label: 'Kids Appropriate', value: 'Yes (with care)' },
+            { label: 'Best Combined', value: 'Rajgad + Torna circuit' }
+        ],
+
+        reviews: {
+            quote: "Perfect beginner trek with strong historical vibes and amazing views! The three entrance gates are beautifully preserved and the sunrise from the top is unforgettable.",
+            positives: [
+                'Easy trek suitable for beginners and families',
+                'Well-preserved three entrance gates',
+                'Less crowded than popular Pune forts',
+                'Scenic Sahyadri views from the bastions',
+                'Active Rohideshwar temple at the summit'
+            ],
+            proTips: [
+                'Start early morning for a stunning sunrise trek',
+                'Carry enough water — there are no shops on the fort',
+                'Visit during monsoon for lush green scenery',
+                'Explore all three gates properly — each has unique features',
+                'Combine with Rajgad or Torna for a multi-fort weekend trip'
+            ],
+            rating: 4.4,
+            reviewCount: '3,500+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ 13. PRABALGAD FORT ━━━━━━━━━━━━━━━━━━
+    prabalgad: {
+        introduction: `Prabalgad Fort, located between Matheran and Panvel in Raigad district, is a rugged hill 
+            fort known for its steep climb and thrilling exposed rock sections near the summit. Rising dramatically 
+            next to the iconic Kalavantin Durg pinnacle, it offers breathtaking views of the surrounding Sahyadri 
+            ranges and is a favorite among experienced trekkers seeking an adrenaline-pumping adventure.`,
+
+        quote: {
+            text: "साहसातच खरे जीवन आहे.",
+            attribution: "Maratha spirit"
+        },
+
+        timeline: [
+            { year: 'Pre-17th Century', title: 'Ancient Origins', desc: 'Originally used as a watchtower fort in the Konkan region, guarding the strategic route between Kalyan and Panvel.' },
+            { year: '1657', title: 'Captured by Shivaji Maharaj', desc: 'Captured from the Mughals and incorporated into the growing Swarajya. Used as a lookout fort to monitor movements along the trade routes.' },
+            { year: '17th Century', title: 'Strategic Lookout Post', desc: 'Utilized as a frontier lookout fort due to its commanding elevation and proximity to key trade routes connecting the Konkan coast to the Deccan plateau.' },
+            { year: '1818', title: 'British Control', desc: 'Captured by British forces during the fall of the Maratha Empire in the Third Anglo-Maratha War.' }
+        ],
+
+        landmarks: [
+            { title: 'Rock Traverse', desc: 'A narrow exposed rock section near the summit requiring careful hand-and-foot navigation. The most thrilling part of the trek — rewarding but requires extreme caution.', mustSee: true },
+            { title: 'Kalavantin Durg View', desc: 'The iconic view of Kalavantin Durg — the dramatic pinnacle fort with its vertiginous rock-cut steps. One of the most photographed viewpoints in Maharashtra.', mustSee: true },
+            { title: 'Fort Plateau', desc: 'A wide plateau at the summit offering panoramic 360° views of the Sahyadri ranges, Matheran plateau, and the Panvel-Mumbai urban sprawl in the distance.', mustSee: true },
+            { title: 'Ruins of Old Structures', desc: 'Remains of ancient fort buildings, walls, and water cisterns scattered across the plateau — remnants of its military past.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Pithla Bhakri', type: 'Veg', price: '₹80-120', desc: 'Simple Maharashtrian meal available at Thakurwadi base village. Fuel up before the hard climb ahead.' },
+            { name: 'Vada Pav', type: 'Veg', price: '₹15-25', desc: 'Maharashtra\'s iconic snack available near the base. Quick energy before the trek.' },
+            { name: 'Tea & Snacks', type: 'Beverage', price: '₹20-50', desc: 'Basic tea and biscuits available at Thakurwadi village stalls. Pack your own food for the top.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Thakurwadi Route (Main)', difficulty: 'Hard', distance: '4 km', time: '120-150 min', desc: 'The most common route passing through dense forest and steep rocky sections, ending with an exposed and thrilling rock traverse near the summit. Well-trodden but demanding.' },
+            { icon: '⛰️', title: 'Via Kalavantin Durg (Combined Trek)', difficulty: 'Hard', distance: '5 km', time: '150-180 min', desc: 'The popular combined trek — climb Kalavantin Durg first, then traverse the ridge to Prabalgad. Requires good stamina and a full day. The ultimate Sahyadri adventure.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Train', icon: '🚆', desc: 'Nearest railway station is Panvel on the Central/Harbour line. From Panvel station, take a taxi or shared auto to Thakurwadi village (~15 km).' },
+            { mode: 'By Car', icon: '🚗', desc: 'Drive via Mumbai-Pune Expressway to Shedung Phata exit, then head to Thakurwadi village. ~65 km from Mumbai, ~120 km from Pune. Parking at the village.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'MSRTC buses available from Mumbai to Panvel. From Panvel, take local transport or shared auto to Thakurwadi base village.' }
+        ],
+
+        trekEssentials: [
+            'High-grip trekking shoes — essential for the rock traverse sections',
+            'Carry 3 litres of water — no water source on the trail or fort',
+            'Gloves for rock climbing sections near the summit',
+            'Energy snacks and packed lunch — no food stalls on the fort',
+            'First aid kit — the terrain is rough and injuries are possible',
+            'Rain protection (poncho/raincoat) during monsoon season',
+            'Torch or headlamp for early starts or late descents',
+            'Do NOT attempt alone if inexperienced — go with a group'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Exposed rock traverse near the summit is DANGEROUS — extreme caution required, never rush', season: 'All year' },
+            { msg: 'Avoid trekking during heavy monsoon — rocks become extremely slippery and life-threatening', season: 'June-Sept' },
+            { msg: 'Steep sections and rock climbs are NOT suitable for beginners or children', season: 'All year' },
+            { msg: 'No railings or safety barriers anywhere near the cliff edges — fatal falls have occurred', season: 'All year' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹200-500' },
+            { label: 'Food', value: '₹100-200' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Guide (optional)', value: '₹300-500' },
+            { label: 'Total', value: '₹400-900', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'At Thakurwadi village' },
+            { label: 'Drinking Water', available: false, detail: 'Carry sufficient water' },
+            { label: 'Toilets', available: false, detail: 'Not available on fort' },
+            { label: 'Mobile Network', available: true, detail: 'Limited connectivity' },
+            { label: 'Food Stalls', available: false, detail: 'Only at base village' },
+            { label: 'Local Guides', available: true, detail: '₹300-500 at village' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Raigad' },
+            { label: 'Altitude', value: '831 m (2,726 ft)' },
+            { label: 'Fort Type', value: 'Hill Fort' },
+            { label: 'Best Season', value: 'Winter & Early Monsoon' },
+            { label: 'Difficulty', value: 'Hard / Difficult' },
+            { label: 'Base Village', value: 'Thakurwadi' },
+            { label: 'Nearby Fort', value: 'Kalavantin Durg' },
+            { label: 'Nearest Station', value: 'Panvel' },
+            { label: 'Kids Appropriate', value: 'No (dangerous climbs)' },
+            { label: 'Best Combined', value: 'Kalavantin Durg combo' }
+        ],
+
+        reviews: {
+            quote: "One of the most thrilling treks in Maharashtra! The rock traverse and Kalavantin views are absolutely jaw-dropping. Not for the faint-hearted!",
+            positives: [
+                'Adventure-packed trek with real thrills',
+                'Jaw-dropping views of Kalavantin Durg pinnacle',
+                'Less crowded than mainstream forts',
+                'Great challenge for experienced trekkers',
+                'Stunning Sahyadri panorama from the plateau'
+            ],
+            proTips: [
+                'Avoid during heavy rain — exposed sections become lethal',
+                'Go with an experienced group or hire a local guide',
+                'Wear high-grip trekking shoes — absolutely non-negotiable',
+                'Carry plenty of water and snacks — nothing available on top',
+                'Combine with Kalavantin Durg for the ultimate full-day adventure'
+            ],
+            rating: 4.6,
+            reviewCount: '5,000+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ 14. RATANGAD FORT ━━━━━━━━━━━━━━━━━━
+    ratangad: {
+        introduction: `Ratangad Fort, located in the Bhandardara region of Ahmednagar district, is one of the 
+            most scenic forts in the Sahyadris. Famous for its natural rock arch called 'Nedhe' (Eye of the Needle), 
+            lush forest trails, and spectacular views of Kalsubai peak and Arthur Lake, it offers a perfect blend 
+            of adventure, history, and untouched nature — a must-do trek for every Sahyadri enthusiast.`,
+
+        quote: {
+            text: "निसर्ग आणि साहस यांचा संगम म्हणजे रतनगड.",
+            attribution: "Sahyadri trekking culture"
+        },
+
+        timeline: [
+            { year: '2000+ years ago', title: 'Ancient Origins', desc: 'Believed to be an ancient fort dating back over 2,000 years. The earliest structures were likely built by pre-medieval dynasties controlling the Sahyadri passes.' },
+            { year: '1670', title: 'Captured by Shivaji Maharaj', desc: 'Became part of the growing Maratha Empire and was used to guard trade routes through the Bhandardara-Malshej region.' },
+            { year: '17th Century', title: 'Strategic Frontier Fort', desc: 'Used as a key frontier fort to guard the surrounding trade routes and Sahyadri passes. Connected to the Harishchandragad-Kalsubai defense network.' },
+            { year: '1818', title: 'British Control', desc: 'Captured by the British East India Company after the fall of the Maratha Empire in the Third Anglo-Maratha War.' }
+        ],
+
+        landmarks: [
+            { title: 'Nedhe (Eye of the Needle)', desc: 'The iconic naturally formed rock arch at the edge of the fort — a window-like hole in the cliff offering jaw-dropping valley views. The most photographed spot on Ratangad and one of the most unique natural formations in the Sahyadris.', mustSee: true },
+            { title: 'Ratangad Caves', desc: 'Spacious natural caves near the summit plateau used by trekkers for overnight camping. Can shelter 20-30 people comfortably. A magical experience during monsoon.', mustSee: true },
+            { title: 'Trimbak Darwaza', desc: 'The main entrance gate of the fort — well-preserved Maratha-era gateway with carved stonework and defensive turns.', mustSee: true },
+            { title: 'Rock-Cut Water Cisterns', desc: 'Ancient water tanks carved into the rock plateau. Some still hold clean rainwater during and after monsoon season.', mustSee: true },
+            { title: 'Fort Plateau & Viewpoints', desc: 'A large open plateau at the summit offering panoramic 360° views of Kalsubai peak, Arthur Lake, Alang-Madan-Kulang range, and the entire Bhandardara valley.', mustSee: true }
+        ],
+
+        food: [
+            { name: 'Pithla Bhakri', type: 'Veg', price: '₹100-150', desc: 'Traditional Maharashtrian meal available at Ratanwadi village. Home-cooked by local families — simple, authentic, and delicious.' },
+            { name: 'Maggi & Snacks', type: 'Veg', price: '₹40-80', desc: 'Basic trek snacks available at the base. Carry your own for the fort — no stalls on top.' },
+            { name: 'Tea', type: 'Beverage', price: '₹10-20', desc: 'Hot chai available at small Ratanwadi village stalls. The perfect start before a long trek.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Ratanwadi Route (Main)', difficulty: 'Moderate', distance: '5 km', time: '120-150 min', desc: 'The most popular route starting from Ratanwadi village. Passes through beautiful forest and rocky patches, with metal ladders near the summit for the final ascent. Well-marked and scenic.' },
+            { icon: '⛰️', title: 'Samrad Route', difficulty: 'Moderate to Hard', distance: '6 km', time: '150-180 min', desc: 'A longer and more adventurous route from Samrad village, passing through the Sandhan Valley region. Less crowded, more rugged, and deeply rewarding for experienced trekkers.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Train', icon: '🚆', desc: 'Nearest railway station is Igatpuri on the Central line. From Igatpuri, take a shared taxi or bus to Bhandardara (~50 km), then to Ratanwadi village.' },
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Pune/Mumbai to Bhandardara via Igatpuri or Akole. From Bhandardara dam, continue to Ratanwadi village. ~200 km from Mumbai, ~180 km from Pune.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'MSRTC buses available to Bhandardara from Nashik and Ahmednagar. From Bhandardara, take local transport to Ratanwadi base village.' }
+        ],
+
+        trekEssentials: [
+            'Good trekking shoes — rocky sections and ladders near the summit',
+            'Carry 2-3 litres of water per person',
+            'Snacks and energy bars — limited food options on the fort',
+            'First aid kit — remote location, nearest hospital is far',
+            'Torch / headlamp if staying overnight in the caves',
+            'Warm clothes for winter camping — temperatures drop significantly',
+            'Raincoat / poncho during monsoon season',
+            'Sleeping bag or mat if camping in the caves'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Metal ladders near summit require careful climbing — can be slippery in rain', season: 'All year' },
+            { msg: 'Trails become very slippery during monsoon — wear proper grip shoes', season: 'June-Sept' },
+            { msg: 'Dense forest areas — always stay on the marked trail, easy to get lost', season: 'All year' },
+            { msg: 'Wildlife (snakes, scorpions) present in forest region — be cautious at night', season: 'All year' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹300-700' },
+            { label: 'Food', value: '₹150-300' },
+            { label: 'Stay (optional)', value: '₹200-500' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹500-1200', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'At Ratanwadi village' },
+            { label: 'Drinking Water', available: true, detail: 'Cisterns available (not always clean)' },
+            { label: 'Toilets', available: false, detail: 'Not available on fort' },
+            { label: 'Mobile Network', available: false, detail: 'Very weak or no signal' },
+            { label: 'Camping', available: true, detail: 'Caves near summit' },
+            { label: 'Food Stalls', available: false, detail: 'Only at Ratanwadi village' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Ahmednagar' },
+            { label: 'Altitude', value: '1,297 m (4,255 ft)' },
+            { label: 'Fort Type', value: 'Hill Fort' },
+            { label: 'Best Season', value: 'Monsoon & Winter' },
+            { label: 'Difficulty', value: 'Moderate to Hard' },
+            { label: 'Base Village', value: 'Ratanwadi' },
+            { label: 'Famous For', value: 'Nedhe (Rock Arch)' },
+            { label: 'Region', value: 'Bhandardara' },
+            { label: 'Kids Appropriate', value: 'No (ladders & steep climbs)' },
+            { label: 'Best Combined', value: 'Harishchandragad + Sandhan Valley' }
+        ],
+
+        reviews: {
+            quote: "The Nedhe view is absolutely magical — one of the best treks in Maharashtra! Standing at the rock arch looking down into the valley is a once-in-a-lifetime experience.",
+            positives: [
+                'Unique Nedhe rock arch — unlike anything else in Maharashtra',
+                'Beautiful forest trek through untouched Sahyadri wilderness',
+                'Excellent camping in the summit caves',
+                'Less crowded than popular Lonavala-Pune forts',
+                'Stunning views of Kalsubai, Arthur Lake, and AMK range'
+            ],
+            proTips: [
+                'Start early morning to reach the summit before afternoon heat',
+                'Carry a torch / headlamp if planning an overnight cave stay',
+                'Always follow marked trails — the dense forest makes it easy to get lost',
+                'Avoid solo trekking — go with a group or hire a local guide from Ratanwadi',
+                'Combine with Harishchandragad or Sandhan Valley for an epic multi-day trip'
+            ],
+            rating: 4.7,
+            reviewCount: '6,500+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ 15. HARIHAR FORT ━━━━━━━━━━━━━━━━━━
+    harihar: {
+        introduction: `Harihar Fort, located near Nashik in the Trimbak range, is one of the most thrilling and 
+            iconic treks in Maharashtra. Famous for its near-vertical rock-cut steps carved at an 80° angle into 
+            the mountainside, this fort offers a heart-pounding climb that rewards with breathtaking 360° views 
+            of the Sahyadri mountain range. It is a bucket-list trek for every adrenaline seeker.`,
+
+        quote: {
+            text: "धैर्य आणि संतुलन हेच यशाचे खरे रहस्य आहे.",
+            attribution: "Trekking wisdom"
+        },
+
+        timeline: [
+            { year: 'Yadava Period', title: 'Fort Origin', desc: 'Believed to have been built during the Yadava dynasty as a watchtower fort in the northern Sahyadri ranges near Trimbakeshwar.' },
+            { year: '1636', title: 'Mughal Control', desc: 'Came under Mughal rule after their Deccan campaigns. The Mughals used it as a frontier garrison protecting the Nashik region.' },
+            { year: '1670', title: 'Captured by Shivaji Maharaj', desc: 'Became part of the Maratha Empire when Shivaji Maharaj expanded Swarajya into the northern Sahyadri region.' },
+            { year: '1818', title: 'British Capture', desc: 'Taken over by the British East India Company after the defeat of the Marathas in the Third Anglo-Maratha War.' }
+        ],
+
+        landmarks: [
+            { title: 'Rock-Cut Steps', desc: 'The legendary near-vertical staircase carved into the rock at approximately 80° angle — the most iconic and thrilling feature of the fort. Over 100 steps cut directly into the cliff face with no railings.', mustSee: true },
+            { title: 'Narrow Entrance Gate', desc: 'A small, deliberately narrow entry point at the very top of the vertical steps. The defensive design forced attackers to enter single-file into the fort.', mustSee: true },
+            { title: 'Fort Plateau', desc: 'A flat, open summit area offering stunning 360° panoramic views of surrounding Sahyadri peaks, valleys, and the Trimbak-Brahmagiri range.', mustSee: true },
+            { title: 'Rock-Cut Water Cisterns', desc: 'Ancient water tanks carved into the plateau rock — still collecting rainwater. An engineering marvel at this altitude.', mustSee: true },
+            { title: 'Hanuman Temple', desc: 'A small temple dedicated to Lord Hanuman on the fort plateau. Offerings and prayer flags mark this sacred spot.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Local Village Meals', type: 'Veg', price: '₹100-150', desc: 'Basic home-cooked meals (dal-rice, bhakri-pithla) available at Nirgudpada base village. Call ahead to arrange.' },
+            { name: 'Maggi & Snacks', type: 'Veg', price: '₹30-80', desc: 'Quick trek snacks available at the starting point. Carry your own food for the top.' },
+            { name: 'Tea', type: 'Beverage', price: '₹10-20', desc: 'Hot chai at small base village stalls. Fuel up before the intense climb ahead.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Nirgudpada Route (Main)', difficulty: 'Hard', distance: '3 km', time: '90-120 min', desc: 'The most popular route from Nirgudpada village. Starts with a forest trail, then transitions to a steep climb, culminating in the famous near-vertical rock-cut steps to the summit.' },
+            { icon: '⛰️', title: 'Harshewadi Route', difficulty: 'Moderate to Hard', distance: '3.5 km', time: '120-150 min', desc: 'A longer route with a more gradual initial climb before joining the main route near the famous rock-cut steps. Slightly less intense but same thrilling finish.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Train', icon: '🚆', desc: 'Nearest railway station is Nashik Road on the Central line. From Nashik, travel to Nirgudpada village via Trimbak road (~40 km, 1.5 hours).' },
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Nashik via Trimbak road to Nirgudpada village. ~40 km from Nashik, ~220 km from Mumbai. Parking available at the village.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'MSRTC buses available from Nashik to Trimbak town. From Trimbak, take local transport or auto to Nirgudpada base village.' }
+        ],
+
+        trekEssentials: [
+            'HIGH-GRIP trekking shoes — absolutely essential for the vertical rock steps',
+            'Carry 2-3 litres of water — no source on the fort',
+            'Gloves for better grip on the rock-cut steps and carved handholds',
+            'Snacks and energy bars — no food stalls on the fort',
+            'First aid kit — injuries are possible on the steep climb',
+            'Rain protection during monsoon — steps become extremely dangerous',
+            'Torch / headlamp if trekking early morning or late return',
+            'Confidence and calm nerves — don\'t look down on the vertical section!'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Near-vertical steps are EXTREMELY risky — maintain 3-point contact at ALL times, never rush', season: 'All year' },
+            { msg: 'AVOID trekking during heavy rain — the rock-cut steps become fatally slippery', season: 'June-Sept' },
+            { msg: 'Weekend crowding on the steps can be dangerous — one person at a time on narrow sections', season: 'Weekends' },
+            { msg: 'Strong winds at the top plateau can destabilize you — stay low near edges', season: 'All year' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹200-500' },
+            { label: 'Food', value: '₹100-200' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Guide (optional)', value: '₹300-500' },
+            { label: 'Total', value: '₹400-900', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'At Nirgudpada village' },
+            { label: 'Drinking Water', available: false, detail: 'Carry your own water' },
+            { label: 'Toilets', available: false, detail: 'Not available on fort' },
+            { label: 'Mobile Network', available: true, detail: 'Limited signal' },
+            { label: 'Food Stalls', available: false, detail: 'Only at base village' },
+            { label: 'Local Guides', available: true, detail: '₹300-500 at village' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Nashik' },
+            { label: 'Altitude', value: '1,120 m (3,674 ft)' },
+            { label: 'Fort Type', value: 'Hill Fort' },
+            { label: 'Best Season', value: 'Winter & Post-Monsoon' },
+            { label: 'Difficulty', value: 'Hard / Difficult' },
+            { label: 'Base Village', value: 'Nirgudpada' },
+            { label: 'Famous For', value: 'Vertical rock-cut steps (80°)' },
+            { label: 'Near', value: 'Trimbakeshwar Jyotirlinga' },
+            { label: 'Kids Appropriate', value: 'Absolutely No' },
+            { label: 'Best Combined', value: 'Trimbakeshwar + Brahmagiri' }
+        ],
+
+        reviews: {
+            quote: "The climb feels like a staircase to the sky — thrilling and unforgettable! Your legs tremble but the view from the top makes every step worth it.",
+            positives: [
+                'Unique near-vertical rock-cut climb — unlike any other fort',
+                'Jaw-dropping 360° views from the plateau',
+                'Short but intensely thrilling trek',
+                'Great challenge for adventure lovers and thrill seekers',
+                'Less commercialized — raw Sahyadri experience'
+            ],
+            proTips: [
+                'Avoid weekends to escape dangerous crowding on the steps',
+                'Hold rock grips firmly — use 3-point contact always',
+                'Start early morning for cooler temps and fewer people',
+                'Never rush on the steps — one wrong step can be fatal',
+                'Combine with a visit to Trimbakeshwar Jyotirlinga nearby'
+            ],
+            rating: 4.8,
+            reviewCount: '9,000+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ 16. KARNALA FORT ━━━━━━━━━━━━━━━━━━
+    karnala: {
+        introduction: `Karnala Fort, nestled inside the Karnala Bird Sanctuary near Panvel in Raigad district, 
+            is a scenic hill fort crowned by an iconic basalt pinnacle visible from the Mumbai-Goa highway. 
+            The trek offers a unique blend of wildlife exploration, birdwatching, and fort history, making it 
+            ideal for nature lovers, families, and beginner trekkers. Over 222 bird species have been recorded 
+            in the sanctuary, making it a paradise for ornithologists.`,
+
+        quote: {
+            text: "निसर्ग आणि इतिहास यांचा सुंदर संगम.",
+            attribution: "Sahyadri experience"
+        },
+
+        timeline: [
+            { year: 'Pre-15th Century', title: 'Ancient Origins', desc: 'The fort existed as a strategic watchtower controlling trade routes between the Konkan coast and the Deccan plateau.' },
+            { year: '1540', title: 'Portuguese Control', desc: 'Captured and developed by the Portuguese who recognized its strategic importance along the trade corridor.' },
+            { year: '1670', title: 'Captured by Shivaji Maharaj', desc: 'Brought under Maratha rule as part of the expansion of Swarajya in the Konkan region.' },
+            { year: '1818', title: 'British Rule', desc: 'Taken over by the British after the defeat of the Marathas. Later, the surrounding forest was declared a bird sanctuary.' }
+        ],
+
+        landmarks: [
+            { title: 'Basalt Pinnacle', desc: 'The fort\'s iconic tall vertical rock structure — a dramatic basalt column visible from the Mumbai-Goa highway. One of the most distinctive silhouettes in the Sahyadris.', mustSee: true },
+            { title: 'Fort Ruins & Walls', desc: 'Remains of old fortification structures, walls, and gateways at the summit. The ruins blend with the surrounding forest creating a mystical atmosphere.', mustSee: true },
+            { title: 'Rock-Cut Water Cisterns', desc: 'Ancient water storage tanks carved into the rock — a testament to the fort\'s role as a permanent military garrison.', mustSee: true },
+            { title: 'Bird Sanctuary Trails', desc: 'Rich biodiversity trails through the sanctuary with over 222 bird species including hornbills, paradise flycatchers, and raptors. Carry binoculars!', mustSee: true }
+        ],
+
+        food: [
+            { name: 'Canteen at Sanctuary', type: 'Veg', price: '₹50-100', desc: 'Basic snacks and meals available at the sanctuary entry canteen.' },
+            { name: 'Vada Pav & Snacks', type: 'Veg', price: '₹15-30', desc: 'Quick roadside snacks available near the highway entrance.' },
+            { name: 'Tea & Biscuits', type: 'Beverage', price: '₹10-20', desc: 'Available at the sanctuary gate. Perfect pre-trek fuel.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Karnala Sanctuary Route', difficulty: 'Moderate', distance: '3 km', time: '90-120 min', desc: 'The only route — a beautiful forest trail inside the bird sanctuary with gradual ascent through dense tree cover, followed by a steeper climb near the summit. Well-marked and scenic.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Train', icon: '🚆', desc: 'Nearest station is Panvel on the Central/Harbour line. From Panvel, take a rickshaw or local bus to Karnala Bird Sanctuary (~12 km).' },
+            { mode: 'By Car', icon: '🚗', desc: 'Located directly on the Mumbai-Goa NH66 highway near Panvel. ~55 km from Mumbai, ~120 km from Pune. Large parking lot at the sanctuary gate.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'Any Mumbai-Goa highway bus stops at Karnala. Easy access from Panvel via local transport.' }
+        ],
+
+        trekEssentials: [
+            'Good trekking shoes — some rocky sections near the top',
+            'Carry 2 litres of water',
+            'Snacks and energy bars',
+            'Cap and sunscreen for sun protection',
+            'Binoculars (optional but highly recommended for birdwatching)',
+            'Camera — the birdlife is spectacular'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Trails become slippery during monsoon — wear grip shoes', season: 'June-Sept' },
+            { msg: 'Sanctuary timings apply — entry closes at 5:30 PM, plan accordingly', season: 'All year' },
+            { msg: 'Do not attempt to climb the basalt pinnacle — it is extremely dangerous', season: 'All year' }
+        ],
+
+        budget: [
+            { label: 'Entry (Sanctuary)', value: '₹50-100' },
+            { label: 'Transport', value: '₹100-300' },
+            { label: 'Food', value: '₹100-200' },
+            { label: 'Total', value: '₹300-600', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'Large lot at sanctuary gate' },
+            { label: 'Drinking Water', available: false, detail: 'Carry your own' },
+            { label: 'Toilets', available: true, detail: 'At sanctuary entrance' },
+            { label: 'Mobile Network', available: true, detail: 'Good coverage (near highway)' },
+            { label: 'Canteen', available: true, detail: 'At sanctuary entrance' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Raigad' },
+            { label: 'Altitude', value: '445 m (1,460 ft)' },
+            { label: 'Fort Type', value: 'Hill Fort' },
+            { label: 'Best Season', value: 'Oct to March (birding)' },
+            { label: 'Difficulty', value: 'Moderate' },
+            { label: 'Bird Species', value: '222+ recorded' },
+            { label: 'Nearest Station', value: 'Panvel (12 km)' },
+            { label: 'Kids Appropriate', value: 'Yes' },
+            { label: 'Entry Fee', value: '₹50-100 (Sanctuary)' },
+            { label: 'Best Combined', value: 'Matheran + Prabalgad' }
+        ],
+
+        reviews: {
+            quote: "Perfect combination of trekking and birdwatching! The basalt pinnacle at the top is breathtaking and the forest trail is serene.",
+            positives: [
+                'Nature-rich trail inside a bird sanctuary',
+                'Short, manageable trek for all levels',
+                'Iconic basalt pinnacle — great for photos',
+                'Over 222 bird species — birdwatcher\'s paradise',
+                'Easy access from Mumbai-Goa highway'
+            ],
+            proTips: [
+                'Visit early morning for best birdwatching',
+                'Carry binoculars for spotting hornbills and raptors',
+                'Check sanctuary timings before going — entry closes at 5:30 PM',
+                'Combine with Matheran for a full nature weekend',
+                'Monsoon makes it lush but slippery — choose your season wisely'
+            ],
+            rating: 4.5,
+            reviewCount: '7,000+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ 17. JIVDHAN FORT ━━━━━━━━━━━━━━━━━━
+    jivdhan: {
+        introduction: `Jivdhan Fort, overlooking the historic Naneghat pass in the Junnar region of Pune district, 
+            is a challenging trek known for its steep rock patches, metal ladders, and raw Sahyadri wilderness. 
+            The fort holds immense historical significance — it guarded the ancient Satavahana-era trade route 
+            through Naneghat that connected the Deccan plateau to the Konkan coast. The views from the summit 
+            of Naneghat valley and the surrounding peaks are simply spectacular.`,
+
+        quote: {
+            text: "कठीण वाटच खरा अनुभव देते.",
+            attribution: "Trekking wisdom"
+        },
+
+        timeline: [
+            { year: 'Satavahana Era', title: 'Trade Route Control', desc: 'Built to protect the ancient Naneghat trade route — one of the most important mountain passes connecting the Konkan coast to the Deccan plateau during the Satavahana dynasty.' },
+            { year: '17th Century', title: 'Maratha Rule', desc: 'Used by Chhatrapati Shivaji Maharaj as a strategic fort in the Junnar region, connected to the Shivneri-Chavand defense network.' },
+            { year: '1818', title: 'British Destruction', desc: 'The British systematically destroyed the main steps and access routes to prevent future use as a rebel stronghold.' },
+            { year: 'Present', title: 'Adventure Trekking', desc: 'Now a coveted hard-grade trek for experienced trekkers, with metal ladders replacing the destroyed original steps.' }
+        ],
+
+        landmarks: [
+            { title: 'Naneghat Pass View', desc: 'Breathtaking vista of the ancient Naneghat mountain pass — the strategic trade route that funded empires. You can see the Satavahana-era cave inscriptions from above.', mustSee: true },
+            { title: 'Rock Patches & Ladders', desc: 'Thrilling vertical rock-climbing sections with metal ladders installed for safety. The most challenging and adrenaline-pumping part of the trek.', mustSee: true },
+            { title: 'Ancient Caves', desc: 'Satavahana-era caves near the base of the fort, some with faded inscriptions. A reminder of the 2,000+ year history of this region.', mustSee: true },
+            { title: 'Fort Plateau', desc: 'Summit area with ruins and spectacular views of the Malshej and Junnar regions, including Hadsar, Chavand, and Shivneri forts.', mustSee: true }
+        ],
+
+        food: [
+            { name: 'Village Meals', type: 'Veg', price: '₹100-150', desc: 'Basic home-cooked meals available at Naneghat base villages. Call ahead to arrange with locals.' },
+            { name: 'Maggi & Snacks', type: 'Veg', price: '₹30-60', desc: 'Basic snacks at the Naneghat parking area. Carry your own food for the fort.' },
+            { name: 'Tea', type: 'Beverage', price: '₹10-20', desc: 'Available at base village stalls near Naneghat.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Naneghat Route', difficulty: 'Hard', distance: '4 km', time: '120-150 min', desc: 'The main route from Naneghat parking area. Includes forest trail, steep rock patches, and metal ladder climbs. Requires confidence with heights and good physical fitness.' },
+            { icon: '⛰️', title: 'Jivdhan via Ghotghar', difficulty: 'Moderate to Hard', distance: '5 km', time: '150-180 min', desc: 'A longer alternative route from Ghotghar village. Less steep but longer, with forest trails and gradual ascent.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Car', icon: '🚗', desc: 'Drive to Naneghat parking from Junnar (~25 km) or from Murbad side. ~150 km from Mumbai, ~120 km from Pune.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'MSRTC buses from Pune to Junnar. From Junnar, local transport to Naneghat base.' },
+            { mode: 'By Train', icon: '🚆', desc: 'Nearest station is Kalyan or Pune. Then road travel to Naneghat (~80 km from Kalyan).' }
+        ],
+
+        trekEssentials: [
+            'High-grip trekking shoes — rock patches are steep and unforgiving',
+            'Carry 3 litres of water — no source on the fort',
+            'Gloves for rock climbing and ladder sections',
+            'Energy snacks and packed lunch — nothing on top',
+            'First aid kit — remote location',
+            'Rain protection during monsoon',
+            'Torch / headlamp for early starts',
+            'Go with an experienced group — NOT a beginner trek'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Rock patches and ladders are DANGEROUS — requires confidence with heights', season: 'All year' },
+            { msg: 'AVOID during monsoon — rock sections become fatally slippery', season: 'June-Sept' },
+            { msg: 'This is NOT a beginner trek — go only with experience or a guide', season: 'All year' },
+            { msg: 'Limited mobile network — inform someone before going', season: 'All year' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹300-600' },
+            { label: 'Food', value: '₹100-200' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Guide (recommended)', value: '₹400-600' },
+            { label: 'Total', value: '₹500-1000', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'At Naneghat base' },
+            { label: 'Drinking Water', available: false, detail: 'Carry your own' },
+            { label: 'Toilets', available: false, detail: 'Not available' },
+            { label: 'Mobile Network', available: false, detail: 'Very limited signal' },
+            { label: 'Local Guides', available: true, detail: '₹400-600 from Junnar' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Pune (Junnar)' },
+            { label: 'Altitude', value: '1,004 m (3,294 ft)' },
+            { label: 'Fort Type', value: 'Hill Fort' },
+            { label: 'Best Season', value: 'Oct-Feb (Winter)' },
+            { label: 'Difficulty', value: 'Hard / Difficult' },
+            { label: 'Famous For', value: 'Naneghat & rock patches' },
+            { label: 'Era', value: 'Satavahana dynasty' },
+            { label: 'Kids Appropriate', value: 'Absolutely No' },
+            { label: 'Best Combined', value: 'Naneghat caves + Hadsar' }
+        ],
+
+        reviews: {
+            quote: "One of the toughest but most rewarding treks in the Sahyadris! The Naneghat views from the top are worth every drop of sweat.",
+            positives: [
+                'Thrilling rock patch and ladder climbs',
+                'Spectacular Naneghat pass panorama',
+                'Rich Satavahana-era historical significance',
+                'Less crowded — raw wilderness experience',
+                'Great challenge for experienced trekkers'
+            ],
+            proTips: [
+                'Go with an experienced guide — do not attempt solo',
+                'Post-monsoon (Oct-Nov) is the best time — green but dry trails',
+                'Combine with Naneghat caves for a full history-adventure day',
+                'Carry rope if going in a group — useful at rock patches',
+                'Start very early — the climb takes longer than expected'
+            ],
+            rating: 4.6,
+            reviewCount: '4,000+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ 18. KORLAI FORT ━━━━━━━━━━━━━━━━━━
+    korlai: {
+        introduction: `Korlai Fort is a unique coastal fort built by the Portuguese in 1521 near Revdanda creek 
+            in Raigad district. Unlike the rugged hill forts of the Sahyadris, Korlai sits on a coastal headland 
+            overlooking the Arabian Sea, crowned by a functioning lighthouse. The fort offers a short, easy walk 
+            with stunning sea views and rich colonial-era architecture — perfect for history buffs and beach lovers.`,
+
+        quote: {
+            text: "समुद्र आणि इतिहास यांचा संगम.",
+            attribution: "Coastal heritage"
+        },
+
+        timeline: [
+            { year: '1521', title: 'Portuguese Construction', desc: 'Built by the Portuguese as a coastal defense fort to protect the strategic Revdanda harbor and control maritime trade along the Konkan coast.' },
+            { year: '17th Century', title: 'Maratha-Portuguese Conflict', desc: 'Fiercely contested between the Portuguese and the expanding Maratha Empire. Changed hands multiple times during this turbulent period.' },
+            { year: '1739', title: 'Maratha Conquest', desc: 'Finally captured by the Marathas under Chimaji Appa after a determined siege.' },
+            { year: 'Present', title: 'Heritage Site', desc: 'Now a protected heritage site with the lighthouse still operational. The local Korlai Creole-speaking community preserves unique Portuguese cultural heritage.' }
+        ],
+
+        landmarks: [
+            { title: 'Korlai Lighthouse', desc: 'A functioning lighthouse at the fort\'s highest point offering panoramic views of the Arabian Sea, Revdanda beach, and the Konkan coastline. One of the best sunset viewpoints.', mustSee: true },
+            { title: 'Fort Walls & Ramparts', desc: 'Long, narrow Portuguese-style fortification walls stretching along the headland. The construction style is distinctly European — different from Maratha forts.', mustSee: true },
+            { title: 'Church Ruins', desc: 'Remains of a Portuguese-era church within the fort walls — a rare sight in Maharashtra\'s fort landscape.', mustSee: true },
+            { title: 'Sea View Bastions', desc: 'Bastions overlooking the Arabian Sea with cannon emplacements. Dramatic views of waves crashing against the rocky coast below.', mustSee: true }
+        ],
+
+        food: [
+            { name: 'Fresh Seafood', type: 'Non-Veg', price: '₹150-300', desc: 'Korlai village is famous for fresh fish, prawns, and surmai. Local restaurants serve excellent Malvani-style seafood.' },
+            { name: 'Sol Kadhi', type: 'Veg', price: '₹30-50', desc: 'Refreshing coconut milk drink with kokum — a Konkan specialty. Available at local eateries.' },
+            { name: 'Vada Pav & Snacks', type: 'Veg', price: '₹15-30', desc: 'Quick snacks available in Korlai village.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Korlai Village Route', difficulty: 'Easy', distance: '2 km', time: '30-60 min', desc: 'A simple, pleasant walk from Korlai village up to the fort and lighthouse. No climbing required — suitable for all ages and fitness levels. The path offers beautiful coastal views throughout.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Car', icon: '🚗', desc: 'Drive via Alibaug-Revdanda road to Korlai village. ~140 km from Mumbai, ~200 km from Pune. Parking available at the village.' },
+            { mode: 'By Ferry', icon: '⛴️', desc: 'Take a ferry from Gateway of India to Alibaug/Mandwa. From Alibaug, drive to Korlai (~20 km).' },
+            { mode: 'By Bus', icon: '🚌', desc: 'MSRTC buses to Alibaug from Mumbai. From Alibaug, local transport to Korlai village.' }
+        ],
+
+        trekEssentials: [
+            'Comfortable walking shoes — no heavy trekking needed',
+            'Sunscreen and cap — exposed coastal walk',
+            'Water bottle — 1 litre is enough',
+            'Camera — the lighthouse and sea views are stunning',
+            'Visit during sunset for the best experience'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Strong sea winds near the cliff edges — keep safe distance', season: 'All year' },
+            { msg: 'Lighthouse area can be slippery during monsoon', season: 'June-Sept' },
+            { msg: 'Do not swim near the fort rocks — strong currents', season: 'All year' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹200-500' },
+            { label: 'Food', value: '₹100-300' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Ferry (optional)', value: '₹200-300' },
+            { label: 'Total', value: '₹300-800', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'At Korlai village' },
+            { label: 'Drinking Water', available: true, detail: 'At village shops' },
+            { label: 'Toilets', available: false, detail: 'Not on fort' },
+            { label: 'Mobile Network', available: true, detail: 'Good coverage' },
+            { label: 'Food Stalls', available: true, detail: 'In Korlai village' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Raigad' },
+            { label: 'Altitude', value: '150 m' },
+            { label: 'Fort Type', value: 'Coastal / Sea Fort' },
+            { label: 'Built By', value: 'Portuguese (1521)' },
+            { label: 'Difficulty', value: 'Easy' },
+            { label: 'Best Season', value: 'Oct-March' },
+            { label: 'Kids Appropriate', value: 'Yes' },
+            { label: 'Lighthouse', value: 'Active / Functional' },
+            { label: 'Unique', value: 'Creole-speaking village' },
+            { label: 'Best Combined', value: 'Alibaug + Revdanda' }
+        ],
+
+        reviews: {
+            quote: "Beautiful sea fort with a working lighthouse! The sunset views from here are absolutely magical. A completely different experience from the usual hill forts.",
+            positives: [
+                'Easy walk suitable for all ages',
+                'Stunning sea views and lighthouse',
+                'Unique Portuguese colonial architecture',
+                'Great seafood in the village',
+                'Perfect sunset spot on the Konkan coast'
+            ],
+            proTips: [
+                'Visit during sunset — the lighthouse views are incredible',
+                'Try the local seafood in Korlai village — it\'s exceptional',
+                'Combine with Alibaug beach and Kolaba fort for a full day trip',
+                'The Korlai Creole language is fascinating — chat with locals',
+                'Best in winter/post-monsoon for clear skies'
+            ],
+            rating: 4.4,
+            reviewCount: '3,000+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ 19. CHAVAND FORT ━━━━━━━━━━━━━━━━━━
+    chavand: {
+        introduction: `Chavand Fort, located near the Junnar region of Nashik district, is a historically 
+            significant fort closely associated with the Maratha Empire and Sambhaji Maharaj. The fort offers 
+            a short, easy trek through pleasant countryside with scenic views of the Kalsubai and surrounding 
+            Sahyadri ranges. Perfect for beginners who want a taste of Maharashtra's fort heritage without 
+            a strenuous climb.`,
+
+        quote: {
+            text: "इतिहास प्रत्येक किल्ल्यात जिवंत आहे.",
+            attribution: "Maratha legacy"
+        },
+
+        timeline: [
+            { year: '17th Century', title: 'Maratha Period', desc: 'Used as a strategic fort during Chhatrapati Shivaji Maharaj\'s reign. Part of the Junnar-Shivneri defense network protecting the northern frontier of Swarajya.' },
+            { year: '1681', title: 'Sambhaji Maharaj Connection', desc: 'Linked to Sambhaji Maharaj\'s period — the fort served as a retreat and administrative post during the turbulent succession era.' },
+            { year: '1818', title: 'British Takeover', desc: 'Captured by the British East India Company during the Third Anglo-Maratha War.' },
+            { year: 'Present', title: 'Heritage Trek', desc: 'Now a peaceful trekking destination offering easy access to Maratha history and panoramic Sahyadri views.' }
+        ],
+
+        landmarks: [
+            { title: 'Fort Entrance & Steps', desc: 'Well-preserved stone steps leading to the fort summit. The entrance gate shows classic Maratha architectural elements.', mustSee: true },
+            { title: 'Summit Plateau', desc: 'A flat-top plateau offering scenic 360° views of the surrounding ranges including glimpses of Shivneri, Hadsar, and the Sahyadri valleys.', mustSee: true },
+            { title: 'Fort Walls & Bastions', desc: 'Partially preserved walls and bastions that once formed the defensive ring around the summit.', mustSee: true },
+            { title: 'Water Cisterns', desc: 'Rock-cut water tanks on the plateau — evidence of the fort\'s role as a permanent garrison.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Village Meals', type: 'Veg', price: '₹80-120', desc: 'Simple home-cooked meals available at the base village. Dal-rice and bhakri-pithla are the staples.' },
+            { name: 'Tea & Snacks', type: 'Beverage', price: '₹10-30', desc: 'Basic tea and biscuits at the base village.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Chavand Village Route', difficulty: 'Easy', distance: '2 km', time: '45-60 min', desc: 'A short and straightforward climb from the base village. Well-defined trail with gradual ascent — perfect for beginners, families, and casual trekkers.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Junnar or Nashik to Chavand village. ~120 km from Pune, ~150 km from Mumbai.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'MSRTC buses from Pune/Nashik to Junnar. From Junnar, local transport to the base village.' },
+            { mode: 'By Train', icon: '🚆', desc: 'Nearest station is Pune or Nashik Road. Then travel by road to the fort base.' }
+        ],
+
+        trekEssentials: [
+            'Comfortable walking shoes — easy terrain',
+            'Carry 1-2 litres of water',
+            'Light snacks',
+            'Cap and sunscreen',
+            'Camera for scenic views',
+            'First aid kit (basic)'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Some loose rocks near the summit — watch your step', season: 'All year' },
+            { msg: 'Slippery during monsoon — wear grip shoes', season: 'June-Sept' },
+            { msg: 'Limited shade on the climb — carry water and sun protection', season: 'March-May' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹200-400' },
+            { label: 'Food', value: '₹80-150' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹300-550', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'At base village' },
+            { label: 'Drinking Water', available: false, detail: 'Carry your own' },
+            { label: 'Toilets', available: false, detail: 'Not on fort' },
+            { label: 'Mobile Network', available: true, detail: 'Moderate signal' },
+            { label: 'Food Stalls', available: false, detail: 'Only at base village' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Nashik (Junnar region)' },
+            { label: 'Altitude', value: '1,076 m (3,530 ft)' },
+            { label: 'Fort Type', value: 'Hill Fort' },
+            { label: 'Best Season', value: 'Oct-March' },
+            { label: 'Difficulty', value: 'Easy' },
+            { label: 'Historical Link', value: 'Sambhaji Maharaj period' },
+            { label: 'Kids Appropriate', value: 'Yes' },
+            { label: 'Nearby Forts', value: 'Shivneri, Hadsar' },
+            { label: 'Best Combined', value: 'Shivneri + Hadsar circuit' }
+        ],
+
+        reviews: {
+            quote: "Simple trek with great views and strong Maratha history vibes! Perfect for a peaceful weekend outing with family.",
+            positives: [
+                'Easy trek perfect for beginners and families',
+                'Rich Maratha history — Sambhaji Maharaj connection',
+                'Scenic views of the surrounding Sahyadri ranges',
+                'Less crowded — peaceful experience',
+                'Can be combined with Shivneri and Hadsar'
+            ],
+            proTips: [
+                'Combine with Shivneri Fort for a full historical day trip',
+                'Best visited in post-monsoon when everything is green',
+                'Start early and finish with a local village meal',
+                'The sunset from the plateau is underrated — stay for it',
+                'Good starting point for beginners exploring Sahyadri forts'
+            ],
+            rating: 4.3,
+            reviewCount: '2,500+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ 20. MULHER FORT ━━━━━━━━━━━━━━━━━━
+    mulher: {
+        introduction: `Mulher Fort is one of the largest forts in the Baglan region of Nashik district and 
+            forms a twin fort complex with Salher — the tallest fort in Maharashtra. Known for its vast 
+            plateau, ancient temples, and historical importance during the Maratha-Mughal conflicts, Mulher 
+            offers a raw, less crowded trekking experience. The fort's remote location in northern Maharashtra 
+            rewards those who make the journey with solitude, panoramic views, and a deep sense of history.`,
+
+        quote: {
+            text: "मुल्हेर — सह्याद्रीच्या उत्तरेकडील अजिंक्य किल्ला",
+            attribution: "On Mulher's significance in the Baglan region"
+        },
+
+        timeline: [
+            { year: '12th Century', title: 'Yadava Construction', desc: 'The Yadava dynasty built the original fortifications on the Mulher hill, establishing it as a strategic outpost in the Baglan region.' },
+            { year: '14th Century', title: 'Bahmani Sultanate', desc: 'The fort came under the Bahmani Sultanate which used it to control trade routes in northern Maharashtra.' },
+            { year: '1636', title: 'Mughal Control', desc: 'The Mughals captured Mulher and used it as a garrison fort in their prolonged conflict with the Marathas.' },
+            { year: '1670s', title: 'Maratha Recapture', desc: 'The Marathas under Shivaji Maharaj recaptured Mulher as part of the reconquest of northern Sahyadri forts.' },
+            { year: '1672', title: '⚔️ Battle of Salher Region', desc: 'The nearby Battle of Salher — the first large-scale open-field Maratha victory against the Mughals — reinforced the strategic importance of the Mulher-Salher twin fort system.' },
+            { year: '1818', title: 'British Annexation', desc: 'Mulher was among the last forts to be surrendered to the British East India Company during the fall of the Maratha Empire.' }
+        ],
+
+        landmarks: [
+            { title: 'Mulher Plateau', desc: 'A vast, sprawling plateau that forms the fort\'s summit — one of the largest fort plateaus in the region. Allows extensive exploration of ruins, foundations, and scenic landscapes.', mustSee: true },
+            { title: 'Ancient Temples', desc: 'Remains of temples dedicated to local deities dot the plateau. These ruins reflect the cultural and religious significance of the fort over centuries.', mustSee: true },
+            { title: 'Fort Walls & Bastions', desc: 'Ruins of massive defensive walls that once protected the fort from invasion. The fortification design shows similarities to neighboring Salher.', mustSee: true },
+            { title: 'Salher Twin Fort View', desc: 'From Mulher\'s plateau, the twin fort Salher is clearly visible, offering a dramatic view of the twin defense system that controlled the Baglan region.', mustSee: false },
+            { title: 'Water Cisterns', desc: 'Rock-cut water storage tanks that sustained the fort\'s garrison. Some still hold water seasonally.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Pithla Bhakri', type: 'Veg', price: '₹80-120', desc: 'Traditional village meal — besan curry with jowar bhakri. Available at Mulher base village.' },
+            { name: 'Village Meals', type: 'Veg', price: '₹100-200', desc: 'Simple home-cooked Maharashtrian meals at the base village. Arrange in advance.' },
+            { name: 'Chai & Snacks', type: 'Beverage', price: '₹20-50', desc: 'Basic tea and biscuits at the base village. Very limited availability — carry your own supplies.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Mulher Village Route', difficulty: 'Hard', distance: '6 km', time: '2.5-3 hours', desc: 'A long but gradual ascent through rocky terrain and forest patches leading to a massive plateau. The trek is physically demanding due to distance.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Bus', icon: '🚌', desc: 'ST bus from Nashik to Satana town. From Satana, local transport to Mulher village (~20 km). Limited frequency.' },
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Nashik via Satana to Mulher village. ~130 km from Nashik, about 3-hour drive through rural roads.' },
+            { mode: 'By Train', icon: '🚂', desc: 'Nearest station is Manmad or Nashik Road. Then road transport to Satana and onward to Mulher village.' }
+        ],
+
+        trekEssentials: [
+            'Sturdy trekking shoes — rocky and uneven terrain throughout',
+            'Carry 3+ litres of water — very limited sources',
+            'Carry all food and snacks — no stalls on the fort',
+            'Start early morning to avoid heat on the long trek',
+            'Headlamp if planning extended exploration',
+            'Sun protection — exposed plateau',
+            'First-aid kit — remote area with no nearby medical help',
+            'Inform someone of your trek plan — limited network coverage'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Long trek requires good stamina — assess fitness before attempting', season: 'All year' },
+            { msg: 'Limited water availability — carry sufficient water', season: 'All year' },
+            { msg: 'Remote area — avoid solo trekking', season: 'All year' },
+            { msg: 'Trails become slippery and dangerous in heavy monsoon', season: 'June-Sept' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹300-700' },
+            { label: 'Food', value: '₹150-300' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Guide', value: '₹300-500' },
+            { label: 'Total', value: '₹500-1000', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'Limited at base village' },
+            { label: 'Food Stalls', available: false, detail: 'Carry own food' },
+            { label: 'Drinking Water', available: false, detail: 'Carry own water' },
+            { label: 'Toilets', available: false, detail: 'Not available' },
+            { label: 'Mobile Network', available: false, detail: 'Very weak / no signal' },
+            { label: 'Guides', available: true, detail: '₹300-500' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Nashik (Satana taluka)' },
+            { label: 'Altitude', value: '1,306 m (4,285 ft)' },
+            { label: 'Fort Type', value: 'Hill Fort' },
+            { label: 'Built By', value: 'Yadava dynasty' },
+            { label: 'Twin Fort', value: 'Salher (tallest in Maharashtra)' },
+            { label: 'Difficulty', value: 'Moderate to Hard' },
+            { label: 'Famous For', value: 'Vast plateau, Baglan defense system' },
+            { label: 'Kids Appropriate', value: 'No (long, demanding trek)' },
+            { label: 'Best Season', value: 'Nov-Feb' },
+            { label: 'Best Combined', value: 'Salher Fort + Baglan region' }
+        ],
+
+        reviews: {
+            quote: "Mulher is for those who seek solitude and raw history. The vast plateau, the twin view of Salher, and the absolute silence make it a trekker's paradise.",
+            positives: [
+                'Vast and sprawling plateau — feels like a different world',
+                'Twin fort views with Salher are spectacular',
+                'Very low crowds — peaceful exploration',
+                'Rich Maratha-Mughal history',
+                'Remote and adventurous experience'
+            ],
+            proTips: [
+                'Combine with Salher for a 2-day twin fort trek',
+                'Start very early — the trek is long and exposed',
+                'Carry all supplies — nothing available on the fort',
+                'Visit in post-monsoon for lush greenery',
+                'Hire a local guide from Mulher village'
+            ],
+            rating: 4.5,
+            reviewCount: '2,500+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ 21. KALSUBAI PEAK ━━━━━━━━━━━━━━━━━━
+    kalsubai: {
+        introduction: `Kalsubai Peak — the \"Everest of Maharashtra\" — is the highest point in the state at 
+            an elevation of 1,646 metres. This iconic summit offers breathtaking 360° panoramic views of the 
+            Sahyadri range including the legendary Alang-Madan-Kulang trio, Ratangad, and Harishchandragad. 
+            The trek from Bari village features well-defined trails with iron ladders installed at steep 
+            sections, making it accessible to both beginners and experienced trekkers. A small temple 
+            dedicated to Goddess Kalsubai sits at the summit, making it a pilgrimage as much as a trek.`,
+
+        quote: {
+            text: "कळसुबाई — महाराष्ट्राचं एव्हरेस्ट, सह्याद्रीचं सर्वोच्च शिखर!",
+            attribution: "Trekkers' tribute to Maharashtra's highest point"
+        },
+
+        timeline: [
+            { year: 'Ancient', title: 'Sacred Peak', desc: 'Kalsubai Peak has been revered by local Adivasi communities for centuries. The peak is named after a local woman named Kalsubai who is believed to have lived on the mountain.' },
+            { year: 'Pre-Modern', title: 'Adivasi Pilgrimage', desc: 'The Mahadev Koli and Thakar tribes have worshipped Goddess Kalsubai at the summit temple for generations. It remains a sacred pilgrimage for local communities.' },
+            { year: 'Modern Era', title: 'Trekking Destination', desc: 'Iron ladders were installed at steep sections to make the trek safer and accessible. Kalsubai became one of Maharashtra\'s most popular trekking destinations.' },
+            { year: 'Present', title: 'Everest of Maharashtra', desc: 'With growing trekking culture, Kalsubai has become a bucket-list destination. The sunrise trek is especially popular among adventure enthusiasts.' }
+        ],
+
+        landmarks: [
+            { title: 'Kalsubai Temple', desc: 'Small but sacred temple dedicated to Goddess Kalsubai at the summit. Local Adivasi communities conduct pujas here. The temple sits at the exact highest point of Maharashtra.', mustSee: true },
+            { title: 'Iron Ladders', desc: 'A series of iron ladders installed at steep rock sections along the trail. They add excitement to the trek while ensuring safety. Become slippery in monsoon.', mustSee: true },
+            { title: '360° Panoramic Summit', desc: 'The summit offers the most expansive view in Maharashtra — Alang, Madan, Kulang, Ratangad, Harishchandragad, and the entire Sahyadri ridge stretching to the horizon.', mustSee: true },
+            { title: 'Bari Village', desc: 'The charming base village where the trek begins. Experience tribal Adivasi culture, simple village life, and home-cooked meals before and after the trek.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Pithla Bhakri', type: 'Veg', price: '₹80-120', desc: 'Traditional meal served at Bari village before and after the trek. Simple, filling, and authentic.' },
+            { name: 'Maggi & Snacks', type: 'Veg', price: '₹30-80', desc: 'Available at multiple stalls along the route and at the base village. Classic trekker fuel.' },
+            { name: 'Chai', type: 'Beverage', price: '₹10-20', desc: 'Hot ginger chai at the base village — the perfect energy booster before the climb.' },
+            { name: 'Home-Cooked Village Meals', type: 'Veg', price: '₹100-200', desc: 'Authentic Maharashtrian home-cooked meals available at Bari village. Dal-rice, bhakri, and fresh vegetables.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Bari Village Route (Main)', difficulty: 'Medium', distance: '5.5 km', time: '2.5-3 hours', desc: 'The most popular route with well-defined trails and multiple iron ladders at steep sections. Starts from Bari Village and follows a scenic forest trail to the summit.' },
+            { icon: '⛰️', title: 'Via Indore Village', difficulty: 'Medium-Hard', distance: '6 km', time: '3-4 hours', desc: 'Alternative route from Indore village. Less crowded and more scenic, but less well-marked and without ladder support.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Bus', icon: '🚌', desc: 'ST bus from Nashik or Pune to Igatpuri/Bhandardara. From there, local transport to Bari village. ~60 km from Nashik.' },
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Nashik via Igatpuri to Bari village (~60 km). From Pune ~180 km via Sangamner. From Mumbai ~150 km. Parking at Bari village.' },
+            { mode: 'By Train', icon: '🚂', desc: 'Nearest station: Igatpuri (on Mumbai-Nashik line). From Igatpuri, local transport to Bari village (~30 km).' }
+        ],
+
+        trekEssentials: [
+            'Good trekking shoes with grip — steep rocky sections and ladders',
+            'Carry 2-3 litres of water — limited availability on route',
+            'Headlamp for pre-dawn sunrise treks',
+            'Light rain gear during monsoon — exposed summit',
+            'Energy snacks — trail mix, energy bars, fruits',
+            'Sunscreen and hat for summer treks',
+            'Start before dawn (3-4 AM) for the best sunrise experience',
+            'Cash — no UPI/card facilities at village'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Iron ladders become very slippery during monsoon — extreme caution required', season: 'Monsoon' },
+            { msg: 'Heavy crowding near ladders on weekends — delays and queues', season: 'Weekends' },
+            { msg: 'Carry sufficient water — no natural drinking water sources on trail', season: 'All year' },
+            { msg: 'Strong winds at summit — secure gear and keep distance from edges', season: 'All year' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹300-700' },
+            { label: 'Parking', value: '₹50-100' },
+            { label: 'Food', value: '₹150-300' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹500-1000', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'At Bari village (₹50-100)' },
+            { label: 'Food Stalls', available: true, detail: 'Village & along route' },
+            { label: 'Drinking Water', available: false, detail: 'Carry own; bottled available at stalls' },
+            { label: 'Toilets', available: false, detail: 'Limited/basic at base' },
+            { label: 'Mobile Network', available: true, detail: 'Moderate (Jio, Airtel)' },
+            { label: 'Guides', available: true, detail: '₹300-500' }
+        ],
+
+        quickFacts: [
+            { label: 'Height', value: '1,646 m (5,400 ft) — Highest in Maharashtra' },
+            { label: 'District', value: 'Ahmednagar (Akole taluka)' },
+            { label: 'Fort Type', value: 'Peak (with temple)' },
+            { label: 'Named After', value: 'Local woman Kalsubai' },
+            { label: 'Famous For', value: 'Everest of Maharashtra' },
+            { label: 'Iron Ladders', value: 'Multiple along the route' },
+            { label: 'Difficulty', value: 'Moderate' },
+            { label: 'Kids Appropriate', value: 'Yes (age 10+)' },
+            { label: 'Best Season', value: 'Nov-Feb (clear views)' },
+            { label: 'Best Combined', value: 'Bhandardara + Ratangad' }
+        ],
+
+        reviews: {
+            quote: "Standing at the highest point in Maharashtra, watching the sun rise over the Sahyadri range, with Alang-Madan-Kulang in the distance — it's a life-changing moment.",
+            positives: [
+                'Highest point in Maharashtra — incredible bragging rights',
+                'Breathtaking 360° summit views',
+                'Iron ladders add excitement to the trek',
+                'Well-defined trail accessible to beginners',
+                'Sacred temple at the peak adds spiritual dimension'
+            ],
+            proTips: [
+                'Do the sunrise trek — start at 3-4 AM for magical views',
+                'Visit on weekdays to avoid massive weekend crowds at ladders',
+                'Carry warm layers — summit temperature drops significantly',
+                'Combine with Bhandardara for a full weekend trip',
+                'The monsoon trek is beautiful but ladders are dangerously slippery'
+            ],
+            rating: 4.8,
+            reviewCount: '12,000+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ 22. MALHARGAD FORT ━━━━━━━━━━━━━━━━━━
+    malhargad: {
+        introduction: `Malhargad Fort — also known as Sonori Fort — holds a special place in Maratha history 
+            as the last fort ever built during the Maratha Empire. Constructed in 1757 during the Peshwa 
+            period near Saswad in Pune district, this compact fort represents the twilight of the great 
+            Maratha fort-building tradition. Despite its small size, Malhargad offers an easy, family-friendly 
+            trek with scenic views of the surrounding Pune countryside and a well-preserved temple dedicated 
+            to Lord Malhar (Shiva) at its summit.`,
+
+        quote: {
+            text: "मल्हारगड — मराठा साम्राज्यातील शेवटचा किल्ला, १७५७",
+            attribution: "Historical records on the last Maratha fort"
+        },
+
+        timeline: [
+            { year: '1757', title: '🏗️ Fort Construction', desc: 'Malhargad was built during the Peshwa era, making it the last fort constructed by the Maratha Empire. It was designed to guard the pass near Dive Ghat on the Saswad-Pune route.' },
+            { year: '1757-1818', title: 'Peshwa Guard Post', desc: 'The fort served as a strategic guard post controlling the movement through Dive Ghat. A small garrison was maintained here throughout the Peshwa period.' },
+            { year: '1818', title: 'British Acquisition', desc: 'Like all Maratha forts, Malhargad was surrendered to the British after the fall of the Peshwa regime in the Third Anglo-Maratha War.' },
+            { year: 'Present', title: 'Heritage Trek', desc: 'Now a popular beginner-friendly trek near Pune. The short distance and easy terrain make it ideal for families and first-time trekkers.' }
+        ],
+
+        landmarks: [
+            { title: 'Malhar Temple', desc: 'A well-preserved temple dedicated to Lord Malhar (Shiva) inside the fort walls. The temple is the spiritual heart of the fort and features simple but elegant stone architecture.', mustSee: true },
+            { title: 'Fort Walls & Gates', desc: 'Defensive walls surrounding the fort with partially intact entrance gates. The fortification design shows classic late-Maratha military architecture.', mustSee: true },
+            { title: 'Bastions & Viewpoints', desc: 'Small bastions at strategic points offering panoramic views of the Saswad countryside, Dive Ghat pass, and surrounding agricultural landscape.', mustSee: true },
+            { title: 'Plateau Area', desc: 'A compact fort-top plateau ideal for relaxation and picnics. The relatively flat terrain makes it accessible for elderly and children.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Pithla Bhakri', type: 'Veg', price: '₹80-120', desc: 'Traditional village meal available at Sonori village and nearby Saswad town.' },
+            { name: 'Misal Pav', type: 'Veg', price: '₹50-80', desc: 'Available at eateries in Saswad town (8 km away). Pune-style misal with extra tarri.' },
+            { name: 'Chai & Snacks', type: 'Beverage', price: '₹20-50', desc: 'Basic refreshments at the base village. Limited variety — carry your own snacks.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Sonori Village Route (Main)', difficulty: 'Easy', distance: '2 km', time: '45-60 min', desc: 'A short and straightforward trek with gradual ascent from Sonori village. Clear trail markings and gentle slope make it suitable for beginners, families, and elderly visitors.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Bus', icon: '🚌', desc: 'ST bus from Pune (Swargate) to Saswad town (25 km). From Saswad, auto or local transport to Sonori village (~8 km).' },
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Pune via Dive Ghat to Sonori village. ~30 km from Pune, about 1-hour drive. Parking available at base.' },
+            { mode: 'By Bike', icon: '🏍️', desc: 'Popular short ride from Pune. Scenic route through Dive Ghat. Park at Sonori village.' }
+        ],
+
+        trekEssentials: [
+            'Comfortable walking shoes — easy terrain, no heavy trekking needed',
+            'Carry 1 litre of water — short trek',
+            'Sunscreen and cap in summer — limited shade',
+            'Camera — scenic views of Pune countryside',
+            'Allow 1.5-2 hours for complete exploration',
+            'Carry light snacks — limited stalls at base',
+            'Best visited in morning or evening hours',
+            'Great for first-time trekkers and families'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Easy trek suitable for beginners — minimal risk', season: 'All year' },
+            { msg: 'No shade during summer — carry sun protection', season: 'Summer' },
+            { msg: 'Carry own water — no drinking water on fort', season: 'All year' }
+        ],
+
+        budget: [
+            { label: 'Transport (from Pune)', value: '₹100-300' },
+            { label: 'Food', value: '₹100-200' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹250-600', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'Free at base village' },
+            { label: 'Food Stalls', available: true, detail: 'Basic at base' },
+            { label: 'Drinking Water', available: false, detail: 'Carry own water' },
+            { label: 'Toilets', available: false, detail: 'Not available on fort' },
+            { label: 'Mobile Network', available: true, detail: 'Good (Jio, Airtel)' },
+            { label: 'Guides', available: false, detail: 'Not required' }
+        ],
+
+        quickFacts: [
+            { label: 'Also Known As', value: 'Sonori Fort' },
+            { label: 'District', value: 'Pune (Purandar taluka)' },
+            { label: 'Altitude', value: '789 m (2,589 ft)' },
+            { label: 'Fort Type', value: 'Hill Fort' },
+            { label: 'Built By', value: 'Peshwa era (1757)' },
+            { label: 'Famous For', value: 'Last Maratha Empire fort ever built' },
+            { label: 'Difficulty', value: 'Easy' },
+            { label: 'Elderly Friendly', value: 'Yes' },
+            { label: 'Kids Appropriate', value: 'Yes' },
+            { label: 'Best Combined', value: 'Purandar Fort + Saswad town' }
+        ],
+
+        reviews: {
+            quote: "Malhargad is a perfect introduction to fort trekking. Easy, scenic, and historically significant as the last fort the Marathas ever built.",
+            positives: [
+                'Extremely easy trek — perfect for beginners',
+                'Unique historical significance as the last Maratha fort',
+                'Close to Pune — ideal half-day trip',
+                'Family and elderly friendly',
+                'Well-preserved Malhar temple at the summit'
+            ],
+            proTips: [
+                'Combine with Purandar Fort for a full day of history',
+                'Visit during monsoon for lush green surroundings',
+                'Stop at Saswad for misal pav on the way',
+                'Best for sunset or early morning visits',
+                'Great first fort trek for children and beginners'
+            ],
+            rating: 4.4,
+            reviewCount: '3,500+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ 23. PANDAVGAD FORT ━━━━━━━━━━━━━━━━━━
+    pandavgad: {
+        introduction: `Pandavgad Fort is a massive hill fort located near the historic town of Wai in 
+            Satara district. Known for its mythological connection to the Pandavas from the Mahabharata, 
+            the fort features ancient caves, a sprawling plateau, and spectacular views of the Dhom Dam 
+            and the surrounding Sahyadri ranges. The trek is moderately easy, making it suitable for 
+            beginners. The combination of mythology, history, and natural beauty makes Pandavgad a 
+            rewarding yet uncrowded destination.`,
+
+        quote: {
+            text: "पांडवगड — पांडवांच्या पौराणिक कथांचे साक्षीदार",
+            attribution: "On Pandavgad's mythological connections"
+        },
+
+        timeline: [
+            { year: 'Ancient', title: 'Mythological Origins', desc: 'According to local legend, the Pandavas from the Mahabharata stayed in caves on this hilltop during their exile. The fort is named after them.' },
+            { year: '12th Century', title: 'Shilahara Fortification', desc: 'The Shilahara dynasty built the first fortifications on the strategic hilltop, establishing it as a military outpost overlooking the surrounding valleys.' },
+            { year: '17th Century', title: 'Maratha Control', desc: 'The fort was captured by the Marathas who used it for surveillance and controlling trade routes in the Satara-Wai region.' },
+            { year: '1818', title: 'British Period', desc: 'Pandavgad was surrendered to the British along with other Maratha forts after the Third Anglo-Maratha War.' },
+            { year: 'Present', title: 'Trekking Destination', desc: 'Now a popular trekking destination known for the Pandav Caves, Dhom Dam views, and peaceful plateau exploration.' }
+        ],
+
+        landmarks: [
+            { title: 'Pandav Caves', desc: 'Ancient caves believed to have been used by the Pandavas during their exile from the Mahabharata. The caves show signs of habitation and have interesting rock formations.', mustSee: true },
+            { title: 'Fort Plateau', desc: 'A large, flat-top area ideal for exploration and relaxation. The wide plateau was historically used for settlements and military camps.', mustSee: true },
+            { title: 'Dhom Dam Viewpoint', desc: 'Panoramic viewpoint offering stunning views of the Dhom Dam reservoir and the surrounding valley. One of the most scenic views in the Satara district.', mustSee: true },
+            { title: 'Fort Walls & Foundations', desc: 'Remnants of defensive walls and building foundations scattered across the plateau. Evidence of the fort\'s strategic and residential use.', mustSee: false },
+            { title: 'Water Cisterns', desc: 'Rock-cut tanks used for rainwater collection and storage. Some still function during the monsoon season.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Pithla Bhakri', type: 'Veg', price: '₹80-120', desc: 'Traditional meal available at villages near the base. Simple, authentic, and filling.' },
+            { name: 'Wai Town Restaurants', type: 'Veg', price: '₹100-250', desc: 'The historic town of Wai has several restaurants serving Maharashtrian meals, snacks, and sweets.' },
+            { name: 'Chai & Snacks', type: 'Beverage', price: '₹20-50', desc: 'Basic refreshments at the base village. Very limited — carry your own food for the trek.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Pandavgad Village Route', difficulty: 'Easy-Medium', distance: '3 km', time: '1.5-2 hours', desc: 'A gradual ascent through forest patches and rocky terrain leading to the wide plateau. Clear trail suitable for beginners with basic fitness.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Bus', icon: '🚌', desc: 'ST bus from Satara or Pune to Wai town. From Wai, local transport to the fort base village (~10 km).' },
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Satara (~25 km) or Pune (~100 km) to Wai, then to the base village of Pandavgad. Parking available.' },
+            { mode: 'By Train', icon: '🚂', desc: 'Nearest station is Satara (on Pune-Miraj line). Then road transport to Wai and the fort base.' }
+        ],
+
+        trekEssentials: [
+            'Comfortable trekking shoes — rocky terrain in sections',
+            'Carry 2 litres of water — no sources on the fort',
+            'Light snacks and packed food',
+            'Sun protection — exposed plateau',
+            'Camera — Dhom Dam views are stunning',
+            'Allow 3-4 hours for complete exploration',
+            'Best started early morning to avoid heat',
+            'Cash — limited facilities at base village'
+        ],
+
+        safetyAlerts: [
+            { msg: 'No shade on the plateau — carry sun protection in summer', season: 'Summer' },
+            { msg: 'Slippery trails during monsoon — wear proper grip shoes', season: 'Monsoon' },
+            { msg: 'Carry own water — no drinking water on fort', season: 'All year' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹200-500' },
+            { label: 'Food', value: '₹100-200' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹350-800', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'Free at base village' },
+            { label: 'Food Stalls', available: false, detail: 'Very limited at base' },
+            { label: 'Drinking Water', available: false, detail: 'Carry own water' },
+            { label: 'Toilets', available: false, detail: 'Not available' },
+            { label: 'Mobile Network', available: true, detail: 'Moderate (Jio, Airtel)' },
+            { label: 'Guides', available: false, detail: 'Not required' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Satara (Wai taluka)' },
+            { label: 'Altitude', value: '1,273 m (4,176 ft)' },
+            { label: 'Fort Type', value: 'Hill Fort' },
+            { label: 'Built By', value: 'Shilahara dynasty' },
+            { label: 'Famous For', value: 'Pandav Caves, Dhom Dam views' },
+            { label: 'Difficulty', value: 'Easy to Moderate' },
+            { label: 'Kids Appropriate', value: 'Yes' },
+            { label: 'Best Season', value: 'Nov-Feb' },
+            { label: 'Nearest Town', value: 'Wai (10 km)' },
+            { label: 'Best Combined', value: 'Wai temples + Dhom Dam' }
+        ],
+
+        reviews: {
+            quote: "Pandavgad offers a beautiful mix of mythology, nature, and history. The Dhom Dam views from the plateau are absolutely spectacular — worth every step of the climb.",
+            positives: [
+                'Stunning views of Dhom Dam from the plateau',
+                'Fascinating Pandav Caves with mythological significance',
+                'Easy to moderate trek — suitable for beginners',
+                'Low crowds — peaceful exploration',
+                'Close to historic Wai town for additional sightseeing'
+            ],
+            proTips: [
+                'Visit in post-monsoon for the best Dhom Dam views (full reservoir)',
+                'Combine with Wai\'s ancient temples for a culture-rich trip',
+                'Carry all food and water — nothing on the fort',
+                'Start early morning for pleasant trekking weather',
+                'The Pandav Caves are best explored with a local guide\'s stories'
+            ],
+            rating: 4.5,
+            reviewCount: '3,000+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ 24. HADSAR FORT ━━━━━━━━━━━━━━━━━━
+    hadsar: {
+        introduction: `Hadsar Fort is a rugged and thrilling hill fort near Junnar in Pune district, forming 
+            part of the renowned Junnar fort belt alongside Shivneri, Chavand, and Jivdhan. The fort is 
+            famous for its dramatic rock-cut steps and a grand entrance gate carved directly into the mountain 
+            face — a testament to the ingenuity of ancient builders. The trek offers a mix of forest trails 
+            and challenging final ascent, rewarding with panoramic views of surrounding forts and the lush 
+            Junnar countryside. It's a must-visit for trekkers who seek both adventure and architectural wonder.`,
+
+        quote: {
+            text: "हदसर — खडकात कोरलेले पायऱ्या आणि दरवाजा, जुन्नर किल्ला पट्टा",
+            attribution: "On Hadsar's unique rock-cut entrance"
+        },
+
+        timeline: [
+            { year: '2nd Century', title: 'Satavahana Origins', desc: 'The earliest fortifications date to the Satavahana dynasty who controlled the Junnar region. Rock-cut cisterns and cave structures suggest ancient habitation.' },
+            { year: '14th Century', title: 'Bahmani Period', desc: 'The Bahmani Sultanate expanded the fortifications and used Hadsar as part of the Junnar defense network.' },
+            { year: '17th Century', title: 'Maratha Period', desc: 'Under the Marathas, Hadsar became an important outpost in the Junnar fort belt, coordinating with Shivneri and Chavand for regional defense.' },
+            { year: '1818', title: 'British Annexation', desc: 'Hadsar was surrendered to the British East India Company during the Third Anglo-Maratha War. The fort was subsequently abandoned.' },
+            { year: 'Present', title: 'Trekking Destination', desc: 'Now popular among adventure trekkers for its dramatic rock-cut steps, challenging terrain, and views of Shivneri and surrounding forts.' }
+        ],
+
+        landmarks: [
+            { title: 'Rock-Cut Steps', desc: 'Steep, narrow steps carved directly into the vertical rock face leading to the fort entrance. An engineering marvel that also served as a natural defense — attackers had to climb single-file under fire.', mustSee: true },
+            { title: 'Main Entrance Gate', desc: 'A massive entrance gate carved into the rock face of the mountain. The gate architecture is impressive and unique — one of the most dramatic fort entrances in the Sahyadris.', mustSee: true },
+            { title: 'Fort Plateau', desc: 'An open plateau at the summit offering stunning views of Shivneri Fort, Chavand, Jivdhan, and the Junnar valley below. The panorama of surrounding forts is breathtaking.', mustSee: true },
+            { title: 'Water Cisterns', desc: 'Rock-cut water tanks that were essential for the fort\'s water supply. The Satavahana-era cisterns show sophisticated water harvesting techniques.', mustSee: true },
+            { title: 'Fort Walls & Bastions', desc: 'Remains of defensive walls and bastions along the plateau edge. Some sections are well-preserved and offer viewpoints.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Pithla Bhakri', type: 'Veg', price: '₹80-120', desc: 'Traditional rural dish available at Hadsar base village and in Junnar town.' },
+            { name: 'Junnar Misal', type: 'Veg', price: '₹40-60', desc: 'Junnar is famous for its lighter, aromatic misal — different from Pune style. Try it in Junnar town.' },
+            { name: 'Village Meals', type: 'Veg', price: '₹100-250', desc: 'Simple home-cooked meals at Hadsar village. Dal-rice, bhakri, and sabzi.' },
+            { name: 'Sugarcane Juice', type: 'Beverage', price: '₹20-30', desc: 'Fresh sugarcane juice at roadside stalls — Junnar is a major sugarcane region.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Hadsar Village Route (Main)', difficulty: 'Medium-Hard', distance: '3 km', time: '1.5-2 hours', desc: 'The trek begins with a gradual climb through forest and ends with steep rock-cut steps leading to the main entrance. The final section is challenging and requires careful footing — thrilling and rewarding.' },
+            { icon: '⛰️', title: 'Ridge Route from Jivdhan Side', difficulty: 'Hard', distance: '5 km', time: '3-4 hours', desc: 'A longer route connecting from the Junnar side. More strenuous but offers views of the entire fort belt. For experienced trekkers.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Bus', icon: '🚌', desc: 'ST bus from Pune (Shivajinagar) to Junnar town (~100 km, 2.5 hrs). From Junnar, local transport to Hadsar base village (~15 km).' },
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Pune via Chakan → Narayangaon → Junnar to Hadsar village. ~115 km from Pune. Parking at base village.' },
+            { mode: 'By Bike', icon: '🏍️', desc: 'Scenic ride from Pune through the Junnar ghats. Park at Hadsar village and trek.' }
+        ],
+
+        trekEssentials: [
+            'Sturdy trekking shoes with good grip — steep rock-cut steps',
+            'Carry 2-3 litres of water — limited sources',
+            'Gloves recommended for the rock-cut steps section',
+            'Headlamp for early starts',
+            'Carry food and snacks — nothing available on fort',
+            'Sun protection — exposed plateau at top',
+            'First-aid kit — remote area',
+            'Start early morning to avoid heat and crowds'
+        ],
+
+        safetyAlerts: [
+            { msg: 'Rock-cut steps are steep and narrow — use extreme caution', season: 'All year' },
+            { msg: 'Avoid trekking during heavy rain — steps become dangerously slippery', season: 'Monsoon' },
+            { msg: 'No railings near cliff edges — keep safe distance', season: 'All year' },
+            { msg: 'Not recommended for children under 12 or elderly due to steep final section', season: 'All year' }
+        ],
+
+        budget: [
+            { label: 'Transport (from Pune)', value: '₹200-500' },
+            { label: 'Food', value: '₹100-200' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Guide', value: '₹300-500' },
+            { label: 'Total', value: '₹400-900', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: 'Free at base village' },
+            { label: 'Food Stalls', available: false, detail: 'Only at base village' },
+            { label: 'Drinking Water', available: false, detail: 'Carry own + seasonal cisterns' },
+            { label: 'Toilets', available: false, detail: 'Not available on fort' },
+            { label: 'Mobile Network', available: true, detail: 'Moderate (Jio, Airtel)' },
+            { label: 'Guides', available: true, detail: '₹300-500' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Pune (Junnar taluka)' },
+            { label: 'Altitude', value: '1,067 m (3,501 ft)' },
+            { label: 'Fort Type', value: 'Hill Fort' },
+            { label: 'Built By', value: 'Satavahana dynasty' },
+            { label: 'Famous For', value: 'Rock-cut steps & entrance gate' },
+            { label: 'Difficulty', value: 'Moderate to Hard' },
+            { label: 'Rock Steps', value: '~100 carved into cliff' },
+            { label: 'Kids Appropriate', value: 'No (steep final section)' },
+            { label: 'Best Season', value: 'Nov-Feb' },
+            { label: 'Best Combined', value: 'Shivneri + Chavand + Junnar circuit' }
+        ],
+
+        reviews: {
+            quote: "The rock-cut steps at Hadsar are absolutely thrilling — climbing single-file up a cliff face through a gate carved into the mountain. This is fort trekking at its most dramatic.",
+            positives: [
+                'Dramatic rock-cut entrance is unique in Maharashtra',
+                'Thrilling final ascent adds adventure value',
+                'Stunning views of Shivneri and Junnar fort belt',
+                'Less crowded than nearby Shivneri',
+                'Part of the historic Junnar fort circuit'
+            ],
+            proTips: [
+                'Combine with Shivneri Fort for a full Junnar fort day trip',
+                'Visit in post-monsoon when the surroundings are lush green',
+                'Wear shoes with excellent grip — the steps are steep and narrow',
+                'Start early to avoid afternoon heat on the exposed plateau',
+                'Hire a local guide for historical context and easier navigation'
+            ],
+            rating: 4.6,
+            reviewCount: '4,200+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ 25. BHAIRAVGAD FORT ━━━━━━━━━━━━━━━━━━
+    bhairavgad: {
+        introduction: `Bhairavgad Fort in the Malshej Ghat region is a wild and remote hill fort known for its 
+            dense forest trails, steep climbs, and a massive natural cave at the summit that can accommodate 
+            over 40 people. It is one of the most adventurous treks in Maharashtra, especially during monsoon 
+            when waterfalls surround the fort. A small Bhairavnath temple inside the cave adds a spiritual 
+            dimension to this raw, untamed trekking experience.`,
+        quote: { text: "भैरवगड — जंगलात लपलेला किल्ला, गुहेत दडलेला इतिहास", attribution: "On Bhairavgad's hidden wilderness" },
+        timeline: [
+            { year: 'Ancient', title: 'Natural Shelter', desc: 'The massive cave on Bhairavgad has served as a natural shelter for centuries. Local tribes and travelers used it as protection from weather and wildlife.' },
+            { year: 'Medieval', title: 'Watchpoint Fort', desc: 'The strategic hilltop was used as a watchpoint to monitor movement through the Malshej Ghat region.' },
+            { year: '17th Century', title: 'Maratha Period', desc: 'During the Maratha Empire, Bhairavgad served as a remote outpost in the northern Sahyadri defense network.' },
+            { year: 'Present', title: 'Adventure Trek', desc: 'Now one of Maharashtra\'s most sought-after adventure treks, especially popular during monsoon for its dramatic waterfalls and misty landscapes.' }
+        ],
+        landmarks: [
+            { title: 'Bhairavgad Cave', desc: 'A massive natural cave at the summit capable of sheltering 40+ people. Used by trekkers for overnight camping. The cave\'s sheer size and natural formation make it one of the most impressive summit caves in the Sahyadris.', mustSee: true },
+            { title: 'Bhairavnath Temple', desc: 'A small temple dedicated to Lord Bhairavnath located inside the cave. Locals conduct pujas here. The temple adds spiritual significance to the trek.', mustSee: true },
+            { title: 'Malshej Valley View', desc: 'Panoramic viewpoint offering stunning views of Malshej Ghat, surrounding mountains, and during monsoon, countless waterfalls cascading down the valley walls.', mustSee: true }
+        ],
+        food: [
+            { name: 'Village Meals', type: 'Veg', price: '₹100-200', desc: 'Simple home-cooked food at Moroshi village. Arrange meals in advance with villagers.' },
+            { name: 'Pithla Bhakri', type: 'Veg', price: '₹80-120', desc: 'Traditional rural meal at the base village.' },
+            { name: 'Self-Carried Food', type: 'N/A', price: 'N/A', desc: 'No food on fort or route — carry all supplies. Essential for this remote trek.' }
+        ],
+        trekRoutes: [
+            { icon: '🥾', title: 'Moroshi Route (Main)', difficulty: 'Hard', distance: '4 km', time: '2-3 hours', desc: 'Starts through farmland, enters dense forest, followed by steep rocky patches and final climb to cave. Navigation tricky in forest — guide strongly recommended.' }
+        ],
+        howToReach: [
+            { mode: 'By Car', icon: '🚗', desc: 'Drive to Moroshi village via Malshej Ghat road. ~130 km from Mumbai, ~170 km from Pune. Parking at village.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'ST bus to Malshej Ghat from Mumbai/Pune. From Malshej, local transport to Moroshi (~20 km).' }
+        ],
+        trekEssentials: [
+            'Sturdy trekking shoes with excellent grip — steep rocky patches',
+            'Carry 3+ litres of water — no sources on route',
+            'All food and snacks — nothing available on fort',
+            'Headlamp — essential if camping in cave',
+            'Rain gear during monsoon — heavy rainfall',
+            'First-aid kit — remote area',
+            'Hire local guide from Moroshi — ₹400-600 (strongly recommended)',
+            'Inform someone before trekking — no network coverage'
+        ],
+        safetyAlerts: [
+            { msg: 'Dense forest route — easy to get lost without guide', season: 'All year' },
+            { msg: 'Steep and slippery rock patches — extreme caution', season: 'Monsoon' },
+            { msg: 'Wildlife presence in forest area — stay alert', season: 'All year' },
+            { msg: 'No mobile network — inform someone before trekking', season: 'All year' }
+        ],
+        budget: [
+            { label: 'Transport', value: '₹300-700' },
+            { label: 'Food', value: '₹150-300' },
+            { label: 'Guide', value: '₹400-600' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹600-1300', highlight: true }
+        ],
+        facilities: [
+            { label: 'Parking', available: true, detail: 'Free at Moroshi village' },
+            { label: 'Food Stalls', available: false, detail: 'Carry own food' },
+            { label: 'Drinking Water', available: false, detail: 'No reliable sources' },
+            { label: 'Toilets', available: false, detail: 'Not available' },
+            { label: 'Mobile Network', available: false, detail: 'Very weak / no signal' },
+            { label: 'Guides', available: true, detail: '₹400-600 (strongly recommended)' }
+        ],
+        quickFacts: [
+            { label: 'District', value: 'Ahmednagar' },
+            { label: 'Altitude', value: '1,145 m (3,757 ft)' },
+            { label: 'Fort Type', value: 'Hill Fort' },
+            { label: 'Famous For', value: 'Massive summit cave (40+ capacity)' },
+            { label: 'Difficulty', value: 'Hard' },
+            { label: 'Kids Appropriate', value: 'No' },
+            { label: 'Best Season', value: 'Nov-Feb (safe), Monsoon (scenic)' },
+            { label: 'Camping', value: 'Yes — inside summit cave' },
+            { label: 'Guide Required', value: 'Strongly recommended' },
+            { label: 'Best Combined', value: 'Malshej Ghat + Harishchandragad' }
+        ],
+        reviews: {
+            quote: "Bhairavgad is raw, wild, and unforgettable. The massive cave at the summit, the dense forest trail, and the monsoon waterfalls make it one of Maharashtra's most thrilling treks.",
+            positives: ['Massive summit cave — unique overnight camping experience', 'Dense forest trail adds adventure', 'Spectacular monsoon waterfalls', 'Remote and uncrowded', 'Bhairavnath temple inside cave'],
+            proTips: ['Hire a guide from Moroshi — the forest trail is confusing', 'Monsoon trek is magical but extremely slippery', 'Camp overnight in the cave for the full experience', 'Carry all food, water, and supplies', 'Combine with Malshej Ghat sightseeing'],
+            rating: 4.6, reviewCount: '2,800+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ 26. MANGI-TUNGI ━━━━━━━━━━━━━━━━━━
+    mangitungi: {
+        introduction: `Mangi-Tungi is a sacred twin peak in Nashik district and one of the most important 
+            Jain pilgrimage sites in India. Known for its 4,500+ carved stone steps and the world's tallest 
+            Jain statue of Lord Rishabhdev (108 ft), the climb is both physically demanding and spiritually 
+            profound. Hundreds of ancient rock-cut Jain idols line the route, making every step a journey 
+            through centuries of devotion and artistry.`,
+        quote: { text: "मांगी-तुंगी — जैन तीर्थक्षेत्राचे पवित्र शिखर", attribution: "On Mangi-Tungi's spiritual significance" },
+        timeline: [
+            { year: 'Ancient', title: 'Jain Sacred Site', desc: 'Mangi-Tungi has been revered as a sacred Jain Siddha Kshetra for centuries. According to Jain tradition, numerous Jain monks attained Moksha (liberation) here.' },
+            { year: 'Medieval', title: 'Rock-Cut Carvings', desc: 'Hundreds of Jain Tirthankara idols were carved into the rock face along the steps. These carvings represent one of the richest collections of Jain rock art in India.' },
+            { year: '2016', title: '108 ft Rishabhdev Statue', desc: 'The world\'s tallest Jain statue — a 108 ft monolithic statue of Lord Rishabhdev (Adinath) — was unveiled at the base, making Mangi-Tungi a global Jain landmark.' },
+            { year: 'Present', title: 'Pilgrimage & Trek', desc: 'Mangi-Tungi attracts Jain pilgrims and adventure trekkers alike. The 4,500+ steps make it one of the most physically demanding pilgrimages in India.' }
+        ],
+        landmarks: [
+            { title: '108 ft Rishabhdev Statue', desc: 'The world\'s tallest Jain statue located at the base — a stunning 108 ft monolithic statue of Lord Rishabhdev (Adinath). A modern marvel and global Jain landmark.', mustSee: true },
+            { title: 'Rock-Cut Jain Idols', desc: 'Hundreds of ancient Jain Tirthankara carvings line the route up both peaks. These centuries-old carvings represent one of India\'s richest collections of Jain rock art.', mustSee: true },
+            { title: 'Twin Peaks (Mangi & Tungi)', desc: 'Two separate summits offering panoramic 360° views of the Sahyadri landscape. Each peak has its own collection of temples and carvings. Reaching both is the ultimate goal.', mustSee: true },
+            { title: 'Jain Temples', desc: 'Multiple temples dedicated to various Jain Tirthankaras along the route and at both summits. Each temple is a point of prayer and reflection during the climb.', mustSee: false }
+        ],
+        food: [
+            { name: 'Jain Bhojan (Sattvik Meal)', type: 'Veg', price: '₹100-150', desc: 'Pure sattvik food without onion/garlic available at the temple base. Simple, clean, and filling.' },
+            { name: 'Temple Bhojanalaya', type: 'Veg', price: '₹100-200', desc: 'Dining facility at the base area serving pure Jain meals. Operates during peak hours.' },
+            { name: 'Snacks & Water', type: 'Veg', price: '₹20-50', desc: 'Limited stalls on the steps. Carry your own water for the climb.' }
+        ],
+        trekRoutes: [
+            { icon: '🥾', title: 'Taharabad Steps Route', difficulty: 'Hard', distance: '4 km', time: '2.5-3.5 hours', desc: 'More than 4,500 stone steps carved into the mountain leading to both peaks. The climb is continuous, physically demanding, and requires strong stamina. Rest shelters along the way.' }
+        ],
+        howToReach: [
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Nashik via Satana to Taharabad (~130 km). From Mumbai ~350 km. Large parking area at base.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'ST bus from Nashik to Satana town. From Satana, local transport to Taharabad (~30 km).' },
+            { mode: 'By Train', icon: '🚂', desc: 'Nearest station: Manmad (on Mumbai-Delhi line). Then road transport to Taharabad (~80 km).' }
+        ],
+        trekEssentials: [
+            'Comfortable shoes with cushioning — 4,500+ steps are brutal on joints',
+            'Carry 2-3 litres of water — limited availability on steps',
+            'Energy snacks and glucose — physically exhausting climb',
+            'Start very early (5 AM) to avoid afternoon heat',
+            'Knee support/trekking poles recommended',
+            'Sun protection — exposed route',
+            'Allow 5-7 hours for both peaks',
+            'Respect the religious site — maintain decorum'
+        ],
+        safetyAlerts: [
+            { msg: '4,500+ steps — physically exhausting, assess fitness before attempting', season: 'All year' },
+            { msg: 'Heat exhaustion risk — avoid afternoon climb', season: 'Summer' },
+            { msg: 'Well-structured steps reduce fall risk, but pace yourself', season: 'All year' }
+        ],
+        budget: [
+            { label: 'Transport', value: '₹300-700' },
+            { label: 'Parking', value: '₹50-100' },
+            { label: 'Food', value: '₹150-300' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹500-1000', highlight: true }
+        ],
+        facilities: [
+            { label: 'Parking', available: true, detail: 'Large area (₹50-100)' },
+            { label: 'Washrooms', available: true, detail: 'At base' },
+            { label: 'Drinking Water', available: true, detail: 'Base area + limited on steps' },
+            { label: 'Food', available: true, detail: 'Jain Bhojanalaya at base' },
+            { label: 'First Aid', available: true, detail: 'Temple area' },
+            { label: 'Mobile Network', available: true, detail: 'Moderate (Jio, Airtel)' }
+        ],
+        quickFacts: [
+            { label: 'District', value: 'Nashik (Baglan taluka)' },
+            { label: 'Altitude', value: '1,343 m (4,406 ft)' },
+            { label: 'Type', value: 'Sacred Twin Peak' },
+            { label: 'Steps', value: '4,500+ carved stone steps' },
+            { label: 'Famous For', value: 'World\'s tallest Jain statue (108 ft)' },
+            { label: 'Difficulty', value: 'Moderate to Hard' },
+            { label: 'Religious', value: 'Major Jain Siddha Kshetra' },
+            { label: 'Kids Appropriate', value: 'Yes (older children)' },
+            { label: 'Best Season', value: 'Nov-Feb' },
+            { label: 'Best Combined', value: 'Salher + Mulher forts (Baglan region)' }
+        ],
+        reviews: {
+            quote: "Mangi-Tungi is not just a trek — it's a pilgrimage of endurance and faith. 4,500 steps of devotion, centuries of rock-cut Jain art, and the world's tallest Jain statue make it unforgettable.",
+            positives: ['World\'s tallest Jain statue is awe-inspiring', 'Hundreds of ancient rock-cut carvings', 'Spiritually profound experience', 'Well-maintained steps and facilities', 'Panoramic views from both peaks'],
+            proTips: ['Start at 5 AM to avoid heat and complete both peaks', 'Wear cushioned shoes — your knees will thank you', 'Carry glucose and energy snacks for the climb', 'Visit during Jain festivals for the full spiritual experience', 'Knee support recommended for the descent'],
+            rating: 4.7, reviewCount: '6,000+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ 27. ANJANERI FORT ━━━━━━━━━━━━━━━━━━
+    anjaneri: {
+        introduction: `Anjaneri Fort is a scenic hill fort near Trimbakeshwar in Nashik district, traditionally 
+            believed to be the birthplace of Lord Hanuman. The trek is relatively easy and passes through 
+            plateaus, forest trails, and temple complexes, offering panoramic views of the Brahmagiri range 
+            and Nashik valley. The combination of mythological significance, easy accessibility, and natural 
+            beauty makes Anjaneri one of the most visited forts near Nashik.`,
+        quote: { text: "अंजनेरी — हनुमानाचे जन्मस्थान, श्रद्धा आणि सह्याद्रीचा संगम", attribution: "On Anjaneri's mythological roots" },
+        timeline: [
+            { year: 'Ancient', title: 'Mythological Origins', desc: 'According to Hindu mythology, Anjaneri is the birthplace of Lord Hanuman. His mother Anjani Mata is said to have lived on this hill. The fort is named after her.' },
+            { year: '12th Century', title: 'Yadava Fortification', desc: 'The Yadava dynasty built fortifications on the hill, establishing it as a military outpost near Trimbakeshwar.' },
+            { year: '17th Century', title: 'Maratha Period', desc: 'Under the Marathas, Anjaneri served as a strategic fort in the Nashik region, coordinating with nearby forts for regional defense.' },
+            { year: 'Present', title: 'Pilgrimage & Trek', desc: 'Now a popular destination combining religious pilgrimage (Hanuman birthplace) with easy trekking. The Anjani Mata temple draws devotees year-round.' }
+        ],
+        landmarks: [
+            { title: 'Anjani Mata Temple', desc: 'Temple dedicated to Anjani Mata, believed to be the mother of Lord Hanuman. A major pilgrimage point where devotees offer prayers year-round.', mustSee: true },
+            { title: 'Hanuman Birthplace Point', desc: 'Sacred location on the fort believed to be the exact spot where Lord Hanuman was born. Marked by religious significance and local devotion.', mustSee: true },
+            { title: 'Fort Plateau', desc: 'Wide, scenic plateau offering panoramic views of the Brahmagiri range, Trimbakeshwar, and the Nashik valley. Great for relaxation and photography.', mustSee: true },
+            { title: 'Water Cisterns', desc: 'Ancient rock-cut water storage tanks on the plateau that provided water for fort inhabitants. Some still hold water seasonally.', mustSee: false }
+        ],
+        food: [
+            { name: 'Pithla Bhakri', type: 'Veg', price: '₹80-120', desc: 'Traditional meal at Anjaneri base village.' },
+            { name: 'Nashik Misal', type: 'Veg', price: '₹40-60', desc: 'Available at eateries in nearby Trimbakeshwar town.' },
+            { name: 'Snacks & Tea', type: 'Veg', price: '₹20-50', desc: 'Available at base village stalls.' }
+        ],
+        trekRoutes: [
+            { icon: '🥾', title: 'Anjaneri Village Route (Main)', difficulty: 'Easy', distance: '2.5-3 km', time: '1.5-2 hours', desc: 'Gradual climb through forest patches and open plateaus with well-defined trails and steps. Suitable for beginners, families, and all age groups.' }
+        ],
+        howToReach: [
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Nashik to Anjaneri village (~20 km). From Trimbakeshwar, ~10 km. Parking at base.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'ST bus from Nashik to Trimbakeshwar. From Trimbakeshwar, local transport to Anjaneri village.' },
+            { mode: 'By Train', icon: '🚂', desc: 'Nearest station: Nashik Road. Then road transport via Trimbakeshwar to Anjaneri.' }
+        ],
+        trekEssentials: [
+            'Comfortable walking shoes — easy terrain', 'Carry 1-2 litres of water',
+            'Sun protection — open plateau sections', 'Camera — Brahmagiri views are stunning',
+            'Combine with Trimbakeshwar temple visit', 'Best in morning or evening hours'
+        ],
+        safetyAlerts: [
+            { msg: 'Easy trek suitable for beginners — minimal risk', season: 'All year' },
+            { msg: 'Slippery trails during monsoon — wear grip shoes', season: 'Monsoon' },
+            { msg: 'Open plateau with limited shade in summer', season: 'Summer' }
+        ],
+        budget: [
+            { label: 'Transport', value: '₹100-300' },
+            { label: 'Food', value: '₹100-200' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Total', value: '₹250-600', highlight: true }
+        ],
+        facilities: [
+            { label: 'Parking', available: true, detail: '₹30-50 at base' },
+            { label: 'Food Stalls', available: true, detail: 'At base village' },
+            { label: 'Drinking Water', available: false, detail: 'Carry own' },
+            { label: 'Toilets', available: false, detail: 'Limited/basic' },
+            { label: 'Mobile Network', available: true, detail: 'Good (Jio, Airtel)' },
+            { label: 'Guides', available: false, detail: 'Not required' }
+        ],
+        quickFacts: [
+            { label: 'District', value: 'Nashik (Trimbakeshwar)' },
+            { label: 'Altitude', value: '1,280 m (4,200 ft)' },
+            { label: 'Fort Type', value: 'Hill Fort' },
+            { label: 'Famous For', value: 'Birthplace of Lord Hanuman' },
+            { label: 'Difficulty', value: 'Easy' },
+            { label: 'Elderly Friendly', value: 'Yes' },
+            { label: 'Kids Appropriate', value: 'Yes' },
+            { label: 'Best Season', value: 'Nov-Feb & Monsoon' },
+            { label: 'Nearby', value: 'Trimbakeshwar Jyotirlinga' },
+            { label: 'Best Combined', value: 'Trimbakeshwar + Brahmagiri' }
+        ],
+        reviews: {
+            quote: "Anjaneri is a beautiful blend of mythology and nature. The easy trek, the Hanuman connection, and the Brahmagiri panorama make it perfect for families and spiritual seekers.",
+            positives: ['Easy trek perfect for all ages', 'Mythological significance — Hanuman birthplace', 'Beautiful Brahmagiri range views', 'Close to Nashik and Trimbakeshwar', 'Can combine with Jyotirlinga visit'],
+            proTips: ['Visit Trimbakeshwar temple on the same trip', 'Best in post-monsoon for green landscapes', 'Great sunset spot from the plateau', 'Carry your own water and snacks', 'Perfect first trek for children'],
+            rating: 4.6, reviewCount: '7,000+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ 28. SUDHAGAD FORT ━━━━━━━━━━━━━━━━━━
+    sudhagad: {
+        introduction: `Sudhagad Fort, also known as Bhorapgad, is a massive hill fort in Raigad district that 
+            was once considered by Chhatrapati Shivaji Maharaj as a potential capital of the Maratha Empire 
+            before Raigad was finalized. Known for its vast plateau comparable in size to Raigad, the Bhorai 
+            Devi temple, and scenic Konkan views, Sudhagad offers a rewarding trekking experience rich in 
+            history and natural beauty.`,
+        quote: { text: "सुधागड — शिवाजी महाराजांच्या राजधानीचा पर्याय", attribution: "On Sudhagad's near-capital status" },
+        timeline: [
+            { year: '10th Century', title: 'Shilahara Construction', desc: 'Built by the Shilahara dynasty as a strategic hill fort controlling the Konkan-Deccan routes.' },
+            { year: '17th Century', title: 'Maratha Capital Contender', desc: 'Shivaji Maharaj renamed the fort Sudhagad and considered it as a potential capital before choosing Raigad.' },
+            { year: '1818', title: 'British Takeover', desc: 'The fort was surrendered to the British after the Third Anglo-Maratha War.' },
+            { year: 'Present', title: 'Heritage Trek', desc: 'Popular trekking destination with the Bhorai Devi temple drawing pilgrims and the vast plateau attracting history enthusiasts.' }
+        ],
+        landmarks: [
+            { title: 'Bhorai Devi Temple', desc: 'Well-maintained temple at the summit dedicated to the local deity Bhorai Devi. The spiritual center of the fort.', mustSee: true },
+            { title: 'Sudhagad Plateau', desc: 'Extremely large plateau comparable to Raigad in size. Great for exploration with scattered ruins and structures.', mustSee: true },
+            { title: 'Fort Walls & Bastions', desc: 'Strong defensive walls and bastions protecting the fort\'s perimeter with views of the Konkan landscape.', mustSee: true },
+            { title: 'Water Cisterns', desc: 'Rock-cut water tanks that ensured year-round water for fort inhabitants.', mustSee: true }
+        ],
+        food: [
+            { name: 'Simple Meals', type: 'Veg', price: '₹100-150', desc: 'Basic food at temple area.' },
+            { name: 'Pithla Bhakri', type: 'Veg', price: '₹80-120', desc: 'At Pachapur base village.' }
+        ],
+        trekRoutes: [
+            { icon: '🥾', title: 'Pachapur Route (Main)', difficulty: 'Easy-Medium', distance: '3 km', time: '1.5-2 hours', desc: 'Well-defined forest trail with gradual ascent to the fort plateau. Suitable for beginners.' }
+        ],
+        howToReach: [
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Pune/Mumbai to Pali town, then to Pachapur village. ~100 km from Pune.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'ST bus to Pali. Then local transport to Pachapur (~20 km).' }
+        ],
+        trekEssentials: ['Good walking shoes', 'Carry 2L water', 'Sun protection', 'Camera', 'Allow 4-5 hours total'],
+        safetyAlerts: [
+            { msg: 'Fog reduces visibility during monsoon', season: 'Monsoon' },
+            { msg: 'Large plateau — risk of losing direction', season: 'All year' }
+        ],
+        budget: [
+            { label: 'Transport', value: '₹200-500' }, { label: 'Food', value: '₹150-300' },
+            { label: 'Entry', value: 'Free' }, { label: 'Total', value: '₹400-900', highlight: true }
+        ],
+        facilities: [
+            { label: 'Parking', available: true, detail: '₹30-50' }, { label: 'Drinking Water', available: true, detail: 'Temple area' },
+            { label: 'Mobile Network', available: false, detail: 'Weak' }, { label: 'Guides', available: true, detail: '₹300-500' }
+        ],
+        quickFacts: [
+            { label: 'District', value: 'Raigad (Pali)' }, { label: 'Also Known As', value: 'Bhorapgad' },
+            { label: 'Altitude', value: '590 m' }, { label: 'Famous For', value: 'Potential Maratha capital' },
+            { label: 'Difficulty', value: 'Easy to Moderate' }, { label: 'Kids Appropriate', value: 'Yes' }
+        ],
+        reviews: {
+            quote: "Sudhagad is an underrated gem — a fort that nearly became the Maratha capital. The vast plateau, the Bhorai Devi temple, and the Konkan views reward every visitor.",
+            positives: ['Nearly became Maratha capital', 'Vast plateau like Raigad', 'Bhorai Devi temple', 'Scenic Konkan views', 'Moderately easy trek'],
+            proTips: ['Combine with Pali sightseeing', 'Visit during monsoon for green views', 'Allow half-day', 'The plateau is best explored with a guide'],
+            rating: 4.6, reviewCount: '5,500+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ 29. AVCHITGAD FORT ━━━━━━━━━━━━━━━━━━
+    avchitgad: {
+        introduction: `Avchitgad Fort is a small yet scenic hill fort near Roha in Raigad district. Surrounded 
+            by dense greenery and offering beautiful views of the Kundalika river valley and Konkan landscape, 
+            it is an easy and peaceful trekking destination. The fort was captured by Chhatrapati Shivaji 
+            Maharaj from the Adilshahi in 1660 and served as a strategic outpost in the Konkan region.`,
+        quote: { text: "अवचितगड — कोकणातील शांत आणि हिरवागार किल्ला", attribution: "On Avchitgad's tranquil beauty" },
+        timeline: [
+            { year: '16th Century', title: 'Adilshahi Construction', desc: 'Built by the Adil Shahi dynasty as a strategic fort in the Konkan region.' },
+            { year: '1660', title: '⚔️ Shivaji\'s Capture', desc: 'Captured by Chhatrapati Shivaji Maharaj from the Adilshahi, adding it to the growing Maratha Swarajya.' },
+            { year: '1818', title: 'British Period', desc: 'Surrendered to the British after the fall of the Maratha Empire.' },
+            { year: 'Present', title: 'Peaceful Trek', desc: 'A quiet, easy trek offering Konkan greenery and Kundalika river valley views.' }
+        ],
+        landmarks: [
+            { title: 'Fort Walls', desc: 'Remains of defensive walls used for regional defense.', mustSee: true },
+            { title: 'Bastions', desc: 'Small bastions overlooking the Konkan valley — strategic watch points.', mustSee: true },
+            { title: 'Water Tanks', desc: 'Rock-cut water storage tanks.', mustSee: true },
+            { title: 'Kundalika Viewpoints', desc: 'Views of the Kundalika river valley and lush Konkan greenery.', mustSee: true }
+        ],
+        food: [
+            { name: 'Pithla Bhakri', type: 'Veg', price: '₹80-120', desc: 'At base village or Roha town.' }
+        ],
+        trekRoutes: [
+            { icon: '🥾', title: 'Medha Village Route', difficulty: 'Easy', distance: '2.5 km', time: '1-1.5 hours', desc: 'Short, straightforward trek through forest paths. Perfect for beginners and families.' }
+        ],
+        howToReach: [
+            { mode: 'By Car', icon: '🚗', desc: 'Drive to Medha village near Roha. ~120 km from Mumbai, ~170 km from Pune.' },
+            { mode: 'By Train', icon: '🚂', desc: 'Nearest station: Roha (Konkan Railway). Then local transport to Medha (~10 km).' }
+        ],
+        trekEssentials: ['Comfortable shoes', 'Carry 1-2L water', 'Insect repellent', 'Camera'],
+        safetyAlerts: [
+            { msg: 'Slippery trails during monsoon', season: 'Monsoon' },
+            { msg: 'Dense vegetation — watch for insects', season: 'All year' }
+        ],
+        budget: [
+            { label: 'Transport', value: '₹200-500' }, { label: 'Food', value: '₹100-200' },
+            { label: 'Entry', value: 'Free' }, { label: 'Total', value: '₹350-800', highlight: true }
+        ],
+        facilities: [
+            { label: 'Parking', available: true, detail: 'Free at Medha' }, { label: 'Mobile Network', available: true, detail: 'Good' },
+            { label: 'Food Stalls', available: false, detail: 'Carry own' }, { label: 'Drinking Water', available: false, detail: 'Carry own' }
+        ],
+        quickFacts: [
+            { label: 'District', value: 'Raigad (Roha)' }, { label: 'Altitude', value: '330 m' },
+            { label: 'Famous For', value: 'Kundalika views, easy Konkan trek' }, { label: 'Difficulty', value: 'Easy' },
+            { label: 'Captured By', value: 'Shivaji Maharaj (1660)' }, { label: 'Kids Appropriate', value: 'Yes' }
+        ],
+        reviews: {
+            quote: "Avchitgad is a hidden gem in the Konkan. Easy, green, and peaceful — perfect for a quiet day out.",
+            positives: ['Very easy trek', 'Beautiful Konkan greenery', 'Kundalika river views', 'Low crowds', 'Shivaji Maharaj history'],
+            proTips: ['Combine with Kundalika river rafting', 'Best in monsoon for lush greenery', 'Great for beginners and families'],
+            rating: 4.4, reviewCount: '3,200+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ 30. KAMALGAD FORT ━━━━━━━━━━━━━━━━━━
+    kamalgad: {
+        introduction: `Kamalgad Fort is a lesser-known hill fort near Wai in Satara district. Known for its 
+            unique geological feature called the 'Geru Well' — a deep vertical pit carved into rock — the 
+            fort offers a short yet adventurous trek with scenic views of the Dhom Dam and surrounding 
+            Sahyadri ranges. The final rock patch adds a thrill for moderate-level trekkers.`,
+        quote: { text: "कमळगड — गेरू विहीर आणि ढोम धरणाचे विहंगम दृश्य", attribution: "On Kamalgad's unique features" },
+        timeline: [
+            { year: 'Medieval', title: 'Fort Construction', desc: 'Built as a lookout fort connected to the broader Maratha signaling and defense network in the Sahyadri region.' },
+            { year: '17th Century', title: 'Maratha Use', desc: 'Used by the Marathas for surveillance and communication with nearby forts through fire signals.' },
+            { year: '1818', title: 'British Period', desc: 'Abandoned after the fall of the Maratha Empire.' },
+            { year: 'Present', title: 'Adventure Trek', desc: 'Known for the Geru Well feature and scenic Dhom Dam views among trekking enthusiasts.' }
+        ],
+        landmarks: [
+            { title: 'Geru Well', desc: 'A deep cylindrical pit carved into rock, accessed via internal steps. Possibly used as a prison or secret storage. A unique feature rare among Maharashtra forts.', mustSee: true },
+            { title: 'Dhom Dam View', desc: 'Beautiful panoramic view of Dhom Dam and its surrounding valley from the fort plateau.', mustSee: true },
+            { title: 'Fort Plateau', desc: 'Flat top area with limited structures but excellent views of the Sahyadri landscape.', mustSee: true }
+        ],
+        food: [
+            { name: 'Wai Town Restaurants', type: 'Veg', price: '₹100-250', desc: 'Wai has several eateries. Carry own food for the trek.' }
+        ],
+        trekRoutes: [
+            { icon: '🥾', title: 'Tupewadi Route', difficulty: 'Medium', distance: '2.5 km', time: '1.5-2 hours', desc: 'Forest trail followed by steep climb and rock patch near the top. Final section requires careful climbing.' }
+        ],
+        howToReach: [
+            { mode: 'By Car', icon: '🚗', desc: 'Drive from Wai to Tupewadi village (~30 km from Wai). ~130 km from Pune.' },
+            { mode: 'By Bus', icon: '🚌', desc: 'ST bus to Wai. Then local transport to Tupewadi.' }
+        ],
+        trekEssentials: ['Trekking shoes with grip', 'Carry 2L water', 'Gloves for rock patch', 'Camera for Dhom Dam views'],
+        safetyAlerts: [
+            { msg: 'Final rock patch requires careful climbing', season: 'All year' },
+            { msg: 'Geru well is deep — avoid careless entry', season: 'All year' },
+            { msg: 'Slippery in monsoon', season: 'Monsoon' }
+        ],
+        budget: [
+            { label: 'Transport', value: '₹200-500' }, { label: 'Food', value: '₹100-200' },
+            { label: 'Guide', value: '₹300-500' }, { label: 'Total', value: '₹500-1000', highlight: true }
+        ],
+        facilities: [
+            { label: 'Parking', available: true, detail: 'Free at base' }, { label: 'Mobile Network', available: true, detail: 'Moderate' },
+            { label: 'Guides', available: true, detail: '₹300-500' }, { label: 'Drinking Water', available: false, detail: 'Carry own' }
+        ],
+        quickFacts: [
+            { label: 'District', value: 'Satara (Wai)' }, { label: 'Altitude', value: '1,312 m' },
+            { label: 'Famous For', value: 'Geru Well, Dhom Dam views' }, { label: 'Difficulty', value: 'Moderate' },
+            { label: 'Kids Appropriate', value: 'No (rock patch)' }, { label: 'Best Combined', value: 'Wai temples + Dhom Dam' }
+        ],
+        reviews: {
+            quote: "Kamalgad's Geru Well is unlike anything you'll see on other forts. Combined with the Dhom Dam panorama, it's a hidden treasure in the Sahyadris.",
+            positives: ['Unique Geru Well feature', 'Stunning Dhom Dam views', 'Adventurous rock patch', 'Less crowded', 'Short trek'],
+            proTips: ['Explore the Geru Well carefully — it\'s deep', 'Combine with Pandavgad for a twin fort day', 'Best in post-monsoon for Dhom Dam views'],
+            rating: 4.5, reviewCount: '3,500+'
+        }
+    },
+
+    // ━━━━━━━━━━━━━━━━━━ KALAVANTIN DURG ━━━━━━━━━━━━━━━━━━
+    kalavantindurg: {
+        introduction: `Kalavantin Durg is one of the most iconic and thrilling trekking destinations in 
+            Maharashtra — a vertiginous rock pinnacle with near-vertical steps carved directly into the 
+            mountainside without any railings. Located adjacent to Prabalgad Fort near Panvel, this 
+            ancient watchtower offers an adrenaline-pumping ascent that rewards with jaw-dropping 
+            panoramic views of the Sahyadri ranges, Matheran plateau, and the Mumbai skyline on clear 
+            days. Visible from the Mumbai-Pune Expressway, it has become one of the most photographed 
+            and bucket-listed forts in the state.`,
+
+        quote: {
+            text: "कळवंतीण दुर्ग — आकाशाला भिडणारा किल्ला!",
+            attribution: "Trekkers' saying — 'The fort that touches the sky'"
+        },
+
+        timeline: [
+            { year: 'Pre-17th Century', title: 'Ancient Origins', desc: 'Kalavantin Durg is believed to have been built as a watchtower and lookout point, possibly named after a queen named Kalavantin. The exact origins remain shrouded in mystery.' },
+            { year: '17th Century', title: 'Maratha Control', desc: 'The fort and its companion Prabalgad were used as strategic outposts by the Marathas to control the route between Kalyan, Panvel, and the Konkan coast.' },
+            { year: '18th Century', title: 'Mughal & British Period', desc: 'Control passed between the Mughals and later the British East India Company during the Anglo-Maratha conflicts. The fort gradually fell into disuse.' },
+            { year: 'Modern Era', title: '🧗 Trekking Icon', desc: 'Kalavantin Durg has been rediscovered as one of Maharashtra\'s most thrilling adventure treks, drawing thousands of trekkers annually for its near-vertical rock-cut steps.' }
+        ],
+
+        landmarks: [
+            { title: 'Rock-Cut Steps', desc: 'The signature feature — narrow and steep steps carved directly into the basalt rock ridge leading to the summit. No railings, no safety nets — pure adrenaline. About 200 steps of varying steepness.', mustSee: true },
+            { title: 'Summit Viewpoint', desc: 'The pinnacle of Kalavantin offers breathtaking 360° panoramic views of surrounding valleys, Prabalgad plateau, Matheran, and on clear days, the Mumbai skyline and Arabian Sea.', mustSee: true },
+            { title: 'Prabalgad View', desc: 'From Kalavantin\'s summit you get a spectacular view of the neighboring Prabalgad Fort with its imposing plateau — the two forts formed a connected defense system.', mustSee: true },
+            { title: 'Prabalgad Plateau', desc: 'The trek to Kalavantin passes through the Prabalgad plateau — a large grassy expanse perfect for rest and photography before the final steep climb.', mustSee: false }
+        ],
+
+        food: [
+            { name: 'Maggi & Lemon Water', type: 'Veg', price: '₹50-100', desc: 'The classic trekker combo — hot Maggi noodles and refreshing nimbu paani. Available at the base and sometimes at the Prabalgad plateau during peak season.' },
+            { name: 'Snacks & Lemon Water', type: 'Veg', price: '₹30-80', desc: 'Basic snacks, biscuits, and lemon water available at Thakurwadi base and at the plateau.' },
+            { name: 'Village Food Stalls', type: 'Veg', price: '₹100-200', desc: 'Simple home-cooked meals available in Thakurwadi village — dal-rice, bhakri-pithla. Best to eat before or after the trek.' }
+        ],
+
+        trekRoutes: [
+            { icon: '🥾', title: 'Via Thakurwadi Village (Main Route)', difficulty: 'Hard', distance: '3.5 km', time: '90-150 min', desc: 'The standard route starts from Thakurwadi village, passes through forest and the Prabalgad plateau, followed by the iconic steep climb on exposed rock-cut steps without railings. Not for the faint-hearted.' }
+        ],
+
+        howToReach: [
+            { mode: 'By Bus', icon: '🚌', desc: 'Local buses from Panvel ST stand to Thakurwadi village. Panvel is well-connected by train from Mumbai CST and Pune.' },
+            { mode: 'By Car', icon: '🚗', desc: 'Drive to Thakurwadi village via Panvel. ~15 km from Panvel. Parking available at the base village. ~80 km from Mumbai.' },
+            { mode: 'By Train + Auto', icon: '🚂', desc: 'Train to Panvel station (Central/Harbour line). From Panvel, auto-rickshaw or shared vehicle to Thakurwadi base village (~15 km).' }
+        ],
+
+        trekEssentials: [
+            'Sturdy trekking shoes with excellent grip — rock steps are steep and smooth',
+            'Carry minimum 2-3 litres water — no water source on the fort',
+            'Headlamp if planning early morning or night trek',
+            'Avoid wearing loose footwear (slippers/sandals) — extremely dangerous',
+            'Gloves recommended for better grip on rock steps',
+            'Start early morning (6-7 AM) to avoid crowds on the narrow steps',
+            'Carry your own food — no guaranteed stalls at the top',
+            'First aid kit — nearest hospital is 1+ hour away'
+        ],
+
+        safetyAlerts: [
+            { msg: 'No railings on steep rock-cut steps — HIGH FALL RISK. Stay focused at all times', season: 'All year' },
+            { msg: 'Steps become extremely slippery during and after rain — AVOID in active monsoon', season: 'Monsoon' },
+            { msg: 'Crowding on narrow steps during weekends can be dangerous — visit on weekdays', season: 'Weekends' },
+            { msg: 'Not suitable for beginners, elderly, or children — serious trekking experience required', season: 'All year' },
+            { msg: 'Vertigo-inducing heights — if you have fear of heights, reconsider this trek', season: 'All year' }
+        ],
+
+        budget: [
+            { label: 'Transport', value: '₹200-500' },
+            { label: 'Food', value: '₹150-300' },
+            { label: 'Entry', value: 'Free' },
+            { label: 'Guide', value: '₹300-500' },
+            { label: 'Total', value: '₹500-1000', highlight: true }
+        ],
+
+        facilities: [
+            { label: 'Parking', available: true, detail: '₹50-100 at base village' },
+            { label: 'Food Stalls', available: true, detail: 'Basic, at base & plateau' },
+            { label: 'Drinking Water', available: false, detail: 'Carry your own' },
+            { label: 'Toilets', available: false, detail: 'Not available' },
+            { label: 'Local Guides', available: true, detail: '₹300-500' },
+            { label: 'Mobile Network', available: true, detail: 'Moderate (Jio, Airtel)' },
+            { label: 'First Aid', available: false, detail: 'Nearest at base village' }
+        ],
+
+        quickFacts: [
+            { label: 'District', value: 'Raigad (Panvel)' },
+            { label: 'Base Village', value: 'Thakurwadi' },
+            { label: 'Altitude', value: '686 m (2,250 ft)' },
+            { label: 'Fort Type', value: 'Hill Fort (Watchtower)' },
+            { label: 'Famous For', value: 'Near-vertical rock-cut steps' },
+            { label: 'Steps Count', value: '~200 carved steps' },
+            { label: 'Nearest Fort', value: 'Prabalgad (adjacent)' },
+            { label: 'Time Required', value: '3-5 hours (round trip)' },
+            { label: 'Kids Appropriate', value: 'No (extremely dangerous)' },
+            { label: 'Best Combined', value: 'Prabalgad Fort' }
+        ],
+
+        reviews: {
+            quote: "Kalavantin Durg is not a trek — it's a vertical adventure. Climbing those exposed rock steps with nothing but the valley below you is the most thrilling experience in the Sahyadris.",
+            positives: [
+                'Most thrilling rock-cut step climb in Maharashtra',
+                'Breathtaking 360° summit views',
+                'Adjacent to Prabalgad — double fort experience',
+                'Close to Mumbai — accessible weekend adventure',
+                'Incredibly photogenic pinnacle'
+            ],
+            proTips: [
+                'Visit on weekdays — weekend crowds on narrow steps are dangerous',
+                'Start by 6 AM to get the steps to yourself',
+                'Combine with Prabalgad for a full-day adventure',
+                'Carry gloves — better grip on smooth rock steps',
+                'Avoid monsoon entirely — the steps become lethal when wet'
+            ],
+            rating: 4.7,
+            reviewCount: '9,000+'
+        }
     }
 };
 
 export { fortDetailedData };
 export default fortDetailedData;
+
+

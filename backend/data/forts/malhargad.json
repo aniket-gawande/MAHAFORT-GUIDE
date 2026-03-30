@@ -1,0 +1,193 @@
+{
+    "name": "Malhargad Fort",
+    "location": {
+        "district": "Pune",
+        "taluka": "Purandar",
+        "baseVillage": "Sonori",
+        "coordinates": {
+            "lat": 18.2545,
+            "lng": 74.0192
+        },
+        "nearestCity": "Pune (30 km)"
+    },
+    "googleMaps": {
+        "placeId": "MalhargadFortMapID",
+        "rating": 4.4,
+        "totalReviews": 3500,
+        "url": "https://maps.google.com/?q=Malhargad+Fort"
+    },
+    "description": "Malhargad Fort, also known as Sonori Fort, is the last fort built during the Maratha Empire in 1757 under the Peshwas. Located near Saswad, it is a small yet historically significant fort offering an easy trek and scenic views of the surrounding plains.",
+    "trek": {
+        "routes": [
+            {
+                "name": "Sonori Village Route (Main)",
+                "startPoint": "Sonori Village",
+                "distance": "2 km",
+                "duration": "45–60 minutes",
+                "difficulty": "Easy",
+                "elevation": "789 m",
+                "description": "A short and straightforward trek with gradual ascent, suitable for beginners and families.",
+                "facilities": [
+                    "Parking available at base",
+                    "Basic food stalls",
+                    "Clear trail markings"
+                ]
+            }
+        ],
+        "bestTime": [
+            "Winter (November–February) – Pleasant weather",
+            "Monsoon (July–September) – Green surroundings"
+        ],
+        "avoidTime": [
+            "Peak summer afternoons – Hot and dry"
+        ]
+    },
+    "landmarks": [
+        {
+            "name": "Malhar Temple",
+            "type": "Temple",
+            "description": "Temple dedicated to Lord Malhar (Shiva) inside the fort.",
+            "historicalSignificance": "Religious center of the fort.",
+            "timeToExplore": "15 minutes",
+            "mustSee": true
+        },
+        {
+            "name": "Fort Walls",
+            "type": "Fortification",
+            "description": "Remains of defensive walls surrounding the fort.",
+            "historicalSignificance": "Built during late Maratha period.",
+            "timeToExplore": "20 minutes",
+            "mustSee": true
+        },
+        {
+            "name": "Bastions",
+            "type": "Fortification",
+            "description": "Small bastions offering views of Saswad region.",
+            "historicalSignificance": "Used for defense and observation.",
+            "timeToExplore": "15 minutes",
+            "mustSee": true
+        }
+    ],
+    "food": {
+        "onFort": [
+            {
+                "name": "Snacks",
+                "type": "Veg",
+                "price": "₹20-50",
+                "description": "Limited availability at base.",
+                "mustTry": false
+            }
+        ],
+        "nearbyRestaurants": [
+            {
+                "name": "Local Dhaba",
+                "distance": "Sonori Village",
+                "type": "Veg",
+                "priceRange": "₹100-200",
+                "speciality": "Simple Maharashtrian food"
+            }
+        ],
+        "mustTryDishes": [
+            {
+                "name": "Pithla Bhakri",
+                "type": "Veg",
+                "price": "₹80-120",
+                "description": "Traditional village meal.",
+                "mustTry": true
+            }
+        ]
+    },
+    "facilities": {
+        "parking": {
+            "available": true,
+            "cost": "Free",
+            "capacity": "Available at base village"
+        },
+        "washrooms": {
+            "available": false,
+            "condition": "Not available"
+        },
+        "drinkingWater": {
+            "available": false,
+            "points": [
+                "Carry your own water"
+            ]
+        },
+        "mobileNetwork": {
+            "quality": "Good",
+            "providers": ["Jio", "Airtel"]
+        },
+        "firstAid": {
+            "available": false,
+            "location": "Nearest facility in Saswad"
+        },
+        "guides": {
+            "available": false,
+            "cost": "Not required"
+        }
+    },
+    "safety": {
+        "alerts": [
+            {
+                "type": "Info",
+                "message": "Easy trek suitable for beginners",
+                "season": "All year"
+            },
+            {
+                "type": "Warning",
+                "message": "No shade during summer — carry protection",
+                "season": "Summer"
+            }
+        ],
+        "emergencyContacts": [
+            {
+                "type": "Police",
+                "name": "Saswad Police Station",
+                "phone": "100",
+                "availability": "24/7"
+            }
+        ]
+    },
+    "accessibility": {
+        "wheelchairFriendly": false,
+        "elderlyFriendly": true,
+        "kidsAppropriate": true,
+        "stepsCount": 0,
+        "restPoints": 3,
+        "alternativeAccess": "Short trek makes it accessible for most age groups"
+    },
+    "visitInfo": {
+        "entryFee": {
+            "indian": 0,
+            "foreigner": 0
+        },
+        "timings": "6:00 AM – 6:00 PM",
+        "timeRequired": "1.5–2 hours",
+        "bestTimeOfDay": "Morning or evening",
+        "crowdLevel": {
+            "weekday": "Low",
+            "weekend": "Moderate"
+        },
+        "photography": {
+            "allowed": true
+        }
+    },
+    "budget": {
+        "transport": "₹100-300",
+        "food": "₹100-200",
+        "entry": "₹0",
+        "misc": "₹50-100",
+        "totalPerPerson": "₹250-600"
+    },
+    "history": {
+        "brief": "Malhargad Fort was built in 1757 during the Peshwa period and is considered the last fort constructed by the Maratha Empire.",
+        "significance": "Represents the final phase of Maratha fort architecture.",
+        "famousBattles": [],
+        "rulers": [
+            "Maratha Empire",
+            "British (later)"
+        ]
+    },
+    "featured": false,
+    "crowdStatus": "Low"
+}

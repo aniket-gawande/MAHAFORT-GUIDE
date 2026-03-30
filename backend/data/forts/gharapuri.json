@@ -1,0 +1,42 @@
+{
+    "name": "Gharapuri (Elephanta Island)",
+    "location": {
+        "district": "Mumbai",
+        "taluka": "Mumbai Harbour",
+        "baseVillage": "Elephanta Island",
+        "coordinates": { "lat": 18.9633, "lng": 72.9315 },
+        "nearestCity": "Mumbai (Gateway of India)"
+    },
+    "googleMaps": { "placeId": "ElephantaIslandMapID", "rating": 4.6, "totalReviews": 15000, "url": "https://maps.google.com/?q=Elephanta+Island" },
+    "description": "Gharapuri, popularly known as Elephanta Island, is a UNESCO World Heritage Site located in Mumbai Harbour. Famous for its ancient rock-cut cave temples dedicated to Lord Shiva, the island also contains remnants of old fortifications used during Portuguese rule. It is a major tourist destination combining history, culture, and scenic beauty.",
+    "trek": {
+        "routes": [{ "name": "Ferry + Steps Route", "startPoint": "Gateway of India (Mumbai)", "distance": "1 km (on island)", "duration": "45–60 minutes", "difficulty": "Easy", "elevation": "Sea level to hilltop", "description": "Take ferry from Gateway of India and climb steps to caves.", "facilities": ["Regular ferry service", "Food stalls on island", "Guides available"] }],
+        "bestTime": ["Winter (November–February)", "Early morning year-round"],
+        "avoidTime": ["Heavy monsoon – Ferry affected", "Afternoon heat"]
+    },
+    "landmarks": [
+        { "name": "Elephanta Caves", "type": "Rock-Cut Caves", "description": "Ancient caves dedicated to Lord Shiva with intricate carvings.", "historicalSignificance": "UNESCO World Heritage Site (5th–8th century CE).", "timeToExplore": "60–90 minutes", "mustSee": true },
+        { "name": "Trimurti Sculpture", "type": "Sculpture", "description": "Iconic 3-faced Shiva statue.", "historicalSignificance": "Masterpiece of Indian rock-cut architecture.", "timeToExplore": "20 minutes", "mustSee": true },
+        { "name": "Old Fortification Walls", "type": "Fort Remains", "description": "Remnants of Portuguese-era fortifications.", "historicalSignificance": "Used for coastal defense.", "timeToExplore": "20 minutes", "mustSee": false },
+        { "name": "Cannon Points", "type": "Defense Structure", "description": "Old cannons overlooking the sea.", "historicalSignificance": "Used during colonial period.", "timeToExplore": "15 minutes", "mustSee": false }
+    ],
+    "food": { "onFort": [{ "name": "Snacks & Coconut Water", "type": "Veg", "price": "₹50-150", "description": "Available along steps and near caves.", "mustTry": true }], "nearbyRestaurants": [{ "name": "Island Food Stalls", "distance": "Near caves", "type": "Veg/Non-Veg", "priceRange": "₹150-300", "speciality": "Seafood and snacks" }] },
+    "facilities": {
+        "parking": { "available": true, "cost": "Paid parking near Gateway of India", "capacity": "Limited" },
+        "washrooms": { "available": true, "condition": "Available on island" },
+        "drinkingWater": { "available": true, "points": ["Available at stalls"] },
+        "mobileNetwork": { "quality": "Good", "providers": ["All major networks"] },
+        "firstAid": { "available": true, "location": "Tourist area" },
+        "guides": { "available": true, "cost": "₹300-500" }
+    },
+    "safety": { "alerts": [
+        { "type": "Warning", "message": "Ferry services affected during bad weather", "season": "Monsoon" },
+        { "type": "Warning", "message": "Watch for monkeys near steps", "season": "All year" },
+        { "type": "Info", "message": "Tourist-friendly and safe location", "season": "All year" }
+    ] },
+    "visitInfo": { "entryFee": { "indian": 40, "foreigner": 600 }, "timings": "9:00 AM – 5:00 PM (Closed Monday)" },
+    "budget": { "ferry": "₹200-300", "entry": "₹40", "food": "₹150-300", "totalPerPerson": "₹500-900" },
+    "history": { "brief": "Named by Portuguese after a stone elephant. Caves date back to 5th–8th century.", "significance": "UNESCO World Heritage Site and major cultural landmark.", "famousBattles": [], "rulers": ["Ancient Indian dynasties", "Portuguese", "British"] },
+    "featured": true,
+    "crowdStatus": "High"
+}

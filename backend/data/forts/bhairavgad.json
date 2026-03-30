@@ -1,0 +1,41 @@
+{
+    "name": "Bhairavgad Fort",
+    "location": {
+        "district": "Ahmednagar",
+        "taluka": "Murbad / Akole region",
+        "baseVillage": "Moroshi",
+        "coordinates": { "lat": 19.2805, "lng": 73.7462 },
+        "nearestCity": "Malshej Ghat (20 km)"
+    },
+    "googleMaps": { "placeId": "BhairavgadMoroshiMapID", "rating": 4.6, "totalReviews": 2800, "url": "https://maps.google.com/?q=Bhairavgad+Moroshi" },
+    "description": "Bhairavgad Fort in the Malshej Ghat region is a wild and remote hill fort known for its dense forest trails, steep climbs, and a massive natural cave at the summit that can accommodate over 40 people. It is one of the most adventurous treks in Maharashtra, especially during monsoon when waterfalls surround the fort.",
+    "trek": {
+        "routes": [{ "name": "Moroshi Route (Main)", "startPoint": "Moroshi Village", "distance": "4 km", "duration": "2–3 hours", "difficulty": "Hard", "elevation": "1145 m", "description": "The trek starts through farmland and enters dense forest, followed by steep rocky patches and a final climb to the cave.", "facilities": ["Parking at base village", "Local guide recommended", "No shops on route"] }],
+        "bestTime": ["Winter (November–February)", "Post-monsoon (September–October)"],
+        "avoidTime": ["Heavy monsoon – Slippery rocks", "Night trekking without guide"]
+    },
+    "landmarks": [
+        { "name": "Bhairavgad Cave", "type": "Cave", "description": "Massive natural cave capable of sheltering 40+ people.", "historicalSignificance": "Used as shelter by trekkers and ancient inhabitants.", "timeToExplore": "30-45 minutes", "mustSee": true },
+        { "name": "Bhairavnath Temple", "type": "Temple", "description": "Small temple dedicated to Lord Bhairavnath inside the cave.", "historicalSignificance": "Religious importance for locals.", "timeToExplore": "15 minutes", "mustSee": true },
+        { "name": "Malshej Valley View", "type": "Viewpoint", "description": "Panoramic views of Malshej Ghat and surrounding mountains.", "historicalSignificance": "Strategic observation point.", "timeToExplore": "20 minutes", "mustSee": true }
+    ],
+    "food": { "onFort": [{ "name": "No Food Available", "type": "N/A", "price": "N/A", "description": "No food available on the fort or route.", "mustTry": false }], "nearbyRestaurants": [{ "name": "Local Village Meals", "distance": "Moroshi Village", "type": "Veg", "priceRange": "₹100-200", "speciality": "Simple home-cooked food" }] },
+    "facilities": {
+        "parking": { "available": true, "cost": "Free", "capacity": "Available at Moroshi village" },
+        "washrooms": { "available": false, "condition": "Not available" },
+        "drinkingWater": { "available": false, "points": ["Carry sufficient water", "No reliable water sources"] },
+        "mobileNetwork": { "quality": "Very weak", "providers": ["Limited Jio"] },
+        "firstAid": { "available": false, "location": "Nearest facility at Malshej / base village" },
+        "guides": { "available": true, "cost": "₹400-600", "note": "Strongly recommended" }
+    },
+    "safety": { "alerts": [
+        { "type": "Warning", "message": "Dense forest route — easy to get lost without guide", "season": "All year" },
+        { "type": "Warning", "message": "Steep and slippery rock patches", "season": "Monsoon" },
+        { "type": "Warning", "message": "Wildlife presence in forest area", "season": "All year" },
+        { "type": "Warning", "message": "No network — inform someone before trekking", "season": "All year" }
+    ] },
+    "budget": { "transport": "₹300-700", "food": "₹150-300", "entry": "₹0", "guide": "₹400-600", "totalPerPerson": "₹600-1300" },
+    "history": { "brief": "Bhairavgad Fort is a lesser-known fort primarily used as a watchpoint and shelter due to its natural cave formations.", "significance": "Known more for its natural features and trekking challenge.", "famousBattles": [], "rulers": ["Local rulers", "Marathas", "British"] },
+    "featured": true,
+    "crowdStatus": "Low"
+}

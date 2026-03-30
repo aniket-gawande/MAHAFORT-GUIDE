@@ -45,5 +45,16 @@
     "authProvider": "google",
     "fortsVisited": [],
     "createdAt": "2026-02-20T11:04:02.115Z"
+  },
+  {
+    "_id": "mn9vyhjvf3q8htk5",
+    "username": "aniket_gawande_84k8",
+    "email": "aniket.gawande24@pccoepune.org",
+    "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJpkAyTNCBh6HX1i3J58Xqxac1tB9nhnSrcAJK8mD2X1gJ7hnyc=s96-c",
+    "role": "warrior",
+    "googleId": "104296263009708680123",
+    "authProvider": "google",
+    "fortsVisited": [],
+    "createdAt": "2026-03-28T05:24:36.571Z"
   }
 ]

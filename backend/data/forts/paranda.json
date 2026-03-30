@@ -1,0 +1,42 @@
+{
+    "name": "Paranda Fort",
+    "location": {
+        "district": "Dharashiv (Osmanabad)",
+        "taluka": "Paranda",
+        "baseVillage": "Paranda Town",
+        "coordinates": { "lat": 18.2732, "lng": 75.4448 },
+        "nearestCity": "Osmanabad (70 km)"
+    },
+    "googleMaps": { "placeId": "ParandaFortMapID", "rating": 4.6, "totalReviews": 4800, "url": "https://maps.google.com/?q=Paranda+Fort" },
+    "description": "Paranda Fort is a well-preserved land fort built during the Bahmani Sultanate period and later ruled by the Adilshahi. Known for its massive circular bastions, deep moat, and strong defensive design, it stands as one of the finest examples of Deccan military architecture.",
+    "trek": {
+        "routes": [{ "name": "Main Entrance Access", "startPoint": "Paranda Town", "distance": "1 km", "duration": "30–45 minutes", "difficulty": "Easy", "elevation": "Ground level fort", "description": "No trekking required — visitors can easily walk through the fort complex.", "facilities": ["Parking available", "Guides available", "Direct road access"] }],
+        "bestTime": ["Winter (November–February)", "Monsoon (July–September)"],
+        "avoidTime": ["Peak summer"]
+    },
+    "landmarks": [
+        { "name": "Massive Bastions", "type": "Fortification", "description": "Circular bastions designed for artillery placement.", "historicalSignificance": "Advanced military defense system.", "timeToExplore": "30 minutes", "mustSee": true },
+        { "name": "Deep Moat", "type": "Defense Structure", "description": "Water-filled moat surrounding the fort.", "historicalSignificance": "Prevented enemy entry.", "timeToExplore": "20 minutes", "mustSee": true },
+        { "name": "Jama Masjid", "type": "Religious Structure", "description": "Historic mosque inside the fort.", "historicalSignificance": "Represents Islamic architecture.", "timeToExplore": "20 minutes", "mustSee": true },
+        { "name": "Palace Ruins", "type": "Structure", "description": "Remains of royal residence.", "historicalSignificance": "Administrative center.", "timeToExplore": "25 minutes", "mustSee": true },
+        { "name": "Cannons", "type": "Artillery", "description": "Old cannons placed around the fort.", "historicalSignificance": "Used in warfare.", "timeToExplore": "15 minutes", "mustSee": true }
+    ],
+    "food": { "onFort": [{ "name": "Snacks", "type": "Veg", "price": "₹20-50", "description": "Available near entrance.", "mustTry": false }], "nearbyRestaurants": [{ "name": "Local Hotel", "distance": "Paranda Town", "type": "Veg/Non-Veg", "priceRange": "₹100-300", "speciality": "Marathwada cuisine" }] },
+    "facilities": {
+        "parking": { "available": true, "cost": "₹30-50", "capacity": "Available near fort" },
+        "washrooms": { "available": true, "condition": "Basic" },
+        "drinkingWater": { "available": true, "points": ["Near entrance"] },
+        "mobileNetwork": { "quality": "Good", "providers": ["Jio", "Airtel"] },
+        "firstAid": { "available": true, "location": "Nearby town" },
+        "guides": { "available": true, "cost": "₹200-400" }
+    },
+    "safety": { "alerts": [
+        { "type": "Info", "message": "Safe and accessible for all age groups", "season": "All year" },
+        { "type": "Warning", "message": "Large fort — avoid isolated areas", "season": "All year" }
+    ] },
+    "visitInfo": { "entryFee": { "indian": 25, "foreigner": 300 }, "timings": "9:00 AM – 5:30 PM" },
+    "budget": { "transport": "₹300-800", "food": "₹150-300", "entry": "₹25", "guide": "₹200-400", "totalPerPerson": "₹600-1200" },
+    "history": { "brief": "Built during the Bahmani Sultanate period and later became an Adilshahi stronghold.", "significance": "Known for its strong artillery-based defense system and excellent preservation.", "famousBattles": [], "rulers": ["Bahmani Sultanate", "Adilshahi", "Mughals", "British"] },
+    "featured": true,
+    "crowdStatus": "Moderate"
+}

@@ -1,0 +1,39 @@
+{
+    "name": "Mangi-Tungi",
+    "location": {
+        "district": "Nashik",
+        "taluka": "Baglan",
+        "baseVillage": "Taharabad",
+        "coordinates": { "lat": 20.8025, "lng": 74.1965 },
+        "nearestCity": "Satana (30 km)"
+    },
+    "googleMaps": { "placeId": "MangiTungiMapID", "rating": 4.7, "totalReviews": 6000, "url": "https://maps.google.com/?q=Mangi+Tungi" },
+    "description": "Mangi-Tungi is a sacred twin peak located in Nashik district and is one of the most important Jain pilgrimage sites in India. Known for its 4500+ carved steps and the world's tallest Jain statue of Lord Rishabhdev (108 ft), the climb is both physically demanding and spiritually significant.",
+    "trek": {
+        "routes": [{ "name": "Taharabad Steps Route", "startPoint": "Taharabad Village", "distance": "4 km", "duration": "2.5–3.5 hours", "difficulty": "Moderate to Hard", "elevation": "1343 m", "description": "More than 4500 stone steps carved into the mountain, leading to both Mangi and Tungi peaks.", "facilities": ["Well-maintained steps", "Shelter points", "Religious rest areas"] }],
+        "bestTime": ["Winter (November–February)", "Early morning throughout year"],
+        "avoidTime": ["Afternoon climb", "Peak summer"]
+    },
+    "landmarks": [
+        { "name": "108 ft Rishabhdev Statue", "type": "Religious Monument", "description": "World's tallest Jain statue located at base.", "historicalSignificance": "Major Jain pilgrimage landmark.", "timeToExplore": "30 minutes", "mustSee": true },
+        { "name": "Rock-Cut Jain Idols", "type": "Religious Carvings", "description": "Hundreds of ancient Jain carvings along the route.", "historicalSignificance": "Represents rich Jain heritage.", "timeToExplore": "Throughout climb", "mustSee": true },
+        { "name": "Twin Peaks (Mangi & Tungi)", "type": "Peak", "description": "Two separate summits offering panoramic views.", "historicalSignificance": "Spiritual importance in Jainism.", "timeToExplore": "45 minutes", "mustSee": true }
+    ],
+    "food": { "onFort": [{ "name": "Jain Bhojan", "type": "Veg", "price": "₹100-150", "description": "Simple sattvik food available at base.", "mustTry": true }], "nearbyRestaurants": [{ "name": "Temple Bhojanalaya", "distance": "Base area", "type": "Veg", "priceRange": "₹100-200", "speciality": "Pure Jain food" }] },
+    "facilities": {
+        "parking": { "available": true, "cost": "₹50-100", "capacity": "Large parking area" },
+        "washrooms": { "available": true, "condition": "Available at base" },
+        "drinkingWater": { "available": true, "points": ["Base temple area", "Limited on steps"] },
+        "mobileNetwork": { "quality": "Moderate", "providers": ["Jio", "Airtel"] },
+        "firstAid": { "available": true, "location": "Temple area" },
+        "guides": { "available": false, "cost": "Not required" }
+    },
+    "safety": { "alerts": [
+        { "type": "Warning", "message": "4500+ steps — physically exhausting", "season": "All year" },
+        { "type": "Warning", "message": "Heat exhaustion risk in summer", "season": "Summer" }
+    ] },
+    "budget": { "transport": "₹300-700", "food": "₹150-300", "entry": "₹0", "totalPerPerson": "₹500-1000" },
+    "history": { "brief": "Mangi-Tungi has been an important Jain pilgrimage site for centuries.", "significance": "Houses the world's tallest Jain statue and hundreds of rock-cut idols.", "famousBattles": [], "rulers": ["Jain religious authorities"] },
+    "featured": true,
+    "crowdStatus": "Moderate"
+}

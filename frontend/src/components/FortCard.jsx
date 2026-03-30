@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import CrowdStatusBadge from './CrowdStatusBadge';
-import { FaMapMarkerAlt, FaHiking, FaLock } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaHiking, FaClock } from 'react-icons/fa';
 import { AuthContext } from '../context/AuthContext';
 
 // Route mapping for forts with dedicated detail pages
@@ -24,64 +23,71 @@ const FortCard = ({ fort }) => {
   const defaultImage = 'https://images.unsplash.com/photo-1587474260584-136574528ed5?w=500';
   const { isAuthenticated } = useContext(AuthContext);
 
+  const fortImage = fort.images && fort.images.length > 0 ? fort.images[0] : defaultImage;
+  const description = fort.description || 'Explore the rich history, challenging terrain, and the legacy of the Maratha Empire at this magnificent fort.';
+
   return (
-    <div className="group relative h-[450px] w-full overflow-hidden rounded-2xl bg-royal-gray border border-white/5 hover:border-saffron/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(255,153,51,0.15)]">
-
-      {/* Image Section */}
-      <div className="h-3/5 w-full overflow-hidden relative">
+    <div className="group flex flex-col w-full overflow-hidden rounded-xl bg-[#1A1A1A] border border-white/5 hover:border-saffron/40 transition-all duration-300">
+      
+      {/* Top Image */}
+      <div className="h-48 w-full overflow-hidden relative">
         <img
-          src={fort.images && fort.images.length > 0 ? fort.images[0] : defaultImage}
+          src={fortImage}
           alt={fort.name}
-          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
+          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
-        {/* Dark Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-royal-gray via-transparent to-transparent"></div>
-
-        {/* Badges */}
-        <div className="absolute top-4 right-4 flex flex-col gap-2 items-end">
-          {fort.crowdStatus && <CrowdStatusBadge status={fort.crowdStatus} />}
-          <span className="bg-black/60 backdrop-blur-md px-3 py-1 rounded-md text-[10px] uppercase font-bold text-saffron border border-saffron/30">
-            {fort.type || 'Hill Fort'}
-          </span>
-        </div>
+        {/* Subtle overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] via-transparent to-transparent opacity-80"></div>
       </div>
 
-      {/* Content Section */}
-      <div className="absolute bottom-0 w-full p-6 bg-gradient-to-t from-royal-gray via-royal-gray to-transparent">
-        <div className="mb-3 flex items-center gap-2 text-saffron text-xs font-bold tracking-wider uppercase">
-          <FaMapMarkerAlt /> {fort.location.district}
-        </div>
-
-        <h3 className="mb-2 text-2xl font-cinematic font-bold text-white group-hover:text-saffron transition-colors">
+      {/* Content Container */}
+      <div className="flex-1 flex flex-col p-5 bg-[#1A1A1A]">
+        {/* Title & Subtitle */}
+        <h3 className="mb-1 text-lg font-cinematic font-bold text-white uppercase tracking-wide truncate group-hover:text-saffron transition-colors">
           {fort.name}
         </h3>
-
-        <div className="flex items-center gap-4 mb-4 text-xs text-gray-400">
-          <span className="flex items-center gap-1">
-            <FaHiking className="text-saffron" />
-            {fort.trek?.routes?.[0]?.difficulty || 'Moderate'}
-          </span>
-          <span>•</span>
-          <span>{fort.history?.builtBy || 'Maratha Empire'}</span>
+        
+        <div className="mb-4 flex items-center gap-2 text-saffron text-[11px] font-bold tracking-wider uppercase">
+          <FaMapMarkerAlt size={10} /> {fort.location?.district || 'Maharashtra'} District
         </div>
 
-        {isAuthenticated ? (
+        {/* Description line clamp */}
+        <p className="text-gray-400 text-xs leading-relaxed line-clamp-2 mb-5 min-h-[32px]">
+          {description}
+        </p>
+
+        {/* Stats Row */}
+        <div className="flex items-center justify-between text-gray-300 text-xs font-medium mb-6">
+          <div className="flex items-center gap-1.5">
+            <FaHiking className="text-gray-400" size={14} />
+            <span>{fort.difficulty || fort.trek?.routes?.[0]?.difficulty || 'Moderate'}</span>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <FaClock className="text-gray-400" size={12} />
+            <span>{fort.trek?.time || '2-3 hours'}</span>
+          </div>
+        </div>
+
+        {/* Action Buttons */}
+        <div className="mt-auto flex gap-3">
           <Link
             to={getFortRoute(fort)}
             onClick={() => window.scrollTo(0, 0)}
-            className="block w-full py-3 text-center rounded-lg bg-white/5 border border-white/10 text-white font-bold text-sm uppercase tracking-widest hover:bg-saffron hover:text-black hover:border-saffron transition-all"
+            className="flex-1 text-center py-2.5 rounded-lg bg-[#C47D3B] text-black font-bold text-[11px] uppercase tracking-wider hover:bg-saffron transition-colors shadow-[0_2px_10px_rgba(196,125,59,0.3)]"
           >
-            Explore Details
+            View Details
           </Link>
-        ) : (
-          <Link
-            to="/login"
-            onClick={() => window.scrollTo(0, 0)}
-            className="flex items-center justify-center gap-2 w-full py-3 text-center rounded-lg bg-saffron/10 border border-saffron/30 text-saffron font-bold text-sm uppercase tracking-widest hover:bg-saffron hover:text-black hover:border-saffron transition-all"
+          
+          <button
+            onClick={() => {
+              if(!isAuthenticated) alert("Please log in to save plans");
+              // Future save logic
+            }}
+            className="flex-1 text-center py-2.5 rounded-lg bg-transparent border border-white/20 text-white font-bold text-[11px] uppercase tracking-wider hover:bg-white/5 transition-colors"
           >
-            <FaLock className="text-xs" /> Login to Explore
-          </Link>
-        )}
+            Save to Plan
+          </button>
+        </div>
       </div>
     </div>
   );
