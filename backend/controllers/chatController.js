@@ -58,16 +58,30 @@ const getChatResponse = async (req, res) => {
         }));
 
         // The last message is what we need to send, but we just pass the history to startChat
-        const historyExceptLast = formattedHistory.slice(0, -1);
+        let historyExceptLast = formattedHistory.slice(0, -1);
         const lastMessage = formattedHistory[formattedHistory.length - 1].parts[0].text;
 
+        // Gemini API strictly requires history to: 1. start with 'user', 2. strictly alternate, 3. end with 'model'
+        let validHistory = [];
+        let expectedRole = 'user';
+        for (const msg of historyExceptLast) {
+            if (msg.role === expectedRole) {
+                validHistory.push(msg);
+                expectedRole = expectedRole === 'user' ? 'model' : 'user';
+            }
+        }
+        // Ensure history ends with 'model' before the new 'user' message is sent
+        if (validHistory.length > 0 && validHistory[validHistory.length - 1].role === 'user') {
+            validHistory.pop();
+        }
+
         const model = genAI.getGenerativeModel({ 
-            model: "gemini-1.5-flash",
+            model: "gemini-2.5-flash",
             systemInstruction: systemInstruction 
         });
 
         const chat = model.startChat({
-            history: historyExceptLast,
+            history: validHistory,
             generationConfig: {
                 maxOutputTokens: 800,
             },
