@@ -80,7 +80,8 @@ const BahirjiChatbot = () => {
 
     try {
       // Call backend API with the conversation history
-      const res = await axios.post('http://localhost:5000/api/chat', { messages: updatedMessages });
+      const API_BASE = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+      const res = await axios.post(`${API_BASE}/chat`, { messages: updatedMessages });
       
       const botMsg = {
         id: Date.now() + 1,
