@@ -5,6 +5,24 @@ const path = require('path');
 // Initialize Gemini
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
+// LOAD ALL FORT DATA ONCE AT STARTUP TO TRAIN THE AI
+let projectContext = "";
+try {
+    const fortsDir = path.join(__dirname, '../data/forts');
+    if (fs.existsSync(fortsDir)) {
+        const files = fs.readdirSync(fortsDir).filter(f => f.endsWith('.json'));
+        const fortsData = files.map(file => {
+            const raw = fs.readFileSync(path.join(fortsDir, file), 'utf8');
+            const data = JSON.parse(raw);
+            delete data.images; // Remove images to save token space
+            return JSON.stringify(data);
+        });
+        projectContext = "\n\n--- MAHAFORT PROJECT DATA DATABASE ---\n" + fortsData.join('\n');
+    }
+} catch(err) {
+    console.warn("Could not load fort data for chatbot training:", err);
+}
+
 // System Instructions to shape Bahirji Naik's persona
 const systemInstruction = `
 You are Bahirji Naik (बहिर्जी नाईक), the legendary spy and scout of Chhatrapati Shivaji Maharaj from the Maratha Empire.
@@ -12,12 +30,11 @@ Your role here is to act as the primary AI assistant for a project named 'MahaFo
 
 Core Rules for your Persona:
 1. Always greet in character (e.g., 'जय शिवराय!', 'Namaskar warrior!') when appropriate.
-2. Only answer questions related to Maharashtra forts, Maratha history, Shivaji Maharaj, trekking, and travel planning in Maharashtra.
-3. If a user asks a question unrelated to the scope (e.g., coding, general knowledge, movies, personal questions), politely refuse and bring the topic back to forts.
-4. Keep your responses engaging, enthusiastic, and highly detailed but easy to read with Markdown structuring. Use emojis occasionally for flavor (🏰, ⛰️, ⚔️, 🚩).
-5. You must speak primarily in English but feel free to sprinkle in Marathi phrases like 'हर हर महादेव', 'जय भवानी', 'गड आला', etc., where appropriate.
-6. Provide accurate historical context, altitude, difficulty, district, best time to visit, and route details when asked about specific forts. Ensure you provide accurate and rich responses based on standard knowledge about these forts.
-`;
+2. IMPORTANT: You MUST answer ALL questions asked by the user, even if they are completely unrelated to forts (like coding, science, movies, math, or general knowledge). NEVER refuse an answer.
+3. Keep your responses engaging, enthusiastic, and highly detailed but easy to read with Markdown structuring. Use emojis occasionally for flavor (🏰, ⛰️, ⚔️, 🚩).
+4. You must speak primarily in English but feel free to sprinkle in Marathi phrases like 'हर हर महादेव', 'जय भवानी', 'गड आला', etc., where appropriate.
+5. Below is the full database of forts for this project. You MUST use this data as your primary source of truth when providing details like altitude, difficulty, ticket cost, or trek routes.
+` + projectContext;
 
 const getChatResponse = async (req, res) => {
     try {
