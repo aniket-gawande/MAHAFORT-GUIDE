@@ -443,6 +443,28 @@ const TripPlanner = () => {
               <p className="text-gray-400 max-w-xl mx-auto">We've optimized the route. Customize your day-wise plan below.</p>
             </div>
 
+            {/* Weather & Date Section */}
+            <div className="bg-[#111] border border-white/5 rounded-2xl p-6 mb-10 text-center">
+              <h3 className="text-sm font-bold text-saffron tracking-wider uppercase mb-4 flex justify-center items-center gap-2">
+                <FaCalendarAlt /> Trip Start Date
+              </h3>
+              <input
+                type="date"
+                value={startDate}
+                min={new Date().toISOString().split("T")[0]}
+                onChange={(e) => setStartDate(e.target.value)}
+                className="bg-royal-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-saffron focus:outline-none mb-6 cursor-pointer"
+              />
+              {selectedForts.length > 0 && (
+                <div className="mt-4 border-t border-white/5 pt-6">
+                  <h4 className="text-xs text-gray-400 uppercase tracking-widest mb-4">Weather Forecast for {selectedForts[0].name}</h4>
+                  <div className="flex justify-center">
+                    <TripWeatherForecast date={startDate} fort={selectedForts[0]} />
+                  </div>
+                </div>
+              )}
+            </div>
+
             {/* Season & Group Selector */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
               {/* Season */}
