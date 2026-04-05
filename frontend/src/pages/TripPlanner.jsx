@@ -456,10 +456,10 @@ const TripPlanner = () => {
                 className="bg-royal-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-saffron focus:outline-none mb-6 cursor-pointer"
               />
               {selectedForts.length > 0 && (
-                <div className="mt-4 border-t border-white/5 pt-6">
-                  <h4 className="text-xs text-gray-400 uppercase tracking-widest mb-4">Weather Forecast for {selectedForts[0].name}</h4>
-                  <div className="flex justify-center">
-                    <TripWeatherForecast date={startDate} fort={selectedForts[0]} />
+                <div className="mt-4 border-t border-white/5 pt-6 flex flex-col items-center">
+                  <h4 className="text-xs text-gray-400 font-bold uppercase tracking-widest mb-4">Weather Forecast for {selectedForts[0].name}</h4>
+                  <div className="flex justify-center w-full max-w-sm text-left">
+                    <TripWeatherForecast date={startDate} fortName={selectedForts[0].name} district={selectedForts[0].location?.district} />
                   </div>
                 </div>
               )}
