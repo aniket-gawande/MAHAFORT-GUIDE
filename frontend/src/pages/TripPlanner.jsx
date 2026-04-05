@@ -321,25 +321,25 @@ const TripPlanner = () => {
             </div>
 
             {/* Search & Filter Bar */}
-            <div className="w-full max-w-5xl bg-[#0a0a0a] border border-white/5 rounded-2xl p-2 mb-10 flex flex-col md:flex-row items-center gap-2">
+            <div className="w-full max-w-5xl bg-[#111111]/80 backdrop-blur-xl border border-white/10 rounded-2xl p-2.5 mb-10 flex flex-col md:flex-row items-center gap-3 shadow-2xl relative z-10">
               <div className="flex-1 w-full relative">
-                <FaSearch className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-500" size={14} />
+                <FaSearch className="absolute left-5 top-1/2 -translate-y-1/2 text-saffron opacity-70" size={15} />
                 <input
                   type="text"
-                  placeholder="Search forts by name.."
+                  placeholder="Search majestic forts by name..."
                   value={searchTerm}
                   onChange={e => setSearchTerm(e.target.value)}
-                  className="w-full bg-transparent border-none py-3 pl-12 pr-4 text-gray-300 placeholder-gray-600 focus:outline-none text-xs"
+                  className="w-full bg-transparent border-none py-3.5 pl-14 pr-4 text-gray-200 placeholder-gray-500 focus:outline-none text-sm font-medium tracking-wide"
                 />
               </div>
               <div className="flex gap-2 w-full md:w-auto p-1">
                 <select value={districtFilter} onChange={e => setDistrictFilter(e.target.value)}
-                  className="bg-[#111] border border-white/5 rounded-xl py-2.5 px-6 text-gray-400 appearance-none cursor-pointer focus:outline-none text-[10px] font-bold tracking-widest uppercase hover:bg-[#1a1a1a] transition-colors">
+                  className="bg-[#1a1a1a] border border-white/5 rounded-xl py-3 px-6 text-gray-300 appearance-none cursor-pointer focus:outline-none text-[11px] font-bold tracking-widest uppercase hover:bg-[#222] hover:border-white/10 transition-all focus:border-saffron">
                   <option value="all">All Districts</option>
                   {districts.filter(d => d !== 'all').map(d => <option key={d} value={d}>{d}</option>)}
                 </select>
                 <select value={difficultyFilter} onChange={e => setDifficultyFilter(e.target.value)}
-                  className="bg-[#111] border border-white/5 rounded-xl py-2.5 px-6 text-gray-400 appearance-none cursor-pointer focus:outline-none text-[10px] font-bold tracking-widest uppercase hover:bg-[#1a1a1a] transition-colors">
+                  className="bg-[#1a1a1a] border border-white/5 rounded-xl py-3 px-6 text-gray-300 appearance-none cursor-pointer focus:outline-none text-[11px] font-bold tracking-widest uppercase hover:bg-[#222] hover:border-white/10 transition-all focus:border-saffron">
                   <option value="all">All Levels</option>
                   <option value="Easy">Easy</option>
                   <option value="Moderate">Moderate</option>
@@ -354,24 +354,24 @@ const TripPlanner = () => {
                 const isSelected = selectedForts.find(f => f._id === fort._id);
                 // Difficulty pill styles for the image overlay
                 const diffStyles = {
-                  Easy: 'bg-emerald-500/80 text-white',
-                  Moderate: 'bg-yellow-500/80 text-white',
-                  Hard: 'bg-red-500/80 text-white',
-                  Difficult: 'bg-red-500/80 text-white'
+                  Easy: 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30',
+                  Moderate: 'bg-amber-500/20 text-amber-400 border border-amber-500/30',
+                  Hard: 'bg-red-500/20 text-red-400 border border-red-500/30',
+                  Difficult: 'bg-red-500/20 text-red-400 border border-red-500/30'
                 };
                 const dcClass = diffStyles[fort.difficulty] || diffStyles.Moderate;
                 const fortImage = fort.images && fort.images.length > 0 ? fort.images[0] : 'https://images.unsplash.com/photo-1587474260584-136574528ed5?w=500';
 
                 return (
-                  <div key={fort._id} className={`group flex flex-col overflow-hidden rounded-2xl bg-[#0F0F0F] border transition-all duration-300 ${isSelected ? 'border-saffron/60 shadow-[0_0_15px_rgba(255,153,51,0.1)]' : 'border-white/5 hover:border-white/10 hover:shadow-xl'}`}>
+                  <div key={fort._id} className={`group flex flex-col overflow-hidden rounded-2xl bg-gradient-to-b from-[#181818] to-[#0A0A0A] border transition-all duration-300 hover:-translate-y-1.5 ${isSelected ? 'border-saffron shadow-[0_5px_25px_rgba(255,153,51,0.15)] scale-[1.02]' : 'border-white/5 hover:border-white/20 hover:shadow-2xl hover:shadow-white/5'}`}>
                     {/* Top Image */}
-                    <div className="relative h-44 w-full overflow-hidden">
-                      <img src={fortImage} alt={fort.name} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-transform duration-700 group-hover:scale-105" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0F0F0F] via-transparent to-transparent opacity-90"></div>
+                    <div className="relative h-48 w-full overflow-hidden">
+                      <img src={fortImage} alt={fort.name} className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-transform duration-1000 group-hover:scale-110" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent opacity-90"></div>
                       
                       {/* Difficulty Badge */}
                       <div className="absolute top-4 left-4">
-                        <span className={`px-2.5 py-1 rounded-md text-[9px] font-bold uppercase tracking-wider backdrop-blur-sm ${dcClass}`}>
+                        <span className={`px-3 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-widest backdrop-blur-md shadow-lg ${dcClass}`}>
                           {fort.difficulty}
                         </span>
                       </div>
@@ -379,27 +379,28 @@ const TripPlanner = () => {
                       {/* Plus / Check Button */}
                       <button 
                         onClick={() => toggleFort(fort)} 
-                        className={`absolute top-4 right-4 w-7 h-7 rounded-full flex items-center justify-center backdrop-blur-md transition-all border ${isSelected ? 'bg-saffron text-black border-saffron' : 'bg-black/40 text-white hover:bg-black/60 border-white/20'}`}
+                        className={`absolute top-4 right-4 w-9 h-9 rounded-full flex items-center justify-center backdrop-blur-md transition-all border-2 shadow-lg ${isSelected ? 'bg-saffron text-black border-saffron scale-110' : 'bg-black/50 text-white hover:bg-black hover:border-saffron/50 border-white/20 group-hover:scale-105'}`}
                       >
-                        {isSelected ? <FaCheckCircle size={12} /> : <FaPlus size={10} />}
+                        {isSelected ? <FaCheckCircle size={16} /> : <FaPlus size={12} />}
                       </button>
                     </div>
 
                     {/* Content */}
-                    <div className="p-5 flex flex-col flex-1 pb-6">
-                      <div className="flex items-center gap-1.5 text-saffron text-[10px] font-bold tracking-[0.15em] uppercase mb-1">
-                        <FaMapMarkerAlt size={10} /> {fort.location?.district || 'PUNE'}
+                    <div className="p-5 flex flex-col flex-1 pb-6 relative">
+                      <div className="flex items-center gap-2 text-saffron text-[10px] font-black tracking-[0.2em] uppercase mb-2 drop-shadow-sm">
+                        <FaMapMarkerAlt size={12} className="opacity-80" /> {fort.location?.district || 'PUNE'}
                       </div>
-                      <h3 className="text-white font-cinematic font-bold text-sm uppercase tracking-wide mb-2 truncate">
+                      <h3 className="text-white font-cinematic font-extrabold text-lg uppercase tracking-wide mb-2 truncate group-hover:text-saffron transition-colors">
                         {fort.name}
                       </h3>
-                      <p className="text-gray-500 text-[10px] leading-relaxed line-clamp-2 mb-4 flex-1">
+                      <p className="text-gray-400 text-[11px] leading-relaxed line-clamp-2 mb-5 flex-1 font-light">
                         {fort.description || fort.historicalSignificance || 'A historic fort offering spectacular views and a glimpse into the Maratha empire.'}
                       </p>
                       
-                      <div className="flex items-center gap-3 text-gray-500 text-[9px] font-bold tracking-wider">
-                        <span className="flex items-center gap-1 text-[#C47D3B]">▲ {fort.altitude || '1312 m'}</span>
-                        <span className="flex items-center gap-1 text-[#C47D3B]">★ {fort.rating || '4.6'}</span>
+                      <div className="flex items-center gap-4 text-gray-300 text-[10px] font-bold tracking-widest bg-white/5 py-2.5 px-3 rounded-xl border border-white/5">
+                        <span className="flex items-center gap-1.5"><FaMountain className="text-orange-400" size={12} /> {fort.altitude || '1312 m'}</span>
+                        <div className="w-px h-3 bg-white/20"></div>
+                        <span className="flex items-center gap-1.5"><FaStar className="text-yellow-400" size={12} /> {fort.rating || '4.6'}</span>
                       </div>
                     </div>
                   </div>
