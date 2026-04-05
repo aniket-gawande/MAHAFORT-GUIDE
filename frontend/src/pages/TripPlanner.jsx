@@ -456,10 +456,23 @@ const TripPlanner = () => {
                 className="bg-royal-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-saffron focus:outline-none mb-6 cursor-pointer"
               />
               {selectedForts.length > 0 && (
-                <div className="mt-4 border-t border-white/5 pt-6 flex flex-col items-center">
-                  <h4 className="text-xs text-gray-400 font-bold uppercase tracking-widest mb-4">Weather Forecast for {selectedForts[0].name}</h4>
-                  <div className="flex justify-center w-full max-w-sm text-left">
-                    <TripWeatherForecast date={startDate} fortName={selectedForts[0].name} district={selectedForts[0].location?.district} />
+                <div className="mt-4 border-t border-white/5 pt-6 w-full">
+                  <h4 className="text-xs text-gray-400 font-bold uppercase tracking-widest mb-6">Weather Forecasts for Selected Forts</h4>
+                  <div className="flex flex-wrap justify-center gap-6 text-left">
+                    {selectedForts.map(fort => (
+                      <div key={fort._id} className="w-full max-w-sm">
+                        <div className="text-center mb-3">
+                          <span className="text-xs font-bold text-saffron uppercase border border-saffron/20 bg-saffron/10 px-4 py-1.5 rounded-full inline-block">
+                            {fort.name}
+                          </span>
+                        </div>
+                        <TripWeatherForecast 
+                          date={startDate} 
+                          fortName={fort.name} 
+                          district={fort.location?.district} 
+                        />
+                      </div>
+                    ))}
                   </div>
                 </div>
               )}
