@@ -453,7 +453,8 @@ const TripPlanner = () => {
                 value={startDate}
                 min={new Date().toISOString().split("T")[0]}
                 onChange={(e) => setStartDate(e.target.value)}
-                className="bg-royal-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-saffron focus:outline-none mb-6 cursor-pointer"
+                onClick={(e) => e.target.showPicker && e.target.showPicker()}
+                className="bg-royal-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-saffron focus:outline-none mb-6 cursor-pointer w-full max-w-[250px]"
               />
               {selectedForts.length > 0 && (
                 <div className="mt-4 border-t border-white/5 pt-6 w-full">
