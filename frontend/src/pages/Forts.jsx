@@ -291,168 +291,63 @@ const Forts = () => {
         <div className="w-full bg-[#070707] p-8 sm:p-16 border-b border-white/5 relative overflow-hidden">
           <div className="max-w-7xl mx-auto relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
             
-            {/* ── MAHARASHTRA SVG MAP CANVAS ── */}
-            <div className="w-full lg:w-5/12 relative flex flex-col items-center justify-center">
-              {/* Header row */}
-              <div className="mb-3 w-full flex items-center justify-between px-1">
-                <span className="text-[10px] uppercase tracking-[0.2em] text-gray-500 font-bold">Filter by District</span>
-                <button
-                  onClick={() => setIsMapExpanded(true)}
-                  className="flex items-center gap-1.5 text-[9px] text-[#C47D3B]/80 border border-[#C47D3B]/20 px-2.5 py-1 rounded-lg hover:bg-[#C47D3B]/10 hover:text-[#C47D3B] transition-all duration-200 uppercase tracking-wider font-bold"
-                >
-                  <svg width="8" height="8" viewBox="0 0 10 10" fill="currentColor"><path d="M1 6H0v4h4V9H1V6zm-1-4h3V1H0v4h1V2zm9 9H6v1h4V6H9v3zM6 0V1h3v3h1V0H6z"/></svg>
-                  Expand
-                </button>
-              </div>
-
-              {/* Compact Map — pure SVG, all labels inside coordinate space */}
-              <svg
-                viewBox="0 0 100 82"
-                className="w-full max-w-[580px]"
-                style={{ overflow: 'visible', display: 'block' }}
-                preserveAspectRatio="xMidYMid meet"
-              >
-                <defs>
-                  <filter id="mapGlow"><feGaussianBlur stdDeviation="0.7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-                  <filter id="dotGlow"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-                  <radialGradient id="mhFill" cx="40%" cy="45%" r="60%">
-                    <stop offset="0%" stopColor="#C47D3B" stopOpacity="0.12"/>
-                    <stop offset="100%" stopColor="#C47D3B" stopOpacity="0.02"/>
-                  </radialGradient>
-                </defs>
-
-                {/* Map border — outer amber glow + main crisp edge */}
-                <path d={MH_PATH} fill="none" stroke="#C47D3B" strokeWidth="3" opacity="0.12"/>
-                <path d={MH_PATH} fill="url(#mhFill)" stroke="#C47D3B" strokeWidth="0.7" filter="url(#mapGlow)"/>
-                <path d={MH_PATH} fill="none" stroke="rgba(255,255,255,0.04)" strokeWidth="0.3"/>
-
-                {/* Districts */}
-                {mapDistricts.map((d) => {
-                  const isActive = selectedDistrict === d.name;
-                  const rs = getRegionStyle(d.name);
-                  const fortCount = staticForts.filter(f => f?.location?.district === d.name).length;
-                  const sx = d.x, sy = d.y * 0.82;
-
-                  // Per-district label directions: U=up, D=down, L=left, R=right
-                  const DIR = {
-                    'Nandurbar':'U','Dhule':'U','Jalgaon':'U','Buldhana':'U','Akola':'U',
-                    'Amravati':'U','Washim':'R','Wardha':'U','Nagpur':'U',
-                    'Bhandara':'U','Gondia':'R','Chandrapur':'D','Gadchiroli':'R',
-                    'Palghar':'L','Thane':'L','Raigad':'L','Ratnagiri':'L','Sindhudurg':'L',
-                    'Nashik':'L','Ahmednagar':'L','Pune':'L',
-                    'Satara':'L','Sangli':'D','Kolhapur':'D','Solapur':'D',
-                    'Aurangabad':'U','Chhatrapati Sambhajinagar':'U',
-                    'Jalna':'U','Beed':'D','Parbhani':'U','Hingoli':'R',
-                    'Nanded':'D','Latur':'D','Osmanabad':'D','Dharashiv':'D',
-                    'Dharashiv (Osmanabad)':'D','Yavatmal':'D',
-                  };
-                  const dir = DIR[d.name] || (sx < 18 ? 'L' : sx > 78 ? 'R' : 'U');
-                  const dist = 4.5;
-                  let lx = sx, ly = sy;
-                  let anchor = 'middle';
-                  if (dir === 'U') { ly = sy - dist; anchor = 'middle'; }
-                  else if (dir === 'D') { ly = sy + dist; anchor = 'middle'; }
-                  else if (dir === 'L') { lx = sx - dist; ly = sy; anchor = 'end'; }
-                  else if (dir === 'R') { lx = sx + dist; ly = sy; anchor = 'start'; }
-
-                  // Short name for compact display
-                  const short = d.name === 'Chhatrapati Sambhajinagar' ? 'C.Sambhaji'
-                    : d.name === 'Dharashiv (Osmanabad)' ? 'Dharashiv'
-                    : d.name === 'Ahmednagar' ? 'A.Nagar' : d.name;
-
-                  // Approx rect width (SVG units): name chars × 1.4 + badge room
-                  const rw = short.length * 1.45 + 4.5;
-                  const rh = 3.8;
-                  const rx = anchor === 'middle' ? lx - rw / 2
-                    : anchor === 'end' ? lx - rw : lx;
-                  const ry = ly - rh / 2;
-
-                  return (
-                    <g key={d.name} style={{ cursor: 'pointer' }}
-                      onClick={() => setSelectedDistrict(selectedDistrict === d.name ? null : d.name)}>
-
-                      {/* Glow halo when active */}
-                      {isActive && <circle cx={sx} cy={sy} r="4" fill={rs.color} opacity="0.18" filter="url(#dotGlow)"/>}
-
-                      {/* Label bg rect */}
-                      <rect x={rx} y={ry} width={rw} height={rh} rx="0.9"
-                        fill="rgba(8,8,8,0.93)"
-                        stroke={isActive ? rs.color : 'rgba(255,255,255,0.13)'}
-                        strokeWidth={isActive ? '0.5' : '0.3'}
-                        filter={isActive ? undefined : undefined}
-                        style={{ filter: isActive ? `drop-shadow(0 0 1.5px ${rs.color}88)` : 'none' }}
-                      />
-
-                      {/* District name + count */}
-                      <text
-                        x={anchor === 'middle' ? lx - 1.8 : anchor === 'end' ? lx - rw + 1 : lx + 1}
-                        y={ly}
-                        dominantBaseline="middle"
-                        textAnchor="start"
-                        fontSize="2.1"
-                        fontFamily="'Inter', sans-serif"
-                        fontWeight="700"
-                        letterSpacing="0.05"
-                        fill={isActive ? rs.color : '#b0b8c5'}
-                      >
-                        {short}
-                        <tspan
-                          dx="0.8"
-                          fontSize="1.9"
-                          fontWeight="900"
-                          fill={isActive ? '#000' : rs.color + 'cc'}
-                          style={{ paintOrder: 'stroke' }}
-                        >{fortCount}</tspan>
-                      </text>
-
-                      {/* Dot */}
-                      <circle cx={sx} cy={sy}
-                        r={isActive ? 1.9 : 1.3}
-                        fill={isActive ? rs.color : rs.color + 'bb'}
-                        filter={isActive ? 'url(#dotGlow)' : undefined}
-                      />
-                    </g>
-                  );
-                })}
-
-                {/* ALL reset — pure SVG button in centre of Pune region */}
-                <g style={{ cursor: 'pointer' }} onClick={() => setSelectedDistrict(null)}>
-                  <circle cx={35} cy={43} r="5.5"
-                    fill={selectedDistrict === null ? 'rgba(196,125,59,0.18)' : 'rgba(4,4,4,0.75)'}
-                    stroke={selectedDistrict === null ? '#C47D3B' : 'rgba(255,255,255,0.12)'}
-                    strokeWidth="0.6"
-                    style={{ filter: selectedDistrict === null ? 'drop-shadow(0 0 3px rgba(196,125,59,0.5))' : 'none' }}
-                  />
-                  <text x={35} y={42.2} textAnchor="middle" dominantBaseline="middle"
-                    fontSize="2.2" fontFamily="'Inter',sans-serif" fontWeight="900"
-                    fill={selectedDistrict === null ? '#C47D3B' : '#4b5563'}
-                    letterSpacing="0.08"
-                  >ALL</text>
-                  <text x={35} y={45.5} textAnchor="middle" dominantBaseline="middle"
-                    fontSize="1.5" fontFamily="'Inter',sans-serif" fontWeight="700"
-                    fill={selectedDistrict === null ? '#C47D3B' : '#374151'}
-                    opacity="0.7"
-                  >FORTS</text>
-                </g>
-              </svg>
-
-              {/* Region legend — compact */}
-              <div className="mt-3 flex flex-wrap justify-center gap-x-3 gap-y-1">
-                {Object.values(REGION_MAP).map(r => (
-                  <div key={r.label} className="flex items-center gap-1">
-                    <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: r.color }}></div>
-                    <span className="text-[7.5px] uppercase font-bold tracking-wider" style={{ color: r.color + 'aa' }}>{r.label.split(' ')[0]}</span>
-                  </div>
-                ))}
-              </div>
-              {/* Status */}
-              <div className="mt-1.5 text-center h-4">
-                {selectedDistrict ? (() => { const rs = getRegionStyle(selectedDistrict); return (
-                  <span className="text-[9px] font-bold uppercase tracking-widest" style={{ color: rs.color }}>
-                    {filteredForts.length} fort{filteredForts.length !== 1 ? 's' : ''} in {selectedDistrict}
-                  </span>);})() : (
-                  <span className="text-gray-600 text-[9px] uppercase tracking-widest">{staticForts.length} forts — click a district</span>
+            {/* ── IMPROVED DISTRICT FILTER (Replaced Buggy Map) ── */}
+            <div className="w-full lg:w-5/12 flex flex-col justify-center bg-[#0a0a0a] border border-white/10 rounded-3xl p-6 shadow-[0_0_30px_rgba(0,0,0,0.8)] relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#c47d3b]/10 to-transparent pointer-events-none"></div>
+              
+              <div className="mb-6 flex items-center justify-between z-10 w-full">
+                <h3 className="text-white text-lg font-cinematic font-bold uppercase tracking-widest flex items-center gap-3">
+                  <div className="h-0.5 w-8 bg-[#c47d3b]"></div>
+                  Choose District
+                </h3>
+                {selectedDistrict && (
+                  <button 
+                    onClick={() => setSelectedDistrict(null)}
+                    className="text-xs text-red-400 hover:text-red-300 font-bold tracking-wider uppercase border border-red-500/30 px-3 py-1 rounded-full transition-colors bg-red-500/10"
+                  >
+                    Clear Filter
+                  </button>
                 )}
+              </div>
+
+              <div className="z-10 bg-black/40 backdrop-blur-md border border-white/5 rounded-2xl p-4 max-h-[300px] overflow-y-auto custom-scrollbar">
+                <div className="flex flex-wrap gap-2">
+                  {mapDistricts.map(d => {
+                    const isActive = selectedDistrict === d.name;
+                    const count = staticForts.filter(f => f?.location?.district === d.name).length;
+                    if (count === 0) return null; // Only show districts with forts
+
+                    return (
+                      <button
+                        key={d.name}
+                        onClick={() => setSelectedDistrict(isActive ? null : d.name)}
+                        className={`group flex items-center gap-2 px-3 py-2 rounded-xl border text-xs font-bold transition-all duration-300 ${
+                          isActive 
+                          ? 'bg-[#c47d3b] text-black border-[#c47d3b] shadow-[0_0_15px_rgba(196,125,59,0.4)] scale-105' 
+                          : 'bg-white/5 text-gray-400 border-white/10 hover:bg-white/10 hover:border-[#c47d3b]/50 hover:text-white'
+                        }`}
+                      >
+                        <span className="tracking-wider">{d.name}</span>
+                        <span className={`px-1.5 py-0.5 rounded text-[9px] transition-colors ${
+                          isActive 
+                          ? 'bg-black/20 text-black' 
+                          : 'bg-black/50 text-[#c47d3b] group-hover:text-white'
+                        }`}>
+                          {count}
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+
+              <div className="mt-6 text-center z-10">
+                <p className="text-[10px] text-gray-500 uppercase tracking-widest font-bold">
+                  {selectedDistrict 
+                    ? `Showing ${filteredForts.length} forts in ${selectedDistrict}`
+                    : `Displaying all ${staticForts.length} legendary forts`
+                  }
+                </p>
               </div>
             </div>
 

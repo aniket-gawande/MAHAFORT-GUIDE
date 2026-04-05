@@ -1,18 +1,16 @@
 import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
-import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import TripWeatherForecast from '../components/TripWeatherForecast';
 import { staticForts } from '../data/staticForts';
 import {
   FaMapMarkerAlt, FaMountain, FaCalendarAlt, FaClock, FaRupeeSign,
-  FaHiking, FaRoute, FaStar, FaPlus, FaTimes, FaChevronRight,
+  FaRoute, FaStar, FaPlus, FaTimes, FaChevronRight,
   FaChevronLeft, FaDownload, FaUsers, FaCloudSun, FaCheckCircle,
-  FaCampground, FaWater, FaFirstAid, FaCamera, FaSun, FaMoon,
-  FaUtensils, FaBus, FaSearch, FaFilter, FaArrowRight, FaArrowDown,
-  FaExchangeAlt, FaInfoCircle, FaMapSigns, FaShieldAlt, FaFlagCheckered
+  FaFirstAid,  FaSun, 
+  FaUtensils, FaBus, FaSearch,  FaArrowDown,
+  FaInfoCircle, FaMapSigns, FaShieldAlt, FaFlagCheckered
 } from 'react-icons/fa';
-import { MdOutlineTravelExplore, MdDirectionsWalk } from 'react-icons/md';
-import { GiCastle, GiMountainRoad, GiBackpack, GiCompass, GiCampfire } from 'react-icons/gi';
+import { GiCastle,  GiBackpack, GiCompass} from 'react-icons/gi';
 import heroBg from '../assets/hero-fort.jpg';
 
 // ──────────────────────────── CONSTANTS  ────────────────────────────
@@ -496,45 +494,46 @@ const TripPlanner = () => {
                     <button key={s.id} onClick={() => setSeason(s.id)}
                       className={`p-3 rounded-xl text-center transition-all border
                         ${season === s.id
-                          ? 'bg-saffron/10 border-saffron/50 shadow-[0_0_15px_rgba(255,153,51,0.15)]'
-                          : 'bg-white/[0.02] border-white/5 hover:border-saffron/20'}
+                          ? 'bg-saffron/10 border-saffron/50 shadow-[0_0_15px_rgba(255,153,51,0.15)] scale-105'
+                          : 'bg-white/[0.02] border-white/5 hover:border-saffron/20 hover:bg-white/5'}
                       `}>
-                      <span className="text-2xl block mb-1">{s.icon}</span>
+                      <span className="text-2xl block mb-2 transition-transform duration-300 group-hover:scale-110">{s.icon}</span>
                       <span className={`text-[10px] font-bold tracking-wider uppercase block ${season === s.id ? 'text-saffron' : 'text-gray-400'}`}>
                         {s.id}
                       </span>
                     </button>
                   ))}
                 </div>
-                <p className="text-gray-500 text-xs mt-3 flex items-center gap-2">
+                <p className="text-gray-400 text-xs mt-4 flex items-center justify-center gap-2 bg-black/40 p-3 rounded-xl border border-white/5">
                   <FaInfoCircle className="text-saffron" /> {SEASONS.find(s => s.id === season)?.tip}
                 </p>
               </div>
 
               {/* Group Size */}
-              <div className="bg-white/[0.02] border border-white/5 rounded-2xl p-6">
-                <h3 className="text-sm font-bold text-saffron tracking-wider uppercase mb-4 flex items-center gap-2">
-                  <FaUsers /> Group Size
+              <div className="bg-white/[0.02] border border-white/5 rounded-2xl p-6 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-saffron/5 rounded-full blur-[40px] pointer-events-none"></div>
+                <h3 className="text-sm font-bold text-saffron tracking-wider uppercase mb-6 flex items-center gap-2 relative z-10">
+                  <FaUsers /> Expedition Group Size
                 </h3>
-                <div className="flex items-center gap-4">
+                <div className="flex items-center justify-between gap-4 mb-6 relative z-10">
                   <button onClick={() => setGroupSize(Math.max(1, groupSize - 1))}
-                    className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 text-white hover:border-saffron/50 hover:text-saffron transition-all text-xl font-bold">
+                    className="w-12 h-12 rounded-xl bg-black/50 border border-white/10 text-white hover:border-saffron hover:text-black hover:bg-saffron transition-all text-2xl font-light flex items-center justify-center shadow-lg">
                     –
                   </button>
                   <div className="flex-1 text-center">
-                    <div className="text-5xl font-cinematic font-black text-saffron">{groupSize}</div>
-                    <div className="text-gray-500 text-xs font-bold tracking-wider uppercase mt-1">Warriors</div>
+                    <div className="text-6xl font-cinematic font-black text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]">{groupSize}</div>
+                    <div className="text-saffron/80 text-[10px] font-black tracking-[0.3em] uppercase mt-1">Warriors</div>
                   </div>
                   <button onClick={() => setGroupSize(Math.min(20, groupSize + 1))}
-                    className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 text-white hover:border-saffron/50 hover:text-saffron transition-all text-xl font-bold">
+                    className="w-12 h-12 rounded-xl bg-black/50 border border-white/10 text-white hover:border-saffron hover:text-black hover:bg-saffron transition-all text-xl font-light flex items-center justify-center shadow-lg">
                     +
                   </button>
                 </div>
-                <div className="flex justify-center gap-2 mt-4">
+                <div className="flex justify-center gap-2 relative z-10">
                   {[1, 2, 4, 6, 10].map(n => (
                     <button key={n} onClick={() => setGroupSize(n)}
-                      className={`px-3 py-1 rounded-lg text-xs font-bold transition-all
-                        ${groupSize === n ? 'bg-saffron/20 text-saffron border border-saffron/30' : 'bg-white/5 text-gray-500 hover:text-white border border-white/5'}`}>
+                      className={`w-10 h-8 rounded-lg text-xs font-bold transition-all
+                        ${groupSize === n ? 'bg-saffron text-black shadow-[0_0_10px_rgba(196,125,59,0.4)] scale-110' : 'bg-black/40 text-gray-400 hover:text-white hover:bg-white/10 border border-white/5'}`}>
                       {n}
                     </button>
                   ))}
@@ -542,37 +541,77 @@ const TripPlanner = () => {
               </div>
             </div>
 
-            {/* Day Cards */}
-            <div className="space-y-6">
-              {tripDays.map((day, dayIdx) => (
-                <div key={day.id} className="bg-white/[0.02] border border-white/5 rounded-2xl overflow-hidden hover:border-saffron/10 transition-all">
-                  {/* Day Header */}
-                  <div className="flex items-center justify-between p-5 border-b border-white/5 bg-white/[0.01]">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-saffron/10 border border-saffron/30 flex items-center justify-center">
-                        <span className="text-saffron font-cinematic font-black text-lg">{dayIdx + 1}</span>
+            {/* Trek Difficulty Warnings Generator */}
+            <div className="mb-10 w-full">
+              {(() => {
+                const hasHard = selectedForts.some(f => f.difficulty === 'Hard' || f.difficulty === 'Difficult');
+                const maxAlt = Math.max(...selectedForts.map(f => parseInt(f.altitude) || 0));
+                
+                if (hasHard || maxAlt > 1200) {
+                  return (
+                    <div className="bg-red-500/10 border border-red-500/30 rounded-2xl p-5 flex items-start gap-4">
+                      <div className="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0 border border-red-500/20">
+                        <FaShieldAlt className="text-red-400 text-lg" />
                       </div>
                       <div>
-                        <h3 className="font-cinematic font-bold text-white">Day {dayIdx + 1}</h3>
-                        <p className="text-gray-500 text-xs">{day.forts.length} fort{day.forts.length > 1 ? 's' : ''} planned</p>
+                        <h4 className="text-red-400 font-bold uppercase tracking-widest text-xs mb-1.5 flex items-center gap-2">
+                          High Difficulty Alert
+                        </h4>
+                        <p className="text-gray-300 text-xs leading-relaxed">
+                          Your selected itinerary includes {hasHard ? "Hard-level treks" : "High-altitude forts"}. 
+                          Ensure all {groupSize} warriors are physically fit. Bring climbing ropes, high-grip trekking shoes, and at least 3L of water per person. {season === 'monsoon' ? 'Watch out for extremely slippery rock cut steps during monsoon!' : ''}
+                        </p>
                       </div>
                     </div>
-                    <div className="flex items-center gap-3">
-                      <FaClock className="text-gray-600" size={12} />
-                      <input
-                        type="time"
-                        value={day.startTime}
-                        onChange={e => updateDayTime(dayIdx, e.target.value)}
-                        className="bg-royal-black/50 border border-white/10 rounded-lg px-3 py-1.5 text-sm text-white focus:border-saffron focus:outline-none"
-                      />
-                    </div>
+                  );
+                }
+                return null;
+              })()}
+            </div>
+
+            {/* Day Cards (Interactive Timeline) */}
+            <div className="space-y-8 relative">
+              {/* Timeline background spine that runs behind all days */}
+              <div className="absolute left-[39px] top-6 bottom-10 w-0.5 bg-gradient-to-b from-saffron/50 via-saffron/20 to-transparent hidden md:block"></div>
+
+              {tripDays.map((day, dayIdx) => (
+                <div key={day.id} className="relative z-10 w-full pl-0 md:pl-20">
+                  
+                  {/* Timeline Badge (Only visible on MD+) */}
+                  <div className="absolute left-[24px] top-6 w-8 h-8 rounded-full bg-royal-black border-2 border-saffron shadow-[0_0_15px_rgba(255,153,51,0.5)] z-20 flex items-center justify-center hidden md:flex">
+                    <span className="text-saffron font-bold text-xs font-cinematic">{dayIdx + 1}</span>
                   </div>
 
-                  {/* Forts in day */}
-                  <div className="p-5 space-y-4">
-                    {day.forts.map((fort, fi) => {
-                      const dc = DIFFICULTY_COLORS[fort.difficulty] || DIFFICULTY_COLORS.Moderate;
-                      return (
+                  <div className="bg-[#0a0a0a] border border-white/10 rounded-3xl overflow-hidden hover:border-saffron/30 transition-all duration-500 shadow-[0_5px_20px_rgba(0,0,0,0.5)]">
+                    {/* Day Header */}
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between p-6 border-b border-white/5 bg-gradient-to-r from-saffron/5 to-transparent relative overflow-hidden">
+                      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10 pointer-events-none"></div>
+                      <div className="flex items-center gap-5 relative z-10 mb-4 sm:mb-0">
+                        <div className="md:hidden w-12 h-12 rounded-2xl bg-saffron/10 border border-saffron/30 flex items-center justify-center shadow-inner">
+                          <span className="text-saffron font-cinematic font-black text-xl">{dayIdx + 1}</span>
+                        </div>
+                        <div>
+                          <h3 className="font-cinematic font-black text-white text-xl tracking-widest uppercase mb-1">Day {dayIdx + 1}</h3>
+                          <p className="text-saffron/80 text-[10px] font-bold tracking-[0.2em] uppercase">{day.forts.length} Objective{day.forts.length > 1 ? 's' : ''}</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-3 relative z-10 bg-black/50 p-2 border border-white/10 rounded-xl">
+                        <FaClock className="text-saffron pl-1" size={16} />
+                        <span className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Start Time</span>
+                        <input
+                          type="time"
+                          value={day.startTime}
+                          onChange={e => updateDayTime(dayIdx, e.target.value)}
+                          className="bg-transparent border-none text-sm text-white font-bold focus:outline-none cursor-pointer"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Forts in day */}
+                    <div className="p-6 sm:p-8 space-y-6 bg-gradient-to-b from-white/[0.02] to-transparent">
+                      {day.forts.map((fort, fi) => {
+                        const dc = DIFFICULTY_COLORS[fort.difficulty] || DIFFICULTY_COLORS.Moderate;
+                        return (
                         <div key={fort._id} className="flex items-start gap-4 group/fort">
                           {/* Timeline dot */}
                           <div className="flex flex-col items-center pt-1">
@@ -622,7 +661,7 @@ const TripPlanner = () => {
                     })}
 
                     {/* Day Notes */}
-                    <div className="pt-2">
+                    <div className="pt-2 pl-8 pb-4">
                       <textarea
                         value={day.notes}
                         onChange={e => updateDayNotes(dayIdx, e.target.value)}
@@ -633,10 +672,20 @@ const TripPlanner = () => {
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-        )}
+
+          <div className="mt-10 text-center w-full relative z-10">
+            <button 
+              onClick={nextStep}
+              className="bg-saffron text-black px-10 py-4 rounded-xl font-bold tracking-widest uppercase hover:bg-white hover:scale-105 transition-all border border-saffron/50 shadow-[0_0_20px_rgba(255,153,51,0.3)]">
+              Save & Proceed to Route
+            </button>
+          </div>
+          
+        </div>
+      )}
 
         {/* ╔═══════════════════ STEP 2: ROUTE & BUDGET ═══════════════════╗ */}
         {step === 2 && (
