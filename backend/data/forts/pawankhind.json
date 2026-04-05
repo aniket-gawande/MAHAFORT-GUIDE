@@ -1,0 +1,32 @@
+{
+  "name": "Pavan Khind",
+  "location": {
+    "district": "Kolhapur",
+    "state": "Maharashtra",
+    "nearestVillage": "Amba",
+    "coordinates": { "lat": 16.7081, "lng": 73.7582 }
+  },
+  "type": "Historical Pass",
+  "description": "Pavan Khind is a mountain pass in the Sahyadri range, famous for the legendary Battle of Pavan Khind (1660) where Baji Prabhu Deshpande and his men made a heroic last stand to ensure Chhatrapati Shivaji Maharaj's escape from Siddi Johar's forces.",
+  "historicalSignificance": "Site of the Battle of Pavan Khind (1660), a symbol of supreme sacrifice and Maratha valor.",
+  "landmarks": [
+    { "name": "Pavan Khind Memorial", "description": "Statues of Baji Prabhu Deshpande and his Bandal Sena." },
+    { "name": "Battle Site", "description": "The narrow pass where the legendary battle took place." }
+  ],
+  "facilities": {
+    "parking": true,
+    "water": false,
+    "food": false,
+    "network": "Weak signal"
+  },
+  "visitInfo": {
+    "bestTime": "October to February",
+    "timings": "6:00 AM – 6:00 PM",
+    "entryFee": 0
+  },
+  "reviews": [
+    "A place that gives goosebumps to every Maratha!",
+    "The memorial is inspiring and the pass is scenic.",
+    "Must visit for history lovers."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Samadhi of Tanaji Malusare",
+  "location": {
+    "district": "Pune",
+    "state": "Maharashtra",
+    "nearestVillage": "Sinhagad",
+    "coordinates": { "lat": 18.3667, "lng": 73.7550 }
+  },
+  "type": "Memorial Site",
+  "description": "The samadhi (tomb) of Tanaji Malusare, the legendary Maratha warrior who led the daring capture of Kondhana (Sinhagad) Fort in 1670. His sacrifice is immortalized in Maratha history and folklore.",
+  "historicalSignificance": "Final resting place of Tanaji Malusare, hero of the Battle of Sinhagad (1670).",
+  "landmarks": [
+    { "name": "Tanaji Malusare Samadhi", "description": "Simple tomb at Sinhagad Fort, revered by visitors." }
+  ],
+  "facilities": {
+    "parking": true,
+    "water": true,
+    "food": true,
+    "network": "Good signal"
+  },
+  "visitInfo": {
+    "bestTime": "October to March",
+    "timings": "6:00 AM – 6:00 PM",
+    "entryFee": 0
+  },
+  "reviews": [
+    "A place of great pride and emotion.",
+    "The story of Tanaji comes alive here.",
+    "Essential visit for every Maratha."
+  ]
+}

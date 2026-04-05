@@ -1,0 +1,31 @@
+{
+  "name": "Samadhi of Yesaji Kank",
+  "location": {
+    "district": "Raigad",
+    "state": "Maharashtra",
+    "nearestVillage": "Raigadwadi",
+    "coordinates": { "lat": 18.2345, "lng": 73.4418 }
+  },
+  "type": "Memorial Site",
+  "description": "The samadhi (tomb) of Yesaji Kank, the loyal and brave commander of Raigad Fort under Chhatrapati Shivaji Maharaj. Known for his unwavering dedication and defense of Raigad during critical times.",
+  "historicalSignificance": "Final resting place of Yesaji Kank, a key defender of Raigad Fort and trusted Maratha officer.",
+  "landmarks": [
+    { "name": "Yesaji Kank Samadhi", "description": "A simple memorial honoring his service and sacrifice." }
+  ],
+  "facilities": {
+    "parking": true,
+    "water": false,
+    "food": false,
+    "network": "Good signal"
+  },
+  "visitInfo": {
+    "bestTime": "October to March",
+    "timings": "7:00 AM – 6:00 PM",
+    "entryFee": 0
+  },
+  "reviews": [
+    "A must-visit for those who admire Maratha history.",
+    "Peaceful and well-maintained site.",
+    "Inspires respect for the unsung heroes of Swarajya."
+  ]
+}

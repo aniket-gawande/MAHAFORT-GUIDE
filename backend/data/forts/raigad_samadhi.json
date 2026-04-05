@@ -1,0 +1,33 @@
+{
+  "name": "Raigad Samadhi (Raigad Fort Memorial)",
+  "location": {
+    "district": "Raigad",
+    "state": "Maharashtra",
+    "nearestVillage": "Pachad",
+    "coordinates": { "lat": 18.2341, "lng": 73.4421 }
+  },
+  "type": "Memorial Site",
+  "description": "Raigad Samadhi is the final resting place of Chhatrapati Shivaji Maharaj, located atop the historic Raigad Fort. The site includes the samadhi (tomb), a grand statue, and the coronation platform (Nagarkhana Darwaja).",
+  "historicalSignificance": "Site of Shivaji Maharaj's coronation (1674) and samadhi (1680). A place of immense reverence for all Maharashtrians.",
+  "landmarks": [
+    { "name": "Shivaji Maharaj Samadhi", "description": "Tomb of Chhatrapati Shivaji Maharaj." },
+    { "name": "Nagarkhana Darwaja", "description": "Coronation platform and main entrance." },
+    { "name": "Statue of Shivaji Maharaj", "description": "Grand equestrian statue at the site." }
+  ],
+  "facilities": {
+    "parking": true,
+    "water": true,
+    "food": true,
+    "network": "Good signal"
+  },
+  "visitInfo": {
+    "bestTime": "October to March",
+    "timings": "8:00 AM – 6:00 PM",
+    "entryFee": 0
+  },
+  "reviews": [
+    "A place of deep reverence and pride.",
+    "The samadhi is well maintained and the views are stunning.",
+    "Essential visit for every Maharashtrian."
+  ]
+}

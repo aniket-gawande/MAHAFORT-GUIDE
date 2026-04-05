@@ -1,0 +1,47 @@
+{
+  "name": "Alang Fort",
+  "location": {
+    "district": "Nashik",
+    "state": "Maharashtra",
+    "baseVillage": "Ambewadi",
+    "coordinates": { "lat": 19.6011, "lng": 73.6522 },
+    "nearestCity": "Igatpuri (55 km)"
+  },
+  "height_m": 1372,
+  "type": "Hill Fort",
+  "description": "Part of the legendary AMK (Alang-Madan-Kulang) trio, Alang is one of the most challenging and rewarding treks in Maharashtra. The fort is known for its rugged terrain, rock patches, caves, and panoramic Sahyadri views. The trek is recommended for experienced trekkers only.",
+  "trek": {
+    "routes": [
+      {
+        "name": "AMK Circuit",
+        "startPoint": "Ambewadi village",
+        "distance": "10-12 km (full circuit)",
+        "duration": "8-12 hours (Alang only: 4-5 hours)",
+        "difficulty": "Very Difficult",
+        "description": "Steep rock patches, dense forest, exposed traverses, and technical climbing. Rope and gear required for some sections."
+      }
+    ],
+    "bestTime": ["October to February"],
+    "avoidTime": ["Monsoon (slippery, dangerous)", "Summer (extreme heat)"]
+  },
+  "landmarks": [
+    { "name": "Caves", "description": "Large caves for overnight stay, can accommodate 40-50 people.", "mustSee": true },
+    { "name": "Water Cisterns", "description": "Several rock-cut cisterns, water available most of the year.", "mustSee": true },
+    { "name": "Summit Plateau", "description": "Expansive views of Madangad, Kulang, and the Sahyadris.", "mustSee": true }
+  ],
+  "facilities": {
+    "parking": false,
+    "water": true,
+    "food": false,
+    "network": "No signal"
+  },
+  "history": {
+    "builtBy": "Unknown (pre-Shivaji era)",
+    "significance": "Strategic hill fort, part of the AMK circuit, used as a watchtower and refuge."
+  },
+  "reviews": [
+    "One of the toughest treks in Maharashtra. The rock patches are thrilling and require technical skills.",
+    "The caves are a blessing for trekkers. Carry your own food and water purification.",
+    "Views from the top are breathtaking, but the route is not for beginners."
+  ]
+}

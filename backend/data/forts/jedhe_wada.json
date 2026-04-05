@@ -1,0 +1,32 @@
+{
+  "name": "Jedhe Wada",
+  "location": {
+    "district": "Satara",
+    "state": "Maharashtra",
+    "nearestVillage": "Kelawade",
+    "coordinates": { "lat": 18.0732, "lng": 73.7651 }
+  },
+  "type": "Historic Residence",
+  "description": "Jedhe Wada is the ancestral home of the Jedhe family, one of the most influential Maratha sardars and chroniclers. The Jedhe family played a crucial role in the rise of Shivaji Maharaj and the Maratha Empire.",
+  "historicalSignificance": "Birthplace and residence of the Jedhe Deshmukhs, key supporters of Shivaji Maharaj. The Jedhe chronicle is a primary source for early Maratha history.",
+  "landmarks": [
+    { "name": "Jedhe Wada", "description": "Traditional wada (mansion) with Maratha architecture." },
+    { "name": "Jedhe Family Memorial", "description": "Plaques and statues honoring the Jedhe ancestors." }
+  ],
+  "facilities": {
+    "parking": true,
+    "water": true,
+    "food": false,
+    "network": "Good signal"
+  },
+  "visitInfo": {
+    "bestTime": "November to March",
+    "timings": "8:00 AM – 6:00 PM",
+    "entryFee": 0
+  },
+  "reviews": [
+    "A must-visit for Maratha history buffs.",
+    "The wada is well preserved and informative.",
+    "Great insight into the Maratha era."
+  ]
+}
