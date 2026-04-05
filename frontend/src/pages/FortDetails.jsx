@@ -3,6 +3,7 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import CrowdStatusBadge from '../components/CrowdStatusBadge';
 import EmergencyButton from '../components/EmergencyButton';
+import LiveWeather from '../components/LiveWeather';
 import { staticForts } from '../data/staticForts';
 import { fortDetailedData } from '../data/fortDetailedData';
 import {
@@ -566,6 +567,9 @@ const FortDetails = () => {
                                     {showMap ? 'HIDE MAP' : 'GET DIRECTIONS'}
                                 </button>
                             </div>
+
+                            {/* Live Weather Widget */}
+                            <LiveWeather fortName={fort.name} district={fort.location?.district} />
 
                             {/* Quick Facts */}
                             {detail?.quickFacts && (

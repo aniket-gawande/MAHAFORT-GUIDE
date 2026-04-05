@@ -44,16 +44,91 @@ const CHALLENGE_RATINGS = [
   }
 ];
 
-const mapDistricts = [
-  { name: 'Nashik', x: 50, y: 15 },
-  { name: 'Satara', x: 80, y: 30 },
-  { name: 'Sindhudurg', x: 85, y: 60 },
-  { name: 'Ratnagiri', x: 75, y: 85 },
-  { name: 'Thane', x: 50, y: 92 },
-  { name: 'Kolhapur', x: 25, y: 85 },
-  { name: 'Raigad', x: 15, y: 60 },
-  { name: 'Pune', x: 20, y: 30 },
-];
+// ─── Maharashtra 6-region colour scheme (matches reference map) ───
+const REGION_MAP = {
+  konkan:     { label: 'Konkan',     color: '#dc2626', glow: 'rgba(220,38,38,0.5)',   districts: ['Palghar','Thane','Raigad','Ratnagiri','Sindhudurg','Mumbai','Mumbai Suburban'] },
+  pune:       { label: 'Pune',       color: '#2563eb', glow: 'rgba(37,99,235,0.5)',   districts: ['Pune','Satara','Solapur','Sangli','Kolhapur','Ahmednagar'] },
+  nagpur:     { label: 'Nagpur',     color: '#16a34a', glow: 'rgba(22,163,74,0.5)',   districts: ['Nagpur','Wardha','Yavatmal','Bhandara','Gondia','Chandrapur','Gadchiroli'] },
+  nashik:     { label: 'Nashik',     color: '#7c3aed', glow: 'rgba(124,58,237,0.5)', districts: ['Nashik','Dhule','Nandurbar','Jalgaon'] },
+  aurangabad: { label: 'Aurangabad', color: '#ea580c', glow: 'rgba(234,88,12,0.5)',  districts: ['Aurangabad','Chhatrapati Sambhajinagar','Jalna','Beed','Dharashiv','Dharashiv (Osmanabad)','Osmanabad','Latur','Nanded','Hingoli','Parbhani'] },
+  amravati:   { label: 'Amravati',   color: '#ca8a04', glow: 'rgba(202,138,4,0.5)',  districts: ['Amravati','Akola','Buldhana','Washim'] },
+};
+const getRegionStyle = (name) => {
+  for (const r of Object.values(REGION_MAP)) {
+    if (r.districts.includes(name)) return r;
+  }
+  return { label: 'Other', color: '#6b7280', glow: 'rgba(107,114,128,0.4)' };
+};
+// Geographic coordinates of Maharashtra district centres [lat, lon]
+// Carefully calibrated to match the official district map
+const DISTRICT_GEO = {
+  'Nandurbar': [21.38, 74.24], 'Dhule': [20.90, 74.78], 'Jalgaon': [21.02, 75.57],
+  'Buldhana': [20.53, 76.18], 'Akola': [20.71, 77.00], 'Washim': [20.12, 77.15],
+  'Amravati': [20.93, 77.75], 'Yavatmal': [20.38, 78.12], 'Wardha': [20.75, 78.60],
+  'Nagpur': [21.15, 79.10], 'Bhandara': [21.17, 79.65], 'Gondia': [21.45, 80.20],
+  'Chandrapur': [20.05, 79.30], 'Gadchiroli': [20.18, 80.02],
+  'Palghar': [19.80, 72.77], 'Thane': [19.35, 73.00],
+  'Raigad': [18.25, 73.20], 'Ratnagiri': [17.00, 73.32],
+  'Sindhudurg': [16.05, 73.55], 'Nashik': [20.00, 73.80],
+  'Ahmednagar': [19.10, 74.75], 'Pune': [18.52, 74.00],
+  'Satara': [17.68, 74.00], 'Sangli': [16.86, 74.58],
+  'Kolhapur': [16.70, 74.24], 'Solapur': [17.69, 75.91],
+  'Aurangabad': [19.88, 75.34], 'Chhatrapati Sambhajinagar': [19.88, 75.34],
+  'Jalna': [19.83, 75.90], 'Beed': [18.99, 75.74],
+  'Osmanabad': [18.19, 76.05], 'Dharashiv': [18.19, 76.05],
+  'Dharashiv (Osmanabad)': [18.19, 76.05], 'Latur': [18.40, 76.56],
+  'Nanded': [19.15, 77.32], 'Hingoli': [19.72, 77.15], 'Parbhani': [19.27, 76.77],
+};
+// Map bounds matching Maharashtra extents
+const GEO = { minLon: 72.5, maxLon: 81.0, minLat: 15.4, maxLat: 22.2 };
+const geoToPercent = (lat, lon) => ([
+  +((lon - GEO.minLon) / (GEO.maxLon - GEO.minLon) * 100).toFixed(1),
+  +((GEO.maxLat - lat)  / (GEO.maxLat - GEO.minLat) * 100).toFixed(1),
+]);
+// Maharashtra border — calibrated to exactly match official district reference map
+// viewBox 0 0 100 80 (lon 72.5→81.0, lat 15.4→22.2)
+const MH_PATH = [
+  'M16.5,9.2',
+  'C18,6.8 21,7.2 22.4,10',
+  'L28,9.2 34,8 38,8.2 43,7.4',
+  'L46.5,7 52,6 55.5,6.4 59.5,5.8 63,5.2',
+  'L68,5 73,5.2 76,4.8 80.5,5.4 85,5.2',
+  'L89,4.8 91.5,5.6',
+  'C94,6.5 95.5,9 95.5,12',
+  'L95,18 94.8,25 94,33',
+  'L92,40 90,44.5 88,47.8',
+  'C86,51 84,53 81,55',
+  'L78,57.5 74,59 70,60',
+  'L65.5,60 62,61.5 58,63 54,65',
+  'L50,67 47,69.5 44,72 40,74.5',
+  'L36.5,76.5 32,79 27,80.5',
+  'C23,82 20,82.5 17.5,80.5',
+  'L16,78.5 15,76',
+  'C12.5,79 10.5,79 9.5,76.5',
+  'L9,71 8.5,65.5 8,60.5 7.5,56 7,51 6.5,46 6,41.5',
+  'L5.5,36.5 5.2,32 4.8,27 3.8,21',
+  'C3.5,17 4.5,14 7,12',
+  'L9.5,11 12,10 16.5,9.2 Z'
+].join(' ');
+const buildMapDistricts = () => {
+  const seen = new Set();
+  return staticForts
+    .filter(f => f?.location?.district)
+    .reduce((acc, f) => {
+      const name = f.location.district;
+      if (!seen.has(name)) {
+        seen.add(name);
+        const coords = DISTRICT_GEO[name];
+        if (coords) {
+          const [x, y] = geoToPercent(coords[0], coords[1]);
+          acc.push({ name, x, y });
+        }
+      }
+      return acc;
+    }, [])
+    .sort((a, b) => a.name.localeCompare(b.name));
+};
+const mapDistricts = buildMapDistricts();
 
 const ToggleSwitch = ({ active, onClick, label, icon }) => (
   <div 
@@ -77,6 +152,8 @@ const Forts = () => {
   const [difficultyFilter, setDifficultyFilter] = useState('all');
   const [activeTab, setActiveTab] = useState('all');
   const [selectedDistrict, setSelectedDistrict] = useState(null);
+  const [isMapExpanded, setIsMapExpanded] = useState(false);
+  const [hoveredDistrict, setHoveredDistrict] = useState(null);
   
   // Toggles
   const [toggles, setToggles] = useState({
@@ -214,51 +291,217 @@ const Forts = () => {
         <div className="w-full bg-[#070707] p-8 sm:p-16 border-b border-white/5 relative overflow-hidden">
           <div className="max-w-7xl mx-auto relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
             
-            {/* Map Canvas */}
-            <div className="w-full lg:w-5/12 relative flex flex-col items-center justify-center min-h-[400px] lg:min-h-[500px]">
-              
-              <div className="relative w-full max-w-[500px] aspect-square flex items-center justify-center">
-                
-                {/* Orbital Rings Background */}
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                  <div className="absolute w-[85%] h-[85%] border border-white/[0.03] rounded-full"></div>
-                  <div className="absolute w-[90%] h-[80%] border border-[#C47D3B]/20 rounded-full rotate-[15deg] transition-transform duration-[1000ms]"></div>
-                  <div className="absolute w-[80%] h-[90%] border border-[#C47D3B]/10 rounded-full -rotate-[15deg] transition-transform duration-[1000ms]"></div>
-                  <div className="absolute w-[95%] h-[95%] border border-white/[0.02] rounded-full"></div>
-                </div>
+            {/* ── MAHARASHTRA SVG MAP CANVAS ── */}
+            <div className="w-full lg:w-5/12 relative flex flex-col items-center justify-center">
+              {/* Header row */}
+              <div className="mb-3 w-full flex items-center justify-between px-1">
+                <span className="text-[10px] uppercase tracking-[0.2em] text-gray-500 font-bold">Filter by District</span>
+                <button
+                  onClick={() => setIsMapExpanded(true)}
+                  className="flex items-center gap-1.5 text-[9px] text-[#C47D3B]/80 border border-[#C47D3B]/20 px-2.5 py-1 rounded-lg hover:bg-[#C47D3B]/10 hover:text-[#C47D3B] transition-all duration-200 uppercase tracking-wider font-bold"
+                >
+                  <svg width="8" height="8" viewBox="0 0 10 10" fill="currentColor"><path d="M1 6H0v4h4V9H1V6zm-1-4h3V1H0v4h1V2zm9 9H6v1h4V6H9v3zM6 0V1h3v3h1V0H6z"/></svg>
+                  Expand
+                </button>
+              </div>
 
+              {/* Compact Map — pure SVG, all labels inside coordinate space */}
+              <svg
+                viewBox="0 0 100 82"
+                className="w-full max-w-[580px]"
+                style={{ overflow: 'visible', display: 'block' }}
+                preserveAspectRatio="xMidYMid meet"
+              >
+                <defs>
+                  <filter id="mapGlow"><feGaussianBlur stdDeviation="0.7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                  <filter id="dotGlow"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                  <radialGradient id="mhFill" cx="40%" cy="45%" r="60%">
+                    <stop offset="0%" stopColor="#C47D3B" stopOpacity="0.12"/>
+                    <stop offset="100%" stopColor="#C47D3B" stopOpacity="0.02"/>
+                  </radialGradient>
+                </defs>
+
+                {/* Map border — outer amber glow + main crisp edge */}
+                <path d={MH_PATH} fill="none" stroke="#C47D3B" strokeWidth="3" opacity="0.12"/>
+                <path d={MH_PATH} fill="url(#mhFill)" stroke="#C47D3B" strokeWidth="0.7" filter="url(#mapGlow)"/>
+                <path d={MH_PATH} fill="none" stroke="rgba(255,255,255,0.04)" strokeWidth="0.3"/>
+
+                {/* Districts */}
                 {mapDistricts.map((d) => {
-                  const isActive = selectedDistrict === d.name || (selectedDistrict === null && d.name === 'Pune');
+                  const isActive = selectedDistrict === d.name;
+                  const rs = getRegionStyle(d.name);
+                  const fortCount = staticForts.filter(f => f?.location?.district === d.name).length;
+                  const sx = d.x, sy = d.y * 0.82;
+
+                  // Per-district label directions: U=up, D=down, L=left, R=right
+                  const DIR = {
+                    'Nandurbar':'U','Dhule':'U','Jalgaon':'U','Buldhana':'U','Akola':'U',
+                    'Amravati':'U','Washim':'R','Wardha':'U','Nagpur':'U',
+                    'Bhandara':'U','Gondia':'R','Chandrapur':'D','Gadchiroli':'R',
+                    'Palghar':'L','Thane':'L','Raigad':'L','Ratnagiri':'L','Sindhudurg':'L',
+                    'Nashik':'L','Ahmednagar':'L','Pune':'L',
+                    'Satara':'L','Sangli':'D','Kolhapur':'D','Solapur':'D',
+                    'Aurangabad':'U','Chhatrapati Sambhajinagar':'U',
+                    'Jalna':'U','Beed':'D','Parbhani':'U','Hingoli':'R',
+                    'Nanded':'D','Latur':'D','Osmanabad':'D','Dharashiv':'D',
+                    'Dharashiv (Osmanabad)':'D','Yavatmal':'D',
+                  };
+                  const dir = DIR[d.name] || (sx < 18 ? 'L' : sx > 78 ? 'R' : 'U');
+                  const dist = 4.5;
+                  let lx = sx, ly = sy;
+                  let anchor = 'middle';
+                  if (dir === 'U') { ly = sy - dist; anchor = 'middle'; }
+                  else if (dir === 'D') { ly = sy + dist; anchor = 'middle'; }
+                  else if (dir === 'L') { lx = sx - dist; ly = sy; anchor = 'end'; }
+                  else if (dir === 'R') { lx = sx + dist; ly = sy; anchor = 'start'; }
+
+                  // Short name for compact display
+                  const short = d.name === 'Chhatrapati Sambhajinagar' ? 'C.Sambhaji'
+                    : d.name === 'Dharashiv (Osmanabad)' ? 'Dharashiv'
+                    : d.name === 'Ahmednagar' ? 'A.Nagar' : d.name;
+
+                  // Approx rect width (SVG units): name chars × 1.4 + badge room
+                  const rw = short.length * 1.45 + 4.5;
+                  const rh = 3.8;
+                  const rx = anchor === 'middle' ? lx - rw / 2
+                    : anchor === 'end' ? lx - rw : lx;
+                  const ry = ly - rh / 2;
+
                   return (
-                    <div 
-                      key={d.name} 
-                      className="absolute cursor-pointer flex flex-col items-center group z-10"
-                      style={{ top: `${d.y}%`, left: `${d.x}%`, transform: 'translate(-50%, -50%)' }}
-                      onClick={() => setSelectedDistrict(selectedDistrict === d.name ? null : d.name)}
-                    >
-                      {/* Tag */}
-                      <div className={`flex items-center gap-2 mb-3 bg-[#111] backdrop-blur-md px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl border opacity-95 transition-all duration-300 hover:scale-105 ${isActive ? 'border-saffron/80 shadow-[0_0_15px_rgba(255,153,51,0.15)]' : 'border-white/10 hover:border-white/30'}`}>
-                        <FaMapMarkerAlt className={isActive ? 'text-saffron drop-shadow-[0_0_8px_rgba(255,153,51,0.8)]' : 'text-gray-500'} size={12} />
-                        <span className="text-[10px] sm:text-xs uppercase font-bold text-gray-300 tracking-[0.15em] whitespace-nowrap">{d.name}</span>
-                      </div>
-                      
-                      {/* Glowing Dot */}
-                      <div className="relative flex justify-center items-center w-full h-4">
-                        {isActive ? (
-                          <>
-                            <div className="absolute w-12 h-12 bg-saffron/15 rounded-full blur-md animate-pulse"></div>
-                            <div className="absolute w-6 h-6 bg-saffron/40 rounded-full animate-pulse"></div>
-                            <div className="w-2.5 h-2.5 bg-saffron rounded-full shadow-[0_0_10px_2px_rgba(255,153,51,0.8)] relative z-10"></div>
-                          </>
-                        ) : (
-                          <div className="w-2 h-2 bg-[#4A5568] rounded-full shadow-[0_0_8px_1px_rgba(74,85,104,0.3)] group-hover:bg-[#718096] transition-colors"></div>
-                        )}
-                      </div>
-                    </div>
+                    <g key={d.name} style={{ cursor: 'pointer' }}
+                      onClick={() => setSelectedDistrict(selectedDistrict === d.name ? null : d.name)}>
+
+                      {/* Glow halo when active */}
+                      {isActive && <circle cx={sx} cy={sy} r="4" fill={rs.color} opacity="0.18" filter="url(#dotGlow)"/>}
+
+                      {/* Label bg rect */}
+                      <rect x={rx} y={ry} width={rw} height={rh} rx="0.9"
+                        fill="rgba(8,8,8,0.93)"
+                        stroke={isActive ? rs.color : 'rgba(255,255,255,0.13)'}
+                        strokeWidth={isActive ? '0.5' : '0.3'}
+                        filter={isActive ? undefined : undefined}
+                        style={{ filter: isActive ? `drop-shadow(0 0 1.5px ${rs.color}88)` : 'none' }}
+                      />
+
+                      {/* District name + count */}
+                      <text
+                        x={anchor === 'middle' ? lx - 1.8 : anchor === 'end' ? lx - rw + 1 : lx + 1}
+                        y={ly}
+                        dominantBaseline="middle"
+                        textAnchor="start"
+                        fontSize="2.1"
+                        fontFamily="'Inter', sans-serif"
+                        fontWeight="700"
+                        letterSpacing="0.05"
+                        fill={isActive ? rs.color : '#b0b8c5'}
+                      >
+                        {short}
+                        <tspan
+                          dx="0.8"
+                          fontSize="1.9"
+                          fontWeight="900"
+                          fill={isActive ? '#000' : rs.color + 'cc'}
+                          style={{ paintOrder: 'stroke' }}
+                        >{fortCount}</tspan>
+                      </text>
+
+                      {/* Dot */}
+                      <circle cx={sx} cy={sy}
+                        r={isActive ? 1.9 : 1.3}
+                        fill={isActive ? rs.color : rs.color + 'bb'}
+                        filter={isActive ? 'url(#dotGlow)' : undefined}
+                      />
+                    </g>
                   );
                 })}
+
+                {/* ALL reset — pure SVG button in centre of Pune region */}
+                <g style={{ cursor: 'pointer' }} onClick={() => setSelectedDistrict(null)}>
+                  <circle cx={35} cy={43} r="5.5"
+                    fill={selectedDistrict === null ? 'rgba(196,125,59,0.18)' : 'rgba(4,4,4,0.75)'}
+                    stroke={selectedDistrict === null ? '#C47D3B' : 'rgba(255,255,255,0.12)'}
+                    strokeWidth="0.6"
+                    style={{ filter: selectedDistrict === null ? 'drop-shadow(0 0 3px rgba(196,125,59,0.5))' : 'none' }}
+                  />
+                  <text x={35} y={42.2} textAnchor="middle" dominantBaseline="middle"
+                    fontSize="2.2" fontFamily="'Inter',sans-serif" fontWeight="900"
+                    fill={selectedDistrict === null ? '#C47D3B' : '#4b5563'}
+                    letterSpacing="0.08"
+                  >ALL</text>
+                  <text x={35} y={45.5} textAnchor="middle" dominantBaseline="middle"
+                    fontSize="1.5" fontFamily="'Inter',sans-serif" fontWeight="700"
+                    fill={selectedDistrict === null ? '#C47D3B' : '#374151'}
+                    opacity="0.7"
+                  >FORTS</text>
+                </g>
+              </svg>
+
+              {/* Region legend — compact */}
+              <div className="mt-3 flex flex-wrap justify-center gap-x-3 gap-y-1">
+                {Object.values(REGION_MAP).map(r => (
+                  <div key={r.label} className="flex items-center gap-1">
+                    <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: r.color }}></div>
+                    <span className="text-[7.5px] uppercase font-bold tracking-wider" style={{ color: r.color + 'aa' }}>{r.label.split(' ')[0]}</span>
+                  </div>
+                ))}
+              </div>
+              {/* Status */}
+              <div className="mt-1.5 text-center h-4">
+                {selectedDistrict ? (() => { const rs = getRegionStyle(selectedDistrict); return (
+                  <span className="text-[9px] font-bold uppercase tracking-widest" style={{ color: rs.color }}>
+                    {filteredForts.length} fort{filteredForts.length !== 1 ? 's' : ''} in {selectedDistrict}
+                  </span>);})() : (
+                  <span className="text-gray-600 text-[9px] uppercase tracking-widest">{staticForts.length} forts — click a district</span>
+                )}
               </div>
             </div>
+
+            {/* ═══════ EXPANDED MAP MODAL ═══════ */}
+            {isMapExpanded && (
+              <div
+                className="fixed inset-0 z-[200] bg-black/92 backdrop-blur-2xl flex items-center justify-center p-4"
+                style={{ animation: 'fadeIn 0.25s ease' }}
+                onClick={() => setIsMapExpanded(false)}
+              >
+                <div
+                  className="relative w-full max-w-5xl bg-[#050505] border border-white/5 rounded-3xl p-8 shadow-2xl"
+                  style={{ animation: 'scaleIn 0.25s ease' }}
+                  onClick={e => e.stopPropagation()}
+                >
+                  {/* Modal header */}
+                  <div className="flex items-center justify-between mb-6">
+                    <div>
+                      <h2 className="text-xl font-cinematic font-black text-white tracking-widest uppercase">
+                        Maharashtra <span className="text-[#C47D3B]">District Map</span>
+                      </h2>
+                      <p className="text-gray-500 text-[10px] uppercase tracking-widest mt-1">
+                        Click any district to filter forts · {mapDistricts.length} districts
+                      </p>
+                    </div>
+                    <button onClick={() => setIsMapExpanded(false)}
+                      className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-white/30 transition-all text-sm">
+                      ✕
+                    </button>
+                  </div>
+
+                  {/* Region legend + status */}
+                  <div className="mt-5 flex flex-wrap justify-center gap-4">
+                    {Object.values(REGION_MAP).map(r => (
+                      <div key={r.label} className="flex items-center gap-1.5">
+                        <div className="w-2.5 h-2.5 rounded-full" style={{ background: r.color }}></div>
+                        <span className="text-[9px] uppercase font-bold tracking-wider" style={{ color: r.color + 'bb' }}>{r.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                  {selectedDistrict && (() => { const rs = getRegionStyle(selectedDistrict); return (
+                    <p className="text-center text-sm font-bold uppercase tracking-widest mt-3" style={{ color: rs.color }}>
+                      {filteredForts.length} fort{filteredForts.length !== 1 ? 's' : ''} found in {selectedDistrict}
+                    </p>);})()}
+                </div>
+              </div>
+            )}
+
+
 
             {/* Right side: Challenge Ratings & Toggles */}
             <div className="w-full lg:w-7/12 flex flex-col">
@@ -405,15 +648,12 @@ const Forts = () => {
 
       </div>
       
-      {/* Global override for horizontal scrollbars */}
+      {/* Global CSS: modal animations + scrollbar hide */}
       <style dangerouslySetInnerHTML={{__html: `
-        .hide-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .hide-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes scaleIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
       `}} />
     </div>
   );

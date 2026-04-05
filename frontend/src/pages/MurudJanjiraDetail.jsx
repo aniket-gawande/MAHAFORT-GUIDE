@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import JanjiraMap from '../components/JanjiraMap';
+import LiveWeather from '../components/LiveWeather';
 import { FaClock, FaRupeeSign, FaCalendarAlt, FaMapMarkerAlt, FaHistory, FaMonument, FaShip } from 'react-icons/fa';
 import janjiraImage from '../assets/janjira.jpg';
 
@@ -160,13 +161,17 @@ const MurudJanjiraDetail = () => {
                                     onClick={() => setShowMap(!showMap)}
                                     className="w-full mt-8 py-4 bg-saffron text-royal-black font-bold rounded-xl hover:bg-white transition-all duration-300 shadow-lg shadow-saffron/20"
                                 >
-                                    {showMap ? 'HIDE MAP' : 'GET DIRECTIONS'}
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+{showMap ? 'HIDE MAP' : 'GET DIRECTIONS'}
+                                  </button>
+                                  
+                                  <div className="mt-6">
+                                      <LiveWeather fortName="Murud Janjira" district="Raigad" />
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
 
-                </div>
+                  </div>
 
                 {/* Map Section - toggles on GET DIRECTIONS click */}
                 {showMap && (

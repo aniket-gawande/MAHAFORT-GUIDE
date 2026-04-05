@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import TungMap from '../components/TungMap';
+import LiveWeather from '../components/LiveWeather';
 import tungImage from '../assets/tung-hero.jpg';
 import { FaClock, FaRupeeSign, FaCalendarAlt, FaMapMarkerAlt, FaHistory, FaMonument, FaMountain, FaShieldAlt, FaUtensils, FaExclamationTriangle, FaStar, FaWater } from 'react-icons/fa';
 
@@ -484,7 +485,7 @@ const TungDetail = () => {
                                     {showMap ? 'HIDE MAP' : 'GET DIRECTIONS'}
                                 </button>
                             </div>
-
+                              <LiveWeather fortName="Tung" district="Pune" />
                             {/* Quick Facts Card */}
                             <div className="bg-royal-gray/60 backdrop-blur-xl border border-white/10 rounded-2xl p-6 relative overflow-hidden">
                                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-green-500 to-transparent opacity-50"></div>

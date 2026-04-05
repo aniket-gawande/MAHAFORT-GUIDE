@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import SindhudurgMap from '../components/SindhudurgMap';
+import LiveWeather from '../components/LiveWeather';
 import { FaClock, FaRupeeSign, FaCalendarAlt, FaMapMarkerAlt, FaHistory, FaMonument, FaShip, FaShieldAlt, FaUtensils, FaExclamationTriangle, FaStar, FaAnchor, FaWater, FaUmbrellaBeach } from 'react-icons/fa';
 import sindhudurgImage from '../assets/sindhudurg-hero.jpg';
 
@@ -472,7 +473,7 @@ const SindhudurgDetail = () => {
                                     {showMap ? 'HIDE MAP' : 'GET DIRECTIONS'}
                                 </button>
                             </div>
-
+                              <LiveWeather fortName="Sindhudurg" district="Sindhudurg" />
                             {/* Quick Facts */}
                             <div className="bg-royal-gray/60 backdrop-blur-xl border border-white/10 rounded-2xl p-6 relative overflow-hidden">
                                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-50"></div>
