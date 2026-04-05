@@ -1,0 +1,47 @@
+{
+  "name": "Bhudargad Fort",
+  "location": {
+    "district": "Kolhapur",
+    "state": "Maharashtra",
+    "baseVillage": "Bhudargad",
+    "coordinates": { "lat": 16.2833, "lng": 74.2333 },
+    "nearestCity": "Kolhapur (60 km)"
+  },
+  "height_m": 915,
+  "type": "Hill Fort",
+  "description": "Bhudargad is a massive hill fort with extensive ramparts and bastions. It was a key outpost for the Marathas in southern Maharashtra and offers panoramic views of the surrounding region. The fort is mostly in ruins but is a popular destination for trekkers and history buffs.",
+  "trek": {
+    "routes": [
+      {
+        "name": "Bhudargad Village Route",
+        "startPoint": "Bhudargad village",
+        "distance": "3 km",
+        "duration": "2 hours",
+        "difficulty": "Easy to Moderate",
+        "description": "Gradual ascent through fields and forest patches."
+      }
+    ],
+    "bestTime": ["October to February"],
+    "avoidTime": ["Monsoon (slippery)", "Summer (hot)" ]
+  },
+  "landmarks": [
+    { "name": "Ramparts and Bastions", "description": "Extensive fortification walls and bastions, some still intact.", "mustSee": true },
+    { "name": "Main Gate", "description": "Impressive entrance gate with Maratha architecture.", "mustSee": true },
+    { "name": "Viewpoints", "description": "Wide views of the Kolhapur countryside.", "mustSee": true }
+  ],
+  "facilities": {
+    "parking": true,
+    "water": false,
+    "food": false,
+    "network": "Weak signal"
+  },
+  "history": {
+    "builtBy": "Maratha Empire",
+    "significance": "Key outpost for the Marathas in southern Maharashtra, part of the regional defense system."
+  },
+  "reviews": [
+    "The fort is huge and the ramparts are impressive.",
+    "Not much crowd, good for a peaceful trek.",
+    "Carry water and snacks, as there are no facilities on the fort."
+  ]
+}

@@ -64,7 +64,12 @@
   },
 
   "history": {
-    "brief": "Bhamragad Fort has limited documented history and likely served as a minor regional lookout point.",
-    "rulers": ["Local rulers"]
-  }
+    "builtBy": "Unknown (local rulers)",
+    "significance": "Served as a minor regional lookout and refuge in the dense forests of Gadchiroli."
+  },
+  "reviews": [
+    "A true offbeat adventure — the forest trek is beautiful but challenging.",
+    "No facilities, so carry everything you need. Go with a local guide for safety.",
+    "The isolation and natural beauty make it a unique experience for seasoned trekkers."
+  ]
 }

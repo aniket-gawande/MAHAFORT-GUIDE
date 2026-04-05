@@ -1,0 +1,33 @@
+{
+  "name": "Panhalgad (Panhala Town)",
+  "location": {
+    "district": "Kolhapur",
+    "state": "Maharashtra",
+    "nearestCity": "Kolhapur",
+    "coordinates": { "lat": 16.8121, "lng": 74.1097 }
+  },
+  "type": "Historic Town",
+  "description": "Panhala is a historic hill town built around the massive Panhala Fort. It was a key Maratha stronghold and the site of Shivaji Maharaj's famous escape from Siddi Johar. The town is dotted with ancient temples, gateways, and granaries.",
+  "historicalSignificance": "Capital of the Maratha kingdom for a period, site of the siege and escape of Shivaji Maharaj (1660).",
+  "landmarks": [
+    { "name": "Teen Darwaza", "description": "Iconic triple-arched gateway." },
+    { "name": "Andhar Bavdi", "description": "Hidden stepwell used during sieges." },
+    { "name": "Ambarkhana", "description": "Ancient granaries." }
+  ],
+  "facilities": {
+    "parking": true,
+    "water": true,
+    "food": true,
+    "network": "Good signal"
+  },
+  "visitInfo": {
+    "bestTime": "October to March",
+    "timings": "6:00 AM – 8:00 PM",
+    "entryFee": 0
+  },
+  "reviews": [
+    "A living fort town with vibrant history.",
+    "Great for a weekend getaway with family.",
+    "The fort and town are both worth exploring."
+  ]
+}

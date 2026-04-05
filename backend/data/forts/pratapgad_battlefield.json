@@ -1,0 +1,32 @@
+{
+  "name": "Pratapgad Battle Site",
+  "location": {
+    "district": "Satara",
+    "state": "Maharashtra",
+    "nearestVillage": "Pratapgad",
+    "coordinates": { "lat": 17.9236, "lng": 73.5822 }
+  },
+  "type": "Historic Battlefield",
+  "description": "The site of the legendary Battle of Pratapgad (1659), where Chhatrapati Shivaji Maharaj defeated Afzal Khan. The battlefield lies at the base of Pratapgad Fort and is marked by a memorial and the Afzal Khan tomb.",
+  "historicalSignificance": "Turning point in Maratha history, established Shivaji Maharaj as a formidable leader.",
+  "landmarks": [
+    { "name": "Afzal Khan Tomb", "description": "Tomb of the Bijapur general Afzal Khan." },
+    { "name": "Battle Memorial", "description": "Plaque and statues commemorating the battle." }
+  ],
+  "facilities": {
+    "parking": true,
+    "water": false,
+    "food": true,
+    "network": "Good signal"
+  },
+  "visitInfo": {
+    "bestTime": "October to February",
+    "timings": "7:00 AM – 6:00 PM",
+    "entryFee": 0
+  },
+  "reviews": [
+    "Standing here brings history to life!",
+    "The memorial is well maintained.",
+    "Combine with a visit to Pratapgad Fort."
+  ]
+}

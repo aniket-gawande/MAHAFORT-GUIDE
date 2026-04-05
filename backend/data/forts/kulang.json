@@ -1,0 +1,47 @@
+{
+  "name": "Kulang Fort",
+  "location": {
+    "district": "Nashik",
+    "state": "Maharashtra",
+    "baseVillage": "Ambewadi",
+    "coordinates": { "lat": 19.6042, "lng": 73.6581 },
+    "nearestCity": "Igatpuri (55 km)"
+  },
+  "height_m": 1471,
+  "type": "Hill Fort",
+  "description": "Kulang is the third fort in the famous AMK (Alang-Madan-Kulang) circuit. It is known for its massive rock-cut steps, ancient water cisterns, and panoramic views. The trek is long and challenging, best suited for experienced trekkers.",
+  "trek": {
+    "routes": [
+      {
+        "name": "AMK Circuit",
+        "startPoint": "Ambewadi village",
+        "distance": "10-12 km (full circuit)",
+        "duration": "8-12 hours (Kulang only: 4-5 hours)",
+        "difficulty": "Difficult",
+        "description": "Long approach, steep rock-cut steps, and exposed sections. Rope may be required in monsoon."
+      }
+    ],
+    "bestTime": ["October to February"],
+    "avoidTime": ["Monsoon (slippery, dangerous)", "Summer (extreme heat)"]
+  },
+  "landmarks": [
+    { "name": "Rock-cut Steps", "description": "Massive steps carved into the rock, unique to Kulang.", "mustSee": true },
+    { "name": "Water Cisterns", "description": "Ancient cisterns with potable water most of the year.", "mustSee": true },
+    { "name": "Summit Plateau", "description": "Wide summit with views of Alang, Madan, and the Sahyadris.", "mustSee": true }
+  ],
+  "facilities": {
+    "parking": false,
+    "water": true,
+    "food": false,
+    "network": "No signal"
+  },
+  "history": {
+    "builtBy": "Unknown (pre-Shivaji era)",
+    "significance": "Strategic hill fort, part of the AMK circuit, used as a watchtower and refuge."
+  },
+  "reviews": [
+    "Kulang's rock-cut steps are a marvel. The climb is long but rewarding.",
+    "Water is usually available even in summer. The summit is perfect for camping.",
+    "Best done as part of the AMK circuit with experienced trekkers."
+  ]
+}

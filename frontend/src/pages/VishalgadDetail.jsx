@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import VishalgadMap from '../components/VishalgadMap';
+import LiveWeather from '../components/LiveWeather';
 import { FaClock, FaRupeeSign, FaCalendarAlt, FaMapMarkerAlt, FaHistory, FaMonument, FaMountain, FaShieldAlt, FaUtensils, FaExclamationTriangle, FaStar } from 'react-icons/fa';
 import vishalgadImage from '../assets/vishalgad-hero.jpg';
 
@@ -404,7 +405,7 @@ const VishalgadDetail = () => {
                                     {showMap ? 'HIDE MAP' : 'GET DIRECTIONS'}
                                 </button>
                             </div>
-
+                              <LiveWeather fortName="Vishalgad" district="Kolhapur" />
                             {/* Quick Facts Card */}
                             <div className="bg-royal-gray/60 backdrop-blur-xl border border-white/10 rounded-2xl p-6 relative overflow-hidden">
                                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-green-500 to-transparent opacity-50"></div>

@@ -1,0 +1,47 @@
+{
+  "name": "Madangad Fort",
+  "location": {
+    "district": "Nashik",
+    "state": "Maharashtra",
+    "baseVillage": "Ambewadi",
+    "coordinates": { "lat": 19.6017, "lng": 73.6542 },
+    "nearestCity": "Igatpuri (55 km)"
+  },
+  "height_m": 1464,
+  "type": "Hill Fort",
+  "description": "Madangad is the twin of Alang and part of the legendary AMK (Alang-Madan-Kulang) trek. Known for its steep rock patches, exposed traverses, and thrilling climb, Madangad is a favorite among experienced trekkers. The summit offers panoramic views of the Sahyadris.",
+  "trek": {
+    "routes": [
+      {
+        "name": "AMK Circuit",
+        "startPoint": "Ambewadi village",
+        "distance": "10-12 km (full circuit)",
+        "duration": "8-12 hours (Madangad only: 4-5 hours)",
+        "difficulty": "Very Difficult",
+        "description": "Steep rock faces, exposed traverses, and technical climbing. Rope and gear required for some sections."
+      }
+    ],
+    "bestTime": ["October to February"],
+    "avoidTime": ["Monsoon (slippery, dangerous)", "Summer (extreme heat)"]
+  },
+  "landmarks": [
+    { "name": "Summit Plateau", "description": "Narrow summit with breathtaking views of Alang, Kulang, and the Sahyadris.", "mustSee": true },
+    { "name": "Rock Patches", "description": "Steep and exposed rock climbs, highlight of the trek.", "mustSee": true },
+    { "name": "Caves", "description": "Small caves for overnight stay (limited capacity).", "mustSee": true }
+  ],
+  "facilities": {
+    "parking": false,
+    "water": false,
+    "food": false,
+    "network": "No signal"
+  },
+  "history": {
+    "builtBy": "Unknown (pre-Shivaji era)",
+    "significance": "Strategic hill fort, part of the AMK circuit, used as a watchtower and refuge."
+  },
+  "reviews": [
+    "Madangad is the most thrilling climb in the AMK circuit. The rock patch is both scary and exciting!",
+    "Carry ropes and trek with experienced guides. The views are worth every bit of effort.",
+    "Not for beginners. The summit is narrow but the scenery is unmatched."
+  ]
+}

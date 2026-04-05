@@ -1,0 +1,31 @@
+{
+  "name": "Samadhi of Murarbaji Deshpande",
+  "location": {
+    "district": "Raigad",
+    "state": "Maharashtra",
+    "nearestVillage": "Raigadwadi",
+    "coordinates": { "lat": 18.2345, "lng": 73.4418 }
+  },
+  "type": "Memorial Site",
+  "description": "The samadhi (tomb) of Murarbaji Deshpande, the valiant killedar (commander) of Purandar Fort who made a heroic last stand against the Mughal army in 1665. His sacrifice is celebrated in Maratha history.",
+  "historicalSignificance": "Final resting place of Murarbaji Deshpande, hero of the defense of Purandar (1665).",
+  "landmarks": [
+    { "name": "Murarbaji Deshpande Samadhi", "description": "Simple tomb, a symbol of courage and loyalty." }
+  ],
+  "facilities": {
+    "parking": true,
+    "water": false,
+    "food": false,
+    "network": "Good signal"
+  },
+  "visitInfo": {
+    "bestTime": "October to March",
+    "timings": "7:00 AM – 6:00 PM",
+    "entryFee": 0
+  },
+  "reviews": [
+    "A place that inspires bravery.",
+    "The story of Purandar comes alive here.",
+    "Quiet and respectful site."
+  ]
+}

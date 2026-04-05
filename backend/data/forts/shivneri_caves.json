@@ -1,0 +1,32 @@
+{
+  "name": "Shivneri Caves",
+  "location": {
+    "district": "Pune",
+    "state": "Maharashtra",
+    "nearestVillage": "Junnar",
+    "coordinates": { "lat": 19.2056, "lng": 73.8656 }
+  },
+  "type": "Ancient Buddhist Caves",
+  "description": "Shivneri Caves are a group of ancient Buddhist rock-cut caves near the famous Shivneri Fort, birthplace of Chhatrapati Shivaji Maharaj. The caves date back to the 1st century BCE and feature viharas, chaityas, and intricate carvings.",
+  "historicalSignificance": "Important Buddhist site, contemporary with other Deccan cave complexes. Associated with early trade routes and monastic life.",
+  "landmarks": [
+    { "name": "Main Chaitya", "description": "Large prayer hall with stupa." },
+    { "name": "Viharas", "description": "Monastic cells and living quarters." }
+  ],
+  "facilities": {
+    "parking": true,
+    "water": false,
+    "food": false,
+    "network": "Good signal"
+  },
+  "visitInfo": {
+    "bestTime": "November to March",
+    "timings": "8:00 AM – 6:00 PM",
+    "entryFee": 0
+  },
+  "reviews": [
+    "A hidden gem for history and archaeology lovers.",
+    "The caves are peaceful and less crowded than other sites.",
+    "Combine with a visit to Shivneri Fort."
+  ]
+}

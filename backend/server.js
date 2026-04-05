@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-require('dotenv').config();
+require('dotenv').config({ override: true });
 
 const app = express();
 
@@ -34,7 +34,7 @@ if (MONGODB_URI) {
         console.warn('⚠️  Using JSON file-based storage for users instead');
         global.mongoConnected = false;
         try {
-          mongoose.connection.removeAllListeners();
+          // Don't remove listeners to avoid unhandled 'error' events
           await mongoose.disconnect();
         } catch (e) { }
       });

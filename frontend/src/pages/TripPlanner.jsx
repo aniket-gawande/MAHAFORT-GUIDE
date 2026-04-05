@@ -1,17 +1,16 @@
 import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
-import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+import TripWeatherForecast from '../components/TripWeatherForecast';
 import { staticForts } from '../data/staticForts';
 import {
   FaMapMarkerAlt, FaMountain, FaCalendarAlt, FaClock, FaRupeeSign,
-  FaHiking, FaRoute, FaStar, FaPlus, FaTimes, FaChevronRight,
+  FaRoute, FaStar, FaPlus, FaTimes, FaChevronRight,
   FaChevronLeft, FaDownload, FaUsers, FaCloudSun, FaCheckCircle,
-  FaCampground, FaWater, FaFirstAid, FaCamera, FaSun, FaMoon,
-  FaUtensils, FaBus, FaSearch, FaFilter, FaArrowRight, FaArrowDown,
-  FaExchangeAlt, FaInfoCircle, FaMapSigns, FaShieldAlt, FaFlagCheckered
+  FaFirstAid,  FaSun, 
+  FaUtensils, FaBus, FaSearch,  FaArrowDown,
+  FaInfoCircle, FaMapSigns, FaShieldAlt, FaFlagCheckered
 } from 'react-icons/fa';
-import { MdOutlineTravelExplore, MdDirectionsWalk } from 'react-icons/md';
-import { GiCastle, GiMountainRoad, GiBackpack, GiCompass, GiCampfire } from 'react-icons/gi';
+import { GiCastle,  GiBackpack, GiCompass} from 'react-icons/gi';
 import heroBg from '../assets/hero-fort.jpg';
 
 // ──────────────────────────── CONSTANTS  ────────────────────────────
@@ -93,6 +92,7 @@ const TripPlanner = () => {
   const [tripDays, setTripDays] = useState([]);
   const [groupSize, setGroupSize] = useState(2);
   const [season, setSeason] = useState('winter');
+  const [startDate, setStartDate] = useState(() => new Date().toISOString().split('T')[0]);
   const [searchTerm, setSearchTerm] = useState('');
   const [districtFilter, setDistrictFilter] = useState('all');
   const [difficultyFilter, setDifficultyFilter] = useState('all');
@@ -248,23 +248,27 @@ const TripPlanner = () => {
       <Navbar />
 
       {/* ───── HERO BANNER ───── */}
-      <div className="relative pt-24 pb-12 flex flex-col items-center text-center">
-        {/* Very subtle background gradient, no image noise */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#0a0a0a] via-[#080808] to-royal-black"></div>
+      <div className="relative pt-32 pb-24 flex flex-col items-center text-center overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div 
+          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-30"
+          style={{ backgroundImage: `url(${heroBg})`, backgroundAttachment: 'fixed', backgroundPosition: 'center 20%' }}
+        ></div>
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-royal-black/60 via-royal-black/80 to-royal-black"></div>
 
         <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#111] border border-saffron/30 rounded-full mb-6 relative">
-            <GiCompass className="text-saffron text-sm" />
-            <span className="text-saffron font-bold tracking-widest text-[10px] uppercase">Expedition Command Center</span>
-            <div className="absolute inset-0 bg-saffron/5 blur-sm rounded-full -z-10"></div>
+          <div className="inline-flex items-center gap-2 px-5 py-2 bg-black/40 backdrop-blur-md border border-saffron/40 rounded-full mb-8 relative shadow-[0_0_20px_rgba(255,153,51,0.15)]">
+            <GiCompass className="text-saffron text-sm animate-spin-smooth" />
+            <span className="text-saffron font-bold tracking-[0.2em] text-[10px] uppercase">Expedition Command Center</span>
+            <div className="absolute inset-0 bg-saffron/10 blur-md rounded-full -z-10"></div>
           </div>
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-cinematic font-black mb-4 leading-tight tracking-wider">
-            <span className="text-white block">PLAN YOUR</span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-saffron via-yellow-400 to-[#d97c26] block drop-shadow-sm">
+          <h1 className="text-5xl sm:text-7xl md:text-8xl font-cinematic font-black mb-6 leading-none tracking-wider drop-shadow-2xl">
+            <span className="text-white block opacity-95">PLAN YOUR</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-saffron via-yellow-300 to-[#d97c26] block drop-shadow-[0_2px_10px_rgba(255,153,51,0.3)]">
               CONQUEST
             </span>
           </h1>
-          <p className="text-gray-500 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
+          <p className="text-gray-300 text-xs sm:text-sm md:text-base max-w-2xl mx-auto leading-relaxed drop-shadow-md font-medium">
             Chart your course through Maharashtra's legendary forts. Pick your
             targets, plan your days, gear up like a true Mavla, and march into history.
           </p>
@@ -272,29 +276,29 @@ const TripPlanner = () => {
       </div>
 
       {/* ───── STEP PROGRESS BAR ───── */}
-      <div className="relative z-40 bg-royal-black pb-10">
+      <div className="relative z-40 bg-gradient-to-b from-royal-black to-[#1a1a1a] pb-10 border-b border-white/5 shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
         <div className="container mx-auto px-4 sm:px-6">
-          <div className="flex items-center justify-center max-w-4xl mx-auto">
+          <div className="flex items-center justify-center max-w-4xl mx-auto bg-white/5 backdrop-blur-md rounded-2xl py-4 px-6 border border-white/10 shadow-[0_0_20px_rgba(255,153,51,0.05)]">
             {STEPS.map((s, i) => (
               <React.Fragment key={s.id}>
                 <button
                   onClick={() => (i <= step || (i === step + 1 && canProceed)) && setStep(i)}
-                  className={`flex flex-col sm:flex-row items-center gap-1.5 sm:gap-2.5 transition-all duration-300 group cursor-pointer ${i === step ? 'scale-105' : i < step ? 'opacity-80' : 'opacity-40 hover:opacity-70'}`}
+                  className={`flex flex-col sm:flex-row items-center gap-1.5 sm:gap-2.5 transition-all duration-300 group cursor-pointer ${i === step ? 'scale-105' : i < step ? 'opacity-100' : 'opacity-50 hover:opacity-100'}`}
                 >
-                  <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-lg flex items-center justify-center text-sm transition-all duration-300
-                    ${i === step ? 'bg-saffron/10 text-saffron border border-saffron/40 shadow-inner' :
-                      i < step ? 'text-saffron' : 'text-gray-500'}
+                  <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center text-base transition-all duration-300 shadow-lg
+                    ${i === step ? 'bg-saffron text-black border-[3px] border-saffron/40 shadow-[0_0_25px_rgba(255,153,51,0.6)] font-black' :
+                      i < step ? 'bg-saffron/20 text-saffron border border-saffron/50' : 'bg-black/50 text-gray-400 border border-white/10 group-hover:border-white/30'}
                   `}>
-                    {i === 0 && i === step ? <GiCastle size={14} /> : React.cloneElement(s.icon, {size: 14})}
+                    {i === 0 && i === step ? <GiCastle size={16} /> : React.cloneElement(s.icon, {size: i === step ? 16 : 14})}
                   </div>
-                  <span className={`text-[9px] sm:text-[10px] font-bold tracking-[0.15em] uppercase hidden sm:block
-                    ${i === step ? 'text-saffron' : i < step ? 'text-saffron/60' : 'text-gray-500'}`}>
+                  <span className={`text-[10px] sm:text-[11px] font-black tracking-[0.2em] uppercase hidden sm:block drop-shadow-md
+                    ${i === step ? 'text-saffron' : i < step ? 'text-white' : 'text-gray-500 group-hover:text-gray-300'}`}>
                     {s.label}
                   </span>
                 </button>
                 {i < STEPS.length - 1 && (
-                  <div className={`w-6 sm:w-10 h-px mx-1.5 sm:mx-3 transition-all duration-500
-                    ${i < step ? 'bg-saffron/30' : 'bg-white/10'}`}
+                  <div className={`w-6 sm:w-12 h-[2px] mx-1.5 sm:mx-3 transition-all duration-500 rounded-full
+                    ${i < step ? 'bg-saffron shadow-[0_0_10px_rgba(255,153,51,0.5)]' : 'bg-white/10'}`}
                   ></div>
                 )}
               </React.Fragment>
@@ -319,25 +323,25 @@ const TripPlanner = () => {
             </div>
 
             {/* Search & Filter Bar */}
-            <div className="w-full max-w-5xl bg-[#0a0a0a] border border-white/5 rounded-2xl p-2 mb-10 flex flex-col md:flex-row items-center gap-2">
+            <div className="w-full max-w-5xl bg-[#111111]/80 backdrop-blur-xl border border-white/10 rounded-2xl p-2.5 mb-10 flex flex-col md:flex-row items-center gap-3 shadow-2xl relative z-10">
               <div className="flex-1 w-full relative">
-                <FaSearch className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-500" size={14} />
+                <FaSearch className="absolute left-5 top-1/2 -translate-y-1/2 text-saffron opacity-70" size={15} />
                 <input
                   type="text"
-                  placeholder="Search forts by name.."
+                  placeholder="Search majestic forts by name..."
                   value={searchTerm}
                   onChange={e => setSearchTerm(e.target.value)}
-                  className="w-full bg-transparent border-none py-3 pl-12 pr-4 text-gray-300 placeholder-gray-600 focus:outline-none text-xs"
+                  className="w-full bg-transparent border-none py-3.5 pl-14 pr-4 text-gray-200 placeholder-gray-500 focus:outline-none text-sm font-medium tracking-wide"
                 />
               </div>
               <div className="flex gap-2 w-full md:w-auto p-1">
                 <select value={districtFilter} onChange={e => setDistrictFilter(e.target.value)}
-                  className="bg-[#111] border border-white/5 rounded-xl py-2.5 px-6 text-gray-400 appearance-none cursor-pointer focus:outline-none text-[10px] font-bold tracking-widest uppercase hover:bg-[#1a1a1a] transition-colors">
+                  className="bg-[#1a1a1a] border border-white/5 rounded-xl py-3 px-6 text-gray-300 appearance-none cursor-pointer focus:outline-none text-[11px] font-bold tracking-widest uppercase hover:bg-[#222] hover:border-white/10 transition-all focus:border-saffron">
                   <option value="all">All Districts</option>
                   {districts.filter(d => d !== 'all').map(d => <option key={d} value={d}>{d}</option>)}
                 </select>
                 <select value={difficultyFilter} onChange={e => setDifficultyFilter(e.target.value)}
-                  className="bg-[#111] border border-white/5 rounded-xl py-2.5 px-6 text-gray-400 appearance-none cursor-pointer focus:outline-none text-[10px] font-bold tracking-widest uppercase hover:bg-[#1a1a1a] transition-colors">
+                  className="bg-[#1a1a1a] border border-white/5 rounded-xl py-3 px-6 text-gray-300 appearance-none cursor-pointer focus:outline-none text-[11px] font-bold tracking-widest uppercase hover:bg-[#222] hover:border-white/10 transition-all focus:border-saffron">
                   <option value="all">All Levels</option>
                   <option value="Easy">Easy</option>
                   <option value="Moderate">Moderate</option>
@@ -352,24 +356,24 @@ const TripPlanner = () => {
                 const isSelected = selectedForts.find(f => f._id === fort._id);
                 // Difficulty pill styles for the image overlay
                 const diffStyles = {
-                  Easy: 'bg-emerald-500/80 text-white',
-                  Moderate: 'bg-yellow-500/80 text-white',
-                  Hard: 'bg-red-500/80 text-white',
-                  Difficult: 'bg-red-500/80 text-white'
+                  Easy: 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30',
+                  Moderate: 'bg-amber-500/20 text-amber-400 border border-amber-500/30',
+                  Hard: 'bg-red-500/20 text-red-400 border border-red-500/30',
+                  Difficult: 'bg-red-500/20 text-red-400 border border-red-500/30'
                 };
                 const dcClass = diffStyles[fort.difficulty] || diffStyles.Moderate;
                 const fortImage = fort.images && fort.images.length > 0 ? fort.images[0] : 'https://images.unsplash.com/photo-1587474260584-136574528ed5?w=500';
 
                 return (
-                  <div key={fort._id} className={`group flex flex-col overflow-hidden rounded-2xl bg-[#0F0F0F] border transition-all duration-300 ${isSelected ? 'border-saffron/60 shadow-[0_0_15px_rgba(255,153,51,0.1)]' : 'border-white/5 hover:border-white/10 hover:shadow-xl'}`}>
+                  <div key={fort._id} className={`group flex flex-col overflow-hidden rounded-2xl bg-gradient-to-b from-[#181818] to-[#0A0A0A] border transition-all duration-300 hover:-translate-y-1.5 ${isSelected ? 'border-saffron shadow-[0_5px_25px_rgba(255,153,51,0.15)] scale-[1.02]' : 'border-white/5 hover:border-white/20 hover:shadow-2xl hover:shadow-white/5'}`}>
                     {/* Top Image */}
-                    <div className="relative h-44 w-full overflow-hidden">
-                      <img src={fortImage} alt={fort.name} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-transform duration-700 group-hover:scale-105" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0F0F0F] via-transparent to-transparent opacity-90"></div>
+                    <div className="relative h-48 w-full overflow-hidden">
+                      <img src={fortImage} alt={fort.name} className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-transform duration-1000 group-hover:scale-110" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent opacity-90"></div>
                       
                       {/* Difficulty Badge */}
                       <div className="absolute top-4 left-4">
-                        <span className={`px-2.5 py-1 rounded-md text-[9px] font-bold uppercase tracking-wider backdrop-blur-sm ${dcClass}`}>
+                        <span className={`px-3 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-widest backdrop-blur-md shadow-lg ${dcClass}`}>
                           {fort.difficulty}
                         </span>
                       </div>
@@ -377,27 +381,28 @@ const TripPlanner = () => {
                       {/* Plus / Check Button */}
                       <button 
                         onClick={() => toggleFort(fort)} 
-                        className={`absolute top-4 right-4 w-7 h-7 rounded-full flex items-center justify-center backdrop-blur-md transition-all border ${isSelected ? 'bg-saffron text-black border-saffron' : 'bg-black/40 text-white hover:bg-black/60 border-white/20'}`}
+                        className={`absolute top-4 right-4 w-9 h-9 rounded-full flex items-center justify-center backdrop-blur-md transition-all border-2 shadow-lg ${isSelected ? 'bg-saffron text-black border-saffron scale-110' : 'bg-black/50 text-white hover:bg-black hover:border-saffron/50 border-white/20 group-hover:scale-105'}`}
                       >
-                        {isSelected ? <FaCheckCircle size={12} /> : <FaPlus size={10} />}
+                        {isSelected ? <FaCheckCircle size={16} /> : <FaPlus size={12} />}
                       </button>
                     </div>
 
                     {/* Content */}
-                    <div className="p-5 flex flex-col flex-1 pb-6">
-                      <div className="flex items-center gap-1.5 text-saffron text-[10px] font-bold tracking-[0.15em] uppercase mb-1">
-                        <FaMapMarkerAlt size={10} /> {fort.location?.district || 'PUNE'}
+                    <div className="p-5 flex flex-col flex-1 pb-6 relative">
+                      <div className="flex items-center gap-2 text-saffron text-[10px] font-black tracking-[0.2em] uppercase mb-2 drop-shadow-sm">
+                        <FaMapMarkerAlt size={12} className="opacity-80" /> {fort.location?.district || 'PUNE'}
                       </div>
-                      <h3 className="text-white font-cinematic font-bold text-sm uppercase tracking-wide mb-2 truncate">
+                      <h3 className="text-white font-cinematic font-extrabold text-lg uppercase tracking-wide mb-2 truncate group-hover:text-saffron transition-colors">
                         {fort.name}
                       </h3>
-                      <p className="text-gray-500 text-[10px] leading-relaxed line-clamp-2 mb-4 flex-1">
+                      <p className="text-gray-400 text-[11px] leading-relaxed line-clamp-2 mb-5 flex-1 font-light">
                         {fort.description || fort.historicalSignificance || 'A historic fort offering spectacular views and a glimpse into the Maratha empire.'}
                       </p>
                       
-                      <div className="flex items-center gap-3 text-gray-500 text-[9px] font-bold tracking-wider">
-                        <span className="flex items-center gap-1 text-[#C47D3B]">▲ {fort.altitude || '1312 m'}</span>
-                        <span className="flex items-center gap-1 text-[#C47D3B]">★ {fort.rating || '4.6'}</span>
+                      <div className="flex items-center gap-4 text-gray-300 text-[10px] font-bold tracking-widest bg-white/5 py-2.5 px-3 rounded-xl border border-white/5">
+                        <span className="flex items-center gap-1.5"><FaMountain className="text-orange-400" size={12} /> {fort.altitude || '1312 m'}</span>
+                        <div className="w-px h-3 bg-white/20"></div>
+                        <span className="flex items-center gap-1.5"><FaStar className="text-yellow-400" size={12} /> {fort.rating || '4.6'}</span>
                       </div>
                     </div>
                   </div>
@@ -441,6 +446,42 @@ const TripPlanner = () => {
               <p className="text-gray-400 max-w-xl mx-auto">We've optimized the route. Customize your day-wise plan below.</p>
             </div>
 
+            {/* Weather & Date Section */}
+            <div className="bg-[#111] border border-white/5 rounded-2xl p-6 mb-10 text-center">
+              <h3 className="text-sm font-bold text-saffron tracking-wider uppercase mb-4 flex justify-center items-center gap-2">
+                <FaCalendarAlt /> Trip Start Date
+              </h3>
+              <input
+                type="date"
+                value={startDate}
+                min={new Date().toISOString().split("T")[0]}
+                onChange={(e) => setStartDate(e.target.value)}
+                onClick={(e) => e.target.showPicker && e.target.showPicker()}
+                className="bg-royal-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-saffron focus:outline-none mb-6 cursor-pointer w-full max-w-[250px]"
+              />
+              {selectedForts.length > 0 && (
+                <div className="mt-4 border-t border-white/5 pt-6 w-full">
+                  <h4 className="text-xs text-gray-400 font-bold uppercase tracking-widest mb-6">Weather Forecasts for Selected Forts</h4>
+                  <div className="flex flex-wrap justify-center gap-6 text-left">
+                    {selectedForts.map(fort => (
+                      <div key={fort._id} className="w-full max-w-sm">
+                        <div className="text-center mb-3">
+                          <span className="text-xs font-bold text-saffron uppercase border border-saffron/20 bg-saffron/10 px-4 py-1.5 rounded-full inline-block">
+                            {fort.name}
+                          </span>
+                        </div>
+                        <TripWeatherForecast 
+                          date={startDate} 
+                          fortName={fort.name} 
+                          district={fort.location?.district} 
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
             {/* Season & Group Selector */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
               {/* Season */}
@@ -453,45 +494,46 @@ const TripPlanner = () => {
                     <button key={s.id} onClick={() => setSeason(s.id)}
                       className={`p-3 rounded-xl text-center transition-all border
                         ${season === s.id
-                          ? 'bg-saffron/10 border-saffron/50 shadow-[0_0_15px_rgba(255,153,51,0.15)]'
-                          : 'bg-white/[0.02] border-white/5 hover:border-saffron/20'}
+                          ? 'bg-saffron/10 border-saffron/50 shadow-[0_0_15px_rgba(255,153,51,0.15)] scale-105'
+                          : 'bg-white/[0.02] border-white/5 hover:border-saffron/20 hover:bg-white/5'}
                       `}>
-                      <span className="text-2xl block mb-1">{s.icon}</span>
+                      <span className="text-2xl block mb-2 transition-transform duration-300 group-hover:scale-110">{s.icon}</span>
                       <span className={`text-[10px] font-bold tracking-wider uppercase block ${season === s.id ? 'text-saffron' : 'text-gray-400'}`}>
                         {s.id}
                       </span>
                     </button>
                   ))}
                 </div>
-                <p className="text-gray-500 text-xs mt-3 flex items-center gap-2">
+                <p className="text-gray-400 text-xs mt-4 flex items-center justify-center gap-2 bg-black/40 p-3 rounded-xl border border-white/5">
                   <FaInfoCircle className="text-saffron" /> {SEASONS.find(s => s.id === season)?.tip}
                 </p>
               </div>
 
               {/* Group Size */}
-              <div className="bg-white/[0.02] border border-white/5 rounded-2xl p-6">
-                <h3 className="text-sm font-bold text-saffron tracking-wider uppercase mb-4 flex items-center gap-2">
-                  <FaUsers /> Group Size
+              <div className="bg-white/[0.02] border border-white/5 rounded-2xl p-6 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-saffron/5 rounded-full blur-[40px] pointer-events-none"></div>
+                <h3 className="text-sm font-bold text-saffron tracking-wider uppercase mb-6 flex items-center gap-2 relative z-10">
+                  <FaUsers /> Expedition Group Size
                 </h3>
-                <div className="flex items-center gap-4">
+                <div className="flex items-center justify-between gap-4 mb-6 relative z-10">
                   <button onClick={() => setGroupSize(Math.max(1, groupSize - 1))}
-                    className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 text-white hover:border-saffron/50 hover:text-saffron transition-all text-xl font-bold">
+                    className="w-12 h-12 rounded-xl bg-black/50 border border-white/10 text-white hover:border-saffron hover:text-black hover:bg-saffron transition-all text-2xl font-light flex items-center justify-center shadow-lg">
                     –
                   </button>
                   <div className="flex-1 text-center">
-                    <div className="text-5xl font-cinematic font-black text-saffron">{groupSize}</div>
-                    <div className="text-gray-500 text-xs font-bold tracking-wider uppercase mt-1">Warriors</div>
+                    <div className="text-6xl font-cinematic font-black text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]">{groupSize}</div>
+                    <div className="text-saffron/80 text-[10px] font-black tracking-[0.3em] uppercase mt-1">Warriors</div>
                   </div>
                   <button onClick={() => setGroupSize(Math.min(20, groupSize + 1))}
-                    className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 text-white hover:border-saffron/50 hover:text-saffron transition-all text-xl font-bold">
+                    className="w-12 h-12 rounded-xl bg-black/50 border border-white/10 text-white hover:border-saffron hover:text-black hover:bg-saffron transition-all text-xl font-light flex items-center justify-center shadow-lg">
                     +
                   </button>
                 </div>
-                <div className="flex justify-center gap-2 mt-4">
+                <div className="flex justify-center gap-2 relative z-10">
                   {[1, 2, 4, 6, 10].map(n => (
                     <button key={n} onClick={() => setGroupSize(n)}
-                      className={`px-3 py-1 rounded-lg text-xs font-bold transition-all
-                        ${groupSize === n ? 'bg-saffron/20 text-saffron border border-saffron/30' : 'bg-white/5 text-gray-500 hover:text-white border border-white/5'}`}>
+                      className={`w-10 h-8 rounded-lg text-xs font-bold transition-all
+                        ${groupSize === n ? 'bg-saffron text-black shadow-[0_0_10px_rgba(196,125,59,0.4)] scale-110' : 'bg-black/40 text-gray-400 hover:text-white hover:bg-white/10 border border-white/5'}`}>
                       {n}
                     </button>
                   ))}
@@ -499,37 +541,77 @@ const TripPlanner = () => {
               </div>
             </div>
 
-            {/* Day Cards */}
-            <div className="space-y-6">
-              {tripDays.map((day, dayIdx) => (
-                <div key={day.id} className="bg-white/[0.02] border border-white/5 rounded-2xl overflow-hidden hover:border-saffron/10 transition-all">
-                  {/* Day Header */}
-                  <div className="flex items-center justify-between p-5 border-b border-white/5 bg-white/[0.01]">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-saffron/10 border border-saffron/30 flex items-center justify-center">
-                        <span className="text-saffron font-cinematic font-black text-lg">{dayIdx + 1}</span>
+            {/* Trek Difficulty Warnings Generator */}
+            <div className="mb-10 w-full">
+              {(() => {
+                const hasHard = selectedForts.some(f => f.difficulty === 'Hard' || f.difficulty === 'Difficult');
+                const maxAlt = Math.max(...selectedForts.map(f => parseInt(f.altitude) || 0));
+                
+                if (hasHard || maxAlt > 1200) {
+                  return (
+                    <div className="bg-red-500/10 border border-red-500/30 rounded-2xl p-5 flex items-start gap-4">
+                      <div className="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0 border border-red-500/20">
+                        <FaShieldAlt className="text-red-400 text-lg" />
                       </div>
                       <div>
-                        <h3 className="font-cinematic font-bold text-white">Day {dayIdx + 1}</h3>
-                        <p className="text-gray-500 text-xs">{day.forts.length} fort{day.forts.length > 1 ? 's' : ''} planned</p>
+                        <h4 className="text-red-400 font-bold uppercase tracking-widest text-xs mb-1.5 flex items-center gap-2">
+                          High Difficulty Alert
+                        </h4>
+                        <p className="text-gray-300 text-xs leading-relaxed">
+                          Your selected itinerary includes {hasHard ? "Hard-level treks" : "High-altitude forts"}. 
+                          Ensure all {groupSize} warriors are physically fit. Bring climbing ropes, high-grip trekking shoes, and at least 3L of water per person. {season === 'monsoon' ? 'Watch out for extremely slippery rock cut steps during monsoon!' : ''}
+                        </p>
                       </div>
                     </div>
-                    <div className="flex items-center gap-3">
-                      <FaClock className="text-gray-600" size={12} />
-                      <input
-                        type="time"
-                        value={day.startTime}
-                        onChange={e => updateDayTime(dayIdx, e.target.value)}
-                        className="bg-royal-black/50 border border-white/10 rounded-lg px-3 py-1.5 text-sm text-white focus:border-saffron focus:outline-none"
-                      />
-                    </div>
+                  );
+                }
+                return null;
+              })()}
+            </div>
+
+            {/* Day Cards (Interactive Timeline) */}
+            <div className="space-y-8 relative">
+              {/* Timeline background spine that runs behind all days */}
+              <div className="absolute left-[39px] top-6 bottom-10 w-0.5 bg-gradient-to-b from-saffron/50 via-saffron/20 to-transparent hidden md:block"></div>
+
+              {tripDays.map((day, dayIdx) => (
+                <div key={day.id} className="relative z-10 w-full pl-0 md:pl-20">
+                  
+                  {/* Timeline Badge (Only visible on MD+) */}
+                  <div className="absolute left-[24px] top-6 w-8 h-8 rounded-full bg-royal-black border-2 border-saffron shadow-[0_0_15px_rgba(255,153,51,0.5)] z-20 flex items-center justify-center hidden md:flex">
+                    <span className="text-saffron font-bold text-xs font-cinematic">{dayIdx + 1}</span>
                   </div>
 
-                  {/* Forts in day */}
-                  <div className="p-5 space-y-4">
-                    {day.forts.map((fort, fi) => {
-                      const dc = DIFFICULTY_COLORS[fort.difficulty] || DIFFICULTY_COLORS.Moderate;
-                      return (
+                  <div className="bg-[#0a0a0a] border border-white/10 rounded-3xl overflow-hidden hover:border-saffron/30 transition-all duration-500 shadow-[0_5px_20px_rgba(0,0,0,0.5)]">
+                    {/* Day Header */}
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between p-6 border-b border-white/5 bg-gradient-to-r from-saffron/5 to-transparent relative overflow-hidden">
+                      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10 pointer-events-none"></div>
+                      <div className="flex items-center gap-5 relative z-10 mb-4 sm:mb-0">
+                        <div className="md:hidden w-12 h-12 rounded-2xl bg-saffron/10 border border-saffron/30 flex items-center justify-center shadow-inner">
+                          <span className="text-saffron font-cinematic font-black text-xl">{dayIdx + 1}</span>
+                        </div>
+                        <div>
+                          <h3 className="font-cinematic font-black text-white text-xl tracking-widest uppercase mb-1">Day {dayIdx + 1}</h3>
+                          <p className="text-saffron/80 text-[10px] font-bold tracking-[0.2em] uppercase">{day.forts.length} Objective{day.forts.length > 1 ? 's' : ''}</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-3 relative z-10 bg-black/50 p-2 border border-white/10 rounded-xl">
+                        <FaClock className="text-saffron pl-1" size={16} />
+                        <span className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Start Time</span>
+                        <input
+                          type="time"
+                          value={day.startTime}
+                          onChange={e => updateDayTime(dayIdx, e.target.value)}
+                          className="bg-transparent border-none text-sm text-white font-bold focus:outline-none cursor-pointer"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Forts in day */}
+                    <div className="p-6 sm:p-8 space-y-6 bg-gradient-to-b from-white/[0.02] to-transparent">
+                      {day.forts.map((fort, fi) => {
+                        const dc = DIFFICULTY_COLORS[fort.difficulty] || DIFFICULTY_COLORS.Moderate;
+                        return (
                         <div key={fort._id} className="flex items-start gap-4 group/fort">
                           {/* Timeline dot */}
                           <div className="flex flex-col items-center pt-1">
@@ -579,7 +661,7 @@ const TripPlanner = () => {
                     })}
 
                     {/* Day Notes */}
-                    <div className="pt-2">
+                    <div className="pt-2 pl-8 pb-4">
                       <textarea
                         value={day.notes}
                         onChange={e => updateDayNotes(dayIdx, e.target.value)}
@@ -590,10 +672,20 @@ const TripPlanner = () => {
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-        )}
+
+          <div className="mt-10 text-center w-full relative z-10">
+            <button 
+              onClick={nextStep}
+              className="bg-saffron text-black px-10 py-4 rounded-xl font-bold tracking-widest uppercase hover:bg-white hover:scale-105 transition-all border border-saffron/50 shadow-[0_0_20px_rgba(255,153,51,0.3)]">
+              Save & Proceed to Route
+            </button>
+          </div>
+          
+        </div>
+      )}
 
         {/* ╔═══════════════════ STEP 2: ROUTE & BUDGET ═══════════════════╗ */}
         {step === 2 && (
@@ -959,3 +1051,4 @@ const PackingItem = ({ item }) => {
 };
 
 export default TripPlanner;
+

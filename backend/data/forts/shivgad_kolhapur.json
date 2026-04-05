@@ -1,0 +1,46 @@
+{
+  "name": "Shivgad Fort (Kolhapur)",
+  "location": {
+    "district": "Kolhapur",
+    "state": "Maharashtra",
+    "baseVillage": "Shivgadwadi",
+    "coordinates": { "lat": 16.3667, "lng": 74.0833 },
+    "nearestCity": "Kolhapur (60 km)"
+  },
+  "height_m": 900,
+  "type": "Hill Fort",
+  "description": "Shivgad is a lesser-known but historically significant fort in the Kolhapur region. It played a strategic role in the Maratha defense system and offers scenic views of the surrounding hills. The fort is mostly in ruins but is a peaceful destination for history enthusiasts and trekkers.",
+  "trek": {
+    "routes": [
+      {
+        "name": "Shivgadwadi Route",
+        "startPoint": "Shivgadwadi village",
+        "distance": "2.5 km",
+        "duration": "1.5-2 hours",
+        "difficulty": "Easy to Moderate",
+        "description": "Gentle climb through forested slopes and open meadows."
+      }
+    ],
+    "bestTime": ["October to February"],
+    "avoidTime": ["Monsoon (slippery)", "Summer (hot)" ]
+  },
+  "landmarks": [
+    { "name": "Ruined Bastions", "description": "Remnants of the fort's defensive walls and bastions.", "mustSee": true },
+    { "name": "Viewpoints", "description": "Scenic views of the Kolhapur hills and valleys.", "mustSee": true }
+  ],
+  "facilities": {
+    "parking": true,
+    "water": false,
+    "food": false,
+    "network": "Weak signal"
+  },
+  "history": {
+    "builtBy": "Maratha Empire",
+    "significance": "Strategic outpost in the Kolhapur region, part of the Maratha defense network."
+  },
+  "reviews": [
+    "Quiet and offbeat fort, perfect for a peaceful trek.",
+    "Not much remains except the bastions, but the views are great.",
+    "Carry your own water and snacks."
+  ]
+}

@@ -4,6 +4,7 @@ import SinhagadMap from '../components/Sinhagadmap';
 import CrowdStatusBadge from '../components/CrowdStatusBadge';
 import DownloadButton from '../components/DownloadButton';
 import EmergencyButton from '../components/EmergencyButton';
+import LiveWeather from '../components/LiveWeather';
 import sinhagad_hero from '../assets/sinhagad-hero.jpg';
 import { FaClock, FaRupeeSign, FaCalendarAlt, FaMapMarkerAlt, FaHistory, FaMonument, FaMountain, FaShieldAlt, FaUtensils, FaExclamationTriangle, FaStar, FaHiking, FaBus, FaInfoCircle } from 'react-icons/fa';
 
@@ -508,7 +509,7 @@ const SinhagadDetail = () => {
                                     {showMap ? 'HIDE MAP' : 'GET DIRECTIONS'}
                                 </button>
                             </div>
-
+                              <LiveWeather fortName="Sinhagad" district="Pune" />
                             {/* Quick Facts */}
                             <div className="bg-royal-gray/60 backdrop-blur-xl border border-white/10 rounded-2xl p-6 relative overflow-hidden">
                                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent opacity-50"></div>

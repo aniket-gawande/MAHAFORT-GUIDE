@@ -1,0 +1,31 @@
+{
+  "name": "Samadhi of Hambirrao Mohite",
+  "location": {
+    "district": "Satara",
+    "state": "Maharashtra",
+    "nearestVillage": "Vaduj",
+    "coordinates": { "lat": 17.6092, "lng": 74.5281 }
+  },
+  "type": "Memorial Site",
+  "description": "The samadhi (tomb) of Hambirrao Mohite, the legendary Senapati (commander-in-chief) of the Maratha Empire under Shivaji Maharaj and Sambhaji Maharaj. Renowned for his military genius and loyalty, Hambirrao played a crucial role in Maratha victories.",
+  "historicalSignificance": "Final resting place of Hambirrao Mohite, a key Maratha general and statesman.",
+  "landmarks": [
+    { "name": "Hambirrao Mohite Samadhi", "description": "Simple but revered tomb, visited by Maratha history enthusiasts." }
+  ],
+  "facilities": {
+    "parking": true,
+    "water": false,
+    "food": false,
+    "network": "Weak signal"
+  },
+  "visitInfo": {
+    "bestTime": "October to March",
+    "timings": "6:00 AM – 6:00 PM",
+    "entryFee": 0
+  },
+  "reviews": [
+    "A place of pride for Marathas.",
+    "Quiet and respectful atmosphere.",
+    "Important for those interested in Maratha history."
+  ]
+}

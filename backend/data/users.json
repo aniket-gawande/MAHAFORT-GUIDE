@@ -56,5 +56,17 @@
     "authProvider": "google",
     "fortsVisited": [],
     "createdAt": "2026-03-28T05:24:36.571Z"
+  },
+  {
+    "_id": "mnm26wa1s8iw6c76",
+    "username": "athsrv",
+    "email": "invictusi71715@gmaul.com",
+    "password": "$2b$12$TrP36Ggr8.4y2N.ZsynpPOcaQOsD.9UCXxWvdbuwwmLY9cZTPbAIC",
+    "avatar": "",
+    "role": "warrior",
+    "googleId": null,
+    "authProvider": "local",
+    "fortsVisited": [],
+    "createdAt": "2026-04-05T17:52:20.713Z"
   }
 ]
