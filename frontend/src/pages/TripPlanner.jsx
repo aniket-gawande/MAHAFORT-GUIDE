@@ -278,29 +278,29 @@ const TripPlanner = () => {
       </div>
 
       {/* ───── STEP PROGRESS BAR ───── */}
-      <div className="relative z-40 bg-royal-black pb-10">
+      <div className="relative z-40 bg-gradient-to-b from-royal-black to-[#1a1a1a] pb-10 border-b border-white/5 shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
         <div className="container mx-auto px-4 sm:px-6">
-          <div className="flex items-center justify-center max-w-4xl mx-auto">
+          <div className="flex items-center justify-center max-w-4xl mx-auto bg-white/5 backdrop-blur-md rounded-2xl py-4 px-6 border border-white/10 shadow-[0_0_20px_rgba(255,153,51,0.05)]">
             {STEPS.map((s, i) => (
               <React.Fragment key={s.id}>
                 <button
                   onClick={() => (i <= step || (i === step + 1 && canProceed)) && setStep(i)}
-                  className={`flex flex-col sm:flex-row items-center gap-1.5 sm:gap-2.5 transition-all duration-300 group cursor-pointer ${i === step ? 'scale-105' : i < step ? 'opacity-80' : 'opacity-40 hover:opacity-70'}`}
+                  className={`flex flex-col sm:flex-row items-center gap-1.5 sm:gap-2.5 transition-all duration-300 group cursor-pointer ${i === step ? 'scale-105' : i < step ? 'opacity-100' : 'opacity-50 hover:opacity-100'}`}
                 >
-                  <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-lg flex items-center justify-center text-sm transition-all duration-300
-                    ${i === step ? 'bg-saffron/10 text-saffron border border-saffron/40 shadow-inner' :
-                      i < step ? 'text-saffron' : 'text-gray-500'}
+                  <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center text-base transition-all duration-300 shadow-lg
+                    ${i === step ? 'bg-saffron text-black border-[3px] border-saffron/40 shadow-[0_0_25px_rgba(255,153,51,0.6)] font-black' :
+                      i < step ? 'bg-saffron/20 text-saffron border border-saffron/50' : 'bg-black/50 text-gray-400 border border-white/10 group-hover:border-white/30'}
                   `}>
-                    {i === 0 && i === step ? <GiCastle size={14} /> : React.cloneElement(s.icon, {size: 14})}
+                    {i === 0 && i === step ? <GiCastle size={16} /> : React.cloneElement(s.icon, {size: i === step ? 16 : 14})}
                   </div>
-                  <span className={`text-[9px] sm:text-[10px] font-bold tracking-[0.15em] uppercase hidden sm:block
-                    ${i === step ? 'text-saffron' : i < step ? 'text-saffron/60' : 'text-gray-500'}`}>
+                  <span className={`text-[10px] sm:text-[11px] font-black tracking-[0.2em] uppercase hidden sm:block drop-shadow-md
+                    ${i === step ? 'text-saffron' : i < step ? 'text-white' : 'text-gray-500 group-hover:text-gray-300'}`}>
                     {s.label}
                   </span>
                 </button>
                 {i < STEPS.length - 1 && (
-                  <div className={`w-6 sm:w-10 h-px mx-1.5 sm:mx-3 transition-all duration-500
-                    ${i < step ? 'bg-saffron/30' : 'bg-white/10'}`}
+                  <div className={`w-6 sm:w-12 h-[2px] mx-1.5 sm:mx-3 transition-all duration-500 rounded-full
+                    ${i < step ? 'bg-saffron shadow-[0_0_10px_rgba(255,153,51,0.5)]' : 'bg-white/10'}`}
                   ></div>
                 )}
               </React.Fragment>

@@ -13,6 +13,7 @@ import heroBg from '../assets/hero-fort.jpg';
 const Home = () => {
   const [forts, setForts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [visibleCount, setVisibleCount] = useState(8);
 
   useEffect(() => {
     fetchForts();
@@ -174,10 +175,24 @@ const Home = () => {
               <p className="mt-4 text-saffron font-cinematic animate-pulse">Summoning History...</p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {featuredForts.map((fort) => (
-                <FortCard key={fort._id} fort={fort} />
-              ))}
+            <div className="flex flex-col flex-wrap animate-fade-in-up">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {featuredForts.slice(0, visibleCount).map((fort) => (
+                  <FortCard key={fort._id} fort={fort} />
+                ))}
+              </div>
+              
+              {/* Load More Button */}
+              {featuredForts.length > visibleCount && (
+                <div className="text-center mt-10">
+                  <button 
+                    onClick={() => setVisibleCount(prev => prev + 4)}
+                    className="inline-flex items-center gap-2 px-6 py-2.5 bg-black border border-white/10 rounded-full text-gray-300 font-bold text-[10px] tracking-[0.2em] uppercase hover:bg-[#111] hover:border-saffron/50 hover:text-white transition-all shadow-md group"
+                  >
+                    View More Forts <FaChevronRight className="text-saffron group-hover:translate-y-0.5 group-hover:rotate-90 transition-transform" />
+                  </button>
+                </div>
+              )}
             </div>
           )}
 
