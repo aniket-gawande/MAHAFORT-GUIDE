@@ -250,23 +250,27 @@ const TripPlanner = () => {
       <Navbar />
 
       {/* ───── HERO BANNER ───── */}
-      <div className="relative pt-24 pb-12 flex flex-col items-center text-center">
-        {/* Very subtle background gradient, no image noise */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#0a0a0a] via-[#080808] to-royal-black"></div>
+      <div className="relative pt-32 pb-24 flex flex-col items-center text-center overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div 
+          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-30"
+          style={{ backgroundImage: `url(${heroBg})`, backgroundAttachment: 'fixed', backgroundPosition: 'center 20%' }}
+        ></div>
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-royal-black/60 via-royal-black/80 to-royal-black"></div>
 
         <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#111] border border-saffron/30 rounded-full mb-6 relative">
-            <GiCompass className="text-saffron text-sm" />
-            <span className="text-saffron font-bold tracking-widest text-[10px] uppercase">Expedition Command Center</span>
-            <div className="absolute inset-0 bg-saffron/5 blur-sm rounded-full -z-10"></div>
+          <div className="inline-flex items-center gap-2 px-5 py-2 bg-black/40 backdrop-blur-md border border-saffron/40 rounded-full mb-8 relative shadow-[0_0_20px_rgba(255,153,51,0.15)]">
+            <GiCompass className="text-saffron text-sm animate-spin-smooth" />
+            <span className="text-saffron font-bold tracking-[0.2em] text-[10px] uppercase">Expedition Command Center</span>
+            <div className="absolute inset-0 bg-saffron/10 blur-md rounded-full -z-10"></div>
           </div>
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-cinematic font-black mb-4 leading-tight tracking-wider">
-            <span className="text-white block">PLAN YOUR</span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-saffron via-yellow-400 to-[#d97c26] block drop-shadow-sm">
+          <h1 className="text-5xl sm:text-7xl md:text-8xl font-cinematic font-black mb-6 leading-none tracking-wider drop-shadow-2xl">
+            <span className="text-white block opacity-95">PLAN YOUR</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-saffron via-yellow-300 to-[#d97c26] block drop-shadow-[0_2px_10px_rgba(255,153,51,0.3)]">
               CONQUEST
             </span>
           </h1>
-          <p className="text-gray-500 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
+          <p className="text-gray-300 text-xs sm:text-sm md:text-base max-w-2xl mx-auto leading-relaxed drop-shadow-md font-medium">
             Chart your course through Maharashtra's legendary forts. Pick your
             targets, plan your days, gear up like a true Mavla, and march into history.
           </p>
