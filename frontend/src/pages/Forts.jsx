@@ -207,9 +207,14 @@ const Forts = () => {
       const searchMatch = fort.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
                           fort.location.district?.toLowerCase().includes(searchTerm.toLowerCase());
       
-      const diffMatch = difficultyFilter === 'all' || 
-                        fort.difficulty === difficultyFilter || 
-                        (difficultyFilter === 'Hard' && fort.difficulty === 'Difficult');
+const fortDifficulty = fort.difficulty || fort.trek?.difficulty || fort.trek?.routes?.[0]?.difficulty || 'Moderate';
+      const normalizedDifficulty = fortDifficulty.toLowerCase();
+      const filterDiff = difficultyFilter.toLowerCase();
+      
+      const diffMatch = filterDiff === 'all' || 
+                        normalizedDifficulty.includes(filterDiff) || 
+                        (filterDiff === 'hard' && normalizedDifficulty.includes('difficult')) ||
+                        (filterDiff === 'medium' && normalizedDifficulty.includes('moderate'));
                         
       const districtMatch = !selectedDistrict || fort.location.district?.toLowerCase() === selectedDistrict.toLowerCase();
       

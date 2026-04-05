@@ -20,9 +20,10 @@ const getFortRoute = (fort) => {
 };
 
 const FortCard = ({ fort }) => {
-  const defaultImage = 'https://images.unsplash.com/photo-1587474260584-136574528ed5?w=500';
   const { isAuthenticated } = useContext(AuthContext);
 
+  // Generate dynamic seed image based on fort name if array is empty
+  const defaultImage = `https://picsum.photos/seed/${encodeURIComponent(fort.name)}/500/300`;
   const fortImage = fort.images && fort.images.length > 0 ? fort.images[0] : defaultImage;
   const description = fort.description || 'Explore the rich history, challenging terrain, and the legacy of the Maratha Empire at this magnificent fort.';
 
