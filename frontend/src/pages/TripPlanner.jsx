@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+import TripWeatherForecast from '../components/TripWeatherForecast';
 import { staticForts } from '../data/staticForts';
 import {
   FaMapMarkerAlt, FaMountain, FaCalendarAlt, FaClock, FaRupeeSign,
@@ -93,6 +94,7 @@ const TripPlanner = () => {
   const [tripDays, setTripDays] = useState([]);
   const [groupSize, setGroupSize] = useState(2);
   const [season, setSeason] = useState('winter');
+  const [startDate, setStartDate] = useState(() => new Date().toISOString().split('T')[0]);
   const [searchTerm, setSearchTerm] = useState('');
   const [districtFilter, setDistrictFilter] = useState('all');
   const [difficultyFilter, setDifficultyFilter] = useState('all');
@@ -959,3 +961,4 @@ const PackingItem = ({ item }) => {
 };
 
 export default TripPlanner;
+
