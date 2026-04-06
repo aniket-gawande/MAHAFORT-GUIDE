@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { FaTimes, FaPaperPlane, FaFortAwesome } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import bahirjiImg from '../assets/bahirji.jpg';
 
 // ──────────────────────────────────────────────────────────────────────────
 // 🏰  बहिर्जी नाईक — The Fort Knowledge Chatbot (Gemini AI Powered)
@@ -186,16 +187,22 @@ const BahirjiChatbot = () => {
               width: '46px',
               height: '46px',
               borderRadius: '14px',
-              background: 'linear-gradient(135deg, #FF9933 0%, #cc7a29 100%)',
+              overflow: 'hidden',
+              background: '#000',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              fontSize: '22px',
               boxShadow: '0 0 20px rgba(255, 153, 51, 0.4)',
               flexShrink: 0,
+              padding: 0,
+              border: 'none',
             }}
           >
-            ⚔️
+            <img
+              src={bahirjiImg}
+              alt="Bahirji Naik"
+              style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block', border: 'none', margin: 0, padding: 0 }}
+            />
           </div>
           <div style={{ flex: 1 }}>
             <h3
@@ -299,30 +306,30 @@ const BahirjiChatbot = () => {
                   background:
                     msg.type === 'user'
                       ? 'linear-gradient(135deg, #FF9933 0%, #cc7a29 100%)'
-                      : 'rgba(255, 255, 255, 0.05)',
-                  border:
-                    msg.type === 'user'
-                      ? 'none'
-                      : '1px solid rgba(255, 255, 255, 0.08)',
-                  color: msg.type === 'user' ? '#000' : '#e5e5e5',
-                  fontSize: '13px',
-                  lineHeight: '1.6',
-                  fontFamily: '"Montserrat", sans-serif',
+                      : 'linear-gradient(135deg, #18120a 0%, #2a1800 100%)',
+                  color: msg.type === 'user' ? '#18120a' : '#FF9933',
+                  fontFamily: 'inherit',
+                  fontSize: '15px',
+                  fontWeight: 500,
+                  marginBottom: '2px',
                   boxShadow:
                     msg.type === 'user'
-                      ? '0 4px 15px rgba(255, 153, 51, 0.3)'
-                      : '0 2px 8px rgba(0, 0, 0, 0.2)',
+                      ? '0 2px 12px rgba(255,153,51,0.10)'
+                      : '0 2px 12px rgba(255,153,51,0.07)',
+                  wordBreak: 'break-word',
+                  whiteSpace: 'pre-line',
+                  position: 'relative',
                 }}
                 dangerouslySetInnerHTML={{ __html: formatText(msg.text) }}
               />
-
-              {/* Timestamp */}
               <span
                 style={{
                   fontSize: '10px',
-                  color: '#555',
-                  marginTop: '4px',
-                  padding: '0 4px',
+                  color: '#888',
+                  marginTop: '2px',
+                  alignSelf: msg.type === 'user' ? 'flex-end' : 'flex-start',
+                  fontFamily: 'monospace',
+                  opacity: 0.7,
                 }}
               >
                 {formatTime(msg.timestamp)}
@@ -569,7 +576,11 @@ const BahirjiChatbot = () => {
         {isOpen ? (
           <FaTimes size={22} />
         ) : (
-          <FaFortAwesome size={26} />
+          <img
+            src={bahirjiImg}
+            alt="Bahirji Naik"
+            style={{ width: 26, height: 26, objectFit: 'cover', objectPosition: 'center', display: 'block', border: 'none', margin: 0, padding: 0 }}
+          />
         )}
 
         {/* Unread Badge */}

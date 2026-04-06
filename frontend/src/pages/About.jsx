@@ -15,6 +15,7 @@ import chart1 from '../assets/Aniket.png';
 import chart2 from '../assets/Athrav.png';
 import chart3 from '../assets/Nishtha.png';
 import ashuImg from '../assets/ashu.jpeg';
+import mentorImg from '../assets/mentor.jpeg';
 // import chart4 from '../assets/IMG-20260327-WA0008.jpg';
 
 /* ─── Animated Counter Hook ─── */
@@ -428,6 +429,48 @@ const About = () => {
                 <TeamCard member={member} />
               </FadeInSection>
             ))}
+          </div>
+          {/* Mentor Section */}
+          <div className="mt-20 flex flex-col items-center justify-center">
+                        {/* Mentor Section Header */}
+                        <div className="text-center mb-10 sm:mb-12">
+                          <p className="text-saffron font-cinematic text-xs sm:text-sm tracking-[0.3em] uppercase mb-3">The Guide</p>
+                          <h2 className="text-3xl sm:text-4xl md:text-5xl font-cinematic font-bold text-white mb-5">
+                            Meet Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-saffron to-orange-400">Mentor</span>
+                          </h2>
+                          <div className="flex items-center justify-center gap-2 mb-5">
+                            <div className="h-[3px] w-6 bg-saffron/30 rounded-full"></div>
+                            <div className="h-[3px] w-12 bg-saffron rounded-full"></div>
+                            <div className="h-[3px] w-6 bg-saffron/30 rounded-full"></div>
+                          </div>
+                          <p className="text-sm sm:text-base text-gray-400 max-w-xl mx-auto">
+                            Guiding us with expertise, vision, and encouragement throughout our journey.
+                          </p>
+                        </div>
+            <div className="bg-white/[0.04] border border-white/[0.08] rounded-2xl overflow-hidden shadow-lg max-w-2xl w-full flex flex-col sm:flex-row items-stretch">
+              <div className="flex-shrink-0 w-full sm:w-64 h-64 sm:h-auto sm:min-h-full bg-black flex items-center justify-center p-0">
+                <img
+                  src={mentorImg}
+                  alt="Dr. Harsha A. Bhute"
+                  className="w-full h-full object-contain object-center rounded-none"
+                  style={{ display: 'block', height: '100%', width: '100%', objectFit: 'contain', objectPosition: 'center', background: '#000' }}
+                />
+              </div>
+              <div className="p-6 flex-1 flex flex-col items-center justify-center text-center">
+                <h3 className="text-lg sm:text-xl font-cinematic font-bold text-white mb-1">Dr. Harsha A. Bhute</h3>
+                <p className="text-xs sm:text-sm text-saffron/80 font-bold uppercase tracking-wider mb-4">Associate Professor, Dept. of Information Technology</p>
+                <div className="space-y-2 text-gray-300 text-sm sm:text-base">
+                  <div>Dept. of Computer Engineering,<br/>PCCoE, Nigdi, Pune – 411044</div>
+                  <div className="flex items-center justify-center gap-2"><span className="font-bold">📞</span> <span>+91 94228 44610</span></div>
+                  <div className="flex items-center justify-center gap-2"><span className="font-bold">✉️</span> <span>harsha.bhute@pccoepune.org</span></div>
+                  <div className="flex items-center justify-center gap-2">
+                    <span className="font-bold">🔗</span>
+                    <a href="https://linkedin.com/in/dr-harsha-bhute" target="_blank" rel="noopener noreferrer" className="text-saffron hover:underline break-all">linkedin.com/in/dr-harsha-bhute</a>
+                  </div>
+                </div>
+                <p className="text-xs text-gray-500 mt-4">Reach out through any of the channels above</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
