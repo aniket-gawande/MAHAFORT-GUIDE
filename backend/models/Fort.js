@@ -19,48 +19,60 @@ const fortSchema = new mongoose.Schema({
   },
   description: {
     type: String,
-    required: true
+    required: false
   },
-  history: String,
-  
+  history: {
+    type: mongoose.Schema.Types.Mixed
+  },
+
   visitInfo: {
-    entryFee: Number,
-    timings: String,
-    bestSeason: [String],
-    timeRequired: String,
-    difficulty: {
-      type: String,
-      enum: ['Easy', 'Moderate', 'Hard'],
-      default: 'Moderate'
-    }
+    type: mongoose.Schema.Types.Mixed
   },
-  
+
   trekDetails: {
-    routes: [{
-      name: String,
-      distance: String,
-      duration: String,
-      difficulty: String,
-      description: String
-    }]
+    type: mongoose.Schema.Types.Mixed
   },
   
+  trek: {
+    type: mongoose.Schema.Types.Mixed
+  },
+
   facilities: {
-    parking: { type: Boolean, default: false },
-    ropeway: { type: Boolean, default: false },
-    washroom: { type: Boolean, default: false },
-    mobileNetwork: String,
-    drinkingWater: { type: Boolean, default: false }
+    type: mongoose.Schema.Types.Mixed
   },
-  
-  nearbyFood: [{
-    name: String,
-    type: String,
-    distance: String,
-    avgCost: String,
-    contact: String
-  }],
-  
+
+  googleMaps: {
+    type: mongoose.Schema.Types.Mixed
+  },
+
+  landmarks: {
+    type: mongoose.Schema.Types.Mixed
+  },
+
+  food: {
+    type: mongoose.Schema.Types.Mixed
+  },
+
+  nearbyFood: {
+    type: mongoose.Schema.Types.Mixed
+  },
+
+  accommodation: {
+    type: mongoose.Schema.Types.Mixed
+  },
+
+  budget: {
+    type: mongoose.Schema.Types.Mixed
+  },
+
+  reviewsSummary: {
+    type: mongoose.Schema.Types.Mixed
+  },
+
+  safety: {
+    type: mongoose.Schema.Types.Mixed
+  },
+
   nearbyStays: [{
     name: String,
     type: String,

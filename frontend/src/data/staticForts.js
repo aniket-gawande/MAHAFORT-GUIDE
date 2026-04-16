@@ -66,6 +66,29 @@ import chandangadImg from '../assets/chandangad.png';
 import pavangadImg from '../assets/pavangad.png';
 import bhorgiriImg from '../assets/bhorgiri.png';
 import solapurBhuikotImg from '../assets/solapur_bhuikot.png';
+// ─── Existing assets that were not imported ───
+import revdandaImg from '../assets/revdanda.png';
+import markandeyImg from '../assets/markandey.png';
+import lalingImg from '../assets/lailang.png';
+import kandharImg from '../assets/kandhar.png';
+import udgirImg from '../assets/udgir.png';
+import hatgadImg from '../assets/halgad.png';
+// ─── Newly generated fort images ───
+import songadImg from '../assets/songad.png';
+import arnalaNewImg from '../assets/arnala_new.png';
+import kelveImg from '../assets/kelve.png';
+import underiImg from '../assets/underi.png';
+import bankotImg from '../assets/bankot.png';
+import jaigadImg from '../assets/jaigad.png';
+import achalaImg from '../assets/achala.png';
+import toranmalImg from '../assets/toranmal.png';
+import kanhergarhImg from '../assets/kanhergarh.png';
+import pisolgadImg from '../assets/pisolgad.png';
+import ausaImg from '../assets/ausa.png';
+import dharurImg from '../assets/dharur.png';
+import ambadImg from '../assets/ambad.png';
+import parbhaniImg from '../assets/parbhani.png';
+import mahurImg from '../assets/mahur.png';
 
 // Helper to assign fallback images with limited repetition
 const fallbackImages = [
@@ -1214,7 +1237,7 @@ export const staticForts = [
         difficulty: 'Easy',
         type: 'Hill Fort',
         description: 'Songad Fort is a lesser-known hill fort located in the dense forest region of Kolhapur near the Goa border. It served primarily as a watchtower fort and offers a peaceful trekking experience with scenic views of valleys and forest landscapes.',
-        images: [getNextFallbackImage()],
+        images: [songadImg],
         rating: 4.0,
         visitors: 1500,
         crowdStatus: 'low',
@@ -1344,7 +1367,7 @@ export const staticForts = [
         difficulty: 'Easy',
         type: 'Sea Fort',
         description: 'Arnala Fort is a coastal sea fort located on an island off the coast of Virar. Built by the Portuguese and later captured by the Marathas, the fort is surrounded by the Arabian Sea and is accessible via a short boat ride.',
-        images: [getNextFallbackImage()],
+        images: [arnalaNewImg],
         rating: 4.2,
         visitors: 5000,
         crowdStatus: 'moderate',
@@ -1365,7 +1388,7 @@ export const staticForts = [
         difficulty: 'Easy',
         type: 'Land Fort',
         description: 'Kelve Fort is a coastal fort located near Kelve Beach in Palghar district. Now mostly in ruins, it offers scenic views of the Arabian Sea and is a quiet, less crowded historical site.',
-        images: [getNextFallbackImage()],
+        images: [kelveImg],
         rating: 3.8,
         visitors: 3000,
         crowdStatus: 'low',
@@ -1386,7 +1409,7 @@ export const staticForts = [
         difficulty: 'Moderate',
         type: 'Sea Fort',
         description: 'Underi Fort is a sea fort located near Alibaug, built by the Siddis and later contested by the Marathas. Situated on a small island, it is less accessible and less visited compared to nearby forts like Khanderi.',
-        images: [getNextFallbackImage()],
+        images: [underiImg],
         rating: 4.0,
         visitors: 1500,
         crowdStatus: 'low',
@@ -1409,7 +1432,7 @@ export const staticForts = [
         difficulty: 'Easy',
         type: 'Sea Fort',
         description: 'Revdanda Fort is a historic coastal fort located at the mouth of the Kundalika river. Built by the Portuguese, it stretches along the shoreline and features massive walls, bastions, and ruins blending into the village landscape.',
-        images: [getNextFallbackImage()],
+        images: [revdandaImg],
         rating: 4.1,
         visitors: 4000,
         crowdStatus: 'low',
@@ -1430,7 +1453,7 @@ export const staticForts = [
         difficulty: 'Easy',
         type: 'Sea Fort',
         description: 'Bankot Fort, also known as Himmatgad, is a coastal fort situated at the mouth of the Savitri river. It offers commanding views of the river and Arabian Sea and was an important strategic point for controlling maritime trade routes.',
-        images: [getNextFallbackImage()],
+        images: [bankotImg],
         rating: 4.0,
         visitors: 2500,
         crowdStatus: 'low',
@@ -1451,7 +1474,7 @@ export const staticForts = [
         difficulty: 'Easy',
         type: 'Sea Fort',
         description: 'Jaigad Fort is a well-preserved sea fort located at the entrance of the Shastri river. Built to control maritime activities, the fort offers spectacular views of the sea and nearby lighthouse.',
-        images: [getNextFallbackImage()],
+        images: [jaigadImg],
         rating: 4.3,
         visitors: 5000,
         crowdStatus: 'moderate',
@@ -1474,7 +1497,7 @@ export const staticForts = [
         difficulty: 'Difficult',
         type: 'Hill Fort',
         description: 'Achala Fort is a lesser-known hill fort in the Baglan region of Nashik district, located near the famous Salher and Mulher forts. It is a remote and rugged trek offering scenic views and a peaceful experience away from crowded routes.',
-        images: [getNextFallbackImage()],
+        images: [achalaImg],
         rating: 4.1,
         visitors: 800,
         crowdStatus: 'low',
@@ -1495,7 +1518,7 @@ export const staticForts = [
         difficulty: 'Moderate',
         type: 'Hill Fort',
         description: 'Markandey Fort is a lesser-known hill fort located near Mulher Fort in the Baglan region of Nashik. It offers a peaceful trekking experience with panoramic views of nearby forts and valleys.',
-        images: [getNextFallbackImage()],
+        images: [markandeyImg],
         rating: 4.0,
         visitors: 700,
         crowdStatus: 'low',
@@ -1516,7 +1539,7 @@ export const staticForts = [
         difficulty: 'Easy',
         type: 'Hill Fort',
         description: 'Hatgad Fort is a historic hill fort located near the Maharashtra-Gujarat border close to Saputara. Known for its easy accessibility and scenic surroundings, it offers a short trek with impressive views of the Dang forests and nearby hills.',
-        images: [getNextFallbackImage()],
+        images: [hatgadImg],
         rating: 4.2,
         visitors: 3000,
         crowdStatus: 'moderate',
@@ -1537,7 +1560,7 @@ export const staticForts = [
         difficulty: 'Easy',
         type: 'Hill Fort',
         description: 'Laling Fort is a historic hill fort located near Dhule city, overlooking the Mumbai-Agra highway. It is known for its strategic position and easy accessibility, making it a popular short trek destination.',
-        images: [getNextFallbackImage()],
+        images: [lalingImg],
         rating: 4.0,
         visitors: 2500,
         crowdStatus: 'low',
@@ -1558,7 +1581,7 @@ export const staticForts = [
         difficulty: 'Easy',
         type: 'Hill Station',
         description: 'Toranmal is a scenic hill station in Nandurbar district, known for its cool climate, viewpoints, and lakes. A popular tourist destination in northern Maharashtra offering nature trails and panoramic Satpuda range views.',
-        images: [getNextFallbackImage()],
+        images: [toranmalImg],
         rating: 4.3,
         visitors: 5000,
         crowdStatus: 'moderate',
@@ -1581,7 +1604,7 @@ export const staticForts = [
         difficulty: 'Moderate',
         type: 'Hill Fort',
         description: 'Kanhergarh is a lesser-known hill fort in Dhule district, located in a remote region of Khandesh. It offers a quiet trekking experience with natural surroundings and minimal crowd.',
-        images: [getNextFallbackImage()],
+        images: [kanhergarhImg],
         rating: 3.8,
         visitors: 400,
         crowdStatus: 'low',
@@ -1602,7 +1625,7 @@ export const staticForts = [
         difficulty: 'Difficult',
         type: 'Hill Fort',
         description: 'Pisolgad is a remote hill fort in Jalgaon district, known for its rugged terrain and isolation. It is ideal for trekkers seeking an offbeat experience.',
-        images: [getNextFallbackImage()],
+        images: [pisolgadImg],
         rating: 3.7,
         visitors: 200,
         crowdStatus: 'low',
@@ -1623,7 +1646,7 @@ export const staticForts = [
         difficulty: 'Easy',
         type: 'Land Fort',
         description: 'Ausa Fort is a historic land fort in Latur district, known for its strong fortifications, bastions, and Islamic architectural influence. It is an important example of Deccan-era military construction.',
-        images: [getNextFallbackImage()],
+        images: [ausaImg],
         rating: 4.1,
         visitors: 4000,
         crowdStatus: 'moderate',
@@ -1646,7 +1669,7 @@ export const staticForts = [
         difficulty: 'Easy',
         type: 'Land Fort',
         description: 'Kandhar Fort is a historic land fort in Nanded district, known for its massive walls, deep moat, and strong defensive architecture. It is one of the prominent forts of the Marathwada region.',
-        images: [getNextFallbackImage()],
+        images: [kandharImg],
         rating: 4.2,
         visitors: 5000,
         crowdStatus: 'moderate',
@@ -1667,7 +1690,7 @@ export const staticForts = [
         difficulty: 'Easy',
         type: 'Land Fort',
         description: 'Dharur Fort is a well-known land fort in Beed district, featuring strong stone walls, bastions, and historic gateways. It represents classic Deccan military architecture.',
-        images: [getNextFallbackImage()],
+        images: [dharurImg],
         rating: 4.0,
         visitors: 3500,
         crowdStatus: 'moderate',
@@ -1688,7 +1711,7 @@ export const staticForts = [
         difficulty: 'Easy',
         type: 'Land Fort',
         description: 'Ambad Fort is a land fort in Jalna district known for its strong fortification and historical structures. Though partially in ruins, it reflects the architectural style of Deccan-era forts.',
-        images: [getNextFallbackImage()],
+        images: [ambadImg],
         rating: 3.9,
         visitors: 2500,
         crowdStatus: 'low',
@@ -1711,7 +1734,7 @@ export const staticForts = [
         difficulty: 'Easy',
         type: 'Land Fort',
         description: 'Udgir Fort is a historically significant land fort in Latur district, known for its massive fortifications, underground passages, and role in the Battle of Udgir. It is one of the most important forts in Marathwada.',
-        images: [getNextFallbackImage()],
+        images: [udgirImg],
         rating: 4.3,
         visitors: 6000,
         crowdStatus: 'moderate',
@@ -1732,7 +1755,7 @@ export const staticForts = [
         difficulty: 'Easy',
         type: 'Land Fort',
         description: 'Parbhani does not have a prominent surviving fort structure today. However, the region historically had small defensive structures and administrative centers during medieval times.',
-        images: [getNextFallbackImage()],
+        images: [parbhaniImg],
         rating: 3.2,
         visitors: 500,
         crowdStatus: 'low',
@@ -1753,7 +1776,7 @@ export const staticForts = [
         difficulty: 'Moderate',
         type: 'Hill Fort',
         description: 'Mahur Fort is a historic hill fort located in Nanded district, known for its religious importance and scenic hilltop views. It is situated near the famous Renuka Devi temple.',
-        images: [],
+        images: [mahurImg],
         rating: 4.2,
         visitors: 8000,
         crowdStatus: 'moderate',
