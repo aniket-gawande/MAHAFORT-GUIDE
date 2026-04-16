@@ -447,28 +447,50 @@ const About = () => {
                             Guiding us with expertise, vision, and encouragement throughout our journey.
                           </p>
                         </div>
-            <div className="bg-white/[0.04] border border-white/[0.08] rounded-2xl overflow-hidden shadow-lg max-w-2xl w-full flex flex-col sm:flex-row items-stretch">
-              <div className="flex-shrink-0 w-full sm:w-64 h-64 sm:h-auto sm:min-h-full bg-black flex items-center justify-center p-0">
+            <div className="bg-gradient-to-r from-white/[0.02] to-white/[0.06] border border-white/[0.1] rounded-[2rem] overflow-hidden shadow-2xl hover:shadow-[0_15px_40px_rgba(255,153,51,0.15)] hover:border-saffron/30 transition-all duration-500 max-w-4xl max-h-[1000px] w-full flex flex-col sm:flex-row items-stretch relative">
+              <div className="absolute inset-0 bg-gradient-to-tr from-saffron/10 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+              {/* Image Side */}
+              <div className="flex-shrink-0 w-full sm:w-2/5 h-80 sm:h-auto sm:min-h-[380px] bg-royal-black flex items-center justify-center p-0 relative overflow-hidden group">
+                <div className="absolute inset-0 bg-saffron/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 mix-blend-overlay"></div>
                 <img
                   src={mentorImg}
                   alt="Dr. Harsha A. Bhute"
-                  className="w-full h-full object-contain object-center rounded-none"
-                  style={{ display: 'block', height: '100%', width: '100%', objectFit: 'contain', objectPosition: 'center', background: '#000' }}
+                  className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                 />
+                {/* Gradient side fade into text area (on desktop) */}
+                <div className="hidden sm:block absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-royal-black to-transparent z-20"></div>
+                <div className="sm:hidden absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-royal-black to-transparent z-20"></div>
               </div>
-              <div className="p-6 flex-1 flex flex-col items-center justify-center text-center">
-                <h3 className="text-lg sm:text-xl font-cinematic font-bold text-white mb-1">Dr. Harsha A. Bhute</h3>
-                <p className="text-xs sm:text-sm text-saffron/80 font-bold uppercase tracking-wider mb-4">Associate Professor, Dept. of Information Technology</p>
-                <div className="space-y-2 text-gray-300 text-sm sm:text-base">
-                  <div>Dept. of Computer Engineering,<br/>PCCoE, Nigdi, Pune – 411044</div>
-                  <div className="flex items-center justify-center gap-2"><span className="font-bold">📞</span> <span>+91 94228 44610</span></div>
-                  <div className="flex items-center justify-center gap-2"><span className="font-bold">✉️</span> <span>harsha.bhute@pccoepune.org</span></div>
-                  <div className="flex items-center justify-center gap-2">
-                    <span className="font-bold">🔗</span>
+              
+              {/* Content Side */}
+              <div className="p-8 sm:p-12 flex-1 flex flex-col items-start justify-center text-left bg-royal-black relative z-30">
+                <h3 className="text-2xl sm:text-3xl font-cinematic font-bold text-white mb-2">Dr. <span className="text-saffron">Harsha A. Bhute</span></h3>
+                <div className="w-16 h-1 bg-gradient-to-r from-saffron to-orange-500 rounded-full mb-4"></div>
+                
+                <p className="text-sm sm:text-base text-gray-300 font-bold uppercase tracking-wide mb-6">
+                  Associate Professor
+                  <br/>
+                  <span className="text-xs text-saffron font-medium">Dept. of Information Technology, PCCoE</span>
+                </p>
+                
+                <div className="space-y-4 text-gray-400 text-sm sm:text-base w-full">
+                  <div className="flex items-start gap-4 hover:text-white transition-colors duration-300 group">
+                    <span className="bg-white/5 p-2 rounded-lg text-saffron group-hover:bg-saffron/20 transition-colors">📍</span> 
+                    <span className="mt-1">Dept. of Information Technology,<br/>PCCoE, Nigdi, Pune – 411044</span>
+                  </div>
+                  <div className="flex items-center gap-4 hover:text-white transition-colors duration-300 group">
+                    <span className="bg-white/5 p-2 rounded-lg text-saffron group-hover:bg-saffron/20 transition-colors">📞</span> 
+                    <span>+91 94228 44610</span>
+                  </div>
+                  <div className="flex items-center gap-4 hover:text-white transition-colors duration-300 group">
+                    <span className="bg-white/5 p-2 rounded-lg text-saffron group-hover:bg-saffron/20 transition-colors">✉️</span> 
+                    <span>harsha.bhute@pccoepune.org</span>
+                  </div>
+                  <div className="flex items-center gap-4 hover:text-white transition-colors duration-300 group">
+                    <span className="bg-white/5 p-2 rounded-lg text-saffron group-hover:bg-saffron/20 transition-colors">🔗</span>
                     <a href="https://linkedin.com/in/dr-harsha-bhute" target="_blank" rel="noopener noreferrer" className="text-saffron hover:underline break-all">linkedin.com/in/dr-harsha-bhute</a>
                   </div>
                 </div>
-                <p className="text-xs text-gray-500 mt-4">Reach out through any of the channels above</p>
               </div>
             </div>
           </div>
@@ -611,25 +633,28 @@ const FeatureCard = ({ feature, index }) => (
 
 /* ─── Team Card ─── */
 const TeamCard = ({ member }) => (
-  <div className="group bg-white/[0.04] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-saffron/40 transition-all duration-500 hover:-translate-y-2 shadow-lg hover:shadow-[0_15px_40px_rgba(255,153,51,0.12)]">
+  <div className="flex flex-col h-full group bg-white/[0.04] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-saffron/40 transition-all duration-500 hover:-translate-y-2 shadow-lg hover:shadow-[0_15px_40px_rgba(255,153,51,0.12)]">
     {/* Image area */}
-    <div className="h-56 sm:h-64 overflow-hidden relative">
+    <div className="h-56 sm:h-64 overflow-hidden relative flex-shrink-0">
       <img
         src={member.image}
         alt={member.name}
         className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
       />
       {/* Multi-layer overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-royal-black via-royal-black/40 to-transparent opacity-80"></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-saffron/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-royal-black/90 via-royal-black/20 to-transparent opacity-90"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-saffron/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
     </div>
 
     {/* Info area */}
-    <div className="p-5 sm:p-6 text-center relative z-10 -mt-14 sm:-mt-16 pt-16 sm:pt-20 bg-gradient-to-t from-royal-black via-royal-black to-transparent">
-      <h3 className="text-base sm:text-lg font-cinematic font-bold text-white mb-1 group-hover:text-saffron transition-colors duration-300">{member.name}</h3>
-      <p className="text-xs sm:text-sm text-saffron/80 font-bold uppercase tracking-wider mb-4">{member.role}</p>
+    <div className="flex-1 flex flex-col items-center justify-between p-5 pt-0 bg-royal-black relative z-10">
+      {/* Name & Role slightly offset upwards for integration with image */}
+      <div className="flex flex-col items-center -mt-6 sm:-mt-8 w-full">
+        <h3 className="text-base sm:text-lg font-cinematic font-bold text-white mb-2 group-hover:text-saffron transition-colors duration-300 drop-shadow-md">{member.name}</h3>
+        <p className="text-xs sm:text-sm text-saffron font-bold uppercase tracking-wider mb-4 px-2 min-h-[40px] flex items-center text-center leading-snug">{member.role}</p>
+      </div>
 
-      <div className="flex justify-center gap-3">
+      <div className="mt-auto flex justify-center gap-3 w-full pb-2">
         <SocialLink icon={FaLinkedin} href={member.linkedin} />
         <SocialLink icon={FaGithub} href={member.github} />
       </div>

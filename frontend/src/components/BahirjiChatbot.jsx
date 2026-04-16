@@ -579,7 +579,7 @@ const BahirjiChatbot = () => {
           <img
             src={bahirjiImg}
             alt="Bahirji Naik"
-            style={{ width: 26, height: 26, objectFit: 'cover', objectPosition: 'center', display: 'block', border: 'none', margin: 0, padding: 0 }}
+            style={{ width: '100%', height: '100%', borderRadius: '18px', objectFit: 'cover', objectPosition: 'center', display: 'block', border: 'none', margin: 0, padding: 0 }}
           />
         )}
 

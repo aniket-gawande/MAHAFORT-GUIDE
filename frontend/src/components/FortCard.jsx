@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { FaMapMarkerAlt, FaHiking, FaClock } from 'react-icons/fa';
 import { AuthContext } from '../context/AuthContext';
 
+import defaultFortImg from '../assets/default-fort.webp';
+
 // Route mapping for forts with dedicated detail pages
 const DETAIL_PAGE_ROUTES = {
   sinhagad: '/sinhagad-itinerary',
@@ -23,9 +25,23 @@ const FortCard = ({ fort }) => {
   const { isAuthenticated } = useContext(AuthContext);
 
   // Generate dynamic seed image based on fort name if array is empty
-  const defaultImage = `https://picsum.photos/seed/${encodeURIComponent(fort.name)}/500/300`;
+  const defaultImage = defaultFortImg;
   const fortImage = fort.images && fort.images.length > 0 ? fort.images[0] : defaultImage;
+
   const description = fort.description || 'Explore the rich history, challenging terrain, and the legacy of the Maratha Empire at this magnificent fort.';
+
+  const fortDifficulty = fort.difficulty || fort.trek?.difficulty || fort.trek?.routes?.[0]?.difficulty || 'Moderate';
+  
+  const getDynamicDuration = (difficulty) => {
+    const diff = (difficulty || '').toLowerCase();
+    if (diff.includes('easy')) return '1 - 2 Hours';
+    if (diff.includes('moderate')) return '3 - 4 Hours';
+    if (diff.includes('hard') || diff.includes('difficult')) return '5 - 7 Hours';
+    return '2 - 3 Hours';
+  };
+
+  const fortDuration = fort.timeToVisit || fort.trek?.time || fort.trek?.routes?.[0]?.time || getDynamicDuration(fortDifficulty);
+
 
   return (
     <div className="group relative flex flex-col w-full h-full overflow-hidden rounded-2xl bg-[#0a0a0a] border border-white/5 hover:border-saffron/30 transition-all duration-500 shadow-[0_4px_20px_rgba(0,0,0,0.4)] hover:shadow-[0_10px_30px_rgba(196,125,59,0.15)] hover:-translate-y-2">
@@ -67,11 +83,11 @@ const FortCard = ({ fort }) => {
           <div className="flex items-center justify-between text-gray-400 text-xs font-bold mb-6 pt-4 border-t border-white/5">
             <div className="flex items-center gap-2 group-hover:text-white transition-colors">
               <FaHiking className="text-saffron/80" size={14} />
-              <span className="uppercase text-[10px] tracking-widest">{fort.difficulty || fort.trek?.difficulty || fort.trek?.routes?.[0]?.difficulty || 'Moderate'}</span>
+              <span className="uppercase text-[10px] tracking-widest">{fortDifficulty}</span>
             </div>
             <div className="flex items-center gap-2 group-hover:text-white transition-colors">
               <FaClock className="text-saffron/80" size={12} />
-              <span className="uppercase text-[10px] tracking-widest">{fort.timeToVisit || fort.trek?.time || fort.trek?.routes?.[0]?.time || '2 - 3 Hours'}</span>
+              <span className="uppercase text-[10px] tracking-widest">{fortDuration}</span>
             </div>
           </div>
 

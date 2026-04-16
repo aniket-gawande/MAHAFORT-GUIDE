@@ -595,22 +595,34 @@ const TripPlanner = () => {
                           <p className="text-saffron/80 text-[10px] font-bold tracking-[0.2em] uppercase">{day.forts.length} Objective{day.forts.length > 1 ? 's' : ''}</p>
                         </div>
                       </div>
-                      <div className="flex items-center gap-3 relative z-10 bg-black/50 p-2 border border-white/10 rounded-xl">
-                        <FaClock className="text-saffron pl-1" size={16} />
-                        <span className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Start Time</span>
+                      <label className="flex items-center gap-3 relative z-10 bg-black/50 hover:bg-white/5 p-2 px-3 border border-white/10 hover:border-saffron/40 rounded-xl cursor-pointer group transition-all duration-300 shadow-[0_0_15px_rgba(0,0,0,0.5)]">
+                        <FaClock className="text-saffron group-hover:scale-110 transition-transform duration-300" size={16} />
+                        <span className="text-[10px] text-gray-400 group-hover:text-gray-200 font-bold uppercase tracking-widest transition-colors duration-300">Start Time</span>
                         <input
                           type="time"
                           value={day.startTime}
                           onChange={e => updateDayTime(dayIdx, e.target.value)}
-                          className="bg-transparent border-none text-sm text-white font-bold focus:outline-none cursor-pointer"
+                          className="bg-transparent border-none text-sm text-saffron font-bold focus:outline-none cursor-pointer p-0 m-0"
+                          style={{ colorScheme: 'dark' }}
                         />
-                      </div>
+                      </label>
                     </div>
 
                     {/* Forts in day */}
                     <div className="p-6 sm:p-8 space-y-6 bg-gradient-to-b from-white/[0.02] to-transparent">
                       {day.forts.map((fort, fi) => {
                         const dc = DIFFICULTY_COLORS[fort.difficulty] || DIFFICULTY_COLORS.Moderate;
+
+                        // Predict time based on day start time (Assuming ~4 hours duration per fort: travel + trek + explore)
+                        const rawTime = day.startTime || "06:00";
+                        const [hours, minutes] = rawTime.split(':').map(Number);
+                        const totalMinutes = (hours * 60) + minutes + (fi * 240);
+                        const h = Math.floor(totalMinutes / 60) % 24;
+                        const m = totalMinutes % 60;
+                        const period = h >= 12 ? 'PM' : 'AM';
+                        const displayH = h % 12 || 12;
+                        const predictedTime = `${String(displayH).padStart(2, '0')}:${String(m).padStart(2, '0')} ${period}`;
+
                         return (
                         <div key={fort._id} className="flex items-start gap-4 group/fort">
                           {/* Timeline dot */}
@@ -621,19 +633,27 @@ const TripPlanner = () => {
 
                           {/* Fort card */}
                           <div className="flex-1 bg-white/[0.02] border border-white/5 rounded-xl overflow-hidden group-hover/fort:border-saffron/20 transition-all">
-                            <div className="flex">
+                            <div className="flex flex-col sm:flex-row">
                               {/* Fort thumbnail */}
-                              <div className="w-20 h-20 flex-shrink-0 overflow-hidden">
+                              <div className="w-full sm:w-28 sm:h-auto h-32 flex-shrink-0 overflow-hidden relative">
                                 <img
                                   src={fort.images && fort.images.length > 0 ? fort.images[0] : 'https://images.unsplash.com/photo-1587474260584-136574528ed5?w=200'}
                                   alt={fort.name}
                                   className="w-full h-full object-cover"
                                 />
+                                <div className="absolute top-2 left-2 sm:hidden bg-royal-black/80 backdrop-blur-sm border border-saffron/30 text-saffron text-[10px] font-bold px-2 py-1 rounded">
+                                  <FaClock className="inline mr-1" />{predictedTime}
+                                </div>
                               </div>
                               <div className="flex-1 p-4">
                                 <div className="flex items-start justify-between">
-                                  <div>
-                                    <h4 className="font-cinematic font-bold text-white mb-1">{fort.name}</h4>
+                                  <div className="flex-1">
+                                    <div className="flex items-center gap-3 mb-1">
+                                      <h4 className="font-cinematic font-bold text-white text-lg">{fort.name}</h4>
+                                      <span className="hidden sm:inline-flex items-center text-saffron text-xs font-bold font-mono px-2 py-0.5 bg-saffron/10 border border-saffron/20 rounded">
+                                        <FaClock className="inline mr-1" />{predictedTime}
+                                      </span>
+                                    </div>
                                     <div className="flex flex-wrap items-center gap-2 text-[11px] text-gray-400">
                                       <span className="flex items-center gap-1"><FaMapMarkerAlt className="text-saffron" size={9} /> {fort.location?.district}</span>
                                       <span>•</span>
