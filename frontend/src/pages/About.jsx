@@ -64,8 +64,8 @@ const About = () => {
       name: "Ashutosh More",
       role: "UI/UX Designer & Frontend Developer",
       image: ashuImg,
-      linkedin: "#",
-      github: "#"
+      linkedin: "https://www.linkedin.com/in/ashutosh-more-58b21332b/",
+      github: "https://github.com/Ashutoshmore24"
     },
     {
       name: "Athrav Shinde",
@@ -258,7 +258,7 @@ const About = () => {
               <div className="relative group order-2 lg:order-1 max-w-lg mx-auto lg:mx-0">
                 {/* Outer glow ring */}
                 <div className="absolute -inset-3 bg-gradient-to-br from-saffron/20 via-orange-500/10 to-transparent rounded-[2rem] blur-xl group-hover:blur-2xl opacity-60 group-hover:opacity-80 transition-all duration-700"></div>
-                
+
                 {/* Card */}
                 <div className="relative bg-gradient-to-b from-royal-gray to-royal-black border border-saffron/20 rounded-[1.5rem] overflow-hidden shadow-2xl group-hover:border-saffron/40 transition-all duration-500">
                   {/* Image */}
@@ -273,7 +273,7 @@ const About = () => {
                       <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                     </div>
                   </div>
-                  
+
                   {/* Caption */}
                   <div className="p-5 text-center border-t border-saffron/15 bg-gradient-to-b from-royal-black/80 to-royal-black">
                     <p className="text-saffron font-cinematic text-lg sm:text-xl font-bold tracking-wide">छत्रपती शिवाजी महाराज</p>
@@ -432,21 +432,21 @@ const About = () => {
           </div>
           {/* Mentor Section */}
           <div className="mt-20 flex flex-col items-center justify-center">
-                        {/* Mentor Section Header */}
-                        <div className="text-center mb-10 sm:mb-12">
-                          <p className="text-saffron font-cinematic text-xs sm:text-sm tracking-[0.3em] uppercase mb-3">The Guide</p>
-                          <h2 className="text-3xl sm:text-4xl md:text-5xl font-cinematic font-bold text-white mb-5">
-                            Meet Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-saffron to-orange-400">Mentor</span>
-                          </h2>
-                          <div className="flex items-center justify-center gap-2 mb-5">
-                            <div className="h-[3px] w-6 bg-saffron/30 rounded-full"></div>
-                            <div className="h-[3px] w-12 bg-saffron rounded-full"></div>
-                            <div className="h-[3px] w-6 bg-saffron/30 rounded-full"></div>
-                          </div>
-                          <p className="text-sm sm:text-base text-gray-400 max-w-xl mx-auto">
-                            Guiding us with expertise, vision, and encouragement throughout our journey.
-                          </p>
-                        </div>
+            {/* Mentor Section Header */}
+            <div className="text-center mb-10 sm:mb-12">
+              <p className="text-saffron font-cinematic text-xs sm:text-sm tracking-[0.3em] uppercase mb-3">The Guide</p>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-cinematic font-bold text-white mb-5">
+                Meet Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-saffron to-orange-400">Mentor</span>
+              </h2>
+              <div className="flex items-center justify-center gap-2 mb-5">
+                <div className="h-[3px] w-6 bg-saffron/30 rounded-full"></div>
+                <div className="h-[3px] w-12 bg-saffron rounded-full"></div>
+                <div className="h-[3px] w-6 bg-saffron/30 rounded-full"></div>
+              </div>
+              <p className="text-sm sm:text-base text-gray-400 max-w-xl mx-auto">
+                Guiding us with expertise, vision, and encouragement throughout our journey.
+              </p>
+            </div>
             <div className="bg-gradient-to-r from-white/[0.02] to-white/[0.06] border border-white/[0.1] rounded-[2rem] overflow-hidden shadow-2xl hover:shadow-[0_15px_40px_rgba(255,153,51,0.15)] hover:border-saffron/30 transition-all duration-500 max-w-4xl max-h-[1000px] w-full flex flex-col sm:flex-row items-stretch relative">
               <div className="absolute inset-0 bg-gradient-to-tr from-saffron/10 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
               {/* Image Side */}
@@ -461,29 +461,29 @@ const About = () => {
                 <div className="hidden sm:block absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-royal-black to-transparent z-20"></div>
                 <div className="sm:hidden absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-royal-black to-transparent z-20"></div>
               </div>
-              
+
               {/* Content Side */}
               <div className="p-8 sm:p-12 flex-1 flex flex-col items-start justify-center text-left bg-royal-black relative z-30">
                 <h3 className="text-2xl sm:text-3xl font-cinematic font-bold text-white mb-2">Dr. <span className="text-saffron">Harsha A. Bhute</span></h3>
                 <div className="w-16 h-1 bg-gradient-to-r from-saffron to-orange-500 rounded-full mb-4"></div>
-                
+
                 <p className="text-sm sm:text-base text-gray-300 font-bold uppercase tracking-wide mb-6">
                   Associate Professor
-                  <br/>
+                  <br />
                   <span className="text-xs text-saffron font-medium">Dept. of Information Technology, PCCoE</span>
                 </p>
-                
+
                 <div className="space-y-4 text-gray-400 text-sm sm:text-base w-full">
                   <div className="flex items-start gap-4 hover:text-white transition-colors duration-300 group">
-                    <span className="bg-white/5 p-2 rounded-lg text-saffron group-hover:bg-saffron/20 transition-colors">📍</span> 
-                    <span className="mt-1">Dept. of Information Technology,<br/>PCCoE, Nigdi, Pune – 411044</span>
+                    <span className="bg-white/5 p-2 rounded-lg text-saffron group-hover:bg-saffron/20 transition-colors">📍</span>
+                    <span className="mt-1">Dept. of Information Technology,<br />PCCoE, Nigdi, Pune – 411044</span>
                   </div>
                   <div className="flex items-center gap-4 hover:text-white transition-colors duration-300 group">
-                    <span className="bg-white/5 p-2 rounded-lg text-saffron group-hover:bg-saffron/20 transition-colors">📞</span> 
+                    <span className="bg-white/5 p-2 rounded-lg text-saffron group-hover:bg-saffron/20 transition-colors">📞</span>
                     <span>+91 94228 44610</span>
                   </div>
                   <div className="flex items-center gap-4 hover:text-white transition-colors duration-300 group">
-                    <span className="bg-white/5 p-2 rounded-lg text-saffron group-hover:bg-saffron/20 transition-colors">✉️</span> 
+                    <span className="bg-white/5 p-2 rounded-lg text-saffron group-hover:bg-saffron/20 transition-colors">✉️</span>
                     <span>harsha.bhute@pccoepune.org</span>
                   </div>
                   <div className="flex items-center gap-4 hover:text-white transition-colors duration-300 group">

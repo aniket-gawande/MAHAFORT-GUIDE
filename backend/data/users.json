@@ -68,5 +68,17 @@
     "authProvider": "local",
     "fortsVisited": [],
     "createdAt": "2026-04-05T17:52:20.713Z"
+  },
+  {
+    "_id": "mr31ednj8b9w1as8",
+    "username": "Ashutosh",
+    "email": "ashutoshmore22062006@gmail.com",
+    "password": "$2b$12$px3ezlkKcrb1hwR99qvAEOi6ooTZU5Y3q2mJsHrZVd6lIwmnFActK",
+    "avatar": "",
+    "role": "warrior",
+    "googleId": null,
+    "authProvider": "local",
+    "fortsVisited": [],
+    "createdAt": "2026-07-02T05:01:22.207Z"
   }
 ]
