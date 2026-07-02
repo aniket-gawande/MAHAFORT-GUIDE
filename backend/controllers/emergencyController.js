@@ -43,7 +43,7 @@ const getLogs = async (req, res) => {
         res.json({
             success: true,
             count: emergencyAlerts.length,
-            alerts: emergencyAlerts.reverse() // Most recent first
+            alerts: emergencyAlerts.slice().reverse() // Most recent first
         });
     } catch (error) {
         console.error('Error fetching emergency alerts:', error);
