@@ -13,7 +13,13 @@ const api = axios.create({
 export const getAllForts = async (params = {}) => {
   try {
     const response = await api.get('/forts', { params });
-    return response;
+    // Handle both paginated response { forts: [...], totalCount, ... }
+    // and legacy array response [...]
+    const data = response.data;
+    if (data && Array.isArray(data.forts)) {
+      return { data: data.forts, pagination: { totalCount: data.totalCount, page: data.page, limit: data.limit, totalPages: data.totalPages, hasMore: data.hasMore } };
+    }
+    return { data: Array.isArray(data) ? data : [] };
   } catch (error) {
     console.warn('Backend unavailable, fetching static data');
     // Fetch from public folder

@@ -18,10 +18,33 @@ const loadFortData = () => {
   return forts;
 };
 
-// GET all forts
+// GET all forts (supports pagination via ?page=1&limit=15)
 router.get('/', (req, res) => {
   try {
     const forts = loadFortData();
+    const { page, limit } = req.query;
+
+    // If pagination params are provided, return paginated response
+    if (page || limit) {
+      const pageNum = Math.max(1, parseInt(page) || 1);
+      const limitNum = Math.max(1, Math.min(100, parseInt(limit) || 15));
+      const totalCount = forts.length;
+      const totalPages = Math.ceil(totalCount / limitNum);
+      const startIndex = (pageNum - 1) * limitNum;
+      const endIndex = startIndex + limitNum;
+      const paginatedForts = forts.slice(startIndex, endIndex);
+
+      return res.json({
+        forts: paginatedForts,
+        totalCount,
+        page: pageNum,
+        limit: limitNum,
+        totalPages,
+        hasMore: pageNum < totalPages
+      });
+    }
+
+    // No pagination params — return all forts (backward compatible)
     res.json(forts);
   } catch (error) {
     res.status(500).json({ message: 'Error loading forts', error: error.message });

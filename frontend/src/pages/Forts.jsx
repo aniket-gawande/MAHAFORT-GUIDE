@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { getAllForts } from '../services/api';
 import FortCard from '../components/FortCard';
 import Navbar from '../components/Navbar';
+import AllFortsMap from '../components/AllFortsMap';
 import { staticForts } from '../data/staticForts';
 import { 
   FaSearch, FaMapMarkerAlt, FaHiking, FaHistory, 
@@ -143,6 +144,8 @@ const ToggleSwitch = ({ active, onClick, label, icon }) => (
   </div>
 );
 
+const FORTS_PER_PAGE = 15;
+
 const Forts = () => {
   const [forts, setForts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -154,6 +157,9 @@ const Forts = () => {
   const [selectedDistrict, setSelectedDistrict] = useState(null);
   const [isMapExpanded, setIsMapExpanded] = useState(false);
   const [hoveredDistrict, setHoveredDistrict] = useState(null);
+  
+  // Pagination
+  const [visibleCount, setVisibleCount] = useState(FORTS_PER_PAGE);
   
   // Toggles
   const [toggles, setToggles] = useState({
@@ -226,6 +232,19 @@ const fortDifficulty = fort.difficulty || fort.trek?.difficulty || fort.trek?.ro
     });
     return result;
   }, [forts, searchTerm, difficultyFilter, selectedDistrict, toggles, activeTab]);
+
+  // Reset visible count when filters change
+  useEffect(() => {
+    setVisibleCount(FORTS_PER_PAGE);
+  }, [searchTerm, difficultyFilter, selectedDistrict, toggles, activeTab]);
+
+  // The forts currently visible on screen
+  const visibleForts = useMemo(() => filteredForts.slice(0, visibleCount), [filteredForts, visibleCount]);
+  const hasMore = visibleCount < filteredForts.length;
+
+  const handleViewMore = () => {
+    setVisibleCount(prev => prev + FORTS_PER_PAGE);
+  };
 
   return (
     <div className="min-h-screen bg-royal-black text-white font-body selection:bg-saffron selection:text-black">
@@ -513,38 +532,87 @@ const fortDifficulty = fort.difficulty || fort.trek?.difficulty || fort.trek?.ro
                 </button>
               </div>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 pb-24">
-                {filteredForts.map(fort => (
-                  <FortCard key={fort._id || fort.name} fort={fort} />
-                ))}
-              </div>
-            )}
-
-            {/* Footer */}
-            {!loading && filteredForts.length > 0 && (
-              <div className="mt-16 pt-10 border-t border-white/5 flex flex-col md:flex-row items-center justify-between text-gray-500 text-[10px] sm:text-xs uppercase tracking-widest space-y-6 md:space-y-0 pb-16">
-                <div className="flex space-x-6">
-                  <a href="#" className="hover:text-saffron transition-colors">Legal</a>
-                  <a href="#" className="hover:text-saffron transition-colors">Social Info</a>
-                  <a href="#" className="hover:text-saffron transition-colors">Contact Info</a>
-                </div>
-                
-                <div className="text-[#C47D3B] flex flex-col items-center justify-center text-center max-w-md">
-                  <span className="font-bold tracking-[0.2em] mb-3 text-sm">
-                    "VISIT WITH RESPECT FOR HISTORY AND NATURE."
-                  </span>
-                  <span className="text-[9px] sm:text-[10px] opacity-40 block">Copyright © 2026 Mahafort Guide, Inc. All rights reserved.</span>
+              <>
+                {/* Count indicator */}
+                <div className="flex items-center justify-between mb-8">
+                  <p className="text-gray-500 text-[11px] font-bold uppercase tracking-[0.2em]">
+                    Showing <span className="text-saffron">{visibleForts.length}</span> of <span className="text-white">{filteredForts.length}</span> forts
+                  </p>
                 </div>
 
-                <div className="flex space-x-5 text-xl opacity-80">
-                  <FaFacebook className="hover:text-saffron cursor-pointer transition-colors hover:scale-110" />
-                  <FaTwitter className="hover:text-saffron cursor-pointer transition-colors hover:scale-110" />
-                  <FaInstagram className="hover:text-saffron cursor-pointer transition-colors hover:scale-110" />
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                  {visibleForts.map(fort => (
+                    <FortCard key={fort._id || fort.name} fort={fort} />
+                  ))}
                 </div>
-              </div>
+
+                {/* View More Button */}
+                {hasMore && (
+                  <div className="flex flex-col items-center mt-16 mb-8">
+                    <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-saffron/40 to-transparent mb-8"></div>
+                    <button
+                      onClick={handleViewMore}
+                      className="group relative px-14 py-4 rounded-full border-2 border-saffron/30 bg-white/[0.02] backdrop-blur-xl text-saffron font-black text-xs uppercase tracking-[0.25em] hover:border-saffron hover:bg-saffron/10 hover:text-white transition-all duration-500 shadow-[0_0_20px_rgba(255,153,51,0.1)] hover:shadow-[0_0_40px_rgba(255,153,51,0.25)] hover:-translate-y-1 overflow-hidden"
+                    >
+                      {/* Shimmer effect */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-saffron/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></div>
+                      <span className="relative z-10 flex items-center gap-3">
+                        View More Forts
+                        <svg className="w-4 h-4 transform group-hover:translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </span>
+                    </button>
+                    <p className="mt-4 text-gray-600 text-[10px] font-bold uppercase tracking-[0.2em]">
+                      {filteredForts.length - visibleCount} more fort{filteredForts.length - visibleCount !== 1 ? 's' : ''} to explore
+                    </p>
+                  </div>
+                )}
+
+                {/* All forts loaded indicator */}
+                {!hasMore && filteredForts.length > FORTS_PER_PAGE && (
+                  <div className="flex flex-col items-center mt-12 mb-8">
+                    <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-saffron/30 to-transparent mb-4"></div>
+                    <p className="text-gray-600 text-[10px] font-bold uppercase tracking-[0.2em]">
+                      ✦ All {filteredForts.length} forts loaded ✦
+                    </p>
+                  </div>
+                )}
+              </>
             )}
+
           </div>
         </div>
+        {/* ======================= FORT MAP SECTION ======================= */}
+        {!loading && forts.length > 0 && (
+          <AllFortsMap forts={forts} />
+        )}
+
+        {/* ======================= FOOTER ======================= */}
+        {!loading && filteredForts.length > 0 && (
+          <div className="w-full bg-[#050505] px-6 sm:px-12">
+            <div className="max-w-7xl mx-auto pt-10 pb-16 border-t border-white/5 flex flex-col md:flex-row items-center justify-between text-gray-500 text-[10px] sm:text-xs uppercase tracking-widest space-y-6 md:space-y-0">
+              <div className="flex space-x-6">
+                <a href="#" className="hover:text-saffron transition-colors">Legal</a>
+                <a href="#" className="hover:text-saffron transition-colors">Social Info</a>
+                <a href="#" className="hover:text-saffron transition-colors">Contact Info</a>
+              </div>
+              
+              <div className="text-[#C47D3B] flex flex-col items-center justify-center text-center max-w-md">
+                <span className="font-bold tracking-[0.2em] mb-3 text-sm">
+                  "VISIT WITH RESPECT FOR HISTORY AND NATURE."
+                </span>
+                <span className="text-[9px] sm:text-[10px] opacity-40 block">Copyright © 2026 Mahafort Guide, Inc. All rights reserved.</span>
+              </div>
+
+              <div className="flex space-x-5 text-xl opacity-80">
+                <FaFacebook className="hover:text-saffron cursor-pointer transition-colors hover:scale-110" />
+                <FaTwitter className="hover:text-saffron cursor-pointer transition-colors hover:scale-110" />
+                <FaInstagram className="hover:text-saffron cursor-pointer transition-colors hover:scale-110" />
+              </div>
+            </div>
+          </div>
+        )}
 
       </div>
       
